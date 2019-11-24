@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:BasePage
+    x:Class="MuGet.Forms.Views.SettingsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:MuGet.Forms.Controls"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:local="clr-namespace:MuGet.Forms"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:MuGet.Forms.ViewModels"
+    xmlns:views="clr-namespace:MuGet.Forms.Views"
+    Title="{Binding Title}"
+    ios:Page.UseSafeArea="true"
+    x:DataType="viewModels:SettingsViewModel"
+    x:TypeArguments="viewModels:SettingsViewModel"
+    BackgroundColor="{DynamicResource PageBackgroundColor}"
+    mc:Ignorable="d">
+    <ContentPage.BindingContext>
+        <viewModels:SettingsViewModel x:Name="Vm" />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary />
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <TableView
+            x:Name="SettingsTable"
+            BackgroundColor="{DynamicResource PageBackgroundColor}"
+            Intent="Settings">
+            <TableRoot>
+                <TableSection>
+                    <controls:ColorSwitchCell
+                        On="{Binding IncludePrerelease}"
+                        Text="{local:Translate IncludePrerelease}"
+                        TextColor="{DynamicResource PrimaryTextColor}" />
+                    <controls:ColorSwitchCell
+                        On="{Binding Notifications}"
+                        Text="{local:Translate Notifications}"
+                        TextColor="{DynamicResource PrimaryTextColor}" />
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</views:BasePage>

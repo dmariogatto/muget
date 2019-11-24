@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:BasePage
+    x:Class="MuGet.Forms.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:MuGet.Forms.Controls"
+    xmlns:converters="clr-namespace:MuGet.Forms.Converters"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:helpers="clr-namespace:MuGet.Forms.Helpers"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:local="clr-namespace:MuGet.Forms"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="clr-namespace:MuGet.Forms.Models"
+    xmlns:state="clr-namespace:Xamarin.Forms.StateSquid;assembly=Xamarin.Forms.StateSquid"
+    xmlns:viewModels="clr-namespace:MuGet.Forms.ViewModels"
+    xmlns:views="clr-namespace:MuGet.Forms.Views"
+    xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    Title="{Binding Title}"
+    ios:Page.UseSafeArea="true"
+    x:DataType="viewModels:MainViewModel"
+    x:TypeArguments="viewModels:MainViewModel"
+    BackgroundColor="{DynamicResource PageBackgroundColor}"
+    Shell.NavBarIsVisible="False"
+    mc:Ignorable="d">
+    <ContentPage.BindingContext>
+        <viewModels:MainViewModel x:Name="Vm" />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:StringToBoolConverter x:Key="stringToBoolConverter" />
+            <converters:StringToInverseBoolConverter x:Key="stringToInverseBoolConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout
+                x:Name="HomeView"
+                AbsoluteLayout.LayoutBounds="0,0,1,1"
+                AbsoluteLayout.LayoutFlags="All"
+                IsVisible="{Binding SearchText, Converter={StaticResource stringToInverseBoolConverter}}">
+                <views:HomeView />
+            </StackLayout>
+
+            <StackLayout
+                state:StateLayout.CurrentState="{Binding CurrentState}"
+                AbsoluteLayout.LayoutBounds="0,0,1,1"
+                AbsoluteLayout.LayoutFlags="All"
+                IsVisible="{Binding SearchText, Converter={StaticResource stringToBoolConverter}}">
+                <state:StateLayout.StateViews>
+                    <state:StateView StateKey="Loading">
+                        <ScrollView>
+                            <StackLayout x:Name="NuGetSkeletonView">
+                                <controls:NuGetCardSkeleton />
+                                <controls:NuGetCardSkeleton />
+                                <controls:NuGetCardSkeleton />
+                                <controls:NuGetCardSkeleton />
+                                <controls:NuGetCardSkeleton />
+                                <controls:NuGetCardSkeleton />
+                                <controls:NuGetCardSkeleton />
+                                <controls:NuGetCardSkeleton />
+                            </StackLayout>
+                        </ScrollView>
+                    </state:StateView>
+                </state:StateLayout.StateViews>
+
+                <CollectionView
+                    ItemsSource="{Binding Packages}"
+                    RemainingItemsThreshold="{Binding RemainingItemsThreshold}"
+                    RemainingItemsThresholdReachedCommand="{Binding RemainingItemsThresholdReachedCommand}"
+                    Scrolled="PackagesScrolled">
+                    <CollectionView.Header>
+                        <ContentView>
+                            <StackLayout x:Name="SearchCollectionHeaderView" />
+                        </ContentView>
+                    </CollectionView.Header>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:PackageMetadata">
+                            <controls:NuGetCard BindingContext="{Binding .}">
+                                <controls:NuGetCard.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding PackageTappedCommand, Source={x:Reference Vm}}" CommandParameter="{Binding .}" />
+                                </controls:NuGetCard.GestureRecognizers>
+                            </controls:NuGetCard>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                    <CollectionView.Footer>
+                        <ContentView>
+                            <StackLayout
+                                Margin="0,2,0,2"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand">
+                                <ActivityIndicator
+                                    Margin="0,4,0,2"
+                                    HeightRequest="24"
+                                    HorizontalOptions="Center"
+                                    IsRunning="{Binding IsBusy, Source={x:Reference Vm}}"
+                                    IsVisible="{Binding IsBusy, Source={x:Reference Vm}}"
+                                    VerticalOptions="Center"
+                                    WidthRequest="24"
+                                    Color="{DynamicResource PrimaryAccentColor}" />
+                            </StackLayout>
+                        </ContentView>
+                    </CollectionView.Footer>
+                </CollectionView>
+            </StackLayout>
+
+            <yummy:PancakeView
+                x:Name="SearchBarView"
+                Margin="16,8,16,8"
+                Padding="3"
+                AbsoluteLayout.LayoutBounds="0.5, 0, AutoSize, AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                BackgroundColor="{DynamicResource CardBackgroundColor}"
+                CornerRadius="6"
+                Elevation="18"
+                HasShadow="True"
+                Style="{DynamicResource CardYummyStyle}">
+                <SearchBar
+                    BackgroundColor="{DynamicResource CardBackgroundColor}"
+                    HorizontalOptions="FillAndExpand"
+                    Placeholder="{local:Translate Search}"
+                    Text="{Binding SearchText}" />
+            </yummy:PancakeView>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</views:BasePage>

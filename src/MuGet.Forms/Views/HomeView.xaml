@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:BaseView
+    x:Class="MuGet.Forms.Views.HomeView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:MuGet.Forms.Controls"
+    xmlns:converters="clr-namespace:MuGet.Forms.Converters"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:helpers="clr-namespace:MuGet.Forms.Helpers"
+    xmlns:local="clr-namespace:MuGet.Forms"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="clr-namespace:MuGet.Forms.Models"
+    xmlns:state="clr-namespace:Xamarin.Forms.StateSquid;assembly=Xamarin.Forms.StateSquid"
+    xmlns:viewModels="clr-namespace:MuGet.Forms.ViewModels"
+    xmlns:views="clr-namespace:MuGet.Forms.Views"
+    xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    x:DataType="viewModels:HomeViewModel"
+    x:TypeArguments="viewModels:HomeViewModel"
+    BackgroundColor="{DynamicResource PageBackgroundColor}"
+    mc:Ignorable="d">
+    <views:BaseView.BindingContext>
+        <viewModels:HomeViewModel x:Name="Vm" />
+    </views:BaseView.BindingContext>
+    <views:BaseView.Resources>
+        <ResourceDictionary>
+            <converters:IntToBoolConverter x:Key="intToBoolConverter" />
+            <converters:IntToInverseBoolConverter x:Key="intToInverseBoolConverter" />
+        </ResourceDictionary>
+    </views:BaseView.Resources>
+
+    <views:BaseView.Content>
+        <ScrollView>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid Margin="6,12,6,6">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="48" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="48" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label
+                        Grid.Column="1"
+                        HorizontalTextAlignment="Center"
+                        Style="{DynamicResource LabelHeaderStyle}"
+                        Text="MuGet" />
+                    <Button
+                        Grid.Column="2"
+                        Command="{Binding SettingsTappedCommand}"
+                        Style="{DynamicResource ButtonIconStyle}"
+                        Text="{x:Static helpers:MaterialFont.Settings}" />
+
+                    <Label
+                        Grid.Row="1"
+                        Grid.ColumnSpan="3"
+                        HorizontalTextAlignment="Center"
+                        Style="{DynamicResource LabelTitleStyle}"
+                        Text="{local:Translate WelcomeToMuGet}" />
+                </Grid>
+
+                <StackLayout
+                    Margin="8"
+                    state:StateLayout.CurrentState="{Binding CurrentState}"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <state:StateLayout.StateViews>
+                        <state:StateView RepeatCount="2" StateKey="Loading">
+                            <state:StateView.RepeatTemplate>
+                                <DataTemplate>
+                                    <StackLayout>
+                                        <state:SkeletonView Style="{StaticResource SkeletonStyle}" />
+                                        <ScrollView
+                                            HorizontalOptions="FillAndExpand"
+                                            Orientation="Horizontal"
+                                            VerticalOptions="Fill">
+                                            <FlexLayout
+                                                Direction="Row"
+                                                FlowDirection="LeftToRight"
+                                                JustifyContent="SpaceEvenly">
+                                                <controls:NuGetCardSimpleSkeleton />
+                                                <controls:NuGetCardSimpleSkeleton />
+                                                <controls:NuGetCardSimpleSkeleton />
+                                                <controls:NuGetCardSimpleSkeleton />
+                                            </FlexLayout>
+                                        </ScrollView>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </state:StateView.RepeatTemplate>
+                        </state:StateView>
+                    </state:StateLayout.StateViews>
+
+                    <Label Style="{DynamicResource LabelTitleStyle}" Text="{local:Translate Favourites}" />
+                    <ScrollView
+                        HorizontalOptions="FillAndExpand"
+                        IsVisible="{Binding FavouritePackages.Count, Converter={StaticResource intToBoolConverter}}"
+                        Orientation="Horizontal"
+                        VerticalOptions="Fill">
+                        <FlexLayout
+                            BindableLayout.ItemsSource="{Binding FavouritePackages}"
+                            Direction="Row"
+                            FlowDirection="LeftToRight"
+                            JustifyContent="Start">
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate x:DataType="models:PackageMetadata">
+                                    <controls:NuGetCardSimple BindingContext="{Binding .}">
+                                        <controls:NuGetCardSimple.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding PackageTappedCommand, Source={x:Reference Vm}}" CommandParameter="{Binding .}" />
+                                        </controls:NuGetCardSimple.GestureRecognizers>
+                                    </controls:NuGetCardSimple>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                        </FlexLayout>
+                    </ScrollView>
+                    <yummy:PancakeView
+                        Margin="4,6,4,6"
+                        HorizontalOptions="Start"
+                        IsVisible="{Binding FavouritePackages.Count, Converter={StaticResource intToInverseBoolConverter}}"
+                        Style="{DynamicResource CardYummyStyle}"
+                        VerticalOptions="Center">
+                        <StackLayout>
+                            <ffimageloading:SvgCachedImage
+                                DownsampleToViewSize="true"
+                                HeightRequest="48"
+                                HorizontalOptions="Center"
+                                Source="{DynamicResource PackageIcon}"
+                                VerticalOptions="Center"
+                                WidthRequest="48" />
+                            <Label
+                                HorizontalTextAlignment="Center"
+                                LineBreakMode="WordWrap"
+                                Style="{DynamicResource LabelTitleStyle}"
+                                Text="{local:Translate NoFavouritePackages}" />
+                        </StackLayout>
+                    </yummy:PancakeView>
+
+                    <Label Style="{DynamicResource LabelTitleStyle}" Text="{local:Translate Recent}" />
+                    <ScrollView
+                        HorizontalOptions="FillAndExpand"
+                        IsVisible="{Binding RecentPackages.Count, Converter={StaticResource intToBoolConverter}}"
+                        Orientation="Horizontal"
+                        VerticalOptions="Fill">
+                        <FlexLayout
+                            BindableLayout.ItemsSource="{Binding RecentPackages}"
+                            Direction="Row"
+                            FlowDirection="LeftToRight"
+                            JustifyContent="Start">
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate x:DataType="models:PackageMetadata">
+                                    <controls:NuGetCardSimple BindingContext="{Binding .}">
+                                        <controls:NuGetCardSimple.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding PackageTappedCommand, Source={x:Reference Vm}}" CommandParameter="{Binding .}" />
+                                        </controls:NuGetCardSimple.GestureRecognizers>
+                                    </controls:NuGetCardSimple>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                        </FlexLayout>
+                    </ScrollView>
+                    <yummy:PancakeView
+                        Margin="4,6,4,6"
+                        HorizontalOptions="Start"
+                        IsVisible="{Binding RecentPackages.Count, Converter={StaticResource intToInverseBoolConverter}}"
+                        Style="{DynamicResource CardYummyStyle}"
+                        VerticalOptions="Center">
+                        <StackLayout>
+                            <ffimageloading:SvgCachedImage
+                                DownsampleToViewSize="true"
+                                HeightRequest="48"
+                                HorizontalOptions="Center"
+                                Source="{DynamicResource PackageIcon}"
+                                VerticalOptions="Center"
+                                WidthRequest="48" />
+                            <Label
+                                HorizontalTextAlignment="Center"
+                                LineBreakMode="WordWrap"
+                                Style="{DynamicResource LabelTitleStyle}"
+                                Text="{local:Translate NoRecentPackages}" />
+                        </StackLayout>
+                    </yummy:PancakeView>
+
+                    <Button
+                        Command="{Binding RunJobsCommand}"
+                        IsVisible="{Binding IsDevelopment}"
+                        Text="{local:Translate RunAllJobs}" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </views:BaseView.Content>
+</views:BaseView>

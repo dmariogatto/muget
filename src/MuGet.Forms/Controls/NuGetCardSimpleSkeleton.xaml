@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:models="clr-namespace:MuGet.Forms.Models"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:state="clr-namespace:Xamarin.Forms.StateSquid;assembly=Xamarin.Forms.StateSquid"
+             mc:Ignorable="d" x:DataType="models:PackageMetadata"
+             x:Class="MuGet.Forms.Controls.NuGetCardSimpleSkeleton">
+    <ContentView.Content>
+        <yummy:PancakeView Margin="4,6,4,6" Style="{DynamicResource CardYummyStyle}">
+            <StackLayout>
+                <state:SkeletonView Style="{StaticResource SkeletonStyle}"
+                                    WidthRequest="48" HeightRequest="48"
+                                    HorizontalOptions="Center" VerticalOptions="Center" />
+                <state:SkeletonView Style="{StaticResource SkeletonStyle}" HeightRequest="22" WidthRequest="128"
+                                    HorizontalOptions="Center" VerticalOptions="Center" />
+                <state:SkeletonView Style="{StaticResource SkeletonStyle}" WidthRequest="256"
+                                    HorizontalOptions="Center" VerticalOptions="Center" />
+            </StackLayout>
+        </yummy:PancakeView>
+    </ContentView.Content>
+</ContentView>
