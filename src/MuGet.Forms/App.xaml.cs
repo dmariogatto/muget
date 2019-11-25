@@ -1,10 +1,9 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using MuGet.Forms.Services;
-using MuGet.Forms.Views;
-using Newtonsoft.Json;
 using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace MuGet.Forms
 {

@@ -75,6 +75,7 @@
     <Compile Include="Services\EnvironmentService_iOS.cs" />
     <Compile Include="Services\LocaliseService_iOS.cs" />
     <Compile Include="Services\RendererResolver_iOS.cs" />
+    <None Include="appcenter-pre-build.sh" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
