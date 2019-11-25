@@ -51,12 +51,7 @@ namespace MuGet.Forms.ViewModels
         {
             base.OnAppearing();
 
-            _cancellation?.Cancel();
-            _cancellation?.Dispose();
-            _cancellation = null;
-
-            _cancellation = new CancellationTokenSource();
-            LoadCommand.ExecuteAsync(_cancellation.Token);
+            LoadPackage();
         }
 
         public string PreviousPackageId => _navStack.Any() 
@@ -128,6 +123,16 @@ namespace MuGet.Forms.ViewModels
         public AsyncCommand<CatalogEntry> FavouriteCommand { get; private set; }
         public AsyncCommand BackCommand { get; private set; }
         public AsyncCommand CloseCommand { get; private set; }
+
+        private void LoadPackage()
+        {
+            _cancellation?.Cancel();
+            _cancellation?.Dispose();
+            _cancellation = null;
+
+            _cancellation = new CancellationTokenSource();
+            LoadCommand.ExecuteAsync(_cancellation.Token);
+        }
 
         private async Task Load(CancellationToken cancellationToken)
         {
@@ -229,8 +234,8 @@ namespace MuGet.Forms.ViewModels
             {
                 IsBusy = false;
             }
-            
-            OnAppearing();
+
+            LoadPackage();
         }
 
         private async Task EntryTapped(CatalogEntry entry, CancellationToken cancellationToken)
@@ -387,7 +392,7 @@ namespace MuGet.Forms.ViewModels
             {
                 Logger.Error(ex);
             }
-        }
+        }        
 
         private class PackageViewState
         {

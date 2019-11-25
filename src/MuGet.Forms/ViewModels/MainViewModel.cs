@@ -26,13 +26,13 @@ namespace MuGet.Forms.ViewModels
 
             Packages = new ObservableRangeCollection<PackageMetadata>();
             SearchCommand = new AsyncCommand<CancellationToken>((ct) => Search(SearchText, 0, ct));
-            RemainingItemsThresholdReachedCommand = new AsyncCommand(() =>            
+            RemainingItemsThresholdReachedCommand = new AsyncCommand(() =>
                 _searchCancellation != null
                     ? Search(SearchText, Packages.Count, _searchCancellation.Token)
                     : Task.FromResult(0));
-            PackageTappedCommand = new AsyncCommand<PackageMetadata>(PackageTapped);            
+            PackageTappedCommand = new AsyncCommand<PackageMetadata>(PackageTapped);
         }
-        
+
         private string _searchText;
         public string SearchText
         {
@@ -68,7 +68,7 @@ namespace MuGet.Forms.ViewModels
 
         public AsyncCommand<CancellationToken> SearchCommand { get; private set; }
         public AsyncCommand RemainingItemsThresholdReachedCommand { get; private set; }
-        public AsyncCommand<PackageMetadata> PackageTappedCommand { get; private set; }        
+        public AsyncCommand<PackageMetadata> PackageTappedCommand { get; private set; }
 
         private async Task Search(string searchText, int skip, CancellationToken cancellationToken)
         {
@@ -81,6 +81,7 @@ namespace MuGet.Forms.ViewModels
                 var loaded = false;
 
                 IsBusy = true;
+                // Only show skelton loading when empty
                 CurrentState = Packages.Any() ? CurrentState : State.Loading;
 
                 try
@@ -100,10 +101,14 @@ namespace MuGet.Forms.ViewModels
                     }
 
                     if (!cancellationToken.IsCancellationRequested)
-                    {                        
+                    {
                         if (skip > 0)
                         {
-                            Packages.AddRange(packages);
+                            // Stop iOS exploding with an NSInternalInconsistencyException
+                            foreach (var p in packages)
+                            {
+                                Packages.Add(p);
+                            }
                         }
                         else
                         {
@@ -115,7 +120,7 @@ namespace MuGet.Forms.ViewModels
                         }
 
                         TotalHits = totalHits;
-                        RemainingItemsThreshold = packages.Count == 0  ? -1 : 1;
+                        RemainingItemsThreshold = packages.Count == 0 ? -1 : 5;
 
                         loaded = true;
                     }
@@ -123,17 +128,19 @@ namespace MuGet.Forms.ViewModels
                 catch (Exception ex)
                 {
                     Logger.Error(ex);
+
+                    loaded = true;
                 }
                 finally
-                {                   
+                {
                     if (loaded)
                     {
                         IsBusy = false;
                         CurrentState = State.None;
-                    }                        
+                    }
                 }
             }
-            
+
             _searchSemaphore.Release();
         }
 
@@ -164,6 +171,6 @@ namespace MuGet.Forms.ViewModels
             }
 
             IsBusy = false;
-        }        
+        }
     }
 }

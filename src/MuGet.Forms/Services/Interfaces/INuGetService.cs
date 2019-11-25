@@ -8,7 +8,7 @@ namespace MuGet.Forms.Services
     public interface INuGetService
     {
         bool IncludePrerelease { get; set; }
-        bool Notifications { get; set; }
+        bool NewReleaseNotifications { get; set; }
 
         Task<PackageSource> GetNuGetSource(CancellationToken cancellationToken);
 

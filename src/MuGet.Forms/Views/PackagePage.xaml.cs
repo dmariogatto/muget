@@ -1,14 +1,10 @@
-﻿using MuGet.Forms.Models;
+﻿using System.Net;
+using MuGet.Forms.Models;
 using MuGet.Forms.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using Xamarin.Forms.Xaml;
+using Application = Xamarin.Forms.Application;
 
 namespace MuGet.Forms.Views
 {
@@ -45,6 +41,20 @@ namespace MuGet.Forms.Views
             set
             {
                 ViewModel.Version = WebUtility.UrlDecode(value);
+            }
+        }
+
+        protected override void OnSizeAllocated(double width, double height)
+        {
+            base.OnSizeAllocated(width, height);
+
+            if (Device.RuntimePlatform == Device.iOS)
+            {
+                // Apply insets otherwise loader is displayed behind tabbar
+                var safeInsets = On<Xamarin.Forms.PlatformConfiguration.iOS>().SafeAreaInsets();
+                var padding = HeaderView.Padding;
+                padding.Top = safeInsets.Top;
+                HeaderView.Padding = padding;
             }
         }
 
@@ -86,6 +96,6 @@ namespace MuGet.Forms.Views
             {
                 ViewModel.EntryTappedCommand.ExecuteAsync(entry);
             }
-        }        
+        }
     }
 }

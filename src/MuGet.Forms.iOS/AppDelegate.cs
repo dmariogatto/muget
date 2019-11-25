@@ -27,8 +27,6 @@ namespace MuGet.Forms.iOS
 
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
 
-            global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
-
             global::Xamarin.Forms.Forms.Init();
 
             Plugin.Segmented.Control.iOS.SegmentedControlRenderer.Initialize();

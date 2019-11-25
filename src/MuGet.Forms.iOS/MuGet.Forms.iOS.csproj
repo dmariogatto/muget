@@ -71,6 +71,7 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Renderers\ColorSwitchCellRenderer.cs" />
     <Compile Include="Renderers\SearchBarCustomRenderer.cs" />
+    <Compile Include="Renderers\ShellCustomRenderer.cs" />
     <Compile Include="Services\EnvironmentService_iOS.cs" />
     <Compile Include="Services\LocaliseService_iOS.cs" />
     <Compile Include="Services\RendererResolver_iOS.cs" />
@@ -154,10 +155,10 @@
     <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms">
       <Version>2.4.11.982</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.2.0.910310" />
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.991211" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
     <PackageReference Include="Xamarin.Forms.PancakeView">
-      <Version>1.3.6</Version>
+      <Version>1.3.4</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms.StateSquid">
       <Version>1.1.3</Version>

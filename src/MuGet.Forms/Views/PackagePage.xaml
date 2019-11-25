@@ -8,7 +8,6 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
     xmlns:helpers="clr-namespace:MuGet.Forms.Helpers"
-    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:local="clr-namespace:MuGet.Forms"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:models="clr-namespace:MuGet.Forms.Models"
@@ -18,7 +17,6 @@
     xmlns:views="clr-namespace:MuGet.Forms.Views"
     xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     Title="{Binding Entry.Title}"
-    ios:Page.UseSafeArea="true"
     x:DataType="viewModels:PackageViewModel"
     x:TypeArguments="viewModels:PackageViewModel"
     BackgroundColor="{DynamicResource PageBackgroundColor}"
@@ -52,10 +50,10 @@
             </Grid.RowDefinitions>
 
             <yummy:PancakeView
+                x:Name="HeaderView"
                 Padding="4"
                 BackgroundColor="{DynamicResource CardBackgroundColor}"
-                Elevation="18"
-                HasShadow="True">
+                Elevation="6">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="48" />
@@ -205,9 +203,10 @@
                     <segmented:SegmentedControl
                         x:Name="SegPageControl"
                         Grid.Row="2"
-                        Margin="6,0,6,0"
+                        Margin="3,0,3,0"
                         OnSegmentSelected="OnSegmentSelected"
-                        TintColor="{DynamicResource PageBackgroundColor}"
+                        SelectedTextColor="{DynamicResource PrimaryTextColor}"
+                        TintColor="{DynamicResource UnselectedTabColor}"
                         VerticalOptions="Center">
                         <segmented:SegmentedControl.Children>
                             <segmented:SegmentedControlOption Text="{local:Translate Details}" />
@@ -244,7 +243,7 @@
                     IsVisible="False">
                     <StackLayout>
                         <StackLayout
-                            Margin="0,6,0,0"
+                            Margin="0,12,0,0"
                             HorizontalOptions="CenterAndExpand"
                             Orientation="Horizontal">
                             <Label
@@ -257,16 +256,16 @@
                                 Text="{Binding Entry.Authors}" />
                         </StackLayout>
                         <Label Style="{DynamicResource LabelTitleStyle}" Text="{local:Translate Description}" />
-                        <Frame Style="{DynamicResource CardFrameStyle}">
+                        <yummy:PancakeView Style="{DynamicResource CardYummyStyle}">
                             <Label FormattedText="{Binding EntryData.Description, Converter={StaticResource linksToFormattedConverter}}" Style="{DynamicResource LabelStyle}" />
-                        </Frame>
+                        </yummy:PancakeView>
                         <Label
                             IsVisible="{Binding EntryData.ReleaseNotes, Converter={StaticResource stringToBoolConverter}}"
                             Style="{DynamicResource LabelTitleStyle}"
-                            Text="{local:Translate Tags}" />
-                        <Frame IsVisible="{Binding EntryData.ReleaseNotes, Converter={StaticResource stringToBoolConverter}}" Style="{DynamicResource CardFrameStyle}">
+                            Text="{local:Translate ReleaseNotes}" />
+                        <yummy:PancakeView IsVisible="{Binding EntryData.ReleaseNotes, Converter={StaticResource stringToBoolConverter}}" Style="{DynamicResource CardYummyStyle}">
                             <Label FormattedText="{Binding EntryData.ReleaseNotes, Converter={StaticResource linksToFormattedConverter}}" Style="{DynamicResource LabelStyle}" />
-                        </Frame>
+                        </yummy:PancakeView>
 
                         <Label
                             IsVisible="{Binding EntryData.Tags, Converter={StaticResource listToBoolConverter}}"
@@ -285,16 +284,16 @@
                                 JustifyContent="Start">
                                 <BindableLayout.ItemTemplate>
                                     <DataTemplate x:DataType="x:String">
-                                        <Frame Style="{DynamicResource CardFrameStyle}">
+                                        <yummy:PancakeView Style="{DynamicResource CardYummyStyle}">
                                             <Label Style="{DynamicResource LabelStyle}" Text="{Binding .}" />
-                                        </Frame>
+                                        </yummy:PancakeView>
                                     </DataTemplate>
                                 </BindableLayout.ItemTemplate>
                             </FlexLayout>
                         </ScrollView>
 
                         <Label Style="{DynamicResource LabelTitleStyle}" Text="{local:Translate Statistics}" />
-                        <Frame Style="{DynamicResource CardFrameStyle}">
+                        <yummy:PancakeView Style="{DynamicResource CardYummyStyle}">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
@@ -362,17 +361,20 @@
                                     Style="{DynamicResource LabelStyle}"
                                     Text="{Binding Entry.LicenseExpression}" />
                             </Grid>
-                        </Frame>
+                        </yummy:PancakeView>
 
                         <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
 
                             <Button
-                                Grid.Column="0"
+                                Grid.ColumnSpan="2"
                                 Command="{Binding LinkTappedCommand}"
                                 CommandParameter="{x:Static controls:LinkType.Project}"
                                 ContentLayout="Left,5"
@@ -387,7 +389,8 @@
                             </Button>
 
                             <Button
-                                Grid.Column="1"
+                                Grid.Row="1"
+                                Grid.Column="0"
                                 Command="{Binding LinkTappedCommand}"
                                 CommandParameter="{x:Static controls:LinkType.NuGet}"
                                 ContentLayout="Left,5"
@@ -401,7 +404,8 @@
                                 </Button.ImageSource>
                             </Button>
                             <Button
-                                Grid.Column="2"
+                                Grid.Row="1"
+                                Grid.Column="1"
                                 Command="{Binding LinkTappedCommand}"
                                 CommandParameter="{x:Static controls:LinkType.FuGet}"
                                 ContentLayout="Left,5"
@@ -428,14 +432,16 @@
                         IsGroupingEnabled="True"
                         ItemTapped="DependencyTapped"
                         ItemsSource="{Binding Dependencies}"
-                        SelectionMode="None">
+                        SelectionMode="None"
+                        SeparatorVisibility="None">
                         <ListView.GroupHeaderTemplate>
                             <DataTemplate x:DataType="models:DependencyGrouping">
                                 <ViewCell>
                                     <ContentView BackgroundColor="{DynamicResource PageBackgroundColor}">
                                         <Label
                                             Margin="4,0,4,0"
-                                            Style="{DynamicResource LabelSubStyle}"
+                                            FontAttributes="Bold"
+                                            Style="{DynamicResource LabelStyle}"
                                             Text="{Binding Key}" />
                                     </ContentView>
                                 </ViewCell>

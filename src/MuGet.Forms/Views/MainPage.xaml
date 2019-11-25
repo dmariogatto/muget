@@ -6,7 +6,6 @@
     xmlns:controls="clr-namespace:MuGet.Forms.Controls"
     xmlns:converters="clr-namespace:MuGet.Forms.Converters"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-    xmlns:helpers="clr-namespace:MuGet.Forms.Helpers"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:local="clr-namespace:MuGet.Forms"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -57,33 +56,36 @@
                                 <controls:NuGetCardSkeleton />
                                 <controls:NuGetCardSkeleton />
                                 <controls:NuGetCardSkeleton />
-                                <controls:NuGetCardSkeleton />
-                                <controls:NuGetCardSkeleton />
                             </StackLayout>
                         </ScrollView>
                     </state:StateView>
                 </state:StateLayout.StateViews>
 
-                <CollectionView
+                <ListView
+                    x:Name="PackageList"
+                    BackgroundColor="Transparent"
+                    CachingStrategy="RecycleElement"
+                    HasUnevenRows="True"
+                    ItemAppearing="ItemAppearing"
                     ItemsSource="{Binding Packages}"
-                    RemainingItemsThreshold="{Binding RemainingItemsThreshold}"
-                    RemainingItemsThresholdReachedCommand="{Binding RemainingItemsThresholdReachedCommand}"
-                    Scrolled="PackagesScrolled">
-                    <CollectionView.Header>
+                    SeparatorVisibility="None">
+                    <ListView.Header>
                         <ContentView>
                             <StackLayout x:Name="SearchCollectionHeaderView" />
                         </ContentView>
-                    </CollectionView.Header>
-                    <CollectionView.ItemTemplate>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
                         <DataTemplate x:DataType="models:PackageMetadata">
-                            <controls:NuGetCard BindingContext="{Binding .}">
-                                <controls:NuGetCard.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding PackageTappedCommand, Source={x:Reference Vm}}" CommandParameter="{Binding .}" />
-                                </controls:NuGetCard.GestureRecognizers>
-                            </controls:NuGetCard>
+                            <ViewCell>
+                                <controls:NuGetCard BindingContext="{Binding .}">
+                                    <controls:NuGetCard.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding PackageTappedCommand, Source={x:Reference Vm}}" CommandParameter="{Binding .}" />
+                                    </controls:NuGetCard.GestureRecognizers>
+                                </controls:NuGetCard>
+                            </ViewCell>
                         </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                    <CollectionView.Footer>
+                    </ListView.ItemTemplate>
+                    <ListView.Footer>
                         <ContentView>
                             <StackLayout
                                 Margin="0,2,0,2"
@@ -100,8 +102,8 @@
                                     Color="{DynamicResource PrimaryAccentColor}" />
                             </StackLayout>
                         </ContentView>
-                    </CollectionView.Footer>
-                </CollectionView>
+                    </ListView.Footer>
+                </ListView>
             </StackLayout>
 
             <yummy:PancakeView
@@ -112,7 +114,7 @@
                 AbsoluteLayout.LayoutFlags="PositionProportional"
                 BackgroundColor="{DynamicResource CardBackgroundColor}"
                 CornerRadius="6"
-                Elevation="18"
+                Elevation="6"
                 HasShadow="True"
                 Style="{DynamicResource CardYummyStyle}">
                 <SearchBar

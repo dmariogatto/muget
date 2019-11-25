@@ -6,8 +6,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Api\**" />
+    <Compile Remove="Effects\**" />
     <Compile Remove="Extentions\NugetImageLoader.cs\**" />
+    <EmbeddedResource Remove="Api\**" />
+    <EmbeddedResource Remove="Effects\**" />
     <EmbeddedResource Remove="Extentions\NugetImageLoader.cs\**" />
+    <None Remove="Api\**" />
+    <None Remove="Effects\**" />
     <None Remove="Extentions\NugetImageLoader.cs\**" />
   </ItemGroup>
 
@@ -28,15 +34,10 @@
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.Forms" Version="4.2.0.910310" />  
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.991211" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />  
-    <PackageReference Include="Xamarin.Forms.PancakeView" Version="1.3.6" />  
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="1.3.4" />  
     <PackageReference Include="Xamarin.Forms.StateSquid" Version="1.1.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Api\" />
-    <Folder Include="Effects\" />
   </ItemGroup>
 
   <ItemGroup>

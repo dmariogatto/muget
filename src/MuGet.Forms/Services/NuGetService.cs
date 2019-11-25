@@ -39,14 +39,18 @@ namespace MuGet.Forms.Services
         private readonly ILogger _logger;
         private readonly AsyncRetryPolicy _retryPolicy;
         
-        public NuGetService() : this(null, null)
+        public NuGetService() : 
+            this(DependencyService.Get<ICacheProvider>(), DependencyService.Get<ILogger>())
         {
         }
 
-        public NuGetService(ICacheProvider cacheProvider = null, ILogger logger = null)
+        public NuGetService(ICacheProvider cacheProvider, ILogger logger)
         {
-            _cache = cacheProvider ?? DependencyService.Get<ICacheProvider>();
-            _logger = logger ?? DependencyService.Get<ILogger>();
+            if (cacheProvider == null) throw new ArgumentNullException(nameof(cacheProvider));
+            if (logger == null) throw new ArgumentNullException(nameof(logger));
+
+            _cache = cacheProvider;
+            _logger = logger;
             
 #if DEBUG
             //foreach (var f in new DirectoryInfo(FileSystem.AppDataDirectory).GetFiles())
@@ -74,10 +78,10 @@ namespace MuGet.Forms.Services
             set => Preferences.Set(nameof(IncludePrerelease), value);
         }
 
-        public bool Notifications
+        public bool NewReleaseNotifications
         {
-            get => Preferences.Get(nameof(Notifications), true);
-            set => Preferences.Set(nameof(Notifications), value);
+            get => Preferences.Get(nameof(NewReleaseNotifications), true);
+            set => Preferences.Set(nameof(NewReleaseNotifications), value);
         }
 
         public async Task<PackageSource> GetNuGetSource(CancellationToken cancellationToken)

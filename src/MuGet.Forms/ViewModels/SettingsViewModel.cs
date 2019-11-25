@@ -1,4 +1,6 @@
-﻿using MuGet.Forms.Localisation;
+﻿using System;
+using MuGet.Forms.Localisation;
+using MvvmHelpers.Commands;
 
 namespace MuGet.Forms.ViewModels
 {
@@ -7,6 +9,8 @@ namespace MuGet.Forms.ViewModels
         public SettingsViewModel()
         {
             Title = Resources.Settings;
+
+            ResetNotificationsCommand = new Command(ResetNotifications);
         }
 
         public bool IncludePrerelease
@@ -19,12 +23,12 @@ namespace MuGet.Forms.ViewModels
             }
         }
 
-        public bool Notifications
+        public bool NewReleaseNotifications
         {
-            get => NuGetService.Notifications;
+            get => NuGetService.NewReleaseNotifications;
             set
             {
-                NuGetService.Notifications = value;
+                NuGetService.NewReleaseNotifications = value;
 
                 if (value)
                 {
@@ -35,7 +39,20 @@ namespace MuGet.Forms.ViewModels
                     Shiny.ShinyHost.Resolve<Shiny.Jobs.IJobManager>().Cancel(ShinyStartup.NuGetJobInfo.Identifier);
                 }
 
-                OnPropertyChanged(nameof(Notifications));
+                OnPropertyChanged(nameof(NewReleaseNotifications));
+            }
+        }
+
+        public Command ResetNotificationsCommand { get; private set; }
+
+        private void ResetNotifications()
+        {
+            var favourites = NuGetService.GetFavouritePackages();
+            foreach (var f in favourites)
+            {
+                f.Version = string.Empty;
+                f.Published = DateTime.MinValue;
+                NuGetService.AddFavouritePackage(f);
             }
         }
     }

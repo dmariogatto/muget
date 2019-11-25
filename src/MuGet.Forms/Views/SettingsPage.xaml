@@ -29,15 +29,22 @@
             BackgroundColor="{DynamicResource PageBackgroundColor}"
             Intent="Settings">
             <TableRoot>
-                <TableSection>
+                <TableSection Title="Package Sources">
                     <controls:ColorSwitchCell
                         On="{Binding IncludePrerelease}"
                         Text="{local:Translate IncludePrerelease}"
                         TextColor="{DynamicResource PrimaryTextColor}" />
+                </TableSection>
+                <TableSection Title="{local:Translate Notifications}">
                     <controls:ColorSwitchCell
-                        On="{Binding Notifications}"
-                        Text="{local:Translate Notifications}"
+                        On="{Binding NewReleaseNotifications}"
+                        Text="{local:Translate NotificationsDescription}"
                         TextColor="{DynamicResource PrimaryTextColor}" />
+                </TableSection>
+                <TableSection Title="Development">
+                    <ViewCell>
+                        <Button Command="{Binding ResetNotificationsCommand}" Text="Reset Notifications" />
+                    </ViewCell>
                 </TableSection>
             </TableRoot>
         </TableView>

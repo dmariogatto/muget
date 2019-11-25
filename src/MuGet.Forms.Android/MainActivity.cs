@@ -22,8 +22,6 @@ namespace MuGet.Forms.Android
 
             base.OnCreate(savedInstanceState);
 
-            global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
-
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: true);
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
