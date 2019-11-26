@@ -43,7 +43,11 @@
                 </TableSection>
                 <TableSection Title="Development">
                     <ViewCell>
-                        <Button Command="{Binding ResetNotificationsCommand}" Text="Reset Notifications" />
+                        <Button
+                            Command="{Binding ResetNotificationsCommand}"
+                            HorizontalOptions="FillAndExpand"
+                            Text="Reset Notifications"
+                            VerticalOptions="FillAndExpand" />
                     </ViewCell>
                 </TableSection>
             </TableRoot>

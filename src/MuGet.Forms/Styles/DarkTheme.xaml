@@ -48,5 +48,5 @@
     <!--  White  -->
     <Color x:Key="ContrastColor">#FFFFFF</Color>
     <!--  Black  -->
-    <Color x:Key="ContrastAntiColor">#00000</Color>
+    <Color x:Key="ContrastAntiColor">#000000</Color>
 </ResourceDictionary>

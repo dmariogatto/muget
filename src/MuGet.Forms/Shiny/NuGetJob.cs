@@ -29,7 +29,7 @@ namespace MuGet.Forms
                 foreach (var fp in favouritePackages)
                 {
                     var catalogEntries = await _nuGetService.GetCatalogEntries(fp.PackageId, cancelToken);
-                    var latest = catalogEntries.FirstOrDefault(e => includePrerelease || !e.SemVersion.IsPrerelease);
+                    var latest = catalogEntries.FirstOrDefault(e => includePrerelease || !e.PackVersion.IsPrerelease);
 
                     if (latest != null &&
                         latest.Published > fp.Published)

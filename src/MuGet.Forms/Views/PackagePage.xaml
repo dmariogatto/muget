@@ -184,9 +184,11 @@
                                 <Label
                                     FontAttributes="Italic"
                                     FontSize="Caption"
-                                    IsVisible="{Binding Entry.SemVersion.IsPrerelease}"
+                                    IsVisible="{Binding Entry.PackVersion.IsPrerelease}"
                                     Text="prerelease"
-                                    TextColor="{DynamicResource PrimaryAccentColor}" />
+                                    TextColor="{DynamicResource PrimaryAccentColor}"
+                                    VerticalOptions="FillAndExpand"
+                                    VerticalTextAlignment="Center" />
                             </StackLayout>
                             <Button
                                 Grid.RowSpan="2"
@@ -378,7 +380,7 @@
                                 Command="{Binding LinkTappedCommand}"
                                 CommandParameter="{x:Static controls:LinkType.Project}"
                                 ContentLayout="Left,5"
-                                HorizontalOptions="FillAndExpand"
+                                HorizontalOptions="Center"
                                 Text="Project">
                                 <Button.ImageSource>
                                     <FontImageSource
@@ -394,7 +396,7 @@
                                 Command="{Binding LinkTappedCommand}"
                                 CommandParameter="{x:Static controls:LinkType.NuGet}"
                                 ContentLayout="Left,5"
-                                HorizontalOptions="FillAndExpand"
+                                HorizontalOptions="Center"
                                 Text="nuget.org">
                                 <Button.ImageSource>
                                     <FontImageSource
@@ -409,7 +411,7 @@
                                 Command="{Binding LinkTappedCommand}"
                                 CommandParameter="{x:Static controls:LinkType.FuGet}"
                                 ContentLayout="Left,5"
-                                HorizontalOptions="FillAndExpand"
+                                HorizontalOptions="Center"
                                 Text="fuget.org">
                                 <Button.ImageSource>
                                     <FontImageSource

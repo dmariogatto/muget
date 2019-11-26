@@ -49,19 +49,8 @@ namespace MuGet.Forms.Models
             set => SetProperty(ref _isFavourite, value);
         }
 
-        private SemanticVersion _semVersion;
+        private PackageVersion _packVersion;
         [JsonIgnore]
-        public SemanticVersion SemVersion
-        {
-            get
-            {
-                if (_semVersion == null && !string.IsNullOrEmpty(Version))
-                {
-                    SemanticVersion.TryParse(Version, out _semVersion);
-                }
-
-                return _semVersion;
-            }
-        }
+        public PackageVersion PackVersion => _packVersion ?? (_packVersion = new PackageVersion(Version));
     }
 }

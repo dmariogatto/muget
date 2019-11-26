@@ -322,7 +322,7 @@ namespace MuGet.Forms.ViewModels
                 else
                 {
                     var includePrerelease = NuGetService.IncludePrerelease;
-                    var lastestEntry = CatalogEntries.FirstOrDefault(e => includePrerelease || !e.SemVersion.IsPrerelease);
+                    var lastestEntry = CatalogEntries.FirstOrDefault(e => includePrerelease || !e.PackVersion.IsPrerelease);
                     var source = await NuGetService.GetNuGetSource(default);
                     var sp = new FavouritePackage()
                     {
