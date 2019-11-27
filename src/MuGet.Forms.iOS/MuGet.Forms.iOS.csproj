@@ -168,7 +168,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\MuGet.Forms\MuGet.Forms.csproj">
-      <Project>{FF4857E5-D075-4068-B716-F67BB1F36351}</Project>
+      <Project>{2B91A55F-B077-4E78-9E3F-8BE68148472B}</Project>
       <Name>MuGet.Forms</Name>
     </ProjectReference>
   </ItemGroup>

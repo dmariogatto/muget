@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using ObjCRuntime;
 using UIKit;
 using UserNotifications;
 
@@ -23,6 +24,7 @@ namespace MuGet.Forms.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
             Shiny.iOSShinyHost.Init(new ShinyStartup());
 
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
@@ -43,6 +45,8 @@ namespace MuGet.Forms.iOS
         }
 
         public override void PerformFetch(UIApplication application, Action<UIBackgroundFetchResult> completionHandler)
-            => Shiny.Jobs.JobManager.OnBackgroundFetch(completionHandler);
+        {
+            Shiny.Jobs.JobManager.OnBackgroundFetch(completionHandler);       
+        }
     }
 }

@@ -10,7 +10,6 @@
     xmlns:local="clr-namespace:MuGet.Forms"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:models="clr-namespace:MuGet.Forms.Models"
-    xmlns:state="clr-namespace:Xamarin.Forms.StateSquid;assembly=Xamarin.Forms.StateSquid"
     xmlns:viewModels="clr-namespace:MuGet.Forms.ViewModels"
     xmlns:views="clr-namespace:MuGet.Forms.Views"
     xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
@@ -40,71 +39,40 @@
                 IsVisible="{Binding SearchText, Converter={StaticResource stringToInverseBoolConverter}}">
                 <views:HomeView />
             </StackLayout>
-
-            <StackLayout
-                state:StateLayout.CurrentState="{Binding CurrentState}"
+            
+            <CollectionView
                 AbsoluteLayout.LayoutBounds="0,0,1,1"
                 AbsoluteLayout.LayoutFlags="All"
-                IsVisible="{Binding SearchText, Converter={StaticResource stringToBoolConverter}}">
-                <state:StateLayout.StateViews>
-                    <state:StateView StateKey="Loading">
-                        <ScrollView>
-                            <StackLayout x:Name="NuGetSkeletonView">
-                                <controls:NuGetCardSkeleton />
-                                <controls:NuGetCardSkeleton />
-                                <controls:NuGetCardSkeleton />
-                                <controls:NuGetCardSkeleton />
-                                <controls:NuGetCardSkeleton />
-                                <controls:NuGetCardSkeleton />
-                            </StackLayout>
-                        </ScrollView>
-                    </state:StateView>
-                </state:StateLayout.StateViews>
-
-                <ListView
-                    x:Name="PackageList"
-                    BackgroundColor="Transparent"
-                    CachingStrategy="RecycleElement"
-                    HasUnevenRows="True"
-                    ItemAppearing="ItemAppearing"
-                    ItemsSource="{Binding Packages}"
-                    SeparatorVisibility="None">
-                    <ListView.Header>
-                        <ContentView>
-                            <StackLayout x:Name="SearchCollectionHeaderView" />
-                        </ContentView>
-                    </ListView.Header>
-                    <ListView.ItemTemplate>
-                        <DataTemplate x:DataType="models:PackageMetadata">
-                            <ViewCell>
-                                <controls:NuGetCard BindingContext="{Binding .}">
-                                    <controls:NuGetCard.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding PackageTappedCommand, Source={x:Reference Vm}}" CommandParameter="{Binding .}" />
-                                    </controls:NuGetCard.GestureRecognizers>
-                                </controls:NuGetCard>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                    <ListView.Footer>
-                        <ContentView>
-                            <StackLayout
-                                Margin="0,2,0,2"
-                                HorizontalOptions="FillAndExpand"
-                                VerticalOptions="FillAndExpand">
-                                <ActivityIndicator
-                                    Margin="0,4,0,2"
-                                    HeightRequest="24"
-                                    HorizontalOptions="Center"
-                                    IsRunning="{Binding IsBusy, Source={x:Reference Vm}}"
-                                    IsVisible="{Binding IsBusy, Source={x:Reference Vm}}"
-                                    VerticalOptions="Center"
-                                    WidthRequest="24"
-                                    Color="{DynamicResource PrimaryAccentColor}" />
-                            </StackLayout>
-                        </ContentView>
-                    </ListView.Footer>
-                </ListView>
-            </StackLayout>
+                ItemsSource="{Binding Packages}"
+                RemainingItemsThreshold="{Binding RemainingItemsThreshold}"
+                RemainingItemsThresholdReachedCommand="{Binding RemainingItemsThresholdReachedCommand}"
+                IsVisible="{Binding SearchText, Converter={StaticResource stringToBoolConverter}}"
+                Scrolled="PackagesScrolled">
+                <CollectionView.Header>
+                    <ContentView>
+                        <StackLayout x:Name="SearchCollectionHeaderView" />
+                    </ContentView>
+                </CollectionView.Header>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:PackageMetadata">
+                        <controls:NuGetCard BindingContext="{Binding .}">
+                            <controls:NuGetCard.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding PackageTappedCommand, Source={x:Reference Vm}}" CommandParameter="{Binding .}" />
+                            </controls:NuGetCard.GestureRecognizers>
+                        </controls:NuGetCard>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.Footer>
+                    <ContentView>
+                        <StackLayout Margin="0,2,0,2">
+                            <controls:NuGetCardSkeleton />
+                            <controls:NuGetCardSkeleton />
+                            <controls:NuGetCardSkeleton />
+                            <controls:NuGetCardSkeleton />
+                        </StackLayout>
+                    </ContentView>
+                </CollectionView.Footer>
+            </CollectionView>
 
             <yummy:PancakeView
                 x:Name="SearchBarView"

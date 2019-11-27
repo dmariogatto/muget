@@ -78,11 +78,7 @@ namespace MuGet.Forms.ViewModels
 
             if (SearchText == searchText && !cancellationToken.IsCancellationRequested)
             {
-                var loaded = false;
-
                 IsBusy = true;
-                // Only show skelton loading when empty
-                CurrentState = Packages.Any() ? CurrentState : State.Loading;
 
                 try
                 {
@@ -121,23 +117,15 @@ namespace MuGet.Forms.ViewModels
 
                         TotalHits = totalHits;
                         RemainingItemsThreshold = packages.Count == 0 ? -1 : 5;
-
-                        loaded = true;
                     }
                 }
                 catch (Exception ex)
                 {
                     Logger.Error(ex);
-
-                    loaded = true;
                 }
                 finally
                 {
-                    if (loaded)
-                    {
-                        IsBusy = false;
-                        CurrentState = State.None;
-                    }
+                    IsBusy = false;
                 }
             }
 

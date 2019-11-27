@@ -21,6 +21,20 @@ namespace MuGet.Forms
 
         public async Task<bool> Run(JobInfo jobInfo, CancellationToken cancelToken)
         {
+            try
+            {
+                await _notifications.Send(new Notification()
+                {
+                    Id = 66,
+                    Title = "Running background fetch",
+                    Message = DateTime.Now.ToString("g"),
+                });
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex);
+            }
+
             var favouritePackages = _nuGetService.GetFavouritePackages();
 
             if (favouritePackages.Any())
@@ -45,7 +59,7 @@ namespace MuGet.Forms
                             {
                                 Id = fp.Id.GetHashCode(),
                                 Title = $"{fp.PackageId} ({fp.Version})",
-                                Message = $"by {latest.Authors} published {fp.Published.ToShortDateString()}",
+                                Message = $"by {latest.Authors}, published {fp.Published.ToShortDateString()}",
                             });
                         }
                         catch (Exception ex)

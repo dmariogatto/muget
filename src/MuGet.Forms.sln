@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MuGet.Forms.Android", "MuGe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MuGet.Forms.iOS", "MuGet.Forms.iOS\MuGet.Forms.iOS.csproj", "{B560D7CF-6CFE-4A19-86B6-26EFBF937382}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MuGet.Forms", "MuGet.Forms\MuGet.Forms.csproj", "{2B91A55F-B077-4E78-9E3F-8BE68148472B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MuGet.Forms", "MuGet.Forms\MuGet.Forms.csproj", "{2B91A55F-B077-4E78-9E3F-8BE68148472B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MuGet.Forms.Localisation", "MuGet.Forms.Localisation\MuGet.Forms.Localisation.csproj", "{DF1651CF-4D3F-4C93-BC72-DC78400794F2}"
 EndProject
