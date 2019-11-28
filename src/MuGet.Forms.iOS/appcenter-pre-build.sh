@@ -1,4 +1,4 @@
-﻿#!/bin/bash
+#!/bin/bash
 
 plistPath="${BUILD_REPOSITORY_LOCALPATH}/src/MuGet.Forms.iOS/Info.plist"
 appCsPath="${BUILD_REPOSITORY_LOCALPATH}/src/MuGet.Forms/App.xaml.cs"

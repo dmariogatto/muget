@@ -1,4 +1,4 @@
-﻿#!/bin/bash
+#!/bin/bash
 
 manifestPath="${BUILD_REPOSITORY_LOCALPATH}/src/MuGet.Forms.Android/Properties/AndroidManifest.xml"
 appCsPath="${BUILD_REPOSITORY_LOCALPATH}/src/MuGet.Forms/App.xaml.cs"
