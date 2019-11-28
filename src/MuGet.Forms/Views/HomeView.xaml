@@ -180,11 +180,6 @@
                                 Text="{local:Translate NoRecentPackages}" />
                         </StackLayout>
                     </yummy:PancakeView>
-
-                    <Button
-                        Command="{Binding RunJobsCommand}"
-                        IsVisible="{Binding IsDevelopment}"
-                        Text="{local:Translate RunAllJobs}" />
                 </StackLayout>
             </StackLayout>
         </ScrollView>

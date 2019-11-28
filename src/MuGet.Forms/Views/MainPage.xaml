@@ -39,14 +39,14 @@
                 IsVisible="{Binding SearchText, Converter={StaticResource stringToInverseBoolConverter}}">
                 <views:HomeView />
             </StackLayout>
-            
+
             <CollectionView
                 AbsoluteLayout.LayoutBounds="0,0,1,1"
                 AbsoluteLayout.LayoutFlags="All"
+                IsVisible="{Binding SearchText, Converter={StaticResource stringToBoolConverter}}"
                 ItemsSource="{Binding Packages}"
                 RemainingItemsThreshold="{Binding RemainingItemsThreshold}"
                 RemainingItemsThresholdReachedCommand="{Binding RemainingItemsThresholdReachedCommand}"
-                IsVisible="{Binding SearchText, Converter={StaticResource stringToBoolConverter}}"
                 Scrolled="PackagesScrolled">
                 <CollectionView.Header>
                     <ContentView>
@@ -64,7 +64,7 @@
                 </CollectionView.ItemTemplate>
                 <CollectionView.Footer>
                     <ContentView>
-                        <StackLayout Margin="0,2,0,2">
+                        <StackLayout Margin="0,2,0,2" Spacing="0">
                             <controls:NuGetCardSkeleton />
                             <controls:NuGetCardSkeleton />
                             <controls:NuGetCardSkeleton />

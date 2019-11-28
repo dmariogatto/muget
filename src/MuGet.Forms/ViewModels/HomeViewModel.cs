@@ -23,11 +23,7 @@ namespace MuGet.Forms.ViewModels
             LoadCommand = new AsyncCommand<CancellationToken>(Load);
             PackageTappedCommand = new AsyncCommand<PackageMetadata>(PackageTapped);
             SettingsTappedCommand = new AsyncCommand(SettingsTapped);
-            RunJobsCommand = new AsyncCommand(async () =>
-            {
-                var results = await Shiny.ShinyHost.Resolve<Shiny.Jobs.IJobManager>().RunAll();
-            });
-
+            
             CurrentState = State.Loading;
         }
 
@@ -44,8 +40,7 @@ namespace MuGet.Forms.ViewModels
         public AsyncCommand<CancellationToken> LoadCommand { get; private set; }
         public AsyncCommand<PackageMetadata> PackageTappedCommand { get; private set; }
         public AsyncCommand SettingsTappedCommand { get; private set; }
-        public AsyncCommand RunJobsCommand { get; private set; }
-
+        
         private async Task Load(CancellationToken cancellationToken)
         {
             if (IsBusy)

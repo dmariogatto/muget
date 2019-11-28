@@ -24,7 +24,12 @@ namespace MuGet.Forms.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+#if DEBUG
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
+#else
+            UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(60 * 60 * 6); // 6 hours
+#endif
+
             Shiny.iOSShinyHost.Init(new ShinyStartup());
 
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();

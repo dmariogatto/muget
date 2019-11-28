@@ -3,7 +3,8 @@
     x:Class="MuGet.Forms.Styles.LightTheme"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <x:String x:Key="PackageIcon">package_icon.svg</x:String>
+
+    <x:String x:Key="PackageIcon">gift_black.svg</x:String>
 
     <!--  Blue  -->
     <Color x:Key="PrimaryColor">#2196F3</Color>

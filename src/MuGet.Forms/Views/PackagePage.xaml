@@ -69,7 +69,7 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
 
                         <Label
@@ -99,7 +99,6 @@
                             Grid.Column="2"
                             BackgroundColor="Transparent"
                             Command="{Binding CloseCommand}"
-                            HorizontalOptions="End"
                             IsVisible="{Binding PreviousPackageId, Converter={StaticResource stringToBoolConverter}}"
                             Style="{DynamicResource ButtonIconStyle}"
                             Text="{x:Static helpers:MaterialFont.Close}"
@@ -140,58 +139,58 @@
                         </state:StateLayout.StateViews>
 
                         <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="48" />
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
-                            <ffimageloading:SvgCachedImage
-                                Grid.RowSpan="2"
-                                DownsampleToViewSize="true"
-                                ErrorPlaceholder="{DynamicResource PackageIcon}"
-                                HeightRequest="48"
-                                LoadingPlaceholder="{DynamicResource PackageIcon}"
-                                Source="{Binding Entry.IconUrl}"
-                                VerticalOptions="Center"
-                                WidthRequest="48" />
-                            <ScrollView
-                                Grid.Column="1"
-                                Orientation="Horizontal"
+                            <yummy:PancakeView
+                                BackgroundColor="{DynamicResource CardBackgroundColor}"
+                                CornerRadius="3"
+                                Elevation="4"
                                 VerticalOptions="Center">
-                                <Label
-                                    FontAttributes="Bold"
-                                    Style="{DynamicResource LabelTitleStyle}"
-                                    Text="{Binding Entry.Id}" />
-                            </ScrollView>
+                                <ffimageloading:SvgCachedImage
+                                    DownsampleToViewSize="true"
+                                    ErrorPlaceholder="{DynamicResource PackageIcon}"
+                                    HeightRequest="48"
+                                    LoadingPlaceholder="{DynamicResource PackageIcon}"
+                                    Source="{Binding Entry.IconUrl}"
+                                    WidthRequest="48" />
+                            </yummy:PancakeView>
+
                             <StackLayout
-                                Grid.Row="1"
                                 Grid.Column="1"
-                                Orientation="Horizontal">
-                                <Label
-                                    FontSize="Caption"
-                                    HorizontalOptions="Start"
-                                    Style="{DynamicResource LabelIconStyle}"
-                                    Text="{x:Static helpers:MaterialFont.Flag}" />
-                                <Label
-                                    FontSize="Caption"
-                                    HorizontalOptions="Start"
-                                    Style="{DynamicResource LabelStyle}"
-                                    Text="{Binding Entry.Version}" />
-                                <Label
-                                    FontAttributes="Italic"
-                                    FontSize="Caption"
-                                    IsVisible="{Binding Entry.PackVersion.IsPrerelease}"
-                                    Text="prerelease"
-                                    TextColor="{DynamicResource PrimaryAccentColor}"
-                                    VerticalOptions="FillAndExpand"
-                                    VerticalTextAlignment="Center" />
+                                HorizontalOptions="FillAndExpand"
+                                Spacing="0"
+                                VerticalOptions="Center">
+                                <ScrollView Orientation="Horizontal" VerticalOptions="Center">
+                                    <Label
+                                        FontAttributes="Bold"
+                                        Style="{DynamicResource LabelTitleStyle}"
+                                        Text="{Binding Entry.Id}" />
+                                </ScrollView>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label
+                                        FontSize="Caption"
+                                        HorizontalOptions="Start"
+                                        Style="{DynamicResource LabelIconStyle}"
+                                        Text="{x:Static helpers:MaterialFont.Flag}" />
+                                    <Label
+                                        FontSize="Caption"
+                                        HorizontalOptions="Start"
+                                        Style="{DynamicResource LabelStyle}"
+                                        Text="{Binding Entry.Version}" />
+                                    <Label
+                                        FontAttributes="Italic"
+                                        FontSize="Caption"
+                                        IsVisible="{Binding Entry.PackVersion.IsPrerelease}"
+                                        Text="prerelease"
+                                        TextColor="{DynamicResource PrimaryAccentColor}"
+                                        VerticalOptions="FillAndExpand"
+                                        VerticalTextAlignment="Center" />
+                                </StackLayout>
                             </StackLayout>
                             <Button
-                                Grid.RowSpan="2"
                                 Grid.Column="2"
                                 BackgroundColor="Transparent"
                                 Command="{Binding FavouriteCommand}"
@@ -286,7 +285,7 @@
                                 JustifyContent="Start">
                                 <BindableLayout.ItemTemplate>
                                     <DataTemplate x:DataType="x:String">
-                                        <yummy:PancakeView Style="{DynamicResource CardYummyStyle}">
+                                        <yummy:PancakeView Margin="0,0,3,0" Style="{DynamicResource CardYummyStyle}">
                                             <Label Style="{DynamicResource LabelStyle}" Text="{Binding .}" />
                                         </yummy:PancakeView>
                                     </DataTemplate>
@@ -426,8 +425,9 @@
 
                 <StackLayout x:Name="DependenciesView">
                     <Label
+                        Margin="6,3,6,3"
                         IsVisible="{Binding Entry.DependencyGroups, Converter={StaticResource listToInverseBoolConverter}}"
-                        Style="{DynamicResource LabelHeaderStyle}"
+                        Style="{DynamicResource LabelTitleStyle}"
                         Text="None" />
                     <ListView
                         BackgroundColor="Transparent"
@@ -452,7 +452,7 @@
                         <ListView.ItemTemplate>
                             <DataTemplate x:DataType="models:Dependency">
                                 <ViewCell>
-                                    <StackLayout Padding="8,0,4,0" Orientation="Horizontal">
+                                    <StackLayout Padding="12,0,4,0" Orientation="Horizontal">
                                         <Label
                                             FontSize="Small"
                                             HeightRequest="48"

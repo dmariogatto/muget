@@ -34,16 +34,21 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
 
-                    <ffimageloading:SvgCachedImage
+                    <yummy:PancakeView
                         Grid.RowSpan="3"
-                        DownsampleToViewSize="true"
-                        ErrorPlaceholder="{DynamicResource PackageIcon}"
-                        HeightRequest="48"
+                        BackgroundColor="{DynamicResource CardBackgroundColor}"
+                        CornerRadius="3"
+                        Elevation="4"
                         HorizontalOptions="Center"
-                        LoadingPlaceholder="{DynamicResource PackageIcon}"
-                        Source="{Binding ValidatedIconUrl}"
-                        VerticalOptions="Center"
-                        WidthRequest="48" />
+                        VerticalOptions="Center">
+                        <ffimageloading:SvgCachedImage
+                            DownsampleToViewSize="true"
+                            ErrorPlaceholder="{DynamicResource PackageIcon}"
+                            HeightRequest="48"
+                            LoadingPlaceholder="{DynamicResource PackageIcon}"
+                            Source="{Binding ValidatedIconUrl}"
+                            WidthRequest="48" />
+                    </yummy:PancakeView>
 
                     <Label
                         Grid.Row="0"

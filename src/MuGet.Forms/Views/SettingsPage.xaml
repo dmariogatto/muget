@@ -49,6 +49,14 @@
                             Text="Reset Notifications"
                             VerticalOptions="FillAndExpand" />
                     </ViewCell>
+                    <ViewCell>
+                        <Button
+                            Command="{Binding RunJobsCommand}"
+                            HorizontalOptions="FillAndExpand"
+                            IsVisible="{Binding IsDevelopment}"
+                            Text="{local:Translate RunAllJobs}"
+                            VerticalOptions="FillAndExpand" />
+                    </ViewCell>
                 </TableSection>
             </TableRoot>
         </TableView>

@@ -11,6 +11,10 @@ namespace MuGet.Forms.ViewModels
             Title = Resources.Settings;
 
             ResetNotificationsCommand = new Command(ResetNotifications);
+            RunJobsCommand = new AsyncCommand(async () =>
+            {
+                var results = await Shiny.ShinyHost.Resolve<Shiny.Jobs.IJobManager>().RunAll();
+            });
         }
 
         public bool IncludePrerelease
@@ -44,6 +48,7 @@ namespace MuGet.Forms.ViewModels
         }
 
         public Command ResetNotificationsCommand { get; private set; }
+        public AsyncCommand RunJobsCommand { get; private set; }
 
         private void ResetNotifications()
         {

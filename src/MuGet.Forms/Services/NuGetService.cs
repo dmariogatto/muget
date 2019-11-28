@@ -123,6 +123,9 @@ namespace MuGet.Forms.Services
                 {
                     if (!string.IsNullOrWhiteSpace(i.IconUrl))
                     {
+                        // FFImageLoading does not cache 404's, which results in
+                        // exceptions when scrolling the packages... this kills performance
+                        // so validate the url before loading.
                         tasks.Add(IsValidUrl(i.IconUrl, cancellationToken).ContinueWith((r) =>
                         {
                             if (r.IsFaulted || !r.Result)
