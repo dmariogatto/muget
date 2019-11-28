@@ -18,8 +18,8 @@ if [ ! -f $appCsPath ] ; then
   exit 1
 fi
 
-sed -i "s/APPCENTER_ANDROID/${APPCENTER_ANDROID}/g" "${appCsPath}"
-sed -i "s/APPCENTER_IOS/${APPCENTER_IOS}/g" "${appCsPath}"
+sed -i "" "s/APPCENTER_ANDROID/${APPCENTER_ANDROID}/g" "${appCsPath}"
+sed -i "" "s/APPCENTER_IOS/${APPCENTER_IOS}/g" "${appCsPath}"
 
 buildVersion=$((buildNumber + buildOffset))
 buildShortVersion="$(date -u +'%Y.%-m.%-d')"
