@@ -54,7 +54,7 @@
                 Padding="4"
                 BackgroundColor="{DynamicResource CardBackgroundColor}"
                 Elevation="6">
-                <Grid>
+                <Grid RowSpacing="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="48" />
                         <RowDefinition Height="Auto" />
@@ -74,7 +74,7 @@
 
                         <Label
                             FontFamily="{StaticResource MaterialFontFamily}"
-                            FontSize="Title"
+                            FontSize="34"
                             HorizontalOptions="Start"
                             Style="{DynamicResource LabelStyle}"
                             Text="{x:Static helpers:MaterialFont.ChevronLeft}"
@@ -241,7 +241,8 @@
                 <ScrollView
                     x:Name="DetailsView"
                     Padding="4,0,4,0"
-                    IsVisible="False">
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
                     <StackLayout>
                         <StackLayout
                             Margin="0,12,0,0"
@@ -285,7 +286,7 @@
                                 JustifyContent="Start">
                                 <BindableLayout.ItemTemplate>
                                     <DataTemplate x:DataType="x:String">
-                                        <yummy:PancakeView Margin="0,0,3,0" Style="{DynamicResource CardYummyStyle}">
+                                        <yummy:PancakeView Margin="8,0,0,0" Style="{DynamicResource CardYummyStyle}">
                                             <Label Style="{DynamicResource LabelStyle}" Text="{Binding .}" />
                                         </yummy:PancakeView>
                                     </DataTemplate>
@@ -423,7 +424,10 @@
                     </StackLayout>
                 </ScrollView>
 
-                <StackLayout x:Name="DependenciesView">
+                <StackLayout
+                    x:Name="DependenciesView"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
                     <Label
                         Margin="6,3,6,3"
                         IsVisible="{Binding Entry.DependencyGroups, Converter={StaticResource listToInverseBoolConverter}}"
@@ -434,8 +438,7 @@
                         IsGroupingEnabled="True"
                         ItemTapped="DependencyTapped"
                         ItemsSource="{Binding Dependencies}"
-                        SelectionMode="None"
-                        SeparatorVisibility="None">
+                        SelectionMode="None">
                         <ListView.GroupHeaderTemplate>
                             <DataTemplate x:DataType="models:DependencyGrouping">
                                 <ViewCell>
@@ -452,7 +455,11 @@
                         <ListView.ItemTemplate>
                             <DataTemplate x:DataType="models:Dependency">
                                 <ViewCell>
-                                    <StackLayout Padding="12,0,4,0" Orientation="Horizontal">
+                                    <Grid Padding="12,0,8,0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
                                         <Label
                                             FontSize="Small"
                                             HeightRequest="48"
@@ -461,18 +468,22 @@
                                             Text="{Binding Id}"
                                             TextColor="{StaticResource LinkColor}" />
                                         <Label
+                                            Grid.Column="1"
                                             FontSize="Micro"
                                             HorizontalOptions="Start"
                                             Style="{DynamicResource LabelStyle}"
                                             Text="{Binding RangePretty, TargetNullValue={local:Translate NoDependencies}}" />
-                                    </StackLayout>
+                                    </Grid>
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
                 </StackLayout>
 
-                <StackLayout x:Name="VersionsView" IsVisible="False">
+                <StackLayout
+                    x:Name="VersionsView"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
                     <ListView
                         BackgroundColor="Transparent"
                         ItemTapped="VersionTapped"
