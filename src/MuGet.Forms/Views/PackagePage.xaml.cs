@@ -81,21 +81,5 @@ namespace MuGet.Forms.Views
                     break;
             }
         }
-
-        private void DependencyTapped(object sender, ItemTappedEventArgs e)
-        {
-            if (e.Item is Dependency dependency)
-            {
-                ViewModel.DependancyTappedCommand.Execute(dependency);
-            }
-        }
-
-        private void VersionTapped(object sender, ItemTappedEventArgs e)
-        {
-            if (e.Item is CatalogEntry entry)
-            {
-                ViewModel.EntryTappedCommand.ExecuteAsync(entry);
-            }
-        }
     }
 }

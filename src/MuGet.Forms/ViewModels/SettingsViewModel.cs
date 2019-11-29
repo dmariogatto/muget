@@ -57,7 +57,7 @@ namespace MuGet.Forms.ViewModels
             {
                 f.Version = string.Empty;
                 f.Published = DateTime.MinValue;
-                NuGetService.AddFavouritePackage(f);
+                NuGetService.UpsertFavouritePackage(f);
             }
         }
     }

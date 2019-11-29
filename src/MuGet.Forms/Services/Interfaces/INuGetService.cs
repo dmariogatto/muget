@@ -19,7 +19,7 @@ namespace MuGet.Forms.Services
         Task<CatalogData> GetCatalogData(string indexUrl, CancellationToken cancellationToken);
 
         IList<FavouritePackage> GetFavouritePackages();
-        bool AddFavouritePackage(FavouritePackage package);
+        bool UpsertFavouritePackage(FavouritePackage package);
         bool RemoveFavouritePackage(FavouritePackage package);
 
         IList<RecentPackage> GetRecentPackages();

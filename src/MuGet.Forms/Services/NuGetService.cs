@@ -257,7 +257,7 @@ namespace MuGet.Forms.Services
             return _favouriteRepo.GetAll().OrderBy(f => f.TotalDownloads).ToList();
         }
 
-        public bool AddFavouritePackage(FavouritePackage package)
+        public bool UpsertFavouritePackage(FavouritePackage package)
         {
             if (!string.IsNullOrEmpty(package?.Key))
             {

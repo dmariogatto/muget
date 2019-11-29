@@ -62,7 +62,8 @@ namespace MuGet.Forms.ViewModels
                 await Task.WhenAll(favouriteTasks);
 
                 RecentPackages.ReplaceRange(recentTasks.Select(t => t.Result));
-                FavouritePackages.ReplaceRange(favouriteTasks.Select(t => t.Result));
+                FavouritePackages.ReplaceRange(favouriteTasks.Select(t => t.Result)
+                    .OrderByDescending(m => m.TotalDownloads));
             }
             catch (Exception ex)
             {

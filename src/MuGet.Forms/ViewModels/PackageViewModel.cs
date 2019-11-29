@@ -1,7 +1,6 @@
 ﻿using MvvmHelpers;
 using MvvmHelpers.Commands;
 using MuGet.Forms.Controls;
-using MuGet.Forms.Localisation;
 using MuGet.Forms.Models;
 using System;
 using System.Collections.Generic;
@@ -17,6 +16,7 @@ namespace MuGet.Forms.ViewModels
     {
         private readonly Stack<PackageViewState> _navStack;
 
+        private Task _currentLoadTask;
         private CancellationTokenSource _cancellation;
 
         public PackageViewModel()
@@ -24,8 +24,8 @@ namespace MuGet.Forms.ViewModels
             _navStack = new Stack<PackageViewState>();
 
             CatalogEntries = new ObservableRangeCollection<CatalogEntry>();
-            LoadCommand = new AsyncCommand<CancellationToken>(Load);
-            DependancyTappedCommand = new Command<Dependency>(DependencyTapped);
+            LoadCommand = new AsyncCommand<CancellationToken>((ct) => _currentLoadTask = Load(ct));
+            DependencyTappedCommand = new Command<Dependency>(DependencyTapped);
             EntryTappedCommand = new AsyncCommand<CatalogEntry>((e) => EntryTapped(e, _cancellation.Token));
             LinkTappedCommand = new AsyncCommand<LinkType>(LinkTapped);
             FavouriteCommand = new AsyncCommand<CatalogEntry>(Favourite);            
@@ -117,7 +117,7 @@ namespace MuGet.Forms.ViewModels
         public ObservableRangeCollection<CatalogEntry> CatalogEntries { get; private set; }
 
         public AsyncCommand<CancellationToken> LoadCommand { get; private set; }
-        public Command<Dependency> DependancyTappedCommand { get; private set; }
+        public Command<Dependency> DependencyTappedCommand { get; private set; }
         public AsyncCommand<CatalogEntry> EntryTappedCommand { get; private set; }
         public AsyncCommand<LinkType> LinkTappedCommand { get; private set; }
         public AsyncCommand<CatalogEntry> FavouriteCommand { get; private set; }
@@ -144,8 +144,11 @@ namespace MuGet.Forms.ViewModels
 
             try
             {
+                Metadata = null;
                 Entry = null;
+                EntryData = null;
                 CatalogEntries.Clear();
+                Dependencies.Clear();
 
                 if (!string.IsNullOrEmpty(PackageId))
                 {
@@ -164,7 +167,7 @@ namespace MuGet.Forms.ViewModels
                         if (savedPackage != null)
                         {
                             savedPackage.TotalDownloads = Metadata.TotalDownloads;
-                            NuGetService.AddFavouritePackage(savedPackage);
+                            NuGetService.UpsertFavouritePackage(savedPackage);
                             foreach (var e in entries)
                             {
                                 e.IsFavourite = true;
@@ -304,6 +307,19 @@ namespace MuGet.Forms.ViewModels
                         break;
                 }
             }
+            else if (!string.IsNullOrEmpty(PackageId) &&
+                     !string.IsNullOrEmpty(Version) &&
+                     type == LinkType.NuGet)
+            {
+                var source = await NuGetService.GetNuGetSource(default);
+                if (!string.IsNullOrEmpty(source?.PackageDetailsUriTemplate))
+                {
+                    var detailsUrl = source.PackageDetailsUriTemplate
+                        .Replace("{id}", PackageId)
+                        .Replace("{version}", Version);
+                    await Browser.OpenAsync(detailsUrl);
+                }
+            }
         }
 
         private async Task Favourite(CatalogEntry entry)
@@ -339,7 +355,7 @@ namespace MuGet.Forms.ViewModels
                     sp.Published = DateTime.MinValue;
 #endif
 
-                    NuGetService.AddFavouritePackage(sp);
+                    NuGetService.UpsertFavouritePackage(sp);
                 }
 
                 var isFav = !entry.IsFavourite;
@@ -355,15 +371,17 @@ namespace MuGet.Forms.ViewModels
             try
             {
                 _cancellation?.Cancel();
+                // Wait for load task to finish to prevent
+                // any inconsistency
+                if (_currentLoadTask != null)
+                    await _currentLoadTask;
 
                 if (_navStack.Any())
                 {
                     var state = _navStack.Pop();
                     OnPropertyChanged(nameof(PreviousPackageId));
-
-                    PackageId = string.Empty;
-
-                    _packageId = state.PackageId;
+                    
+                    PackageId = state.PackageId;
                     CatalogEntries.ReplaceRange(state.Entries);
                     Entry = state.Entry;
                     EntryData = state.EntryData;

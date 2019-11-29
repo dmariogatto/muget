@@ -192,6 +192,9 @@
   <data name="Versions" xml:space="preserve">
     <value>Versions</value>
   </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
   <data name="Close" xml:space="preserve">
     <value>Close</value>
   </data>
@@ -224,5 +227,11 @@
   </data>
   <data name="WelcomeToMuGet" xml:space="preserve">
     <value>A package browser for NuGet.org, view and research all your .NET dependencies while on the go!</value>
+  </data>
+  <data name="CannotFindPackage" xml:space="preserve">
+    <value>Cannot find package details 😱</value>
+  </data>
+  <data name="CannotFindPackageDescription" xml:space="preserve">
+    <value>Package details could not be found. It is possible that the package has been unlisted.</value>
   </data>
 </root>

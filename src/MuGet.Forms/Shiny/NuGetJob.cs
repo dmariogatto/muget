@@ -51,7 +51,7 @@ namespace MuGet.Forms
                         fp.Version = latest.Version;
                         fp.Published = latest.Published;
 
-                        _nuGetService.AddFavouritePackage(fp);
+                        _nuGetService.UpsertFavouritePackage(fp);
 
                         try
                         {

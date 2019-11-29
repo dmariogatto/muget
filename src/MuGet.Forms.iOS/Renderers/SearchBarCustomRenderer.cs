@@ -1,5 +1,4 @@
-﻿using System.ComponentModel;
-using Foundation;
+﻿using Foundation;
 using MuGet.Forms.iOS.Renderers;
 using UIKit;
 using Xamarin.Forms;
@@ -11,14 +10,13 @@ namespace MuGet.Forms.iOS.Renderers
     [Preserve(AllMembers = true)]
     public class SearchBarCustomRenderer : SearchBarRenderer
     {
-        protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
+        protected override void OnElementChanged(ElementChangedEventArgs<SearchBar> e)
         {
-            base.OnElementPropertyChanged(sender, e);
+            base.OnElementChanged(e);
 
-            if (e.PropertyName == SearchBar.TextProperty.PropertyName)
+            if (Control != null)
             {
                 Control.AutocorrectionType = UITextAutocorrectionType.No;
-                Control.ShowsCancelButton = false;
             }
         }
     }
