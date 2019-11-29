@@ -187,17 +187,23 @@ namespace MuGet.Forms.ViewModels
 
                         Entry = latest;
                         CatalogEntries.ReplaceRange(entries);
+
+                        CurrentState = State.None;
+                    }
+                    else
+                    {
+                        CurrentState = State.Error;
                     }
                 }
             }
             catch (Exception ex)
             {
                 Logger.Error(ex);
+                CurrentState = State.Error;
             }
             finally
             {
-                IsBusy = false;
-                CurrentState = State.None;
+                IsBusy = false;                
             }            
         }
 
@@ -386,6 +392,8 @@ namespace MuGet.Forms.ViewModels
                     Entry = state.Entry;
                     EntryData = state.EntryData;
                     Metadata = state.Metadata;
+
+                    CurrentState = State.None;
                 }
                 else
                 {

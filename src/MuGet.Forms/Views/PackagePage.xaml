@@ -135,7 +135,43 @@
                                             Style="{StaticResource SkeletonStyle}"
                                             WidthRequest="48" />
                                     </StackLayout>
+                                </Grid>
+                            </state:StateView>
+                            <state:StateView StateKey="Error">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="48" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <yummy:PancakeView
+                                        BackgroundColor="{DynamicResource CardBackgroundColor}"
+                                        CornerRadius="3"
+                                        Elevation="4"
+                                        VerticalOptions="Center">
+                                        <ffimageloading:SvgCachedImage
+                                            DownsampleToViewSize="true"
+                                            HeightRequest="48"
+                                            Source="{DynamicResource PackageIcon}"
+                                            WidthRequest="48" />
+                                    </yummy:PancakeView>
 
+                                    <StackLayout
+                                        Grid.Column="1"
+                                        HorizontalOptions="FillAndExpand"
+                                        Spacing="0"
+                                        VerticalOptions="Center">
+                                        <ScrollView Orientation="Horizontal" VerticalOptions="Center">
+                                            <Label
+                                                FontAttributes="Bold"
+                                                Style="{DynamicResource LabelTitleStyle}"
+                                                Text="{Binding PackageId}" />
+                                        </ScrollView>
+                                        <Label
+                                            FontSize="Caption"
+                                            HorizontalOptions="Start"
+                                            Style="{DynamicResource LabelStyle}"
+                                            Text="{local:Translate CannotFindPackage}" />
+                                    </StackLayout>
                                 </Grid>
                             </state:StateView>
                         </state:StateLayout.StateViews>
@@ -171,9 +207,7 @@
                                         Style="{DynamicResource LabelTitleStyle}"
                                         Text="{Binding PackageId}" />
                                 </ScrollView>
-                                <StackLayout
-                                    IsVisible="{Binding Entry, Converter={StaticResource nullToBoolConverter}}"
-                                    Orientation="Horizontal">
+                                <StackLayout Orientation="Horizontal">
                                     <Label
                                         FontSize="Caption"
                                         HorizontalOptions="Start"
@@ -193,12 +227,6 @@
                                         VerticalOptions="FillAndExpand"
                                         VerticalTextAlignment="Center" />
                                 </StackLayout>
-                                <Label
-                                    FontSize="Caption"
-                                    HorizontalOptions="Start"
-                                    IsVisible="{Binding Entry, Converter={StaticResource nullToInverseBoolConverter}}"
-                                    Style="{DynamicResource LabelStyle}"
-                                    Text="{local:Translate CannotFindPackage}" />
                             </StackLayout>
                             <Button
                                 Grid.Column="2"
@@ -246,19 +274,9 @@
                             WidthRequest="24"
                             Color="{DynamicResource PrimaryAccentColor}" />
                     </state:StateView>
-                </state:StateLayout.StateViews>
-
-                <ScrollView
-                    x:Name="DetailsView"
-                    Padding="4,0,4,0"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand">
-                    <StackLayout Margin="3,2,3,2">
-                        <StackLayout
-                            IsVisible="{Binding Entry, Converter={StaticResource nullToInverseBoolConverter}}">
-                            <Label
-                                Text="{local:Translate CannotFindPackageDescription}"
-                                Style="{DynamicResource LabelStyle}" />
+                    <state:StateView StateKey="Error">
+                        <StackLayout Padding="4,0,4,0" IsVisible="{Binding Entry, Converter={StaticResource nullToInverseBoolConverter}}">
+                            <Label Style="{DynamicResource LabelStyle}" Text="{local:Translate CannotFindPackageDescription}" />
                             <Button
                                 Command="{Binding LinkTappedCommand}"
                                 CommandParameter="{x:Static controls:LinkType.NuGet}"
@@ -273,186 +291,191 @@
                                 </Button.ImageSource>
                             </Button>
                         </StackLayout>
+                    </state:StateView>
+                </state:StateLayout.StateViews>
+
+                <ScrollView
+                    x:Name="DetailsView"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+                    <StackLayout Margin="4,4,4,4">
                         <StackLayout
-                            IsVisible="{Binding Entry, Converter={StaticResource nullToBoolConverter}}">
-                            <StackLayout
-                                Margin="0,12,0,0"
-                                HorizontalOptions="CenterAndExpand"
-                                Orientation="Horizontal">
-                                <Label
-                                    HorizontalOptions="Start"
-                                    Style="{DynamicResource LabelIconStyle}"
-                                    Text="{x:Static helpers:MaterialFont.Account}" />
-                                <Label
-                                    HorizontalOptions="Start"
-                                    Style="{DynamicResource LabelStyle}"
-                                    Text="{Binding Entry.Authors}" />
-                            </StackLayout>
-                            <Label Style="{DynamicResource LabelTitleStyle}" Text="{local:Translate Description}" />
-                            <yummy:PancakeView Style="{DynamicResource CardYummyStyle}">
-                                <Label FormattedText="{Binding EntryData.Description, Converter={StaticResource linksToFormattedConverter}}" Style="{DynamicResource LabelStyle}" />
-                            </yummy:PancakeView>
+                            Margin="0,12,0,0"
+                            HorizontalOptions="CenterAndExpand"
+                            Orientation="Horizontal">
                             <Label
-                                IsVisible="{Binding EntryData.ReleaseNotes, Converter={StaticResource stringToBoolConverter}}"
-                                Style="{DynamicResource LabelTitleStyle}"
-                                Text="{local:Translate ReleaseNotes}" />
-                            <yummy:PancakeView IsVisible="{Binding EntryData.ReleaseNotes, Converter={StaticResource stringToBoolConverter}}" Style="{DynamicResource CardYummyStyle}">
-                                <Label FormattedText="{Binding EntryData.ReleaseNotes, Converter={StaticResource linksToFormattedConverter}}" Style="{DynamicResource LabelStyle}" />
-                            </yummy:PancakeView>
-
+                                HorizontalOptions="Start"
+                                Style="{DynamicResource LabelIconStyle}"
+                                Text="{x:Static helpers:MaterialFont.Account}" />
                             <Label
-                                IsVisible="{Binding EntryData.Tags, Converter={StaticResource listToBoolConverter}}"
-                                Style="{DynamicResource LabelTitleStyle}"
-                                Text="{local:Translate Tags}" />
-                            <ScrollView
-                                HorizontalOptions="FillAndExpand"
-                                IsVisible="{Binding EntryData.Tags, Converter={StaticResource listToBoolConverter}}"
-                                Orientation="Horizontal"
-                                VerticalOptions="Fill">
-                                <FlexLayout
-                                    Margin="0,6,0,6"
-                                    BindableLayout.ItemsSource="{Binding EntryData.Tags}"
-                                    Direction="Row"
-                                    FlowDirection="LeftToRight"
-                                    JustifyContent="Start">
-                                    <BindableLayout.ItemTemplate>
-                                        <DataTemplate x:DataType="x:String">
-                                            <yummy:PancakeView Margin="8,0,0,0" Style="{DynamicResource CardYummyStyle}">
-                                                <Label Style="{DynamicResource LabelStyle}" Text="{Binding .}" />
-                                            </yummy:PancakeView>
-                                        </DataTemplate>
-                                    </BindableLayout.ItemTemplate>
-                                </FlexLayout>
-                            </ScrollView>
+                                HorizontalOptions="Start"
+                                Style="{DynamicResource LabelStyle}"
+                                Text="{Binding Entry.Authors}" />
+                        </StackLayout>
+                        <Label Style="{DynamicResource LabelTitleStyle}" Text="{local:Translate Description}" />
+                        <yummy:PancakeView Style="{DynamicResource CardYummyStyle}">
+                            <Label FormattedText="{Binding EntryData.Description, Converter={StaticResource linksToFormattedConverter}}" Style="{DynamicResource LabelStyle}" />
+                        </yummy:PancakeView>
+                        <Label
+                            IsVisible="{Binding EntryData.ReleaseNotes, Converter={StaticResource stringToBoolConverter}}"
+                            Style="{DynamicResource LabelTitleStyle}"
+                            Text="{local:Translate ReleaseNotes}" />
+                        <yummy:PancakeView IsVisible="{Binding EntryData.ReleaseNotes, Converter={StaticResource stringToBoolConverter}}" Style="{DynamicResource CardYummyStyle}">
+                            <Label FormattedText="{Binding EntryData.ReleaseNotes, Converter={StaticResource linksToFormattedConverter}}" Style="{DynamicResource LabelStyle}" />
+                        </yummy:PancakeView>
 
-                            <Label Style="{DynamicResource LabelTitleStyle}" Text="{local:Translate Statistics}" />
-                            <yummy:PancakeView Style="{DynamicResource CardYummyStyle}">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto" />
-                                        <RowDefinition Height="Auto" />
-                                        <RowDefinition Height="Auto" />
-                                        <RowDefinition Height="Auto" />
-                                        <RowDefinition Height="Auto" />
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto" />
-                                        <ColumnDefinition Width="Auto" />
-                                    </Grid.ColumnDefinitions>
+                        <Label
+                            IsVisible="{Binding EntryData.Tags, Converter={StaticResource listToBoolConverter}}"
+                            Style="{DynamicResource LabelTitleStyle}"
+                            Text="{local:Translate Tags}" />
+                        <ScrollView
+                            HorizontalOptions="FillAndExpand"
+                            IsVisible="{Binding EntryData.Tags, Converter={StaticResource listToBoolConverter}}"
+                            Orientation="Horizontal"
+                            VerticalOptions="Fill">
+                            <FlexLayout
+                                Margin="0,6,0,6"
+                                BindableLayout.ItemsSource="{Binding EntryData.Tags}"
+                                Direction="Row"
+                                FlowDirection="LeftToRight"
+                                JustifyContent="Start">
+                                <BindableLayout.ItemTemplate>
+                                    <DataTemplate x:DataType="x:String">
+                                        <yummy:PancakeView Margin="8,0,0,0" Style="{DynamicResource CardYummyStyle}">
+                                            <Label Style="{DynamicResource LabelStyle}" Text="{Binding .}" />
+                                        </yummy:PancakeView>
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+                            </FlexLayout>
+                        </ScrollView>
 
-                                    <Label
-                                        Grid.Row="0"
-                                        Grid.Column="0"
-                                        Style="{DynamicResource LabelIconStyle}"
-                                        Text="{x:Static helpers:MaterialFont.Download}" />
-                                    <Label
-                                        Grid.Row="1"
-                                        Grid.Column="0"
-                                        Style="{DynamicResource LabelIconStyle}"
-                                        Text="{x:Static helpers:MaterialFont.Gift}" />
-                                    <Label
-                                        Grid.Row="2"
-                                        Grid.Column="0"
-                                        Style="{DynamicResource LabelIconStyle}"
-                                        Text="{x:Static helpers:MaterialFont.ChartLine}" />
-                                    <Label
-                                        Grid.Row="3"
-                                        Grid.Column="0"
-                                        Style="{DynamicResource LabelIconStyle}"
-                                        Text="{x:Static helpers:MaterialFont.History}" />
-                                    <Label
-                                        Grid.Row="4"
-                                        Grid.Column="0"
-                                        IsVisible="{Binding Entry.LicenseExpression, Converter={StaticResource stringToBoolConverter}}"
-                                        Style="{DynamicResource LabelIconStyle}"
-                                        Text="{x:Static helpers:MaterialFont.Certificate}" />
-
-                                    <Label
-                                        Grid.Row="0"
-                                        Grid.Column="1"
-                                        Style="{DynamicResource LabelStyle}"
-                                        Text="{Binding Metadata.TotalDownloads, StringFormat={local:Translate TotalDownloadsFormat}}" />
-                                    <Label
-                                        Grid.Row="1"
-                                        Grid.Column="1"
-                                        Style="{DynamicResource LabelStyle}"
-                                        Text="{Binding Entry.Downloads, StringFormat={local:Translate DownloadsOfCurrentVersionFormat}}" />
-                                    <Label
-                                        Grid.Row="2"
-                                        Grid.Column="1"
-                                        Style="{DynamicResource LabelStyle}"
-                                        Text="{Binding AvgDownloads, StringFormat={local:Translate DownloadsPerDayFormat}}" />
-                                    <Label
-                                        Grid.Row="3"
-                                        Grid.Column="1"
-                                        Style="{DynamicResource LabelStyle}"
-                                        Text="{Binding Entry.Published, StringFormat='{0:d}'}" />
-                                    <Label
-                                        Grid.Row="4"
-                                        Grid.Column="1"
-                                        IsVisible="{Binding Entry.LicenseExpression, Converter={StaticResource stringToBoolConverter}}"
-                                        Style="{DynamicResource LabelStyle}"
-                                        Text="{Binding Entry.LicenseExpression}" />
-                                </Grid>
-                            </yummy:PancakeView>
-
+                        <Label Style="{DynamicResource LabelTitleStyle}" Text="{local:Translate Statistics}" />
+                        <yummy:PancakeView Style="{DynamicResource CardYummyStyle}">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
 
-                                <Button
-                                    Grid.ColumnSpan="2"
-                                    Command="{Binding LinkTappedCommand}"
-                                    CommandParameter="{x:Static controls:LinkType.Project}"
-                                    ContentLayout="Left,5"
-                                    HorizontalOptions="Center"
-                                    Text="Project">
-                                    <Button.ImageSource>
-                                        <FontImageSource
-                                            FontFamily="{StaticResource MaterialFontFamily}"
-                                            Glyph="{x:Static helpers:MaterialFont.FileDocument}"
-                                            Color="{DynamicResource PrimaryTextColor}" />
-                                    </Button.ImageSource>
-                                </Button>
-
-                                <Button
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Style="{DynamicResource LabelIconStyle}"
+                                    Text="{x:Static helpers:MaterialFont.Download}" />
+                                <Label
                                     Grid.Row="1"
                                     Grid.Column="0"
-                                    Command="{Binding LinkTappedCommand}"
-                                    CommandParameter="{x:Static controls:LinkType.NuGet}"
-                                    ContentLayout="Left,5"
-                                    HorizontalOptions="Center"
-                                    Text="nuget.org">
-                                    <Button.ImageSource>
-                                        <FontImageSource
-                                            FontFamily="{StaticResource MaterialFontFamily}"
-                                            Glyph="{x:Static helpers:MaterialFont.PackageVariantClosed}"
-                                            Color="{DynamicResource PrimaryTextColor}" />
-                                    </Button.ImageSource>
-                                </Button>
-                                <Button
+                                    Style="{DynamicResource LabelIconStyle}"
+                                    Text="{x:Static helpers:MaterialFont.Gift}" />
+                                <Label
+                                    Grid.Row="2"
+                                    Grid.Column="0"
+                                    Style="{DynamicResource LabelIconStyle}"
+                                    Text="{x:Static helpers:MaterialFont.ChartLine}" />
+                                <Label
+                                    Grid.Row="3"
+                                    Grid.Column="0"
+                                    Style="{DynamicResource LabelIconStyle}"
+                                    Text="{x:Static helpers:MaterialFont.History}" />
+                                <Label
+                                    Grid.Row="4"
+                                    Grid.Column="0"
+                                    IsVisible="{Binding Entry.LicenseExpression, Converter={StaticResource stringToBoolConverter}}"
+                                    Style="{DynamicResource LabelIconStyle}"
+                                    Text="{x:Static helpers:MaterialFont.Certificate}" />
+
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    Style="{DynamicResource LabelStyle}"
+                                    Text="{Binding Metadata.TotalDownloads, StringFormat={local:Translate TotalDownloadsFormat}}" />
+                                <Label
                                     Grid.Row="1"
                                     Grid.Column="1"
-                                    Command="{Binding LinkTappedCommand}"
-                                    CommandParameter="{x:Static controls:LinkType.FuGet}"
-                                    ContentLayout="Left,5"
-                                    HorizontalOptions="Center"
-                                    Text="fuget.org">
-                                    <Button.ImageSource>
-                                        <FontImageSource
-                                            FontFamily="{StaticResource MaterialFontFamily}"
-                                            Glyph="{x:Static helpers:MaterialFont.PackageVariant}"
-                                            Color="{DynamicResource PrimaryTextColor}" />
-                                    </Button.ImageSource>
-                                </Button>
+                                    Style="{DynamicResource LabelStyle}"
+                                    Text="{Binding Entry.Downloads, StringFormat={local:Translate DownloadsOfCurrentVersionFormat}}" />
+                                <Label
+                                    Grid.Row="2"
+                                    Grid.Column="1"
+                                    Style="{DynamicResource LabelStyle}"
+                                    Text="{Binding AvgDownloads, StringFormat={local:Translate DownloadsPerDayFormat}}" />
+                                <Label
+                                    Grid.Row="3"
+                                    Grid.Column="1"
+                                    Style="{DynamicResource LabelStyle}"
+                                    Text="{Binding Entry.Published, StringFormat='{0:d}'}" />
+                                <Label
+                                    Grid.Row="4"
+                                    Grid.Column="1"
+                                    IsVisible="{Binding Entry.LicenseExpression, Converter={StaticResource stringToBoolConverter}}"
+                                    Style="{DynamicResource LabelStyle}"
+                                    Text="{Binding Entry.LicenseExpression}" />
                             </Grid>
-                        </StackLayout>
+                        </yummy:PancakeView>
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Button
+                                Grid.ColumnSpan="2"
+                                Command="{Binding LinkTappedCommand}"
+                                CommandParameter="{x:Static controls:LinkType.Project}"
+                                ContentLayout="Left,5"
+                                HorizontalOptions="Center"
+                                Text="Project">
+                                <Button.ImageSource>
+                                    <FontImageSource
+                                        FontFamily="{StaticResource MaterialFontFamily}"
+                                        Glyph="{x:Static helpers:MaterialFont.FileDocument}"
+                                        Color="{DynamicResource PrimaryTextColor}" />
+                                </Button.ImageSource>
+                            </Button>
+
+                            <Button
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Command="{Binding LinkTappedCommand}"
+                                CommandParameter="{x:Static controls:LinkType.NuGet}"
+                                ContentLayout="Left,5"
+                                HorizontalOptions="Center"
+                                Text="nuget.org">
+                                <Button.ImageSource>
+                                    <FontImageSource
+                                        FontFamily="{StaticResource MaterialFontFamily}"
+                                        Glyph="{x:Static helpers:MaterialFont.PackageVariantClosed}"
+                                        Color="{DynamicResource PrimaryTextColor}" />
+                                </Button.ImageSource>
+                            </Button>
+                            <Button
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                Command="{Binding LinkTappedCommand}"
+                                CommandParameter="{x:Static controls:LinkType.FuGet}"
+                                ContentLayout="Left,5"
+                                HorizontalOptions="Center"
+                                Text="fuget.org">
+                                <Button.ImageSource>
+                                    <FontImageSource
+                                        FontFamily="{StaticResource MaterialFontFamily}"
+                                        Glyph="{x:Static helpers:MaterialFont.PackageVariant}"
+                                        Color="{DynamicResource PrimaryTextColor}" />
+                                </Button.ImageSource>
+                            </Button>
+                        </Grid>
                     </StackLayout>
                 </ScrollView>
 
@@ -484,9 +507,7 @@
                                 <ViewCell>
                                     <Grid Padding="12,0,8,0">
                                         <Grid.GestureRecognizers>
-                                            <TapGestureRecognizer
-                                                Command="{Binding DependencyTappedCommand, Source={x:Reference Vm}}"
-                                                CommandParameter="{Binding .}" />
+                                            <TapGestureRecognizer Command="{Binding DependencyTappedCommand, Source={x:Reference Vm}}" CommandParameter="{Binding .}" />
                                         </Grid.GestureRecognizers>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*" />
@@ -516,7 +537,7 @@
                     x:Name="VersionsView"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="FillAndExpand">
-                     <ListView
+                    <ListView
                         BackgroundColor="Transparent"
                         ItemsSource="{Binding CatalogEntries}"
                         SelectionMode="None"
@@ -525,9 +546,7 @@
                             <ContentView>
                                 <Grid Margin="8,0,4,0" HeightRequest="48">
                                     <Grid.GestureRecognizers>
-                                        <TapGestureRecognizer
-                                            Command="{Binding EntryTappedCommand, Source={x:Reference Vm}}"
-                                            CommandParameter="{Binding .}" />
+                                        <TapGestureRecognizer Command="{Binding EntryTappedCommand, Source={x:Reference Vm}}" CommandParameter="{Binding .}" />
                                     </Grid.GestureRecognizers>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="1.4*" />
