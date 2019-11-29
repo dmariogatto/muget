@@ -53,5 +53,9 @@ namespace MuGet.Forms.iOS
         {
             Shiny.Jobs.JobManager.OnBackgroundFetch(completionHandler);       
         }
+
+        public override void ReceivedLocalNotification(UIApplication application, UILocalNotification notification)
+        {
+        }
     }
 }

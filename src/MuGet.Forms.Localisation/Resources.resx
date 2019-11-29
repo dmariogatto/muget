@@ -234,4 +234,7 @@
   <data name="CannotFindPackageDescription" xml:space="preserve">
     <value>Package details could not be found. It is possible that the package has been unlisted.</value>
   </data>
+  <data name="None" xml:space="preserve">
+    <value>None</value>
+  </data>
 </root>

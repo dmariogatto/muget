@@ -37,6 +37,7 @@
             <converters:LinksToFormattedConverter x:Key="linksToFormattedConverter" />
             <converters:NullToBoolConverter x:Key="nullToBoolConverter" />
             <converters:NullToInverseBoolConverter x:Key="nullToInverseBoolConverter" />
+            <converters:IntToInverseBoolConverter x:Key="intToInverseBoolConverter" />
         </ResourceDictionary>
     </views:BasePage.Resources>
 
@@ -275,7 +276,7 @@
                             Color="{DynamicResource PrimaryAccentColor}" />
                     </state:StateView>
                     <state:StateView StateKey="Error">
-                        <StackLayout Padding="4,0,4,0" IsVisible="{Binding Entry, Converter={StaticResource nullToInverseBoolConverter}}">
+                        <StackLayout Padding="6,4,6,4" IsVisible="{Binding Entry, Converter={StaticResource nullToInverseBoolConverter}}">
                             <Label Style="{DynamicResource LabelStyle}" Text="{local:Translate CannotFindPackageDescription}" />
                             <Button
                                 Command="{Binding LinkTappedCommand}"
@@ -298,7 +299,10 @@
                     x:Name="DetailsView"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="FillAndExpand">
-                    <StackLayout Margin="4,4,4,4">
+                    <StackLayout
+                        Margin="6,4,6,4"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
                         <StackLayout
                             Margin="0,12,0,0"
                             HorizontalOptions="CenterAndExpand"
@@ -483,6 +487,12 @@
                     x:Name="DependenciesView"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="FillAndExpand">
+                    <Label
+                        Margin="6,16,6,4"
+                        HorizontalTextAlignment="Center"
+                        IsVisible="{Binding Dependencies.Count, Converter={StaticResource intToInverseBoolConverter}}"
+                        Style="{DynamicResource LabelTitleStyle}"
+                        Text="{local:Translate None}" />
                     <ListView
                         BackgroundColor="Transparent"
                         IsGroupingEnabled="True"
@@ -545,9 +555,6 @@
                         <ListView.Header>
                             <ContentView>
                                 <Grid Margin="8,0,4,0" HeightRequest="48">
-                                    <Grid.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding EntryTappedCommand, Source={x:Reference Vm}}" CommandParameter="{Binding .}" />
-                                    </Grid.GestureRecognizers>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="1.4*" />
                                         <ColumnDefinition Width="*" />
@@ -575,6 +582,9 @@
                             <DataTemplate x:DataType="models:CatalogEntry">
                                 <ViewCell>
                                     <Grid Margin="8,0,4,0" HeightRequest="48">
+                                        <Grid.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding EntryTappedCommand, Source={x:Reference Vm}}" CommandParameter="{Binding .}" />
+                                        </Grid.GestureRecognizers>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="1.4*" />
                                             <ColumnDefinition Width="*" />

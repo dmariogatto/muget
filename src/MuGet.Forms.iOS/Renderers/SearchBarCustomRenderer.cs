@@ -1,5 +1,6 @@
 ﻿using Foundation;
 using MuGet.Forms.iOS.Renderers;
+using System.ComponentModel;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
@@ -17,6 +18,17 @@ namespace MuGet.Forms.iOS.Renderers
             if (Control != null)
             {
                 Control.AutocorrectionType = UITextAutocorrectionType.No;
+            }
+        }
+
+        protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            base.OnElementPropertyChanged(sender, e);
+
+            if (e.PropertyName == SearchBar.TextProperty.PropertyName ||
+                e.PropertyName == SearchBar.IsFocusedProperty.PropertyName)
+            {
+                Control.ShowsCancelButton = string.IsNullOrEmpty(Control.Text) && Element.IsFocused;
             }
         }
     }
