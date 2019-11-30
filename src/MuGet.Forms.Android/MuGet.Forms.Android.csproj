@@ -130,9 +130,6 @@
     <AndroidResource Include="Resources\mipmap-xhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
-    <AndroidResource Include="Resources\drawable\xamarin_logo.png" />
-    <AndroidResource Include="Resources\drawable\tab_about.png" />
-    <AndroidResource Include="Resources\drawable\tab_feed.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MuGet.Forms\MuGet.Forms.csproj">
@@ -141,16 +138,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\package_icon.svg" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\background_splash.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values-night\colors.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\package_icon_white.svg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\app_icon.xml">

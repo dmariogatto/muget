@@ -181,12 +181,6 @@
     <Folder Include="Effects\" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\package_icon.svg" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\package_icon_white.svg" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\gift.png" />
   </ItemGroup>
   <ItemGroup>
