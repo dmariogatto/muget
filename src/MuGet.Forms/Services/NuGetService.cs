@@ -39,11 +39,6 @@ namespace MuGet.Forms.Services
         private readonly ILogger _logger;
         private readonly AsyncRetryPolicy _retryPolicy;
         
-        public NuGetService() : 
-            this(DependencyService.Get<ICacheProvider>(), DependencyService.Get<ILogger>())
-        {
-        }
-
         public NuGetService(ICacheProvider cacheProvider, ILogger logger)
         {
             if (cacheProvider == null) throw new ArgumentNullException(nameof(cacheProvider));

@@ -15,10 +15,6 @@ namespace MuGet.Forms
 
             VersionTracking.Track();
 
-            DependencyService.Register<ILogger, Logger>();
-            DependencyService.Register<ICacheProvider, InMemoryCache>();
-            DependencyService.Register<INuGetService, NuGetService>();
-            
             var localise = DependencyService.Get<ILocalise>();
             var culture = localise.GetCurrentCultureInfo();
             localise.SetLocale(culture);            

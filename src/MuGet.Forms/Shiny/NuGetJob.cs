@@ -1,8 +1,10 @@
 ﻿using MuGet.Forms.Services;
+using MuGet.Forms.Views;
 using Shiny.Jobs;
 using Shiny.Notifications;
 using System;
 using System.Linq;
+using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -21,11 +23,12 @@ namespace MuGet.Forms
 
         public async Task<bool> Run(JobInfo jobInfo, CancellationToken cancelToken)
         {
+#if DEBUG
             try
             {
                 await _notifications.Send(new Notification()
                 {
-                    Id = 66,
+                    Id = GetHashCode(),
                     Title = "Running background fetch",
                     Message = DateTime.Now.ToString("g"),
                 });
@@ -34,6 +37,7 @@ namespace MuGet.Forms
             {
                 System.Diagnostics.Debug.WriteLine(ex);
             }
+#endif
 
             var favouritePackages = _nuGetService.GetFavouritePackages();
 
@@ -60,6 +64,8 @@ namespace MuGet.Forms
                                 Id = fp.Id.GetHashCode(),
                                 Title = $"{fp.PackageId} ({fp.Version})",
                                 Message = $"by {latest.Authors}, published {fp.Published.ToShortDateString()}",
+                                Payload = $"{PackagePage.RouteName}?{PackagePage.PackageIdUrlQueryProperty}={WebUtility.UrlEncode(fp.PackageId)}&{PackagePage.VersionQueryProperty}={WebUtility.UrlEncode(fp.Version)}",
+                                BadgeCount = 1,
                             });
                         }
                         catch (Exception ex)

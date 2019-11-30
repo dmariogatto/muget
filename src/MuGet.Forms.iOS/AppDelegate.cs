@@ -31,7 +31,6 @@ namespace MuGet.Forms.iOS
 #endif
 
             Shiny.iOSShinyHost.Init(new ShinyStartup());
-
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
 
             global::Xamarin.Forms.Forms.Init();
@@ -52,10 +51,6 @@ namespace MuGet.Forms.iOS
         public override void PerformFetch(UIApplication application, Action<UIBackgroundFetchResult> completionHandler)
         {
             Shiny.Jobs.JobManager.OnBackgroundFetch(completionHandler);       
-        }
-
-        public override void ReceivedLocalNotification(UIApplication application, UILocalNotification notification)
-        {
         }
     }
 }

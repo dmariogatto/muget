@@ -16,8 +16,8 @@ namespace MuGet.Forms.ViewModels
 
         public BaseViewModel() : base()
         {
-            NuGetService = DependencyService.Get<INuGetService>();
-            Logger = DependencyService.Get<ILogger>();
+            NuGetService = Shiny.ShinyHost.Resolve<INuGetService>();
+            Logger = Shiny.ShinyHost.Resolve<ILogger>();
         }
 
         protected Task DisplayAlert(string title, string message, string cancel) =>
