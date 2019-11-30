@@ -29,13 +29,11 @@
 
     <views:BasePage.Resources>
         <ResourceDictionary>
-            <converters:ListToInverseBoolConverter x:Key="listToInverseBoolConverter" />
             <converters:ListToBoolConverter x:Key="listToBoolConverter" />
             <converters:BoolToHeartConverter x:Key="boolToHeartConverter" />
             <converters:DateTimeToHumanizeConverter x:Key="dateTimeToHumanizeConverter" />
             <converters:StringToBoolConverter x:Key="stringToBoolConverter" />
             <converters:LinksToFormattedConverter x:Key="linksToFormattedConverter" />
-            <converters:NullToBoolConverter x:Key="nullToBoolConverter" />
             <converters:NullToInverseBoolConverter x:Key="nullToInverseBoolConverter" />
             <converters:IntToInverseBoolConverter x:Key="intToInverseBoolConverter" />
         </ResourceDictionary>
@@ -436,7 +434,7 @@
                                 CommandParameter="{x:Static controls:LinkType.Project}"
                                 ContentLayout="Left,5"
                                 HorizontalOptions="Center"
-                                Text="Project">
+                                Text="{local:Translate Project}">
                                 <Button.ImageSource>
                                     <FontImageSource
                                         FontFamily="{StaticResource MaterialFontFamily}"

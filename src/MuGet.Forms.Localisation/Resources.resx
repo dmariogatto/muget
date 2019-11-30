@@ -255,4 +255,7 @@
   <data name="NoRecentPackages" xml:space="preserve">
     <value>Start searching to discover! 🎁</value>
   </data>
+  <data name="Project" xml:space="preserve">
+    <value>Project</value>
+  </data>
 </root>
