@@ -1,0 +1,7 @@
+The NuGet.org package browser for when you're on the go!
+
+- Browse NuGet package information, dependencies and version history
+- Get notified about new versions of your favorite packages
+- Quick links to jump off and view packages on both NuGet.org  & FuGet.org
+
+Built using Xamarin.Forms and fully open source!
