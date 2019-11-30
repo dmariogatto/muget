@@ -274,7 +274,7 @@ namespace MuGet.Forms.Services
 
         public IList<RecentPackage> GetRecentPackages()
         {
-            return _recentRepo.GetAll();
+            return _recentRepo.GetAll().OrderBy(p => p.SortOrder).ToList();
         }
 
         public bool AddRecentPackage(RecentPackage package)
@@ -283,18 +283,27 @@ namespace MuGet.Forms.Services
             {
                 // Delete if already exists
                 _recentRepo.Delete(package.Id);
-                var keys = _recentRepo.GetAllKeys();
 
-                // Limit to 10 recent packages
-                if (keys.Count > 9)
+                var recents = GetRecentPackages();
+                recents.Insert(0, package);
+
+                var toUpsert = recents.Take(10).ToList();
+                var toDelete = recents.Skip(10).ToList();
+
+                foreach (var p in toUpsert)
                 {
-                    foreach (var k in keys.Skip(9))
-                    {
-                        _recentRepo.Delete(k);
-                    }
+                    // Upsert in correct order
+                    p.SortOrder = toUpsert.IndexOf(p);
+                    _recentRepo.Upsert(p);
                 }
 
-                return _recentRepo.Upsert(package);
+                foreach (var p in toDelete)
+                {                    
+                    // Delete overflow
+                    _recentRepo.Delete(p.Id);
+                }
+
+                return true;
             }
 
             return false;

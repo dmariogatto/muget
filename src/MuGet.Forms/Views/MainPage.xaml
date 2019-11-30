@@ -32,13 +32,13 @@
 
     <ContentPage.Content>
         <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            <StackLayout
+            <ScrollView
                 x:Name="HomeView"
                 AbsoluteLayout.LayoutBounds="0,0,1,1"
                 AbsoluteLayout.LayoutFlags="All"
                 IsVisible="{Binding SearchText, Converter={StaticResource stringToInverseBoolConverter}}">
                 <views:HomeView />
-            </StackLayout>
+            </ScrollView>
 
             <CollectionView
                 AbsoluteLayout.LayoutBounds="0,0,1,1"
@@ -64,7 +64,10 @@
                 </CollectionView.ItemTemplate>
                 <CollectionView.Footer>
                     <ContentView>
-                        <StackLayout Margin="0,2,0,2" Spacing="0">
+                        <StackLayout
+                            Margin="0,2,0,2"
+                            IsVisible="{Binding IsBusy}"
+                            Spacing="0">
                             <controls:NuGetCardSkeleton />
                             <controls:NuGetCardSkeleton />
                             <controls:NuGetCardSkeleton />
@@ -73,6 +76,21 @@
                     </ContentView>
                 </CollectionView.Footer>
             </CollectionView>
+
+            <yummy:PancakeView
+                x:Name="ActivityIndicatorView"
+                Padding="4"
+                AbsoluteLayout.LayoutBounds="0.5, 0, AutoSize, AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                HasShadow="False"
+                IsVisible="{Binding IsBusy}"
+                Style="{DynamicResource CardYummyStyle}">
+                <ActivityIndicator
+                    HeightRequest="24"
+                    IsRunning="{Binding IsBusy}"
+                    WidthRequest="24"
+                    Color="{DynamicResource PrimaryAccentColor}" />
+            </yummy:PancakeView>
 
             <yummy:PancakeView
                 x:Name="SearchBarView"

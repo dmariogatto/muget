@@ -22,6 +22,9 @@ namespace MuGet.Forms.Views
             HomeView.Margin =
             SearchCollectionHeaderView.Margin =
                 new Thickness(0, SearchBarView.Height + SearchBarView.Margin.Top + 4, 0, 0);
+
+            ActivityIndicatorView.Margin =
+                new Thickness(0, SearchBarView.Height + SearchBarView.Margin.Top + 20, 0, 0);
         }
 
         private void PackagesScrolled(object sender, ItemsViewScrolledEventArgs e)

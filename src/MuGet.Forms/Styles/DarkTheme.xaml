@@ -6,48 +6,20 @@
 
     <x:String x:Key="PackageIcon">gift_white.svg</x:String>
 
-    <!--  Dark Grey  -->
-    <Color x:Key="PrimaryColor">#181818</Color>
+    <Color x:Key="SegmentColor">#808080</Color>
 
-    <!--  Black  -->
-    <Color x:Key="PrimaryDarkColor">#000000</Color>
-
-    <!--  Orange  -->
-    <Color x:Key="PrimaryAccentColor">#FF9500</Color>
-
-    <OnPlatform
-        x:Key="NavigationBarColor"
-        x:TypeArguments="Color"
-        Android="#181818"
-        iOS="#0D0D0D" />
-
-    <OnPlatform
-        x:Key="NavigationBarTextColor"
-        x:TypeArguments="Color"
-        Android="#FFFFFF"
-        iOS="#FFFFFF" />
-
-    <!--  Dark Grey  -->
-    <Color x:Key="UnselectedTabColor">#808080</Color>
-
-    <!--  Dark Grey  -->
     <Color x:Key="PageBackgroundColor">#202124</Color>
 
-    <!--  White  -->
     <Color x:Key="PrimaryTextColor">#FFFFFF</Color>
 
-    <!--  Light Grey  -->
     <Color x:Key="SecondaryTextColor">#FFFFFF</Color>
 
-    <!--  Dark Grey  -->
     <Color x:Key="CardBackgroundColor">#36373A</Color>
     <Color x:Key="CardBorderColor">#404040</Color>
 
-    <!--  White  -->
     <Color x:Key="TintColor">#FFFFFF</Color>
 
-    <!--  White  -->
     <Color x:Key="ContrastColor">#FFFFFF</Color>
-    <!--  Black  -->
     <Color x:Key="ContrastAntiColor">#000000</Color>
+
 </ResourceDictionary>

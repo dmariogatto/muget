@@ -15,7 +15,7 @@
     </ContentView.Resources>
     <ContentView.Content>
         <yummy:PancakeView Margin="6,4,6,4" Style="{DynamicResource CardYummyStyle}">
-            <StackLayout>
+            <StackLayout Margin="2">
                 <state:SkeletonView
                     HeightRequest="22"
                     HorizontalOptions="FillAndExpand"

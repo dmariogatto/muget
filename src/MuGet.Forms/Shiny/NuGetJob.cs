@@ -1,4 +1,5 @@
-﻿using MuGet.Forms.Services;
+﻿using MuGet.Forms.Localisation;
+using MuGet.Forms.Services;
 using MuGet.Forms.Views;
 using Shiny.Jobs;
 using Shiny.Notifications;
@@ -62,8 +63,8 @@ namespace MuGet.Forms
                             await _notifications.Send(new Notification()
                             {
                                 Id = fp.Id.GetHashCode(),
-                                Title = $"{fp.PackageId} ({fp.Version})",
-                                Message = $"by {latest.Authors}, published {fp.Published.ToShortDateString()}",
+                                Title = string.Format(Resources.ItemParenthesesItem, fp.PackageId, fp.Version),
+                                Message = string.Format(Resources.NotificationContentFormat, latest.Authors, fp.Published.ToShortDateString()),
                                 Payload = $"{PackagePage.RouteName}?{PackagePage.PackageIdUrlQueryProperty}={WebUtility.UrlEncode(fp.PackageId)}&{PackagePage.VersionQueryProperty}={WebUtility.UrlEncode(fp.Version)}",
                                 BadgeCount = 1,
                             });

@@ -243,10 +243,10 @@
                     <segmented:SegmentedControl
                         x:Name="SegPageControl"
                         Grid.Row="2"
-                        Margin="3,0,3,0"
+                        Margin="3,3,3,0"
                         OnSegmentSelected="OnSegmentSelected"
                         SelectedTextColor="{DynamicResource PrimaryTextColor}"
-                        TintColor="{DynamicResource UnselectedTabColor}"
+                        TintColor="{DynamicResource SegmentColor}"
                         VerticalOptions="Center">
                         <segmented:SegmentedControl.Children>
                             <segmented:SegmentedControlOption Text="{local:Translate Details}" />
@@ -296,13 +296,9 @@
                 </state:StateLayout.StateViews>
 
                 <ScrollView
-                    x:Name="DetailsView"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand">
+                    x:Name="DetailsView">
                     <StackLayout
-                        Margin="6,4,6,4"
-                        HorizontalOptions="FillAndExpand"
-                        VerticalOptions="FillAndExpand">
+                        Margin="6,4,6,4">
                         <StackLayout
                             Margin="0,12,0,0"
                             HorizontalOptions="CenterAndExpand"
@@ -345,7 +341,7 @@
                                 JustifyContent="Start">
                                 <BindableLayout.ItemTemplate>
                                     <DataTemplate x:DataType="x:String">
-                                        <yummy:PancakeView Margin="8,0,0,0" Style="{DynamicResource CardYummyStyle}">
+                                        <yummy:PancakeView Margin="8,2,0,4" Style="{DynamicResource CardYummyStyle}">
                                             <Label Style="{DynamicResource LabelStyle}" Text="{Binding .}" />
                                         </yummy:PancakeView>
                                     </DataTemplate>

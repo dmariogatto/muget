@@ -16,15 +16,20 @@
     <ContentView.Content>
         <yummy:PancakeView Margin="4,6,4,6" Style="{DynamicResource CardYummyStyle}">
             <StackLayout>
-                <ffimageloading:SvgCachedImage
-                    DownsampleToViewSize="true"
-                    ErrorPlaceholder="{DynamicResource PackageIcon}"
-                    HeightRequest="48"
+                <yummy:PancakeView
+                    BackgroundColor="{DynamicResource CardBackgroundColor}"
+                    CornerRadius="3"
+                    Elevation="4"
                     HorizontalOptions="Center"
-                    LoadingPlaceholder="{DynamicResource PackageIcon}"
-                    Source="{Binding IconUrl}"
-                    VerticalOptions="Center"
-                    WidthRequest="48" />
+                    VerticalOptions="Center">
+                    <ffimageloading:SvgCachedImage
+                        DownsampleToViewSize="true"
+                        ErrorPlaceholder="{DynamicResource PackageIcon}"
+                        HeightRequest="48"
+                        LoadingPlaceholder="{DynamicResource PackageIcon}"
+                        Source="{Binding IconUrl}"
+                        WidthRequest="48" />
+                </yummy:PancakeView>
 
                 <Label
                     HorizontalTextAlignment="Center"

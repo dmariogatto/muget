@@ -205,6 +205,15 @@ namespace MuGet.Forms.Localisation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0} ({1}).
+        /// </summary>
+        public static string ItemParenthesesItem {
+            get {
+                return ResourceManager.GetString("ItemParenthesesItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} {1}.
         /// </summary>
         public static string ItemSpaceItem {
@@ -268,6 +277,15 @@ namespace MuGet.Forms.Localisation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to by {0}, published {1}.
+        /// </summary>
+        public static string NotificationContentFormat {
+            get {
+                return ResourceManager.GetString("NotificationContentFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Notifications.
         /// </summary>
         public static string Notifications {
@@ -277,7 +295,7 @@ namespace MuGet.Forms.Localisation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New versions of your favourites.
+        ///   Looks up a localized string similar to New versions of favourites.
         /// </summary>
         public static string NotificationsDescription {
             get {
@@ -300,6 +318,15 @@ namespace MuGet.Forms.Localisation {
         public static string Published {
             get {
                 return ResourceManager.GetString("Published", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rate App.
+        /// </summary>
+        public static string RateApp {
+            get {
+                return ResourceManager.GetString("RateApp", resourceCulture);
             }
         }
         
@@ -331,6 +358,15 @@ namespace MuGet.Forms.Localisation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Reset Notifications.
+        /// </summary>
+        public static string ResetNotifications {
+            get {
+                return ResourceManager.GetString("ResetNotifications", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Run All Jobs.
         /// </summary>
         public static string RunAllJobs {
@@ -345,6 +381,15 @@ namespace MuGet.Forms.Localisation {
         public static string Search {
             get {
                 return ResourceManager.GetString("Search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Send Feedback.
+        /// </summary>
+        public static string SendFeedback {
+            get {
+                return ResourceManager.GetString("SendFeedback", resourceCulture);
             }
         }
         
@@ -408,6 +453,15 @@ namespace MuGet.Forms.Localisation {
         public static string Versions {
             get {
                 return ResourceManager.GetString("Versions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View on GitHub.
+        /// </summary>
+        public static string ViewOnGitHub {
+            get {
+                return ResourceManager.GetString("ViewOnGitHub", resourceCulture);
             }
         }
         

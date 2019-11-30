@@ -29,7 +29,7 @@
             BackgroundColor="{DynamicResource PageBackgroundColor}"
             Intent="Settings">
             <TableRoot>
-                <TableSection Title="Package Sources">
+                <TableSection Title="NuGet.org">
                     <controls:ColorSwitchCell
                         On="{Binding IncludePrerelease}"
                         Text="{local:Translate IncludePrerelease}"
@@ -41,22 +41,32 @@
                         Text="{local:Translate NotificationsDescription}"
                         TextColor="{DynamicResource PrimaryTextColor}" />
                 </TableSection>
+                <TableSection Title="MuGet">
+                    <TextCell
+                        Command="{Binding SettingsItemTappedCommand}"
+                        CommandParameter="{x:Static viewModels:SettingItem.RateApp}"
+                        Text="{local:Translate RateApp}"
+                        TextColor="{DynamicResource PrimaryTextColor}" />
+                    <TextCell
+                        Command="{Binding SettingsItemTappedCommand}"
+                        CommandParameter="{x:Static viewModels:SettingItem.SendFeedback}"
+                        Text="{local:Translate SendFeedback}"
+                        TextColor="{DynamicResource PrimaryTextColor}" />
+                    <TextCell
+                        Command="{Binding SettingsItemTappedCommand}"
+                        CommandParameter="{x:Static viewModels:SettingItem.ViewGitHub}"
+                        Text="{local:Translate ViewOnGitHub}"
+                        TextColor="{DynamicResource PrimaryTextColor}" />
+                </TableSection>
                 <TableSection Title="Development">
-                    <ViewCell>
-                        <Button
-                            Command="{Binding ResetNotificationsCommand}"
-                            HorizontalOptions="FillAndExpand"
-                            Text="Reset Notifications"
-                            VerticalOptions="FillAndExpand" />
-                    </ViewCell>
-                    <ViewCell>
-                        <Button
-                            Command="{Binding RunJobsCommand}"
-                            HorizontalOptions="FillAndExpand"
-                            IsVisible="{Binding IsDevelopment}"
-                            Text="{local:Translate RunAllJobs}"
-                            VerticalOptions="FillAndExpand" />
-                    </ViewCell>
+                    <TextCell
+                        Command="{Binding ResetNotificationsCommand}"
+                        Text="{local:Translate ResetNotifications}"
+                        TextColor="{DynamicResource PrimaryTextColor}" />
+                    <TextCell
+                        Command="{Binding RunJobsCommand}"
+                        Text="{local:Translate RunAllJobs}"
+                        TextColor="{DynamicResource PrimaryTextColor}" />
                 </TableSection>
             </TableRoot>
         </TableView>

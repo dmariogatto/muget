@@ -108,15 +108,13 @@ namespace MuGet.Forms.ViewModels
                         }
                         else
                         {
-                            RemainingItemsThreshold = 5;
-
                             Packages.Clear();
                             if (packages?.Any() == true)
                                 Packages.ReplaceRange(packages);
                         }
 
                         TotalHits = totalHits;
-                        RemainingItemsThreshold = packages.Count == 0 ? -1 : 5;
+                        RemainingItemsThreshold = Packages.Count == TotalHits ? -1 : 5;
                     }
                 }
                 catch (Exception ex)
@@ -125,7 +123,8 @@ namespace MuGet.Forms.ViewModels
                 }
                 finally
                 {
-                    IsBusy = false;
+                    if (!cancellationToken.IsCancellationRequested)
+                        IsBusy = false;
                 }
             }
 
