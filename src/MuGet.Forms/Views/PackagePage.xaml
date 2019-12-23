@@ -48,7 +48,7 @@
     <views:BasePage.Content>
         <Grid RowSpacing="0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.25*" />
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
