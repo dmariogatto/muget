@@ -8,6 +8,7 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
     xmlns:helpers="clr-namespace:MuGet.Forms.Helpers"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:local="clr-namespace:MuGet.Forms"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:models="clr-namespace:MuGet.Forms.Models"
@@ -33,6 +34,7 @@
             <converters:BoolToHeartConverter x:Key="boolToHeartConverter" />
             <converters:DateTimeToHumanizeConverter x:Key="dateTimeToHumanizeConverter" />
             <converters:StringToBoolConverter x:Key="stringToBoolConverter" />
+            <converters:StringToInverseBoolConverter x:Key="stringToInverseBoolConverter" />
             <converters:LinksToFormattedConverter x:Key="linksToFormattedConverter" />
             <converters:NullToInverseBoolConverter x:Key="nullToInverseBoolConverter" />
             <converters:IntToInverseBoolConverter x:Key="intToInverseBoolConverter" />
@@ -46,7 +48,7 @@
     <views:BasePage.Content>
         <Grid RowSpacing="0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height="0.25*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
@@ -491,12 +493,18 @@
                         BackgroundColor="Transparent"
                         IsGroupingEnabled="True"
                         ItemsSource="{Binding Dependencies}"
+                        HasUnevenRows="True"
                         SelectionMode="None"
-                        SeparatorVisibility="None">
+                        SeparatorVisibility="Default">
+                        <ListView.Header>
+                            <ContentView>
+                                <StackLayout Margin="0,16,0,0" />
+                            </ContentView>
+                        </ListView.Header>
                         <ListView.GroupHeaderTemplate>
                             <DataTemplate x:DataType="models:DependencyGrouping">
-                                <ViewCell>
-                                    <ContentView BackgroundColor="{DynamicResource PageBackgroundColor}">
+                                <ViewCell ios:Cell.DefaultBackgroundColor="{DynamicResource PageBackgroundColor}">
+                                    <ContentView>
                                         <Label
                                             Margin="4,0,4,0"
                                             FontAttributes="Bold"
@@ -509,31 +517,39 @@
                         <ListView.ItemTemplate>
                             <DataTemplate x:DataType="models:Dependency">
                                 <ViewCell>
-                                    <Grid Padding="12,0,8,0">
-                                        <Grid.GestureRecognizers>
+                                    <StackLayout Padding="6,5,6,5">
+                                        <StackLayout.GestureRecognizers>
                                             <TapGestureRecognizer Command="{Binding DependencyTappedCommand, Source={x:Reference Vm}}" CommandParameter="{Binding .}" />
-                                        </Grid.GestureRecognizers>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="*" />
-                                            <ColumnDefinition Width="Auto" />
-                                        </Grid.ColumnDefinitions>
+                                        </StackLayout.GestureRecognizers>
                                         <Label
                                             FontSize="Small"
                                             HeightRequest="48"
                                             HorizontalOptions="Start"
                                             Style="{DynamicResource LabelStyle}"
-                                            Text="{Binding Id}"
-                                            TextColor="{StaticResource LinkColor}" />
+                                            Text="{local:Translate None}"
+                                            IsVisible="{Binding Id, Converter={StaticResource stringToInverseBoolConverter}}" />
                                         <Label
-                                            Grid.Column="1"
-                                            FontSize="Micro"
+                                            FontSize="Small"
                                             HorizontalOptions="Start"
                                             Style="{DynamicResource LabelStyle}"
-                                            Text="{Binding RangePretty, TargetNullValue={local:Translate NoDependencies}}" />
-                                    </Grid>
+                                            Text="{Binding Id}"
+                                            TextColor="{StaticResource LinkColor}"
+                                            IsVisible="{Binding Id, Converter={StaticResource stringToBoolConverter}}" />
+                                        <Label
+                                            FontSize="Micro"
+                                            HorizontalOptions="End"
+                                            Style="{DynamicResource LabelStyle}"
+                                            Text="{Binding RangePretty, TargetNullValue={local:Translate NoDependencies}}"
+                                            IsVisible="{Binding Id, Converter={StaticResource stringToBoolConverter}}" />
+                                    </StackLayout>
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>
+                        <ListView.Footer>
+                            <ContentView>
+                                <StackLayout Margin="0,4,0,0" />
+                            </ContentView>
+                        </ListView.Footer>
                     </ListView>
                 </StackLayout>
 
@@ -544,65 +560,55 @@
                     <ListView
                         BackgroundColor="Transparent"
                         ItemsSource="{Binding CatalogEntries}"
+                        HasUnevenRows="True"
                         SelectionMode="None"
-                        SeparatorVisibility="None">
+                        SeparatorVisibility="Default">
                         <ListView.Header>
                             <ContentView>
-                                <Grid Margin="8,0,4,0" HeightRequest="48">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="1.4*" />
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="*" />
-                                    </Grid.ColumnDefinitions>
-
-                                    <Label
-                                        FontAttributes="Bold"
-                                        Style="{DynamicResource LabelStyle}"
-                                        Text="{local:Translate Versions}" />
-                                    <Label
-                                        Grid.Column="1"
-                                        FontAttributes="Bold"
-                                        Style="{DynamicResource LabelStyle}"
-                                        Text="{local:Translate Downloads}" />
-                                    <Label
-                                        Grid.Column="2"
-                                        FontAttributes="Bold"
-                                        Style="{DynamicResource LabelStyle}"
-                                        Text="{local:Translate Published}" />
-                                </Grid>
+                                <StackLayout Margin="0,16,0,0" />
                             </ContentView>
                         </ListView.Header>
                         <ListView.ItemTemplate>
                             <DataTemplate x:DataType="models:CatalogEntry">
                                 <ViewCell>
-                                    <Grid Margin="8,0,4,0" HeightRequest="48">
-                                        <Grid.GestureRecognizers>
+                                    <StackLayout Margin="8,2,4,2">
+                                        <StackLayout.GestureRecognizers>
                                             <TapGestureRecognizer Command="{Binding EntryTappedCommand, Source={x:Reference Vm}}" CommandParameter="{Binding .}" />
-                                        </Grid.GestureRecognizers>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="1.4*" />
-                                            <ColumnDefinition Width="*" />
-                                            <ColumnDefinition Width="*" />
-                                        </Grid.ColumnDefinitions>
-
+                                        </StackLayout.GestureRecognizers>
                                         <Label
+                                            TextColor="{StaticResource LinkColor}"
                                             FontSize="Medium"
                                             Style="{DynamicResource LabelStyle}"
                                             Text="{Binding Version}" />
-                                        <Label
-                                            Grid.Column="1"
-                                            FontSize="Medium"
-                                            Style="{DynamicResource LabelStyle}"
-                                            Text="{Binding Downloads, StringFormat='{0:n0}'}" />
-                                        <Label
-                                            Grid.Column="2"
-                                            FontSize="Small"
-                                            Style="{DynamicResource LabelStyle}"
-                                            Text="{Binding Published, Converter={StaticResource dateTimeToHumanizeConverter}}" />
-                                    </Grid>
+                                        <StackLayout
+                                            Orientation="Horizontal"
+                                            HorizontalOptions="FillAndExpand">
+                                            <Label
+                                                FontSize="Small"
+                                                HorizontalOptions="Start"
+                                                Style="{DynamicResource LabelIconStyle}"
+                                                Text="{x:Static helpers:MaterialFont.Download}" />
+                                            <Label
+                                                FontSize="Small"
+                                                HorizontalOptions="StartAndExpand"
+                                                Style="{DynamicResource LabelStyle}"
+                                                Text="{Binding Downloads, StringFormat='{0:n0}'}" />
+                                            <Label
+                                                FontSize="Small"
+                                                FontAttributes="Italic"
+                                                HorizontalOptions="EndAndExpand"
+                                                Style="{DynamicResource LabelStyle}"
+                                                Text="{Binding Published, Converter={StaticResource dateTimeToHumanizeConverter}}" />
+                                        </StackLayout>
+                                    </StackLayout>
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>
+                        <ListView.Footer>
+                            <ContentView>
+                                <StackLayout Margin="0,4,0,0" />
+                            </ContentView>
+                        </ListView.Footer>
                     </ListView>
                 </StackLayout>
             </StackLayout>

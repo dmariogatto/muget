@@ -5,7 +5,7 @@ namespace MuGet.Forms.Models
 {
     public class PackageVersion
     {
-        private SemanticVersion _semVersion;
+        private NuGetVersion _semVersion;
         private Version _version;
 
         public PackageVersion(string version)
@@ -14,7 +14,14 @@ namespace MuGet.Forms.Models
 
             if (!string.IsNullOrEmpty(Original))
             {
-                SemanticVersion.TryParse(Original, out _semVersion);
+                try
+                {
+                    _semVersion = NuGetVersion.Parse(Original);
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine(ex);
+                }
                 Version.TryParse(Original, out _version);
             }
         }

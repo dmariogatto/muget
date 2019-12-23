@@ -55,6 +55,7 @@ namespace MuGet.Forms.Views
                 var padding = HeaderView.Padding;
                 padding.Top = safeInsets.Top;
                 HeaderView.Padding = padding;
+                
             }
         }
 

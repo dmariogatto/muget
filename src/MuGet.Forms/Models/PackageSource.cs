@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace MuGet.Forms.Models
@@ -14,15 +15,15 @@ namespace MuGet.Forms.Models
             Name = name ?? string.Empty;
 
             SearchQueryService = source.Resources
-                .FirstOrDefault(r => r.Type.StartsWith(nameof(SearchQueryService)))?.Id ?? string.Empty;
+                .LastOrDefault(r => r.Type.StartsWith(nameof(SearchQueryService)))?.Id ?? string.Empty;
             SearchAutocompleteService = source.Resources
-                .FirstOrDefault(r => r.Type.StartsWith(nameof(SearchAutocompleteService)))?.Id ?? string.Empty;
+                .LastOrDefault(r => r.Type.StartsWith(nameof(SearchAutocompleteService)))?.Id ?? string.Empty;
             RegistrationsBaseUrl = source.Resources
-                .FirstOrDefault(r => r.Type.StartsWith(nameof(RegistrationsBaseUrl)))?.Id ?? string.Empty;
+                .LastOrDefault(r => r.Type.StartsWith(nameof(RegistrationsBaseUrl)))?.Id ?? string.Empty;
             PackageVersionDisplayMetadataUriTemplate = source.Resources
-                .FirstOrDefault(r => r.Type.StartsWith(nameof(PackageVersionDisplayMetadataUriTemplate)))?.Id ?? string.Empty;
+                .LastOrDefault(r => r.Type.StartsWith(nameof(PackageVersionDisplayMetadataUriTemplate)))?.Id ?? string.Empty;
             PackageDetailsUriTemplate = source.Resources
-                .FirstOrDefault(r => r.Type.StartsWith(nameof(PackageDetailsUriTemplate)))?.Id ?? string.Empty;
+                .LastOrDefault(r => r.Type.StartsWith(nameof(PackageDetailsUriTemplate)))?.Id ?? string.Empty;
         }
 
         public PackageSource()

@@ -1,12 +1,4 @@
-﻿using LiteDB;
-using Microsoft.Extensions.Caching.Memory;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using MuGet.Forms.Exceptions;
-using MuGet.Forms.Models;
-using Polly;
-using Polly.Retry;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,8 +6,14 @@ using System.Net;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
+using LiteDB;
+using MuGet.Forms.Exceptions;
+using MuGet.Forms.Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using Polly;
+using Polly.Retry;
 using Xamarin.Essentials;
-using Xamarin.Forms;
 using JsonSerializer = Newtonsoft.Json.JsonSerializer;
 
 namespace MuGet.Forms.Services
@@ -110,7 +108,7 @@ namespace MuGet.Forms.Services
             try
             {
                 var source = await GetNuGetSource(cancellationToken).ConfigureAwait(false);
-                var url = $"{source.SearchQueryService}?q={WebUtility.UrlEncode(query)}&prerelease={includePrerelease ?? IncludePrerelease}&skip={skip}&take={take}";
+                var url = $"{source.SearchQueryService}?q={WebUtility.UrlEncode(query)}&prerelease={includePrerelease ?? IncludePrerelease}&skip={skip}&take={take}&semVerLevel=2";
                 result = await GetWithRetry<SearchResult>(url, cancellationToken).ConfigureAwait(false);
 
                 var tasks = new List<Task>();

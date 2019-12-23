@@ -78,14 +78,9 @@
             <Style x:Key="CardYummyStyle" TargetType="yummy:PancakeView">
                 <Setter Property="Margin" Value="8,3,8,3" />
                 <Setter Property="Padding" Value="6" />
-                <Setter Property="Elevation" Value="4" />
-                <Setter Property="BorderThickness">
-                    <OnPlatform x:TypeArguments="x:Single">
-                        <On Platform="Android">0</On>
-                        <On Platform="iOS">1</On>
-                    </OnPlatform>
-                </Setter>
-                <Setter Property="CornerRadius" Value="0" />
+                <Setter Property="Elevation" Value="2" />
+                <Setter Property="CornerRadius" Value="2" />
+                <Setter Property="IsClippedToBounds" Value="False" />
                 <Setter Property="BorderColor" Value="{DynamicResource CardBorderColor}" />
                 <Setter Property="BackgroundColor" Value="{DynamicResource CardBackgroundColor}" />
             </Style>
