@@ -16,7 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Settings.XamlStyler = Settings.XamlStyler
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Muget.Forms.Tests", "Muget.Forms.Tests\Muget.Forms.Tests.csproj", "{79A75B4B-9093-42FC-BABD-15548D788BCB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Muget.Forms.Tests", "Muget.Forms.Tests\Muget.Forms.Tests.csproj", "{79A75B4B-9093-42FC-BABD-15548D788BCB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -101,11 +101,8 @@ Global
 		{79A75B4B-9093-42FC-BABD-15548D788BCB}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
 		{79A75B4B-9093-42FC-BABD-15548D788BCB}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
 		{79A75B4B-9093-42FC-BABD-15548D788BCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{79A75B4B-9093-42FC-BABD-15548D788BCB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{79A75B4B-9093-42FC-BABD-15548D788BCB}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{79A75B4B-9093-42FC-BABD-15548D788BCB}.Release|iPhone.Build.0 = Release|Any CPU
 		{79A75B4B-9093-42FC-BABD-15548D788BCB}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{79A75B4B-9093-42FC-BABD-15548D788BCB}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
