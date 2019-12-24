@@ -296,9 +296,9 @@
                 </state:StateLayout.StateViews>
 
                 <ScrollView
-                    x:Name="DetailsView">
-                    <StackLayout
-                        Margin="6,4,6,4">
+                    x:Name="DetailsView"
+                    Padding="6,3,6,3">
+                    <StackLayout>
                         <StackLayout
                             Margin="0,12,0,0"
                             HorizontalOptions="CenterAndExpand"
@@ -475,7 +475,7 @@
                                         Color="{DynamicResource PrimaryTextColor}" />
                                 </Button.ImageSource>
                             </Button>
-                        </Grid>
+                        </Grid>                        
                     </StackLayout>
                 </ScrollView>
 
@@ -495,7 +495,8 @@
                         ItemsSource="{Binding Dependencies}"
                         HasUnevenRows="True"
                         SelectionMode="None"
-                        SeparatorVisibility="Default">
+                        SeparatorVisibility="None"
+                        ItemTapped="DependencyItemTapped">
                         <ListView.Header>
                             <ContentView>
                                 <StackLayout Margin="0,16,0,0" />
@@ -517,13 +518,9 @@
                         <ListView.ItemTemplate>
                             <DataTemplate x:DataType="models:Dependency">
                                 <ViewCell>
-                                    <StackLayout Padding="6,5,6,5">
-                                        <StackLayout.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding DependencyTappedCommand, Source={x:Reference Vm}}" CommandParameter="{Binding .}" />
-                                        </StackLayout.GestureRecognizers>
+                                    <StackLayout Padding="12,2,4,2">
                                         <Label
                                             FontSize="Small"
-                                            HeightRequest="48"
                                             HorizontalOptions="Start"
                                             Style="{DynamicResource LabelStyle}"
                                             Text="{local:Translate None}"
@@ -541,6 +538,10 @@
                                             Style="{DynamicResource LabelStyle}"
                                             Text="{Binding RangePretty, TargetNullValue={local:Translate NoDependencies}}"
                                             IsVisible="{Binding Id, Converter={StaticResource stringToBoolConverter}}" />
+                                        <BoxView
+                                            HeightRequest="1"
+                                            BackgroundColor="LightGray"
+                                            HorizontalOptions="FillAndExpand" />
                                     </StackLayout>
                                 </ViewCell>
                             </DataTemplate>
@@ -562,7 +563,7 @@
                         ItemsSource="{Binding CatalogEntries}"
                         HasUnevenRows="True"
                         SelectionMode="None"
-                        SeparatorVisibility="Default">
+                        SeparatorVisibility="None">
                         <ListView.Header>
                             <ContentView>
                                 <StackLayout Margin="0,16,0,0" />
@@ -571,7 +572,7 @@
                         <ListView.ItemTemplate>
                             <DataTemplate x:DataType="models:CatalogEntry">
                                 <ViewCell>
-                                    <StackLayout Margin="8,2,4,2">
+                                    <StackLayout Margin="12,2,4,2">
                                         <StackLayout.GestureRecognizers>
                                             <TapGestureRecognizer Command="{Binding EntryTappedCommand, Source={x:Reference Vm}}" CommandParameter="{Binding .}" />
                                         </StackLayout.GestureRecognizers>
@@ -598,8 +599,12 @@
                                                 FontAttributes="Italic"
                                                 HorizontalOptions="EndAndExpand"
                                                 Style="{DynamicResource LabelStyle}"
-                                                Text="{Binding Published, Converter={StaticResource dateTimeToHumanizeConverter}}" />
+                                                Text="{Binding Published, Converter={StaticResource dateTimeToHumanizeConverter}}" />                                            
                                         </StackLayout>
+                                        <BoxView
+                                            HeightRequest="1"
+                                            BackgroundColor="LightGray"
+                                            HorizontalOptions="FillAndExpand" />
                                     </StackLayout>
                                 </ViewCell>
                             </DataTemplate>

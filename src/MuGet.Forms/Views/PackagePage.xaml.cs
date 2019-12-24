@@ -26,7 +26,7 @@ namespace MuGet.Forms.Views
                 SegPageControl.SelectedTextColor = (Color)Application.Current.Resources["ContrastAntiColor"];
                 SegPageControl.TintColor = (Color)Application.Current.Resources["ContrastColor"];
             }
-        }
+        }        
 
         public string PackageId
         {
@@ -80,6 +80,17 @@ namespace MuGet.Forms.Views
                     break;
                 default:
                     break;
+            }
+        }
+
+        private void DependencyItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            if (e.Item is Dependency d && !string.IsNullOrEmpty(d.Id))
+            {
+                // Go back to first tab
+                // This also allows the scroll view to readjust to new content
+                SegPageControl.SelectedSegment = 0;
+                ViewModel.DependencyTappedCommand.Execute(d);
             }
         }
     }
