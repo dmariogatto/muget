@@ -83,7 +83,7 @@
                         Grid.Column="2"
                         FontAttributes="Bold"
                         Style="{DynamicResource LabelStyle}"
-                        Text="{Binding Version, StringFormat={local:Translate ItemLatestVersion}}" />
+                        Text="{Binding PackVersion, StringFormat={local:Translate ItemLatestVersion}}" />
                 </Grid>
 
                 <Label

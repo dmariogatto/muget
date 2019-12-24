@@ -5,7 +5,7 @@ namespace MuGet.Forms.Models
 {
     public class PackageVersion
     {
-        private NuGetVersion _semVersion;
+        private NuGetVersion _nugetVersion;
         private Version _version;
 
         public PackageVersion(string version)
@@ -16,38 +16,20 @@ namespace MuGet.Forms.Models
             {
                 try
                 {
-                    _semVersion = NuGetVersion.Parse(Original);
+                    _nugetVersion = NuGetVersion.Parse(Original);
+                    Version.TryParse(Original, out _version);
                 }
                 catch (Exception ex)
                 {
                     System.Diagnostics.Debug.WriteLine(ex);
-                }
-                Version.TryParse(Original, out _version);
+                }                
             }
         }
 
-        public bool IsPrerelease
-        {
-            get
-            {
-                var isPre = false;
-
-                if (_semVersion != null)
-                {
-                    isPre = _semVersion.IsPrerelease;
-                }
-                else
-                {
-                    var plusIdx = Original.IndexOf('+');
-                    var dashIdx = Original.IndexOf('-');
-                    isPre = dashIdx > 0 && (plusIdx < 0 || dashIdx < plusIdx);
-                }
-
-                return isPre;                
-            }
-        }
+        public bool IsPrerelease => _nugetVersion?.IsPrerelease ?? false;
 
         public string Original { get; }
-        public override string ToString() => _semVersion?.ToFullString() ?? _version?.ToString() ?? Original;
+        
+        public override string ToString() => _nugetVersion?.ToString() ?? _version?.ToString() ?? Original;
     }
 }

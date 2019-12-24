@@ -295,9 +295,7 @@
                     </state:StateView>
                 </state:StateLayout.StateViews>
 
-                <ScrollView
-                    x:Name="DetailsView"
-                    Padding="6,3,6,3">
+                <ScrollView x:Name="DetailsView" Padding="6,3,6,3">
                     <StackLayout>
                         <StackLayout
                             Margin="0,12,0,0"
@@ -475,7 +473,7 @@
                                         Color="{DynamicResource PrimaryTextColor}" />
                                 </Button.ImageSource>
                             </Button>
-                        </Grid>                        
+                        </Grid>
                     </StackLayout>
                 </ScrollView>
 
@@ -491,12 +489,12 @@
                         Text="{local:Translate None}" />
                     <ListView
                         BackgroundColor="Transparent"
-                        IsGroupingEnabled="True"
-                        ItemsSource="{Binding Dependencies}"
                         HasUnevenRows="True"
+                        IsGroupingEnabled="True"
+                        ItemTapped="DependencyItemTapped"
+                        ItemsSource="{Binding Dependencies}"
                         SelectionMode="None"
-                        SeparatorVisibility="None"
-                        ItemTapped="DependencyItemTapped">
+                        SeparatorVisibility="None">
                         <ListView.Header>
                             <ContentView>
                                 <StackLayout Margin="0,16,0,0" />
@@ -522,25 +520,25 @@
                                         <Label
                                             FontSize="Small"
                                             HorizontalOptions="Start"
+                                            IsVisible="{Binding Id, Converter={StaticResource stringToInverseBoolConverter}}"
                                             Style="{DynamicResource LabelStyle}"
-                                            Text="{local:Translate None}"
-                                            IsVisible="{Binding Id, Converter={StaticResource stringToInverseBoolConverter}}" />
+                                            Text="{local:Translate None}" />
                                         <Label
                                             FontSize="Small"
                                             HorizontalOptions="Start"
+                                            IsVisible="{Binding Id, Converter={StaticResource stringToBoolConverter}}"
                                             Style="{DynamicResource LabelStyle}"
                                             Text="{Binding Id}"
-                                            TextColor="{StaticResource LinkColor}"
-                                            IsVisible="{Binding Id, Converter={StaticResource stringToBoolConverter}}" />
+                                            TextColor="{StaticResource LinkColor}" />
                                         <Label
                                             FontSize="Micro"
                                             HorizontalOptions="End"
+                                            IsVisible="{Binding Id, Converter={StaticResource stringToBoolConverter}}"
                                             Style="{DynamicResource LabelStyle}"
-                                            Text="{Binding RangePretty, TargetNullValue={local:Translate NoDependencies}}"
-                                            IsVisible="{Binding Id, Converter={StaticResource stringToBoolConverter}}" />
+                                            Text="{Binding RangePretty, TargetNullValue={local:Translate NoDependencies}}" />
                                         <BoxView
-                                            HeightRequest="1"
                                             BackgroundColor="LightGray"
+                                            HeightRequest="1"
                                             HorizontalOptions="FillAndExpand" />
                                     </StackLayout>
                                 </ViewCell>
@@ -560,8 +558,8 @@
                     VerticalOptions="FillAndExpand">
                     <ListView
                         BackgroundColor="Transparent"
-                        ItemsSource="{Binding CatalogEntries}"
                         HasUnevenRows="True"
+                        ItemsSource="{Binding CatalogEntries}"
                         SelectionMode="None"
                         SeparatorVisibility="None">
                         <ListView.Header>
@@ -577,13 +575,11 @@
                                             <TapGestureRecognizer Command="{Binding EntryTappedCommand, Source={x:Reference Vm}}" CommandParameter="{Binding .}" />
                                         </StackLayout.GestureRecognizers>
                                         <Label
-                                            TextColor="{StaticResource LinkColor}"
                                             FontSize="Medium"
                                             Style="{DynamicResource LabelStyle}"
-                                            Text="{Binding Version}" />
-                                        <StackLayout
-                                            Orientation="Horizontal"
-                                            HorizontalOptions="FillAndExpand">
+                                            Text="{Binding Version}"
+                                            TextColor="{StaticResource LinkColor}" />
+                                        <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
                                             <Label
                                                 FontSize="Small"
                                                 HorizontalOptions="Start"
@@ -595,15 +591,15 @@
                                                 Style="{DynamicResource LabelStyle}"
                                                 Text="{Binding Downloads, StringFormat='{0:n0}'}" />
                                             <Label
-                                                FontSize="Small"
                                                 FontAttributes="Italic"
+                                                FontSize="Small"
                                                 HorizontalOptions="EndAndExpand"
                                                 Style="{DynamicResource LabelStyle}"
-                                                Text="{Binding Published, Converter={StaticResource dateTimeToHumanizeConverter}}" />                                            
+                                                Text="{Binding Published, Converter={StaticResource dateTimeToHumanizeConverter}}" />
                                         </StackLayout>
                                         <BoxView
-                                            HeightRequest="1"
                                             BackgroundColor="LightGray"
+                                            HeightRequest="1"
                                             HorizontalOptions="FillAndExpand" />
                                     </StackLayout>
                                 </ViewCell>

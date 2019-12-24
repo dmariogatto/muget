@@ -58,5 +58,9 @@ namespace MuGet.Forms.Models
         public string ValidatedIconUrl => IsIconUrlValid
             ? IconUrl
             : (string)Xamarin.Forms.Application.Current.Resources["PackageIcon"];
+
+        private PackageVersion _packVersion;
+        [JsonIgnore]
+        public PackageVersion PackVersion => _packVersion ?? (_packVersion = new PackageVersion(Version));
     }
 }
