@@ -7,10 +7,8 @@ namespace MuGet.Forms
 {
     public class ShinyStartup : Shiny.ShinyStartup
     {
-        public readonly static JobInfo NuGetJobInfo = new JobInfo
+        public readonly static JobInfo NuGetJobInfo = new JobInfo(typeof(NuGetJob), nameof(NuGetJob))
         {
-            Identifier = nameof(NuGetJob),
-            Type = typeof(NuGetJob),
             BatteryNotLow = true,
             DeviceCharging = false,
             RequiredInternetAccess = InternetAccess.Any,
