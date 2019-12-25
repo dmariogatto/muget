@@ -71,7 +71,7 @@
 
             <Style x:Key="LabelSubStyle" TargetType="Label">
                 <Setter Property="FontAttributes" Value="Bold" />
-                <Setter Property="TextColor" Value="{DynamicResource PrimaryAccentColor}" />
+                <Setter Property="TextColor" Value="{DynamicResource NuGetColor}" />
                 <Setter Property="VerticalTextAlignment" Value="Center" />
             </Style>
 

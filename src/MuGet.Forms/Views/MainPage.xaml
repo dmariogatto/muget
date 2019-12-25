@@ -89,7 +89,7 @@
                     HeightRequest="24"
                     IsRunning="{Binding IsBusy}"
                     WidthRequest="24"
-                    Color="{DynamicResource PrimaryAccentColor}" />
+                    Color="{DynamicResource NuGetColor}" />
             </yummy:PancakeView>
 
             <yummy:PancakeView
