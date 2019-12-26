@@ -516,7 +516,17 @@
                         <ListView.ItemTemplate>
                             <DataTemplate x:DataType="models:Dependency">
                                 <ViewCell>
-                                    <StackLayout Padding="12,2,4,2">
+                                    <Grid Padding="12,2,4,2">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="1" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+
                                         <Label
                                             FontSize="Small"
                                             HorizontalOptions="Start"
@@ -530,17 +540,35 @@
                                             Style="{DynamicResource LabelStyle}"
                                             Text="{Binding Id}"
                                             TextColor="{StaticResource LinkColor}" />
+
                                         <Label
+                                            Grid.Row="1"
                                             FontSize="Micro"
                                             HorizontalOptions="End"
                                             IsVisible="{Binding Id, Converter={StaticResource stringToBoolConverter}}"
                                             Style="{DynamicResource LabelStyle}"
                                             Text="{Binding RangePretty, TargetNullValue={local:Translate NoDependencies}}" />
+
                                         <BoxView
+                                            Grid.Row="2"
+                                            Grid.ColumnSpan="2"
                                             BackgroundColor="LightGray"
                                             HeightRequest="1"
                                             HorizontalOptions="FillAndExpand" />
-                                    </StackLayout>
+
+                                        <Label
+                                            Grid.Column="1"
+                                            Grid.RowSpan="2"
+                                            FontFamily="{StaticResource MaterialFontFamily}"
+                                            FontSize="Large"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="FillAndExpand"
+                                            HorizontalTextAlignment="Center"
+                                            VerticalTextAlignment="Center"
+                                            Style="{DynamicResource LabelStyle}"
+                                            Text="{x:Static helpers:MaterialFont.ChevronRight}"
+                                            TextColor="{StaticResource SecondaryTextColor}" />
+                                    </Grid>
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>
@@ -570,16 +598,30 @@
                         <ListView.ItemTemplate>
                             <DataTemplate x:DataType="models:CatalogEntry">
                                 <ViewCell>
-                                    <StackLayout Margin="12,2,4,2">
-                                        <StackLayout.GestureRecognizers>
+                                    <Grid Margin="12,2,4,2">
+                                        <Grid.GestureRecognizers>
                                             <TapGestureRecognizer Command="{Binding EntryTappedCommand, Source={x:Reference Vm}}" CommandParameter="{Binding .}" />
-                                        </StackLayout.GestureRecognizers>
+                                        </Grid.GestureRecognizers>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="1" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+
                                         <Label
                                             FontSize="Medium"
                                             Style="{DynamicResource LabelStyle}"
                                             Text="{Binding Version}"
                                             TextColor="{StaticResource LinkColor}" />
-                                        <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+
+                                        <StackLayout
+                                            Grid.Row="1"
+                                            HorizontalOptions="FillAndExpand"
+                                            Orientation="Horizontal">
                                             <Label
                                                 FontSize="Small"
                                                 HorizontalOptions="Start"
@@ -597,11 +639,27 @@
                                                 Style="{DynamicResource LabelStyle}"
                                                 Text="{Binding Published, Converter={StaticResource dateTimeToHumanizeConverter}}" />
                                         </StackLayout>
+
                                         <BoxView
+                                            Grid.Row="2"
+                                            Grid.ColumnSpan="2"
                                             BackgroundColor="LightGray"
                                             HeightRequest="1"
                                             HorizontalOptions="FillAndExpand" />
-                                    </StackLayout>
+
+                                        <Label
+                                            Grid.Column="1"
+                                            Grid.RowSpan="2"
+                                            FontFamily="{StaticResource MaterialFontFamily}"
+                                            FontSize="Large"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="FillAndExpand"
+                                            HorizontalTextAlignment="Center"
+                                            VerticalTextAlignment="Center"
+                                            Style="{DynamicResource LabelStyle}"
+                                            Text="{x:Static helpers:MaterialFont.ChevronRight}"
+                                            TextColor="{StaticResource SecondaryTextColor}" />
+                                    </Grid>
                                 </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>

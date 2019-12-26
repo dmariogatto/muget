@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
 using Foundation;
-using ObjCRuntime;
 using UIKit;
 using UserNotifications;
 
@@ -44,6 +41,8 @@ namespace MuGet.Forms.iOS
                 if (!b)
                     System.Diagnostics.Debug.WriteLine($"Notification Request Error: {e}");
             });
+
+            UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
 
             return base.FinishedLaunching(app, options);
         }

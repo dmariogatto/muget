@@ -12,7 +12,7 @@
 
     <Color x:Key="PrimaryTextColor">#FFFFFF</Color>
 
-    <Color x:Key="SecondaryTextColor">#FFFFFF</Color>
+    <Color x:Key="SecondaryTextColor">#A9A9A9</Color>
 
     <Color x:Key="CardBackgroundColor">#36373A</Color>
     <Color x:Key="CardBorderColor">#404040</Color>
