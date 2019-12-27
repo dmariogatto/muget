@@ -1,6 +1,5 @@
-﻿using System.Net;
-using MuGet.Forms.Models;
-using MuGet.Forms.ViewModels;
+﻿using MuGet.Forms.ViewModels;
+using System.Net;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using Xamarin.Forms.Xaml;
@@ -67,6 +66,8 @@ namespace MuGet.Forms.Views
                     DetailsView.IsVisible = true;
                     DependenciesView.IsVisible = false;
                     VersionsView.IsVisible = false;
+
+                    DetailsView.ForceLayout();
                     break;
                 case 1:
                     DetailsView.IsVisible = false;
@@ -80,17 +81,6 @@ namespace MuGet.Forms.Views
                     break;
                 default:
                     break;
-            }
-        }
-
-        private void DependencyItemTapped(object sender, ItemTappedEventArgs e)
-        {
-            if (e.Item is Dependency d && !string.IsNullOrEmpty(d.Id))
-            {
-                // Go back to first tab
-                // This also allows the scroll view to readjust to new content
-                SegPageControl.SelectedSegment = 0;
-                ViewModel.DependencyTappedCommand.Execute(d);
             }
         }
     }

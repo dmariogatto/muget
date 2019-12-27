@@ -491,7 +491,6 @@
                         BackgroundColor="Transparent"
                         HasUnevenRows="True"
                         IsGroupingEnabled="True"
-                        ItemTapped="DependencyItemTapped"
                         ItemsSource="{Binding Dependencies}"
                         SelectionMode="None"
                         SeparatorVisibility="None">
@@ -517,6 +516,9 @@
                             <DataTemplate x:DataType="models:Dependency">
                                 <ViewCell>
                                     <Grid Padding="12,2,4,2">
+                                        <Grid.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding DependencyTappedCommand, Source={x:Reference Vm}}" CommandParameter="{Binding .}" />
+                                        </Grid.GestureRecognizers>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto" />
                                             <RowDefinition Height="Auto" />
@@ -563,6 +565,7 @@
                                             FontSize="Large"
                                             HorizontalOptions="FillAndExpand"
                                             HorizontalTextAlignment="Center"
+                                            IsVisible="{Binding Id, Converter={StaticResource stringToBoolConverter}}"
                                             Style="{DynamicResource LabelStyle}"
                                             Text="{x:Static helpers:MaterialFont.ChevronRight}"
                                             TextColor="{StaticResource SecondaryTextColor}"
