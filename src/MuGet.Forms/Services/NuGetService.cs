@@ -1,4 +1,10 @@
-﻿using System;
+﻿using LiteDB;
+using MuGet.Forms.Exceptions;
+using MuGet.Forms.Models;
+using Newtonsoft.Json;
+using Polly;
+using Polly.Retry;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -6,13 +12,6 @@ using System.Net;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
-using LiteDB;
-using MuGet.Forms.Exceptions;
-using MuGet.Forms.Models;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using Polly;
-using Polly.Retry;
 using Xamarin.Essentials;
 using JsonSerializer = Newtonsoft.Json.JsonSerializer;
 
@@ -24,7 +23,13 @@ namespace MuGet.Forms.Services
 
         private readonly static string _dbPath = Path.Combine(FileSystem.AppDataDirectory, "nugets.db");
 
-        private readonly static HttpClient _httpClient = new HttpClient();
+        private readonly static HttpClient _httpClient = new HttpClient(new HttpClientHandler()
+        {
+            // Required for Android
+            // https://github.com/xamarin/xamarin-android/issues/2619
+            AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
+        });
+
         private readonly static LiteDatabase _db = new LiteDatabase(_dbPath);
 
         private readonly ICacheProvider _cache;
@@ -45,11 +50,6 @@ namespace MuGet.Forms.Services
             _cache = cacheProvider;
             _logger = logger;
             
-#if DEBUG
-            //foreach (var f in new DirectoryInfo(FileSystem.AppDataDirectory).GetFiles())
-            //    File.Delete(f.FullName);
-#endif
-
             _packageSourceRepo = new EntityRepository<PackageSource>(_db, TimeSpan.FromDays(7));
             _favouriteRepo = new EntityRepository<FavouritePackage>(_db, TimeSpan.MaxValue);
             _recentRepo = new EntityRepository<RecentPackage>(_db, TimeSpan.MaxValue);            
@@ -173,30 +173,27 @@ namespace MuGet.Forms.Services
                 if (result == null)
                 {
                     var source = await GetNuGetSource(cancellationToken).ConfigureAwait(false);
-                    var rootObject = await GetWithRetry<JObject>(source.GetRegistrationUrl(packageId), cancellationToken).ConfigureAwait(false);
-                    var items = (rootObject?.Property("items")?.Value as JArray)?.OfType<JObject>();
-                    if (items?.Any() == true)
+                    var catalogRoot = await GetWithRetry<CatalogRoot>(source.GetRegistrationUrl(packageId), cancellationToken).ConfigureAwait(false);                    
+                    if (catalogRoot?.Items?.Any() == true)
                     {
-                        async Task<IList<CatalogEntry>> getCatalogEntrys(JObject item, CancellationToken ct)
+                        async Task<IList<CatalogEntry>> getCatalogEntrys(CatalogPage page, CancellationToken ct)
                         {
-                            var page = (item?.Property("items")?.Value as JArray)?.OfType<JObject>();
+                            var items = page?.Items;
 
-                            if (page == null)
+                            if (items == null)
                             {
-                                var id = item?.Property("@id")?.Value?.Value<string>();
-                                if (!string.IsNullOrEmpty(id))
+                                if (!string.IsNullOrEmpty(page?.Id))
                                 {
-                                    var pageResult = await GetWithRetry<JObject>(id, ct).ConfigureAwait(false);
-                                    page = (pageResult?.Property("items")?.Value as JArray)?.OfType<JObject>();
+                                    var pageResult = await GetWithRetry<CatalogRoot>(page.Id, ct).ConfigureAwait(false);
+                                    items = pageResult?.Items?.FirstOrDefault()?.Items;
                                 }
                             }
 
-                            var catalogEntries = page?.Select(jo => jo.Property("catalogEntry")?.Value)?.OfType<JObject>();
-                            return catalogEntries?.Select(ce => ce.ToObject<CatalogEntry>())?.ToList() ?? new List<CatalogEntry>(0);
+                            return items?.Select(i => i.CatalogEntry)?.ToList() ?? new List<CatalogEntry>(0);
                         }
 
 
-                        var catalogTasks = items.Select(i => getCatalogEntrys(i, cancellationToken)).ToList();
+                        var catalogTasks = catalogRoot.Items.Select(i => getCatalogEntrys(i, cancellationToken)).ToList();
                         await Task.WhenAll(catalogTasks).ConfigureAwait(false);
                         result = catalogTasks.SelectMany(t => t.Result)
                                              .Where(i => i.Listed)
@@ -323,7 +320,7 @@ namespace MuGet.Forms.Services
                 return response.IsSuccessStatusCode;
             }
         }
-        
+
         #region Http Methods
         private static async Task<T> Get<T>(string url, CancellationToken cancellationToken)
         {
