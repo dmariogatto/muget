@@ -184,14 +184,13 @@ namespace MuGet.Forms.Services
                             {
                                 if (!string.IsNullOrEmpty(page?.Id))
                                 {
-                                    var pageResult = await GetWithRetry<CatalogRoot>(page.Id, ct).ConfigureAwait(false);
-                                    items = pageResult?.Items?.FirstOrDefault()?.Items;
+                                    var pageResult = await GetWithRetry<CatalogPage>(page.Id, ct).ConfigureAwait(false);
+                                    items = pageResult?.Items;
                                 }
                             }
 
                             return items?.Select(i => i.CatalogEntry)?.ToList() ?? new List<CatalogEntry>(0);
                         }
-
 
                         var catalogTasks = catalogRoot.Items.Select(i => getCatalogEntrys(i, cancellationToken)).ToList();
                         await Task.WhenAll(catalogTasks).ConfigureAwait(false);
