@@ -158,6 +158,12 @@ namespace MuGet.Forms.Services
                 {
                     _cache.Set(cacheKey, metadata, _defaultCacheExpires);
                 }
+                else
+                {
+                    _logger.Event(
+                        AppCenterEvents.Error.PackageLoadFailed,
+                        new Dictionary<string, string> { { AppCenterEvents.Property.Key, cacheKey } });
+                }
             }
 
             return metadata;
