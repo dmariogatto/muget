@@ -78,21 +78,6 @@
             </CollectionView>
 
             <yummy:PancakeView
-                x:Name="ActivityIndicatorView"
-                Padding="4"
-                AbsoluteLayout.LayoutBounds="0.5, 0, AutoSize, AutoSize"
-                AbsoluteLayout.LayoutFlags="PositionProportional"
-                HasShadow="False"
-                IsVisible="{Binding IsBusy}"
-                Style="{DynamicResource CardYummyStyle}">
-                <ActivityIndicator
-                    HeightRequest="24"
-                    IsRunning="{Binding IsBusy}"
-                    WidthRequest="24"
-                    Color="{DynamicResource NuGetColor}" />
-            </yummy:PancakeView>
-
-            <yummy:PancakeView
                 x:Name="SearchBarView"
                 Margin="16,8,16,8"
                 Padding="3"
