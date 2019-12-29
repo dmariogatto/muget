@@ -61,8 +61,12 @@ namespace MuGet.Forms.ViewModels
                 var favouriteTasks = favourites.Select(i => NuGetService.GetPackageMetadata(i.PackageId, cancellationToken));
                 await Task.WhenAll(favouriteTasks);
 
-                RecentPackages.ReplaceRange(recentTasks.Select(t => t.Result));
-                FavouritePackages.ReplaceRange(favouriteTasks.Select(t => t.Result)
+                RecentPackages.ReplaceRange(recentTasks
+                    .Select(t => t.Result)
+                    .Where(m => m != null));
+                FavouritePackages.ReplaceRange(favouriteTasks
+                    .Select(t => t.Result)
+                    .Where(m => m != null)
                     .OrderByDescending(m => m.TotalDownloads));
             }
             catch (Exception ex)

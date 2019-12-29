@@ -112,7 +112,6 @@ namespace MuGet.Forms.Services
                 var url = $"{source.SearchQueryService}?q={WebUtility.UrlEncode(query)}&prerelease={includePrerelease ?? IncludePrerelease}&skip={skip}&take={take}&semVerLevel=2";
                 result = await GetWithRetry<SearchResult>(url, cancellationToken).ConfigureAwait(false);
 
-                var tasks = new List<Task>();
                 foreach (var i in result.Data)
                 {
                     if (!string.IsNullOrWhiteSpace(i.IconUrl))
@@ -120,7 +119,7 @@ namespace MuGet.Forms.Services
                         // FFImageLoading does not cache 404's, which results in
                         // exceptions when scrolling the packages... this kills performance
                         // so validate the url before loading.
-                        tasks.Add(IsValidUrl(i.IconUrl, cancellationToken).ContinueWith((r) =>
+                        _ = IsValidUrl(i.IconUrl, cancellationToken).ContinueWith((r) =>
                         {
                             if (r.IsFaulted || !r.Result)
                             {
@@ -132,7 +131,7 @@ namespace MuGet.Forms.Services
                                 System.Diagnostics.Debug.WriteLine($"Valid Url: '{i.IconUrl}'");
                                 i.IsIconUrlValid = true;
                             }
-                        }));
+                        });
                     }
                 }
             }
