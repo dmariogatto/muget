@@ -85,7 +85,8 @@ namespace MuGet.Forms.Services
             {
                 packageSource = _packageSourceRepo.FindById(NuGet);
 
-                if (packageSource == null)
+                // Refresh NuGet source on updates
+                if (packageSource == null || VersionTracking.IsFirstLaunchForCurrentBuild)
                 {
                     var nuget = await GetWithRetry<NuGetSource>(NuGet, cancellationToken).ConfigureAwait(false);
                     packageSource = new PackageSource(nameof(NuGet), NuGet, nuget);
@@ -196,7 +197,7 @@ namespace MuGet.Forms.Services
                         await Task.WhenAll(catalogTasks).ConfigureAwait(false);
                         result = catalogTasks.SelectMany(t => t.Result)
                                              .Where(i => i.Listed)
-                                             .OrderByDescending(i => i.Published)
+                                             .OrderByDescending(i => i.PackVersion)
                                              .ToList();
                     }
 

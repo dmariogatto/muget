@@ -3,11 +3,8 @@ using System;
 
 namespace MuGet.Forms.Models
 {
-    public class PackageVersion
+    public class PackageVersion : IComparable, IComparable<PackageVersion>
     {
-        private NuGetVersion _nugetVersion;
-        private Version _version;
-
         public PackageVersion(string version)
         {
             Original = version;
@@ -16,8 +13,7 @@ namespace MuGet.Forms.Models
             {
                 try
                 {
-                    _nugetVersion = NuGetVersion.Parse(Original);
-                    Version.TryParse(Original, out _version);
+                    NuGetVersion = NuGetVersion.Parse(Original);
                 }
                 catch (Exception ex)
                 {
@@ -26,10 +22,21 @@ namespace MuGet.Forms.Models
             }
         }
 
-        public bool IsPrerelease => _nugetVersion?.IsPrerelease ?? false;
-
+        public NuGetVersion NuGetVersion { get; }
         public string Original { get; }
-        
-        public override string ToString() => _nugetVersion?.ToString() ?? _version?.ToString() ?? Original;
+
+        public bool IsPrerelease => NuGetVersion?.IsPrerelease ?? false;
+
+        public override string ToString() => NuGetVersion?.ToString() ?? Original;
+
+        public int CompareTo(object obj)
+        {
+            return CompareTo(obj as PackageVersion);
+        }
+
+        public int CompareTo(PackageVersion other)
+        {
+            return NuGetVersion?.CompareTo(other?.NuGetVersion) ?? -1;
+        }
     }
 }
