@@ -56,9 +56,9 @@ namespace MuGet.Forms.ViewModels
                 var recents = NuGetService.GetRecentPackages();
                 var favourites = NuGetService.GetFavouritePackages();
 
-                var recentTasks = recents.Select(i => NuGetService.GetPackageMetadata(i.PackageId, cancellationToken));
+                var recentTasks = recents.Select(i => NuGetService.GetPackageMetadata(i.PackageId, cancellationToken, true));
                 await Task.WhenAll(recentTasks);
-                var favouriteTasks = favourites.Select(i => NuGetService.GetPackageMetadata(i.PackageId, cancellationToken));
+                var favouriteTasks = favourites.Select(i => NuGetService.GetPackageMetadata(i.PackageId, cancellationToken, true));
                 await Task.WhenAll(favouriteTasks);
 
                 RecentPackages.ReplaceRange(recentTasks
