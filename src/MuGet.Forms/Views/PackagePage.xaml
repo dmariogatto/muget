@@ -14,6 +14,7 @@
     xmlns:models="clr-namespace:MuGet.Forms.Models"
     xmlns:segmented="clr-namespace:Plugin.Segmented.Control;assembly=Plugin.Segmented"
     xmlns:state="clr-namespace:Xamarin.Forms.StateSquid;assembly=Xamarin.Forms.StateSquid"
+    xmlns:touch="clr-namespace:TouchEffect;assembly=TouchEffect"
     xmlns:viewModels="clr-namespace:MuGet.Forms.ViewModels"
     xmlns:views="clr-namespace:MuGet.Forms.Views"
     xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
@@ -74,15 +75,23 @@
                             <ColumnDefinition Width="36" />
                         </Grid.ColumnDefinitions>
 
-                        <Grid HorizontalOptions="Start" VerticalOptions="FillAndExpand">
+                        <Grid
+                            touch:TouchEff.Command="{Binding BackCommand}"
+                            touch:TouchEff.PressedAnimationDuration="200"
+                            touch:TouchEff.PressedOpacity="0.35"
+                            touch:TouchEff.RegularAnimationDuration="300"
+                            touch:TouchEff.RegularOpacity="1"
+                            HorizontalOptions="Start"
+                            VerticalOptions="FillAndExpand">
+
+                            <Grid.Effects>
+                                <touch:TouchEff />
+                            </Grid.Effects>
+
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="36" />
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
-
-                            <Grid.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding BackCommand}" />
-                            </Grid.GestureRecognizers>
 
                             <Label
                                 FontFamily="{StaticResource MaterialFontFamily}"

@@ -158,6 +158,9 @@
     <PackageReference Include="Shiny.Notifications">
       <Version>1.0.0.531-beta</Version>
     </PackageReference>
+    <PackageReference Include="TouchView">
+      <Version>4.1.23</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
       <Version>2.4.11.982</Version>
     </PackageReference>

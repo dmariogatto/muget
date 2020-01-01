@@ -23,6 +23,7 @@ namespace MuGet.Forms.Android
             base.OnCreate(savedInstanceState);
 
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: true);
+            TouchEffect.Android.TouchEffectPreserver.Preserve();
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
