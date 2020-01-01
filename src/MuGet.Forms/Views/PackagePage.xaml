@@ -70,39 +70,41 @@
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="FillAndExpand">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="36" />
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="36" />
                         </Grid.ColumnDefinitions>
 
-                        <Label
-                            FontFamily="{StaticResource MaterialFontFamily}"
-                            FontSize="38"
-                            HorizontalOptions="Start"
-                            Style="{DynamicResource LabelStyle}"
-                            Text="{x:Static helpers:MaterialFont.ChevronLeft}"
-                            TextColor="{StaticResource LinkColor}">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding BackCommand}" />
-                            </Label.GestureRecognizers>
-                        </Label>
+                        <Grid HorizontalOptions="Start" VerticalOptions="FillAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="36" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
 
-                        <Label
-                            x:Name="PrePackageLabel"
-                            Grid.Column="1"
-                            HorizontalOptions="Start"
-                            LineBreakMode="TailTruncation"
-                            Text="{Binding PreviousPackageId}"
-                            TextColor="{StaticResource LinkColor}"
-                            VerticalOptions="FillAndExpand"
-                            VerticalTextAlignment="Center">
-                            <Label.GestureRecognizers>
+                            <Grid.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding BackCommand}" />
-                            </Label.GestureRecognizers>
-                        </Label>
+                            </Grid.GestureRecognizers>
+
+                            <Label
+                                FontFamily="{StaticResource MaterialFontFamily}"
+                                FontSize="38"
+                                HorizontalOptions="Start"
+                                Style="{DynamicResource LabelStyle}"
+                                Text="{x:Static helpers:MaterialFont.ChevronLeft}"
+                                TextColor="{StaticResource LinkColor}" />
+
+                            <Label
+                                x:Name="PrePackageLabel"
+                                Grid.Column="1"
+                                HorizontalOptions="Start"
+                                LineBreakMode="TailTruncation"
+                                Text="{Binding PreviousPackageId}"
+                                TextColor="{StaticResource LinkColor}"
+                                VerticalOptions="FillAndExpand"
+                                VerticalTextAlignment="Center" />
+                        </Grid>
 
                         <Button
-                            Grid.Column="2"
+                            Grid.Column="1"
                             BackgroundColor="Transparent"
                             Command="{Binding CloseCommand}"
                             IsVisible="{Binding PreviousPackageId, Converter={StaticResource stringToBoolConverter}}"
