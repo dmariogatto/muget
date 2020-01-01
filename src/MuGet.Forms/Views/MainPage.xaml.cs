@@ -14,7 +14,7 @@ namespace MuGet.Forms.Views
         {
             InitializeComponent();
         }
-
+        
         protected override void OnSizeAllocated(double width, double height)
         {
             base.OnSizeAllocated(width, height);
@@ -22,6 +22,15 @@ namespace MuGet.Forms.Views
             HomeView.Margin =
             SearchCollectionHeaderView.Margin =
                 new Thickness(0, SearchBarView.Height + SearchBarView.Margin.Top + 4, 0, 0);
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            Task.WhenAll(
+                SearchBarView.TranslateTo(0, 0, 250, Easing.CubicOut),
+                SearchBarView.FadeTo(1, 200));
         }
 
         private void PackagesScrolled(object sender, ItemsViewScrolledEventArgs e)
@@ -45,6 +54,6 @@ namespace MuGet.Forms.Views
                     SearchBarView.TranslateTo(0, 0, 250, Easing.CubicOut),
                     SearchBarView.FadeTo(1, 200));
             }
-        }        
+        }
     }
 }

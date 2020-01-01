@@ -70,9 +70,9 @@
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="FillAndExpand">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="36" />
                             <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="36" />
                         </Grid.ColumnDefinitions>
 
                         <Label
@@ -88,11 +88,14 @@
                         </Label>
 
                         <Label
+                            x:Name="PrePackageLabel"
                             Grid.Column="1"
+                            HorizontalOptions="Start"
                             LineBreakMode="TailTruncation"
-                            Style="{DynamicResource LabelStyle}"
                             Text="{Binding PreviousPackageId}"
-                            TextColor="{StaticResource LinkColor}">
+                            TextColor="{StaticResource LinkColor}"
+                            VerticalOptions="FillAndExpand"
+                            VerticalTextAlignment="Center">
                             <Label.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding BackCommand}" />
                             </Label.GestureRecognizers>
@@ -243,7 +246,7 @@
                     <segmented:SegmentedControl
                         x:Name="SegPageControl"
                         Grid.Row="2"
-                        Margin="3,3,3,0"
+                        Margin="4,6,4,0"
                         OnSegmentSelected="OnSegmentSelected"
                         SelectedTextColor="{DynamicResource PrimaryTextColor}"
                         TintColor="{DynamicResource SegmentColor}"

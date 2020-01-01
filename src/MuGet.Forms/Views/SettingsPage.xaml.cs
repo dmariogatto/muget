@@ -11,11 +11,6 @@ namespace MuGet.Forms.Views
         public SettingsPage()
         {
             InitializeComponent();
-
-            if (!ViewModel.IsDevelopment)
-            {
-                SettingsTable.Root.RemoveAt(0);
-            }
         }
     }
 }

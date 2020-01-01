@@ -54,8 +54,22 @@ namespace MuGet.Forms.Views
                 var padding = HeaderView.Padding;
                 padding.Top = safeInsets.Top;
                 HeaderView.Padding = padding;
-                
+
             }
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            ViewModel.PropertyChanged += ViewModelPropertyChanged;
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+
+            ViewModel.PropertyChanged -= ViewModelPropertyChanged;
         }
 
         private void OnSegmentSelected(object sender, Plugin.Segmented.Event.SegmentSelectEventArgs e)
@@ -67,6 +81,7 @@ namespace MuGet.Forms.Views
                     DependenciesView.IsVisible = false;
                     VersionsView.IsVisible = false;
 
+                    // For iOS, resize scroll view content size for different packages
                     DetailsView.ForceLayout();
                     break;
                 case 1:
@@ -81,6 +96,16 @@ namespace MuGet.Forms.Views
                     break;
                 default:
                     break;
+            }
+        }
+
+        private void ViewModelPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == nameof(ViewModel.PreviousPackageId))
+            {
+                // Force label size update
+                PrePackageLabel.WidthRequest = 9999;
+                PrePackageLabel.WidthRequest = -1;
             }
         }
     }
