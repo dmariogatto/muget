@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AiForms.SettingsView" Version="0.5.2" />
     <PackageReference Include="Humanizer" Version="2.7.9" />
     <PackageReference Include="LiteDB" Version="4.1.4" />
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="2.6.4" />

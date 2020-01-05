@@ -69,9 +69,6 @@
                             IsVisible="{Binding IsBusy}"
                             Spacing="0">
                             <controls:NuGetCardSkeleton />
-                            <controls:NuGetCardSkeleton />
-                            <controls:NuGetCardSkeleton />
-                            <controls:NuGetCardSkeleton />
                         </StackLayout>
                     </ContentView>
                 </CollectionView.Footer>

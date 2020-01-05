@@ -22,7 +22,8 @@ namespace MuGet.Forms
 
             services.AddSingleton<ILogger, Logger>();
             services.AddSingleton<ICacheProvider, InMemoryCache>();
-            services.AddSingleton<INuGetService, NuGetService>();            
+            services.AddSingleton<INuGetService, NuGetService>();
+            services.AddSingleton<IMuGetPackageService, MuGetPackageService>();
         }        
     }
 }

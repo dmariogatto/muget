@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
 using MuGet.Forms.Localisation;
+using MuGet.Forms.Models;
+using MuGet.Forms.Services;
+using MvvmHelpers;
 using MvvmHelpers.Commands;
 using Plugin.StoreReview;
 using Xamarin.Essentials;
@@ -21,9 +24,14 @@ namespace MuGet.Forms.ViewModels
         private const string FeedbackEmail = "outtaapps@gmail.com";
         private const string GitHubRepo = "https://github.com/dmariogatto/muget";
 
+        private readonly IMuGetPackageService _muGetPackageService;
+
         public SettingsViewModel()
         {
             Title = Resources.Settings;
+
+            _muGetPackageService = Shiny.ShinyHost.Resolve<IMuGetPackageService>();
+            MuGetPackages = new ObservableRangeCollection<MuGetPackage>(_muGetPackageService.GetPackages());
 
             SettingsItemTappedCommand = new AsyncCommand<SettingItem>(SettingsItemTapped);
             ResetNotificationsCommand = new Command(ResetNotifications);
@@ -62,6 +70,8 @@ namespace MuGet.Forms.ViewModels
                 OnPropertyChanged(nameof(NewReleaseNotifications));
             }
         }
+
+        public ObservableRangeCollection<MuGetPackage> MuGetPackages { get; private set; }
 
         public AsyncCommand<SettingItem> SettingsItemTappedCommand { get; private set; }
         public Command ResetNotificationsCommand { get; private set; }

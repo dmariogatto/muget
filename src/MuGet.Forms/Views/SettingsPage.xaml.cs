@@ -1,4 +1,6 @@
-﻿using MuGet.Forms.ViewModels;
+﻿using MuGet.Forms.Models;
+using MuGet.Forms.ViewModels;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace MuGet.Forms.Views

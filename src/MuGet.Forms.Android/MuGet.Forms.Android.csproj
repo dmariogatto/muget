@@ -65,6 +65,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="AiForms.SettingsView">
+      <Version>0.5.2</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Analytics">
       <Version>2.6.4</Version>
     </PackageReference>
@@ -106,7 +109,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Renderers\ColorSwitchCellRenderer.cs" />
+    <Compile Include="Renderers\SettingsViewCustomRenderer.cs" />
     <Compile Include="Services\RendererResolver_Droid.cs" />
     <Compile Include="SplashActivity.cs" />
     <Compile Include="MainActivity.cs" />

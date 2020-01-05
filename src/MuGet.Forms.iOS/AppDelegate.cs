@@ -30,6 +30,7 @@ namespace MuGet.Forms.iOS
             Shiny.iOSShinyHost.Init(new ShinyStartup());
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             TouchEffect.iOS.TouchEffectPreserver.Preserve();
+            AiForms.Renderers.iOS.SettingsViewInit.Init();
 
             global::Xamarin.Forms.Forms.Init();
 

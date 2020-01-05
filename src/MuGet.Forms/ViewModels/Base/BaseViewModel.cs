@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using MuGet.Forms.Services;
 using System.Threading.Tasks;
-using MuGet.Forms.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.StateSquid;
 

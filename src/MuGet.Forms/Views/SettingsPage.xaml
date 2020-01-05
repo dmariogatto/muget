@@ -3,11 +3,12 @@
     x:Class="MuGet.Forms.Views.SettingsPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:controls="clr-namespace:MuGet.Forms.Controls"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:local="clr-namespace:MuGet.Forms"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="clr-namespace:MuGet.Forms.Models"
+    xmlns:sv="clr-namespace:AiForms.Renderers;assembly=SettingsView"
     xmlns:viewModels="clr-namespace:MuGet.Forms.ViewModels"
     xmlns:views="clr-namespace:MuGet.Forms.Views"
     Title="{Binding Title}"
@@ -16,59 +17,60 @@
     x:TypeArguments="viewModels:SettingsViewModel"
     BackgroundColor="{DynamicResource PageBackgroundColor}"
     mc:Ignorable="d">
+
     <ContentPage.BindingContext>
         <viewModels:SettingsViewModel x:Name="Vm" />
     </ContentPage.BindingContext>
+
     <ContentPage.Resources>
         <ResourceDictionary />
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <TableView
-            x:Name="SettingsTable"
-            BackgroundColor="{DynamicResource PageBackgroundColor}"
-            Intent="Settings">
-            <TableRoot>
-                <TableSection Title="NuGet.org">
-                    <controls:ColorSwitchCell
-                        On="{Binding IncludePrerelease}"
-                        Text="{local:Translate IncludePrerelease}"
-                        TextColor="{DynamicResource PrimaryTextColor}" />
-                </TableSection>
-                <TableSection Title="{local:Translate Notifications}">
-                    <controls:ColorSwitchCell
-                        On="{Binding NewReleaseNotifications}"
-                        Text="{local:Translate NotificationsDescription}"
-                        TextColor="{DynamicResource PrimaryTextColor}" />
-                </TableSection>
-                <TableSection Title="MuGet">
-                    <TextCell
-                        Command="{Binding SettingsItemTappedCommand}"
-                        CommandParameter="{x:Static viewModels:SettingItem.RateApp}"
-                        Text="{local:Translate RateApp}"
-                        TextColor="{DynamicResource PrimaryTextColor}" />
-                    <TextCell
-                        Command="{Binding SettingsItemTappedCommand}"
-                        CommandParameter="{x:Static viewModels:SettingItem.SendFeedback}"
-                        Text="{local:Translate SendFeedback}"
-                        TextColor="{DynamicResource PrimaryTextColor}" />
-                    <TextCell
-                        Command="{Binding SettingsItemTappedCommand}"
-                        CommandParameter="{x:Static viewModels:SettingItem.ViewGitHub}"
-                        Text="{local:Translate ViewOnGitHub}"
-                        TextColor="{DynamicResource PrimaryTextColor}" />
-                </TableSection>
-                <TableSection Title="Development">
-                    <TextCell
-                        Command="{Binding ResetNotificationsCommand}"
-                        Text="{local:Translate ResetNotifications}"
-                        TextColor="{DynamicResource PrimaryTextColor}" />
-                    <TextCell
-                        Command="{Binding RunJobsCommand}"
-                        Text="{local:Translate RunAllJobs}"
-                        TextColor="{DynamicResource PrimaryTextColor}" />
-                </TableSection>
-            </TableRoot>
-        </TableView>
+        <sv:SettingsView x:Name="SettingsTable" HasUnevenRows="True">
+            <sv:Section Title="NuGet.org">
+                <sv:SwitchCell Title="{local:Translate IncludePrerelease}" On="{Binding IncludePrerelease}" />
+            </sv:Section>
+            <sv:Section Title="{local:Translate Notifications}">
+                <sv:SwitchCell Title="{local:Translate NotificationsDescription}" On="{Binding NewReleaseNotifications}" />
+            </sv:Section>
+            <sv:Section Title="MuGet">
+                <sv:ButtonCell
+                    Title="{local:Translate RateApp}"
+                    Command="{Binding SettingsItemTappedCommand}"
+                    CommandParameter="{x:Static viewModels:SettingItem.RateApp}" />
+                <sv:ButtonCell
+                    Title="{local:Translate SendFeedback}"
+                    Command="{Binding SettingsItemTappedCommand}"
+                    CommandParameter="{x:Static viewModels:SettingItem.SendFeedback}" />
+                <sv:ButtonCell
+                    Title="{local:Translate ViewOnGitHub}"
+                    Command="{Binding SettingsItemTappedCommand}"
+                    CommandParameter="{x:Static viewModels:SettingItem.ViewGitHub}" />
+            </sv:Section>
+            <sv:Section Title="{local:Translate Technology}" ItemsSource="{Binding MuGetPackages}">
+                <sv:Section.ItemTemplate>
+                    <DataTemplate x:DataType="models:MuGetPackage">
+                        <sv:ButtonCell
+                            Title="{Binding PackageId}"
+                            Height="48"
+                            IconSize="24"
+                            IconSource="{Binding Metadata.IconUrl}"
+                            TitleAlignment="Start"
+                            TitleFontSize="14" />
+                    </DataTemplate>
+                </sv:Section.ItemTemplate>
+            </sv:Section>
+            <sv:Section Title="{local:Translate Development}">
+                <sv:CommandCell
+                    Title="{local:Translate ResetNotifications}"
+                    Command="{Binding ResetNotificationsCommand}"
+                    Description="{local:Translate ResetNotificationsDetail}" />
+                <sv:CommandCell
+                    Title="{local:Translate RunAllJobs}"
+                    Command="{Binding RunJobsCommand}"
+                    Description="{local:Translate RunAllJobsDetail}" />
+            </sv:Section>
+        </sv:SettingsView>
     </ContentPage.Content>
 </views:BasePage>

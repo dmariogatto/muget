@@ -2290,6 +2290,2920 @@ namespace MuGet.Forms.Android
 			global::Plugin.Segmented.Control.Droid.Resource.Styleable.View_paddingEnd = global::MuGet.Forms.Android.Resource.Styleable.View_paddingEnd;
 			global::Plugin.Segmented.Control.Droid.Resource.Styleable.View_paddingStart = global::MuGet.Forms.Android.Resource.Styleable.View_paddingStart;
 			global::Plugin.Segmented.Control.Droid.Resource.Styleable.View_theme = global::MuGet.Forms.Android.Resource.Styleable.View_theme;
+			global::AiForms.Renderers.Droid.Resource.Animation.abc_fade_in = global::MuGet.Forms.Android.Resource.Animation.abc_fade_in;
+			global::AiForms.Renderers.Droid.Resource.Animation.abc_fade_out = global::MuGet.Forms.Android.Resource.Animation.abc_fade_out;
+			global::AiForms.Renderers.Droid.Resource.Animation.abc_grow_fade_in_from_bottom = global::MuGet.Forms.Android.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::AiForms.Renderers.Droid.Resource.Animation.abc_popup_enter = global::MuGet.Forms.Android.Resource.Animation.abc_popup_enter;
+			global::AiForms.Renderers.Droid.Resource.Animation.abc_popup_exit = global::MuGet.Forms.Android.Resource.Animation.abc_popup_exit;
+			global::AiForms.Renderers.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom = global::MuGet.Forms.Android.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::AiForms.Renderers.Droid.Resource.Animation.abc_slide_in_bottom = global::MuGet.Forms.Android.Resource.Animation.abc_slide_in_bottom;
+			global::AiForms.Renderers.Droid.Resource.Animation.abc_slide_in_top = global::MuGet.Forms.Android.Resource.Animation.abc_slide_in_top;
+			global::AiForms.Renderers.Droid.Resource.Animation.abc_slide_out_bottom = global::MuGet.Forms.Android.Resource.Animation.abc_slide_out_bottom;
+			global::AiForms.Renderers.Droid.Resource.Animation.abc_slide_out_top = global::MuGet.Forms.Android.Resource.Animation.abc_slide_out_top;
+			global::AiForms.Renderers.Droid.Resource.Animation.abc_tooltip_enter = global::MuGet.Forms.Android.Resource.Animation.abc_tooltip_enter;
+			global::AiForms.Renderers.Droid.Resource.Animation.abc_tooltip_exit = global::MuGet.Forms.Android.Resource.Animation.abc_tooltip_exit;
+			global::AiForms.Renderers.Droid.Resource.Animation.design_bottom_sheet_slide_in = global::MuGet.Forms.Android.Resource.Animation.design_bottom_sheet_slide_in;
+			global::AiForms.Renderers.Droid.Resource.Animation.design_bottom_sheet_slide_out = global::MuGet.Forms.Android.Resource.Animation.design_bottom_sheet_slide_out;
+			global::AiForms.Renderers.Droid.Resource.Animation.design_snackbar_in = global::MuGet.Forms.Android.Resource.Animation.design_snackbar_in;
+			global::AiForms.Renderers.Droid.Resource.Animation.design_snackbar_out = global::MuGet.Forms.Android.Resource.Animation.design_snackbar_out;
+			global::AiForms.Renderers.Droid.Resource.Animation.EnterFromLeft = global::MuGet.Forms.Android.Resource.Animation.EnterFromLeft;
+			global::AiForms.Renderers.Droid.Resource.Animation.EnterFromRight = global::MuGet.Forms.Android.Resource.Animation.EnterFromRight;
+			global::AiForms.Renderers.Droid.Resource.Animation.ExitToLeft = global::MuGet.Forms.Android.Resource.Animation.ExitToLeft;
+			global::AiForms.Renderers.Droid.Resource.Animation.ExitToRight = global::MuGet.Forms.Android.Resource.Animation.ExitToRight;
+			global::AiForms.Renderers.Droid.Resource.Animator.design_appbar_state_list_animator = global::MuGet.Forms.Android.Resource.Animator.design_appbar_state_list_animator;
+			global::AiForms.Renderers.Droid.Resource.Animator.design_fab_hide_motion_spec = global::MuGet.Forms.Android.Resource.Animator.design_fab_hide_motion_spec;
+			global::AiForms.Renderers.Droid.Resource.Animator.design_fab_show_motion_spec = global::MuGet.Forms.Android.Resource.Animator.design_fab_show_motion_spec;
+			global::AiForms.Renderers.Droid.Resource.Animator.mtrl_btn_state_list_anim = global::MuGet.Forms.Android.Resource.Animator.mtrl_btn_state_list_anim;
+			global::AiForms.Renderers.Droid.Resource.Animator.mtrl_btn_unelevated_state_list_anim = global::MuGet.Forms.Android.Resource.Animator.mtrl_btn_unelevated_state_list_anim;
+			global::AiForms.Renderers.Droid.Resource.Animator.mtrl_chip_state_list_anim = global::MuGet.Forms.Android.Resource.Animator.mtrl_chip_state_list_anim;
+			global::AiForms.Renderers.Droid.Resource.Animator.mtrl_fab_hide_motion_spec = global::MuGet.Forms.Android.Resource.Animator.mtrl_fab_hide_motion_spec;
+			global::AiForms.Renderers.Droid.Resource.Animator.mtrl_fab_show_motion_spec = global::MuGet.Forms.Android.Resource.Animator.mtrl_fab_show_motion_spec;
+			global::AiForms.Renderers.Droid.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec = global::MuGet.Forms.Android.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec;
+			global::AiForms.Renderers.Droid.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec = global::MuGet.Forms.Android.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionBarDivider = global::MuGet.Forms.Android.Resource.Attribute.actionBarDivider;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionBarItemBackground = global::MuGet.Forms.Android.Resource.Attribute.actionBarItemBackground;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionBarPopupTheme = global::MuGet.Forms.Android.Resource.Attribute.actionBarPopupTheme;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionBarSize = global::MuGet.Forms.Android.Resource.Attribute.actionBarSize;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionBarSplitStyle = global::MuGet.Forms.Android.Resource.Attribute.actionBarSplitStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionBarStyle = global::MuGet.Forms.Android.Resource.Attribute.actionBarStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionBarTabBarStyle = global::MuGet.Forms.Android.Resource.Attribute.actionBarTabBarStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionBarTabStyle = global::MuGet.Forms.Android.Resource.Attribute.actionBarTabStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionBarTabTextStyle = global::MuGet.Forms.Android.Resource.Attribute.actionBarTabTextStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionBarTheme = global::MuGet.Forms.Android.Resource.Attribute.actionBarTheme;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionBarWidgetTheme = global::MuGet.Forms.Android.Resource.Attribute.actionBarWidgetTheme;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionButtonStyle = global::MuGet.Forms.Android.Resource.Attribute.actionButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionDropDownStyle = global::MuGet.Forms.Android.Resource.Attribute.actionDropDownStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionLayout = global::MuGet.Forms.Android.Resource.Attribute.actionLayout;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionMenuTextAppearance = global::MuGet.Forms.Android.Resource.Attribute.actionMenuTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionMenuTextColor = global::MuGet.Forms.Android.Resource.Attribute.actionMenuTextColor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionModeBackground = global::MuGet.Forms.Android.Resource.Attribute.actionModeBackground;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionModeCloseButtonStyle = global::MuGet.Forms.Android.Resource.Attribute.actionModeCloseButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionModeCloseDrawable = global::MuGet.Forms.Android.Resource.Attribute.actionModeCloseDrawable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionModeCopyDrawable = global::MuGet.Forms.Android.Resource.Attribute.actionModeCopyDrawable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionModeCutDrawable = global::MuGet.Forms.Android.Resource.Attribute.actionModeCutDrawable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionModeFindDrawable = global::MuGet.Forms.Android.Resource.Attribute.actionModeFindDrawable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionModePasteDrawable = global::MuGet.Forms.Android.Resource.Attribute.actionModePasteDrawable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionModePopupWindowStyle = global::MuGet.Forms.Android.Resource.Attribute.actionModePopupWindowStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionModeSelectAllDrawable = global::MuGet.Forms.Android.Resource.Attribute.actionModeSelectAllDrawable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionModeShareDrawable = global::MuGet.Forms.Android.Resource.Attribute.actionModeShareDrawable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionModeSplitBackground = global::MuGet.Forms.Android.Resource.Attribute.actionModeSplitBackground;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionModeStyle = global::MuGet.Forms.Android.Resource.Attribute.actionModeStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionModeWebSearchDrawable = global::MuGet.Forms.Android.Resource.Attribute.actionModeWebSearchDrawable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionOverflowButtonStyle = global::MuGet.Forms.Android.Resource.Attribute.actionOverflowButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionOverflowMenuStyle = global::MuGet.Forms.Android.Resource.Attribute.actionOverflowMenuStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionProviderClass = global::MuGet.Forms.Android.Resource.Attribute.actionProviderClass;
+			global::AiForms.Renderers.Droid.Resource.Attribute.actionViewClass = global::MuGet.Forms.Android.Resource.Attribute.actionViewClass;
+			global::AiForms.Renderers.Droid.Resource.Attribute.activityChooserViewStyle = global::MuGet.Forms.Android.Resource.Attribute.activityChooserViewStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.alertDialogButtonGroupStyle = global::MuGet.Forms.Android.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.alertDialogCenterButtons = global::MuGet.Forms.Android.Resource.Attribute.alertDialogCenterButtons;
+			global::AiForms.Renderers.Droid.Resource.Attribute.alertDialogStyle = global::MuGet.Forms.Android.Resource.Attribute.alertDialogStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.alertDialogTheme = global::MuGet.Forms.Android.Resource.Attribute.alertDialogTheme;
+			global::AiForms.Renderers.Droid.Resource.Attribute.allowStacking = global::MuGet.Forms.Android.Resource.Attribute.allowStacking;
+			global::AiForms.Renderers.Droid.Resource.Attribute.alpha = global::MuGet.Forms.Android.Resource.Attribute.alpha;
+			global::AiForms.Renderers.Droid.Resource.Attribute.alphabeticModifiers = global::MuGet.Forms.Android.Resource.Attribute.alphabeticModifiers;
+			global::AiForms.Renderers.Droid.Resource.Attribute.arrowHeadLength = global::MuGet.Forms.Android.Resource.Attribute.arrowHeadLength;
+			global::AiForms.Renderers.Droid.Resource.Attribute.arrowShaftLength = global::MuGet.Forms.Android.Resource.Attribute.arrowShaftLength;
+			global::AiForms.Renderers.Droid.Resource.Attribute.autoCompleteTextViewStyle = global::MuGet.Forms.Android.Resource.Attribute.autoCompleteTextViewStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.autoSizeMaxTextSize = global::MuGet.Forms.Android.Resource.Attribute.autoSizeMaxTextSize;
+			global::AiForms.Renderers.Droid.Resource.Attribute.autoSizeMinTextSize = global::MuGet.Forms.Android.Resource.Attribute.autoSizeMinTextSize;
+			global::AiForms.Renderers.Droid.Resource.Attribute.autoSizePresetSizes = global::MuGet.Forms.Android.Resource.Attribute.autoSizePresetSizes;
+			global::AiForms.Renderers.Droid.Resource.Attribute.autoSizeStepGranularity = global::MuGet.Forms.Android.Resource.Attribute.autoSizeStepGranularity;
+			global::AiForms.Renderers.Droid.Resource.Attribute.autoSizeTextType = global::MuGet.Forms.Android.Resource.Attribute.autoSizeTextType;
+			global::AiForms.Renderers.Droid.Resource.Attribute.background = global::MuGet.Forms.Android.Resource.Attribute.background;
+			global::AiForms.Renderers.Droid.Resource.Attribute.backgroundSplit = global::MuGet.Forms.Android.Resource.Attribute.backgroundSplit;
+			global::AiForms.Renderers.Droid.Resource.Attribute.backgroundStacked = global::MuGet.Forms.Android.Resource.Attribute.backgroundStacked;
+			global::AiForms.Renderers.Droid.Resource.Attribute.backgroundTint = global::MuGet.Forms.Android.Resource.Attribute.backgroundTint;
+			global::AiForms.Renderers.Droid.Resource.Attribute.backgroundTintMode = global::MuGet.Forms.Android.Resource.Attribute.backgroundTintMode;
+			global::AiForms.Renderers.Droid.Resource.Attribute.barLength = global::MuGet.Forms.Android.Resource.Attribute.barLength;
+			global::AiForms.Renderers.Droid.Resource.Attribute.behavior_autoHide = global::MuGet.Forms.Android.Resource.Attribute.behavior_autoHide;
+			global::AiForms.Renderers.Droid.Resource.Attribute.behavior_fitToContents = global::MuGet.Forms.Android.Resource.Attribute.behavior_fitToContents;
+			global::AiForms.Renderers.Droid.Resource.Attribute.behavior_hideable = global::MuGet.Forms.Android.Resource.Attribute.behavior_hideable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.behavior_overlapTop = global::MuGet.Forms.Android.Resource.Attribute.behavior_overlapTop;
+			global::AiForms.Renderers.Droid.Resource.Attribute.behavior_peekHeight = global::MuGet.Forms.Android.Resource.Attribute.behavior_peekHeight;
+			global::AiForms.Renderers.Droid.Resource.Attribute.behavior_skipCollapsed = global::MuGet.Forms.Android.Resource.Attribute.behavior_skipCollapsed;
+			global::AiForms.Renderers.Droid.Resource.Attribute.borderWidth = global::MuGet.Forms.Android.Resource.Attribute.borderWidth;
+			global::AiForms.Renderers.Droid.Resource.Attribute.borderlessButtonStyle = global::MuGet.Forms.Android.Resource.Attribute.borderlessButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.bottomAppBarStyle = global::MuGet.Forms.Android.Resource.Attribute.bottomAppBarStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.bottomNavigationStyle = global::MuGet.Forms.Android.Resource.Attribute.bottomNavigationStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.bottomSheetDialogTheme = global::MuGet.Forms.Android.Resource.Attribute.bottomSheetDialogTheme;
+			global::AiForms.Renderers.Droid.Resource.Attribute.bottomSheetStyle = global::MuGet.Forms.Android.Resource.Attribute.bottomSheetStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.boxBackgroundColor = global::MuGet.Forms.Android.Resource.Attribute.boxBackgroundColor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.boxBackgroundMode = global::MuGet.Forms.Android.Resource.Attribute.boxBackgroundMode;
+			global::AiForms.Renderers.Droid.Resource.Attribute.boxCollapsedPaddingTop = global::MuGet.Forms.Android.Resource.Attribute.boxCollapsedPaddingTop;
+			global::AiForms.Renderers.Droid.Resource.Attribute.boxCornerRadiusBottomEnd = global::MuGet.Forms.Android.Resource.Attribute.boxCornerRadiusBottomEnd;
+			global::AiForms.Renderers.Droid.Resource.Attribute.boxCornerRadiusBottomStart = global::MuGet.Forms.Android.Resource.Attribute.boxCornerRadiusBottomStart;
+			global::AiForms.Renderers.Droid.Resource.Attribute.boxCornerRadiusTopEnd = global::MuGet.Forms.Android.Resource.Attribute.boxCornerRadiusTopEnd;
+			global::AiForms.Renderers.Droid.Resource.Attribute.boxCornerRadiusTopStart = global::MuGet.Forms.Android.Resource.Attribute.boxCornerRadiusTopStart;
+			global::AiForms.Renderers.Droid.Resource.Attribute.boxStrokeColor = global::MuGet.Forms.Android.Resource.Attribute.boxStrokeColor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.boxStrokeWidth = global::MuGet.Forms.Android.Resource.Attribute.boxStrokeWidth;
+			global::AiForms.Renderers.Droid.Resource.Attribute.buttonBarButtonStyle = global::MuGet.Forms.Android.Resource.Attribute.buttonBarButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.buttonBarNegativeButtonStyle = global::MuGet.Forms.Android.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.buttonBarNeutralButtonStyle = global::MuGet.Forms.Android.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.buttonBarPositiveButtonStyle = global::MuGet.Forms.Android.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.buttonBarStyle = global::MuGet.Forms.Android.Resource.Attribute.buttonBarStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.buttonGravity = global::MuGet.Forms.Android.Resource.Attribute.buttonGravity;
+			global::AiForms.Renderers.Droid.Resource.Attribute.buttonIconDimen = global::MuGet.Forms.Android.Resource.Attribute.buttonIconDimen;
+			global::AiForms.Renderers.Droid.Resource.Attribute.buttonPanelSideLayout = global::MuGet.Forms.Android.Resource.Attribute.buttonPanelSideLayout;
+			global::AiForms.Renderers.Droid.Resource.Attribute.buttonStyle = global::MuGet.Forms.Android.Resource.Attribute.buttonStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.buttonStyleSmall = global::MuGet.Forms.Android.Resource.Attribute.buttonStyleSmall;
+			global::AiForms.Renderers.Droid.Resource.Attribute.buttonTint = global::MuGet.Forms.Android.Resource.Attribute.buttonTint;
+			global::AiForms.Renderers.Droid.Resource.Attribute.buttonTintMode = global::MuGet.Forms.Android.Resource.Attribute.buttonTintMode;
+			global::AiForms.Renderers.Droid.Resource.Attribute.cardBackgroundColor = global::MuGet.Forms.Android.Resource.Attribute.cardBackgroundColor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.cardCornerRadius = global::MuGet.Forms.Android.Resource.Attribute.cardCornerRadius;
+			global::AiForms.Renderers.Droid.Resource.Attribute.cardElevation = global::MuGet.Forms.Android.Resource.Attribute.cardElevation;
+			global::AiForms.Renderers.Droid.Resource.Attribute.cardMaxElevation = global::MuGet.Forms.Android.Resource.Attribute.cardMaxElevation;
+			global::AiForms.Renderers.Droid.Resource.Attribute.cardPreventCornerOverlap = global::MuGet.Forms.Android.Resource.Attribute.cardPreventCornerOverlap;
+			global::AiForms.Renderers.Droid.Resource.Attribute.cardUseCompatPadding = global::MuGet.Forms.Android.Resource.Attribute.cardUseCompatPadding;
+			global::AiForms.Renderers.Droid.Resource.Attribute.cardViewStyle = global::MuGet.Forms.Android.Resource.Attribute.cardViewStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.checkboxStyle = global::MuGet.Forms.Android.Resource.Attribute.checkboxStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.checkedChip = global::MuGet.Forms.Android.Resource.Attribute.checkedChip;
+			global::AiForms.Renderers.Droid.Resource.Attribute.checkedIcon = global::MuGet.Forms.Android.Resource.Attribute.checkedIcon;
+			global::AiForms.Renderers.Droid.Resource.Attribute.checkedIconEnabled = global::MuGet.Forms.Android.Resource.Attribute.checkedIconEnabled;
+			global::AiForms.Renderers.Droid.Resource.Attribute.checkedIconVisible = global::MuGet.Forms.Android.Resource.Attribute.checkedIconVisible;
+			global::AiForms.Renderers.Droid.Resource.Attribute.checkedTextViewStyle = global::MuGet.Forms.Android.Resource.Attribute.checkedTextViewStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.chipBackgroundColor = global::MuGet.Forms.Android.Resource.Attribute.chipBackgroundColor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.chipCornerRadius = global::MuGet.Forms.Android.Resource.Attribute.chipCornerRadius;
+			global::AiForms.Renderers.Droid.Resource.Attribute.chipEndPadding = global::MuGet.Forms.Android.Resource.Attribute.chipEndPadding;
+			global::AiForms.Renderers.Droid.Resource.Attribute.chipGroupStyle = global::MuGet.Forms.Android.Resource.Attribute.chipGroupStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.chipIcon = global::MuGet.Forms.Android.Resource.Attribute.chipIcon;
+			global::AiForms.Renderers.Droid.Resource.Attribute.chipIconEnabled = global::MuGet.Forms.Android.Resource.Attribute.chipIconEnabled;
+			global::AiForms.Renderers.Droid.Resource.Attribute.chipIconSize = global::MuGet.Forms.Android.Resource.Attribute.chipIconSize;
+			global::AiForms.Renderers.Droid.Resource.Attribute.chipIconTint = global::MuGet.Forms.Android.Resource.Attribute.chipIconTint;
+			global::AiForms.Renderers.Droid.Resource.Attribute.chipIconVisible = global::MuGet.Forms.Android.Resource.Attribute.chipIconVisible;
+			global::AiForms.Renderers.Droid.Resource.Attribute.chipMinHeight = global::MuGet.Forms.Android.Resource.Attribute.chipMinHeight;
+			global::AiForms.Renderers.Droid.Resource.Attribute.chipSpacing = global::MuGet.Forms.Android.Resource.Attribute.chipSpacing;
+			global::AiForms.Renderers.Droid.Resource.Attribute.chipSpacingHorizontal = global::MuGet.Forms.Android.Resource.Attribute.chipSpacingHorizontal;
+			global::AiForms.Renderers.Droid.Resource.Attribute.chipSpacingVertical = global::MuGet.Forms.Android.Resource.Attribute.chipSpacingVertical;
+			global::AiForms.Renderers.Droid.Resource.Attribute.chipStandaloneStyle = global::MuGet.Forms.Android.Resource.Attribute.chipStandaloneStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.chipStartPadding = global::MuGet.Forms.Android.Resource.Attribute.chipStartPadding;
+			global::AiForms.Renderers.Droid.Resource.Attribute.chipStrokeColor = global::MuGet.Forms.Android.Resource.Attribute.chipStrokeColor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.chipStrokeWidth = global::MuGet.Forms.Android.Resource.Attribute.chipStrokeWidth;
+			global::AiForms.Renderers.Droid.Resource.Attribute.chipStyle = global::MuGet.Forms.Android.Resource.Attribute.chipStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.closeIcon = global::MuGet.Forms.Android.Resource.Attribute.closeIcon;
+			global::AiForms.Renderers.Droid.Resource.Attribute.closeIconEnabled = global::MuGet.Forms.Android.Resource.Attribute.closeIconEnabled;
+			global::AiForms.Renderers.Droid.Resource.Attribute.closeIconEndPadding = global::MuGet.Forms.Android.Resource.Attribute.closeIconEndPadding;
+			global::AiForms.Renderers.Droid.Resource.Attribute.closeIconSize = global::MuGet.Forms.Android.Resource.Attribute.closeIconSize;
+			global::AiForms.Renderers.Droid.Resource.Attribute.closeIconStartPadding = global::MuGet.Forms.Android.Resource.Attribute.closeIconStartPadding;
+			global::AiForms.Renderers.Droid.Resource.Attribute.closeIconTint = global::MuGet.Forms.Android.Resource.Attribute.closeIconTint;
+			global::AiForms.Renderers.Droid.Resource.Attribute.closeIconVisible = global::MuGet.Forms.Android.Resource.Attribute.closeIconVisible;
+			global::AiForms.Renderers.Droid.Resource.Attribute.closeItemLayout = global::MuGet.Forms.Android.Resource.Attribute.closeItemLayout;
+			global::AiForms.Renderers.Droid.Resource.Attribute.collapseContentDescription = global::MuGet.Forms.Android.Resource.Attribute.collapseContentDescription;
+			global::AiForms.Renderers.Droid.Resource.Attribute.collapseIcon = global::MuGet.Forms.Android.Resource.Attribute.collapseIcon;
+			global::AiForms.Renderers.Droid.Resource.Attribute.collapsedTitleGravity = global::MuGet.Forms.Android.Resource.Attribute.collapsedTitleGravity;
+			global::AiForms.Renderers.Droid.Resource.Attribute.collapsedTitleTextAppearance = global::MuGet.Forms.Android.Resource.Attribute.collapsedTitleTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Attribute.color = global::MuGet.Forms.Android.Resource.Attribute.color;
+			global::AiForms.Renderers.Droid.Resource.Attribute.colorAccent = global::MuGet.Forms.Android.Resource.Attribute.colorAccent;
+			global::AiForms.Renderers.Droid.Resource.Attribute.colorBackgroundFloating = global::MuGet.Forms.Android.Resource.Attribute.colorBackgroundFloating;
+			global::AiForms.Renderers.Droid.Resource.Attribute.colorButtonNormal = global::MuGet.Forms.Android.Resource.Attribute.colorButtonNormal;
+			global::AiForms.Renderers.Droid.Resource.Attribute.colorControlActivated = global::MuGet.Forms.Android.Resource.Attribute.colorControlActivated;
+			global::AiForms.Renderers.Droid.Resource.Attribute.colorControlHighlight = global::MuGet.Forms.Android.Resource.Attribute.colorControlHighlight;
+			global::AiForms.Renderers.Droid.Resource.Attribute.colorControlNormal = global::MuGet.Forms.Android.Resource.Attribute.colorControlNormal;
+			global::AiForms.Renderers.Droid.Resource.Attribute.colorError = global::MuGet.Forms.Android.Resource.Attribute.colorError;
+			global::AiForms.Renderers.Droid.Resource.Attribute.colorPrimary = global::MuGet.Forms.Android.Resource.Attribute.colorPrimary;
+			global::AiForms.Renderers.Droid.Resource.Attribute.colorPrimaryDark = global::MuGet.Forms.Android.Resource.Attribute.colorPrimaryDark;
+			global::AiForms.Renderers.Droid.Resource.Attribute.colorSecondary = global::MuGet.Forms.Android.Resource.Attribute.colorSecondary;
+			global::AiForms.Renderers.Droid.Resource.Attribute.colorSwitchThumbNormal = global::MuGet.Forms.Android.Resource.Attribute.colorSwitchThumbNormal;
+			global::AiForms.Renderers.Droid.Resource.Attribute.commitIcon = global::MuGet.Forms.Android.Resource.Attribute.commitIcon;
+			global::AiForms.Renderers.Droid.Resource.Attribute.contentDescription = global::MuGet.Forms.Android.Resource.Attribute.contentDescription;
+			global::AiForms.Renderers.Droid.Resource.Attribute.contentInsetEnd = global::MuGet.Forms.Android.Resource.Attribute.contentInsetEnd;
+			global::AiForms.Renderers.Droid.Resource.Attribute.contentInsetEndWithActions = global::MuGet.Forms.Android.Resource.Attribute.contentInsetEndWithActions;
+			global::AiForms.Renderers.Droid.Resource.Attribute.contentInsetLeft = global::MuGet.Forms.Android.Resource.Attribute.contentInsetLeft;
+			global::AiForms.Renderers.Droid.Resource.Attribute.contentInsetRight = global::MuGet.Forms.Android.Resource.Attribute.contentInsetRight;
+			global::AiForms.Renderers.Droid.Resource.Attribute.contentInsetStart = global::MuGet.Forms.Android.Resource.Attribute.contentInsetStart;
+			global::AiForms.Renderers.Droid.Resource.Attribute.contentInsetStartWithNavigation = global::MuGet.Forms.Android.Resource.Attribute.contentInsetStartWithNavigation;
+			global::AiForms.Renderers.Droid.Resource.Attribute.contentPadding = global::MuGet.Forms.Android.Resource.Attribute.contentPadding;
+			global::AiForms.Renderers.Droid.Resource.Attribute.contentPaddingBottom = global::MuGet.Forms.Android.Resource.Attribute.contentPaddingBottom;
+			global::AiForms.Renderers.Droid.Resource.Attribute.contentPaddingLeft = global::MuGet.Forms.Android.Resource.Attribute.contentPaddingLeft;
+			global::AiForms.Renderers.Droid.Resource.Attribute.contentPaddingRight = global::MuGet.Forms.Android.Resource.Attribute.contentPaddingRight;
+			global::AiForms.Renderers.Droid.Resource.Attribute.contentPaddingTop = global::MuGet.Forms.Android.Resource.Attribute.contentPaddingTop;
+			global::AiForms.Renderers.Droid.Resource.Attribute.contentScrim = global::MuGet.Forms.Android.Resource.Attribute.contentScrim;
+			global::AiForms.Renderers.Droid.Resource.Attribute.controlBackground = global::MuGet.Forms.Android.Resource.Attribute.controlBackground;
+			global::AiForms.Renderers.Droid.Resource.Attribute.coordinatorLayoutStyle = global::MuGet.Forms.Android.Resource.Attribute.coordinatorLayoutStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.cornerRadius = global::MuGet.Forms.Android.Resource.Attribute.cornerRadius;
+			global::AiForms.Renderers.Droid.Resource.Attribute.counterEnabled = global::MuGet.Forms.Android.Resource.Attribute.counterEnabled;
+			global::AiForms.Renderers.Droid.Resource.Attribute.counterMaxLength = global::MuGet.Forms.Android.Resource.Attribute.counterMaxLength;
+			global::AiForms.Renderers.Droid.Resource.Attribute.counterOverflowTextAppearance = global::MuGet.Forms.Android.Resource.Attribute.counterOverflowTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Attribute.counterTextAppearance = global::MuGet.Forms.Android.Resource.Attribute.counterTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Attribute.customNavigationLayout = global::MuGet.Forms.Android.Resource.Attribute.customNavigationLayout;
+			global::AiForms.Renderers.Droid.Resource.Attribute.defaultQueryHint = global::MuGet.Forms.Android.Resource.Attribute.defaultQueryHint;
+			global::AiForms.Renderers.Droid.Resource.Attribute.dialogCornerRadius = global::MuGet.Forms.Android.Resource.Attribute.dialogCornerRadius;
+			global::AiForms.Renderers.Droid.Resource.Attribute.dialogPreferredPadding = global::MuGet.Forms.Android.Resource.Attribute.dialogPreferredPadding;
+			global::AiForms.Renderers.Droid.Resource.Attribute.dialogTheme = global::MuGet.Forms.Android.Resource.Attribute.dialogTheme;
+			global::AiForms.Renderers.Droid.Resource.Attribute.displayOptions = global::MuGet.Forms.Android.Resource.Attribute.displayOptions;
+			global::AiForms.Renderers.Droid.Resource.Attribute.divider = global::MuGet.Forms.Android.Resource.Attribute.divider;
+			global::AiForms.Renderers.Droid.Resource.Attribute.dividerHorizontal = global::MuGet.Forms.Android.Resource.Attribute.dividerHorizontal;
+			global::AiForms.Renderers.Droid.Resource.Attribute.dividerPadding = global::MuGet.Forms.Android.Resource.Attribute.dividerPadding;
+			global::AiForms.Renderers.Droid.Resource.Attribute.dividerVertical = global::MuGet.Forms.Android.Resource.Attribute.dividerVertical;
+			global::AiForms.Renderers.Droid.Resource.Attribute.drawableSize = global::MuGet.Forms.Android.Resource.Attribute.drawableSize;
+			global::AiForms.Renderers.Droid.Resource.Attribute.drawerArrowStyle = global::MuGet.Forms.Android.Resource.Attribute.drawerArrowStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.dropDownListViewStyle = global::MuGet.Forms.Android.Resource.Attribute.dropDownListViewStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.dropdownListPreferredItemHeight = global::MuGet.Forms.Android.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::AiForms.Renderers.Droid.Resource.Attribute.editTextBackground = global::MuGet.Forms.Android.Resource.Attribute.editTextBackground;
+			global::AiForms.Renderers.Droid.Resource.Attribute.editTextColor = global::MuGet.Forms.Android.Resource.Attribute.editTextColor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.editTextStyle = global::MuGet.Forms.Android.Resource.Attribute.editTextStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.elevation = global::MuGet.Forms.Android.Resource.Attribute.elevation;
+			global::AiForms.Renderers.Droid.Resource.Attribute.enforceMaterialTheme = global::MuGet.Forms.Android.Resource.Attribute.enforceMaterialTheme;
+			global::AiForms.Renderers.Droid.Resource.Attribute.enforceTextAppearance = global::MuGet.Forms.Android.Resource.Attribute.enforceTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Attribute.errorEnabled = global::MuGet.Forms.Android.Resource.Attribute.errorEnabled;
+			global::AiForms.Renderers.Droid.Resource.Attribute.errorTextAppearance = global::MuGet.Forms.Android.Resource.Attribute.errorTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable = global::MuGet.Forms.Android.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.expanded = global::MuGet.Forms.Android.Resource.Attribute.expanded;
+			global::AiForms.Renderers.Droid.Resource.Attribute.expandedTitleGravity = global::MuGet.Forms.Android.Resource.Attribute.expandedTitleGravity;
+			global::AiForms.Renderers.Droid.Resource.Attribute.expandedTitleMargin = global::MuGet.Forms.Android.Resource.Attribute.expandedTitleMargin;
+			global::AiForms.Renderers.Droid.Resource.Attribute.expandedTitleMarginBottom = global::MuGet.Forms.Android.Resource.Attribute.expandedTitleMarginBottom;
+			global::AiForms.Renderers.Droid.Resource.Attribute.expandedTitleMarginEnd = global::MuGet.Forms.Android.Resource.Attribute.expandedTitleMarginEnd;
+			global::AiForms.Renderers.Droid.Resource.Attribute.expandedTitleMarginStart = global::MuGet.Forms.Android.Resource.Attribute.expandedTitleMarginStart;
+			global::AiForms.Renderers.Droid.Resource.Attribute.expandedTitleMarginTop = global::MuGet.Forms.Android.Resource.Attribute.expandedTitleMarginTop;
+			global::AiForms.Renderers.Droid.Resource.Attribute.expandedTitleTextAppearance = global::MuGet.Forms.Android.Resource.Attribute.expandedTitleTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Attribute.externalRouteEnabledDrawable = global::MuGet.Forms.Android.Resource.Attribute.externalRouteEnabledDrawable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.fabAlignmentMode = global::MuGet.Forms.Android.Resource.Attribute.fabAlignmentMode;
+			global::AiForms.Renderers.Droid.Resource.Attribute.fabCradleMargin = global::MuGet.Forms.Android.Resource.Attribute.fabCradleMargin;
+			global::AiForms.Renderers.Droid.Resource.Attribute.fabCradleRoundedCornerRadius = global::MuGet.Forms.Android.Resource.Attribute.fabCradleRoundedCornerRadius;
+			global::AiForms.Renderers.Droid.Resource.Attribute.fabCradleVerticalOffset = global::MuGet.Forms.Android.Resource.Attribute.fabCradleVerticalOffset;
+			global::AiForms.Renderers.Droid.Resource.Attribute.fabCustomSize = global::MuGet.Forms.Android.Resource.Attribute.fabCustomSize;
+			global::AiForms.Renderers.Droid.Resource.Attribute.fabSize = global::MuGet.Forms.Android.Resource.Attribute.fabSize;
+			global::AiForms.Renderers.Droid.Resource.Attribute.fastScrollEnabled = global::MuGet.Forms.Android.Resource.Attribute.fastScrollEnabled;
+			global::AiForms.Renderers.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::MuGet.Forms.Android.Resource.Attribute.fastScrollHorizontalThumbDrawable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::MuGet.Forms.Android.Resource.Attribute.fastScrollHorizontalTrackDrawable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable = global::MuGet.Forms.Android.Resource.Attribute.fastScrollVerticalThumbDrawable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable = global::MuGet.Forms.Android.Resource.Attribute.fastScrollVerticalTrackDrawable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.firstBaselineToTopHeight = global::MuGet.Forms.Android.Resource.Attribute.firstBaselineToTopHeight;
+			global::AiForms.Renderers.Droid.Resource.Attribute.floatingActionButtonStyle = global::MuGet.Forms.Android.Resource.Attribute.floatingActionButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.font = global::MuGet.Forms.Android.Resource.Attribute.font;
+			global::AiForms.Renderers.Droid.Resource.Attribute.fontFamily = global::MuGet.Forms.Android.Resource.Attribute.fontFamily;
+			global::AiForms.Renderers.Droid.Resource.Attribute.fontProviderAuthority = global::MuGet.Forms.Android.Resource.Attribute.fontProviderAuthority;
+			global::AiForms.Renderers.Droid.Resource.Attribute.fontProviderCerts = global::MuGet.Forms.Android.Resource.Attribute.fontProviderCerts;
+			global::AiForms.Renderers.Droid.Resource.Attribute.fontProviderFetchStrategy = global::MuGet.Forms.Android.Resource.Attribute.fontProviderFetchStrategy;
+			global::AiForms.Renderers.Droid.Resource.Attribute.fontProviderFetchTimeout = global::MuGet.Forms.Android.Resource.Attribute.fontProviderFetchTimeout;
+			global::AiForms.Renderers.Droid.Resource.Attribute.fontProviderPackage = global::MuGet.Forms.Android.Resource.Attribute.fontProviderPackage;
+			global::AiForms.Renderers.Droid.Resource.Attribute.fontProviderQuery = global::MuGet.Forms.Android.Resource.Attribute.fontProviderQuery;
+			global::AiForms.Renderers.Droid.Resource.Attribute.fontStyle = global::MuGet.Forms.Android.Resource.Attribute.fontStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.fontVariationSettings = global::MuGet.Forms.Android.Resource.Attribute.fontVariationSettings;
+			global::AiForms.Renderers.Droid.Resource.Attribute.fontWeight = global::MuGet.Forms.Android.Resource.Attribute.fontWeight;
+			global::AiForms.Renderers.Droid.Resource.Attribute.foregroundInsidePadding = global::MuGet.Forms.Android.Resource.Attribute.foregroundInsidePadding;
+			global::AiForms.Renderers.Droid.Resource.Attribute.gapBetweenBars = global::MuGet.Forms.Android.Resource.Attribute.gapBetweenBars;
+			global::AiForms.Renderers.Droid.Resource.Attribute.goIcon = global::MuGet.Forms.Android.Resource.Attribute.goIcon;
+			global::AiForms.Renderers.Droid.Resource.Attribute.headerLayout = global::MuGet.Forms.Android.Resource.Attribute.headerLayout;
+			global::AiForms.Renderers.Droid.Resource.Attribute.height = global::MuGet.Forms.Android.Resource.Attribute.height;
+			global::AiForms.Renderers.Droid.Resource.Attribute.helperText = global::MuGet.Forms.Android.Resource.Attribute.helperText;
+			global::AiForms.Renderers.Droid.Resource.Attribute.helperTextEnabled = global::MuGet.Forms.Android.Resource.Attribute.helperTextEnabled;
+			global::AiForms.Renderers.Droid.Resource.Attribute.helperTextTextAppearance = global::MuGet.Forms.Android.Resource.Attribute.helperTextTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Attribute.hideMotionSpec = global::MuGet.Forms.Android.Resource.Attribute.hideMotionSpec;
+			global::AiForms.Renderers.Droid.Resource.Attribute.hideOnContentScroll = global::MuGet.Forms.Android.Resource.Attribute.hideOnContentScroll;
+			global::AiForms.Renderers.Droid.Resource.Attribute.hideOnScroll = global::MuGet.Forms.Android.Resource.Attribute.hideOnScroll;
+			global::AiForms.Renderers.Droid.Resource.Attribute.hintAnimationEnabled = global::MuGet.Forms.Android.Resource.Attribute.hintAnimationEnabled;
+			global::AiForms.Renderers.Droid.Resource.Attribute.hintEnabled = global::MuGet.Forms.Android.Resource.Attribute.hintEnabled;
+			global::AiForms.Renderers.Droid.Resource.Attribute.hintTextAppearance = global::MuGet.Forms.Android.Resource.Attribute.hintTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Attribute.homeAsUpIndicator = global::MuGet.Forms.Android.Resource.Attribute.homeAsUpIndicator;
+			global::AiForms.Renderers.Droid.Resource.Attribute.homeLayout = global::MuGet.Forms.Android.Resource.Attribute.homeLayout;
+			global::AiForms.Renderers.Droid.Resource.Attribute.hoveredFocusedTranslationZ = global::MuGet.Forms.Android.Resource.Attribute.hoveredFocusedTranslationZ;
+			global::AiForms.Renderers.Droid.Resource.Attribute.icon = global::MuGet.Forms.Android.Resource.Attribute.icon;
+			global::AiForms.Renderers.Droid.Resource.Attribute.iconEndPadding = global::MuGet.Forms.Android.Resource.Attribute.iconEndPadding;
+			global::AiForms.Renderers.Droid.Resource.Attribute.iconGravity = global::MuGet.Forms.Android.Resource.Attribute.iconGravity;
+			global::AiForms.Renderers.Droid.Resource.Attribute.iconPadding = global::MuGet.Forms.Android.Resource.Attribute.iconPadding;
+			global::AiForms.Renderers.Droid.Resource.Attribute.iconSize = global::MuGet.Forms.Android.Resource.Attribute.iconSize;
+			global::AiForms.Renderers.Droid.Resource.Attribute.iconStartPadding = global::MuGet.Forms.Android.Resource.Attribute.iconStartPadding;
+			global::AiForms.Renderers.Droid.Resource.Attribute.iconTint = global::MuGet.Forms.Android.Resource.Attribute.iconTint;
+			global::AiForms.Renderers.Droid.Resource.Attribute.iconTintMode = global::MuGet.Forms.Android.Resource.Attribute.iconTintMode;
+			global::AiForms.Renderers.Droid.Resource.Attribute.iconifiedByDefault = global::MuGet.Forms.Android.Resource.Attribute.iconifiedByDefault;
+			global::AiForms.Renderers.Droid.Resource.Attribute.imageButtonStyle = global::MuGet.Forms.Android.Resource.Attribute.imageButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.indeterminateProgressStyle = global::MuGet.Forms.Android.Resource.Attribute.indeterminateProgressStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.initialActivityCount = global::MuGet.Forms.Android.Resource.Attribute.initialActivityCount;
+			global::AiForms.Renderers.Droid.Resource.Attribute.insetForeground = global::MuGet.Forms.Android.Resource.Attribute.insetForeground;
+			global::AiForms.Renderers.Droid.Resource.Attribute.isLightTheme = global::MuGet.Forms.Android.Resource.Attribute.isLightTheme;
+			global::AiForms.Renderers.Droid.Resource.Attribute.itemBackground = global::MuGet.Forms.Android.Resource.Attribute.itemBackground;
+			global::AiForms.Renderers.Droid.Resource.Attribute.itemHorizontalPadding = global::MuGet.Forms.Android.Resource.Attribute.itemHorizontalPadding;
+			global::AiForms.Renderers.Droid.Resource.Attribute.itemHorizontalTranslationEnabled = global::MuGet.Forms.Android.Resource.Attribute.itemHorizontalTranslationEnabled;
+			global::AiForms.Renderers.Droid.Resource.Attribute.itemIconPadding = global::MuGet.Forms.Android.Resource.Attribute.itemIconPadding;
+			global::AiForms.Renderers.Droid.Resource.Attribute.itemIconSize = global::MuGet.Forms.Android.Resource.Attribute.itemIconSize;
+			global::AiForms.Renderers.Droid.Resource.Attribute.itemIconTint = global::MuGet.Forms.Android.Resource.Attribute.itemIconTint;
+			global::AiForms.Renderers.Droid.Resource.Attribute.itemPadding = global::MuGet.Forms.Android.Resource.Attribute.itemPadding;
+			global::AiForms.Renderers.Droid.Resource.Attribute.itemSpacing = global::MuGet.Forms.Android.Resource.Attribute.itemSpacing;
+			global::AiForms.Renderers.Droid.Resource.Attribute.itemTextAppearance = global::MuGet.Forms.Android.Resource.Attribute.itemTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Attribute.itemTextAppearanceActive = global::MuGet.Forms.Android.Resource.Attribute.itemTextAppearanceActive;
+			global::AiForms.Renderers.Droid.Resource.Attribute.itemTextAppearanceInactive = global::MuGet.Forms.Android.Resource.Attribute.itemTextAppearanceInactive;
+			global::AiForms.Renderers.Droid.Resource.Attribute.itemTextColor = global::MuGet.Forms.Android.Resource.Attribute.itemTextColor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.keylines = global::MuGet.Forms.Android.Resource.Attribute.keylines;
+			global::AiForms.Renderers.Droid.Resource.Attribute.labelVisibilityMode = global::MuGet.Forms.Android.Resource.Attribute.labelVisibilityMode;
+			global::AiForms.Renderers.Droid.Resource.Attribute.lastBaselineToBottomHeight = global::MuGet.Forms.Android.Resource.Attribute.lastBaselineToBottomHeight;
+			global::AiForms.Renderers.Droid.Resource.Attribute.layout = global::MuGet.Forms.Android.Resource.Attribute.layout;
+			global::AiForms.Renderers.Droid.Resource.Attribute.layoutManager = global::MuGet.Forms.Android.Resource.Attribute.layoutManager;
+			global::AiForms.Renderers.Droid.Resource.Attribute.layout_anchor = global::MuGet.Forms.Android.Resource.Attribute.layout_anchor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.layout_anchorGravity = global::MuGet.Forms.Android.Resource.Attribute.layout_anchorGravity;
+			global::AiForms.Renderers.Droid.Resource.Attribute.layout_behavior = global::MuGet.Forms.Android.Resource.Attribute.layout_behavior;
+			global::AiForms.Renderers.Droid.Resource.Attribute.layout_collapseMode = global::MuGet.Forms.Android.Resource.Attribute.layout_collapseMode;
+			global::AiForms.Renderers.Droid.Resource.Attribute.layout_collapseParallaxMultiplier = global::MuGet.Forms.Android.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::AiForms.Renderers.Droid.Resource.Attribute.layout_dodgeInsetEdges = global::MuGet.Forms.Android.Resource.Attribute.layout_dodgeInsetEdges;
+			global::AiForms.Renderers.Droid.Resource.Attribute.layout_insetEdge = global::MuGet.Forms.Android.Resource.Attribute.layout_insetEdge;
+			global::AiForms.Renderers.Droid.Resource.Attribute.layout_keyline = global::MuGet.Forms.Android.Resource.Attribute.layout_keyline;
+			global::AiForms.Renderers.Droid.Resource.Attribute.layout_scrollFlags = global::MuGet.Forms.Android.Resource.Attribute.layout_scrollFlags;
+			global::AiForms.Renderers.Droid.Resource.Attribute.layout_scrollInterpolator = global::MuGet.Forms.Android.Resource.Attribute.layout_scrollInterpolator;
+			global::AiForms.Renderers.Droid.Resource.Attribute.liftOnScroll = global::MuGet.Forms.Android.Resource.Attribute.liftOnScroll;
+			global::AiForms.Renderers.Droid.Resource.Attribute.lineHeight = global::MuGet.Forms.Android.Resource.Attribute.lineHeight;
+			global::AiForms.Renderers.Droid.Resource.Attribute.lineSpacing = global::MuGet.Forms.Android.Resource.Attribute.lineSpacing;
+			global::AiForms.Renderers.Droid.Resource.Attribute.listChoiceBackgroundIndicator = global::MuGet.Forms.Android.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::AiForms.Renderers.Droid.Resource.Attribute.listDividerAlertDialog = global::MuGet.Forms.Android.Resource.Attribute.listDividerAlertDialog;
+			global::AiForms.Renderers.Droid.Resource.Attribute.listItemLayout = global::MuGet.Forms.Android.Resource.Attribute.listItemLayout;
+			global::AiForms.Renderers.Droid.Resource.Attribute.listLayout = global::MuGet.Forms.Android.Resource.Attribute.listLayout;
+			global::AiForms.Renderers.Droid.Resource.Attribute.listMenuViewStyle = global::MuGet.Forms.Android.Resource.Attribute.listMenuViewStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.listPopupWindowStyle = global::MuGet.Forms.Android.Resource.Attribute.listPopupWindowStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.listPreferredItemHeight = global::MuGet.Forms.Android.Resource.Attribute.listPreferredItemHeight;
+			global::AiForms.Renderers.Droid.Resource.Attribute.listPreferredItemHeightLarge = global::MuGet.Forms.Android.Resource.Attribute.listPreferredItemHeightLarge;
+			global::AiForms.Renderers.Droid.Resource.Attribute.listPreferredItemHeightSmall = global::MuGet.Forms.Android.Resource.Attribute.listPreferredItemHeightSmall;
+			global::AiForms.Renderers.Droid.Resource.Attribute.listPreferredItemPaddingLeft = global::MuGet.Forms.Android.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::AiForms.Renderers.Droid.Resource.Attribute.listPreferredItemPaddingRight = global::MuGet.Forms.Android.Resource.Attribute.listPreferredItemPaddingRight;
+			global::AiForms.Renderers.Droid.Resource.Attribute.logo = global::MuGet.Forms.Android.Resource.Attribute.logo;
+			global::AiForms.Renderers.Droid.Resource.Attribute.logoDescription = global::MuGet.Forms.Android.Resource.Attribute.logoDescription;
+			global::AiForms.Renderers.Droid.Resource.Attribute.materialButtonStyle = global::MuGet.Forms.Android.Resource.Attribute.materialButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.materialCardViewStyle = global::MuGet.Forms.Android.Resource.Attribute.materialCardViewStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.maxActionInlineWidth = global::MuGet.Forms.Android.Resource.Attribute.maxActionInlineWidth;
+			global::AiForms.Renderers.Droid.Resource.Attribute.maxButtonHeight = global::MuGet.Forms.Android.Resource.Attribute.maxButtonHeight;
+			global::AiForms.Renderers.Droid.Resource.Attribute.maxImageSize = global::MuGet.Forms.Android.Resource.Attribute.maxImageSize;
+			global::AiForms.Renderers.Droid.Resource.Attribute.measureWithLargestChild = global::MuGet.Forms.Android.Resource.Attribute.measureWithLargestChild;
+			global::AiForms.Renderers.Droid.Resource.Attribute.mediaRouteAudioTrackDrawable = global::MuGet.Forms.Android.Resource.Attribute.mediaRouteAudioTrackDrawable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.mediaRouteButtonStyle = global::MuGet.Forms.Android.Resource.Attribute.mediaRouteButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.mediaRouteButtonTint = global::MuGet.Forms.Android.Resource.Attribute.mediaRouteButtonTint;
+			global::AiForms.Renderers.Droid.Resource.Attribute.mediaRouteCloseDrawable = global::MuGet.Forms.Android.Resource.Attribute.mediaRouteCloseDrawable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.mediaRouteControlPanelThemeOverlay = global::MuGet.Forms.Android.Resource.Attribute.mediaRouteControlPanelThemeOverlay;
+			global::AiForms.Renderers.Droid.Resource.Attribute.mediaRouteDefaultIconDrawable = global::MuGet.Forms.Android.Resource.Attribute.mediaRouteDefaultIconDrawable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.mediaRoutePauseDrawable = global::MuGet.Forms.Android.Resource.Attribute.mediaRoutePauseDrawable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.mediaRoutePlayDrawable = global::MuGet.Forms.Android.Resource.Attribute.mediaRoutePlayDrawable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable = global::MuGet.Forms.Android.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.mediaRouteSpeakerIconDrawable = global::MuGet.Forms.Android.Resource.Attribute.mediaRouteSpeakerIconDrawable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.mediaRouteStopDrawable = global::MuGet.Forms.Android.Resource.Attribute.mediaRouteStopDrawable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.mediaRouteTheme = global::MuGet.Forms.Android.Resource.Attribute.mediaRouteTheme;
+			global::AiForms.Renderers.Droid.Resource.Attribute.mediaRouteTvIconDrawable = global::MuGet.Forms.Android.Resource.Attribute.mediaRouteTvIconDrawable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.menu = global::MuGet.Forms.Android.Resource.Attribute.menu;
+			global::AiForms.Renderers.Droid.Resource.Attribute.multiChoiceItemLayout = global::MuGet.Forms.Android.Resource.Attribute.multiChoiceItemLayout;
+			global::AiForms.Renderers.Droid.Resource.Attribute.navigationContentDescription = global::MuGet.Forms.Android.Resource.Attribute.navigationContentDescription;
+			global::AiForms.Renderers.Droid.Resource.Attribute.navigationIcon = global::MuGet.Forms.Android.Resource.Attribute.navigationIcon;
+			global::AiForms.Renderers.Droid.Resource.Attribute.navigationMode = global::MuGet.Forms.Android.Resource.Attribute.navigationMode;
+			global::AiForms.Renderers.Droid.Resource.Attribute.navigationViewStyle = global::MuGet.Forms.Android.Resource.Attribute.navigationViewStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.numericModifiers = global::MuGet.Forms.Android.Resource.Attribute.numericModifiers;
+			global::AiForms.Renderers.Droid.Resource.Attribute.overlapAnchor = global::MuGet.Forms.Android.Resource.Attribute.overlapAnchor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.paddingBottomNoButtons = global::MuGet.Forms.Android.Resource.Attribute.paddingBottomNoButtons;
+			global::AiForms.Renderers.Droid.Resource.Attribute.paddingEnd = global::MuGet.Forms.Android.Resource.Attribute.paddingEnd;
+			global::AiForms.Renderers.Droid.Resource.Attribute.paddingStart = global::MuGet.Forms.Android.Resource.Attribute.paddingStart;
+			global::AiForms.Renderers.Droid.Resource.Attribute.paddingTopNoTitle = global::MuGet.Forms.Android.Resource.Attribute.paddingTopNoTitle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.panelBackground = global::MuGet.Forms.Android.Resource.Attribute.panelBackground;
+			global::AiForms.Renderers.Droid.Resource.Attribute.panelMenuListTheme = global::MuGet.Forms.Android.Resource.Attribute.panelMenuListTheme;
+			global::AiForms.Renderers.Droid.Resource.Attribute.panelMenuListWidth = global::MuGet.Forms.Android.Resource.Attribute.panelMenuListWidth;
+			global::AiForms.Renderers.Droid.Resource.Attribute.passwordToggleContentDescription = global::MuGet.Forms.Android.Resource.Attribute.passwordToggleContentDescription;
+			global::AiForms.Renderers.Droid.Resource.Attribute.passwordToggleDrawable = global::MuGet.Forms.Android.Resource.Attribute.passwordToggleDrawable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.passwordToggleEnabled = global::MuGet.Forms.Android.Resource.Attribute.passwordToggleEnabled;
+			global::AiForms.Renderers.Droid.Resource.Attribute.passwordToggleTint = global::MuGet.Forms.Android.Resource.Attribute.passwordToggleTint;
+			global::AiForms.Renderers.Droid.Resource.Attribute.passwordToggleTintMode = global::MuGet.Forms.Android.Resource.Attribute.passwordToggleTintMode;
+			global::AiForms.Renderers.Droid.Resource.Attribute.popupMenuStyle = global::MuGet.Forms.Android.Resource.Attribute.popupMenuStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.popupTheme = global::MuGet.Forms.Android.Resource.Attribute.popupTheme;
+			global::AiForms.Renderers.Droid.Resource.Attribute.popupWindowStyle = global::MuGet.Forms.Android.Resource.Attribute.popupWindowStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.preserveIconSpacing = global::MuGet.Forms.Android.Resource.Attribute.preserveIconSpacing;
+			global::AiForms.Renderers.Droid.Resource.Attribute.pressedTranslationZ = global::MuGet.Forms.Android.Resource.Attribute.pressedTranslationZ;
+			global::AiForms.Renderers.Droid.Resource.Attribute.progressBarPadding = global::MuGet.Forms.Android.Resource.Attribute.progressBarPadding;
+			global::AiForms.Renderers.Droid.Resource.Attribute.progressBarStyle = global::MuGet.Forms.Android.Resource.Attribute.progressBarStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.queryBackground = global::MuGet.Forms.Android.Resource.Attribute.queryBackground;
+			global::AiForms.Renderers.Droid.Resource.Attribute.queryHint = global::MuGet.Forms.Android.Resource.Attribute.queryHint;
+			global::AiForms.Renderers.Droid.Resource.Attribute.radioButtonStyle = global::MuGet.Forms.Android.Resource.Attribute.radioButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.ratingBarStyle = global::MuGet.Forms.Android.Resource.Attribute.ratingBarStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.ratingBarStyleIndicator = global::MuGet.Forms.Android.Resource.Attribute.ratingBarStyleIndicator;
+			global::AiForms.Renderers.Droid.Resource.Attribute.ratingBarStyleSmall = global::MuGet.Forms.Android.Resource.Attribute.ratingBarStyleSmall;
+			global::AiForms.Renderers.Droid.Resource.Attribute.reverseLayout = global::MuGet.Forms.Android.Resource.Attribute.reverseLayout;
+			global::AiForms.Renderers.Droid.Resource.Attribute.rippleColor = global::MuGet.Forms.Android.Resource.Attribute.rippleColor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.scrimAnimationDuration = global::MuGet.Forms.Android.Resource.Attribute.scrimAnimationDuration;
+			global::AiForms.Renderers.Droid.Resource.Attribute.scrimBackground = global::MuGet.Forms.Android.Resource.Attribute.scrimBackground;
+			global::AiForms.Renderers.Droid.Resource.Attribute.scrimVisibleHeightTrigger = global::MuGet.Forms.Android.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::AiForms.Renderers.Droid.Resource.Attribute.searchHintIcon = global::MuGet.Forms.Android.Resource.Attribute.searchHintIcon;
+			global::AiForms.Renderers.Droid.Resource.Attribute.searchIcon = global::MuGet.Forms.Android.Resource.Attribute.searchIcon;
+			global::AiForms.Renderers.Droid.Resource.Attribute.searchViewStyle = global::MuGet.Forms.Android.Resource.Attribute.searchViewStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.seekBarStyle = global::MuGet.Forms.Android.Resource.Attribute.seekBarStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.selectableItemBackground = global::MuGet.Forms.Android.Resource.Attribute.selectableItemBackground;
+			global::AiForms.Renderers.Droid.Resource.Attribute.selectableItemBackgroundBorderless = global::MuGet.Forms.Android.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::AiForms.Renderers.Droid.Resource.Attribute.showAsAction = global::MuGet.Forms.Android.Resource.Attribute.showAsAction;
+			global::AiForms.Renderers.Droid.Resource.Attribute.showDividers = global::MuGet.Forms.Android.Resource.Attribute.showDividers;
+			global::AiForms.Renderers.Droid.Resource.Attribute.showMotionSpec = global::MuGet.Forms.Android.Resource.Attribute.showMotionSpec;
+			global::AiForms.Renderers.Droid.Resource.Attribute.showText = global::MuGet.Forms.Android.Resource.Attribute.showText;
+			global::AiForms.Renderers.Droid.Resource.Attribute.showTitle = global::MuGet.Forms.Android.Resource.Attribute.showTitle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.singleChoiceItemLayout = global::MuGet.Forms.Android.Resource.Attribute.singleChoiceItemLayout;
+			global::AiForms.Renderers.Droid.Resource.Attribute.singleLine = global::MuGet.Forms.Android.Resource.Attribute.singleLine;
+			global::AiForms.Renderers.Droid.Resource.Attribute.singleSelection = global::MuGet.Forms.Android.Resource.Attribute.singleSelection;
+			global::AiForms.Renderers.Droid.Resource.Attribute.snackbarButtonStyle = global::MuGet.Forms.Android.Resource.Attribute.snackbarButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.snackbarStyle = global::MuGet.Forms.Android.Resource.Attribute.snackbarStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.spanCount = global::MuGet.Forms.Android.Resource.Attribute.spanCount;
+			global::AiForms.Renderers.Droid.Resource.Attribute.spinBars = global::MuGet.Forms.Android.Resource.Attribute.spinBars;
+			global::AiForms.Renderers.Droid.Resource.Attribute.spinnerDropDownItemStyle = global::MuGet.Forms.Android.Resource.Attribute.spinnerDropDownItemStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.spinnerStyle = global::MuGet.Forms.Android.Resource.Attribute.spinnerStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.splitTrack = global::MuGet.Forms.Android.Resource.Attribute.splitTrack;
+			global::AiForms.Renderers.Droid.Resource.Attribute.srcCompat = global::MuGet.Forms.Android.Resource.Attribute.srcCompat;
+			global::AiForms.Renderers.Droid.Resource.Attribute.stackFromEnd = global::MuGet.Forms.Android.Resource.Attribute.stackFromEnd;
+			global::AiForms.Renderers.Droid.Resource.Attribute.state_above_anchor = global::MuGet.Forms.Android.Resource.Attribute.state_above_anchor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.state_collapsed = global::MuGet.Forms.Android.Resource.Attribute.state_collapsed;
+			global::AiForms.Renderers.Droid.Resource.Attribute.state_collapsible = global::MuGet.Forms.Android.Resource.Attribute.state_collapsible;
+			global::AiForms.Renderers.Droid.Resource.Attribute.state_liftable = global::MuGet.Forms.Android.Resource.Attribute.state_liftable;
+			global::AiForms.Renderers.Droid.Resource.Attribute.state_lifted = global::MuGet.Forms.Android.Resource.Attribute.state_lifted;
+			global::AiForms.Renderers.Droid.Resource.Attribute.statusBarBackground = global::MuGet.Forms.Android.Resource.Attribute.statusBarBackground;
+			global::AiForms.Renderers.Droid.Resource.Attribute.statusBarScrim = global::MuGet.Forms.Android.Resource.Attribute.statusBarScrim;
+			global::AiForms.Renderers.Droid.Resource.Attribute.strokeColor = global::MuGet.Forms.Android.Resource.Attribute.strokeColor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.strokeWidth = global::MuGet.Forms.Android.Resource.Attribute.strokeWidth;
+			global::AiForms.Renderers.Droid.Resource.Attribute.subMenuArrow = global::MuGet.Forms.Android.Resource.Attribute.subMenuArrow;
+			global::AiForms.Renderers.Droid.Resource.Attribute.submitBackground = global::MuGet.Forms.Android.Resource.Attribute.submitBackground;
+			global::AiForms.Renderers.Droid.Resource.Attribute.subtitle = global::MuGet.Forms.Android.Resource.Attribute.subtitle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.subtitleTextAppearance = global::MuGet.Forms.Android.Resource.Attribute.subtitleTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Attribute.subtitleTextColor = global::MuGet.Forms.Android.Resource.Attribute.subtitleTextColor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.subtitleTextStyle = global::MuGet.Forms.Android.Resource.Attribute.subtitleTextStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.suggestionRowLayout = global::MuGet.Forms.Android.Resource.Attribute.suggestionRowLayout;
+			global::AiForms.Renderers.Droid.Resource.Attribute.switchMinWidth = global::MuGet.Forms.Android.Resource.Attribute.switchMinWidth;
+			global::AiForms.Renderers.Droid.Resource.Attribute.switchPadding = global::MuGet.Forms.Android.Resource.Attribute.switchPadding;
+			global::AiForms.Renderers.Droid.Resource.Attribute.switchStyle = global::MuGet.Forms.Android.Resource.Attribute.switchStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.switchTextAppearance = global::MuGet.Forms.Android.Resource.Attribute.switchTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabBackground = global::MuGet.Forms.Android.Resource.Attribute.tabBackground;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabContentStart = global::MuGet.Forms.Android.Resource.Attribute.tabContentStart;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabGravity = global::MuGet.Forms.Android.Resource.Attribute.tabGravity;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabIconTint = global::MuGet.Forms.Android.Resource.Attribute.tabIconTint;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabIconTintMode = global::MuGet.Forms.Android.Resource.Attribute.tabIconTintMode;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabIndicator = global::MuGet.Forms.Android.Resource.Attribute.tabIndicator;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabIndicatorAnimationDuration = global::MuGet.Forms.Android.Resource.Attribute.tabIndicatorAnimationDuration;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabIndicatorColor = global::MuGet.Forms.Android.Resource.Attribute.tabIndicatorColor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabIndicatorFullWidth = global::MuGet.Forms.Android.Resource.Attribute.tabIndicatorFullWidth;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabIndicatorGravity = global::MuGet.Forms.Android.Resource.Attribute.tabIndicatorGravity;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabIndicatorHeight = global::MuGet.Forms.Android.Resource.Attribute.tabIndicatorHeight;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabInlineLabel = global::MuGet.Forms.Android.Resource.Attribute.tabInlineLabel;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabMaxWidth = global::MuGet.Forms.Android.Resource.Attribute.tabMaxWidth;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabMinWidth = global::MuGet.Forms.Android.Resource.Attribute.tabMinWidth;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabMode = global::MuGet.Forms.Android.Resource.Attribute.tabMode;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabPadding = global::MuGet.Forms.Android.Resource.Attribute.tabPadding;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabPaddingBottom = global::MuGet.Forms.Android.Resource.Attribute.tabPaddingBottom;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabPaddingEnd = global::MuGet.Forms.Android.Resource.Attribute.tabPaddingEnd;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabPaddingStart = global::MuGet.Forms.Android.Resource.Attribute.tabPaddingStart;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabPaddingTop = global::MuGet.Forms.Android.Resource.Attribute.tabPaddingTop;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabRippleColor = global::MuGet.Forms.Android.Resource.Attribute.tabRippleColor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabSelectedTextColor = global::MuGet.Forms.Android.Resource.Attribute.tabSelectedTextColor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabStyle = global::MuGet.Forms.Android.Resource.Attribute.tabStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabTextAppearance = global::MuGet.Forms.Android.Resource.Attribute.tabTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabTextColor = global::MuGet.Forms.Android.Resource.Attribute.tabTextColor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tabUnboundedRipple = global::MuGet.Forms.Android.Resource.Attribute.tabUnboundedRipple;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textAllCaps = global::MuGet.Forms.Android.Resource.Attribute.textAllCaps;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textAppearanceBody1 = global::MuGet.Forms.Android.Resource.Attribute.textAppearanceBody1;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textAppearanceBody2 = global::MuGet.Forms.Android.Resource.Attribute.textAppearanceBody2;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textAppearanceButton = global::MuGet.Forms.Android.Resource.Attribute.textAppearanceButton;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textAppearanceCaption = global::MuGet.Forms.Android.Resource.Attribute.textAppearanceCaption;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textAppearanceHeadline1 = global::MuGet.Forms.Android.Resource.Attribute.textAppearanceHeadline1;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textAppearanceHeadline2 = global::MuGet.Forms.Android.Resource.Attribute.textAppearanceHeadline2;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textAppearanceHeadline3 = global::MuGet.Forms.Android.Resource.Attribute.textAppearanceHeadline3;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textAppearanceHeadline4 = global::MuGet.Forms.Android.Resource.Attribute.textAppearanceHeadline4;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textAppearanceHeadline5 = global::MuGet.Forms.Android.Resource.Attribute.textAppearanceHeadline5;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textAppearanceHeadline6 = global::MuGet.Forms.Android.Resource.Attribute.textAppearanceHeadline6;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textAppearanceLargePopupMenu = global::MuGet.Forms.Android.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textAppearanceListItem = global::MuGet.Forms.Android.Resource.Attribute.textAppearanceListItem;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textAppearanceListItemSecondary = global::MuGet.Forms.Android.Resource.Attribute.textAppearanceListItemSecondary;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textAppearanceListItemSmall = global::MuGet.Forms.Android.Resource.Attribute.textAppearanceListItemSmall;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textAppearanceOverline = global::MuGet.Forms.Android.Resource.Attribute.textAppearanceOverline;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textAppearancePopupMenuHeader = global::MuGet.Forms.Android.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle = global::MuGet.Forms.Android.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textAppearanceSearchResultTitle = global::MuGet.Forms.Android.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textAppearanceSmallPopupMenu = global::MuGet.Forms.Android.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textAppearanceSubtitle1 = global::MuGet.Forms.Android.Resource.Attribute.textAppearanceSubtitle1;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textAppearanceSubtitle2 = global::MuGet.Forms.Android.Resource.Attribute.textAppearanceSubtitle2;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textColorAlertDialogListItem = global::MuGet.Forms.Android.Resource.Attribute.textColorAlertDialogListItem;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textColorSearchUrl = global::MuGet.Forms.Android.Resource.Attribute.textColorSearchUrl;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textEndPadding = global::MuGet.Forms.Android.Resource.Attribute.textEndPadding;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textInputStyle = global::MuGet.Forms.Android.Resource.Attribute.textInputStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.textStartPadding = global::MuGet.Forms.Android.Resource.Attribute.textStartPadding;
+			global::AiForms.Renderers.Droid.Resource.Attribute.theme = global::MuGet.Forms.Android.Resource.Attribute.theme;
+			global::AiForms.Renderers.Droid.Resource.Attribute.thickness = global::MuGet.Forms.Android.Resource.Attribute.thickness;
+			global::AiForms.Renderers.Droid.Resource.Attribute.thumbTextPadding = global::MuGet.Forms.Android.Resource.Attribute.thumbTextPadding;
+			global::AiForms.Renderers.Droid.Resource.Attribute.thumbTint = global::MuGet.Forms.Android.Resource.Attribute.thumbTint;
+			global::AiForms.Renderers.Droid.Resource.Attribute.thumbTintMode = global::MuGet.Forms.Android.Resource.Attribute.thumbTintMode;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tickMark = global::MuGet.Forms.Android.Resource.Attribute.tickMark;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tickMarkTint = global::MuGet.Forms.Android.Resource.Attribute.tickMarkTint;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tickMarkTintMode = global::MuGet.Forms.Android.Resource.Attribute.tickMarkTintMode;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tint = global::MuGet.Forms.Android.Resource.Attribute.tint;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tintMode = global::MuGet.Forms.Android.Resource.Attribute.tintMode;
+			global::AiForms.Renderers.Droid.Resource.Attribute.title = global::MuGet.Forms.Android.Resource.Attribute.title;
+			global::AiForms.Renderers.Droid.Resource.Attribute.titleEnabled = global::MuGet.Forms.Android.Resource.Attribute.titleEnabled;
+			global::AiForms.Renderers.Droid.Resource.Attribute.titleMargin = global::MuGet.Forms.Android.Resource.Attribute.titleMargin;
+			global::AiForms.Renderers.Droid.Resource.Attribute.titleMarginBottom = global::MuGet.Forms.Android.Resource.Attribute.titleMarginBottom;
+			global::AiForms.Renderers.Droid.Resource.Attribute.titleMarginEnd = global::MuGet.Forms.Android.Resource.Attribute.titleMarginEnd;
+			global::AiForms.Renderers.Droid.Resource.Attribute.titleMarginStart = global::MuGet.Forms.Android.Resource.Attribute.titleMarginStart;
+			global::AiForms.Renderers.Droid.Resource.Attribute.titleMarginTop = global::MuGet.Forms.Android.Resource.Attribute.titleMarginTop;
+			global::AiForms.Renderers.Droid.Resource.Attribute.titleMargins = global::MuGet.Forms.Android.Resource.Attribute.titleMargins;
+			global::AiForms.Renderers.Droid.Resource.Attribute.titleTextAppearance = global::MuGet.Forms.Android.Resource.Attribute.titleTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Attribute.titleTextColor = global::MuGet.Forms.Android.Resource.Attribute.titleTextColor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.titleTextStyle = global::MuGet.Forms.Android.Resource.Attribute.titleTextStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.toolbarId = global::MuGet.Forms.Android.Resource.Attribute.toolbarId;
+			global::AiForms.Renderers.Droid.Resource.Attribute.toolbarNavigationButtonStyle = global::MuGet.Forms.Android.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.toolbarStyle = global::MuGet.Forms.Android.Resource.Attribute.toolbarStyle;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tooltipForegroundColor = global::MuGet.Forms.Android.Resource.Attribute.tooltipForegroundColor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tooltipFrameBackground = global::MuGet.Forms.Android.Resource.Attribute.tooltipFrameBackground;
+			global::AiForms.Renderers.Droid.Resource.Attribute.tooltipText = global::MuGet.Forms.Android.Resource.Attribute.tooltipText;
+			global::AiForms.Renderers.Droid.Resource.Attribute.track = global::MuGet.Forms.Android.Resource.Attribute.track;
+			global::AiForms.Renderers.Droid.Resource.Attribute.trackTint = global::MuGet.Forms.Android.Resource.Attribute.trackTint;
+			global::AiForms.Renderers.Droid.Resource.Attribute.trackTintMode = global::MuGet.Forms.Android.Resource.Attribute.trackTintMode;
+			global::AiForms.Renderers.Droid.Resource.Attribute.ttcIndex = global::MuGet.Forms.Android.Resource.Attribute.ttcIndex;
+			global::AiForms.Renderers.Droid.Resource.Attribute.useCompatPadding = global::MuGet.Forms.Android.Resource.Attribute.useCompatPadding;
+			global::AiForms.Renderers.Droid.Resource.Attribute.viewInflaterClass = global::MuGet.Forms.Android.Resource.Attribute.viewInflaterClass;
+			global::AiForms.Renderers.Droid.Resource.Attribute.voiceIcon = global::MuGet.Forms.Android.Resource.Attribute.voiceIcon;
+			global::AiForms.Renderers.Droid.Resource.Attribute.windowActionBar = global::MuGet.Forms.Android.Resource.Attribute.windowActionBar;
+			global::AiForms.Renderers.Droid.Resource.Attribute.windowActionBarOverlay = global::MuGet.Forms.Android.Resource.Attribute.windowActionBarOverlay;
+			global::AiForms.Renderers.Droid.Resource.Attribute.windowActionModeOverlay = global::MuGet.Forms.Android.Resource.Attribute.windowActionModeOverlay;
+			global::AiForms.Renderers.Droid.Resource.Attribute.windowFixedHeightMajor = global::MuGet.Forms.Android.Resource.Attribute.windowFixedHeightMajor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.windowFixedHeightMinor = global::MuGet.Forms.Android.Resource.Attribute.windowFixedHeightMinor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.windowFixedWidthMajor = global::MuGet.Forms.Android.Resource.Attribute.windowFixedWidthMajor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.windowFixedWidthMinor = global::MuGet.Forms.Android.Resource.Attribute.windowFixedWidthMinor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.windowMinWidthMajor = global::MuGet.Forms.Android.Resource.Attribute.windowMinWidthMajor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.windowMinWidthMinor = global::MuGet.Forms.Android.Resource.Attribute.windowMinWidthMinor;
+			global::AiForms.Renderers.Droid.Resource.Attribute.windowNoTitle = global::MuGet.Forms.Android.Resource.Attribute.windowNoTitle;
+			global::AiForms.Renderers.Droid.Resource.Boolean.abc_action_bar_embed_tabs = global::MuGet.Forms.Android.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::AiForms.Renderers.Droid.Resource.Boolean.abc_allow_stacked_button_bar = global::MuGet.Forms.Android.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::AiForms.Renderers.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::MuGet.Forms.Android.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::AiForms.Renderers.Droid.Resource.Boolean.mtrl_btn_textappearance_all_caps = global::MuGet.Forms.Android.Resource.Boolean.mtrl_btn_textappearance_all_caps;
+			global::AiForms.Renderers.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark = global::MuGet.Forms.Android.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.abc_background_cache_hint_selector_material_light = global::MuGet.Forms.Android.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.abc_btn_colored_borderless_text_material = global::MuGet.Forms.Android.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::AiForms.Renderers.Droid.Resource.Color.abc_btn_colored_text_material = global::MuGet.Forms.Android.Resource.Color.abc_btn_colored_text_material;
+			global::AiForms.Renderers.Droid.Resource.Color.abc_color_highlight_material = global::MuGet.Forms.Android.Resource.Color.abc_color_highlight_material;
+			global::AiForms.Renderers.Droid.Resource.Color.abc_hint_foreground_material_dark = global::MuGet.Forms.Android.Resource.Color.abc_hint_foreground_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.abc_hint_foreground_material_light = global::MuGet.Forms.Android.Resource.Color.abc_hint_foreground_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.abc_input_method_navigation_guard = global::MuGet.Forms.Android.Resource.Color.abc_input_method_navigation_guard;
+			global::AiForms.Renderers.Droid.Resource.Color.abc_primary_text_disable_only_material_dark = global::MuGet.Forms.Android.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.abc_primary_text_disable_only_material_light = global::MuGet.Forms.Android.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.abc_primary_text_material_dark = global::MuGet.Forms.Android.Resource.Color.abc_primary_text_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.abc_primary_text_material_light = global::MuGet.Forms.Android.Resource.Color.abc_primary_text_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.abc_search_url_text = global::MuGet.Forms.Android.Resource.Color.abc_search_url_text;
+			global::AiForms.Renderers.Droid.Resource.Color.abc_search_url_text_normal = global::MuGet.Forms.Android.Resource.Color.abc_search_url_text_normal;
+			global::AiForms.Renderers.Droid.Resource.Color.abc_search_url_text_pressed = global::MuGet.Forms.Android.Resource.Color.abc_search_url_text_pressed;
+			global::AiForms.Renderers.Droid.Resource.Color.abc_search_url_text_selected = global::MuGet.Forms.Android.Resource.Color.abc_search_url_text_selected;
+			global::AiForms.Renderers.Droid.Resource.Color.abc_secondary_text_material_dark = global::MuGet.Forms.Android.Resource.Color.abc_secondary_text_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.abc_secondary_text_material_light = global::MuGet.Forms.Android.Resource.Color.abc_secondary_text_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.abc_tint_btn_checkable = global::MuGet.Forms.Android.Resource.Color.abc_tint_btn_checkable;
+			global::AiForms.Renderers.Droid.Resource.Color.abc_tint_default = global::MuGet.Forms.Android.Resource.Color.abc_tint_default;
+			global::AiForms.Renderers.Droid.Resource.Color.abc_tint_edittext = global::MuGet.Forms.Android.Resource.Color.abc_tint_edittext;
+			global::AiForms.Renderers.Droid.Resource.Color.abc_tint_seek_thumb = global::MuGet.Forms.Android.Resource.Color.abc_tint_seek_thumb;
+			global::AiForms.Renderers.Droid.Resource.Color.abc_tint_spinner = global::MuGet.Forms.Android.Resource.Color.abc_tint_spinner;
+			global::AiForms.Renderers.Droid.Resource.Color.abc_tint_switch_track = global::MuGet.Forms.Android.Resource.Color.abc_tint_switch_track;
+			global::AiForms.Renderers.Droid.Resource.Color.accent_material_dark = global::MuGet.Forms.Android.Resource.Color.accent_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.accent_material_light = global::MuGet.Forms.Android.Resource.Color.accent_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.background_floating_material_dark = global::MuGet.Forms.Android.Resource.Color.background_floating_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.background_floating_material_light = global::MuGet.Forms.Android.Resource.Color.background_floating_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.background_material_dark = global::MuGet.Forms.Android.Resource.Color.background_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.background_material_light = global::MuGet.Forms.Android.Resource.Color.background_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.bright_foreground_disabled_material_dark = global::MuGet.Forms.Android.Resource.Color.bright_foreground_disabled_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.bright_foreground_disabled_material_light = global::MuGet.Forms.Android.Resource.Color.bright_foreground_disabled_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.bright_foreground_inverse_material_dark = global::MuGet.Forms.Android.Resource.Color.bright_foreground_inverse_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.bright_foreground_inverse_material_light = global::MuGet.Forms.Android.Resource.Color.bright_foreground_inverse_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.bright_foreground_material_dark = global::MuGet.Forms.Android.Resource.Color.bright_foreground_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.bright_foreground_material_light = global::MuGet.Forms.Android.Resource.Color.bright_foreground_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.browser_actions_bg_grey = global::MuGet.Forms.Android.Resource.Color.browser_actions_bg_grey;
+			global::AiForms.Renderers.Droid.Resource.Color.browser_actions_divider_color = global::MuGet.Forms.Android.Resource.Color.browser_actions_divider_color;
+			global::AiForms.Renderers.Droid.Resource.Color.browser_actions_text_color = global::MuGet.Forms.Android.Resource.Color.browser_actions_text_color;
+			global::AiForms.Renderers.Droid.Resource.Color.browser_actions_title_color = global::MuGet.Forms.Android.Resource.Color.browser_actions_title_color;
+			global::AiForms.Renderers.Droid.Resource.Color.button_material_dark = global::MuGet.Forms.Android.Resource.Color.button_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.button_material_light = global::MuGet.Forms.Android.Resource.Color.button_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.cardview_dark_background = global::MuGet.Forms.Android.Resource.Color.cardview_dark_background;
+			global::AiForms.Renderers.Droid.Resource.Color.cardview_light_background = global::MuGet.Forms.Android.Resource.Color.cardview_light_background;
+			global::AiForms.Renderers.Droid.Resource.Color.cardview_shadow_end_color = global::MuGet.Forms.Android.Resource.Color.cardview_shadow_end_color;
+			global::AiForms.Renderers.Droid.Resource.Color.cardview_shadow_start_color = global::MuGet.Forms.Android.Resource.Color.cardview_shadow_start_color;
+			global::AiForms.Renderers.Droid.Resource.Color.design_bottom_navigation_shadow_color = global::MuGet.Forms.Android.Resource.Color.design_bottom_navigation_shadow_color;
+			global::AiForms.Renderers.Droid.Resource.Color.design_default_color_primary = global::MuGet.Forms.Android.Resource.Color.design_default_color_primary;
+			global::AiForms.Renderers.Droid.Resource.Color.design_default_color_primary_dark = global::MuGet.Forms.Android.Resource.Color.design_default_color_primary_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.design_error = global::MuGet.Forms.Android.Resource.Color.design_error;
+			global::AiForms.Renderers.Droid.Resource.Color.design_fab_shadow_end_color = global::MuGet.Forms.Android.Resource.Color.design_fab_shadow_end_color;
+			global::AiForms.Renderers.Droid.Resource.Color.design_fab_shadow_mid_color = global::MuGet.Forms.Android.Resource.Color.design_fab_shadow_mid_color;
+			global::AiForms.Renderers.Droid.Resource.Color.design_fab_shadow_start_color = global::MuGet.Forms.Android.Resource.Color.design_fab_shadow_start_color;
+			global::AiForms.Renderers.Droid.Resource.Color.design_fab_stroke_end_inner_color = global::MuGet.Forms.Android.Resource.Color.design_fab_stroke_end_inner_color;
+			global::AiForms.Renderers.Droid.Resource.Color.design_fab_stroke_end_outer_color = global::MuGet.Forms.Android.Resource.Color.design_fab_stroke_end_outer_color;
+			global::AiForms.Renderers.Droid.Resource.Color.design_fab_stroke_top_inner_color = global::MuGet.Forms.Android.Resource.Color.design_fab_stroke_top_inner_color;
+			global::AiForms.Renderers.Droid.Resource.Color.design_fab_stroke_top_outer_color = global::MuGet.Forms.Android.Resource.Color.design_fab_stroke_top_outer_color;
+			global::AiForms.Renderers.Droid.Resource.Color.design_snackbar_background_color = global::MuGet.Forms.Android.Resource.Color.design_snackbar_background_color;
+			global::AiForms.Renderers.Droid.Resource.Color.design_tint_password_toggle = global::MuGet.Forms.Android.Resource.Color.design_tint_password_toggle;
+			global::AiForms.Renderers.Droid.Resource.Color.dim_foreground_disabled_material_dark = global::MuGet.Forms.Android.Resource.Color.dim_foreground_disabled_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.dim_foreground_disabled_material_light = global::MuGet.Forms.Android.Resource.Color.dim_foreground_disabled_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.dim_foreground_material_dark = global::MuGet.Forms.Android.Resource.Color.dim_foreground_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.dim_foreground_material_light = global::MuGet.Forms.Android.Resource.Color.dim_foreground_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.error_color_material_dark = global::MuGet.Forms.Android.Resource.Color.error_color_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.error_color_material_light = global::MuGet.Forms.Android.Resource.Color.error_color_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.foreground_material_dark = global::MuGet.Forms.Android.Resource.Color.foreground_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.foreground_material_light = global::MuGet.Forms.Android.Resource.Color.foreground_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.highlighted_text_material_dark = global::MuGet.Forms.Android.Resource.Color.highlighted_text_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.highlighted_text_material_light = global::MuGet.Forms.Android.Resource.Color.highlighted_text_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.material_blue_grey_800 = global::MuGet.Forms.Android.Resource.Color.material_blue_grey_800;
+			global::AiForms.Renderers.Droid.Resource.Color.material_blue_grey_900 = global::MuGet.Forms.Android.Resource.Color.material_blue_grey_900;
+			global::AiForms.Renderers.Droid.Resource.Color.material_blue_grey_950 = global::MuGet.Forms.Android.Resource.Color.material_blue_grey_950;
+			global::AiForms.Renderers.Droid.Resource.Color.material_deep_teal_200 = global::MuGet.Forms.Android.Resource.Color.material_deep_teal_200;
+			global::AiForms.Renderers.Droid.Resource.Color.material_deep_teal_500 = global::MuGet.Forms.Android.Resource.Color.material_deep_teal_500;
+			global::AiForms.Renderers.Droid.Resource.Color.material_grey_100 = global::MuGet.Forms.Android.Resource.Color.material_grey_100;
+			global::AiForms.Renderers.Droid.Resource.Color.material_grey_300 = global::MuGet.Forms.Android.Resource.Color.material_grey_300;
+			global::AiForms.Renderers.Droid.Resource.Color.material_grey_50 = global::MuGet.Forms.Android.Resource.Color.material_grey_50;
+			global::AiForms.Renderers.Droid.Resource.Color.material_grey_600 = global::MuGet.Forms.Android.Resource.Color.material_grey_600;
+			global::AiForms.Renderers.Droid.Resource.Color.material_grey_800 = global::MuGet.Forms.Android.Resource.Color.material_grey_800;
+			global::AiForms.Renderers.Droid.Resource.Color.material_grey_850 = global::MuGet.Forms.Android.Resource.Color.material_grey_850;
+			global::AiForms.Renderers.Droid.Resource.Color.material_grey_900 = global::MuGet.Forms.Android.Resource.Color.material_grey_900;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_bottom_nav_colored_item_tint = global::MuGet.Forms.Android.Resource.Color.mtrl_bottom_nav_colored_item_tint;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_bottom_nav_item_tint = global::MuGet.Forms.Android.Resource.Color.mtrl_bottom_nav_item_tint;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_btn_bg_color_disabled = global::MuGet.Forms.Android.Resource.Color.mtrl_btn_bg_color_disabled;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_btn_bg_color_selector = global::MuGet.Forms.Android.Resource.Color.mtrl_btn_bg_color_selector;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_btn_ripple_color = global::MuGet.Forms.Android.Resource.Color.mtrl_btn_ripple_color;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_btn_stroke_color_selector = global::MuGet.Forms.Android.Resource.Color.mtrl_btn_stroke_color_selector;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_btn_text_btn_ripple_color = global::MuGet.Forms.Android.Resource.Color.mtrl_btn_text_btn_ripple_color;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_btn_text_color_disabled = global::MuGet.Forms.Android.Resource.Color.mtrl_btn_text_color_disabled;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_btn_text_color_selector = global::MuGet.Forms.Android.Resource.Color.mtrl_btn_text_color_selector;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_btn_transparent_bg_color = global::MuGet.Forms.Android.Resource.Color.mtrl_btn_transparent_bg_color;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_chip_background_color = global::MuGet.Forms.Android.Resource.Color.mtrl_chip_background_color;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_chip_close_icon_tint = global::MuGet.Forms.Android.Resource.Color.mtrl_chip_close_icon_tint;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_chip_ripple_color = global::MuGet.Forms.Android.Resource.Color.mtrl_chip_ripple_color;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_chip_text_color = global::MuGet.Forms.Android.Resource.Color.mtrl_chip_text_color;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_fab_ripple_color = global::MuGet.Forms.Android.Resource.Color.mtrl_fab_ripple_color;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_scrim_color = global::MuGet.Forms.Android.Resource.Color.mtrl_scrim_color;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_tabs_colored_ripple_color = global::MuGet.Forms.Android.Resource.Color.mtrl_tabs_colored_ripple_color;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_tabs_icon_color_selector = global::MuGet.Forms.Android.Resource.Color.mtrl_tabs_icon_color_selector;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_tabs_icon_color_selector_colored = global::MuGet.Forms.Android.Resource.Color.mtrl_tabs_icon_color_selector_colored;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_tabs_legacy_text_color_selector = global::MuGet.Forms.Android.Resource.Color.mtrl_tabs_legacy_text_color_selector;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_tabs_ripple_color = global::MuGet.Forms.Android.Resource.Color.mtrl_tabs_ripple_color;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_text_btn_text_color_selector = global::MuGet.Forms.Android.Resource.Color.mtrl_text_btn_text_color_selector;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_textinput_default_box_stroke_color = global::MuGet.Forms.Android.Resource.Color.mtrl_textinput_default_box_stroke_color;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_textinput_disabled_color = global::MuGet.Forms.Android.Resource.Color.mtrl_textinput_disabled_color;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_textinput_filled_box_default_background_color = global::MuGet.Forms.Android.Resource.Color.mtrl_textinput_filled_box_default_background_color;
+			global::AiForms.Renderers.Droid.Resource.Color.mtrl_textinput_hovered_box_stroke_color = global::MuGet.Forms.Android.Resource.Color.mtrl_textinput_hovered_box_stroke_color;
+			global::AiForms.Renderers.Droid.Resource.Color.notification_action_color_filter = global::MuGet.Forms.Android.Resource.Color.notification_action_color_filter;
+			global::AiForms.Renderers.Droid.Resource.Color.notification_icon_bg_color = global::MuGet.Forms.Android.Resource.Color.notification_icon_bg_color;
+			global::AiForms.Renderers.Droid.Resource.Color.notification_material_background_media_default_color = global::MuGet.Forms.Android.Resource.Color.notification_material_background_media_default_color;
+			global::AiForms.Renderers.Droid.Resource.Color.primary_dark_material_dark = global::MuGet.Forms.Android.Resource.Color.primary_dark_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.primary_dark_material_light = global::MuGet.Forms.Android.Resource.Color.primary_dark_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.primary_material_dark = global::MuGet.Forms.Android.Resource.Color.primary_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.primary_material_light = global::MuGet.Forms.Android.Resource.Color.primary_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.primary_text_default_material_dark = global::MuGet.Forms.Android.Resource.Color.primary_text_default_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.primary_text_default_material_light = global::MuGet.Forms.Android.Resource.Color.primary_text_default_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.primary_text_disabled_material_dark = global::MuGet.Forms.Android.Resource.Color.primary_text_disabled_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.primary_text_disabled_material_light = global::MuGet.Forms.Android.Resource.Color.primary_text_disabled_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.ripple_material_dark = global::MuGet.Forms.Android.Resource.Color.ripple_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.ripple_material_light = global::MuGet.Forms.Android.Resource.Color.ripple_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.secondary_text_default_material_dark = global::MuGet.Forms.Android.Resource.Color.secondary_text_default_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.secondary_text_default_material_light = global::MuGet.Forms.Android.Resource.Color.secondary_text_default_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.secondary_text_disabled_material_dark = global::MuGet.Forms.Android.Resource.Color.secondary_text_disabled_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.secondary_text_disabled_material_light = global::MuGet.Forms.Android.Resource.Color.secondary_text_disabled_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.switch_thumb_disabled_material_dark = global::MuGet.Forms.Android.Resource.Color.switch_thumb_disabled_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.switch_thumb_disabled_material_light = global::MuGet.Forms.Android.Resource.Color.switch_thumb_disabled_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.switch_thumb_material_dark = global::MuGet.Forms.Android.Resource.Color.switch_thumb_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.switch_thumb_material_light = global::MuGet.Forms.Android.Resource.Color.switch_thumb_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.switch_thumb_normal_material_dark = global::MuGet.Forms.Android.Resource.Color.switch_thumb_normal_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.switch_thumb_normal_material_light = global::MuGet.Forms.Android.Resource.Color.switch_thumb_normal_material_light;
+			global::AiForms.Renderers.Droid.Resource.Color.tooltip_background_dark = global::MuGet.Forms.Android.Resource.Color.tooltip_background_dark;
+			global::AiForms.Renderers.Droid.Resource.Color.tooltip_background_light = global::MuGet.Forms.Android.Resource.Color.tooltip_background_light;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_action_bar_content_inset_material = global::MuGet.Forms.Android.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::MuGet.Forms.Android.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_action_bar_default_height_material = global::MuGet.Forms.Android.Resource.Dimension.abc_action_bar_default_height_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material = global::MuGet.Forms.Android.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material = global::MuGet.Forms.Android.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_action_bar_elevation_material = global::MuGet.Forms.Android.Resource.Dimension.abc_action_bar_elevation_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::MuGet.Forms.Android.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::MuGet.Forms.Android.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::MuGet.Forms.Android.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_action_bar_stacked_max_height = global::MuGet.Forms.Android.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::MuGet.Forms.Android.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::MuGet.Forms.Android.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::MuGet.Forms.Android.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_action_button_min_height_material = global::MuGet.Forms.Android.Resource.Dimension.abc_action_button_min_height_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_action_button_min_width_material = global::MuGet.Forms.Android.Resource.Dimension.abc_action_button_min_width_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material = global::MuGet.Forms.Android.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height = global::MuGet.Forms.Android.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_alert_dialog_button_dimen = global::MuGet.Forms.Android.Resource.Dimension.abc_alert_dialog_button_dimen;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_button_inset_horizontal_material = global::MuGet.Forms.Android.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_button_inset_vertical_material = global::MuGet.Forms.Android.Resource.Dimension.abc_button_inset_vertical_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_button_padding_horizontal_material = global::MuGet.Forms.Android.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_button_padding_vertical_material = global::MuGet.Forms.Android.Resource.Dimension.abc_button_padding_vertical_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::MuGet.Forms.Android.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_config_prefDialogWidth = global::MuGet.Forms.Android.Resource.Dimension.abc_config_prefDialogWidth;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_control_corner_material = global::MuGet.Forms.Android.Resource.Dimension.abc_control_corner_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_control_inset_material = global::MuGet.Forms.Android.Resource.Dimension.abc_control_inset_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_control_padding_material = global::MuGet.Forms.Android.Resource.Dimension.abc_control_padding_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_dialog_corner_radius_material = global::MuGet.Forms.Android.Resource.Dimension.abc_dialog_corner_radius_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_dialog_fixed_height_major = global::MuGet.Forms.Android.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_dialog_fixed_height_minor = global::MuGet.Forms.Android.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_dialog_fixed_width_major = global::MuGet.Forms.Android.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_dialog_fixed_width_minor = global::MuGet.Forms.Android.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::MuGet.Forms.Android.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::MuGet.Forms.Android.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_dialog_min_width_major = global::MuGet.Forms.Android.Resource.Dimension.abc_dialog_min_width_major;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_dialog_min_width_minor = global::MuGet.Forms.Android.Resource.Dimension.abc_dialog_min_width_minor;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_dialog_padding_material = global::MuGet.Forms.Android.Resource.Dimension.abc_dialog_padding_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_dialog_padding_top_material = global::MuGet.Forms.Android.Resource.Dimension.abc_dialog_padding_top_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_dialog_title_divider_material = global::MuGet.Forms.Android.Resource.Dimension.abc_dialog_title_divider_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_disabled_alpha_material_dark = global::MuGet.Forms.Android.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_disabled_alpha_material_light = global::MuGet.Forms.Android.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_dropdownitem_icon_width = global::MuGet.Forms.Android.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left = global::MuGet.Forms.Android.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right = global::MuGet.Forms.Android.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material = global::MuGet.Forms.Android.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::MuGet.Forms.Android.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_edit_text_inset_top_material = global::MuGet.Forms.Android.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_floating_window_z = global::MuGet.Forms.Android.Resource.Dimension.abc_floating_window_z;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material = global::MuGet.Forms.Android.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_panel_menu_list_width = global::MuGet.Forms.Android.Resource.Dimension.abc_panel_menu_list_width;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_progress_bar_height_material = global::MuGet.Forms.Android.Resource.Dimension.abc_progress_bar_height_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_search_view_preferred_height = global::MuGet.Forms.Android.Resource.Dimension.abc_search_view_preferred_height;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_search_view_preferred_width = global::MuGet.Forms.Android.Resource.Dimension.abc_search_view_preferred_width;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_seekbar_track_background_height_material = global::MuGet.Forms.Android.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material = global::MuGet.Forms.Android.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_select_dialog_padding_start_material = global::MuGet.Forms.Android.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_switch_padding = global::MuGet.Forms.Android.Resource.Dimension.abc_switch_padding;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_text_size_body_1_material = global::MuGet.Forms.Android.Resource.Dimension.abc_text_size_body_1_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_text_size_body_2_material = global::MuGet.Forms.Android.Resource.Dimension.abc_text_size_body_2_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_text_size_button_material = global::MuGet.Forms.Android.Resource.Dimension.abc_text_size_button_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_text_size_caption_material = global::MuGet.Forms.Android.Resource.Dimension.abc_text_size_caption_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_text_size_display_1_material = global::MuGet.Forms.Android.Resource.Dimension.abc_text_size_display_1_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_text_size_display_2_material = global::MuGet.Forms.Android.Resource.Dimension.abc_text_size_display_2_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_text_size_display_3_material = global::MuGet.Forms.Android.Resource.Dimension.abc_text_size_display_3_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_text_size_display_4_material = global::MuGet.Forms.Android.Resource.Dimension.abc_text_size_display_4_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_text_size_headline_material = global::MuGet.Forms.Android.Resource.Dimension.abc_text_size_headline_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_text_size_large_material = global::MuGet.Forms.Android.Resource.Dimension.abc_text_size_large_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_text_size_medium_material = global::MuGet.Forms.Android.Resource.Dimension.abc_text_size_medium_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_text_size_menu_header_material = global::MuGet.Forms.Android.Resource.Dimension.abc_text_size_menu_header_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_text_size_menu_material = global::MuGet.Forms.Android.Resource.Dimension.abc_text_size_menu_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_text_size_small_material = global::MuGet.Forms.Android.Resource.Dimension.abc_text_size_small_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_text_size_subhead_material = global::MuGet.Forms.Android.Resource.Dimension.abc_text_size_subhead_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::MuGet.Forms.Android.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_text_size_title_material = global::MuGet.Forms.Android.Resource.Dimension.abc_text_size_title_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.abc_text_size_title_material_toolbar = global::MuGet.Forms.Android.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::AiForms.Renderers.Droid.Resource.Dimension.browser_actions_context_menu_max_width = global::MuGet.Forms.Android.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::AiForms.Renderers.Droid.Resource.Dimension.browser_actions_context_menu_min_padding = global::MuGet.Forms.Android.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::AiForms.Renderers.Droid.Resource.Dimension.cardview_compat_inset_shadow = global::MuGet.Forms.Android.Resource.Dimension.cardview_compat_inset_shadow;
+			global::AiForms.Renderers.Droid.Resource.Dimension.cardview_default_elevation = global::MuGet.Forms.Android.Resource.Dimension.cardview_default_elevation;
+			global::AiForms.Renderers.Droid.Resource.Dimension.cardview_default_radius = global::MuGet.Forms.Android.Resource.Dimension.cardview_default_radius;
+			global::AiForms.Renderers.Droid.Resource.Dimension.compat_button_inset_horizontal_material = global::MuGet.Forms.Android.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.compat_button_inset_vertical_material = global::MuGet.Forms.Android.Resource.Dimension.compat_button_inset_vertical_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.compat_button_padding_horizontal_material = global::MuGet.Forms.Android.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.compat_button_padding_vertical_material = global::MuGet.Forms.Android.Resource.Dimension.compat_button_padding_vertical_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.compat_control_corner_material = global::MuGet.Forms.Android.Resource.Dimension.compat_control_corner_material;
+			global::AiForms.Renderers.Droid.Resource.Dimension.compat_notification_large_icon_max_height = global::MuGet.Forms.Android.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::AiForms.Renderers.Droid.Resource.Dimension.compat_notification_large_icon_max_width = global::MuGet.Forms.Android.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_appbar_elevation = global::MuGet.Forms.Android.Resource.Dimension.design_appbar_elevation;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::MuGet.Forms.Android.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_bottom_navigation_active_item_min_width = global::MuGet.Forms.Android.Resource.Dimension.design_bottom_navigation_active_item_min_width;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_bottom_navigation_active_text_size = global::MuGet.Forms.Android.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_bottom_navigation_elevation = global::MuGet.Forms.Android.Resource.Dimension.design_bottom_navigation_elevation;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_bottom_navigation_height = global::MuGet.Forms.Android.Resource.Dimension.design_bottom_navigation_height;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_bottom_navigation_icon_size = global::MuGet.Forms.Android.Resource.Dimension.design_bottom_navigation_icon_size;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_bottom_navigation_item_max_width = global::MuGet.Forms.Android.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_bottom_navigation_item_min_width = global::MuGet.Forms.Android.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_bottom_navigation_margin = global::MuGet.Forms.Android.Resource.Dimension.design_bottom_navigation_margin;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_bottom_navigation_shadow_height = global::MuGet.Forms.Android.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_bottom_navigation_text_size = global::MuGet.Forms.Android.Resource.Dimension.design_bottom_navigation_text_size;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation = global::MuGet.Forms.Android.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min = global::MuGet.Forms.Android.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_fab_border_width = global::MuGet.Forms.Android.Resource.Dimension.design_fab_border_width;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_fab_elevation = global::MuGet.Forms.Android.Resource.Dimension.design_fab_elevation;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_fab_image_size = global::MuGet.Forms.Android.Resource.Dimension.design_fab_image_size;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_fab_size_mini = global::MuGet.Forms.Android.Resource.Dimension.design_fab_size_mini;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_fab_size_normal = global::MuGet.Forms.Android.Resource.Dimension.design_fab_size_normal;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_fab_translation_z_hovered_focused = global::MuGet.Forms.Android.Resource.Dimension.design_fab_translation_z_hovered_focused;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_fab_translation_z_pressed = global::MuGet.Forms.Android.Resource.Dimension.design_fab_translation_z_pressed;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_navigation_elevation = global::MuGet.Forms.Android.Resource.Dimension.design_navigation_elevation;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_navigation_icon_padding = global::MuGet.Forms.Android.Resource.Dimension.design_navigation_icon_padding;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_navigation_icon_size = global::MuGet.Forms.Android.Resource.Dimension.design_navigation_icon_size;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_navigation_item_horizontal_padding = global::MuGet.Forms.Android.Resource.Dimension.design_navigation_item_horizontal_padding;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_navigation_item_icon_padding = global::MuGet.Forms.Android.Resource.Dimension.design_navigation_item_icon_padding;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_navigation_max_width = global::MuGet.Forms.Android.Resource.Dimension.design_navigation_max_width;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_navigation_padding_bottom = global::MuGet.Forms.Android.Resource.Dimension.design_navigation_padding_bottom;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_navigation_separator_vertical_padding = global::MuGet.Forms.Android.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_snackbar_action_inline_max_width = global::MuGet.Forms.Android.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_snackbar_background_corner_radius = global::MuGet.Forms.Android.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_snackbar_elevation = global::MuGet.Forms.Android.Resource.Dimension.design_snackbar_elevation;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::MuGet.Forms.Android.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_snackbar_max_width = global::MuGet.Forms.Android.Resource.Dimension.design_snackbar_max_width;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_snackbar_min_width = global::MuGet.Forms.Android.Resource.Dimension.design_snackbar_min_width;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_snackbar_padding_horizontal = global::MuGet.Forms.Android.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_snackbar_padding_vertical = global::MuGet.Forms.Android.Resource.Dimension.design_snackbar_padding_vertical;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::MuGet.Forms.Android.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_snackbar_text_size = global::MuGet.Forms.Android.Resource.Dimension.design_snackbar_text_size;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_tab_max_width = global::MuGet.Forms.Android.Resource.Dimension.design_tab_max_width;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_tab_scrollable_min_width = global::MuGet.Forms.Android.Resource.Dimension.design_tab_scrollable_min_width;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_tab_text_size = global::MuGet.Forms.Android.Resource.Dimension.design_tab_text_size;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_tab_text_size_2line = global::MuGet.Forms.Android.Resource.Dimension.design_tab_text_size_2line;
+			global::AiForms.Renderers.Droid.Resource.Dimension.design_textinput_caption_translate_y = global::MuGet.Forms.Android.Resource.Dimension.design_textinput_caption_translate_y;
+			global::AiForms.Renderers.Droid.Resource.Dimension.disabled_alpha_material_dark = global::MuGet.Forms.Android.Resource.Dimension.disabled_alpha_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Dimension.disabled_alpha_material_light = global::MuGet.Forms.Android.Resource.Dimension.disabled_alpha_material_light;
+			global::AiForms.Renderers.Droid.Resource.Dimension.fastscroll_default_thickness = global::MuGet.Forms.Android.Resource.Dimension.fastscroll_default_thickness;
+			global::AiForms.Renderers.Droid.Resource.Dimension.fastscroll_margin = global::MuGet.Forms.Android.Resource.Dimension.fastscroll_margin;
+			global::AiForms.Renderers.Droid.Resource.Dimension.fastscroll_minimum_range = global::MuGet.Forms.Android.Resource.Dimension.fastscroll_minimum_range;
+			global::AiForms.Renderers.Droid.Resource.Dimension.highlight_alpha_material_colored = global::MuGet.Forms.Android.Resource.Dimension.highlight_alpha_material_colored;
+			global::AiForms.Renderers.Droid.Resource.Dimension.highlight_alpha_material_dark = global::MuGet.Forms.Android.Resource.Dimension.highlight_alpha_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Dimension.highlight_alpha_material_light = global::MuGet.Forms.Android.Resource.Dimension.highlight_alpha_material_light;
+			global::AiForms.Renderers.Droid.Resource.Dimension.hint_alpha_material_dark = global::MuGet.Forms.Android.Resource.Dimension.hint_alpha_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Dimension.hint_alpha_material_light = global::MuGet.Forms.Android.Resource.Dimension.hint_alpha_material_light;
+			global::AiForms.Renderers.Droid.Resource.Dimension.hint_pressed_alpha_material_dark = global::MuGet.Forms.Android.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::AiForms.Renderers.Droid.Resource.Dimension.hint_pressed_alpha_material_light = global::MuGet.Forms.Android.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::AiForms.Renderers.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::MuGet.Forms.Android.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::AiForms.Renderers.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::MuGet.Forms.Android.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::AiForms.Renderers.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::MuGet.Forms.Android.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mr_controller_volume_group_list_item_height = global::MuGet.Forms.Android.Resource.Dimension.mr_controller_volume_group_list_item_height;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mr_controller_volume_group_list_item_icon_size = global::MuGet.Forms.Android.Resource.Dimension.mr_controller_volume_group_list_item_icon_size;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mr_controller_volume_group_list_max_height = global::MuGet.Forms.Android.Resource.Dimension.mr_controller_volume_group_list_max_height;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mr_controller_volume_group_list_padding_top = global::MuGet.Forms.Android.Resource.Dimension.mr_controller_volume_group_list_padding_top;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mr_dialog_fixed_width_major = global::MuGet.Forms.Android.Resource.Dimension.mr_dialog_fixed_width_major;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mr_dialog_fixed_width_minor = global::MuGet.Forms.Android.Resource.Dimension.mr_dialog_fixed_width_minor;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode = global::MuGet.Forms.Android.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin = global::MuGet.Forms.Android.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius = global::MuGet.Forms.Android.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset = global::MuGet.Forms.Android.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_bottomappbar_height = global::MuGet.Forms.Android.Resource.Dimension.mtrl_bottomappbar_height;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_btn_corner_radius = global::MuGet.Forms.Android.Resource.Dimension.mtrl_btn_corner_radius;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_btn_dialog_btn_min_width = global::MuGet.Forms.Android.Resource.Dimension.mtrl_btn_dialog_btn_min_width;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_btn_disabled_elevation = global::MuGet.Forms.Android.Resource.Dimension.mtrl_btn_disabled_elevation;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_btn_disabled_z = global::MuGet.Forms.Android.Resource.Dimension.mtrl_btn_disabled_z;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_btn_elevation = global::MuGet.Forms.Android.Resource.Dimension.mtrl_btn_elevation;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_btn_focused_z = global::MuGet.Forms.Android.Resource.Dimension.mtrl_btn_focused_z;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_btn_hovered_z = global::MuGet.Forms.Android.Resource.Dimension.mtrl_btn_hovered_z;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_btn_icon_btn_padding_left = global::MuGet.Forms.Android.Resource.Dimension.mtrl_btn_icon_btn_padding_left;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_btn_icon_padding = global::MuGet.Forms.Android.Resource.Dimension.mtrl_btn_icon_padding;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_btn_inset = global::MuGet.Forms.Android.Resource.Dimension.mtrl_btn_inset;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_btn_letter_spacing = global::MuGet.Forms.Android.Resource.Dimension.mtrl_btn_letter_spacing;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_btn_padding_bottom = global::MuGet.Forms.Android.Resource.Dimension.mtrl_btn_padding_bottom;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_btn_padding_left = global::MuGet.Forms.Android.Resource.Dimension.mtrl_btn_padding_left;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_btn_padding_right = global::MuGet.Forms.Android.Resource.Dimension.mtrl_btn_padding_right;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_btn_padding_top = global::MuGet.Forms.Android.Resource.Dimension.mtrl_btn_padding_top;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_btn_pressed_z = global::MuGet.Forms.Android.Resource.Dimension.mtrl_btn_pressed_z;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_btn_stroke_size = global::MuGet.Forms.Android.Resource.Dimension.mtrl_btn_stroke_size;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_btn_text_btn_icon_padding = global::MuGet.Forms.Android.Resource.Dimension.mtrl_btn_text_btn_icon_padding;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_left = global::MuGet.Forms.Android.Resource.Dimension.mtrl_btn_text_btn_padding_left;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_right = global::MuGet.Forms.Android.Resource.Dimension.mtrl_btn_text_btn_padding_right;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_btn_text_size = global::MuGet.Forms.Android.Resource.Dimension.mtrl_btn_text_size;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_btn_z = global::MuGet.Forms.Android.Resource.Dimension.mtrl_btn_z;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_card_elevation = global::MuGet.Forms.Android.Resource.Dimension.mtrl_card_elevation;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_card_spacing = global::MuGet.Forms.Android.Resource.Dimension.mtrl_card_spacing;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_chip_pressed_translation_z = global::MuGet.Forms.Android.Resource.Dimension.mtrl_chip_pressed_translation_z;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_chip_text_size = global::MuGet.Forms.Android.Resource.Dimension.mtrl_chip_text_size;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_fab_elevation = global::MuGet.Forms.Android.Resource.Dimension.mtrl_fab_elevation;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_fab_translation_z_hovered_focused = global::MuGet.Forms.Android.Resource.Dimension.mtrl_fab_translation_z_hovered_focused;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_fab_translation_z_pressed = global::MuGet.Forms.Android.Resource.Dimension.mtrl_fab_translation_z_pressed;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_navigation_elevation = global::MuGet.Forms.Android.Resource.Dimension.mtrl_navigation_elevation;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_navigation_item_horizontal_padding = global::MuGet.Forms.Android.Resource.Dimension.mtrl_navigation_item_horizontal_padding;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_navigation_item_icon_padding = global::MuGet.Forms.Android.Resource.Dimension.mtrl_navigation_item_icon_padding;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_snackbar_background_corner_radius = global::MuGet.Forms.Android.Resource.Dimension.mtrl_snackbar_background_corner_radius;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_snackbar_margin = global::MuGet.Forms.Android.Resource.Dimension.mtrl_snackbar_margin;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_textinput_box_bottom_offset = global::MuGet.Forms.Android.Resource.Dimension.mtrl_textinput_box_bottom_offset;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_medium = global::MuGet.Forms.Android.Resource.Dimension.mtrl_textinput_box_corner_radius_medium;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_small = global::MuGet.Forms.Android.Resource.Dimension.mtrl_textinput_box_corner_radius_small;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_textinput_box_label_cutout_padding = global::MuGet.Forms.Android.Resource.Dimension.mtrl_textinput_box_label_cutout_padding;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_textinput_box_padding_end = global::MuGet.Forms.Android.Resource.Dimension.mtrl_textinput_box_padding_end;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_default = global::MuGet.Forms.Android.Resource.Dimension.mtrl_textinput_box_stroke_width_default;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_focused = global::MuGet.Forms.Android.Resource.Dimension.mtrl_textinput_box_stroke_width_focused;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding = global::MuGet.Forms.Android.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding;
+			global::AiForms.Renderers.Droid.Resource.Dimension.mtrl_toolbar_default_height = global::MuGet.Forms.Android.Resource.Dimension.mtrl_toolbar_default_height;
+			global::AiForms.Renderers.Droid.Resource.Dimension.notification_action_icon_size = global::MuGet.Forms.Android.Resource.Dimension.notification_action_icon_size;
+			global::AiForms.Renderers.Droid.Resource.Dimension.notification_action_text_size = global::MuGet.Forms.Android.Resource.Dimension.notification_action_text_size;
+			global::AiForms.Renderers.Droid.Resource.Dimension.notification_big_circle_margin = global::MuGet.Forms.Android.Resource.Dimension.notification_big_circle_margin;
+			global::AiForms.Renderers.Droid.Resource.Dimension.notification_content_margin_start = global::MuGet.Forms.Android.Resource.Dimension.notification_content_margin_start;
+			global::AiForms.Renderers.Droid.Resource.Dimension.notification_large_icon_height = global::MuGet.Forms.Android.Resource.Dimension.notification_large_icon_height;
+			global::AiForms.Renderers.Droid.Resource.Dimension.notification_large_icon_width = global::MuGet.Forms.Android.Resource.Dimension.notification_large_icon_width;
+			global::AiForms.Renderers.Droid.Resource.Dimension.notification_main_column_padding_top = global::MuGet.Forms.Android.Resource.Dimension.notification_main_column_padding_top;
+			global::AiForms.Renderers.Droid.Resource.Dimension.notification_media_narrow_margin = global::MuGet.Forms.Android.Resource.Dimension.notification_media_narrow_margin;
+			global::AiForms.Renderers.Droid.Resource.Dimension.notification_right_icon_size = global::MuGet.Forms.Android.Resource.Dimension.notification_right_icon_size;
+			global::AiForms.Renderers.Droid.Resource.Dimension.notification_right_side_padding_top = global::MuGet.Forms.Android.Resource.Dimension.notification_right_side_padding_top;
+			global::AiForms.Renderers.Droid.Resource.Dimension.notification_small_icon_background_padding = global::MuGet.Forms.Android.Resource.Dimension.notification_small_icon_background_padding;
+			global::AiForms.Renderers.Droid.Resource.Dimension.notification_small_icon_size_as_large = global::MuGet.Forms.Android.Resource.Dimension.notification_small_icon_size_as_large;
+			global::AiForms.Renderers.Droid.Resource.Dimension.notification_subtext_size = global::MuGet.Forms.Android.Resource.Dimension.notification_subtext_size;
+			global::AiForms.Renderers.Droid.Resource.Dimension.notification_top_pad = global::MuGet.Forms.Android.Resource.Dimension.notification_top_pad;
+			global::AiForms.Renderers.Droid.Resource.Dimension.notification_top_pad_large_text = global::MuGet.Forms.Android.Resource.Dimension.notification_top_pad_large_text;
+			global::AiForms.Renderers.Droid.Resource.Dimension.subtitle_corner_radius = global::MuGet.Forms.Android.Resource.Dimension.subtitle_corner_radius;
+			global::AiForms.Renderers.Droid.Resource.Dimension.subtitle_outline_width = global::MuGet.Forms.Android.Resource.Dimension.subtitle_outline_width;
+			global::AiForms.Renderers.Droid.Resource.Dimension.subtitle_shadow_offset = global::MuGet.Forms.Android.Resource.Dimension.subtitle_shadow_offset;
+			global::AiForms.Renderers.Droid.Resource.Dimension.subtitle_shadow_radius = global::MuGet.Forms.Android.Resource.Dimension.subtitle_shadow_radius;
+			global::AiForms.Renderers.Droid.Resource.Dimension.tooltip_corner_radius = global::MuGet.Forms.Android.Resource.Dimension.tooltip_corner_radius;
+			global::AiForms.Renderers.Droid.Resource.Dimension.tooltip_horizontal_padding = global::MuGet.Forms.Android.Resource.Dimension.tooltip_horizontal_padding;
+			global::AiForms.Renderers.Droid.Resource.Dimension.tooltip_margin = global::MuGet.Forms.Android.Resource.Dimension.tooltip_margin;
+			global::AiForms.Renderers.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::MuGet.Forms.Android.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::AiForms.Renderers.Droid.Resource.Dimension.tooltip_precise_anchor_threshold = global::MuGet.Forms.Android.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::AiForms.Renderers.Droid.Resource.Dimension.tooltip_vertical_padding = global::MuGet.Forms.Android.Resource.Dimension.tooltip_vertical_padding;
+			global::AiForms.Renderers.Droid.Resource.Dimension.tooltip_y_offset_non_touch = global::MuGet.Forms.Android.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::AiForms.Renderers.Droid.Resource.Dimension.tooltip_y_offset_touch = global::MuGet.Forms.Android.Resource.Dimension.tooltip_y_offset_touch;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::MuGet.Forms.Android.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_action_bar_item_background_material = global::MuGet.Forms.Android.Resource.Drawable.abc_action_bar_item_background_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_btn_borderless_material = global::MuGet.Forms.Android.Resource.Drawable.abc_btn_borderless_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_btn_check_material = global::MuGet.Forms.Android.Resource.Drawable.abc_btn_check_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::MuGet.Forms.Android.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::MuGet.Forms.Android.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_btn_colored_material = global::MuGet.Forms.Android.Resource.Drawable.abc_btn_colored_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_btn_default_mtrl_shape = global::MuGet.Forms.Android.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_btn_radio_material = global::MuGet.Forms.Android.Resource.Drawable.abc_btn_radio_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::MuGet.Forms.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::MuGet.Forms.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::MuGet.Forms.Android.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::MuGet.Forms.Android.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_cab_background_internal_bg = global::MuGet.Forms.Android.Resource.Drawable.abc_cab_background_internal_bg;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_cab_background_top_material = global::MuGet.Forms.Android.Resource.Drawable.abc_cab_background_top_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::MuGet.Forms.Android.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_control_background_material = global::MuGet.Forms.Android.Resource.Drawable.abc_control_background_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_dialog_material_background = global::MuGet.Forms.Android.Resource.Drawable.abc_dialog_material_background;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_edit_text_material = global::MuGet.Forms.Android.Resource.Drawable.abc_edit_text_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_ic_ab_back_material = global::MuGet.Forms.Android.Resource.Drawable.abc_ic_ab_back_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::MuGet.Forms.Android.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_ic_clear_material = global::MuGet.Forms.Android.Resource.Drawable.abc_ic_clear_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::MuGet.Forms.Android.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_ic_go_search_api_material = global::MuGet.Forms.Android.Resource.Drawable.abc_ic_go_search_api_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::MuGet.Forms.Android.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::MuGet.Forms.Android.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_ic_menu_overflow_material = global::MuGet.Forms.Android.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::MuGet.Forms.Android.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::MuGet.Forms.Android.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::MuGet.Forms.Android.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_ic_search_api_material = global::MuGet.Forms.Android.Resource.Drawable.abc_ic_search_api_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_ic_star_black_16dp = global::MuGet.Forms.Android.Resource.Drawable.abc_ic_star_black_16dp;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_ic_star_black_36dp = global::MuGet.Forms.Android.Resource.Drawable.abc_ic_star_black_36dp;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_ic_star_black_48dp = global::MuGet.Forms.Android.Resource.Drawable.abc_ic_star_black_48dp;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_ic_star_half_black_16dp = global::MuGet.Forms.Android.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_ic_star_half_black_36dp = global::MuGet.Forms.Android.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_ic_star_half_black_48dp = global::MuGet.Forms.Android.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_ic_voice_search_api_material = global::MuGet.Forms.Android.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_item_background_holo_dark = global::MuGet.Forms.Android.Resource.Drawable.abc_item_background_holo_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_item_background_holo_light = global::MuGet.Forms.Android.Resource.Drawable.abc_item_background_holo_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_list_divider_material = global::MuGet.Forms.Android.Resource.Drawable.abc_list_divider_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha = global::MuGet.Forms.Android.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_list_focused_holo = global::MuGet.Forms.Android.Resource.Drawable.abc_list_focused_holo;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_list_longpressed_holo = global::MuGet.Forms.Android.Resource.Drawable.abc_list_longpressed_holo;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_list_pressed_holo_dark = global::MuGet.Forms.Android.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_list_pressed_holo_light = global::MuGet.Forms.Android.Resource.Drawable.abc_list_pressed_holo_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::MuGet.Forms.Android.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::MuGet.Forms.Android.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::MuGet.Forms.Android.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light = global::MuGet.Forms.Android.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_list_selector_holo_dark = global::MuGet.Forms.Android.Resource.Drawable.abc_list_selector_holo_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_list_selector_holo_light = global::MuGet.Forms.Android.Resource.Drawable.abc_list_selector_holo_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::MuGet.Forms.Android.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_popup_background_mtrl_mult = global::MuGet.Forms.Android.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_ratingbar_indicator_material = global::MuGet.Forms.Android.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_ratingbar_material = global::MuGet.Forms.Android.Resource.Drawable.abc_ratingbar_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_ratingbar_small_material = global::MuGet.Forms.Android.Resource.Drawable.abc_ratingbar_small_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::MuGet.Forms.Android.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::MuGet.Forms.Android.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::MuGet.Forms.Android.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::MuGet.Forms.Android.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::MuGet.Forms.Android.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_seekbar_thumb_material = global::MuGet.Forms.Android.Resource.Drawable.abc_seekbar_thumb_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_seekbar_tick_mark_material = global::MuGet.Forms.Android.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_seekbar_track_material = global::MuGet.Forms.Android.Resource.Drawable.abc_seekbar_track_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::MuGet.Forms.Android.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_spinner_textfield_background_material = global::MuGet.Forms.Android.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_switch_thumb_material = global::MuGet.Forms.Android.Resource.Drawable.abc_switch_thumb_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha = global::MuGet.Forms.Android.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_tab_indicator_material = global::MuGet.Forms.Android.Resource.Drawable.abc_tab_indicator_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::MuGet.Forms.Android.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_text_cursor_material = global::MuGet.Forms.Android.Resource.Drawable.abc_text_cursor_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::MuGet.Forms.Android.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::MuGet.Forms.Android.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::MuGet.Forms.Android.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::MuGet.Forms.Android.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::MuGet.Forms.Android.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::MuGet.Forms.Android.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::MuGet.Forms.Android.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::MuGet.Forms.Android.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::MuGet.Forms.Android.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::MuGet.Forms.Android.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_textfield_search_material = global::MuGet.Forms.Android.Resource.Drawable.abc_textfield_search_material;
+			global::AiForms.Renderers.Droid.Resource.Drawable.abc_vector_test = global::MuGet.Forms.Android.Resource.Drawable.abc_vector_test;
+			global::AiForms.Renderers.Droid.Resource.Drawable.avd_hide_password = global::MuGet.Forms.Android.Resource.Drawable.avd_hide_password;
+			global::AiForms.Renderers.Droid.Resource.Drawable.avd_show_password = global::MuGet.Forms.Android.Resource.Drawable.avd_show_password;
+			global::AiForms.Renderers.Droid.Resource.Drawable.design_bottom_navigation_item_background = global::MuGet.Forms.Android.Resource.Drawable.design_bottom_navigation_item_background;
+			global::AiForms.Renderers.Droid.Resource.Drawable.design_fab_background = global::MuGet.Forms.Android.Resource.Drawable.design_fab_background;
+			global::AiForms.Renderers.Droid.Resource.Drawable.design_ic_visibility = global::MuGet.Forms.Android.Resource.Drawable.design_ic_visibility;
+			global::AiForms.Renderers.Droid.Resource.Drawable.design_ic_visibility_off = global::MuGet.Forms.Android.Resource.Drawable.design_ic_visibility_off;
+			global::AiForms.Renderers.Droid.Resource.Drawable.design_password_eye = global::MuGet.Forms.Android.Resource.Drawable.design_password_eye;
+			global::AiForms.Renderers.Droid.Resource.Drawable.design_snackbar_background = global::MuGet.Forms.Android.Resource.Drawable.design_snackbar_background;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_audiotrack_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_audiotrack_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_audiotrack_light = global::MuGet.Forms.Android.Resource.Drawable.ic_audiotrack_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_dialog_close_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_dialog_close_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_dialog_close_light = global::MuGet.Forms.Android.Resource.Drawable.ic_dialog_close_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_collapse_00 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_collapse_00;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_collapse_01 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_collapse_01;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_collapse_02 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_collapse_02;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_collapse_03 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_collapse_03;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_collapse_04 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_collapse_04;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_collapse_05 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_collapse_05;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_collapse_06 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_collapse_06;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_collapse_07 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_collapse_07;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_collapse_08 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_collapse_08;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_collapse_09 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_collapse_09;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_collapse_10 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_collapse_10;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_collapse_11 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_collapse_11;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_collapse_12 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_collapse_12;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_collapse_13 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_collapse_13;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_collapse_14 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_collapse_14;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_collapse_15 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_collapse_15;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_expand_00 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_expand_00;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_expand_01 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_expand_01;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_expand_02 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_expand_02;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_expand_03 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_expand_03;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_expand_04 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_expand_04;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_expand_05 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_expand_05;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_expand_06 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_expand_06;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_expand_07 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_expand_07;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_expand_08 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_expand_08;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_expand_09 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_expand_09;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_expand_10 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_expand_10;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_expand_11 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_expand_11;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_expand_12 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_expand_12;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_expand_13 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_expand_13;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_expand_14 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_expand_14;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_group_expand_15 = global::MuGet.Forms.Android.Resource.Drawable.ic_group_expand_15;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_media_pause_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_media_pause_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_media_pause_light = global::MuGet.Forms.Android.Resource.Drawable.ic_media_pause_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_media_play_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_media_play_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_media_play_light = global::MuGet.Forms.Android.Resource.Drawable.ic_media_play_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_media_stop_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_media_stop_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_media_stop_light = global::MuGet.Forms.Android.Resource.Drawable.ic_media_stop_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_00_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_00_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_00_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_00_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_01_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_01_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_01_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_01_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_02_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_02_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_02_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_02_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_03_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_03_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_03_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_03_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_04_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_04_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_04_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_04_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_05_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_05_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_05_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_05_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_06_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_06_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_06_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_06_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_07_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_07_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_07_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_07_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_08_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_08_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_08_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_08_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_09_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_09_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_09_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_09_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_10_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_10_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_10_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_10_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_11_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_11_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_11_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_11_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_12_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_12_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_12_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_12_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_13_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_13_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_13_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_13_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_14_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_14_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_14_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_14_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_15_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_15_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_15_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_15_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_16_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_16_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_16_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_16_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_17_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_17_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_17_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_17_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_18_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_18_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_18_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_18_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_19_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_19_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_19_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_19_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_20_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_20_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_20_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_20_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_21_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_21_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_21_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_21_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_22_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_22_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_22_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_22_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_23_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_23_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_23_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_23_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_24_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_24_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_24_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_24_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_25_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_25_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_25_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_25_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_26_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_26_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_26_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_26_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_27_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_27_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_27_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_27_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_28_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_28_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_28_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_28_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_29_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_29_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_29_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_29_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_30_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_30_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connected_30_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connected_30_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_00_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_00_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_00_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_00_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_01_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_01_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_01_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_01_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_02_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_02_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_02_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_02_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_03_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_03_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_03_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_03_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_04_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_04_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_04_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_04_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_05_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_05_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_05_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_05_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_06_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_06_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_06_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_06_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_07_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_07_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_07_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_07_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_08_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_08_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_08_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_08_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_09_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_09_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_09_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_09_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_10_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_10_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_10_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_10_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_11_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_11_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_11_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_11_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_12_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_12_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_12_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_12_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_13_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_13_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_13_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_13_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_14_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_14_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_14_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_14_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_15_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_15_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_15_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_15_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_16_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_16_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_16_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_16_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_17_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_17_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_17_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_17_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_18_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_18_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_18_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_18_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_19_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_19_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_19_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_19_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_20_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_20_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_20_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_20_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_21_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_21_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_21_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_21_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_22_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_22_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_22_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_22_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_23_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_23_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_23_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_23_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_24_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_24_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_24_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_24_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_25_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_25_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_25_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_25_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_26_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_26_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_26_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_26_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_27_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_27_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_27_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_27_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_28_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_28_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_28_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_28_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_29_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_29_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_29_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_29_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_30_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_30_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_connecting_30_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_connecting_30_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_disabled_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_disabled_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_disabled_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_disabled_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_disconnected_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_disconnected_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_disconnected_light = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_disconnected_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mr_button_grey = global::MuGet.Forms.Android.Resource.Drawable.ic_mr_button_grey;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mtrl_chip_checked_black = global::MuGet.Forms.Android.Resource.Drawable.ic_mtrl_chip_checked_black;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mtrl_chip_checked_circle = global::MuGet.Forms.Android.Resource.Drawable.ic_mtrl_chip_checked_circle;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_mtrl_chip_close_circle = global::MuGet.Forms.Android.Resource.Drawable.ic_mtrl_chip_close_circle;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_vol_type_speaker_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_vol_type_speaker_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_vol_type_speaker_group_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_vol_type_speaker_group_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_vol_type_speaker_group_light = global::MuGet.Forms.Android.Resource.Drawable.ic_vol_type_speaker_group_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_vol_type_speaker_light = global::MuGet.Forms.Android.Resource.Drawable.ic_vol_type_speaker_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_vol_type_tv_dark = global::MuGet.Forms.Android.Resource.Drawable.ic_vol_type_tv_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.ic_vol_type_tv_light = global::MuGet.Forms.Android.Resource.Drawable.ic_vol_type_tv_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.mr_button_connected_dark = global::MuGet.Forms.Android.Resource.Drawable.mr_button_connected_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.mr_button_connected_light = global::MuGet.Forms.Android.Resource.Drawable.mr_button_connected_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.mr_button_connecting_dark = global::MuGet.Forms.Android.Resource.Drawable.mr_button_connecting_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.mr_button_connecting_light = global::MuGet.Forms.Android.Resource.Drawable.mr_button_connecting_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.mr_button_dark = global::MuGet.Forms.Android.Resource.Drawable.mr_button_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.mr_button_light = global::MuGet.Forms.Android.Resource.Drawable.mr_button_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.mr_dialog_close_dark = global::MuGet.Forms.Android.Resource.Drawable.mr_dialog_close_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.mr_dialog_close_light = global::MuGet.Forms.Android.Resource.Drawable.mr_dialog_close_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.mr_dialog_material_background_dark = global::MuGet.Forms.Android.Resource.Drawable.mr_dialog_material_background_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.mr_dialog_material_background_light = global::MuGet.Forms.Android.Resource.Drawable.mr_dialog_material_background_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.mr_group_collapse = global::MuGet.Forms.Android.Resource.Drawable.mr_group_collapse;
+			global::AiForms.Renderers.Droid.Resource.Drawable.mr_group_expand = global::MuGet.Forms.Android.Resource.Drawable.mr_group_expand;
+			global::AiForms.Renderers.Droid.Resource.Drawable.mr_media_pause_dark = global::MuGet.Forms.Android.Resource.Drawable.mr_media_pause_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.mr_media_pause_light = global::MuGet.Forms.Android.Resource.Drawable.mr_media_pause_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.mr_media_play_dark = global::MuGet.Forms.Android.Resource.Drawable.mr_media_play_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.mr_media_play_light = global::MuGet.Forms.Android.Resource.Drawable.mr_media_play_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.mr_media_stop_dark = global::MuGet.Forms.Android.Resource.Drawable.mr_media_stop_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.mr_media_stop_light = global::MuGet.Forms.Android.Resource.Drawable.mr_media_stop_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.mr_vol_type_audiotrack_dark = global::MuGet.Forms.Android.Resource.Drawable.mr_vol_type_audiotrack_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.mr_vol_type_audiotrack_light = global::MuGet.Forms.Android.Resource.Drawable.mr_vol_type_audiotrack_light;
+			global::AiForms.Renderers.Droid.Resource.Drawable.mtrl_snackbar_background = global::MuGet.Forms.Android.Resource.Drawable.mtrl_snackbar_background;
+			global::AiForms.Renderers.Droid.Resource.Drawable.mtrl_tabs_default_indicator = global::MuGet.Forms.Android.Resource.Drawable.mtrl_tabs_default_indicator;
+			global::AiForms.Renderers.Droid.Resource.Drawable.navigation_empty_icon = global::MuGet.Forms.Android.Resource.Drawable.navigation_empty_icon;
+			global::AiForms.Renderers.Droid.Resource.Drawable.notification_action_background = global::MuGet.Forms.Android.Resource.Drawable.notification_action_background;
+			global::AiForms.Renderers.Droid.Resource.Drawable.notification_bg = global::MuGet.Forms.Android.Resource.Drawable.notification_bg;
+			global::AiForms.Renderers.Droid.Resource.Drawable.notification_bg_low = global::MuGet.Forms.Android.Resource.Drawable.notification_bg_low;
+			global::AiForms.Renderers.Droid.Resource.Drawable.notification_bg_low_normal = global::MuGet.Forms.Android.Resource.Drawable.notification_bg_low_normal;
+			global::AiForms.Renderers.Droid.Resource.Drawable.notification_bg_low_pressed = global::MuGet.Forms.Android.Resource.Drawable.notification_bg_low_pressed;
+			global::AiForms.Renderers.Droid.Resource.Drawable.notification_bg_normal = global::MuGet.Forms.Android.Resource.Drawable.notification_bg_normal;
+			global::AiForms.Renderers.Droid.Resource.Drawable.notification_bg_normal_pressed = global::MuGet.Forms.Android.Resource.Drawable.notification_bg_normal_pressed;
+			global::AiForms.Renderers.Droid.Resource.Drawable.notification_icon_background = global::MuGet.Forms.Android.Resource.Drawable.notification_icon_background;
+			global::AiForms.Renderers.Droid.Resource.Drawable.notification_template_icon_bg = global::MuGet.Forms.Android.Resource.Drawable.notification_template_icon_bg;
+			global::AiForms.Renderers.Droid.Resource.Drawable.notification_template_icon_low_bg = global::MuGet.Forms.Android.Resource.Drawable.notification_template_icon_low_bg;
+			global::AiForms.Renderers.Droid.Resource.Drawable.notification_tile_bg = global::MuGet.Forms.Android.Resource.Drawable.notification_tile_bg;
+			global::AiForms.Renderers.Droid.Resource.Drawable.notify_panel_notification_icon_bg = global::MuGet.Forms.Android.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::AiForms.Renderers.Droid.Resource.Drawable.tooltip_frame_dark = global::MuGet.Forms.Android.Resource.Drawable.tooltip_frame_dark;
+			global::AiForms.Renderers.Droid.Resource.Drawable.tooltip_frame_light = global::MuGet.Forms.Android.Resource.Drawable.tooltip_frame_light;
+			global::AiForms.Renderers.Droid.Resource.Id.ALT = global::MuGet.Forms.Android.Resource.Id.ALT;
+			global::AiForms.Renderers.Droid.Resource.Id.CTRL = global::MuGet.Forms.Android.Resource.Id.CTRL;
+			global::AiForms.Renderers.Droid.Resource.Id.CellAccessoryView = global::MuGet.Forms.Android.Resource.Id.CellAccessoryView;
+			global::AiForms.Renderers.Droid.Resource.Id.CellBody = global::MuGet.Forms.Android.Resource.Id.CellBody;
+			global::AiForms.Renderers.Droid.Resource.Id.CellContentStack = global::MuGet.Forms.Android.Resource.Id.CellContentStack;
+			global::AiForms.Renderers.Droid.Resource.Id.CellDescription = global::MuGet.Forms.Android.Resource.Id.CellDescription;
+			global::AiForms.Renderers.Droid.Resource.Id.CellHintText = global::MuGet.Forms.Android.Resource.Id.CellHintText;
+			global::AiForms.Renderers.Droid.Resource.Id.CellIcon = global::MuGet.Forms.Android.Resource.Id.CellIcon;
+			global::AiForms.Renderers.Droid.Resource.Id.CellTitle = global::MuGet.Forms.Android.Resource.Id.CellTitle;
+			global::AiForms.Renderers.Droid.Resource.Id.ContentCellBody = global::MuGet.Forms.Android.Resource.Id.ContentCellBody;
+			global::AiForms.Renderers.Droid.Resource.Id.ContentCellBorder = global::MuGet.Forms.Android.Resource.Id.ContentCellBorder;
+			global::AiForms.Renderers.Droid.Resource.Id.FUNCTION = global::MuGet.Forms.Android.Resource.Id.FUNCTION;
+			global::AiForms.Renderers.Droid.Resource.Id.FooterCellText = global::MuGet.Forms.Android.Resource.Id.FooterCellText;
+			global::AiForms.Renderers.Droid.Resource.Id.HeaderCellBorder = global::MuGet.Forms.Android.Resource.Id.HeaderCellBorder;
+			global::AiForms.Renderers.Droid.Resource.Id.HeaderCellText = global::MuGet.Forms.Android.Resource.Id.HeaderCellText;
+			global::AiForms.Renderers.Droid.Resource.Id.META = global::MuGet.Forms.Android.Resource.Id.META;
+			global::AiForms.Renderers.Droid.Resource.Id.SHIFT = global::MuGet.Forms.Android.Resource.Id.SHIFT;
+			global::AiForms.Renderers.Droid.Resource.Id.SYM = global::MuGet.Forms.Android.Resource.Id.SYM;
+			global::AiForms.Renderers.Droid.Resource.Id.action0 = global::MuGet.Forms.Android.Resource.Id.action0;
+			global::AiForms.Renderers.Droid.Resource.Id.action_bar = global::MuGet.Forms.Android.Resource.Id.action_bar;
+			global::AiForms.Renderers.Droid.Resource.Id.action_bar_activity_content = global::MuGet.Forms.Android.Resource.Id.action_bar_activity_content;
+			global::AiForms.Renderers.Droid.Resource.Id.action_bar_container = global::MuGet.Forms.Android.Resource.Id.action_bar_container;
+			global::AiForms.Renderers.Droid.Resource.Id.action_bar_root = global::MuGet.Forms.Android.Resource.Id.action_bar_root;
+			global::AiForms.Renderers.Droid.Resource.Id.action_bar_spinner = global::MuGet.Forms.Android.Resource.Id.action_bar_spinner;
+			global::AiForms.Renderers.Droid.Resource.Id.action_bar_subtitle = global::MuGet.Forms.Android.Resource.Id.action_bar_subtitle;
+			global::AiForms.Renderers.Droid.Resource.Id.action_bar_title = global::MuGet.Forms.Android.Resource.Id.action_bar_title;
+			global::AiForms.Renderers.Droid.Resource.Id.action_container = global::MuGet.Forms.Android.Resource.Id.action_container;
+			global::AiForms.Renderers.Droid.Resource.Id.action_context_bar = global::MuGet.Forms.Android.Resource.Id.action_context_bar;
+			global::AiForms.Renderers.Droid.Resource.Id.action_divider = global::MuGet.Forms.Android.Resource.Id.action_divider;
+			global::AiForms.Renderers.Droid.Resource.Id.action_image = global::MuGet.Forms.Android.Resource.Id.action_image;
+			global::AiForms.Renderers.Droid.Resource.Id.action_menu_divider = global::MuGet.Forms.Android.Resource.Id.action_menu_divider;
+			global::AiForms.Renderers.Droid.Resource.Id.action_menu_presenter = global::MuGet.Forms.Android.Resource.Id.action_menu_presenter;
+			global::AiForms.Renderers.Droid.Resource.Id.action_mode_bar = global::MuGet.Forms.Android.Resource.Id.action_mode_bar;
+			global::AiForms.Renderers.Droid.Resource.Id.action_mode_bar_stub = global::MuGet.Forms.Android.Resource.Id.action_mode_bar_stub;
+			global::AiForms.Renderers.Droid.Resource.Id.action_mode_close_button = global::MuGet.Forms.Android.Resource.Id.action_mode_close_button;
+			global::AiForms.Renderers.Droid.Resource.Id.action_text = global::MuGet.Forms.Android.Resource.Id.action_text;
+			global::AiForms.Renderers.Droid.Resource.Id.actions = global::MuGet.Forms.Android.Resource.Id.actions;
+			global::AiForms.Renderers.Droid.Resource.Id.activity_chooser_view_content = global::MuGet.Forms.Android.Resource.Id.activity_chooser_view_content;
+			global::AiForms.Renderers.Droid.Resource.Id.add = global::MuGet.Forms.Android.Resource.Id.add;
+			global::AiForms.Renderers.Droid.Resource.Id.alertTitle = global::MuGet.Forms.Android.Resource.Id.alertTitle;
+			global::AiForms.Renderers.Droid.Resource.Id.all = global::MuGet.Forms.Android.Resource.Id.all;
+			global::AiForms.Renderers.Droid.Resource.Id.always = global::MuGet.Forms.Android.Resource.Id.always;
+			global::AiForms.Renderers.Droid.Resource.Id.async = global::MuGet.Forms.Android.Resource.Id.async;
+			global::AiForms.Renderers.Droid.Resource.Id.auto = global::MuGet.Forms.Android.Resource.Id.auto;
+			global::AiForms.Renderers.Droid.Resource.Id.beginning = global::MuGet.Forms.Android.Resource.Id.beginning;
+			global::AiForms.Renderers.Droid.Resource.Id.blocking = global::MuGet.Forms.Android.Resource.Id.blocking;
+			global::AiForms.Renderers.Droid.Resource.Id.bottom = global::MuGet.Forms.Android.Resource.Id.bottom;
+			global::AiForms.Renderers.Droid.Resource.Id.bottomtab_navarea = global::MuGet.Forms.Android.Resource.Id.bottomtab_navarea;
+			global::AiForms.Renderers.Droid.Resource.Id.bottomtab_tabbar = global::MuGet.Forms.Android.Resource.Id.bottomtab_tabbar;
+			global::AiForms.Renderers.Droid.Resource.Id.browser_actions_header_text = global::MuGet.Forms.Android.Resource.Id.browser_actions_header_text;
+			global::AiForms.Renderers.Droid.Resource.Id.browser_actions_menu_item_icon = global::MuGet.Forms.Android.Resource.Id.browser_actions_menu_item_icon;
+			global::AiForms.Renderers.Droid.Resource.Id.browser_actions_menu_item_text = global::MuGet.Forms.Android.Resource.Id.browser_actions_menu_item_text;
+			global::AiForms.Renderers.Droid.Resource.Id.browser_actions_menu_items = global::MuGet.Forms.Android.Resource.Id.browser_actions_menu_items;
+			global::AiForms.Renderers.Droid.Resource.Id.browser_actions_menu_view = global::MuGet.Forms.Android.Resource.Id.browser_actions_menu_view;
+			global::AiForms.Renderers.Droid.Resource.Id.buttonPanel = global::MuGet.Forms.Android.Resource.Id.buttonPanel;
+			global::AiForms.Renderers.Droid.Resource.Id.cancel_action = global::MuGet.Forms.Android.Resource.Id.cancel_action;
+			global::AiForms.Renderers.Droid.Resource.Id.center = global::MuGet.Forms.Android.Resource.Id.center;
+			global::AiForms.Renderers.Droid.Resource.Id.center_horizontal = global::MuGet.Forms.Android.Resource.Id.center_horizontal;
+			global::AiForms.Renderers.Droid.Resource.Id.center_vertical = global::MuGet.Forms.Android.Resource.Id.center_vertical;
+			global::AiForms.Renderers.Droid.Resource.Id.checkbox = global::MuGet.Forms.Android.Resource.Id.checkbox;
+			global::AiForms.Renderers.Droid.Resource.Id.chronometer = global::MuGet.Forms.Android.Resource.Id.chronometer;
+			global::AiForms.Renderers.Droid.Resource.Id.clip_horizontal = global::MuGet.Forms.Android.Resource.Id.clip_horizontal;
+			global::AiForms.Renderers.Droid.Resource.Id.clip_vertical = global::MuGet.Forms.Android.Resource.Id.clip_vertical;
+			global::AiForms.Renderers.Droid.Resource.Id.collapseActionView = global::MuGet.Forms.Android.Resource.Id.collapseActionView;
+			global::AiForms.Renderers.Droid.Resource.Id.container = global::MuGet.Forms.Android.Resource.Id.container;
+			global::AiForms.Renderers.Droid.Resource.Id.content = global::MuGet.Forms.Android.Resource.Id.content;
+			global::AiForms.Renderers.Droid.Resource.Id.contentPanel = global::MuGet.Forms.Android.Resource.Id.contentPanel;
+			global::AiForms.Renderers.Droid.Resource.Id.coordinator = global::MuGet.Forms.Android.Resource.Id.coordinator;
+			global::AiForms.Renderers.Droid.Resource.Id.custom = global::MuGet.Forms.Android.Resource.Id.custom;
+			global::AiForms.Renderers.Droid.Resource.Id.customPanel = global::MuGet.Forms.Android.Resource.Id.customPanel;
+			global::AiForms.Renderers.Droid.Resource.Id.decor_content_parent = global::MuGet.Forms.Android.Resource.Id.decor_content_parent;
+			global::AiForms.Renderers.Droid.Resource.Id.default_activity_button = global::MuGet.Forms.Android.Resource.Id.default_activity_button;
+			global::AiForms.Renderers.Droid.Resource.Id.design_bottom_sheet = global::MuGet.Forms.Android.Resource.Id.design_bottom_sheet;
+			global::AiForms.Renderers.Droid.Resource.Id.design_menu_item_action_area = global::MuGet.Forms.Android.Resource.Id.design_menu_item_action_area;
+			global::AiForms.Renderers.Droid.Resource.Id.design_menu_item_action_area_stub = global::MuGet.Forms.Android.Resource.Id.design_menu_item_action_area_stub;
+			global::AiForms.Renderers.Droid.Resource.Id.design_menu_item_text = global::MuGet.Forms.Android.Resource.Id.design_menu_item_text;
+			global::AiForms.Renderers.Droid.Resource.Id.design_navigation_view = global::MuGet.Forms.Android.Resource.Id.design_navigation_view;
+			global::AiForms.Renderers.Droid.Resource.Id.disableHome = global::MuGet.Forms.Android.Resource.Id.disableHome;
+			global::AiForms.Renderers.Droid.Resource.Id.edit_query = global::MuGet.Forms.Android.Resource.Id.edit_query;
+			global::AiForms.Renderers.Droid.Resource.Id.end = global::MuGet.Forms.Android.Resource.Id.end;
+			global::AiForms.Renderers.Droid.Resource.Id.end_padder = global::MuGet.Forms.Android.Resource.Id.end_padder;
+			global::AiForms.Renderers.Droid.Resource.Id.enterAlways = global::MuGet.Forms.Android.Resource.Id.enterAlways;
+			global::AiForms.Renderers.Droid.Resource.Id.enterAlwaysCollapsed = global::MuGet.Forms.Android.Resource.Id.enterAlwaysCollapsed;
+			global::AiForms.Renderers.Droid.Resource.Id.exitUntilCollapsed = global::MuGet.Forms.Android.Resource.Id.exitUntilCollapsed;
+			global::AiForms.Renderers.Droid.Resource.Id.expand_activities_button = global::MuGet.Forms.Android.Resource.Id.expand_activities_button;
+			global::AiForms.Renderers.Droid.Resource.Id.expanded_menu = global::MuGet.Forms.Android.Resource.Id.expanded_menu;
+			global::AiForms.Renderers.Droid.Resource.Id.fill = global::MuGet.Forms.Android.Resource.Id.fill;
+			global::AiForms.Renderers.Droid.Resource.Id.fill_horizontal = global::MuGet.Forms.Android.Resource.Id.fill_horizontal;
+			global::AiForms.Renderers.Droid.Resource.Id.fill_vertical = global::MuGet.Forms.Android.Resource.Id.fill_vertical;
+			global::AiForms.Renderers.Droid.Resource.Id.filled = global::MuGet.Forms.Android.Resource.Id.filled;
+			global::AiForms.Renderers.Droid.Resource.Id.@fixed = global::MuGet.Forms.Android.Resource.Id.@fixed;
+			global::AiForms.Renderers.Droid.Resource.Id.flyoutcontent_appbar = global::MuGet.Forms.Android.Resource.Id.flyoutcontent_appbar;
+			global::AiForms.Renderers.Droid.Resource.Id.flyoutcontent_recycler = global::MuGet.Forms.Android.Resource.Id.flyoutcontent_recycler;
+			global::AiForms.Renderers.Droid.Resource.Id.forever = global::MuGet.Forms.Android.Resource.Id.forever;
+			global::AiForms.Renderers.Droid.Resource.Id.ghost_view = global::MuGet.Forms.Android.Resource.Id.ghost_view;
+			global::AiForms.Renderers.Droid.Resource.Id.group_divider = global::MuGet.Forms.Android.Resource.Id.group_divider;
+			global::AiForms.Renderers.Droid.Resource.Id.home = global::MuGet.Forms.Android.Resource.Id.home;
+			global::AiForms.Renderers.Droid.Resource.Id.homeAsUp = global::MuGet.Forms.Android.Resource.Id.homeAsUp;
+			global::AiForms.Renderers.Droid.Resource.Id.icon = global::MuGet.Forms.Android.Resource.Id.icon;
+			global::AiForms.Renderers.Droid.Resource.Id.icon_group = global::MuGet.Forms.Android.Resource.Id.icon_group;
+			global::AiForms.Renderers.Droid.Resource.Id.ifRoom = global::MuGet.Forms.Android.Resource.Id.ifRoom;
+			global::AiForms.Renderers.Droid.Resource.Id.image = global::MuGet.Forms.Android.Resource.Id.image;
+			global::AiForms.Renderers.Droid.Resource.Id.info = global::MuGet.Forms.Android.Resource.Id.info;
+			global::AiForms.Renderers.Droid.Resource.Id.italic = global::MuGet.Forms.Android.Resource.Id.italic;
+			global::AiForms.Renderers.Droid.Resource.Id.item_touch_helper_previous_elevation = global::MuGet.Forms.Android.Resource.Id.item_touch_helper_previous_elevation;
+			global::AiForms.Renderers.Droid.Resource.Id.labeled = global::MuGet.Forms.Android.Resource.Id.labeled;
+			global::AiForms.Renderers.Droid.Resource.Id.largeLabel = global::MuGet.Forms.Android.Resource.Id.largeLabel;
+			global::AiForms.Renderers.Droid.Resource.Id.left = global::MuGet.Forms.Android.Resource.Id.left;
+			global::AiForms.Renderers.Droid.Resource.Id.line1 = global::MuGet.Forms.Android.Resource.Id.line1;
+			global::AiForms.Renderers.Droid.Resource.Id.line3 = global::MuGet.Forms.Android.Resource.Id.line3;
+			global::AiForms.Renderers.Droid.Resource.Id.listMode = global::MuGet.Forms.Android.Resource.Id.listMode;
+			global::AiForms.Renderers.Droid.Resource.Id.list_item = global::MuGet.Forms.Android.Resource.Id.list_item;
+			global::AiForms.Renderers.Droid.Resource.Id.main_appbar = global::MuGet.Forms.Android.Resource.Id.main_appbar;
+			global::AiForms.Renderers.Droid.Resource.Id.main_tablayout = global::MuGet.Forms.Android.Resource.Id.main_tablayout;
+			global::AiForms.Renderers.Droid.Resource.Id.main_toolbar = global::MuGet.Forms.Android.Resource.Id.main_toolbar;
+			global::AiForms.Renderers.Droid.Resource.Id.masked = global::MuGet.Forms.Android.Resource.Id.masked;
+			global::AiForms.Renderers.Droid.Resource.Id.media_actions = global::MuGet.Forms.Android.Resource.Id.media_actions;
+			global::AiForms.Renderers.Droid.Resource.Id.message = global::MuGet.Forms.Android.Resource.Id.message;
+			global::AiForms.Renderers.Droid.Resource.Id.middle = global::MuGet.Forms.Android.Resource.Id.middle;
+			global::AiForms.Renderers.Droid.Resource.Id.mini = global::MuGet.Forms.Android.Resource.Id.mini;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_art = global::MuGet.Forms.Android.Resource.Id.mr_art;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_cast_checkbox = global::MuGet.Forms.Android.Resource.Id.mr_cast_checkbox;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_cast_close_button = global::MuGet.Forms.Android.Resource.Id.mr_cast_close_button;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_cast_group_icon = global::MuGet.Forms.Android.Resource.Id.mr_cast_group_icon;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_cast_group_name = global::MuGet.Forms.Android.Resource.Id.mr_cast_group_name;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_cast_list = global::MuGet.Forms.Android.Resource.Id.mr_cast_list;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_cast_meta = global::MuGet.Forms.Android.Resource.Id.mr_cast_meta;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_cast_meta_art = global::MuGet.Forms.Android.Resource.Id.mr_cast_meta_art;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_cast_meta_subtitle = global::MuGet.Forms.Android.Resource.Id.mr_cast_meta_subtitle;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_cast_meta_title = global::MuGet.Forms.Android.Resource.Id.mr_cast_meta_title;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_cast_route_icon = global::MuGet.Forms.Android.Resource.Id.mr_cast_route_icon;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_cast_route_name = global::MuGet.Forms.Android.Resource.Id.mr_cast_route_name;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_cast_stop_button = global::MuGet.Forms.Android.Resource.Id.mr_cast_stop_button;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_cast_volume_layout = global::MuGet.Forms.Android.Resource.Id.mr_cast_volume_layout;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_cast_volume_slider = global::MuGet.Forms.Android.Resource.Id.mr_cast_volume_slider;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_chooser_list = global::MuGet.Forms.Android.Resource.Id.mr_chooser_list;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_chooser_route_desc = global::MuGet.Forms.Android.Resource.Id.mr_chooser_route_desc;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_chooser_route_icon = global::MuGet.Forms.Android.Resource.Id.mr_chooser_route_icon;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_chooser_route_name = global::MuGet.Forms.Android.Resource.Id.mr_chooser_route_name;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_chooser_title = global::MuGet.Forms.Android.Resource.Id.mr_chooser_title;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_close = global::MuGet.Forms.Android.Resource.Id.mr_close;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_control_divider = global::MuGet.Forms.Android.Resource.Id.mr_control_divider;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_control_playback_ctrl = global::MuGet.Forms.Android.Resource.Id.mr_control_playback_ctrl;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_control_subtitle = global::MuGet.Forms.Android.Resource.Id.mr_control_subtitle;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_control_title = global::MuGet.Forms.Android.Resource.Id.mr_control_title;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_control_title_container = global::MuGet.Forms.Android.Resource.Id.mr_control_title_container;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_custom_control = global::MuGet.Forms.Android.Resource.Id.mr_custom_control;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_default_control = global::MuGet.Forms.Android.Resource.Id.mr_default_control;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_dialog_area = global::MuGet.Forms.Android.Resource.Id.mr_dialog_area;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_dialog_header_name = global::MuGet.Forms.Android.Resource.Id.mr_dialog_header_name;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_expandable_area = global::MuGet.Forms.Android.Resource.Id.mr_expandable_area;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_group_expand_collapse = global::MuGet.Forms.Android.Resource.Id.mr_group_expand_collapse;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_group_volume_route_name = global::MuGet.Forms.Android.Resource.Id.mr_group_volume_route_name;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_group_volume_slider = global::MuGet.Forms.Android.Resource.Id.mr_group_volume_slider;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_media_main_control = global::MuGet.Forms.Android.Resource.Id.mr_media_main_control;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_name = global::MuGet.Forms.Android.Resource.Id.mr_name;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_picker_close_button = global::MuGet.Forms.Android.Resource.Id.mr_picker_close_button;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_picker_list = global::MuGet.Forms.Android.Resource.Id.mr_picker_list;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_picker_route_icon = global::MuGet.Forms.Android.Resource.Id.mr_picker_route_icon;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_picker_route_name = global::MuGet.Forms.Android.Resource.Id.mr_picker_route_name;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_playback_control = global::MuGet.Forms.Android.Resource.Id.mr_playback_control;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_title_bar = global::MuGet.Forms.Android.Resource.Id.mr_title_bar;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_volume_control = global::MuGet.Forms.Android.Resource.Id.mr_volume_control;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_volume_group_list = global::MuGet.Forms.Android.Resource.Id.mr_volume_group_list;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_volume_item_icon = global::MuGet.Forms.Android.Resource.Id.mr_volume_item_icon;
+			global::AiForms.Renderers.Droid.Resource.Id.mr_volume_slider = global::MuGet.Forms.Android.Resource.Id.mr_volume_slider;
+			global::AiForms.Renderers.Droid.Resource.Id.mtrl_child_content_container = global::MuGet.Forms.Android.Resource.Id.mtrl_child_content_container;
+			global::AiForms.Renderers.Droid.Resource.Id.mtrl_internal_children_alpha_tag = global::MuGet.Forms.Android.Resource.Id.mtrl_internal_children_alpha_tag;
+			global::AiForms.Renderers.Droid.Resource.Id.multiply = global::MuGet.Forms.Android.Resource.Id.multiply;
+			global::AiForms.Renderers.Droid.Resource.Id.navigation_header_container = global::MuGet.Forms.Android.Resource.Id.navigation_header_container;
+			global::AiForms.Renderers.Droid.Resource.Id.never = global::MuGet.Forms.Android.Resource.Id.never;
+			global::AiForms.Renderers.Droid.Resource.Id.none = global::MuGet.Forms.Android.Resource.Id.none;
+			global::AiForms.Renderers.Droid.Resource.Id.normal = global::MuGet.Forms.Android.Resource.Id.normal;
+			global::AiForms.Renderers.Droid.Resource.Id.notification_background = global::MuGet.Forms.Android.Resource.Id.notification_background;
+			global::AiForms.Renderers.Droid.Resource.Id.notification_main_column = global::MuGet.Forms.Android.Resource.Id.notification_main_column;
+			global::AiForms.Renderers.Droid.Resource.Id.notification_main_column_container = global::MuGet.Forms.Android.Resource.Id.notification_main_column_container;
+			global::AiForms.Renderers.Droid.Resource.Id.outline = global::MuGet.Forms.Android.Resource.Id.outline;
+			global::AiForms.Renderers.Droid.Resource.Id.parallax = global::MuGet.Forms.Android.Resource.Id.parallax;
+			global::AiForms.Renderers.Droid.Resource.Id.parentPanel = global::MuGet.Forms.Android.Resource.Id.parentPanel;
+			global::AiForms.Renderers.Droid.Resource.Id.parent_matrix = global::MuGet.Forms.Android.Resource.Id.parent_matrix;
+			global::AiForms.Renderers.Droid.Resource.Id.pin = global::MuGet.Forms.Android.Resource.Id.pin;
+			global::AiForms.Renderers.Droid.Resource.Id.progress_circular = global::MuGet.Forms.Android.Resource.Id.progress_circular;
+			global::AiForms.Renderers.Droid.Resource.Id.progress_horizontal = global::MuGet.Forms.Android.Resource.Id.progress_horizontal;
+			global::AiForms.Renderers.Droid.Resource.Id.radio = global::MuGet.Forms.Android.Resource.Id.radio;
+			global::AiForms.Renderers.Droid.Resource.Id.right = global::MuGet.Forms.Android.Resource.Id.right;
+			global::AiForms.Renderers.Droid.Resource.Id.right_icon = global::MuGet.Forms.Android.Resource.Id.right_icon;
+			global::AiForms.Renderers.Droid.Resource.Id.right_side = global::MuGet.Forms.Android.Resource.Id.right_side;
+			global::AiForms.Renderers.Droid.Resource.Id.save_image_matrix = global::MuGet.Forms.Android.Resource.Id.save_image_matrix;
+			global::AiForms.Renderers.Droid.Resource.Id.save_non_transition_alpha = global::MuGet.Forms.Android.Resource.Id.save_non_transition_alpha;
+			global::AiForms.Renderers.Droid.Resource.Id.save_scale_type = global::MuGet.Forms.Android.Resource.Id.save_scale_type;
+			global::AiForms.Renderers.Droid.Resource.Id.screen = global::MuGet.Forms.Android.Resource.Id.screen;
+			global::AiForms.Renderers.Droid.Resource.Id.scroll = global::MuGet.Forms.Android.Resource.Id.scroll;
+			global::AiForms.Renderers.Droid.Resource.Id.scrollIndicatorDown = global::MuGet.Forms.Android.Resource.Id.scrollIndicatorDown;
+			global::AiForms.Renderers.Droid.Resource.Id.scrollIndicatorUp = global::MuGet.Forms.Android.Resource.Id.scrollIndicatorUp;
+			global::AiForms.Renderers.Droid.Resource.Id.scrollView = global::MuGet.Forms.Android.Resource.Id.scrollView;
+			global::AiForms.Renderers.Droid.Resource.Id.scrollable = global::MuGet.Forms.Android.Resource.Id.scrollable;
+			global::AiForms.Renderers.Droid.Resource.Id.search_badge = global::MuGet.Forms.Android.Resource.Id.search_badge;
+			global::AiForms.Renderers.Droid.Resource.Id.search_bar = global::MuGet.Forms.Android.Resource.Id.search_bar;
+			global::AiForms.Renderers.Droid.Resource.Id.search_button = global::MuGet.Forms.Android.Resource.Id.search_button;
+			global::AiForms.Renderers.Droid.Resource.Id.search_close_btn = global::MuGet.Forms.Android.Resource.Id.search_close_btn;
+			global::AiForms.Renderers.Droid.Resource.Id.search_edit_frame = global::MuGet.Forms.Android.Resource.Id.search_edit_frame;
+			global::AiForms.Renderers.Droid.Resource.Id.search_go_btn = global::MuGet.Forms.Android.Resource.Id.search_go_btn;
+			global::AiForms.Renderers.Droid.Resource.Id.search_mag_icon = global::MuGet.Forms.Android.Resource.Id.search_mag_icon;
+			global::AiForms.Renderers.Droid.Resource.Id.search_plate = global::MuGet.Forms.Android.Resource.Id.search_plate;
+			global::AiForms.Renderers.Droid.Resource.Id.search_src_text = global::MuGet.Forms.Android.Resource.Id.search_src_text;
+			global::AiForms.Renderers.Droid.Resource.Id.search_voice_btn = global::MuGet.Forms.Android.Resource.Id.search_voice_btn;
+			global::AiForms.Renderers.Droid.Resource.Id.select_dialog_listview = global::MuGet.Forms.Android.Resource.Id.select_dialog_listview;
+			global::AiForms.Renderers.Droid.Resource.Id.selected = global::MuGet.Forms.Android.Resource.Id.selected;
+			global::AiForms.Renderers.Droid.Resource.Id.shellcontent_appbar = global::MuGet.Forms.Android.Resource.Id.shellcontent_appbar;
+			global::AiForms.Renderers.Droid.Resource.Id.shellcontent_toolbar = global::MuGet.Forms.Android.Resource.Id.shellcontent_toolbar;
+			global::AiForms.Renderers.Droid.Resource.Id.shortcut = global::MuGet.Forms.Android.Resource.Id.shortcut;
+			global::AiForms.Renderers.Droid.Resource.Id.showCustom = global::MuGet.Forms.Android.Resource.Id.showCustom;
+			global::AiForms.Renderers.Droid.Resource.Id.showHome = global::MuGet.Forms.Android.Resource.Id.showHome;
+			global::AiForms.Renderers.Droid.Resource.Id.showTitle = global::MuGet.Forms.Android.Resource.Id.showTitle;
+			global::AiForms.Renderers.Droid.Resource.Id.smallLabel = global::MuGet.Forms.Android.Resource.Id.smallLabel;
+			global::AiForms.Renderers.Droid.Resource.Id.snackbar_action = global::MuGet.Forms.Android.Resource.Id.snackbar_action;
+			global::AiForms.Renderers.Droid.Resource.Id.snackbar_text = global::MuGet.Forms.Android.Resource.Id.snackbar_text;
+			global::AiForms.Renderers.Droid.Resource.Id.snap = global::MuGet.Forms.Android.Resource.Id.snap;
+			global::AiForms.Renderers.Droid.Resource.Id.snapMargins = global::MuGet.Forms.Android.Resource.Id.snapMargins;
+			global::AiForms.Renderers.Droid.Resource.Id.spacer = global::MuGet.Forms.Android.Resource.Id.spacer;
+			global::AiForms.Renderers.Droid.Resource.Id.split_action_bar = global::MuGet.Forms.Android.Resource.Id.split_action_bar;
+			global::AiForms.Renderers.Droid.Resource.Id.src_atop = global::MuGet.Forms.Android.Resource.Id.src_atop;
+			global::AiForms.Renderers.Droid.Resource.Id.src_in = global::MuGet.Forms.Android.Resource.Id.src_in;
+			global::AiForms.Renderers.Droid.Resource.Id.src_over = global::MuGet.Forms.Android.Resource.Id.src_over;
+			global::AiForms.Renderers.Droid.Resource.Id.start = global::MuGet.Forms.Android.Resource.Id.start;
+			global::AiForms.Renderers.Droid.Resource.Id.status_bar_latest_event_content = global::MuGet.Forms.Android.Resource.Id.status_bar_latest_event_content;
+			global::AiForms.Renderers.Droid.Resource.Id.stretch = global::MuGet.Forms.Android.Resource.Id.stretch;
+			global::AiForms.Renderers.Droid.Resource.Id.submenuarrow = global::MuGet.Forms.Android.Resource.Id.submenuarrow;
+			global::AiForms.Renderers.Droid.Resource.Id.submit_area = global::MuGet.Forms.Android.Resource.Id.submit_area;
+			global::AiForms.Renderers.Droid.Resource.Id.tabMode = global::MuGet.Forms.Android.Resource.Id.tabMode;
+			global::AiForms.Renderers.Droid.Resource.Id.tag_transition_group = global::MuGet.Forms.Android.Resource.Id.tag_transition_group;
+			global::AiForms.Renderers.Droid.Resource.Id.tag_unhandled_key_event_manager = global::MuGet.Forms.Android.Resource.Id.tag_unhandled_key_event_manager;
+			global::AiForms.Renderers.Droid.Resource.Id.tag_unhandled_key_listeners = global::MuGet.Forms.Android.Resource.Id.tag_unhandled_key_listeners;
+			global::AiForms.Renderers.Droid.Resource.Id.text = global::MuGet.Forms.Android.Resource.Id.text;
+			global::AiForms.Renderers.Droid.Resource.Id.text2 = global::MuGet.Forms.Android.Resource.Id.text2;
+			global::AiForms.Renderers.Droid.Resource.Id.textSpacerNoButtons = global::MuGet.Forms.Android.Resource.Id.textSpacerNoButtons;
+			global::AiForms.Renderers.Droid.Resource.Id.textSpacerNoTitle = global::MuGet.Forms.Android.Resource.Id.textSpacerNoTitle;
+			global::AiForms.Renderers.Droid.Resource.Id.textStart = global::MuGet.Forms.Android.Resource.Id.textStart;
+			global::AiForms.Renderers.Droid.Resource.Id.text_input_password_toggle = global::MuGet.Forms.Android.Resource.Id.text_input_password_toggle;
+			global::AiForms.Renderers.Droid.Resource.Id.textinput_counter = global::MuGet.Forms.Android.Resource.Id.textinput_counter;
+			global::AiForms.Renderers.Droid.Resource.Id.textinput_error = global::MuGet.Forms.Android.Resource.Id.textinput_error;
+			global::AiForms.Renderers.Droid.Resource.Id.textinput_helper_text = global::MuGet.Forms.Android.Resource.Id.textinput_helper_text;
+			global::AiForms.Renderers.Droid.Resource.Id.time = global::MuGet.Forms.Android.Resource.Id.time;
+			global::AiForms.Renderers.Droid.Resource.Id.title = global::MuGet.Forms.Android.Resource.Id.title;
+			global::AiForms.Renderers.Droid.Resource.Id.titleDividerNoCustom = global::MuGet.Forms.Android.Resource.Id.titleDividerNoCustom;
+			global::AiForms.Renderers.Droid.Resource.Id.title_template = global::MuGet.Forms.Android.Resource.Id.title_template;
+			global::AiForms.Renderers.Droid.Resource.Id.top = global::MuGet.Forms.Android.Resource.Id.top;
+			global::AiForms.Renderers.Droid.Resource.Id.topPanel = global::MuGet.Forms.Android.Resource.Id.topPanel;
+			global::AiForms.Renderers.Droid.Resource.Id.touch_outside = global::MuGet.Forms.Android.Resource.Id.touch_outside;
+			global::AiForms.Renderers.Droid.Resource.Id.transition_current_scene = global::MuGet.Forms.Android.Resource.Id.transition_current_scene;
+			global::AiForms.Renderers.Droid.Resource.Id.transition_layout_save = global::MuGet.Forms.Android.Resource.Id.transition_layout_save;
+			global::AiForms.Renderers.Droid.Resource.Id.transition_position = global::MuGet.Forms.Android.Resource.Id.transition_position;
+			global::AiForms.Renderers.Droid.Resource.Id.transition_scene_layoutid_cache = global::MuGet.Forms.Android.Resource.Id.transition_scene_layoutid_cache;
+			global::AiForms.Renderers.Droid.Resource.Id.transition_transform = global::MuGet.Forms.Android.Resource.Id.transition_transform;
+			global::AiForms.Renderers.Droid.Resource.Id.uniform = global::MuGet.Forms.Android.Resource.Id.uniform;
+			global::AiForms.Renderers.Droid.Resource.Id.unlabeled = global::MuGet.Forms.Android.Resource.Id.unlabeled;
+			global::AiForms.Renderers.Droid.Resource.Id.up = global::MuGet.Forms.Android.Resource.Id.up;
+			global::AiForms.Renderers.Droid.Resource.Id.useLogo = global::MuGet.Forms.Android.Resource.Id.useLogo;
+			global::AiForms.Renderers.Droid.Resource.Id.view_offset_helper = global::MuGet.Forms.Android.Resource.Id.view_offset_helper;
+			global::AiForms.Renderers.Droid.Resource.Id.visible = global::MuGet.Forms.Android.Resource.Id.visible;
+			global::AiForms.Renderers.Droid.Resource.Id.volume_item_container = global::MuGet.Forms.Android.Resource.Id.volume_item_container;
+			global::AiForms.Renderers.Droid.Resource.Id.withText = global::MuGet.Forms.Android.Resource.Id.withText;
+			global::AiForms.Renderers.Droid.Resource.Id.wrap_content = global::MuGet.Forms.Android.Resource.Id.wrap_content;
+			global::AiForms.Renderers.Droid.Resource.Integer.abc_config_activityDefaultDur = global::MuGet.Forms.Android.Resource.Integer.abc_config_activityDefaultDur;
+			global::AiForms.Renderers.Droid.Resource.Integer.abc_config_activityShortDur = global::MuGet.Forms.Android.Resource.Integer.abc_config_activityShortDur;
+			global::AiForms.Renderers.Droid.Resource.Integer.app_bar_elevation_anim_duration = global::MuGet.Forms.Android.Resource.Integer.app_bar_elevation_anim_duration;
+			global::AiForms.Renderers.Droid.Resource.Integer.bottom_sheet_slide_duration = global::MuGet.Forms.Android.Resource.Integer.bottom_sheet_slide_duration;
+			global::AiForms.Renderers.Droid.Resource.Integer.cancel_button_image_alpha = global::MuGet.Forms.Android.Resource.Integer.cancel_button_image_alpha;
+			global::AiForms.Renderers.Droid.Resource.Integer.config_tooltipAnimTime = global::MuGet.Forms.Android.Resource.Integer.config_tooltipAnimTime;
+			global::AiForms.Renderers.Droid.Resource.Integer.design_snackbar_text_max_lines = global::MuGet.Forms.Android.Resource.Integer.design_snackbar_text_max_lines;
+			global::AiForms.Renderers.Droid.Resource.Integer.design_tab_indicator_anim_duration_ms = global::MuGet.Forms.Android.Resource.Integer.design_tab_indicator_anim_duration_ms;
+			global::AiForms.Renderers.Droid.Resource.Integer.hide_password_duration = global::MuGet.Forms.Android.Resource.Integer.hide_password_duration;
+			global::AiForms.Renderers.Droid.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms = global::MuGet.Forms.Android.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms;
+			global::AiForms.Renderers.Droid.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms = global::MuGet.Forms.Android.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms;
+			global::AiForms.Renderers.Droid.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms = global::MuGet.Forms.Android.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms;
+			global::AiForms.Renderers.Droid.Resource.Integer.mr_update_routes_delay_ms = global::MuGet.Forms.Android.Resource.Integer.mr_update_routes_delay_ms;
+			global::AiForms.Renderers.Droid.Resource.Integer.mtrl_btn_anim_delay_ms = global::MuGet.Forms.Android.Resource.Integer.mtrl_btn_anim_delay_ms;
+			global::AiForms.Renderers.Droid.Resource.Integer.mtrl_btn_anim_duration_ms = global::MuGet.Forms.Android.Resource.Integer.mtrl_btn_anim_duration_ms;
+			global::AiForms.Renderers.Droid.Resource.Integer.mtrl_chip_anim_duration = global::MuGet.Forms.Android.Resource.Integer.mtrl_chip_anim_duration;
+			global::AiForms.Renderers.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::MuGet.Forms.Android.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
+			global::AiForms.Renderers.Droid.Resource.Integer.show_password_duration = global::MuGet.Forms.Android.Resource.Integer.show_password_duration;
+			global::AiForms.Renderers.Droid.Resource.Integer.status_bar_notification_info_maxnum = global::MuGet.Forms.Android.Resource.Integer.status_bar_notification_info_maxnum;
+			global::AiForms.Renderers.Droid.Resource.Interpolator.mr_fast_out_slow_in = global::MuGet.Forms.Android.Resource.Interpolator.mr_fast_out_slow_in;
+			global::AiForms.Renderers.Droid.Resource.Interpolator.mr_linear_out_slow_in = global::MuGet.Forms.Android.Resource.Interpolator.mr_linear_out_slow_in;
+			global::AiForms.Renderers.Droid.Resource.Interpolator.mtrl_fast_out_linear_in = global::MuGet.Forms.Android.Resource.Interpolator.mtrl_fast_out_linear_in;
+			global::AiForms.Renderers.Droid.Resource.Interpolator.mtrl_fast_out_slow_in = global::MuGet.Forms.Android.Resource.Interpolator.mtrl_fast_out_slow_in;
+			global::AiForms.Renderers.Droid.Resource.Interpolator.mtrl_linear = global::MuGet.Forms.Android.Resource.Interpolator.mtrl_linear;
+			global::AiForms.Renderers.Droid.Resource.Interpolator.mtrl_linear_out_slow_in = global::MuGet.Forms.Android.Resource.Interpolator.mtrl_linear_out_slow_in;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_action_bar_title_item = global::MuGet.Forms.Android.Resource.Layout.abc_action_bar_title_item;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_action_bar_up_container = global::MuGet.Forms.Android.Resource.Layout.abc_action_bar_up_container;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_action_menu_item_layout = global::MuGet.Forms.Android.Resource.Layout.abc_action_menu_item_layout;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_action_menu_layout = global::MuGet.Forms.Android.Resource.Layout.abc_action_menu_layout;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_action_mode_bar = global::MuGet.Forms.Android.Resource.Layout.abc_action_mode_bar;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_action_mode_close_item_material = global::MuGet.Forms.Android.Resource.Layout.abc_action_mode_close_item_material;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_activity_chooser_view = global::MuGet.Forms.Android.Resource.Layout.abc_activity_chooser_view;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_activity_chooser_view_list_item = global::MuGet.Forms.Android.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_alert_dialog_button_bar_material = global::MuGet.Forms.Android.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_alert_dialog_material = global::MuGet.Forms.Android.Resource.Layout.abc_alert_dialog_material;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_alert_dialog_title_material = global::MuGet.Forms.Android.Resource.Layout.abc_alert_dialog_title_material;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_cascading_menu_item_layout = global::MuGet.Forms.Android.Resource.Layout.abc_cascading_menu_item_layout;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_dialog_title_material = global::MuGet.Forms.Android.Resource.Layout.abc_dialog_title_material;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_expanded_menu_layout = global::MuGet.Forms.Android.Resource.Layout.abc_expanded_menu_layout;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_list_menu_item_checkbox = global::MuGet.Forms.Android.Resource.Layout.abc_list_menu_item_checkbox;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_list_menu_item_icon = global::MuGet.Forms.Android.Resource.Layout.abc_list_menu_item_icon;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_list_menu_item_layout = global::MuGet.Forms.Android.Resource.Layout.abc_list_menu_item_layout;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_list_menu_item_radio = global::MuGet.Forms.Android.Resource.Layout.abc_list_menu_item_radio;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_popup_menu_header_item_layout = global::MuGet.Forms.Android.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_popup_menu_item_layout = global::MuGet.Forms.Android.Resource.Layout.abc_popup_menu_item_layout;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_screen_content_include = global::MuGet.Forms.Android.Resource.Layout.abc_screen_content_include;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_screen_simple = global::MuGet.Forms.Android.Resource.Layout.abc_screen_simple;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode = global::MuGet.Forms.Android.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_screen_toolbar = global::MuGet.Forms.Android.Resource.Layout.abc_screen_toolbar;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line = global::MuGet.Forms.Android.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_search_view = global::MuGet.Forms.Android.Resource.Layout.abc_search_view;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_select_dialog_material = global::MuGet.Forms.Android.Resource.Layout.abc_select_dialog_material;
+			global::AiForms.Renderers.Droid.Resource.Layout.abc_tooltip = global::MuGet.Forms.Android.Resource.Layout.abc_tooltip;
+			global::AiForms.Renderers.Droid.Resource.Layout.BottomTabLayout = global::MuGet.Forms.Android.Resource.Layout.BottomTabLayout;
+			global::AiForms.Renderers.Droid.Resource.Layout.browser_actions_context_menu_page = global::MuGet.Forms.Android.Resource.Layout.browser_actions_context_menu_page;
+			global::AiForms.Renderers.Droid.Resource.Layout.browser_actions_context_menu_row = global::MuGet.Forms.Android.Resource.Layout.browser_actions_context_menu_row;
+			global::AiForms.Renderers.Droid.Resource.Layout.CellBaseView = global::MuGet.Forms.Android.Resource.Layout.CellBaseView;
+			global::AiForms.Renderers.Droid.Resource.Layout.ContentCell = global::MuGet.Forms.Android.Resource.Layout.ContentCell;
+			global::AiForms.Renderers.Droid.Resource.Layout.design_bottom_navigation_item = global::MuGet.Forms.Android.Resource.Layout.design_bottom_navigation_item;
+			global::AiForms.Renderers.Droid.Resource.Layout.design_bottom_sheet_dialog = global::MuGet.Forms.Android.Resource.Layout.design_bottom_sheet_dialog;
+			global::AiForms.Renderers.Droid.Resource.Layout.design_layout_snackbar = global::MuGet.Forms.Android.Resource.Layout.design_layout_snackbar;
+			global::AiForms.Renderers.Droid.Resource.Layout.design_layout_snackbar_include = global::MuGet.Forms.Android.Resource.Layout.design_layout_snackbar_include;
+			global::AiForms.Renderers.Droid.Resource.Layout.design_layout_tab_icon = global::MuGet.Forms.Android.Resource.Layout.design_layout_tab_icon;
+			global::AiForms.Renderers.Droid.Resource.Layout.design_layout_tab_text = global::MuGet.Forms.Android.Resource.Layout.design_layout_tab_text;
+			global::AiForms.Renderers.Droid.Resource.Layout.design_menu_item_action_area = global::MuGet.Forms.Android.Resource.Layout.design_menu_item_action_area;
+			global::AiForms.Renderers.Droid.Resource.Layout.design_navigation_item = global::MuGet.Forms.Android.Resource.Layout.design_navigation_item;
+			global::AiForms.Renderers.Droid.Resource.Layout.design_navigation_item_header = global::MuGet.Forms.Android.Resource.Layout.design_navigation_item_header;
+			global::AiForms.Renderers.Droid.Resource.Layout.design_navigation_item_separator = global::MuGet.Forms.Android.Resource.Layout.design_navigation_item_separator;
+			global::AiForms.Renderers.Droid.Resource.Layout.design_navigation_item_subheader = global::MuGet.Forms.Android.Resource.Layout.design_navigation_item_subheader;
+			global::AiForms.Renderers.Droid.Resource.Layout.design_navigation_menu = global::MuGet.Forms.Android.Resource.Layout.design_navigation_menu;
+			global::AiForms.Renderers.Droid.Resource.Layout.design_navigation_menu_item = global::MuGet.Forms.Android.Resource.Layout.design_navigation_menu_item;
+			global::AiForms.Renderers.Droid.Resource.Layout.design_text_input_password_icon = global::MuGet.Forms.Android.Resource.Layout.design_text_input_password_icon;
+			global::AiForms.Renderers.Droid.Resource.Layout.FlyoutContent = global::MuGet.Forms.Android.Resource.Layout.FlyoutContent;
+			global::AiForms.Renderers.Droid.Resource.Layout.FooterCell = global::MuGet.Forms.Android.Resource.Layout.FooterCell;
+			global::AiForms.Renderers.Droid.Resource.Layout.HeaderCell = global::MuGet.Forms.Android.Resource.Layout.HeaderCell;
+			global::AiForms.Renderers.Droid.Resource.Layout.mr_cast_dialog = global::MuGet.Forms.Android.Resource.Layout.mr_cast_dialog;
+			global::AiForms.Renderers.Droid.Resource.Layout.mr_cast_group_item = global::MuGet.Forms.Android.Resource.Layout.mr_cast_group_item;
+			global::AiForms.Renderers.Droid.Resource.Layout.mr_cast_group_volume_item = global::MuGet.Forms.Android.Resource.Layout.mr_cast_group_volume_item;
+			global::AiForms.Renderers.Droid.Resource.Layout.mr_cast_media_metadata = global::MuGet.Forms.Android.Resource.Layout.mr_cast_media_metadata;
+			global::AiForms.Renderers.Droid.Resource.Layout.mr_cast_route_item = global::MuGet.Forms.Android.Resource.Layout.mr_cast_route_item;
+			global::AiForms.Renderers.Droid.Resource.Layout.mr_chooser_dialog = global::MuGet.Forms.Android.Resource.Layout.mr_chooser_dialog;
+			global::AiForms.Renderers.Droid.Resource.Layout.mr_chooser_list_item = global::MuGet.Forms.Android.Resource.Layout.mr_chooser_list_item;
+			global::AiForms.Renderers.Droid.Resource.Layout.mr_controller_material_dialog_b = global::MuGet.Forms.Android.Resource.Layout.mr_controller_material_dialog_b;
+			global::AiForms.Renderers.Droid.Resource.Layout.mr_controller_volume_item = global::MuGet.Forms.Android.Resource.Layout.mr_controller_volume_item;
+			global::AiForms.Renderers.Droid.Resource.Layout.mr_dialog_header_item = global::MuGet.Forms.Android.Resource.Layout.mr_dialog_header_item;
+			global::AiForms.Renderers.Droid.Resource.Layout.mr_picker_dialog = global::MuGet.Forms.Android.Resource.Layout.mr_picker_dialog;
+			global::AiForms.Renderers.Droid.Resource.Layout.mr_picker_route_item = global::MuGet.Forms.Android.Resource.Layout.mr_picker_route_item;
+			global::AiForms.Renderers.Droid.Resource.Layout.mr_playback_control = global::MuGet.Forms.Android.Resource.Layout.mr_playback_control;
+			global::AiForms.Renderers.Droid.Resource.Layout.mr_volume_control = global::MuGet.Forms.Android.Resource.Layout.mr_volume_control;
+			global::AiForms.Renderers.Droid.Resource.Layout.mtrl_layout_snackbar = global::MuGet.Forms.Android.Resource.Layout.mtrl_layout_snackbar;
+			global::AiForms.Renderers.Droid.Resource.Layout.mtrl_layout_snackbar_include = global::MuGet.Forms.Android.Resource.Layout.mtrl_layout_snackbar_include;
+			global::AiForms.Renderers.Droid.Resource.Layout.notification_action = global::MuGet.Forms.Android.Resource.Layout.notification_action;
+			global::AiForms.Renderers.Droid.Resource.Layout.notification_action_tombstone = global::MuGet.Forms.Android.Resource.Layout.notification_action_tombstone;
+			global::AiForms.Renderers.Droid.Resource.Layout.notification_media_action = global::MuGet.Forms.Android.Resource.Layout.notification_media_action;
+			global::AiForms.Renderers.Droid.Resource.Layout.notification_media_cancel_action = global::MuGet.Forms.Android.Resource.Layout.notification_media_cancel_action;
+			global::AiForms.Renderers.Droid.Resource.Layout.notification_template_big_media = global::MuGet.Forms.Android.Resource.Layout.notification_template_big_media;
+			global::AiForms.Renderers.Droid.Resource.Layout.notification_template_big_media_custom = global::MuGet.Forms.Android.Resource.Layout.notification_template_big_media_custom;
+			global::AiForms.Renderers.Droid.Resource.Layout.notification_template_big_media_narrow = global::MuGet.Forms.Android.Resource.Layout.notification_template_big_media_narrow;
+			global::AiForms.Renderers.Droid.Resource.Layout.notification_template_big_media_narrow_custom = global::MuGet.Forms.Android.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::AiForms.Renderers.Droid.Resource.Layout.notification_template_custom_big = global::MuGet.Forms.Android.Resource.Layout.notification_template_custom_big;
+			global::AiForms.Renderers.Droid.Resource.Layout.notification_template_icon_group = global::MuGet.Forms.Android.Resource.Layout.notification_template_icon_group;
+			global::AiForms.Renderers.Droid.Resource.Layout.notification_template_lines_media = global::MuGet.Forms.Android.Resource.Layout.notification_template_lines_media;
+			global::AiForms.Renderers.Droid.Resource.Layout.notification_template_media = global::MuGet.Forms.Android.Resource.Layout.notification_template_media;
+			global::AiForms.Renderers.Droid.Resource.Layout.notification_template_media_custom = global::MuGet.Forms.Android.Resource.Layout.notification_template_media_custom;
+			global::AiForms.Renderers.Droid.Resource.Layout.notification_template_part_chronometer = global::MuGet.Forms.Android.Resource.Layout.notification_template_part_chronometer;
+			global::AiForms.Renderers.Droid.Resource.Layout.notification_template_part_time = global::MuGet.Forms.Android.Resource.Layout.notification_template_part_time;
+			global::AiForms.Renderers.Droid.Resource.Layout.RootLayout = global::MuGet.Forms.Android.Resource.Layout.RootLayout;
+			global::AiForms.Renderers.Droid.Resource.Layout.select_dialog_item_material = global::MuGet.Forms.Android.Resource.Layout.select_dialog_item_material;
+			global::AiForms.Renderers.Droid.Resource.Layout.select_dialog_multichoice_material = global::MuGet.Forms.Android.Resource.Layout.select_dialog_multichoice_material;
+			global::AiForms.Renderers.Droid.Resource.Layout.select_dialog_singlechoice_material = global::MuGet.Forms.Android.Resource.Layout.select_dialog_singlechoice_material;
+			global::AiForms.Renderers.Droid.Resource.Layout.ShellContent = global::MuGet.Forms.Android.Resource.Layout.ShellContent;
+			global::AiForms.Renderers.Droid.Resource.Layout.support_simple_spinner_dropdown_item = global::MuGet.Forms.Android.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::AiForms.Renderers.Droid.Resource.String.abc_action_bar_home_description = global::MuGet.Forms.Android.Resource.String.abc_action_bar_home_description;
+			global::AiForms.Renderers.Droid.Resource.String.abc_action_bar_up_description = global::MuGet.Forms.Android.Resource.String.abc_action_bar_up_description;
+			global::AiForms.Renderers.Droid.Resource.String.abc_action_menu_overflow_description = global::MuGet.Forms.Android.Resource.String.abc_action_menu_overflow_description;
+			global::AiForms.Renderers.Droid.Resource.String.abc_action_mode_done = global::MuGet.Forms.Android.Resource.String.abc_action_mode_done;
+			global::AiForms.Renderers.Droid.Resource.String.abc_activity_chooser_view_see_all = global::MuGet.Forms.Android.Resource.String.abc_activity_chooser_view_see_all;
+			global::AiForms.Renderers.Droid.Resource.String.abc_activitychooserview_choose_application = global::MuGet.Forms.Android.Resource.String.abc_activitychooserview_choose_application;
+			global::AiForms.Renderers.Droid.Resource.String.abc_capital_off = global::MuGet.Forms.Android.Resource.String.abc_capital_off;
+			global::AiForms.Renderers.Droid.Resource.String.abc_capital_on = global::MuGet.Forms.Android.Resource.String.abc_capital_on;
+			global::AiForms.Renderers.Droid.Resource.String.abc_font_family_body_1_material = global::MuGet.Forms.Android.Resource.String.abc_font_family_body_1_material;
+			global::AiForms.Renderers.Droid.Resource.String.abc_font_family_body_2_material = global::MuGet.Forms.Android.Resource.String.abc_font_family_body_2_material;
+			global::AiForms.Renderers.Droid.Resource.String.abc_font_family_button_material = global::MuGet.Forms.Android.Resource.String.abc_font_family_button_material;
+			global::AiForms.Renderers.Droid.Resource.String.abc_font_family_caption_material = global::MuGet.Forms.Android.Resource.String.abc_font_family_caption_material;
+			global::AiForms.Renderers.Droid.Resource.String.abc_font_family_display_1_material = global::MuGet.Forms.Android.Resource.String.abc_font_family_display_1_material;
+			global::AiForms.Renderers.Droid.Resource.String.abc_font_family_display_2_material = global::MuGet.Forms.Android.Resource.String.abc_font_family_display_2_material;
+			global::AiForms.Renderers.Droid.Resource.String.abc_font_family_display_3_material = global::MuGet.Forms.Android.Resource.String.abc_font_family_display_3_material;
+			global::AiForms.Renderers.Droid.Resource.String.abc_font_family_display_4_material = global::MuGet.Forms.Android.Resource.String.abc_font_family_display_4_material;
+			global::AiForms.Renderers.Droid.Resource.String.abc_font_family_headline_material = global::MuGet.Forms.Android.Resource.String.abc_font_family_headline_material;
+			global::AiForms.Renderers.Droid.Resource.String.abc_font_family_menu_material = global::MuGet.Forms.Android.Resource.String.abc_font_family_menu_material;
+			global::AiForms.Renderers.Droid.Resource.String.abc_font_family_subhead_material = global::MuGet.Forms.Android.Resource.String.abc_font_family_subhead_material;
+			global::AiForms.Renderers.Droid.Resource.String.abc_font_family_title_material = global::MuGet.Forms.Android.Resource.String.abc_font_family_title_material;
+			global::AiForms.Renderers.Droid.Resource.String.abc_menu_alt_shortcut_label = global::MuGet.Forms.Android.Resource.String.abc_menu_alt_shortcut_label;
+			global::AiForms.Renderers.Droid.Resource.String.abc_menu_ctrl_shortcut_label = global::MuGet.Forms.Android.Resource.String.abc_menu_ctrl_shortcut_label;
+			global::AiForms.Renderers.Droid.Resource.String.abc_menu_delete_shortcut_label = global::MuGet.Forms.Android.Resource.String.abc_menu_delete_shortcut_label;
+			global::AiForms.Renderers.Droid.Resource.String.abc_menu_enter_shortcut_label = global::MuGet.Forms.Android.Resource.String.abc_menu_enter_shortcut_label;
+			global::AiForms.Renderers.Droid.Resource.String.abc_menu_function_shortcut_label = global::MuGet.Forms.Android.Resource.String.abc_menu_function_shortcut_label;
+			global::AiForms.Renderers.Droid.Resource.String.abc_menu_meta_shortcut_label = global::MuGet.Forms.Android.Resource.String.abc_menu_meta_shortcut_label;
+			global::AiForms.Renderers.Droid.Resource.String.abc_menu_shift_shortcut_label = global::MuGet.Forms.Android.Resource.String.abc_menu_shift_shortcut_label;
+			global::AiForms.Renderers.Droid.Resource.String.abc_menu_space_shortcut_label = global::MuGet.Forms.Android.Resource.String.abc_menu_space_shortcut_label;
+			global::AiForms.Renderers.Droid.Resource.String.abc_menu_sym_shortcut_label = global::MuGet.Forms.Android.Resource.String.abc_menu_sym_shortcut_label;
+			global::AiForms.Renderers.Droid.Resource.String.abc_prepend_shortcut_label = global::MuGet.Forms.Android.Resource.String.abc_prepend_shortcut_label;
+			global::AiForms.Renderers.Droid.Resource.String.abc_search_hint = global::MuGet.Forms.Android.Resource.String.abc_search_hint;
+			global::AiForms.Renderers.Droid.Resource.String.abc_searchview_description_clear = global::MuGet.Forms.Android.Resource.String.abc_searchview_description_clear;
+			global::AiForms.Renderers.Droid.Resource.String.abc_searchview_description_query = global::MuGet.Forms.Android.Resource.String.abc_searchview_description_query;
+			global::AiForms.Renderers.Droid.Resource.String.abc_searchview_description_search = global::MuGet.Forms.Android.Resource.String.abc_searchview_description_search;
+			global::AiForms.Renderers.Droid.Resource.String.abc_searchview_description_submit = global::MuGet.Forms.Android.Resource.String.abc_searchview_description_submit;
+			global::AiForms.Renderers.Droid.Resource.String.abc_searchview_description_voice = global::MuGet.Forms.Android.Resource.String.abc_searchview_description_voice;
+			global::AiForms.Renderers.Droid.Resource.String.abc_shareactionprovider_share_with = global::MuGet.Forms.Android.Resource.String.abc_shareactionprovider_share_with;
+			global::AiForms.Renderers.Droid.Resource.String.abc_shareactionprovider_share_with_application = global::MuGet.Forms.Android.Resource.String.abc_shareactionprovider_share_with_application;
+			global::AiForms.Renderers.Droid.Resource.String.abc_toolbar_collapse_description = global::MuGet.Forms.Android.Resource.String.abc_toolbar_collapse_description;
+			global::AiForms.Renderers.Droid.Resource.String.appbar_scrolling_view_behavior = global::MuGet.Forms.Android.Resource.String.appbar_scrolling_view_behavior;
+			global::AiForms.Renderers.Droid.Resource.String.bottom_sheet_behavior = global::MuGet.Forms.Android.Resource.String.bottom_sheet_behavior;
+			global::AiForms.Renderers.Droid.Resource.String.character_counter_content_description = global::MuGet.Forms.Android.Resource.String.character_counter_content_description;
+			global::AiForms.Renderers.Droid.Resource.String.character_counter_pattern = global::MuGet.Forms.Android.Resource.String.character_counter_pattern;
+			global::AiForms.Renderers.Droid.Resource.String.fab_transformation_scrim_behavior = global::MuGet.Forms.Android.Resource.String.fab_transformation_scrim_behavior;
+			global::AiForms.Renderers.Droid.Resource.String.fab_transformation_sheet_behavior = global::MuGet.Forms.Android.Resource.String.fab_transformation_sheet_behavior;
+			global::AiForms.Renderers.Droid.Resource.String.hide_bottom_view_on_scroll_behavior = global::MuGet.Forms.Android.Resource.String.hide_bottom_view_on_scroll_behavior;
+			global::AiForms.Renderers.Droid.Resource.String.library_name = global::MuGet.Forms.Android.Resource.String.library_name;
+			global::AiForms.Renderers.Droid.Resource.String.mr_button_content_description = global::MuGet.Forms.Android.Resource.String.mr_button_content_description;
+			global::AiForms.Renderers.Droid.Resource.String.mr_cast_button_connected = global::MuGet.Forms.Android.Resource.String.mr_cast_button_connected;
+			global::AiForms.Renderers.Droid.Resource.String.mr_cast_button_connecting = global::MuGet.Forms.Android.Resource.String.mr_cast_button_connecting;
+			global::AiForms.Renderers.Droid.Resource.String.mr_cast_button_disconnected = global::MuGet.Forms.Android.Resource.String.mr_cast_button_disconnected;
+			global::AiForms.Renderers.Droid.Resource.String.mr_cast_dialog_title_view_placeholder = global::MuGet.Forms.Android.Resource.String.mr_cast_dialog_title_view_placeholder;
+			global::AiForms.Renderers.Droid.Resource.String.mr_chooser_searching = global::MuGet.Forms.Android.Resource.String.mr_chooser_searching;
+			global::AiForms.Renderers.Droid.Resource.String.mr_chooser_title = global::MuGet.Forms.Android.Resource.String.mr_chooser_title;
+			global::AiForms.Renderers.Droid.Resource.String.mr_controller_album_art = global::MuGet.Forms.Android.Resource.String.mr_controller_album_art;
+			global::AiForms.Renderers.Droid.Resource.String.mr_controller_casting_screen = global::MuGet.Forms.Android.Resource.String.mr_controller_casting_screen;
+			global::AiForms.Renderers.Droid.Resource.String.mr_controller_close_description = global::MuGet.Forms.Android.Resource.String.mr_controller_close_description;
+			global::AiForms.Renderers.Droid.Resource.String.mr_controller_collapse_group = global::MuGet.Forms.Android.Resource.String.mr_controller_collapse_group;
+			global::AiForms.Renderers.Droid.Resource.String.mr_controller_disconnect = global::MuGet.Forms.Android.Resource.String.mr_controller_disconnect;
+			global::AiForms.Renderers.Droid.Resource.String.mr_controller_expand_group = global::MuGet.Forms.Android.Resource.String.mr_controller_expand_group;
+			global::AiForms.Renderers.Droid.Resource.String.mr_controller_no_info_available = global::MuGet.Forms.Android.Resource.String.mr_controller_no_info_available;
+			global::AiForms.Renderers.Droid.Resource.String.mr_controller_no_media_selected = global::MuGet.Forms.Android.Resource.String.mr_controller_no_media_selected;
+			global::AiForms.Renderers.Droid.Resource.String.mr_controller_pause = global::MuGet.Forms.Android.Resource.String.mr_controller_pause;
+			global::AiForms.Renderers.Droid.Resource.String.mr_controller_play = global::MuGet.Forms.Android.Resource.String.mr_controller_play;
+			global::AiForms.Renderers.Droid.Resource.String.mr_controller_stop = global::MuGet.Forms.Android.Resource.String.mr_controller_stop;
+			global::AiForms.Renderers.Droid.Resource.String.mr_controller_stop_casting = global::MuGet.Forms.Android.Resource.String.mr_controller_stop_casting;
+			global::AiForms.Renderers.Droid.Resource.String.mr_controller_volume_slider = global::MuGet.Forms.Android.Resource.String.mr_controller_volume_slider;
+			global::AiForms.Renderers.Droid.Resource.String.mr_dialog_device_header = global::MuGet.Forms.Android.Resource.String.mr_dialog_device_header;
+			global::AiForms.Renderers.Droid.Resource.String.mr_dialog_route_header = global::MuGet.Forms.Android.Resource.String.mr_dialog_route_header;
+			global::AiForms.Renderers.Droid.Resource.String.mr_system_route_name = global::MuGet.Forms.Android.Resource.String.mr_system_route_name;
+			global::AiForms.Renderers.Droid.Resource.String.mr_user_route_category_name = global::MuGet.Forms.Android.Resource.String.mr_user_route_category_name;
+			global::AiForms.Renderers.Droid.Resource.String.mtrl_chip_close_icon_content_description = global::MuGet.Forms.Android.Resource.String.mtrl_chip_close_icon_content_description;
+			global::AiForms.Renderers.Droid.Resource.String.password_toggle_content_description = global::MuGet.Forms.Android.Resource.String.password_toggle_content_description;
+			global::AiForms.Renderers.Droid.Resource.String.path_password_eye = global::MuGet.Forms.Android.Resource.String.path_password_eye;
+			global::AiForms.Renderers.Droid.Resource.String.path_password_eye_mask_strike_through = global::MuGet.Forms.Android.Resource.String.path_password_eye_mask_strike_through;
+			global::AiForms.Renderers.Droid.Resource.String.path_password_eye_mask_visible = global::MuGet.Forms.Android.Resource.String.path_password_eye_mask_visible;
+			global::AiForms.Renderers.Droid.Resource.String.path_password_strike_through = global::MuGet.Forms.Android.Resource.String.path_password_strike_through;
+			global::AiForms.Renderers.Droid.Resource.String.search_menu_title = global::MuGet.Forms.Android.Resource.String.search_menu_title;
+			global::AiForms.Renderers.Droid.Resource.String.status_bar_notification_info_overflow = global::MuGet.Forms.Android.Resource.String.status_bar_notification_info_overflow;
+			global::AiForms.Renderers.Droid.Resource.Style.AlertDialog_AppCompat = global::MuGet.Forms.Android.Resource.Style.AlertDialog_AppCompat;
+			global::AiForms.Renderers.Droid.Resource.Style.AlertDialog_AppCompat_Light = global::MuGet.Forms.Android.Resource.Style.AlertDialog_AppCompat_Light;
+			global::AiForms.Renderers.Droid.Resource.Style.Animation_AppCompat_Dialog = global::MuGet.Forms.Android.Resource.Style.Animation_AppCompat_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Animation_AppCompat_DropDownUp = global::MuGet.Forms.Android.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::AiForms.Renderers.Droid.Resource.Style.Animation_AppCompat_Tooltip = global::MuGet.Forms.Android.Resource.Style.Animation_AppCompat_Tooltip;
+			global::AiForms.Renderers.Droid.Resource.Style.Animation_Design_BottomSheetDialog = global::MuGet.Forms.Android.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_AlertDialog_AppCompat = global::MuGet.Forms.Android.Resource.Style.Base_AlertDialog_AppCompat;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light = global::MuGet.Forms.Android.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Animation_AppCompat_Dialog = global::MuGet.Forms.Android.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::MuGet.Forms.Android.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip = global::MuGet.Forms.Android.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_CardView = global::MuGet.Forms.Android.Resource.Style.Base_CardView;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat = global::MuGet.Forms.Android.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::MuGet.Forms.Android.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::MuGet.Forms.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_AppCompat = global::MuGet.Forms.Android.Resource.Style.Base_Theme_AppCompat;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::MuGet.Forms.Android.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_AppCompat_Dialog = global::MuGet.Forms.Android.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::MuGet.Forms.Android.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::MuGet.Forms.Android.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::MuGet.Forms.Android.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::MuGet.Forms.Android.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_AppCompat_Light = global::MuGet.Forms.Android.Resource.Style.Base_Theme_AppCompat_Light;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::MuGet.Forms.Android.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::MuGet.Forms.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::MuGet.Forms.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::MuGet.Forms.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::MuGet.Forms.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::MuGet.Forms.Android.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_MaterialComponents = global::MuGet.Forms.Android.Resource.Style.Base_Theme_MaterialComponents;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_MaterialComponents_Bridge = global::MuGet.Forms.Android.Resource.Style.Base_Theme_MaterialComponents_Bridge;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_MaterialComponents_CompactMenu = global::MuGet.Forms.Android.Resource.Style.Base_Theme_MaterialComponents_CompactMenu;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog = global::MuGet.Forms.Android.Resource.Style.Base_Theme_MaterialComponents_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert = global::MuGet.Forms.Android.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize = global::MuGet.Forms.Android.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth = global::MuGet.Forms.Android.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge = global::MuGet.Forms.Android.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_MaterialComponents_Light = global::MuGet.Forms.Android.Resource.Style.Base_Theme_MaterialComponents_Light;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge = global::MuGet.Forms.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar = global::MuGet.Forms.Android.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::MuGet.Forms.Android.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog = global::MuGet.Forms.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert = global::MuGet.Forms.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize = global::MuGet.Forms.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth = global::MuGet.Forms.Android.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge = global::MuGet.Forms.Android.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_ThemeOverlay_AppCompat = global::MuGet.Forms.Android.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::MuGet.Forms.Android.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::MuGet.Forms.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::MuGet.Forms.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::MuGet.Forms.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::MuGet.Forms.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::MuGet.Forms.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog = global::MuGet.Forms.Android.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert = global::MuGet.Forms.Android.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V14_Theme_MaterialComponents = global::MuGet.Forms.Android.Resource.Style.Base_V14_Theme_MaterialComponents;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge = global::MuGet.Forms.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog = global::MuGet.Forms.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light = global::MuGet.Forms.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Light;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge = global::MuGet.Forms.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::MuGet.Forms.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog = global::MuGet.Forms.Android.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog = global::MuGet.Forms.Android.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert = global::MuGet.Forms.Android.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V21_Theme_AppCompat = global::MuGet.Forms.Android.Resource.Style.Base_V21_Theme_AppCompat;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::MuGet.Forms.Android.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light = global::MuGet.Forms.Android.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::MuGet.Forms.Android.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::MuGet.Forms.Android.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V22_Theme_AppCompat = global::MuGet.Forms.Android.Resource.Style.Base_V22_Theme_AppCompat;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light = global::MuGet.Forms.Android.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V23_Theme_AppCompat = global::MuGet.Forms.Android.Resource.Style.Base_V23_Theme_AppCompat;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light = global::MuGet.Forms.Android.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V26_Theme_AppCompat = global::MuGet.Forms.Android.Resource.Style.Base_V26_Theme_AppCompat;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light = global::MuGet.Forms.Android.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::MuGet.Forms.Android.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V28_Theme_AppCompat = global::MuGet.Forms.Android.Resource.Style.Base_V28_Theme_AppCompat;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V28_Theme_AppCompat_Light = global::MuGet.Forms.Android.Resource.Style.Base_V28_Theme_AppCompat_Light;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V7_Theme_AppCompat = global::MuGet.Forms.Android.Resource.Style.Base_V7_Theme_AppCompat;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::MuGet.Forms.Android.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light = global::MuGet.Forms.Android.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::MuGet.Forms.Android.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::MuGet.Forms.Android.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::MuGet.Forms.Android.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::MuGet.Forms.Android.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::MuGet.Forms.Android.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_Button = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_Button;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_EditText = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_ListView = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_SearchView = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_Spinner = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::MuGet.Forms.Android.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_Design_TabLayout = global::MuGet.Forms.Android.Resource.Style.Base_Widget_Design_TabLayout;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_MaterialComponents_Chip = global::MuGet.Forms.Android.Resource.Style.Base_Widget_MaterialComponents_Chip;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText = global::MuGet.Forms.Android.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText;
+			global::AiForms.Renderers.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout = global::MuGet.Forms.Android.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout;
+			global::AiForms.Renderers.Droid.Resource.Style.CardView = global::MuGet.Forms.Android.Resource.Style.CardView;
+			global::AiForms.Renderers.Droid.Resource.Style.CardView_Dark = global::MuGet.Forms.Android.Resource.Style.CardView_Dark;
+			global::AiForms.Renderers.Droid.Resource.Style.CardView_Light = global::MuGet.Forms.Android.Resource.Style.CardView_Light;
+			global::AiForms.Renderers.Droid.Resource.Style.Platform_AppCompat = global::MuGet.Forms.Android.Resource.Style.Platform_AppCompat;
+			global::AiForms.Renderers.Droid.Resource.Style.Platform_AppCompat_Light = global::MuGet.Forms.Android.Resource.Style.Platform_AppCompat_Light;
+			global::AiForms.Renderers.Droid.Resource.Style.Platform_MaterialComponents = global::MuGet.Forms.Android.Resource.Style.Platform_MaterialComponents;
+			global::AiForms.Renderers.Droid.Resource.Style.Platform_MaterialComponents_Dialog = global::MuGet.Forms.Android.Resource.Style.Platform_MaterialComponents_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Platform_MaterialComponents_Light = global::MuGet.Forms.Android.Resource.Style.Platform_MaterialComponents_Light;
+			global::AiForms.Renderers.Droid.Resource.Style.Platform_MaterialComponents_Light_Dialog = global::MuGet.Forms.Android.Resource.Style.Platform_MaterialComponents_Light_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat = global::MuGet.Forms.Android.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::AiForms.Renderers.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::MuGet.Forms.Android.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::AiForms.Renderers.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::MuGet.Forms.Android.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::AiForms.Renderers.Droid.Resource.Style.Platform_V21_AppCompat = global::MuGet.Forms.Android.Resource.Style.Platform_V21_AppCompat;
+			global::AiForms.Renderers.Droid.Resource.Style.Platform_V21_AppCompat_Light = global::MuGet.Forms.Android.Resource.Style.Platform_V21_AppCompat_Light;
+			global::AiForms.Renderers.Droid.Resource.Style.Platform_V25_AppCompat = global::MuGet.Forms.Android.Resource.Style.Platform_V25_AppCompat;
+			global::AiForms.Renderers.Droid.Resource.Style.Platform_V25_AppCompat_Light = global::MuGet.Forms.Android.Resource.Style.Platform_V25_AppCompat_Light;
+			global::AiForms.Renderers.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner = global::MuGet.Forms.Android.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::AiForms.Renderers.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::MuGet.Forms.Android.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::AiForms.Renderers.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::MuGet.Forms.Android.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::AiForms.Renderers.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::MuGet.Forms.Android.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::AiForms.Renderers.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::MuGet.Forms.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::AiForms.Renderers.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::MuGet.Forms.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::AiForms.Renderers.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = global::MuGet.Forms.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut;
+			global::AiForms.Renderers.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = global::MuGet.Forms.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow;
+			global::AiForms.Renderers.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::MuGet.Forms.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::AiForms.Renderers.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = global::MuGet.Forms.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title;
+			global::AiForms.Renderers.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::MuGet.Forms.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::AiForms.Renderers.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::MuGet.Forms.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::AiForms.Renderers.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::MuGet.Forms.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::AiForms.Renderers.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::MuGet.Forms.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::AiForms.Renderers.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::MuGet.Forms.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::AiForms.Renderers.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::MuGet.Forms.Android.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::AiForms.Renderers.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::MuGet.Forms.Android.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::AiForms.Renderers.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::MuGet.Forms.Android.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Body1 = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Body2 = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Button = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Button;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Caption = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Display1 = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Display2 = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Display3 = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Display4 = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Headline = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Inverse = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Large = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Large;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Medium = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Menu = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Small = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Small;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Subhead = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Title = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Title;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::MuGet.Forms.Android.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_Compat_Notification = global::MuGet.Forms.Android.Resource.Style.TextAppearance_Compat_Notification;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_Compat_Notification_Info = global::MuGet.Forms.Android.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::MuGet.Forms.Android.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::MuGet.Forms.Android.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::MuGet.Forms.Android.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_Compat_Notification_Media = global::MuGet.Forms.Android.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_Compat_Notification_Time = global::MuGet.Forms.Android.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::MuGet.Forms.Android.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_Compat_Notification_Title = global::MuGet.Forms.Android.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::MuGet.Forms.Android.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::MuGet.Forms.Android.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_Design_Counter = global::MuGet.Forms.Android.Resource.Style.TextAppearance_Design_Counter;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow = global::MuGet.Forms.Android.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_Design_Error = global::MuGet.Forms.Android.Resource.Style.TextAppearance_Design_Error;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_Design_HelperText = global::MuGet.Forms.Android.Resource.Style.TextAppearance_Design_HelperText;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_Design_Hint = global::MuGet.Forms.Android.Resource.Style.TextAppearance_Design_Hint;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message = global::MuGet.Forms.Android.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_Design_Tab = global::MuGet.Forms.Android.Resource.Style.TextAppearance_Design_Tab;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_MaterialComponents_Body1 = global::MuGet.Forms.Android.Resource.Style.TextAppearance_MaterialComponents_Body1;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_MaterialComponents_Body2 = global::MuGet.Forms.Android.Resource.Style.TextAppearance_MaterialComponents_Body2;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_MaterialComponents_Button = global::MuGet.Forms.Android.Resource.Style.TextAppearance_MaterialComponents_Button;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_MaterialComponents_Caption = global::MuGet.Forms.Android.Resource.Style.TextAppearance_MaterialComponents_Caption;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_MaterialComponents_Chip = global::MuGet.Forms.Android.Resource.Style.TextAppearance_MaterialComponents_Chip;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline1 = global::MuGet.Forms.Android.Resource.Style.TextAppearance_MaterialComponents_Headline1;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline2 = global::MuGet.Forms.Android.Resource.Style.TextAppearance_MaterialComponents_Headline2;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline3 = global::MuGet.Forms.Android.Resource.Style.TextAppearance_MaterialComponents_Headline3;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline4 = global::MuGet.Forms.Android.Resource.Style.TextAppearance_MaterialComponents_Headline4;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline5 = global::MuGet.Forms.Android.Resource.Style.TextAppearance_MaterialComponents_Headline5;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline6 = global::MuGet.Forms.Android.Resource.Style.TextAppearance_MaterialComponents_Headline6;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_MaterialComponents_Overline = global::MuGet.Forms.Android.Resource.Style.TextAppearance_MaterialComponents_Overline;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle1 = global::MuGet.Forms.Android.Resource.Style.TextAppearance_MaterialComponents_Subtitle1;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle2 = global::MuGet.Forms.Android.Resource.Style.TextAppearance_MaterialComponents_Subtitle2;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_MaterialComponents_Tab = global::MuGet.Forms.Android.Resource.Style.TextAppearance_MaterialComponents_Tab;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_MediaRouter_PrimaryText = global::MuGet.Forms.Android.Resource.Style.TextAppearance_MediaRouter_PrimaryText;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_MediaRouter_SecondaryText = global::MuGet.Forms.Android.Resource.Style.TextAppearance_MediaRouter_SecondaryText;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_MediaRouter_Title = global::MuGet.Forms.Android.Resource.Style.TextAppearance_MediaRouter_Title;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::MuGet.Forms.Android.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::MuGet.Forms.Android.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::AiForms.Renderers.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::MuGet.Forms.Android.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_AppCompat = global::MuGet.Forms.Android.Resource.Style.Theme_AppCompat;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_AppCompat_CompactMenu = global::MuGet.Forms.Android.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_AppCompat_DayNight = global::MuGet.Forms.Android.Resource.Style.Theme_AppCompat_DayNight;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::MuGet.Forms.Android.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::MuGet.Forms.Android.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::MuGet.Forms.Android.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::MuGet.Forms.Android.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::MuGet.Forms.Android.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::MuGet.Forms.Android.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_AppCompat_Dialog = global::MuGet.Forms.Android.Resource.Style.Theme_AppCompat_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert = global::MuGet.Forms.Android.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::MuGet.Forms.Android.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::MuGet.Forms.Android.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_AppCompat_Light = global::MuGet.Forms.Android.Resource.Style.Theme_AppCompat_Light;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::MuGet.Forms.Android.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_AppCompat_Light_Dialog = global::MuGet.Forms.Android.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::MuGet.Forms.Android.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::MuGet.Forms.Android.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::MuGet.Forms.Android.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::MuGet.Forms.Android.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_AppCompat_NoActionBar = global::MuGet.Forms.Android.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_Design = global::MuGet.Forms.Android.Resource.Style.Theme_Design;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_Design_BottomSheetDialog = global::MuGet.Forms.Android.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_Design_Light = global::MuGet.Forms.Android.Resource.Style.Theme_Design_Light;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::MuGet.Forms.Android.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_Design_Light_NoActionBar = global::MuGet.Forms.Android.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_Design_NoActionBar = global::MuGet.Forms.Android.Resource.Style.Theme_Design_NoActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_MaterialComponents = global::MuGet.Forms.Android.Resource.Style.Theme_MaterialComponents;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_MaterialComponents_BottomSheetDialog = global::MuGet.Forms.Android.Resource.Style.Theme_MaterialComponents_BottomSheetDialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_MaterialComponents_Bridge = global::MuGet.Forms.Android.Resource.Style.Theme_MaterialComponents_Bridge;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_MaterialComponents_CompactMenu = global::MuGet.Forms.Android.Resource.Style.Theme_MaterialComponents_CompactMenu;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_MaterialComponents_Dialog = global::MuGet.Forms.Android.Resource.Style.Theme_MaterialComponents_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_MaterialComponents_Dialog_Alert = global::MuGet.Forms.Android.Resource.Style.Theme_MaterialComponents_Dialog_Alert;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth = global::MuGet.Forms.Android.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_MaterialComponents_DialogWhenLarge = global::MuGet.Forms.Android.Resource.Style.Theme_MaterialComponents_DialogWhenLarge;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_MaterialComponents_Light = global::MuGet.Forms.Android.Resource.Style.Theme_MaterialComponents_Light;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog = global::MuGet.Forms.Android.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_MaterialComponents_Light_Bridge = global::MuGet.Forms.Android.Resource.Style.Theme_MaterialComponents_Light_Bridge;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar = global::MuGet.Forms.Android.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::MuGet.Forms.Android.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog = global::MuGet.Forms.Android.Resource.Style.Theme_MaterialComponents_Light_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert = global::MuGet.Forms.Android.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth = global::MuGet.Forms.Android.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge = global::MuGet.Forms.Android.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar = global::MuGet.Forms.Android.Resource.Style.Theme_MaterialComponents_Light_NoActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge = global::MuGet.Forms.Android.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar = global::MuGet.Forms.Android.Resource.Style.Theme_MaterialComponents_NoActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge = global::MuGet.Forms.Android.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_MediaRouter = global::MuGet.Forms.Android.Resource.Style.Theme_MediaRouter;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_MediaRouter_Light = global::MuGet.Forms.Android.Resource.Style.Theme_MediaRouter_Light;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel = global::MuGet.Forms.Android.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel;
+			global::AiForms.Renderers.Droid.Resource.Style.Theme_MediaRouter_LightControlPanel = global::MuGet.Forms.Android.Resource.Style.Theme_MediaRouter_LightControlPanel;
+			global::AiForms.Renderers.Droid.Resource.Style.ThemeOverlay_AppCompat = global::MuGet.Forms.Android.Resource.Style.ThemeOverlay_AppCompat;
+			global::AiForms.Renderers.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::MuGet.Forms.Android.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark = global::MuGet.Forms.Android.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::AiForms.Renderers.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::MuGet.Forms.Android.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::MuGet.Forms.Android.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::MuGet.Forms.Android.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::AiForms.Renderers.Droid.Resource.Style.ThemeOverlay_AppCompat_Light = global::MuGet.Forms.Android.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::AiForms.Renderers.Droid.Resource.Style.ThemeOverlay_MaterialComponents = global::MuGet.Forms.Android.Resource.Style.ThemeOverlay_MaterialComponents;
+			global::AiForms.Renderers.Droid.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar = global::MuGet.Forms.Android.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark = global::MuGet.Forms.Android.Resource.Style.ThemeOverlay_MaterialComponents_Dark;
+			global::AiForms.Renderers.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar = global::MuGet.Forms.Android.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog = global::MuGet.Forms.Android.Resource.Style.ThemeOverlay_MaterialComponents_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert = global::MuGet.Forms.Android.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::AiForms.Renderers.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light = global::MuGet.Forms.Android.Resource.Style.ThemeOverlay_MaterialComponents_Light;
+			global::AiForms.Renderers.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText = global::MuGet.Forms.Android.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText;
+			global::AiForms.Renderers.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = global::MuGet.Forms.Android.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox;
+			global::AiForms.Renderers.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = global::MuGet.Forms.Android.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::AiForms.Renderers.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = global::MuGet.Forms.Android.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::AiForms.Renderers.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::MuGet.Forms.Android.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::AiForms.Renderers.Droid.Resource.Style.ThemeOverlay_MediaRouter_Dark = global::MuGet.Forms.Android.Resource.Style.ThemeOverlay_MediaRouter_Dark;
+			global::AiForms.Renderers.Droid.Resource.Style.ThemeOverlay_MediaRouter_Light = global::MuGet.Forms.Android.Resource.Style.ThemeOverlay_MediaRouter_Light;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_ActionBar = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_ActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_ActionButton = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_ActionButton;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_ActionMode = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_ActionMode;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Button = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Button;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Button_Borderless = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Button_Colored = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Button_Small = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Button_Small;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_ButtonBar = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_EditText = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_EditText;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_ImageButton = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_ImageButton;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Light_SearchView = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_ListMenuView = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_ListView = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_ListView;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_ListView_Menu = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_PopupMenu = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_PopupWindow = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_ProgressBar = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_RatingBar = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_RatingBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_SearchView = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_SearchView;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_SeekBar = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_SeekBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Spinner = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Spinner;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Toolbar = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Toolbar;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::MuGet.Forms.Android.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_Compat_NotificationActionContainer = global::MuGet.Forms.Android.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_Compat_NotificationActionText = global::MuGet.Forms.Android.Resource.Style.Widget_Compat_NotificationActionText;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_Design_AppBarLayout = global::MuGet.Forms.Android.Resource.Style.Widget_Design_AppBarLayout;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_Design_BottomNavigationView = global::MuGet.Forms.Android.Resource.Style.Widget_Design_BottomNavigationView;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_Design_BottomSheet_Modal = global::MuGet.Forms.Android.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_Design_CollapsingToolbar = global::MuGet.Forms.Android.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_Design_FloatingActionButton = global::MuGet.Forms.Android.Resource.Style.Widget_Design_FloatingActionButton;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_Design_NavigationView = global::MuGet.Forms.Android.Resource.Style.Widget_Design_NavigationView;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::MuGet.Forms.Android.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_Design_Snackbar = global::MuGet.Forms.Android.Resource.Style.Widget_Design_Snackbar;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_Design_TabLayout = global::MuGet.Forms.Android.Resource.Style.Widget_Design_TabLayout;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_Design_TextInputLayout = global::MuGet.Forms.Android.Resource.Style.Widget_Design_TextInputLayout;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_BottomAppBar;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_BottomNavigationView;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_Button = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_Button;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_Button_Icon = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_Button_Icon;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_Button_TextButton;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_CardView = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_CardView;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_Chip_Action = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_Chip_Action;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_Chip_Choice = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_Chip_Choice;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_Chip_Entry = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_Chip_Entry;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_Chip_Filter = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_Chip_Filter;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_ChipGroup = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_ChipGroup;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_FloatingActionButton = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_FloatingActionButton;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_NavigationView = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_NavigationView;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_Snackbar = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_Snackbar;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_TabLayout = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_TabLayout;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_TabLayout_Colored = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_TabLayout_Colored;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MaterialComponents_Toolbar = global::MuGet.Forms.Android.Resource.Style.Widget_MaterialComponents_Toolbar;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton = global::MuGet.Forms.Android.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton = global::MuGet.Forms.Android.Resource.Style.Widget_MediaRouter_MediaRouteButton;
+			global::AiForms.Renderers.Droid.Resource.Style.Widget_Support_CoordinatorLayout = global::MuGet.Forms.Android.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar = global::MuGet.Forms.Android.Resource.Styleable.ActionBar;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_background = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_background;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_backgroundSplit = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_backgroundSplit;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_backgroundStacked = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_backgroundStacked;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_contentInsetEnd = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_contentInsetLeft = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_contentInsetRight = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_contentInsetRight;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_contentInsetStart = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_contentInsetStart;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_customNavigationLayout = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_displayOptions = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_displayOptions;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_divider = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_divider;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_elevation = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_elevation;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_height = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_height;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_hideOnContentScroll = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_homeLayout = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_homeLayout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_icon = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_icon;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_itemPadding = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_itemPadding;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_logo = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_logo;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_navigationMode = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_navigationMode;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_popupTheme = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_popupTheme;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_progressBarPadding = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_progressBarPadding;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_progressBarStyle = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_progressBarStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_subtitle = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_subtitle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_subtitleTextStyle = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_title = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_title;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBar_titleTextStyle = global::MuGet.Forms.Android.Resource.Styleable.ActionBar_titleTextStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBarLayout = global::MuGet.Forms.Android.Resource.Styleable.ActionBarLayout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::MuGet.Forms.Android.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionMenuItemView = global::MuGet.Forms.Android.Resource.Styleable.ActionMenuItemView;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth = global::MuGet.Forms.Android.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionMenuView = global::MuGet.Forms.Android.Resource.Styleable.ActionMenuView;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionMode = global::MuGet.Forms.Android.Resource.Styleable.ActionMode;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionMode_background = global::MuGet.Forms.Android.Resource.Styleable.ActionMode_background;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionMode_backgroundSplit = global::MuGet.Forms.Android.Resource.Styleable.ActionMode_backgroundSplit;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionMode_closeItemLayout = global::MuGet.Forms.Android.Resource.Styleable.ActionMode_closeItemLayout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionMode_height = global::MuGet.Forms.Android.Resource.Styleable.ActionMode_height;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionMode_subtitleTextStyle = global::MuGet.Forms.Android.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActionMode_titleTextStyle = global::MuGet.Forms.Android.Resource.Styleable.ActionMode_titleTextStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActivityChooserView = global::MuGet.Forms.Android.Resource.Styleable.ActivityChooserView;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::MuGet.Forms.Android.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount = global::MuGet.Forms.Android.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AlertDialog = global::MuGet.Forms.Android.Resource.Styleable.AlertDialog;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AlertDialog_android_layout = global::MuGet.Forms.Android.Resource.Styleable.AlertDialog_android_layout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AlertDialog_buttonIconDimen = global::MuGet.Forms.Android.Resource.Styleable.AlertDialog_buttonIconDimen;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::MuGet.Forms.Android.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AlertDialog_listItemLayout = global::MuGet.Forms.Android.Resource.Styleable.AlertDialog_listItemLayout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AlertDialog_listLayout = global::MuGet.Forms.Android.Resource.Styleable.AlertDialog_listLayout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::MuGet.Forms.Android.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AlertDialog_showTitle = global::MuGet.Forms.Android.Resource.Styleable.AlertDialog_showTitle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::MuGet.Forms.Android.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AnimatedStateListDrawableCompat = global::MuGet.Forms.Android.Resource.Styleable.AnimatedStateListDrawableCompat;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize = global::MuGet.Forms.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither = global::MuGet.Forms.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration = global::MuGet.Forms.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration = global::MuGet.Forms.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding = global::MuGet.Forms.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible = global::MuGet.Forms.Android.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AnimatedStateListDrawableItem = global::MuGet.Forms.Android.Resource.Styleable.AnimatedStateListDrawableItem;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable = global::MuGet.Forms.Android.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_id = global::MuGet.Forms.Android.Resource.Styleable.AnimatedStateListDrawableItem_android_id;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AnimatedStateListDrawableTransition = global::MuGet.Forms.Android.Resource.Styleable.AnimatedStateListDrawableTransition;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable = global::MuGet.Forms.Android.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId = global::MuGet.Forms.Android.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible = global::MuGet.Forms.Android.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId = global::MuGet.Forms.Android.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppBarLayout = global::MuGet.Forms.Android.Resource.Styleable.AppBarLayout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppBarLayout_android_background = global::MuGet.Forms.Android.Resource.Styleable.AppBarLayout_android_background;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::MuGet.Forms.Android.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::MuGet.Forms.Android.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppBarLayout_elevation = global::MuGet.Forms.Android.Resource.Styleable.AppBarLayout_elevation;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppBarLayout_expanded = global::MuGet.Forms.Android.Resource.Styleable.AppBarLayout_expanded;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppBarLayout_liftOnScroll = global::MuGet.Forms.Android.Resource.Styleable.AppBarLayout_liftOnScroll;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppBarLayoutStates = global::MuGet.Forms.Android.Resource.Styleable.AppBarLayoutStates;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::MuGet.Forms.Android.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::MuGet.Forms.Android.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppBarLayoutStates_state_liftable = global::MuGet.Forms.Android.Resource.Styleable.AppBarLayoutStates_state_liftable;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppBarLayoutStates_state_lifted = global::MuGet.Forms.Android.Resource.Styleable.AppBarLayoutStates_state_lifted;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppBarLayout_Layout = global::MuGet.Forms.Android.Resource.Styleable.AppBarLayout_Layout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::MuGet.Forms.Android.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::MuGet.Forms.Android.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatImageView = global::MuGet.Forms.Android.Resource.Styleable.AppCompatImageView;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatImageView_android_src = global::MuGet.Forms.Android.Resource.Styleable.AppCompatImageView_android_src;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatImageView_srcCompat = global::MuGet.Forms.Android.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatImageView_tint = global::MuGet.Forms.Android.Resource.Styleable.AppCompatImageView_tint;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatImageView_tintMode = global::MuGet.Forms.Android.Resource.Styleable.AppCompatImageView_tintMode;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatSeekBar = global::MuGet.Forms.Android.Resource.Styleable.AppCompatSeekBar;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb = global::MuGet.Forms.Android.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatSeekBar_tickMark = global::MuGet.Forms.Android.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::MuGet.Forms.Android.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::MuGet.Forms.Android.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTextHelper = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTextHelper;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTextView = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTextView;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTextView_fontFamily = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTextView_lineHeight = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTextView_lineHeight;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTextView_textAllCaps = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionBarSize = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_buttonStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_colorAccent = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_colorError = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_colorError;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_colorPrimary = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_controlBackground = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_dialogCornerRadius = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_dialogCornerRadius;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_dialogTheme = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_dividerVertical = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_editTextBackground = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_editTextColor = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_editTextStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_panelBackground = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_switchStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_viewInflaterClass = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_viewInflaterClass;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_windowActionBar = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle = global::MuGet.Forms.Android.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.BottomAppBar = global::MuGet.Forms.Android.Resource.Styleable.BottomAppBar;
+			global::AiForms.Renderers.Droid.Resource.Styleable.BottomAppBar_backgroundTint = global::MuGet.Forms.Android.Resource.Styleable.BottomAppBar_backgroundTint;
+			global::AiForms.Renderers.Droid.Resource.Styleable.BottomAppBar_fabAlignmentMode = global::MuGet.Forms.Android.Resource.Styleable.BottomAppBar_fabAlignmentMode;
+			global::AiForms.Renderers.Droid.Resource.Styleable.BottomAppBar_fabCradleMargin = global::MuGet.Forms.Android.Resource.Styleable.BottomAppBar_fabCradleMargin;
+			global::AiForms.Renderers.Droid.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius = global::MuGet.Forms.Android.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius;
+			global::AiForms.Renderers.Droid.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset = global::MuGet.Forms.Android.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset;
+			global::AiForms.Renderers.Droid.Resource.Styleable.BottomAppBar_hideOnScroll = global::MuGet.Forms.Android.Resource.Styleable.BottomAppBar_hideOnScroll;
+			global::AiForms.Renderers.Droid.Resource.Styleable.BottomNavigationView = global::MuGet.Forms.Android.Resource.Styleable.BottomNavigationView;
+			global::AiForms.Renderers.Droid.Resource.Styleable.BottomNavigationView_elevation = global::MuGet.Forms.Android.Resource.Styleable.BottomNavigationView_elevation;
+			global::AiForms.Renderers.Droid.Resource.Styleable.BottomNavigationView_itemBackground = global::MuGet.Forms.Android.Resource.Styleable.BottomNavigationView_itemBackground;
+			global::AiForms.Renderers.Droid.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled = global::MuGet.Forms.Android.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled;
+			global::AiForms.Renderers.Droid.Resource.Styleable.BottomNavigationView_itemIconSize = global::MuGet.Forms.Android.Resource.Styleable.BottomNavigationView_itemIconSize;
+			global::AiForms.Renderers.Droid.Resource.Styleable.BottomNavigationView_itemIconTint = global::MuGet.Forms.Android.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::AiForms.Renderers.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive = global::MuGet.Forms.Android.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive;
+			global::AiForms.Renderers.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive = global::MuGet.Forms.Android.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive;
+			global::AiForms.Renderers.Droid.Resource.Styleable.BottomNavigationView_itemTextColor = global::MuGet.Forms.Android.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.BottomNavigationView_labelVisibilityMode = global::MuGet.Forms.Android.Resource.Styleable.BottomNavigationView_labelVisibilityMode;
+			global::AiForms.Renderers.Droid.Resource.Styleable.BottomNavigationView_menu = global::MuGet.Forms.Android.Resource.Styleable.BottomNavigationView_menu;
+			global::AiForms.Renderers.Droid.Resource.Styleable.BottomSheetBehavior_Layout = global::MuGet.Forms.Android.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents = global::MuGet.Forms.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents;
+			global::AiForms.Renderers.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::MuGet.Forms.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::AiForms.Renderers.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::MuGet.Forms.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::AiForms.Renderers.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::MuGet.Forms.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ButtonBarLayout = global::MuGet.Forms.Android.Resource.Styleable.ButtonBarLayout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ButtonBarLayout_allowStacking = global::MuGet.Forms.Android.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CardView = global::MuGet.Forms.Android.Resource.Styleable.CardView;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CardView_android_minHeight = global::MuGet.Forms.Android.Resource.Styleable.CardView_android_minHeight;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CardView_android_minWidth = global::MuGet.Forms.Android.Resource.Styleable.CardView_android_minWidth;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CardView_cardBackgroundColor = global::MuGet.Forms.Android.Resource.Styleable.CardView_cardBackgroundColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CardView_cardCornerRadius = global::MuGet.Forms.Android.Resource.Styleable.CardView_cardCornerRadius;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CardView_cardElevation = global::MuGet.Forms.Android.Resource.Styleable.CardView_cardElevation;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CardView_cardMaxElevation = global::MuGet.Forms.Android.Resource.Styleable.CardView_cardMaxElevation;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap = global::MuGet.Forms.Android.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CardView_cardUseCompatPadding = global::MuGet.Forms.Android.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CardView_contentPadding = global::MuGet.Forms.Android.Resource.Styleable.CardView_contentPadding;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CardView_contentPaddingBottom = global::MuGet.Forms.Android.Resource.Styleable.CardView_contentPaddingBottom;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CardView_contentPaddingLeft = global::MuGet.Forms.Android.Resource.Styleable.CardView_contentPaddingLeft;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CardView_contentPaddingRight = global::MuGet.Forms.Android.Resource.Styleable.CardView_contentPaddingRight;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CardView_contentPaddingTop = global::MuGet.Forms.Android.Resource.Styleable.CardView_contentPaddingTop;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip = global::MuGet.Forms.Android.Resource.Styleable.Chip;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_android_checkable = global::MuGet.Forms.Android.Resource.Styleable.Chip_android_checkable;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_android_ellipsize = global::MuGet.Forms.Android.Resource.Styleable.Chip_android_ellipsize;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_android_maxWidth = global::MuGet.Forms.Android.Resource.Styleable.Chip_android_maxWidth;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_android_text = global::MuGet.Forms.Android.Resource.Styleable.Chip_android_text;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_android_textAppearance = global::MuGet.Forms.Android.Resource.Styleable.Chip_android_textAppearance;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_checkedIcon = global::MuGet.Forms.Android.Resource.Styleable.Chip_checkedIcon;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_checkedIconEnabled = global::MuGet.Forms.Android.Resource.Styleable.Chip_checkedIconEnabled;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_checkedIconVisible = global::MuGet.Forms.Android.Resource.Styleable.Chip_checkedIconVisible;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_chipBackgroundColor = global::MuGet.Forms.Android.Resource.Styleable.Chip_chipBackgroundColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_chipCornerRadius = global::MuGet.Forms.Android.Resource.Styleable.Chip_chipCornerRadius;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_chipEndPadding = global::MuGet.Forms.Android.Resource.Styleable.Chip_chipEndPadding;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_chipIcon = global::MuGet.Forms.Android.Resource.Styleable.Chip_chipIcon;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_chipIconEnabled = global::MuGet.Forms.Android.Resource.Styleable.Chip_chipIconEnabled;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_chipIconSize = global::MuGet.Forms.Android.Resource.Styleable.Chip_chipIconSize;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_chipIconTint = global::MuGet.Forms.Android.Resource.Styleable.Chip_chipIconTint;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_chipIconVisible = global::MuGet.Forms.Android.Resource.Styleable.Chip_chipIconVisible;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_chipMinHeight = global::MuGet.Forms.Android.Resource.Styleable.Chip_chipMinHeight;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_chipStartPadding = global::MuGet.Forms.Android.Resource.Styleable.Chip_chipStartPadding;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_chipStrokeColor = global::MuGet.Forms.Android.Resource.Styleable.Chip_chipStrokeColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_chipStrokeWidth = global::MuGet.Forms.Android.Resource.Styleable.Chip_chipStrokeWidth;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_closeIcon = global::MuGet.Forms.Android.Resource.Styleable.Chip_closeIcon;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_closeIconEnabled = global::MuGet.Forms.Android.Resource.Styleable.Chip_closeIconEnabled;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_closeIconEndPadding = global::MuGet.Forms.Android.Resource.Styleable.Chip_closeIconEndPadding;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_closeIconSize = global::MuGet.Forms.Android.Resource.Styleable.Chip_closeIconSize;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_closeIconStartPadding = global::MuGet.Forms.Android.Resource.Styleable.Chip_closeIconStartPadding;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_closeIconTint = global::MuGet.Forms.Android.Resource.Styleable.Chip_closeIconTint;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_closeIconVisible = global::MuGet.Forms.Android.Resource.Styleable.Chip_closeIconVisible;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_hideMotionSpec = global::MuGet.Forms.Android.Resource.Styleable.Chip_hideMotionSpec;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_iconEndPadding = global::MuGet.Forms.Android.Resource.Styleable.Chip_iconEndPadding;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_iconStartPadding = global::MuGet.Forms.Android.Resource.Styleable.Chip_iconStartPadding;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_rippleColor = global::MuGet.Forms.Android.Resource.Styleable.Chip_rippleColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_showMotionSpec = global::MuGet.Forms.Android.Resource.Styleable.Chip_showMotionSpec;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_textEndPadding = global::MuGet.Forms.Android.Resource.Styleable.Chip_textEndPadding;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Chip_textStartPadding = global::MuGet.Forms.Android.Resource.Styleable.Chip_textStartPadding;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ChipGroup = global::MuGet.Forms.Android.Resource.Styleable.ChipGroup;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ChipGroup_checkedChip = global::MuGet.Forms.Android.Resource.Styleable.ChipGroup_checkedChip;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ChipGroup_chipSpacing = global::MuGet.Forms.Android.Resource.Styleable.ChipGroup_chipSpacing;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ChipGroup_chipSpacingHorizontal = global::MuGet.Forms.Android.Resource.Styleable.ChipGroup_chipSpacingHorizontal;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ChipGroup_chipSpacingVertical = global::MuGet.Forms.Android.Resource.Styleable.ChipGroup_chipSpacingVertical;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ChipGroup_singleLine = global::MuGet.Forms.Android.Resource.Styleable.ChipGroup_singleLine;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ChipGroup_singleSelection = global::MuGet.Forms.Android.Resource.Styleable.ChipGroup_singleSelection;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CollapsingToolbarLayout = global::MuGet.Forms.Android.Resource.Styleable.CollapsingToolbarLayout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::MuGet.Forms.Android.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::MuGet.Forms.Android.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::MuGet.Forms.Android.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::MuGet.Forms.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::MuGet.Forms.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::MuGet.Forms.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::MuGet.Forms.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::MuGet.Forms.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::MuGet.Forms.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::MuGet.Forms.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::MuGet.Forms.Android.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::MuGet.Forms.Android.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::MuGet.Forms.Android.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CollapsingToolbarLayout_title = global::MuGet.Forms.Android.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::MuGet.Forms.Android.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::MuGet.Forms.Android.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout = global::MuGet.Forms.Android.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::MuGet.Forms.Android.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::MuGet.Forms.Android.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ColorStateListItem = global::MuGet.Forms.Android.Resource.Styleable.ColorStateListItem;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ColorStateListItem_alpha = global::MuGet.Forms.Android.Resource.Styleable.ColorStateListItem_alpha;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ColorStateListItem_android_alpha = global::MuGet.Forms.Android.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ColorStateListItem_android_color = global::MuGet.Forms.Android.Resource.Styleable.ColorStateListItem_android_color;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CompoundButton = global::MuGet.Forms.Android.Resource.Styleable.CompoundButton;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CompoundButton_android_button = global::MuGet.Forms.Android.Resource.Styleable.CompoundButton_android_button;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CompoundButton_buttonTint = global::MuGet.Forms.Android.Resource.Styleable.CompoundButton_buttonTint;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CompoundButton_buttonTintMode = global::MuGet.Forms.Android.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CoordinatorLayout = global::MuGet.Forms.Android.Resource.Styleable.CoordinatorLayout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CoordinatorLayout_keylines = global::MuGet.Forms.Android.Resource.Styleable.CoordinatorLayout_keylines;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::MuGet.Forms.Android.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CoordinatorLayout_Layout = global::MuGet.Forms.Android.Resource.Styleable.CoordinatorLayout_Layout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::MuGet.Forms.Android.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::MuGet.Forms.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::MuGet.Forms.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::MuGet.Forms.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::MuGet.Forms.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::MuGet.Forms.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::AiForms.Renderers.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::MuGet.Forms.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::AiForms.Renderers.Droid.Resource.Styleable.DesignTheme = global::MuGet.Forms.Android.Resource.Styleable.DesignTheme;
+			global::AiForms.Renderers.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::MuGet.Forms.Android.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
+			global::AiForms.Renderers.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle = global::MuGet.Forms.Android.Resource.Styleable.DesignTheme_bottomSheetStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.DrawerArrowToggle = global::MuGet.Forms.Android.Resource.Styleable.DrawerArrowToggle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::MuGet.Forms.Android.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::AiForms.Renderers.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::MuGet.Forms.Android.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::AiForms.Renderers.Droid.Resource.Styleable.DrawerArrowToggle_barLength = global::MuGet.Forms.Android.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::AiForms.Renderers.Droid.Resource.Styleable.DrawerArrowToggle_color = global::MuGet.Forms.Android.Resource.Styleable.DrawerArrowToggle_color;
+			global::AiForms.Renderers.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize = global::MuGet.Forms.Android.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::AiForms.Renderers.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::MuGet.Forms.Android.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::AiForms.Renderers.Droid.Resource.Styleable.DrawerArrowToggle_spinBars = global::MuGet.Forms.Android.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::AiForms.Renderers.Droid.Resource.Styleable.DrawerArrowToggle_thickness = global::MuGet.Forms.Android.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FloatingActionButton = global::MuGet.Forms.Android.Resource.Styleable.FloatingActionButton;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FloatingActionButton_backgroundTint = global::MuGet.Forms.Android.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::MuGet.Forms.Android.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FloatingActionButton_borderWidth = global::MuGet.Forms.Android.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FloatingActionButton_elevation = global::MuGet.Forms.Android.Resource.Styleable.FloatingActionButton_elevation;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FloatingActionButton_fabCustomSize = global::MuGet.Forms.Android.Resource.Styleable.FloatingActionButton_fabCustomSize;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FloatingActionButton_fabSize = global::MuGet.Forms.Android.Resource.Styleable.FloatingActionButton_fabSize;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FloatingActionButton_hideMotionSpec = global::MuGet.Forms.Android.Resource.Styleable.FloatingActionButton_hideMotionSpec;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ = global::MuGet.Forms.Android.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FloatingActionButton_maxImageSize = global::MuGet.Forms.Android.Resource.Styleable.FloatingActionButton_maxImageSize;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::MuGet.Forms.Android.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FloatingActionButton_rippleColor = global::MuGet.Forms.Android.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FloatingActionButton_showMotionSpec = global::MuGet.Forms.Android.Resource.Styleable.FloatingActionButton_showMotionSpec;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding = global::MuGet.Forms.Android.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::MuGet.Forms.Android.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::MuGet.Forms.Android.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FlowLayout = global::MuGet.Forms.Android.Resource.Styleable.FlowLayout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FlowLayout_itemSpacing = global::MuGet.Forms.Android.Resource.Styleable.FlowLayout_itemSpacing;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FlowLayout_lineSpacing = global::MuGet.Forms.Android.Resource.Styleable.FlowLayout_lineSpacing;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FontFamily = global::MuGet.Forms.Android.Resource.Styleable.FontFamily;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FontFamily_fontProviderAuthority = global::MuGet.Forms.Android.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FontFamily_fontProviderCerts = global::MuGet.Forms.Android.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::MuGet.Forms.Android.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::MuGet.Forms.Android.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FontFamily_fontProviderPackage = global::MuGet.Forms.Android.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FontFamily_fontProviderQuery = global::MuGet.Forms.Android.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FontFamilyFont = global::MuGet.Forms.Android.Resource.Styleable.FontFamilyFont;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FontFamilyFont_android_font = global::MuGet.Forms.Android.Resource.Styleable.FontFamilyFont_android_font;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle = global::MuGet.Forms.Android.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::MuGet.Forms.Android.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight = global::MuGet.Forms.Android.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::MuGet.Forms.Android.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FontFamilyFont_font = global::MuGet.Forms.Android.Resource.Styleable.FontFamilyFont_font;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FontFamilyFont_fontStyle = global::MuGet.Forms.Android.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::MuGet.Forms.Android.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FontFamilyFont_fontWeight = global::MuGet.Forms.Android.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::AiForms.Renderers.Droid.Resource.Styleable.FontFamilyFont_ttcIndex = global::MuGet.Forms.Android.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ForegroundLinearLayout = global::MuGet.Forms.Android.Resource.Styleable.ForegroundLinearLayout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::MuGet.Forms.Android.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::MuGet.Forms.Android.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::MuGet.Forms.Android.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::AiForms.Renderers.Droid.Resource.Styleable.GradientColor = global::MuGet.Forms.Android.Resource.Styleable.GradientColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.GradientColor_android_centerColor = global::MuGet.Forms.Android.Resource.Styleable.GradientColor_android_centerColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.GradientColor_android_centerX = global::MuGet.Forms.Android.Resource.Styleable.GradientColor_android_centerX;
+			global::AiForms.Renderers.Droid.Resource.Styleable.GradientColor_android_centerY = global::MuGet.Forms.Android.Resource.Styleable.GradientColor_android_centerY;
+			global::AiForms.Renderers.Droid.Resource.Styleable.GradientColor_android_endColor = global::MuGet.Forms.Android.Resource.Styleable.GradientColor_android_endColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.GradientColor_android_endX = global::MuGet.Forms.Android.Resource.Styleable.GradientColor_android_endX;
+			global::AiForms.Renderers.Droid.Resource.Styleable.GradientColor_android_endY = global::MuGet.Forms.Android.Resource.Styleable.GradientColor_android_endY;
+			global::AiForms.Renderers.Droid.Resource.Styleable.GradientColor_android_gradientRadius = global::MuGet.Forms.Android.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::AiForms.Renderers.Droid.Resource.Styleable.GradientColor_android_startColor = global::MuGet.Forms.Android.Resource.Styleable.GradientColor_android_startColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.GradientColor_android_startX = global::MuGet.Forms.Android.Resource.Styleable.GradientColor_android_startX;
+			global::AiForms.Renderers.Droid.Resource.Styleable.GradientColor_android_startY = global::MuGet.Forms.Android.Resource.Styleable.GradientColor_android_startY;
+			global::AiForms.Renderers.Droid.Resource.Styleable.GradientColor_android_tileMode = global::MuGet.Forms.Android.Resource.Styleable.GradientColor_android_tileMode;
+			global::AiForms.Renderers.Droid.Resource.Styleable.GradientColor_android_type = global::MuGet.Forms.Android.Resource.Styleable.GradientColor_android_type;
+			global::AiForms.Renderers.Droid.Resource.Styleable.GradientColorItem = global::MuGet.Forms.Android.Resource.Styleable.GradientColorItem;
+			global::AiForms.Renderers.Droid.Resource.Styleable.GradientColorItem_android_color = global::MuGet.Forms.Android.Resource.Styleable.GradientColorItem_android_color;
+			global::AiForms.Renderers.Droid.Resource.Styleable.GradientColorItem_android_offset = global::MuGet.Forms.Android.Resource.Styleable.GradientColorItem_android_offset;
+			global::AiForms.Renderers.Droid.Resource.Styleable.LinearLayoutCompat = global::MuGet.Forms.Android.Resource.Styleable.LinearLayoutCompat;
+			global::AiForms.Renderers.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::MuGet.Forms.Android.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::AiForms.Renderers.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::MuGet.Forms.Android.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::AiForms.Renderers.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity = global::MuGet.Forms.Android.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::AiForms.Renderers.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation = global::MuGet.Forms.Android.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::AiForms.Renderers.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::MuGet.Forms.Android.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::AiForms.Renderers.Droid.Resource.Styleable.LinearLayoutCompat_divider = global::MuGet.Forms.Android.Resource.Styleable.LinearLayoutCompat_divider;
+			global::AiForms.Renderers.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::MuGet.Forms.Android.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::AiForms.Renderers.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::MuGet.Forms.Android.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::AiForms.Renderers.Droid.Resource.Styleable.LinearLayoutCompat_showDividers = global::MuGet.Forms.Android.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::AiForms.Renderers.Droid.Resource.Styleable.LinearLayoutCompat_Layout = global::MuGet.Forms.Android.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::MuGet.Forms.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::AiForms.Renderers.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::MuGet.Forms.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::AiForms.Renderers.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::MuGet.Forms.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::AiForms.Renderers.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::MuGet.Forms.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ListPopupWindow = global::MuGet.Forms.Android.Resource.Styleable.ListPopupWindow;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::MuGet.Forms.Android.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::MuGet.Forms.Android.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialButton = global::MuGet.Forms.Android.Resource.Styleable.MaterialButton;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialButton_android_insetBottom = global::MuGet.Forms.Android.Resource.Styleable.MaterialButton_android_insetBottom;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialButton_android_insetLeft = global::MuGet.Forms.Android.Resource.Styleable.MaterialButton_android_insetLeft;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialButton_android_insetRight = global::MuGet.Forms.Android.Resource.Styleable.MaterialButton_android_insetRight;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialButton_android_insetTop = global::MuGet.Forms.Android.Resource.Styleable.MaterialButton_android_insetTop;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialButton_backgroundTint = global::MuGet.Forms.Android.Resource.Styleable.MaterialButton_backgroundTint;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialButton_backgroundTintMode = global::MuGet.Forms.Android.Resource.Styleable.MaterialButton_backgroundTintMode;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialButton_cornerRadius = global::MuGet.Forms.Android.Resource.Styleable.MaterialButton_cornerRadius;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialButton_icon = global::MuGet.Forms.Android.Resource.Styleable.MaterialButton_icon;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialButton_iconGravity = global::MuGet.Forms.Android.Resource.Styleable.MaterialButton_iconGravity;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialButton_iconPadding = global::MuGet.Forms.Android.Resource.Styleable.MaterialButton_iconPadding;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialButton_iconSize = global::MuGet.Forms.Android.Resource.Styleable.MaterialButton_iconSize;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialButton_iconTint = global::MuGet.Forms.Android.Resource.Styleable.MaterialButton_iconTint;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialButton_iconTintMode = global::MuGet.Forms.Android.Resource.Styleable.MaterialButton_iconTintMode;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialButton_rippleColor = global::MuGet.Forms.Android.Resource.Styleable.MaterialButton_rippleColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialButton_strokeColor = global::MuGet.Forms.Android.Resource.Styleable.MaterialButton_strokeColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialButton_strokeWidth = global::MuGet.Forms.Android.Resource.Styleable.MaterialButton_strokeWidth;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialCardView = global::MuGet.Forms.Android.Resource.Styleable.MaterialCardView;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialCardView_strokeColor = global::MuGet.Forms.Android.Resource.Styleable.MaterialCardView_strokeColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialCardView_strokeWidth = global::MuGet.Forms.Android.Resource.Styleable.MaterialCardView_strokeWidth;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_bottomSheetDialogTheme = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_bottomSheetDialogTheme;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_bottomSheetStyle = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_bottomSheetStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_chipGroupStyle = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_chipGroupStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_chipStandaloneStyle = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_chipStandaloneStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_chipStyle = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_chipStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_colorAccent = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_colorAccent;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_colorBackgroundFloating = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_colorBackgroundFloating;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_colorPrimary = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_colorPrimary;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_colorPrimaryDark = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_colorPrimaryDark;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_colorSecondary = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_colorSecondary;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_editTextStyle = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_editTextStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_floatingActionButtonStyle = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_floatingActionButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_materialButtonStyle = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_materialButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_materialCardViewStyle = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_materialCardViewStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_navigationViewStyle = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_navigationViewStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_scrimBackground = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_scrimBackground;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_snackbarButtonStyle = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_snackbarButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_tabStyle = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_tabStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody1 = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody1;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody2 = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody2;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceButton = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceButton;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceCaption = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceCaption;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline1 = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline1;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline2 = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline2;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline3 = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline3;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline4 = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline4;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline5 = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline5;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline6 = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline6;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceOverline = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceOverline;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle1 = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle1;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle2 = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle2;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MaterialComponentsTheme_textInputStyle = global::MuGet.Forms.Android.Resource.Styleable.MaterialComponentsTheme_textInputStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MediaRouteButton = global::MuGet.Forms.Android.Resource.Styleable.MediaRouteButton;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MediaRouteButton_android_minHeight = global::MuGet.Forms.Android.Resource.Styleable.MediaRouteButton_android_minHeight;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MediaRouteButton_android_minWidth = global::MuGet.Forms.Android.Resource.Styleable.MediaRouteButton_android_minWidth;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable = global::MuGet.Forms.Android.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MediaRouteButton_mediaRouteButtonTint = global::MuGet.Forms.Android.Resource.Styleable.MediaRouteButton_mediaRouteButtonTint;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuGroup = global::MuGet.Forms.Android.Resource.Styleable.MenuGroup;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior = global::MuGet.Forms.Android.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuGroup_android_enabled = global::MuGet.Forms.Android.Resource.Styleable.MenuGroup_android_enabled;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuGroup_android_id = global::MuGet.Forms.Android.Resource.Styleable.MenuGroup_android_id;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuGroup_android_menuCategory = global::MuGet.Forms.Android.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuGroup_android_orderInCategory = global::MuGet.Forms.Android.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuGroup_android_visible = global::MuGet.Forms.Android.Resource.Styleable.MenuGroup_android_visible;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuItem = global::MuGet.Forms.Android.Resource.Styleable.MenuItem;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuItem_actionLayout = global::MuGet.Forms.Android.Resource.Styleable.MenuItem_actionLayout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuItem_actionProviderClass = global::MuGet.Forms.Android.Resource.Styleable.MenuItem_actionProviderClass;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuItem_actionViewClass = global::MuGet.Forms.Android.Resource.Styleable.MenuItem_actionViewClass;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuItem_alphabeticModifiers = global::MuGet.Forms.Android.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::MuGet.Forms.Android.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuItem_android_checkable = global::MuGet.Forms.Android.Resource.Styleable.MenuItem_android_checkable;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuItem_android_checked = global::MuGet.Forms.Android.Resource.Styleable.MenuItem_android_checked;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuItem_android_enabled = global::MuGet.Forms.Android.Resource.Styleable.MenuItem_android_enabled;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuItem_android_icon = global::MuGet.Forms.Android.Resource.Styleable.MenuItem_android_icon;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuItem_android_id = global::MuGet.Forms.Android.Resource.Styleable.MenuItem_android_id;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuItem_android_menuCategory = global::MuGet.Forms.Android.Resource.Styleable.MenuItem_android_menuCategory;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuItem_android_numericShortcut = global::MuGet.Forms.Android.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuItem_android_onClick = global::MuGet.Forms.Android.Resource.Styleable.MenuItem_android_onClick;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuItem_android_orderInCategory = global::MuGet.Forms.Android.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuItem_android_title = global::MuGet.Forms.Android.Resource.Styleable.MenuItem_android_title;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuItem_android_titleCondensed = global::MuGet.Forms.Android.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuItem_android_visible = global::MuGet.Forms.Android.Resource.Styleable.MenuItem_android_visible;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuItem_contentDescription = global::MuGet.Forms.Android.Resource.Styleable.MenuItem_contentDescription;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuItem_iconTint = global::MuGet.Forms.Android.Resource.Styleable.MenuItem_iconTint;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuItem_iconTintMode = global::MuGet.Forms.Android.Resource.Styleable.MenuItem_iconTintMode;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuItem_numericModifiers = global::MuGet.Forms.Android.Resource.Styleable.MenuItem_numericModifiers;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuItem_showAsAction = global::MuGet.Forms.Android.Resource.Styleable.MenuItem_showAsAction;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuItem_tooltipText = global::MuGet.Forms.Android.Resource.Styleable.MenuItem_tooltipText;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuView = global::MuGet.Forms.Android.Resource.Styleable.MenuView;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuView_android_headerBackground = global::MuGet.Forms.Android.Resource.Styleable.MenuView_android_headerBackground;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuView_android_horizontalDivider = global::MuGet.Forms.Android.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuView_android_itemBackground = global::MuGet.Forms.Android.Resource.Styleable.MenuView_android_itemBackground;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::MuGet.Forms.Android.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuView_android_itemTextAppearance = global::MuGet.Forms.Android.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuView_android_verticalDivider = global::MuGet.Forms.Android.Resource.Styleable.MenuView_android_verticalDivider;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle = global::MuGet.Forms.Android.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuView_preserveIconSpacing = global::MuGet.Forms.Android.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::AiForms.Renderers.Droid.Resource.Styleable.MenuView_subMenuArrow = global::MuGet.Forms.Android.Resource.Styleable.MenuView_subMenuArrow;
+			global::AiForms.Renderers.Droid.Resource.Styleable.NavigationView = global::MuGet.Forms.Android.Resource.Styleable.NavigationView;
+			global::AiForms.Renderers.Droid.Resource.Styleable.NavigationView_android_background = global::MuGet.Forms.Android.Resource.Styleable.NavigationView_android_background;
+			global::AiForms.Renderers.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::MuGet.Forms.Android.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::AiForms.Renderers.Droid.Resource.Styleable.NavigationView_android_maxWidth = global::MuGet.Forms.Android.Resource.Styleable.NavigationView_android_maxWidth;
+			global::AiForms.Renderers.Droid.Resource.Styleable.NavigationView_elevation = global::MuGet.Forms.Android.Resource.Styleable.NavigationView_elevation;
+			global::AiForms.Renderers.Droid.Resource.Styleable.NavigationView_headerLayout = global::MuGet.Forms.Android.Resource.Styleable.NavigationView_headerLayout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.NavigationView_itemBackground = global::MuGet.Forms.Android.Resource.Styleable.NavigationView_itemBackground;
+			global::AiForms.Renderers.Droid.Resource.Styleable.NavigationView_itemHorizontalPadding = global::MuGet.Forms.Android.Resource.Styleable.NavigationView_itemHorizontalPadding;
+			global::AiForms.Renderers.Droid.Resource.Styleable.NavigationView_itemIconPadding = global::MuGet.Forms.Android.Resource.Styleable.NavigationView_itemIconPadding;
+			global::AiForms.Renderers.Droid.Resource.Styleable.NavigationView_itemIconTint = global::MuGet.Forms.Android.Resource.Styleable.NavigationView_itemIconTint;
+			global::AiForms.Renderers.Droid.Resource.Styleable.NavigationView_itemTextAppearance = global::MuGet.Forms.Android.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Styleable.NavigationView_itemTextColor = global::MuGet.Forms.Android.Resource.Styleable.NavigationView_itemTextColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.NavigationView_menu = global::MuGet.Forms.Android.Resource.Styleable.NavigationView_menu;
+			global::AiForms.Renderers.Droid.Resource.Styleable.PopupWindow = global::MuGet.Forms.Android.Resource.Styleable.PopupWindow;
+			global::AiForms.Renderers.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::MuGet.Forms.Android.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.PopupWindow_android_popupBackground = global::MuGet.Forms.Android.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::AiForms.Renderers.Droid.Resource.Styleable.PopupWindow_overlapAnchor = global::MuGet.Forms.Android.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.PopupWindowBackgroundState = global::MuGet.Forms.Android.Resource.Styleable.PopupWindowBackgroundState;
+			global::AiForms.Renderers.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::MuGet.Forms.Android.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.RecycleListView = global::MuGet.Forms.Android.Resource.Styleable.RecycleListView;
+			global::AiForms.Renderers.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::MuGet.Forms.Android.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::AiForms.Renderers.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::MuGet.Forms.Android.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.RecyclerView = global::MuGet.Forms.Android.Resource.Styleable.RecyclerView;
+			global::AiForms.Renderers.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability = global::MuGet.Forms.Android.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::AiForms.Renderers.Droid.Resource.Styleable.RecyclerView_android_orientation = global::MuGet.Forms.Android.Resource.Styleable.RecyclerView_android_orientation;
+			global::AiForms.Renderers.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled = global::MuGet.Forms.Android.Resource.Styleable.RecyclerView_fastScrollEnabled;
+			global::AiForms.Renderers.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::MuGet.Forms.Android.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
+			global::AiForms.Renderers.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::MuGet.Forms.Android.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
+			global::AiForms.Renderers.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::MuGet.Forms.Android.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
+			global::AiForms.Renderers.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::MuGet.Forms.Android.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
+			global::AiForms.Renderers.Droid.Resource.Styleable.RecyclerView_layoutManager = global::MuGet.Forms.Android.Resource.Styleable.RecyclerView_layoutManager;
+			global::AiForms.Renderers.Droid.Resource.Styleable.RecyclerView_reverseLayout = global::MuGet.Forms.Android.Resource.Styleable.RecyclerView_reverseLayout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.RecyclerView_spanCount = global::MuGet.Forms.Android.Resource.Styleable.RecyclerView_spanCount;
+			global::AiForms.Renderers.Droid.Resource.Styleable.RecyclerView_stackFromEnd = global::MuGet.Forms.Android.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ScrimInsetsFrameLayout = global::MuGet.Forms.Android.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::MuGet.Forms.Android.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ScrollingViewBehavior_Layout = global::MuGet.Forms.Android.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::MuGet.Forms.Android.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SearchView = global::MuGet.Forms.Android.Resource.Styleable.SearchView;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SearchView_android_focusable = global::MuGet.Forms.Android.Resource.Styleable.SearchView_android_focusable;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SearchView_android_imeOptions = global::MuGet.Forms.Android.Resource.Styleable.SearchView_android_imeOptions;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SearchView_android_inputType = global::MuGet.Forms.Android.Resource.Styleable.SearchView_android_inputType;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SearchView_android_maxWidth = global::MuGet.Forms.Android.Resource.Styleable.SearchView_android_maxWidth;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SearchView_closeIcon = global::MuGet.Forms.Android.Resource.Styleable.SearchView_closeIcon;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SearchView_commitIcon = global::MuGet.Forms.Android.Resource.Styleable.SearchView_commitIcon;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SearchView_defaultQueryHint = global::MuGet.Forms.Android.Resource.Styleable.SearchView_defaultQueryHint;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SearchView_goIcon = global::MuGet.Forms.Android.Resource.Styleable.SearchView_goIcon;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SearchView_iconifiedByDefault = global::MuGet.Forms.Android.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SearchView_layout = global::MuGet.Forms.Android.Resource.Styleable.SearchView_layout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SearchView_queryBackground = global::MuGet.Forms.Android.Resource.Styleable.SearchView_queryBackground;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SearchView_queryHint = global::MuGet.Forms.Android.Resource.Styleable.SearchView_queryHint;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SearchView_searchHintIcon = global::MuGet.Forms.Android.Resource.Styleable.SearchView_searchHintIcon;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SearchView_searchIcon = global::MuGet.Forms.Android.Resource.Styleable.SearchView_searchIcon;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SearchView_submitBackground = global::MuGet.Forms.Android.Resource.Styleable.SearchView_submitBackground;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SearchView_suggestionRowLayout = global::MuGet.Forms.Android.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SearchView_voiceIcon = global::MuGet.Forms.Android.Resource.Styleable.SearchView_voiceIcon;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Snackbar = global::MuGet.Forms.Android.Resource.Styleable.Snackbar;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Snackbar_snackbarButtonStyle = global::MuGet.Forms.Android.Resource.Styleable.Snackbar_snackbarButtonStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Snackbar_snackbarStyle = global::MuGet.Forms.Android.Resource.Styleable.Snackbar_snackbarStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SnackbarLayout = global::MuGet.Forms.Android.Resource.Styleable.SnackbarLayout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth = global::MuGet.Forms.Android.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SnackbarLayout_elevation = global::MuGet.Forms.Android.Resource.Styleable.SnackbarLayout_elevation;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::MuGet.Forms.Android.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Spinner = global::MuGet.Forms.Android.Resource.Styleable.Spinner;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Spinner_android_dropDownWidth = global::MuGet.Forms.Android.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Spinner_android_entries = global::MuGet.Forms.Android.Resource.Styleable.Spinner_android_entries;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Spinner_android_popupBackground = global::MuGet.Forms.Android.Resource.Styleable.Spinner_android_popupBackground;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Spinner_android_prompt = global::MuGet.Forms.Android.Resource.Styleable.Spinner_android_prompt;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Spinner_popupTheme = global::MuGet.Forms.Android.Resource.Styleable.Spinner_popupTheme;
+			global::AiForms.Renderers.Droid.Resource.Styleable.StateListDrawable = global::MuGet.Forms.Android.Resource.Styleable.StateListDrawable;
+			global::AiForms.Renderers.Droid.Resource.Styleable.StateListDrawable_android_constantSize = global::MuGet.Forms.Android.Resource.Styleable.StateListDrawable_android_constantSize;
+			global::AiForms.Renderers.Droid.Resource.Styleable.StateListDrawable_android_dither = global::MuGet.Forms.Android.Resource.Styleable.StateListDrawable_android_dither;
+			global::AiForms.Renderers.Droid.Resource.Styleable.StateListDrawable_android_enterFadeDuration = global::MuGet.Forms.Android.Resource.Styleable.StateListDrawable_android_enterFadeDuration;
+			global::AiForms.Renderers.Droid.Resource.Styleable.StateListDrawable_android_exitFadeDuration = global::MuGet.Forms.Android.Resource.Styleable.StateListDrawable_android_exitFadeDuration;
+			global::AiForms.Renderers.Droid.Resource.Styleable.StateListDrawable_android_variablePadding = global::MuGet.Forms.Android.Resource.Styleable.StateListDrawable_android_variablePadding;
+			global::AiForms.Renderers.Droid.Resource.Styleable.StateListDrawable_android_visible = global::MuGet.Forms.Android.Resource.Styleable.StateListDrawable_android_visible;
+			global::AiForms.Renderers.Droid.Resource.Styleable.StateListDrawableItem = global::MuGet.Forms.Android.Resource.Styleable.StateListDrawableItem;
+			global::AiForms.Renderers.Droid.Resource.Styleable.StateListDrawableItem_android_drawable = global::MuGet.Forms.Android.Resource.Styleable.StateListDrawableItem_android_drawable;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SwitchCompat = global::MuGet.Forms.Android.Resource.Styleable.SwitchCompat;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SwitchCompat_android_textOff = global::MuGet.Forms.Android.Resource.Styleable.SwitchCompat_android_textOff;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SwitchCompat_android_textOn = global::MuGet.Forms.Android.Resource.Styleable.SwitchCompat_android_textOn;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SwitchCompat_android_thumb = global::MuGet.Forms.Android.Resource.Styleable.SwitchCompat_android_thumb;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SwitchCompat_showText = global::MuGet.Forms.Android.Resource.Styleable.SwitchCompat_showText;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SwitchCompat_splitTrack = global::MuGet.Forms.Android.Resource.Styleable.SwitchCompat_splitTrack;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SwitchCompat_switchMinWidth = global::MuGet.Forms.Android.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SwitchCompat_switchPadding = global::MuGet.Forms.Android.Resource.Styleable.SwitchCompat_switchPadding;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance = global::MuGet.Forms.Android.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding = global::MuGet.Forms.Android.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SwitchCompat_thumbTint = global::MuGet.Forms.Android.Resource.Styleable.SwitchCompat_thumbTint;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SwitchCompat_thumbTintMode = global::MuGet.Forms.Android.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SwitchCompat_track = global::MuGet.Forms.Android.Resource.Styleable.SwitchCompat_track;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SwitchCompat_trackTint = global::MuGet.Forms.Android.Resource.Styleable.SwitchCompat_trackTint;
+			global::AiForms.Renderers.Droid.Resource.Styleable.SwitchCompat_trackTintMode = global::MuGet.Forms.Android.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabItem = global::MuGet.Forms.Android.Resource.Styleable.TabItem;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabItem_android_icon = global::MuGet.Forms.Android.Resource.Styleable.TabItem_android_icon;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabItem_android_layout = global::MuGet.Forms.Android.Resource.Styleable.TabItem_android_layout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabItem_android_text = global::MuGet.Forms.Android.Resource.Styleable.TabItem_android_text;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout = global::MuGet.Forms.Android.Resource.Styleable.TabLayout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout_tabBackground = global::MuGet.Forms.Android.Resource.Styleable.TabLayout_tabBackground;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout_tabContentStart = global::MuGet.Forms.Android.Resource.Styleable.TabLayout_tabContentStart;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout_tabGravity = global::MuGet.Forms.Android.Resource.Styleable.TabLayout_tabGravity;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout_tabIconTint = global::MuGet.Forms.Android.Resource.Styleable.TabLayout_tabIconTint;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout_tabIconTintMode = global::MuGet.Forms.Android.Resource.Styleable.TabLayout_tabIconTintMode;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout_tabIndicator = global::MuGet.Forms.Android.Resource.Styleable.TabLayout_tabIndicator;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration = global::MuGet.Forms.Android.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout_tabIndicatorColor = global::MuGet.Forms.Android.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout_tabIndicatorFullWidth = global::MuGet.Forms.Android.Resource.Styleable.TabLayout_tabIndicatorFullWidth;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout_tabIndicatorGravity = global::MuGet.Forms.Android.Resource.Styleable.TabLayout_tabIndicatorGravity;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight = global::MuGet.Forms.Android.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout_tabInlineLabel = global::MuGet.Forms.Android.Resource.Styleable.TabLayout_tabInlineLabel;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout_tabMaxWidth = global::MuGet.Forms.Android.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout_tabMinWidth = global::MuGet.Forms.Android.Resource.Styleable.TabLayout_tabMinWidth;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout_tabMode = global::MuGet.Forms.Android.Resource.Styleable.TabLayout_tabMode;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout_tabPadding = global::MuGet.Forms.Android.Resource.Styleable.TabLayout_tabPadding;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout_tabPaddingBottom = global::MuGet.Forms.Android.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout_tabPaddingEnd = global::MuGet.Forms.Android.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout_tabPaddingStart = global::MuGet.Forms.Android.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout_tabPaddingTop = global::MuGet.Forms.Android.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout_tabRippleColor = global::MuGet.Forms.Android.Resource.Styleable.TabLayout_tabRippleColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor = global::MuGet.Forms.Android.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout_tabTextAppearance = global::MuGet.Forms.Android.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout_tabTextColor = global::MuGet.Forms.Android.Resource.Styleable.TabLayout_tabTextColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TabLayout_tabUnboundedRipple = global::MuGet.Forms.Android.Resource.Styleable.TabLayout_tabUnboundedRipple;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextAppearance = global::MuGet.Forms.Android.Resource.Styleable.TextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextAppearance_android_fontFamily = global::MuGet.Forms.Android.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextAppearance_android_shadowColor = global::MuGet.Forms.Android.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextAppearance_android_shadowDx = global::MuGet.Forms.Android.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextAppearance_android_shadowDy = global::MuGet.Forms.Android.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextAppearance_android_shadowRadius = global::MuGet.Forms.Android.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextAppearance_android_textColor = global::MuGet.Forms.Android.Resource.Styleable.TextAppearance_android_textColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextAppearance_android_textColorHint = global::MuGet.Forms.Android.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextAppearance_android_textColorLink = global::MuGet.Forms.Android.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextAppearance_android_textSize = global::MuGet.Forms.Android.Resource.Styleable.TextAppearance_android_textSize;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextAppearance_android_textStyle = global::MuGet.Forms.Android.Resource.Styleable.TextAppearance_android_textStyle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextAppearance_android_typeface = global::MuGet.Forms.Android.Resource.Styleable.TextAppearance_android_typeface;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextAppearance_fontFamily = global::MuGet.Forms.Android.Resource.Styleable.TextAppearance_fontFamily;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextAppearance_textAllCaps = global::MuGet.Forms.Android.Resource.Styleable.TextAppearance_textAllCaps;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_android_hint = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_android_hint;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_android_textColorHint = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_boxBackgroundColor = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_boxBackgroundColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_boxBackgroundMode = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_boxBackgroundMode;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_boxStrokeColor = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_boxStrokeColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_boxStrokeWidth = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_boxStrokeWidth;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_counterEnabled = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_counterMaxLength = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_errorEnabled = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_helperText = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_helperText;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_helperTextEnabled = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_helperTextEnabled;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_helperTextTextAppearance = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_helperTextTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_hintEnabled = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::AiForms.Renderers.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::MuGet.Forms.Android.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ThemeEnforcement = global::MuGet.Forms.Android.Resource.Styleable.ThemeEnforcement;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ThemeEnforcement_android_textAppearance = global::MuGet.Forms.Android.Resource.Styleable.ThemeEnforcement_android_textAppearance;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme = global::MuGet.Forms.Android.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ThemeEnforcement_enforceTextAppearance = global::MuGet.Forms.Android.Resource.Styleable.ThemeEnforcement_enforceTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar = global::MuGet.Forms.Android.Resource.Styleable.Toolbar;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_android_gravity = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_android_gravity;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_android_minHeight = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_android_minHeight;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_buttonGravity = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_buttonGravity;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_collapseContentDescription = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_collapseIcon = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_collapseIcon;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_contentInsetEnd = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_contentInsetLeft = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_contentInsetRight = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_contentInsetRight;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_contentInsetStart = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_contentInsetStart;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_logo = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_logo;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_logoDescription = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_logoDescription;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_maxButtonHeight = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_navigationContentDescription = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_navigationIcon = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_navigationIcon;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_popupTheme = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_popupTheme;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_subtitle = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_subtitle;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_subtitleTextColor = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_title = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_title;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_titleMargin = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_titleMargin;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_titleMarginBottom = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_titleMarginEnd = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_titleMarginStart = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_titleMarginStart;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_titleMarginTop = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_titleMarginTop;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_titleMargins = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_titleMargins;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_titleTextAppearance = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::AiForms.Renderers.Droid.Resource.Styleable.Toolbar_titleTextColor = global::MuGet.Forms.Android.Resource.Styleable.Toolbar_titleTextColor;
+			global::AiForms.Renderers.Droid.Resource.Styleable.View = global::MuGet.Forms.Android.Resource.Styleable.View;
+			global::AiForms.Renderers.Droid.Resource.Styleable.View_android_focusable = global::MuGet.Forms.Android.Resource.Styleable.View_android_focusable;
+			global::AiForms.Renderers.Droid.Resource.Styleable.View_android_theme = global::MuGet.Forms.Android.Resource.Styleable.View_android_theme;
+			global::AiForms.Renderers.Droid.Resource.Styleable.View_paddingEnd = global::MuGet.Forms.Android.Resource.Styleable.View_paddingEnd;
+			global::AiForms.Renderers.Droid.Resource.Styleable.View_paddingStart = global::MuGet.Forms.Android.Resource.Styleable.View_paddingStart;
+			global::AiForms.Renderers.Droid.Resource.Styleable.View_theme = global::MuGet.Forms.Android.Resource.Styleable.View_theme;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ViewBackgroundHelper = global::MuGet.Forms.Android.Resource.Styleable.ViewBackgroundHelper;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ViewBackgroundHelper_android_background = global::MuGet.Forms.Android.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::MuGet.Forms.Android.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::MuGet.Forms.Android.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ViewStubCompat = global::MuGet.Forms.Android.Resource.Styleable.ViewStubCompat;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ViewStubCompat_android_id = global::MuGet.Forms.Android.Resource.Styleable.ViewStubCompat_android_id;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId = global::MuGet.Forms.Android.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::AiForms.Renderers.Droid.Resource.Styleable.ViewStubCompat_android_layout = global::MuGet.Forms.Android.Resource.Styleable.ViewStubCompat_android_layout;
 			global::Shiny.Resource.Attribute.alpha = global::MuGet.Forms.Android.Resource.Attribute.alpha;
 			global::Shiny.Resource.Attribute.coordinatorLayoutStyle = global::MuGet.Forms.Android.Resource.Attribute.coordinatorLayoutStyle;
 			global::Shiny.Resource.Attribute.font = global::MuGet.Forms.Android.Resource.Attribute.font;
@@ -11403,773 +14317,809 @@ namespace MuGet.Forms.Android
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7F080007
-			public const int action0 = 2131230727;
-			
-			// aapt resource value: 0x7F080019
-			public const int actions = 2131230745;
-			
-			// aapt resource value: 0x7F080008
-			public const int action_bar = 2131230728;
-			
-			// aapt resource value: 0x7F080009
-			public const int action_bar_activity_content = 2131230729;
-			
-			// aapt resource value: 0x7F08000A
-			public const int action_bar_container = 2131230730;
-			
-			// aapt resource value: 0x7F08000B
-			public const int action_bar_root = 2131230731;
-			
-			// aapt resource value: 0x7F08000C
-			public const int action_bar_spinner = 2131230732;
-			
-			// aapt resource value: 0x7F08000D
-			public const int action_bar_subtitle = 2131230733;
-			
-			// aapt resource value: 0x7F08000E
-			public const int action_bar_title = 2131230734;
-			
-			// aapt resource value: 0x7F08000F
-			public const int action_container = 2131230735;
-			
-			// aapt resource value: 0x7F080010
-			public const int action_context_bar = 2131230736;
-			
-			// aapt resource value: 0x7F080011
-			public const int action_divider = 2131230737;
-			
-			// aapt resource value: 0x7F080012
-			public const int action_image = 2131230738;
-			
 			// aapt resource value: 0x7F080013
-			public const int action_menu_divider = 2131230739;
+			public const int action0 = 2131230739;
+			
+			// aapt resource value: 0x7F080025
+			public const int actions = 2131230757;
 			
 			// aapt resource value: 0x7F080014
-			public const int action_menu_presenter = 2131230740;
+			public const int action_bar = 2131230740;
 			
 			// aapt resource value: 0x7F080015
-			public const int action_mode_bar = 2131230741;
+			public const int action_bar_activity_content = 2131230741;
 			
 			// aapt resource value: 0x7F080016
-			public const int action_mode_bar_stub = 2131230742;
+			public const int action_bar_container = 2131230742;
 			
 			// aapt resource value: 0x7F080017
-			public const int action_mode_close_button = 2131230743;
+			public const int action_bar_root = 2131230743;
 			
 			// aapt resource value: 0x7F080018
-			public const int action_text = 2131230744;
+			public const int action_bar_spinner = 2131230744;
+			
+			// aapt resource value: 0x7F080019
+			public const int action_bar_subtitle = 2131230745;
 			
 			// aapt resource value: 0x7F08001A
-			public const int activity_chooser_view_content = 2131230746;
+			public const int action_bar_title = 2131230746;
 			
 			// aapt resource value: 0x7F08001B
-			public const int add = 2131230747;
+			public const int action_container = 2131230747;
 			
 			// aapt resource value: 0x7F08001C
-			public const int alertTitle = 2131230748;
+			public const int action_context_bar = 2131230748;
 			
 			// aapt resource value: 0x7F08001D
-			public const int all = 2131230749;
+			public const int action_divider = 2131230749;
+			
+			// aapt resource value: 0x7F08001E
+			public const int action_image = 2131230750;
+			
+			// aapt resource value: 0x7F08001F
+			public const int action_menu_divider = 2131230751;
+			
+			// aapt resource value: 0x7F080020
+			public const int action_menu_presenter = 2131230752;
+			
+			// aapt resource value: 0x7F080021
+			public const int action_mode_bar = 2131230753;
+			
+			// aapt resource value: 0x7F080022
+			public const int action_mode_bar_stub = 2131230754;
+			
+			// aapt resource value: 0x7F080023
+			public const int action_mode_close_button = 2131230755;
+			
+			// aapt resource value: 0x7F080024
+			public const int action_text = 2131230756;
+			
+			// aapt resource value: 0x7F080026
+			public const int activity_chooser_view_content = 2131230758;
+			
+			// aapt resource value: 0x7F080027
+			public const int add = 2131230759;
+			
+			// aapt resource value: 0x7F080028
+			public const int alertTitle = 2131230760;
+			
+			// aapt resource value: 0x7F080029
+			public const int all = 2131230761;
 			
 			// aapt resource value: 0x7F080000
 			public const int ALT = 2131230720;
 			
-			// aapt resource value: 0x7F08001E
-			public const int always = 2131230750;
-			
-			// aapt resource value: 0x7F08001F
-			public const int async = 2131230751;
-			
-			// aapt resource value: 0x7F080020
-			public const int auto = 2131230752;
-			
-			// aapt resource value: 0x7F080021
-			public const int beginning = 2131230753;
-			
-			// aapt resource value: 0x7F080022
-			public const int blocking = 2131230754;
-			
-			// aapt resource value: 0x7F080023
-			public const int bottom = 2131230755;
-			
-			// aapt resource value: 0x7F080024
-			public const int bottomtab_navarea = 2131230756;
-			
-			// aapt resource value: 0x7F080025
-			public const int bottomtab_tabbar = 2131230757;
-			
-			// aapt resource value: 0x7F080026
-			public const int browser_actions_header_text = 2131230758;
-			
-			// aapt resource value: 0x7F080029
-			public const int browser_actions_menu_items = 2131230761;
-			
-			// aapt resource value: 0x7F080027
-			public const int browser_actions_menu_item_icon = 2131230759;
-			
-			// aapt resource value: 0x7F080028
-			public const int browser_actions_menu_item_text = 2131230760;
-			
 			// aapt resource value: 0x7F08002A
-			public const int browser_actions_menu_view = 2131230762;
+			public const int always = 2131230762;
 			
 			// aapt resource value: 0x7F08002B
-			public const int buttonPanel = 2131230763;
+			public const int async = 2131230763;
 			
 			// aapt resource value: 0x7F08002C
-			public const int cancel_action = 2131230764;
+			public const int auto = 2131230764;
 			
 			// aapt resource value: 0x7F08002D
-			public const int center = 2131230765;
+			public const int beginning = 2131230765;
 			
 			// aapt resource value: 0x7F08002E
-			public const int center_horizontal = 2131230766;
+			public const int blocking = 2131230766;
 			
 			// aapt resource value: 0x7F08002F
-			public const int center_vertical = 2131230767;
+			public const int bottom = 2131230767;
 			
 			// aapt resource value: 0x7F080030
-			public const int checkbox = 2131230768;
+			public const int bottomtab_navarea = 2131230768;
 			
 			// aapt resource value: 0x7F080031
-			public const int chronometer = 2131230769;
+			public const int bottomtab_tabbar = 2131230769;
 			
 			// aapt resource value: 0x7F080032
-			public const int clip_horizontal = 2131230770;
-			
-			// aapt resource value: 0x7F080033
-			public const int clip_vertical = 2131230771;
-			
-			// aapt resource value: 0x7F080034
-			public const int collapseActionView = 2131230772;
+			public const int browser_actions_header_text = 2131230770;
 			
 			// aapt resource value: 0x7F080035
-			public const int container = 2131230773;
+			public const int browser_actions_menu_items = 2131230773;
+			
+			// aapt resource value: 0x7F080033
+			public const int browser_actions_menu_item_icon = 2131230771;
+			
+			// aapt resource value: 0x7F080034
+			public const int browser_actions_menu_item_text = 2131230772;
 			
 			// aapt resource value: 0x7F080036
-			public const int content = 2131230774;
+			public const int browser_actions_menu_view = 2131230774;
 			
 			// aapt resource value: 0x7F080037
-			public const int contentPanel = 2131230775;
+			public const int buttonPanel = 2131230775;
 			
 			// aapt resource value: 0x7F080038
-			public const int coordinator = 2131230776;
+			public const int cancel_action = 2131230776;
+			
+			// aapt resource value: 0x7F080002
+			public const int CellAccessoryView = 2131230722;
+			
+			// aapt resource value: 0x7F080003
+			public const int CellBody = 2131230723;
+			
+			// aapt resource value: 0x7F080004
+			public const int CellContentStack = 2131230724;
+			
+			// aapt resource value: 0x7F080005
+			public const int CellDescription = 2131230725;
+			
+			// aapt resource value: 0x7F080006
+			public const int CellHintText = 2131230726;
+			
+			// aapt resource value: 0x7F080007
+			public const int CellIcon = 2131230727;
+			
+			// aapt resource value: 0x7F080008
+			public const int CellTitle = 2131230728;
+			
+			// aapt resource value: 0x7F080039
+			public const int center = 2131230777;
+			
+			// aapt resource value: 0x7F08003A
+			public const int center_horizontal = 2131230778;
+			
+			// aapt resource value: 0x7F08003B
+			public const int center_vertical = 2131230779;
+			
+			// aapt resource value: 0x7F08003C
+			public const int checkbox = 2131230780;
+			
+			// aapt resource value: 0x7F08003D
+			public const int chronometer = 2131230781;
+			
+			// aapt resource value: 0x7F08003E
+			public const int clip_horizontal = 2131230782;
+			
+			// aapt resource value: 0x7F08003F
+			public const int clip_vertical = 2131230783;
+			
+			// aapt resource value: 0x7F080040
+			public const int collapseActionView = 2131230784;
+			
+			// aapt resource value: 0x7F080041
+			public const int container = 2131230785;
+			
+			// aapt resource value: 0x7F080042
+			public const int content = 2131230786;
+			
+			// aapt resource value: 0x7F080009
+			public const int ContentCellBody = 2131230729;
+			
+			// aapt resource value: 0x7F08000A
+			public const int ContentCellBorder = 2131230730;
+			
+			// aapt resource value: 0x7F080043
+			public const int contentPanel = 2131230787;
+			
+			// aapt resource value: 0x7F080044
+			public const int coordinator = 2131230788;
 			
 			// aapt resource value: 0x7F080001
 			public const int CTRL = 2131230721;
 			
-			// aapt resource value: 0x7F080039
-			public const int custom = 2131230777;
-			
-			// aapt resource value: 0x7F08003A
-			public const int customPanel = 2131230778;
-			
-			// aapt resource value: 0x7F08003B
-			public const int decor_content_parent = 2131230779;
-			
-			// aapt resource value: 0x7F08003C
-			public const int default_activity_button = 2131230780;
-			
-			// aapt resource value: 0x7F08003D
-			public const int design_bottom_sheet = 2131230781;
-			
-			// aapt resource value: 0x7F08003E
-			public const int design_menu_item_action_area = 2131230782;
-			
-			// aapt resource value: 0x7F08003F
-			public const int design_menu_item_action_area_stub = 2131230783;
-			
-			// aapt resource value: 0x7F080040
-			public const int design_menu_item_text = 2131230784;
-			
-			// aapt resource value: 0x7F080041
-			public const int design_navigation_view = 2131230785;
-			
-			// aapt resource value: 0x7F080042
-			public const int disableHome = 2131230786;
-			
-			// aapt resource value: 0x7F080043
-			public const int edit_query = 2131230787;
-			
-			// aapt resource value: 0x7F080044
-			public const int end = 2131230788;
-			
 			// aapt resource value: 0x7F080045
-			public const int end_padder = 2131230789;
+			public const int custom = 2131230789;
 			
 			// aapt resource value: 0x7F080046
-			public const int enterAlways = 2131230790;
+			public const int customPanel = 2131230790;
 			
 			// aapt resource value: 0x7F080047
-			public const int enterAlwaysCollapsed = 2131230791;
+			public const int decor_content_parent = 2131230791;
 			
 			// aapt resource value: 0x7F080048
-			public const int exitUntilCollapsed = 2131230792;
-			
-			// aapt resource value: 0x7F08004A
-			public const int expanded_menu = 2131230794;
+			public const int default_activity_button = 2131230792;
 			
 			// aapt resource value: 0x7F080049
-			public const int expand_activities_button = 2131230793;
+			public const int design_bottom_sheet = 2131230793;
+			
+			// aapt resource value: 0x7F08004A
+			public const int design_menu_item_action_area = 2131230794;
 			
 			// aapt resource value: 0x7F08004B
-			public const int fill = 2131230795;
-			
-			// aapt resource value: 0x7F08004E
-			public const int filled = 2131230798;
+			public const int design_menu_item_action_area_stub = 2131230795;
 			
 			// aapt resource value: 0x7F08004C
-			public const int fill_horizontal = 2131230796;
+			public const int design_menu_item_text = 2131230796;
 			
 			// aapt resource value: 0x7F08004D
-			public const int fill_vertical = 2131230797;
+			public const int design_navigation_view = 2131230797;
+			
+			// aapt resource value: 0x7F08004E
+			public const int disableHome = 2131230798;
 			
 			// aapt resource value: 0x7F08004F
-			public const int @fixed = 2131230799;
+			public const int edit_query = 2131230799;
 			
 			// aapt resource value: 0x7F080050
-			public const int flyoutcontent_appbar = 2131230800;
+			public const int end = 2131230800;
 			
 			// aapt resource value: 0x7F080051
-			public const int flyoutcontent_recycler = 2131230801;
+			public const int end_padder = 2131230801;
 			
 			// aapt resource value: 0x7F080052
-			public const int forever = 2131230802;
-			
-			// aapt resource value: 0x7F080002
-			public const int FUNCTION = 2131230722;
+			public const int enterAlways = 2131230802;
 			
 			// aapt resource value: 0x7F080053
-			public const int ghost_view = 2131230803;
+			public const int enterAlwaysCollapsed = 2131230803;
 			
 			// aapt resource value: 0x7F080054
-			public const int group_divider = 2131230804;
-			
-			// aapt resource value: 0x7F080055
-			public const int home = 2131230805;
+			public const int exitUntilCollapsed = 2131230804;
 			
 			// aapt resource value: 0x7F080056
-			public const int homeAsUp = 2131230806;
+			public const int expanded_menu = 2131230806;
+			
+			// aapt resource value: 0x7F080055
+			public const int expand_activities_button = 2131230805;
 			
 			// aapt resource value: 0x7F080057
-			public const int icon = 2131230807;
-			
-			// aapt resource value: 0x7F080058
-			public const int icon_group = 2131230808;
-			
-			// aapt resource value: 0x7F080059
-			public const int ifRoom = 2131230809;
+			public const int fill = 2131230807;
 			
 			// aapt resource value: 0x7F08005A
-			public const int image = 2131230810;
+			public const int filled = 2131230810;
+			
+			// aapt resource value: 0x7F080058
+			public const int fill_horizontal = 2131230808;
+			
+			// aapt resource value: 0x7F080059
+			public const int fill_vertical = 2131230809;
 			
 			// aapt resource value: 0x7F08005B
-			public const int info = 2131230811;
+			public const int @fixed = 2131230811;
 			
 			// aapt resource value: 0x7F08005C
-			public const int italic = 2131230812;
+			public const int flyoutcontent_appbar = 2131230812;
 			
 			// aapt resource value: 0x7F08005D
-			public const int item_touch_helper_previous_elevation = 2131230813;
+			public const int flyoutcontent_recycler = 2131230813;
+			
+			// aapt resource value: 0x7F08000C
+			public const int FooterCellText = 2131230732;
 			
 			// aapt resource value: 0x7F08005E
-			public const int labeled = 2131230814;
+			public const int forever = 2131230814;
+			
+			// aapt resource value: 0x7F08000B
+			public const int FUNCTION = 2131230731;
 			
 			// aapt resource value: 0x7F08005F
-			public const int largeLabel = 2131230815;
+			public const int ghost_view = 2131230815;
 			
 			// aapt resource value: 0x7F080060
-			public const int left = 2131230816;
+			public const int group_divider = 2131230816;
+			
+			// aapt resource value: 0x7F08000D
+			public const int HeaderCellBorder = 2131230733;
+			
+			// aapt resource value: 0x7F08000E
+			public const int HeaderCellText = 2131230734;
 			
 			// aapt resource value: 0x7F080061
-			public const int line1 = 2131230817;
+			public const int home = 2131230817;
 			
 			// aapt resource value: 0x7F080062
-			public const int line3 = 2131230818;
+			public const int homeAsUp = 2131230818;
 			
 			// aapt resource value: 0x7F080063
-			public const int listMode = 2131230819;
+			public const int icon = 2131230819;
 			
 			// aapt resource value: 0x7F080064
-			public const int list_item = 2131230820;
+			public const int icon_group = 2131230820;
 			
 			// aapt resource value: 0x7F080065
-			public const int main_appbar = 2131230821;
+			public const int ifRoom = 2131230821;
 			
 			// aapt resource value: 0x7F080066
-			public const int main_tablayout = 2131230822;
+			public const int image = 2131230822;
 			
 			// aapt resource value: 0x7F080067
-			public const int main_toolbar = 2131230823;
+			public const int info = 2131230823;
 			
 			// aapt resource value: 0x7F080068
-			public const int main_viewpager = 2131230824;
+			public const int italic = 2131230824;
 			
 			// aapt resource value: 0x7F080069
-			public const int masked = 2131230825;
+			public const int item_touch_helper_previous_elevation = 2131230825;
 			
 			// aapt resource value: 0x7F08006A
-			public const int media_actions = 2131230826;
+			public const int labeled = 2131230826;
 			
 			// aapt resource value: 0x7F08006B
-			public const int message = 2131230827;
-			
-			// aapt resource value: 0x7F080003
-			public const int META = 2131230723;
+			public const int largeLabel = 2131230827;
 			
 			// aapt resource value: 0x7F08006C
-			public const int middle = 2131230828;
+			public const int left = 2131230828;
 			
 			// aapt resource value: 0x7F08006D
-			public const int mini = 2131230829;
+			public const int line1 = 2131230829;
 			
 			// aapt resource value: 0x7F08006E
-			public const int mr_art = 2131230830;
+			public const int line3 = 2131230830;
 			
 			// aapt resource value: 0x7F08006F
-			public const int mr_cast_checkbox = 2131230831;
+			public const int listMode = 2131230831;
 			
 			// aapt resource value: 0x7F080070
-			public const int mr_cast_close_button = 2131230832;
+			public const int list_item = 2131230832;
 			
 			// aapt resource value: 0x7F080071
-			public const int mr_cast_group_icon = 2131230833;
+			public const int main_appbar = 2131230833;
 			
 			// aapt resource value: 0x7F080072
-			public const int mr_cast_group_name = 2131230834;
+			public const int main_tablayout = 2131230834;
 			
 			// aapt resource value: 0x7F080073
-			public const int mr_cast_list = 2131230835;
+			public const int main_toolbar = 2131230835;
 			
 			// aapt resource value: 0x7F080074
-			public const int mr_cast_meta = 2131230836;
+			public const int main_viewpager = 2131230836;
 			
 			// aapt resource value: 0x7F080075
-			public const int mr_cast_meta_art = 2131230837;
+			public const int masked = 2131230837;
 			
 			// aapt resource value: 0x7F080076
-			public const int mr_cast_meta_subtitle = 2131230838;
+			public const int media_actions = 2131230838;
 			
 			// aapt resource value: 0x7F080077
-			public const int mr_cast_meta_title = 2131230839;
+			public const int message = 2131230839;
+			
+			// aapt resource value: 0x7F08000F
+			public const int META = 2131230735;
 			
 			// aapt resource value: 0x7F080078
-			public const int mr_cast_route_icon = 2131230840;
+			public const int middle = 2131230840;
 			
 			// aapt resource value: 0x7F080079
-			public const int mr_cast_route_name = 2131230841;
+			public const int mini = 2131230841;
 			
 			// aapt resource value: 0x7F08007A
-			public const int mr_cast_stop_button = 2131230842;
+			public const int mr_art = 2131230842;
 			
 			// aapt resource value: 0x7F08007B
-			public const int mr_cast_volume_layout = 2131230843;
+			public const int mr_cast_checkbox = 2131230843;
 			
 			// aapt resource value: 0x7F08007C
-			public const int mr_cast_volume_slider = 2131230844;
+			public const int mr_cast_close_button = 2131230844;
 			
 			// aapt resource value: 0x7F08007D
-			public const int mr_chooser_list = 2131230845;
+			public const int mr_cast_group_icon = 2131230845;
 			
 			// aapt resource value: 0x7F08007E
-			public const int mr_chooser_route_desc = 2131230846;
+			public const int mr_cast_group_name = 2131230846;
 			
 			// aapt resource value: 0x7F08007F
-			public const int mr_chooser_route_icon = 2131230847;
+			public const int mr_cast_list = 2131230847;
 			
 			// aapt resource value: 0x7F080080
-			public const int mr_chooser_route_name = 2131230848;
+			public const int mr_cast_meta = 2131230848;
 			
 			// aapt resource value: 0x7F080081
-			public const int mr_chooser_title = 2131230849;
+			public const int mr_cast_meta_art = 2131230849;
 			
 			// aapt resource value: 0x7F080082
-			public const int mr_close = 2131230850;
+			public const int mr_cast_meta_subtitle = 2131230850;
 			
 			// aapt resource value: 0x7F080083
-			public const int mr_control_divider = 2131230851;
+			public const int mr_cast_meta_title = 2131230851;
 			
 			// aapt resource value: 0x7F080084
-			public const int mr_control_playback_ctrl = 2131230852;
+			public const int mr_cast_route_icon = 2131230852;
 			
 			// aapt resource value: 0x7F080085
-			public const int mr_control_subtitle = 2131230853;
+			public const int mr_cast_route_name = 2131230853;
 			
 			// aapt resource value: 0x7F080086
-			public const int mr_control_title = 2131230854;
+			public const int mr_cast_stop_button = 2131230854;
 			
 			// aapt resource value: 0x7F080087
-			public const int mr_control_title_container = 2131230855;
+			public const int mr_cast_volume_layout = 2131230855;
 			
 			// aapt resource value: 0x7F080088
-			public const int mr_custom_control = 2131230856;
+			public const int mr_cast_volume_slider = 2131230856;
 			
 			// aapt resource value: 0x7F080089
-			public const int mr_default_control = 2131230857;
+			public const int mr_chooser_list = 2131230857;
 			
 			// aapt resource value: 0x7F08008A
-			public const int mr_dialog_area = 2131230858;
+			public const int mr_chooser_route_desc = 2131230858;
 			
 			// aapt resource value: 0x7F08008B
-			public const int mr_dialog_header_name = 2131230859;
+			public const int mr_chooser_route_icon = 2131230859;
 			
 			// aapt resource value: 0x7F08008C
-			public const int mr_expandable_area = 2131230860;
+			public const int mr_chooser_route_name = 2131230860;
 			
 			// aapt resource value: 0x7F08008D
-			public const int mr_group_expand_collapse = 2131230861;
+			public const int mr_chooser_title = 2131230861;
 			
 			// aapt resource value: 0x7F08008E
-			public const int mr_group_volume_route_name = 2131230862;
+			public const int mr_close = 2131230862;
 			
 			// aapt resource value: 0x7F08008F
-			public const int mr_group_volume_slider = 2131230863;
+			public const int mr_control_divider = 2131230863;
 			
 			// aapt resource value: 0x7F080090
-			public const int mr_media_main_control = 2131230864;
+			public const int mr_control_playback_ctrl = 2131230864;
 			
 			// aapt resource value: 0x7F080091
-			public const int mr_name = 2131230865;
+			public const int mr_control_subtitle = 2131230865;
 			
 			// aapt resource value: 0x7F080092
-			public const int mr_picker_close_button = 2131230866;
+			public const int mr_control_title = 2131230866;
 			
 			// aapt resource value: 0x7F080093
-			public const int mr_picker_list = 2131230867;
+			public const int mr_control_title_container = 2131230867;
 			
 			// aapt resource value: 0x7F080094
-			public const int mr_picker_route_icon = 2131230868;
+			public const int mr_custom_control = 2131230868;
 			
 			// aapt resource value: 0x7F080095
-			public const int mr_picker_route_name = 2131230869;
+			public const int mr_default_control = 2131230869;
 			
 			// aapt resource value: 0x7F080096
-			public const int mr_playback_control = 2131230870;
+			public const int mr_dialog_area = 2131230870;
 			
 			// aapt resource value: 0x7F080097
-			public const int mr_title_bar = 2131230871;
+			public const int mr_dialog_header_name = 2131230871;
 			
 			// aapt resource value: 0x7F080098
-			public const int mr_volume_control = 2131230872;
+			public const int mr_expandable_area = 2131230872;
 			
 			// aapt resource value: 0x7F080099
-			public const int mr_volume_group_list = 2131230873;
+			public const int mr_group_expand_collapse = 2131230873;
 			
 			// aapt resource value: 0x7F08009A
-			public const int mr_volume_item_icon = 2131230874;
+			public const int mr_group_volume_route_name = 2131230874;
 			
 			// aapt resource value: 0x7F08009B
-			public const int mr_volume_slider = 2131230875;
+			public const int mr_group_volume_slider = 2131230875;
 			
 			// aapt resource value: 0x7F08009C
-			public const int mtrl_child_content_container = 2131230876;
+			public const int mr_media_main_control = 2131230876;
 			
 			// aapt resource value: 0x7F08009D
-			public const int mtrl_internal_children_alpha_tag = 2131230877;
+			public const int mr_name = 2131230877;
 			
 			// aapt resource value: 0x7F08009E
-			public const int multiply = 2131230878;
+			public const int mr_picker_close_button = 2131230878;
 			
 			// aapt resource value: 0x7F08009F
-			public const int navigation_header_container = 2131230879;
+			public const int mr_picker_list = 2131230879;
 			
 			// aapt resource value: 0x7F0800A0
-			public const int never = 2131230880;
+			public const int mr_picker_route_icon = 2131230880;
 			
 			// aapt resource value: 0x7F0800A1
-			public const int none = 2131230881;
+			public const int mr_picker_route_name = 2131230881;
 			
 			// aapt resource value: 0x7F0800A2
-			public const int normal = 2131230882;
+			public const int mr_playback_control = 2131230882;
 			
 			// aapt resource value: 0x7F0800A3
-			public const int notification_background = 2131230883;
+			public const int mr_title_bar = 2131230883;
 			
 			// aapt resource value: 0x7F0800A4
-			public const int notification_main_column = 2131230884;
+			public const int mr_volume_control = 2131230884;
 			
 			// aapt resource value: 0x7F0800A5
-			public const int notification_main_column_container = 2131230885;
+			public const int mr_volume_group_list = 2131230885;
 			
 			// aapt resource value: 0x7F0800A6
-			public const int outline = 2131230886;
+			public const int mr_volume_item_icon = 2131230886;
 			
 			// aapt resource value: 0x7F0800A7
-			public const int parallax = 2131230887;
+			public const int mr_volume_slider = 2131230887;
 			
 			// aapt resource value: 0x7F0800A8
-			public const int parentPanel = 2131230888;
+			public const int mtrl_child_content_container = 2131230888;
 			
 			// aapt resource value: 0x7F0800A9
-			public const int parent_matrix = 2131230889;
+			public const int mtrl_internal_children_alpha_tag = 2131230889;
 			
 			// aapt resource value: 0x7F0800AA
-			public const int pin = 2131230890;
+			public const int multiply = 2131230890;
 			
 			// aapt resource value: 0x7F0800AB
-			public const int progress_circular = 2131230891;
+			public const int navigation_header_container = 2131230891;
 			
 			// aapt resource value: 0x7F0800AC
-			public const int progress_horizontal = 2131230892;
+			public const int never = 2131230892;
 			
 			// aapt resource value: 0x7F0800AD
-			public const int radio = 2131230893;
+			public const int none = 2131230893;
 			
 			// aapt resource value: 0x7F0800AE
-			public const int right = 2131230894;
+			public const int normal = 2131230894;
 			
 			// aapt resource value: 0x7F0800AF
-			public const int right_icon = 2131230895;
+			public const int notification_background = 2131230895;
 			
 			// aapt resource value: 0x7F0800B0
-			public const int right_side = 2131230896;
+			public const int notification_main_column = 2131230896;
 			
 			// aapt resource value: 0x7F0800B1
-			public const int save_image_matrix = 2131230897;
+			public const int notification_main_column_container = 2131230897;
 			
 			// aapt resource value: 0x7F0800B2
-			public const int save_non_transition_alpha = 2131230898;
+			public const int outline = 2131230898;
 			
 			// aapt resource value: 0x7F0800B3
-			public const int save_scale_type = 2131230899;
+			public const int parallax = 2131230899;
 			
 			// aapt resource value: 0x7F0800B4
-			public const int screen = 2131230900;
+			public const int parentPanel = 2131230900;
 			
 			// aapt resource value: 0x7F0800B5
-			public const int scroll = 2131230901;
-			
-			// aapt resource value: 0x7F0800B9
-			public const int scrollable = 2131230905;
+			public const int parent_matrix = 2131230901;
 			
 			// aapt resource value: 0x7F0800B6
-			public const int scrollIndicatorDown = 2131230902;
+			public const int pin = 2131230902;
 			
 			// aapt resource value: 0x7F0800B7
-			public const int scrollIndicatorUp = 2131230903;
+			public const int progress_circular = 2131230903;
 			
 			// aapt resource value: 0x7F0800B8
-			public const int scrollView = 2131230904;
+			public const int progress_horizontal = 2131230904;
+			
+			// aapt resource value: 0x7F0800B9
+			public const int radio = 2131230905;
 			
 			// aapt resource value: 0x7F0800BA
-			public const int search_badge = 2131230906;
+			public const int right = 2131230906;
 			
 			// aapt resource value: 0x7F0800BB
-			public const int search_bar = 2131230907;
+			public const int right_icon = 2131230907;
 			
 			// aapt resource value: 0x7F0800BC
-			public const int search_button = 2131230908;
+			public const int right_side = 2131230908;
 			
 			// aapt resource value: 0x7F0800BD
-			public const int search_close_btn = 2131230909;
+			public const int save_image_matrix = 2131230909;
 			
 			// aapt resource value: 0x7F0800BE
-			public const int search_edit_frame = 2131230910;
+			public const int save_non_transition_alpha = 2131230910;
 			
 			// aapt resource value: 0x7F0800BF
-			public const int search_go_btn = 2131230911;
+			public const int save_scale_type = 2131230911;
 			
 			// aapt resource value: 0x7F0800C0
-			public const int search_mag_icon = 2131230912;
+			public const int screen = 2131230912;
 			
 			// aapt resource value: 0x7F0800C1
-			public const int search_plate = 2131230913;
-			
-			// aapt resource value: 0x7F0800C2
-			public const int search_src_text = 2131230914;
-			
-			// aapt resource value: 0x7F0800C3
-			public const int search_voice_btn = 2131230915;
-			
-			// aapt resource value: 0x7F080006
-			public const int SegControl = 2131230726;
+			public const int scroll = 2131230913;
 			
 			// aapt resource value: 0x7F0800C5
-			public const int selected = 2131230917;
+			public const int scrollable = 2131230917;
+			
+			// aapt resource value: 0x7F0800C2
+			public const int scrollIndicatorDown = 2131230914;
+			
+			// aapt resource value: 0x7F0800C3
+			public const int scrollIndicatorUp = 2131230915;
 			
 			// aapt resource value: 0x7F0800C4
-			public const int select_dialog_listview = 2131230916;
+			public const int scrollView = 2131230916;
 			
 			// aapt resource value: 0x7F0800C6
-			public const int shape_id = 2131230918;
+			public const int search_badge = 2131230918;
 			
 			// aapt resource value: 0x7F0800C7
-			public const int shellcontent_appbar = 2131230919;
+			public const int search_bar = 2131230919;
 			
 			// aapt resource value: 0x7F0800C8
-			public const int shellcontent_toolbar = 2131230920;
-			
-			// aapt resource value: 0x7F080004
-			public const int SHIFT = 2131230724;
+			public const int search_button = 2131230920;
 			
 			// aapt resource value: 0x7F0800C9
-			public const int shortcut = 2131230921;
+			public const int search_close_btn = 2131230921;
 			
 			// aapt resource value: 0x7F0800CA
-			public const int showCustom = 2131230922;
+			public const int search_edit_frame = 2131230922;
 			
 			// aapt resource value: 0x7F0800CB
-			public const int showHome = 2131230923;
+			public const int search_go_btn = 2131230923;
 			
 			// aapt resource value: 0x7F0800CC
-			public const int showTitle = 2131230924;
+			public const int search_mag_icon = 2131230924;
 			
 			// aapt resource value: 0x7F0800CD
-			public const int sliding_tabs = 2131230925;
+			public const int search_plate = 2131230925;
 			
 			// aapt resource value: 0x7F0800CE
-			public const int smallLabel = 2131230926;
+			public const int search_src_text = 2131230926;
 			
 			// aapt resource value: 0x7F0800CF
-			public const int snackbar_action = 2131230927;
+			public const int search_voice_btn = 2131230927;
 			
-			// aapt resource value: 0x7F0800D0
-			public const int snackbar_text = 2131230928;
+			// aapt resource value: 0x7F080012
+			public const int SegControl = 2131230738;
 			
 			// aapt resource value: 0x7F0800D1
-			public const int snap = 2131230929;
+			public const int selected = 2131230929;
+			
+			// aapt resource value: 0x7F0800D0
+			public const int select_dialog_listview = 2131230928;
 			
 			// aapt resource value: 0x7F0800D2
-			public const int snapMargins = 2131230930;
+			public const int shape_id = 2131230930;
 			
 			// aapt resource value: 0x7F0800D3
-			public const int spacer = 2131230931;
+			public const int shellcontent_appbar = 2131230931;
 			
 			// aapt resource value: 0x7F0800D4
-			public const int split_action_bar = 2131230932;
+			public const int shellcontent_toolbar = 2131230932;
+			
+			// aapt resource value: 0x7F080010
+			public const int SHIFT = 2131230736;
 			
 			// aapt resource value: 0x7F0800D5
-			public const int src_atop = 2131230933;
+			public const int shortcut = 2131230933;
 			
 			// aapt resource value: 0x7F0800D6
-			public const int src_in = 2131230934;
+			public const int showCustom = 2131230934;
 			
 			// aapt resource value: 0x7F0800D7
-			public const int src_over = 2131230935;
+			public const int showHome = 2131230935;
 			
 			// aapt resource value: 0x7F0800D8
-			public const int start = 2131230936;
+			public const int showTitle = 2131230936;
 			
 			// aapt resource value: 0x7F0800D9
-			public const int status_bar_latest_event_content = 2131230937;
+			public const int sliding_tabs = 2131230937;
 			
 			// aapt resource value: 0x7F0800DA
-			public const int stretch = 2131230938;
+			public const int smallLabel = 2131230938;
 			
 			// aapt resource value: 0x7F0800DB
-			public const int submenuarrow = 2131230939;
+			public const int snackbar_action = 2131230939;
 			
 			// aapt resource value: 0x7F0800DC
-			public const int submit_area = 2131230940;
-			
-			// aapt resource value: 0x7F080005
-			public const int SYM = 2131230725;
+			public const int snackbar_text = 2131230940;
 			
 			// aapt resource value: 0x7F0800DD
-			public const int tabMode = 2131230941;
+			public const int snap = 2131230941;
 			
 			// aapt resource value: 0x7F0800DE
-			public const int tag_transition_group = 2131230942;
+			public const int snapMargins = 2131230942;
 			
 			// aapt resource value: 0x7F0800DF
-			public const int tag_unhandled_key_event_manager = 2131230943;
+			public const int spacer = 2131230943;
 			
 			// aapt resource value: 0x7F0800E0
-			public const int tag_unhandled_key_listeners = 2131230944;
+			public const int split_action_bar = 2131230944;
 			
 			// aapt resource value: 0x7F0800E1
-			public const int text = 2131230945;
+			public const int src_atop = 2131230945;
 			
 			// aapt resource value: 0x7F0800E2
-			public const int text2 = 2131230946;
-			
-			// aapt resource value: 0x7F0800E7
-			public const int textinput_counter = 2131230951;
-			
-			// aapt resource value: 0x7F0800E8
-			public const int textinput_error = 2131230952;
-			
-			// aapt resource value: 0x7F0800E9
-			public const int textinput_helper_text = 2131230953;
+			public const int src_in = 2131230946;
 			
 			// aapt resource value: 0x7F0800E3
-			public const int textSpacerNoButtons = 2131230947;
+			public const int src_over = 2131230947;
 			
 			// aapt resource value: 0x7F0800E4
-			public const int textSpacerNoTitle = 2131230948;
+			public const int start = 2131230948;
 			
 			// aapt resource value: 0x7F0800E5
-			public const int textStart = 2131230949;
+			public const int status_bar_latest_event_content = 2131230949;
 			
 			// aapt resource value: 0x7F0800E6
-			public const int text_input_password_toggle = 2131230950;
+			public const int stretch = 2131230950;
+			
+			// aapt resource value: 0x7F0800E7
+			public const int submenuarrow = 2131230951;
+			
+			// aapt resource value: 0x7F0800E8
+			public const int submit_area = 2131230952;
+			
+			// aapt resource value: 0x7F080011
+			public const int SYM = 2131230737;
+			
+			// aapt resource value: 0x7F0800E9
+			public const int tabMode = 2131230953;
 			
 			// aapt resource value: 0x7F0800EA
-			public const int time = 2131230954;
+			public const int tag_transition_group = 2131230954;
 			
 			// aapt resource value: 0x7F0800EB
-			public const int title = 2131230955;
+			public const int tag_unhandled_key_event_manager = 2131230955;
 			
 			// aapt resource value: 0x7F0800EC
-			public const int titleDividerNoCustom = 2131230956;
+			public const int tag_unhandled_key_listeners = 2131230956;
 			
 			// aapt resource value: 0x7F0800ED
-			public const int title_template = 2131230957;
+			public const int text = 2131230957;
 			
 			// aapt resource value: 0x7F0800EE
-			public const int toolbar = 2131230958;
-			
-			// aapt resource value: 0x7F0800EF
-			public const int top = 2131230959;
-			
-			// aapt resource value: 0x7F0800F0
-			public const int topPanel = 2131230960;
-			
-			// aapt resource value: 0x7F0800F1
-			public const int touch_outside = 2131230961;
-			
-			// aapt resource value: 0x7F0800F2
-			public const int transition_current_scene = 2131230962;
+			public const int text2 = 2131230958;
 			
 			// aapt resource value: 0x7F0800F3
-			public const int transition_layout_save = 2131230963;
+			public const int textinput_counter = 2131230963;
 			
 			// aapt resource value: 0x7F0800F4
-			public const int transition_position = 2131230964;
+			public const int textinput_error = 2131230964;
 			
 			// aapt resource value: 0x7F0800F5
-			public const int transition_scene_layoutid_cache = 2131230965;
+			public const int textinput_helper_text = 2131230965;
+			
+			// aapt resource value: 0x7F0800EF
+			public const int textSpacerNoButtons = 2131230959;
+			
+			// aapt resource value: 0x7F0800F0
+			public const int textSpacerNoTitle = 2131230960;
+			
+			// aapt resource value: 0x7F0800F1
+			public const int textStart = 2131230961;
+			
+			// aapt resource value: 0x7F0800F2
+			public const int text_input_password_toggle = 2131230962;
 			
 			// aapt resource value: 0x7F0800F6
-			public const int transition_transform = 2131230966;
+			public const int time = 2131230966;
 			
 			// aapt resource value: 0x7F0800F7
-			public const int uniform = 2131230967;
+			public const int title = 2131230967;
 			
 			// aapt resource value: 0x7F0800F8
-			public const int unlabeled = 2131230968;
+			public const int titleDividerNoCustom = 2131230968;
 			
 			// aapt resource value: 0x7F0800F9
-			public const int up = 2131230969;
+			public const int title_template = 2131230969;
 			
 			// aapt resource value: 0x7F0800FA
-			public const int useLogo = 2131230970;
+			public const int toolbar = 2131230970;
 			
 			// aapt resource value: 0x7F0800FB
-			public const int view_offset_helper = 2131230971;
+			public const int top = 2131230971;
 			
 			// aapt resource value: 0x7F0800FC
-			public const int visible = 2131230972;
+			public const int topPanel = 2131230972;
 			
 			// aapt resource value: 0x7F0800FD
-			public const int volume_item_container = 2131230973;
+			public const int touch_outside = 2131230973;
 			
 			// aapt resource value: 0x7F0800FE
-			public const int withText = 2131230974;
+			public const int transition_current_scene = 2131230974;
 			
 			// aapt resource value: 0x7F0800FF
-			public const int wrap_content = 2131230975;
+			public const int transition_layout_save = 2131230975;
+			
+			// aapt resource value: 0x7F080100
+			public const int transition_position = 2131230976;
+			
+			// aapt resource value: 0x7F080101
+			public const int transition_scene_layoutid_cache = 2131230977;
+			
+			// aapt resource value: 0x7F080102
+			public const int transition_transform = 2131230978;
+			
+			// aapt resource value: 0x7F080103
+			public const int uniform = 2131230979;
+			
+			// aapt resource value: 0x7F080104
+			public const int unlabeled = 2131230980;
+			
+			// aapt resource value: 0x7F080105
+			public const int up = 2131230981;
+			
+			// aapt resource value: 0x7F080106
+			public const int useLogo = 2131230982;
+			
+			// aapt resource value: 0x7F080107
+			public const int view_offset_helper = 2131230983;
+			
+			// aapt resource value: 0x7F080108
+			public const int visible = 2131230984;
+			
+			// aapt resource value: 0x7F080109
+			public const int volume_item_container = 2131230985;
+			
+			// aapt resource value: 0x7F08010A
+			public const int withText = 2131230986;
+			
+			// aapt resource value: 0x7F08010B
+			public const int wrap_content = 2131230987;
 			
 			static Id()
 			{
@@ -12379,172 +15329,184 @@ namespace MuGet.Forms.Android
 			public const int browser_actions_context_menu_row = 2131427358;
 			
 			// aapt resource value: 0x7F0B001F
-			public const int design_bottom_navigation_item = 2131427359;
+			public const int CellBaseView = 2131427359;
 			
 			// aapt resource value: 0x7F0B0020
-			public const int design_bottom_sheet_dialog = 2131427360;
+			public const int ContentCell = 2131427360;
 			
 			// aapt resource value: 0x7F0B0021
-			public const int design_layout_snackbar = 2131427361;
+			public const int design_bottom_navigation_item = 2131427361;
 			
 			// aapt resource value: 0x7F0B0022
-			public const int design_layout_snackbar_include = 2131427362;
+			public const int design_bottom_sheet_dialog = 2131427362;
 			
 			// aapt resource value: 0x7F0B0023
-			public const int design_layout_tab_icon = 2131427363;
+			public const int design_layout_snackbar = 2131427363;
 			
 			// aapt resource value: 0x7F0B0024
-			public const int design_layout_tab_text = 2131427364;
+			public const int design_layout_snackbar_include = 2131427364;
 			
 			// aapt resource value: 0x7F0B0025
-			public const int design_menu_item_action_area = 2131427365;
+			public const int design_layout_tab_icon = 2131427365;
 			
 			// aapt resource value: 0x7F0B0026
-			public const int design_navigation_item = 2131427366;
+			public const int design_layout_tab_text = 2131427366;
 			
 			// aapt resource value: 0x7F0B0027
-			public const int design_navigation_item_header = 2131427367;
+			public const int design_menu_item_action_area = 2131427367;
 			
 			// aapt resource value: 0x7F0B0028
-			public const int design_navigation_item_separator = 2131427368;
+			public const int design_navigation_item = 2131427368;
 			
 			// aapt resource value: 0x7F0B0029
-			public const int design_navigation_item_subheader = 2131427369;
+			public const int design_navigation_item_header = 2131427369;
 			
 			// aapt resource value: 0x7F0B002A
-			public const int design_navigation_menu = 2131427370;
+			public const int design_navigation_item_separator = 2131427370;
 			
 			// aapt resource value: 0x7F0B002B
-			public const int design_navigation_menu_item = 2131427371;
+			public const int design_navigation_item_subheader = 2131427371;
 			
 			// aapt resource value: 0x7F0B002C
-			public const int design_text_input_password_icon = 2131427372;
+			public const int design_navigation_menu = 2131427372;
 			
 			// aapt resource value: 0x7F0B002D
-			public const int FlyoutContent = 2131427373;
+			public const int design_navigation_menu_item = 2131427373;
 			
 			// aapt resource value: 0x7F0B002E
-			public const int mr_cast_dialog = 2131427374;
+			public const int design_text_input_password_icon = 2131427374;
 			
 			// aapt resource value: 0x7F0B002F
-			public const int mr_cast_group_item = 2131427375;
+			public const int FlyoutContent = 2131427375;
 			
 			// aapt resource value: 0x7F0B0030
-			public const int mr_cast_group_volume_item = 2131427376;
+			public const int FooterCell = 2131427376;
 			
 			// aapt resource value: 0x7F0B0031
-			public const int mr_cast_media_metadata = 2131427377;
+			public const int HeaderCell = 2131427377;
 			
 			// aapt resource value: 0x7F0B0032
-			public const int mr_cast_route_item = 2131427378;
+			public const int mr_cast_dialog = 2131427378;
 			
 			// aapt resource value: 0x7F0B0033
-			public const int mr_chooser_dialog = 2131427379;
+			public const int mr_cast_group_item = 2131427379;
 			
 			// aapt resource value: 0x7F0B0034
-			public const int mr_chooser_list_item = 2131427380;
+			public const int mr_cast_group_volume_item = 2131427380;
 			
 			// aapt resource value: 0x7F0B0035
-			public const int mr_controller_material_dialog_b = 2131427381;
+			public const int mr_cast_media_metadata = 2131427381;
 			
 			// aapt resource value: 0x7F0B0036
-			public const int mr_controller_volume_item = 2131427382;
+			public const int mr_cast_route_item = 2131427382;
 			
 			// aapt resource value: 0x7F0B0037
-			public const int mr_dialog_header_item = 2131427383;
+			public const int mr_chooser_dialog = 2131427383;
 			
 			// aapt resource value: 0x7F0B0038
-			public const int mr_picker_dialog = 2131427384;
+			public const int mr_chooser_list_item = 2131427384;
 			
 			// aapt resource value: 0x7F0B0039
-			public const int mr_picker_route_item = 2131427385;
+			public const int mr_controller_material_dialog_b = 2131427385;
 			
 			// aapt resource value: 0x7F0B003A
-			public const int mr_playback_control = 2131427386;
+			public const int mr_controller_volume_item = 2131427386;
 			
 			// aapt resource value: 0x7F0B003B
-			public const int mr_volume_control = 2131427387;
+			public const int mr_dialog_header_item = 2131427387;
 			
 			// aapt resource value: 0x7F0B003C
-			public const int mtrl_layout_snackbar = 2131427388;
+			public const int mr_picker_dialog = 2131427388;
 			
 			// aapt resource value: 0x7F0B003D
-			public const int mtrl_layout_snackbar_include = 2131427389;
+			public const int mr_picker_route_item = 2131427389;
 			
 			// aapt resource value: 0x7F0B003E
-			public const int notification_action = 2131427390;
+			public const int mr_playback_control = 2131427390;
 			
 			// aapt resource value: 0x7F0B003F
-			public const int notification_action_tombstone = 2131427391;
+			public const int mr_volume_control = 2131427391;
 			
 			// aapt resource value: 0x7F0B0040
-			public const int notification_media_action = 2131427392;
+			public const int mtrl_layout_snackbar = 2131427392;
 			
 			// aapt resource value: 0x7F0B0041
-			public const int notification_media_cancel_action = 2131427393;
+			public const int mtrl_layout_snackbar_include = 2131427393;
 			
 			// aapt resource value: 0x7F0B0042
-			public const int notification_template_big_media = 2131427394;
+			public const int notification_action = 2131427394;
 			
 			// aapt resource value: 0x7F0B0043
-			public const int notification_template_big_media_custom = 2131427395;
+			public const int notification_action_tombstone = 2131427395;
 			
 			// aapt resource value: 0x7F0B0044
-			public const int notification_template_big_media_narrow = 2131427396;
+			public const int notification_media_action = 2131427396;
 			
 			// aapt resource value: 0x7F0B0045
-			public const int notification_template_big_media_narrow_custom = 2131427397;
+			public const int notification_media_cancel_action = 2131427397;
 			
 			// aapt resource value: 0x7F0B0046
-			public const int notification_template_custom_big = 2131427398;
+			public const int notification_template_big_media = 2131427398;
 			
 			// aapt resource value: 0x7F0B0047
-			public const int notification_template_icon_group = 2131427399;
+			public const int notification_template_big_media_custom = 2131427399;
 			
 			// aapt resource value: 0x7F0B0048
-			public const int notification_template_lines_media = 2131427400;
+			public const int notification_template_big_media_narrow = 2131427400;
 			
 			// aapt resource value: 0x7F0B0049
-			public const int notification_template_media = 2131427401;
+			public const int notification_template_big_media_narrow_custom = 2131427401;
 			
 			// aapt resource value: 0x7F0B004A
-			public const int notification_template_media_custom = 2131427402;
+			public const int notification_template_custom_big = 2131427402;
 			
 			// aapt resource value: 0x7F0B004B
-			public const int notification_template_part_chronometer = 2131427403;
+			public const int notification_template_icon_group = 2131427403;
 			
 			// aapt resource value: 0x7F0B004C
-			public const int notification_template_part_time = 2131427404;
+			public const int notification_template_lines_media = 2131427404;
 			
 			// aapt resource value: 0x7F0B004D
-			public const int RadioButton = 2131427405;
+			public const int notification_template_media = 2131427405;
 			
 			// aapt resource value: 0x7F0B004E
-			public const int RadioGroup = 2131427406;
+			public const int notification_template_media_custom = 2131427406;
 			
 			// aapt resource value: 0x7F0B004F
-			public const int RootLayout = 2131427407;
+			public const int notification_template_part_chronometer = 2131427407;
 			
 			// aapt resource value: 0x7F0B0050
-			public const int select_dialog_item_material = 2131427408;
+			public const int notification_template_part_time = 2131427408;
 			
 			// aapt resource value: 0x7F0B0051
-			public const int select_dialog_multichoice_material = 2131427409;
+			public const int RadioButton = 2131427409;
 			
 			// aapt resource value: 0x7F0B0052
-			public const int select_dialog_singlechoice_material = 2131427410;
+			public const int RadioGroup = 2131427410;
 			
 			// aapt resource value: 0x7F0B0053
-			public const int ShellContent = 2131427411;
+			public const int RootLayout = 2131427411;
 			
 			// aapt resource value: 0x7F0B0054
-			public const int support_simple_spinner_dropdown_item = 2131427412;
+			public const int select_dialog_item_material = 2131427412;
 			
 			// aapt resource value: 0x7F0B0055
-			public const int Tabbar = 2131427413;
+			public const int select_dialog_multichoice_material = 2131427413;
 			
 			// aapt resource value: 0x7F0B0056
-			public const int Toolbar = 2131427414;
+			public const int select_dialog_singlechoice_material = 2131427414;
+			
+			// aapt resource value: 0x7F0B0057
+			public const int ShellContent = 2131427415;
+			
+			// aapt resource value: 0x7F0B0058
+			public const int support_simple_spinner_dropdown_item = 2131427416;
+			
+			// aapt resource value: 0x7F0B0059
+			public const int Tabbar = 2131427417;
+			
+			// aapt resource value: 0x7F0B005A
+			public const int Toolbar = 2131427418;
 			
 			static Layout()
 			{

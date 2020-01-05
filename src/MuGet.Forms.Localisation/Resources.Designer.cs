@@ -376,11 +376,29 @@ namespace MuGet.Forms.Localisation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Clears the last known version of all your favourites.
+        /// </summary>
+        public static string ResetNotificationsDetail {
+            get {
+                return ResourceManager.GetString("ResetNotificationsDetail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Run All Jobs.
         /// </summary>
         public static string RunAllJobs {
             get {
                 return ResourceManager.GetString("RunAllJobs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manual trigger for notifications.
+        /// </summary>
+        public static string RunAllJobsDetail {
+            get {
+                return ResourceManager.GetString("RunAllJobsDetail", resourceCulture);
             }
         }
         
@@ -435,6 +453,15 @@ namespace MuGet.Forms.Localisation {
         public static string Tags {
             get {
                 return ResourceManager.GetString("Tags", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Technology.
+        /// </summary>
+        public static string Technology {
+            get {
+                return ResourceManager.GetString("Technology", resourceCulture);
             }
         }
         
