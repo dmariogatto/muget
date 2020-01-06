@@ -18,6 +18,8 @@ namespace MuGet.Forms.ViewModels
 
         public PackageViewModel()
         {
+            CurrentState = State.Loading;
+
             CatalogEntries = new ObservableRangeCollection<CatalogEntry>();
             LoadCommand = new AsyncCommand<CancellationToken>(Load);
             EntryTappedCommand = new AsyncCommand<CatalogEntry>((e) => EntryTapped(e, _cancellation.Token));
