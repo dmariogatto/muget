@@ -1,6 +1,7 @@
 ﻿using System;
-
+using System.Net;
 using Foundation;
+using MuGet.Forms.Views;
 using UIKit;
 using UserNotifications;
 
@@ -52,6 +53,30 @@ namespace MuGet.Forms.iOS
         public override void PerformFetch(UIApplication application, Action<UIBackgroundFetchResult> completionHandler)
         {
             Shiny.Jobs.JobManager.OnBackgroundFetch(completionHandler);       
+        }
+
+        public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
+        {
+            var host = url.Host;
+            var pathSegs = url.PathComponents;
+            if (string.Equals(host, "package", StringComparison.OrdinalIgnoreCase))
+            {
+                var packageId = pathSegs.Length > 0 ? pathSegs[0] : string.Empty;
+                var version = pathSegs.Length > 1 ? pathSegs[1] : string.Empty;
+
+                if (!string.IsNullOrEmpty(packageId) &&
+                    Xamarin.Forms.Application.Current.MainPage is AppShell shell)
+                {
+                    var route = $"{PackagePage.RouteName}?{PackagePage.PackageIdUrlQueryProperty}={WebUtility.UrlEncode(packageId)}";
+
+                    if (!string.IsNullOrEmpty(version))
+                        route = $"{route}&{PackagePage.VersionQueryProperty}={WebUtility.UrlEncode(version)}";
+
+                    Xamarin.Forms.Device.InvokeOnMainThreadAsync(() => shell.GoToAsync(route));
+                }
+            }
+
+            return true;
         }
     }
 }

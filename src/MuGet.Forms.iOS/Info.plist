@@ -37,20 +37,31 @@
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Can we use your location when in use?</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>>Can we use your location at all times?</string>
+	<string>&gt;Can we use your location at all times?</string>
 	<key>NSCalendarsUsageDescription</key>
 	<string>Needs Calendar Permission</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>materialdesignicons-webfont.ttf</string>
 	</array>
-	<key>NSCalendarsUsageDescription</key>
-	<string>Needs Calendar Permission</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
 	</array>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.dgatto.muget</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>muget</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+		</dict>
+	</array>
 </dict>
 </plist>

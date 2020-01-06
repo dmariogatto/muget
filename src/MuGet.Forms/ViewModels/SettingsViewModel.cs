@@ -34,6 +34,11 @@ namespace MuGet.Forms.ViewModels
             MuGetPackages = new ObservableRangeCollection<MuGetPackage>(_muGetPackageService.GetPackages());
 
             SettingsItemTappedCommand = new AsyncCommand<SettingItem>(SettingsItemTapped);
+            PackageTappedCommand = new AsyncCommand<MuGetPackage>(async (p) =>
+            {
+                if (!string.IsNullOrEmpty(p?.PackageId))
+                    await Launcher.TryOpenAsync($"muget://package/{p.PackageId}/");
+            });
             ResetNotificationsCommand = new Command(ResetNotifications);
             RunJobsCommand = new AsyncCommand(async () =>
             {
@@ -74,6 +79,7 @@ namespace MuGet.Forms.ViewModels
         public ObservableRangeCollection<MuGetPackage> MuGetPackages { get; private set; }
 
         public AsyncCommand<SettingItem> SettingsItemTappedCommand { get; private set; }
+        public AsyncCommand<MuGetPackage> PackageTappedCommand { get; private set; }
         public Command ResetNotificationsCommand { get; private set; }
         public AsyncCommand RunJobsCommand { get; private set; }
 

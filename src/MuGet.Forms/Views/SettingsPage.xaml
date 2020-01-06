@@ -54,6 +54,8 @@
                         <sv:ButtonCell
                             Title="{Binding PackageId}"
                             Height="48"
+                            Command="{Binding PackageTappedCommand, Source={x:Reference Vm}}"
+                            CommandParameter="{Binding}"
                             IconSize="24"
                             IconSource="{Binding Metadata.IconUrl}"
                             TitleAlignment="Start"

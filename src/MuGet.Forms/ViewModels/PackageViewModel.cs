@@ -153,7 +153,9 @@ namespace MuGet.Forms.ViewModels
                 if (!string.IsNullOrEmpty(PackageId))
                 {
                     var entries = await NuGetService.GetCatalogEntries(PackageId, cancellationToken);
-                    var latest = entries.FirstOrDefault(e => e.Version == Version) ?? entries.FirstOrDefault();
+                    var latest = !string.IsNullOrEmpty(Version)
+                                 ? entries.FirstOrDefault(e => e.Version == Version) ?? entries.FirstOrDefault()
+                                 : entries.FirstOrDefault();
 
                     if (latest != null)
                     {
