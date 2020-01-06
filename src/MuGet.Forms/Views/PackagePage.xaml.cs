@@ -1,4 +1,5 @@
-﻿using MuGet.Forms.ViewModels;
+﻿using MuGet.Forms.Models;
+using MuGet.Forms.ViewModels;
 using System.Net;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
@@ -57,21 +58,7 @@ namespace MuGet.Forms.Views
 
             }
         }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-
-            ViewModel.PropertyChanged += ViewModelPropertyChanged;
-        }
-
-        protected override void OnDisappearing()
-        {
-            base.OnDisappearing();
-
-            ViewModel.PropertyChanged -= ViewModelPropertyChanged;
-        }
-
+        
         private void OnSegmentSelected(object sender, Plugin.Segmented.Event.SegmentSelectEventArgs e)
         {
             switch (e.NewValue)
@@ -99,13 +86,15 @@ namespace MuGet.Forms.Views
             }
         }
 
-        private void ViewModelPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        private void DependencyTapped(object sender, System.EventArgs e)
         {
-            if (e.PropertyName == nameof(ViewModel.PreviousPackageId))
+            if (sender is View v && v.BindingContext is PackageMetadata metadata)
             {
-                // Force label size update
-                PrePackageLabel.WidthRequest = 9999;
-                PrePackageLabel.WidthRequest = -1;
+                var packagePage = new PackagePage();
+                packagePage.PackageId = metadata.Id;
+                packagePage.Version = metadata.Version;
+
+                Navigation.PushAsync(packagePage);
             }
         }
     }

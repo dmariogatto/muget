@@ -7,6 +7,7 @@ using MuGet.Forms.Views;
 using System;
 using System.Linq;
 using System.Net;
+using Xamarin.Forms;
 
 namespace MuGet.Forms.Android
 {
@@ -73,14 +74,15 @@ namespace MuGet.Forms.Android
                     var version = pathSegs.Count > 1 ? pathSegs[1] : string.Empty;
 
                     if (!string.IsNullOrEmpty(packageId) &&
-                        Xamarin.Forms.Application.Current.MainPage is AppShell shell)
+                        Xamarin.Forms.Application.Current.MainPage is NavigationPage navPage)
                     {
-                        var route = $"{PackagePage.RouteName}?{PackagePage.PackageIdUrlQueryProperty}={WebUtility.UrlEncode(packageId)}";
+                        var packagePage = new PackagePage();
+                        packagePage.PackageId = packageId;
 
                         if (!string.IsNullOrEmpty(version))
-                            route = $"{route}&{PackagePage.VersionQueryProperty}={WebUtility.UrlEncode(version)}";
-
-                        Xamarin.Forms.Device.InvokeOnMainThreadAsync(() => shell.GoToAsync(route));
+                            packagePage.Version = version;
+                        
+                        Device.InvokeOnMainThreadAsync(() => navPage.PushAsync(packagePage));
                     }
                 }
             }

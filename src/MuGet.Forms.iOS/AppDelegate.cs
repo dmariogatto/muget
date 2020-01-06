@@ -4,6 +4,7 @@ using Foundation;
 using MuGet.Forms.Views;
 using UIKit;
 using UserNotifications;
+using Xamarin.Forms;
 
 namespace MuGet.Forms.iOS
 {
@@ -67,12 +68,13 @@ namespace MuGet.Forms.iOS
                 if (!string.IsNullOrEmpty(packageId) &&
                     Xamarin.Forms.Application.Current.MainPage is AppShell shell)
                 {
-                    var route = $"{PackagePage.RouteName}?{PackagePage.PackageIdUrlQueryProperty}={WebUtility.UrlEncode(packageId)}";
+                    var packagePage = new PackagePage();
+                    packagePage.PackageId = packageId;
 
                     if (!string.IsNullOrEmpty(version))
-                        route = $"{route}&{PackagePage.VersionQueryProperty}={WebUtility.UrlEncode(version)}";
+                        packagePage.Version = version;
 
-                    Xamarin.Forms.Device.InvokeOnMainThreadAsync(() => shell.GoToAsync(route));
+                    Device.InvokeOnMainThreadAsync(() => navPage.PushAsync(packagePage));
                 }
             }
 

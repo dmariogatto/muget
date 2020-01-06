@@ -55,9 +55,12 @@
                 </CollectionView.Header>
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:PackageMetadata">
-                        <controls:NuGetCard BindingContext="{Binding .}">
+                        <controls:NuGetCard BindingContext="{Binding}">
                             <controls:NuGetCard.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding PackageTappedCommand, Source={x:Reference Vm}}" CommandParameter="{Binding .}" />
+                                <TapGestureRecognizer
+                                    Command="{Binding PackageTappedCommand, Source={x:Reference Vm}}"
+                                    CommandParameter="{Binding}"
+                                    Tapped="PackageTapped" />
                             </controls:NuGetCard.GestureRecognizers>
                         </controls:NuGetCard>
                     </DataTemplate>

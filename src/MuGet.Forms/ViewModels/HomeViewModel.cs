@@ -21,8 +21,6 @@ namespace MuGet.Forms.ViewModels
             RecentPackages = new ObservableRangeCollection<PackageMetadata>();
             FavouritePackages = new ObservableRangeCollection<PackageMetadata>();
             LoadCommand = new AsyncCommand<CancellationToken>(Load);
-            PackageTappedCommand = new AsyncCommand<PackageMetadata>(PackageTapped);
-            SettingsTappedCommand = new AsyncCommand(SettingsTapped);
             
             CurrentState = State.Loading;
         }
@@ -38,8 +36,6 @@ namespace MuGet.Forms.ViewModels
         public ObservableRangeCollection<PackageMetadata> FavouritePackages { get; private set; }
 
         public AsyncCommand<CancellationToken> LoadCommand { get; private set; }
-        public AsyncCommand<PackageMetadata> PackageTappedCommand { get; private set; }
-        public AsyncCommand SettingsTappedCommand { get; private set; }
         
         private async Task Load(CancellationToken cancellationToken)
         {
@@ -77,49 +73,6 @@ namespace MuGet.Forms.ViewModels
             {
                 IsBusy = false;
                 CurrentState = State.None;
-            }
-        }
-
-        private async Task PackageTapped(PackageMetadata package)
-        {
-            if (IsBusy)
-                return;
-
-            IsBusy = true;
-
-            if (package != null)
-            {
-                try
-                {
-                    await Shell.GoToAsync($"{PackagePage.RouteName}?{PackagePage.PackageIdUrlQueryProperty}={WebUtility.UrlEncode(package.Id)}&{PackagePage.VersionQueryProperty}={WebUtility.UrlEncode(package.Version)}");
-                }
-                catch (Exception ex)
-                {
-                    Logger.Error(ex);
-                }
-            }
-
-            IsBusy = false;            
-        }
-
-        private async Task SettingsTapped()
-        {
-            if (IsBusy)
-                return;
-
-            IsBusy = true;
-
-            try
-            {
-                await Shell.GoToAsync(SettingsPage.RouteName);
-            }
-            catch (Exception ex)
-            {
-                Logger.Error(ex);
-            }
-            finally
-            {
-                IsBusy = false;
             }
         }
     }

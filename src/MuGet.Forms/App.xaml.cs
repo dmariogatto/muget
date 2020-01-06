@@ -2,6 +2,7 @@
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using MuGet.Forms.Services;
+using MuGet.Forms.Views;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -24,7 +25,7 @@ namespace MuGet.Forms
                 Shiny.ShinyHost.Resolve<Shiny.Jobs.IJobManager>().Schedule(ShinyStartup.NuGetJobInfo);
             }
 
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

@@ -10,7 +10,7 @@ namespace MuGet.Forms.ViewModels
         protected readonly INuGetService NuGetService;
         protected readonly ILogger Logger;
 
-        protected Shell Shell => Application.Current.MainPage as Shell;
+        private Shell _shell => Application.Current.MainPage as Shell;
 
         public BaseViewModel() : base()
         {
@@ -19,13 +19,13 @@ namespace MuGet.Forms.ViewModels
         }
 
         protected Task DisplayAlert(string title, string message, string cancel) =>
-            Shell.DisplayAlert(title, message, cancel);
+            _shell.DisplayAlert(title, message, cancel);
 
         protected Task<bool> DisplayAlert(string title, string message, string accept, string cancel) =>
-            Shell.DisplayAlert(title, message, accept, cancel);
+            _shell.DisplayAlert(title, message, accept, cancel);
 
         protected Task<string> DisplayAction(string title, string cancel, string destruction, params string[] buttons) =>
-            Shell.DisplayActionSheet(title, cancel, destruction, buttons);
+            _shell.DisplayActionSheet(title, cancel, destruction, buttons);
 
         public virtual void OnCreate()
         {

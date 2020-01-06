@@ -47,7 +47,7 @@
                     Text="MuGet" />
                 <Button
                     Grid.Column="2"
-                    Command="{Binding SettingsTappedCommand}"
+                    Clicked="SettingsTapped"
                     Style="{DynamicResource ButtonIconStyle}"
                     Text="{x:Static helpers:MaterialFont.Settings}" />
 
@@ -95,9 +95,9 @@
                         JustifyContent="Start">
                         <BindableLayout.ItemTemplate>
                             <DataTemplate x:DataType="models:PackageMetadata">
-                                <controls:NuGetCardSimple BindingContext="{Binding .}">
+                                <controls:NuGetCardSimple BindingContext="{Binding}">
                                     <controls:NuGetCardSimple.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding PackageTappedCommand, Source={x:Reference Vm}}" CommandParameter="{Binding .}" />
+                                        <TapGestureRecognizer Tapped="PackageTapped" />
                                     </controls:NuGetCardSimple.GestureRecognizers>
                                 </controls:NuGetCardSimple>
                             </DataTemplate>
@@ -122,7 +122,7 @@
                             <DataTemplate x:DataType="models:PackageMetadata">
                                 <controls:NuGetCardSimple BindingContext="{Binding .}">
                                     <controls:NuGetCardSimple.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding PackageTappedCommand, Source={x:Reference Vm}}" CommandParameter="{Binding .}" />
+                                        <TapGestureRecognizer Tapped="PackageTapped" />
                                     </controls:NuGetCardSimple.GestureRecognizers>
                                 </controls:NuGetCardSimple>
                             </DataTemplate>

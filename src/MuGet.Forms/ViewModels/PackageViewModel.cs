@@ -14,23 +14,15 @@ namespace MuGet.Forms.ViewModels
 {
     public class PackageViewModel : BaseViewModel
     {
-        private readonly Stack<PackageViewState> _navStack;
-
-        private Task _currentLoadTask;
         private CancellationTokenSource _cancellation;
 
         public PackageViewModel()
         {
-            _navStack = new Stack<PackageViewState>();
-
             CatalogEntries = new ObservableRangeCollection<CatalogEntry>();
-            LoadCommand = new AsyncCommand<CancellationToken>((ct) => _currentLoadTask = Load(ct));
-            DependencyTappedCommand = new Command<Dependency>(DependencyTapped);
+            LoadCommand = new AsyncCommand<CancellationToken>(Load);
             EntryTappedCommand = new AsyncCommand<CatalogEntry>((e) => EntryTapped(e, _cancellation.Token));
             LinkTappedCommand = new AsyncCommand<LinkType>(LinkTapped);
-            FavouriteCommand = new AsyncCommand<CatalogEntry>(Favourite);            
-            BackCommand = new AsyncCommand(Back);
-            CloseCommand = new AsyncCommand(Close);
+            FavouriteCommand = new AsyncCommand<CatalogEntry>(Favourite);
 
             CatalogEntries.CollectionChanged += (sender, args) =>
             {
@@ -53,10 +45,6 @@ namespace MuGet.Forms.ViewModels
 
             LoadPackage();
         }
-
-        public string PreviousPackageId => _navStack.Any() 
-            ? _navStack.Peek().Entry?.Id ?? string.Empty 
-            : string.Empty;
 
         private string _packageId;
         public string PackageId
@@ -117,7 +105,6 @@ namespace MuGet.Forms.ViewModels
         public ObservableRangeCollection<CatalogEntry> CatalogEntries { get; private set; }
 
         public AsyncCommand<CancellationToken> LoadCommand { get; private set; }
-        public Command<Dependency> DependencyTappedCommand { get; private set; }
         public AsyncCommand<CatalogEntry> EntryTappedCommand { get; private set; }
         public AsyncCommand<LinkType> LinkTappedCommand { get; private set; }
         public AsyncCommand<CatalogEntry> FavouriteCommand { get; private set; }
@@ -207,46 +194,6 @@ namespace MuGet.Forms.ViewModels
             {
                 IsBusy = false;                
             }            
-        }
-
-        private void DependencyTapped(Dependency dependency)
-        {
-            if (IsBusy && dependency != null)
-                return;
-
-            IsBusy = true;
-
-            try
-            {
-                var packageId = dependency.Id;
-                if (!string.IsNullOrEmpty(packageId))
-                {
-                    var currentState = new PackageViewState(
-                        PackageId,
-                        Entry,
-                        EntryData,
-                        Metadata,
-                        CatalogEntries.ToList());
-
-                    _navStack.Push(currentState);
-                    OnPropertyChanged(nameof(PreviousPackageId));
-
-                    PackageId = packageId;
-                    Version = dependency.VersionRange?.MinVersion != null
-                        ? dependency.VersionRange.MinVersion.ToString()
-                        : string.Empty;
-                }
-            }
-            catch (Exception ex)
-            {
-                Logger.Error(ex);
-            }
-            finally
-            {
-                IsBusy = false;
-            }
-
-            LoadPackage();
         }
 
         private async Task EntryTapped(CatalogEntry entry, CancellationToken cancellationToken)
@@ -372,77 +319,6 @@ namespace MuGet.Forms.ViewModels
                     e.IsFavourite = isFav;
                 }          
             }
-        }
-
-        private async Task Back()
-        {
-            try
-            {
-                _cancellation?.Cancel();
-                // Wait for load task to finish to prevent
-                // any inconsistency
-                if (_currentLoadTask != null)
-                    await _currentLoadTask;
-
-                if (_navStack.Any())
-                {
-                    var state = _navStack.Pop();
-                    OnPropertyChanged(nameof(PreviousPackageId));
-                    
-                    PackageId = state.PackageId;
-                    CatalogEntries.ReplaceRange(state.Entries);
-                    Entry = state.Entry;
-                    EntryData = state.EntryData;
-                    Metadata = state.Metadata;
-
-                    CurrentState = State.None;
-                }
-                else
-                {
-                    await Shell.Navigation.PopAsync();
-                }
-            }
-            catch (Exception ex)
-            {
-                Logger.Error(ex);
-            }
-        }
-
-        private async Task Close()
-        {
-            try
-            {
-                _cancellation?.Cancel();
-
-                await Shell.Navigation.PopAsync();
-            }
-            catch (Exception ex)
-            {
-                Logger.Error(ex);
-            }
-        }        
-
-        private class PackageViewState
-        {
-            public PackageViewState(
-                string packageId,
-                CatalogEntry entry,
-                CatalogData entryData,
-                PackageMetadata metadata,
-                List<CatalogEntry> entries)
-            {
-                PackageId = packageId;
-                Entry = entry;
-                EntryData = entryData;
-                Metadata = metadata;
-                Entries = entries;
-            }
-
-            public string PackageId { get; set; }
-            public CatalogEntry Entry { get; set; }
-            public CatalogData EntryData { get; set; }
-            public PackageMetadata Metadata { get; set; }
-            public List<CatalogEntry> Entries { get; set; }
         }
     }
 }

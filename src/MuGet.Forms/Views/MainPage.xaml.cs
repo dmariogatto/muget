@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using MuGet.Forms.Models;
 using MuGet.Forms.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
@@ -13,6 +14,8 @@ namespace MuGet.Forms.Views
         public MainPage()
         {
             InitializeComponent();
+
+            Xamarin.Forms.NavigationPage.SetHasNavigationBar(this, false);
         }
         
         protected override void OnSizeAllocated(double width, double height)
@@ -53,6 +56,18 @@ namespace MuGet.Forms.Views
                 Task.WhenAll(
                     SearchBarView.TranslateTo(0, 0, 250, Easing.CubicOut),
                     SearchBarView.FadeTo(1, 200));
+            }
+        }
+
+        private void PackageTapped(object sender, EventArgs e)
+        {
+            if (sender is View v && v.BindingContext is PackageMetadata metadata)
+            {
+                var packagePage = new PackagePage();
+                packagePage.PackageId = metadata.Id;
+                packagePage.Version = metadata.Version;
+
+                Navigation.PushAsync(packagePage);
             }
         }
     }

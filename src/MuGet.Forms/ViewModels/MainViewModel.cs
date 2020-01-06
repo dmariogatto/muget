@@ -30,7 +30,7 @@ namespace MuGet.Forms.ViewModels
                 _searchCancellation != null
                     ? Search(SearchText, Packages.Count, _searchCancellation.Token)
                     : Task.FromResult(0));
-            PackageTappedCommand = new AsyncCommand<PackageMetadata>(PackageTapped);
+            PackageTappedCommand = new Command<PackageMetadata>(PackageTapped);
         }
 
         private string _searchText;
@@ -68,7 +68,7 @@ namespace MuGet.Forms.ViewModels
 
         public AsyncCommand<CancellationToken> SearchCommand { get; private set; }
         public AsyncCommand RemainingItemsThresholdReachedCommand { get; private set; }
-        public AsyncCommand<PackageMetadata> PackageTappedCommand { get; private set; }
+        public Command<PackageMetadata> PackageTappedCommand { get; private set; }
 
         private async Task Search(string searchText, int skip, CancellationToken cancellationToken)
         {
@@ -131,7 +131,7 @@ namespace MuGet.Forms.ViewModels
             _searchSemaphore.Release();
         }
 
-        private async Task PackageTapped(PackageMetadata package)
+        private void PackageTapped(PackageMetadata package)
         {
             if (IsBusy)
                 return;
@@ -148,8 +148,7 @@ namespace MuGet.Forms.ViewModels
                         IndexUrl = package.IndexUrl,
                         SourceUrl = string.Empty,
                         SortOrder = 0,
-                    });
-                    await Shell.GoToAsync($"{PackagePage.RouteName}?{PackagePage.PackageIdUrlQueryProperty}={WebUtility.UrlEncode(package.Id)}&{PackagePage.VersionQueryProperty}={WebUtility.UrlEncode(package.Version)}");
+                    });                    
                 }
                 catch (Exception ex)
                 {

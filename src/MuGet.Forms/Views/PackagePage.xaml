@@ -60,70 +60,13 @@
                 Elevation="6">
                 <Grid RowSpacing="0">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="48" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="48" />
                     </Grid.RowDefinitions>
 
                     <Grid
-                        x:Name="PageHeader"
-                        ColumnSpacing="0"
-                        HorizontalOptions="FillAndExpand"
-                        VerticalOptions="FillAndExpand">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="36" />
-                        </Grid.ColumnDefinitions>
-
-                        <Grid
-                            touch:TouchEff.Command="{Binding BackCommand}"
-                            touch:TouchEff.PressedAnimationDuration="200"
-                            touch:TouchEff.PressedOpacity="0.35"
-                            touch:TouchEff.RegularAnimationDuration="300"
-                            touch:TouchEff.RegularOpacity="1"
-                            HorizontalOptions="Start"
-                            VerticalOptions="FillAndExpand">
-
-                            <Grid.Effects>
-                                <touch:TouchEff />
-                            </Grid.Effects>
-
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="36" />
-                                <ColumnDefinition Width="Auto" />
-                            </Grid.ColumnDefinitions>
-
-                            <Label
-                                FontFamily="{StaticResource MaterialFontFamily}"
-                                FontSize="38"
-                                HorizontalOptions="Start"
-                                Style="{DynamicResource LabelStyle}"
-                                Text="{x:Static helpers:MaterialFont.ChevronLeft}"
-                                TextColor="{StaticResource LinkColor}" />
-
-                            <Label
-                                x:Name="PrePackageLabel"
-                                Grid.Column="1"
-                                HorizontalOptions="Start"
-                                LineBreakMode="TailTruncation"
-                                Text="{Binding PreviousPackageId}"
-                                TextColor="{StaticResource LinkColor}"
-                                VerticalOptions="FillAndExpand"
-                                VerticalTextAlignment="Center" />
-                        </Grid>
-
-                        <Button
-                            Grid.Column="1"
-                            BackgroundColor="Transparent"
-                            Command="{Binding CloseCommand}"
-                            IsVisible="{Binding PreviousPackageId, Converter={StaticResource stringToBoolConverter}}"
-                            Style="{DynamicResource ButtonIconStyle}"
-                            Text="{x:Static helpers:MaterialFont.Close}"
-                            TextColor="{StaticResource LinkColor}" />
-                    </Grid>
-                    <Grid
                         x:Name="PackageHeader"
-                        Grid.Row="1"
+                        Grid.Row="0"
                         Margin="6,0,6,0"
                         state:StateLayout.CurrentState="{Binding CurrentState}">
                         <state:StateLayout.StateViews>
@@ -256,7 +199,7 @@
 
                     <segmented:SegmentedControl
                         x:Name="SegPageControl"
-                        Grid.Row="2"
+                        Grid.Row="1"
                         Margin="4,6,4,0"
                         OnSegmentSelected="OnSegmentSelected"
                         SelectedTextColor="{DynamicResource PrimaryTextColor}"
@@ -531,7 +474,7 @@
                                 <ViewCell>
                                     <Grid Padding="12,2,4,2">
                                         <Grid.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding DependencyTappedCommand, Source={x:Reference Vm}}" CommandParameter="{Binding .}" />
+                                            <TapGestureRecognizer Tapped="DependencyTapped" />
                                         </Grid.GestureRecognizers>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto" />
