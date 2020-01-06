@@ -1,7 +1,6 @@
 ﻿using MuGet.Forms.Models;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace MuGet.Forms.Services
 {
@@ -9,15 +8,25 @@ namespace MuGet.Forms.Services
     {
         private readonly IList<string> _packageIds = new List<string>()
         {
+            "AiForms.SettingsView",
             "Humanizer",
             "LiteDB",
+            "Microsoft.AppCenter.Analytics",
+            "Microsoft.AppCenter.Crashes",
+            "Newtonsoft.Json",
+            "NuGet.Versioning",
             "Plugin.SegmentedControl.Netstandard",
+            "Plugin.StoreReview",
             "Polly",
+            "Refractored.MvvmHelpers",
             "Shiny.Core",
-            "TouchView ",
-            "Xamarin.Forms",
+            "Shiny.Notifications",
+            "Xam.Plugin.Connectivity",
             "Xamarin.Essentials",
+            "Xamarin.FFImageLoading.Forms",
+            "Xamarin.Forms",
             "Xamarin.Forms.PancakeView",
+            "Xamarin.Forms.StateSquid",
         };
 
         private readonly INuGetService _nuGetService;
@@ -34,12 +43,16 @@ namespace MuGet.Forms.Services
         {
             foreach (var p in _packages)
             {
-                _nuGetService.GetPackageMetadata(p.PackageId, default, true)
-                    .ContinueWith((task) =>
-                    {
-                        if (task.IsCompleted && !task.IsFaulted && task.Result != null)
-                            p.Metadata = task.Result;
-                    });
+                if (p.Metadata == null)
+                    _nuGetService.GetPackageMetadata(p.PackageId, default, true)
+                        .ContinueWith((task) =>
+                        {
+                            if (task.IsCompleted &&
+                                !task.IsFaulted &&
+                                task.Result != null &&
+                                p.Metadata == null)
+                                p.Metadata = task.Result;
+                        });
             }
 
             return _packages;

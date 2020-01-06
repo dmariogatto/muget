@@ -84,6 +84,8 @@
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <BundleResource Include="Resources\materialdesignicons-webfont.ttf" />
+    <Compile Include="Renderers\NavigationPageCustomRenderer.cs" />
+    <Compile Include="Renderers\PackagePageRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
@@ -159,9 +161,6 @@
     </PackageReference>
     <PackageReference Include="Shiny.Notifications">
       <Version>1.0.0.531-beta</Version>
-    </PackageReference>
-    <PackageReference Include="TouchView">
-      <Version>4.1.23</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
       <Version>2.4.11.982</Version>

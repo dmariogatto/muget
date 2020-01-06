@@ -1,12 +1,10 @@
-﻿using Android.App;
+﻿using System;
+using Android.App;
 using Android.Content;
 using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using MuGet.Forms.Views;
-using System;
-using System.Linq;
-using System.Net;
 using Xamarin.Forms;
 
 namespace MuGet.Forms.Android
@@ -35,7 +33,6 @@ namespace MuGet.Forms.Android
             base.OnCreate(savedInstanceState);
 
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: true);
-            TouchEffect.Android.TouchEffectPreserver.Preserve();
             AiForms.Renderers.Droid.SettingsViewInit.Init();
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);

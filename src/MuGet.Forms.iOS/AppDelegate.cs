@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Net;
 using Foundation;
 using MuGet.Forms.Views;
@@ -31,7 +32,6 @@ namespace MuGet.Forms.iOS
 
             Shiny.iOSShinyHost.Init(new ShinyStartup());
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
-            TouchEffect.iOS.TouchEffectPreserver.Preserve();
             AiForms.Renderers.iOS.SettingsViewInit.Init();
 
             global::Xamarin.Forms.Forms.Init();
@@ -59,14 +59,14 @@ namespace MuGet.Forms.iOS
         public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
         {
             var host = url.Host;
-            var pathSegs = url.PathComponents;
+            var pathSegs = url.PathComponents.Where(c => c != "/").ToList();
             if (string.Equals(host, "package", StringComparison.OrdinalIgnoreCase))
             {
-                var packageId = pathSegs.Length > 0 ? pathSegs[0] : string.Empty;
-                var version = pathSegs.Length > 1 ? pathSegs[1] : string.Empty;
+                var packageId = pathSegs.Count > 0 ? pathSegs[0] : string.Empty;
+                var version = pathSegs.Count > 1 ? pathSegs[1] : string.Empty;
 
                 if (!string.IsNullOrEmpty(packageId) &&
-                    Xamarin.Forms.Application.Current.MainPage is AppShell shell)
+                    Xamarin.Forms.Application.Current.MainPage is NavigationPage navPage)
                 {
                     var packagePage = new PackagePage();
                     packagePage.PackageId = packageId;

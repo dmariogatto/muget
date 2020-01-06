@@ -31,7 +31,6 @@
     <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.1-beta" />
     <PackageReference Include="Shiny.Core" Version="1.0.0.531-beta" />
     <PackageReference Include="Shiny.Notifications" Version="1.0.0.531-beta" />
-    <PackageReference Include="TouchView" Version="4.1.23" />
     <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />

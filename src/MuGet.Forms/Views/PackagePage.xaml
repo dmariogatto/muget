@@ -14,11 +14,10 @@
     xmlns:models="clr-namespace:MuGet.Forms.Models"
     xmlns:segmented="clr-namespace:Plugin.Segmented.Control;assembly=Plugin.Segmented"
     xmlns:state="clr-namespace:Xamarin.Forms.StateSquid;assembly=Xamarin.Forms.StateSquid"
-    xmlns:touch="clr-namespace:TouchEffect;assembly=TouchEffect"
     xmlns:viewModels="clr-namespace:MuGet.Forms.ViewModels"
     xmlns:views="clr-namespace:MuGet.Forms.Views"
     xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-    Title="{Binding Entry.Title}"
+    Title="{Binding Entry.Id}"
     x:DataType="viewModels:PackageViewModel"
     x:TypeArguments="viewModels:PackageViewModel"
     BackgroundColor="{DynamicResource PageBackgroundColor}"
@@ -58,7 +57,7 @@
                 Padding="4"
                 BackgroundColor="{DynamicResource CardBackgroundColor}"
                 Elevation="6">
-                <Grid RowSpacing="0">
+                <Grid Margin="0,4,0,0" RowSpacing="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="48" />

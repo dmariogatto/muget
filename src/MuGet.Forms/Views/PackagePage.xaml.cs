@@ -9,8 +9,6 @@ using Application = Xamarin.Forms.Application;
 namespace MuGet.Forms.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    [QueryProperty(nameof(PackageId), PackageIdUrlQueryProperty)]
-    [QueryProperty(nameof(Version), VersionQueryProperty)]
     public partial class PackagePage : BasePage<PackageViewModel>
     {
         public const string RouteName = "package";
@@ -20,7 +18,7 @@ namespace MuGet.Forms.Views
         public PackagePage()
         {
             InitializeComponent();
-
+            
             if (Device.RuntimePlatform == Device.Android)
             {
                 SegPageControl.SelectedTextColor = (Color)Application.Current.Resources["ContrastAntiColor"];
@@ -30,6 +28,7 @@ namespace MuGet.Forms.Views
 
         public string PackageId
         {
+            get => ViewModel.PackageId;
             set
             {
                 ViewModel.PackageId = WebUtility.UrlDecode(value);
@@ -38,6 +37,7 @@ namespace MuGet.Forms.Views
 
         public string Version
         {
+            get => ViewModel.Version;
             set
             {
                 ViewModel.Version = WebUtility.UrlDecode(value);
@@ -88,11 +88,13 @@ namespace MuGet.Forms.Views
 
         private void DependencyTapped(object sender, System.EventArgs e)
         {
-            if (sender is View v && v.BindingContext is PackageMetadata metadata)
+            if (sender is View v && v.BindingContext is Dependency dependency)
             {
                 var packagePage = new PackagePage();
-                packagePage.PackageId = metadata.Id;
-                packagePage.Version = metadata.Version;
+                packagePage.PackageId = dependency.Id;
+                packagePage.Version = dependency.VersionRange?.MinVersion != null
+                    ? dependency.VersionRange.MinVersion.ToString()
+                    : string.Empty;
 
                 Navigation.PushAsync(packagePage);
             }
