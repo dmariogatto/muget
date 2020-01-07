@@ -46,22 +46,16 @@
     </Shell.BackButtonBehavior>
 
     <views:BasePage.Content>
-        <Grid RowSpacing="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-
+        <StackLayout Spacing="0">
             <yummy:PancakeView
                 x:Name="HeaderView"
-                Padding="4"
                 BackgroundColor="{DynamicResource CardBackgroundColor}"
                 Elevation="6">
                 <Grid RowSpacing="0">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="48" />
                         <RowDefinition Height="Auto" />
-                        <RowDefinition Height="48" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
 
                     <Grid
@@ -80,7 +74,8 @@
                             Padding="0"
                             BackgroundColor="Transparent"
                             Clicked="BackClicked"
-                            ContentLayout="Left,1"
+                            ContentLayout="Left,0"
+                            FontSize="Medium"
                             HorizontalOptions="Start"
                             TextColor="{DynamicResource LinkColor}"
                             VerticalOptions="CenterAndExpand">
@@ -239,7 +234,7 @@
                     <segmented:SegmentedControl
                         x:Name="SegPageControl"
                         Grid.Row="2"
-                        Margin="4,6,4,0"
+                        Margin="4,6,4,6"
                         OnSegmentSelected="OnSegmentSelected"
                         SelectedTextColor="{DynamicResource PrimaryTextColor}"
                         TintColor="{DynamicResource SegmentColor}"
@@ -256,7 +251,6 @@
 
             <StackLayout
                 x:Name="PackageDetail"
-                Grid.Row="1"
                 state:StateLayout.CurrentState="{Binding CurrentState}"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand">
@@ -670,6 +664,6 @@
                     </ListView>
                 </StackLayout>
             </StackLayout>
-        </Grid>
+        </StackLayout>
     </views:BasePage.Content>
 </views:BasePage>

@@ -79,6 +79,9 @@ namespace MuGet.Forms.ViewModels
 
                 try
                 {
+                    if (skip == 0)
+                        Packages.Clear();
+
                     var packages = default(IList<PackageMetadata>);
                     var totalHits = 0;
 
@@ -104,8 +107,7 @@ namespace MuGet.Forms.ViewModels
                             }
                         }
                         else
-                        {
-                            Packages.Clear();
+                        {                            
                             if (packages?.Any() == true)
                                 Packages.ReplaceRange(packages);
                         }

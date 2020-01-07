@@ -27,7 +27,7 @@ namespace MuGet.Forms.Views
             {
                 SegPageControl.SelectedTextColor = (Color)Application.Current.Resources["ContrastAntiColor"];
                 SegPageControl.TintColor = (Color)Application.Current.Resources["ContrastColor"];
-            }
+            }            
         }        
 
         public string PackageId
@@ -57,30 +57,31 @@ namespace MuGet.Forms.Views
                 Navigation.NavigationStack[Navigation.NavigationStack.Count - 2] is ContentPage previous)
             {
                 BackButton.Text = previous.Title;
-                CloseButton.IsVisible = true;
+                CloseButton.IsVisible = Navigation.NavigationStack.Count > 2;
             }
         }
+
 
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
         }
 
-        protected override void OnSizeAllocated(double width, double height)
+        protected override void OnParentSet()
         {
-            base.OnSizeAllocated(width, height);
+            base.OnParentSet();
 
-            if (Device.RuntimePlatform == Device.iOS)
+            if (Device.RuntimePlatform == Device.iOS &&
+                Navigation.NavigationStack.FirstOrDefault() is ContentPage rootPage)
             {
-                // Apply insets otherwise loader is displayed behind tabbar
-                var safeInsets = On<Xamarin.Forms.PlatformConfiguration.iOS>().SafeAreaInsets();
+                // Want the header "card" to extend to the top screen edge
+                var safeInsets = rootPage.On<Xamarin.Forms.PlatformConfiguration.iOS>().SafeAreaInsets();
                 var padding = HeaderView.Padding;
                 padding.Top = safeInsets.Top;
                 HeaderView.Padding = padding;
-
             }
         }
-        
+
         private void OnSegmentSelected(object sender, Plugin.Segmented.Event.SegmentSelectEventArgs e)
         {
             switch (e.NewValue)
