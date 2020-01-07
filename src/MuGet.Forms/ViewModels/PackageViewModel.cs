@@ -1,7 +1,7 @@
-﻿using MvvmHelpers;
-using MvvmHelpers.Commands;
-using MuGet.Forms.Controls;
+﻿using MuGet.Forms.Controls;
 using MuGet.Forms.Models;
+using MvvmHelpers;
+using MvvmHelpers.Commands;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -204,6 +204,7 @@ namespace MuGet.Forms.ViewModels
                 return;
 
             IsBusy = true;
+            CurrentState = State.Loading;
 
             try
             {
@@ -220,6 +221,7 @@ namespace MuGet.Forms.ViewModels
             }
             finally
             {
+                CurrentState = State.None;
                 IsBusy = false;
             }            
         }

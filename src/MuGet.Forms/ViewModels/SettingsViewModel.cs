@@ -1,11 +1,11 @@
-﻿using System;
-using System.Threading.Tasks;
-using MuGet.Forms.Localisation;
+﻿using MuGet.Forms.Localisation;
 using MuGet.Forms.Models;
 using MuGet.Forms.Services;
 using MvvmHelpers;
 using MvvmHelpers.Commands;
 using Plugin.StoreReview;
+using System;
+using System.Threading.Tasks;
 using Xamarin.Essentials;
 
 namespace MuGet.Forms.ViewModels

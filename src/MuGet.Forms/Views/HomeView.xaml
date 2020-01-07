@@ -59,13 +59,13 @@
                     Text="{local:Translate WelcomeToMuGet}" />
             </Grid>
 
-            <StackLayout Margin="8" state:StateLayout.CurrentState="{Binding CurrentState}">
+            <StackLayout state:StateLayout.CurrentState="{Binding CurrentState}">
                 <state:StateLayout.StateViews>
                     <state:StateView RepeatCount="2" StateKey="Loading">
                         <state:StateView.RepeatTemplate>
                             <DataTemplate>
                                 <StackLayout>
-                                    <state:SkeletonView Style="{StaticResource SkeletonStyle}" />
+                                    <state:SkeletonView Margin="8,0,8,0" Style="{StaticResource SkeletonStyle}" />
                                     <ScrollView
                                         HorizontalOptions="FillAndExpand"
                                         Orientation="Horizontal"
@@ -86,7 +86,10 @@
                     </state:StateView>
                 </state:StateLayout.StateViews>
 
-                <Label Style="{DynamicResource LabelTitleStyle}" Text="{local:Translate Favourites}" />
+                <Label
+                    Margin="8,0,8,0"
+                    Style="{DynamicResource LabelTitleStyle}"
+                    Text="{local:Translate Favourites}" />
                 <ScrollView IsVisible="{Binding FavouritePackages.Count, Converter={StaticResource intToBoolConverter}}" Orientation="Horizontal">
                     <FlexLayout
                         BindableLayout.ItemsSource="{Binding FavouritePackages}"
@@ -105,13 +108,16 @@
                     </FlexLayout>
                 </ScrollView>
                 <Label
-                    Margin="4,6,4,6"
+                    Margin="12,6,4,6"
                     FontAttributes="Italic"
                     IsVisible="{Binding FavouritePackages.Count, Converter={StaticResource intToInverseBoolConverter}}"
                     Style="{DynamicResource LabelStyle}"
                     Text="{local:Translate NoFavouritePackages}" />
 
-                <Label Style="{DynamicResource LabelTitleStyle}" Text="{local:Translate Recent}" />
+                <Label
+                    Margin="8,0,8,0"
+                    Style="{DynamicResource LabelTitleStyle}"
+                    Text="{local:Translate Recent}" />
                 <ScrollView IsVisible="{Binding RecentPackages.Count, Converter={StaticResource intToBoolConverter}}" Orientation="Horizontal">
                     <FlexLayout
                         BindableLayout.ItemsSource="{Binding RecentPackages}"
@@ -130,7 +136,7 @@
                     </FlexLayout>
                 </ScrollView>
                 <Label
-                    Margin="4,6,4,6"
+                    Margin="12,6,4,6"
                     FontAttributes="Italic"
                     IsVisible="{Binding RecentPackages.Count, Converter={StaticResource intToInverseBoolConverter}}"
                     Style="{DynamicResource LabelStyle}"

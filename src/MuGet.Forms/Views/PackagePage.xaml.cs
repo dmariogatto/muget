@@ -1,6 +1,8 @@
 ﻿using MuGet.Forms.Models;
 using MuGet.Forms.ViewModels;
+using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using Xamarin.Forms.Xaml;
@@ -18,7 +20,9 @@ namespace MuGet.Forms.Views
         public PackagePage()
         {
             InitializeComponent();
-            
+
+            Xamarin.Forms.NavigationPage.SetHasNavigationBar(this, false);
+
             if (Device.RuntimePlatform == Device.Android)
             {
                 SegPageControl.SelectedTextColor = (Color)Application.Current.Resources["ContrastAntiColor"];
@@ -42,6 +46,24 @@ namespace MuGet.Forms.Views
             {
                 ViewModel.Version = WebUtility.UrlDecode(value);
             }
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            if (Navigation.NavigationStack.LastOrDefault() == this &&
+                Navigation.NavigationStack.Count > 1 &&
+                Navigation.NavigationStack[Navigation.NavigationStack.Count - 2] is ContentPage previous)
+            {
+                BackButton.Text = previous.Title;
+                CloseButton.IsVisible = true;
+            }
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
         }
 
         protected override void OnSizeAllocated(double width, double height)
@@ -98,6 +120,16 @@ namespace MuGet.Forms.Views
 
                 Navigation.PushAsync(packagePage);
             }
+        }
+
+        private void BackClicked(object sender, System.EventArgs e)
+        {            
+            Navigation.PopAsync();
+        }
+
+        private void CloseClicked(object sender, System.EventArgs e)
+        {
+            Navigation.PopToRootAsync();
         }
     }
 }

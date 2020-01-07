@@ -57,15 +57,55 @@
                 Padding="4"
                 BackgroundColor="{DynamicResource CardBackgroundColor}"
                 Elevation="6">
-                <Grid Margin="0,4,0,0" RowSpacing="0">
+                <Grid RowSpacing="0">
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="48" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="48" />
                     </Grid.RowDefinitions>
 
                     <Grid
+                        x:Name="PageHeader"
+                        ColumnSpacing="0"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="36" />
+                        </Grid.ColumnDefinitions>
+
+                        <Button
+                            x:Name="BackButton"
+                            Margin="0"
+                            Padding="0"
+                            BackgroundColor="Transparent"
+                            Clicked="BackClicked"
+                            ContentLayout="Left,1"
+                            HorizontalOptions="Start"
+                            TextColor="{DynamicResource LinkColor}"
+                            VerticalOptions="CenterAndExpand">
+                            <Button.ImageSource>
+                                <FontImageSource
+                                    FontFamily="{StaticResource MaterialFontFamily}"
+                                    Glyph="{x:Static helpers:MaterialFont.ChevronLeft}"
+                                    Color="{DynamicResource LinkColor}" />
+                            </Button.ImageSource>
+                        </Button>
+
+                        <Button
+                            x:Name="CloseButton"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            Clicked="CloseClicked"
+                            Command="{Binding CloseCommand}"
+                            IsVisible="False"
+                            Style="{DynamicResource ButtonIconStyle}"
+                            Text="{x:Static helpers:MaterialFont.Close}"
+                            TextColor="{StaticResource LinkColor}" />
+                    </Grid>
+                    <Grid
                         x:Name="PackageHeader"
-                        Grid.Row="0"
+                        Grid.Row="1"
                         Margin="6,0,6,0"
                         state:StateLayout.CurrentState="{Binding CurrentState}">
                         <state:StateLayout.StateViews>
@@ -198,7 +238,7 @@
 
                     <segmented:SegmentedControl
                         x:Name="SegPageControl"
-                        Grid.Row="1"
+                        Grid.Row="2"
                         Margin="4,6,4,0"
                         OnSegmentSelected="OnSegmentSelected"
                         SelectedTextColor="{DynamicResource PrimaryTextColor}"

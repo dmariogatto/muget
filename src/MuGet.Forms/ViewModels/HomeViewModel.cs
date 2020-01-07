@@ -1,11 +1,9 @@
-﻿using MvvmHelpers;
-using MvvmHelpers.Commands;
-using MuGet.Forms.Localisation;
+﻿using MuGet.Forms.Localisation;
 using MuGet.Forms.Models;
-using MuGet.Forms.Views;
+using MvvmHelpers;
+using MvvmHelpers.Commands;
 using System;
 using System.Linq;
-using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Forms.StateSquid;

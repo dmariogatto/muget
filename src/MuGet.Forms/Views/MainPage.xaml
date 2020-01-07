@@ -69,7 +69,7 @@
                     <ContentView>
                         <StackLayout
                             Margin="0,2,0,2"
-                            IsVisible="{Binding IsBusy}"
+                            IsVisible="{Binding IsBusy, Source={x:Reference Vm}}"
                             Spacing="0">
                             <controls:NuGetCardSkeleton />
                         </StackLayout>
