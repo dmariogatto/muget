@@ -1,10 +1,10 @@
 ﻿using LiteDB;
 using MuGet.Forms.Models;
-using Plugin.Connectivity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using Xamarin.Essentials;
 
 namespace MuGet.Forms.Services
 {
@@ -36,7 +36,7 @@ namespace MuGet.Forms.Services
 
             if (document != null &&
                 !includeStale &&
-                CrossConnectivity.Current.IsConnected &&
+                Connectivity.NetworkAccess == NetworkAccess.Internet &&
                 document.IsStale(_lifeSpan))
             {
                 document = default;

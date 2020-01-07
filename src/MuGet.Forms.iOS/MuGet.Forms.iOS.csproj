@@ -157,10 +157,10 @@
       <Version>2.0.0.5</Version>
     </PackageReference>
     <PackageReference Include="Shiny.Core">
-      <Version>1.0.0.531-beta</Version>
+      <Version>1.0.0.484-beta</Version>
     </PackageReference>
     <PackageReference Include="Shiny.Notifications">
-      <Version>1.0.0.531-beta</Version>
+      <Version>1.0.0.484-beta</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
       <Version>2.4.11.982</Version>

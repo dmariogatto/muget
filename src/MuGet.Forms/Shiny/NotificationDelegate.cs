@@ -15,14 +15,13 @@ namespace MuGet.Forms
             _logger = logger;
         }
 
-        public async Task OnEntry(NotificationResponse response)
+        public async Task OnEntry(Notification notification)
         {
-            var payload = response.Notification?.Payload;
-            if (!string.IsNullOrEmpty(payload))
+            if (!string.IsNullOrEmpty(notification?.Payload))
             {
                 try
                 {
-                    await ((Shell)Application.Current.MainPage).GoToAsync(payload);
+                    await ((Shell)Application.Current.MainPage).GoToAsync(notification.Payload);
                 }
                 catch (Exception ex)
                 {
