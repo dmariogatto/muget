@@ -1,5 +1,4 @@
-﻿using MuGet.Forms.Models;
-using MuGet.Forms.ViewModels;
+﻿using MuGet.Forms.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,6 +12,10 @@ namespace MuGet.Forms.Views
         public SettingsPage()
         {
             InitializeComponent();
+
+            ResetNotificationsCell.DescriptionFontSize =
+                RunAllJobsCell.DescriptionFontSize =
+                    Device.GetNamedSize(NamedSize.Caption, typeof(Label));
         }
     }
 }

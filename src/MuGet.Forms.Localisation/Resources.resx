@@ -258,10 +258,10 @@
   <data name="Project" xml:space="preserve">
     <value>Project</value>
   </data>
-  <data name="ResetNotificationsDetail" xml:space="preserve">
+  <data name="ResetNotificationsDescription" xml:space="preserve">
     <value>Clears the last known version of all your favourites</value>
   </data>
-  <data name="RunAllJobsDetail" xml:space="preserve">
+  <data name="RunAllJobsDescription" xml:space="preserve">
     <value>Manual trigger for notifications</value>
   </data>
   <data name="Technology" xml:space="preserve">

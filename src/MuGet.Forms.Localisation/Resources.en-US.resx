@@ -123,7 +123,7 @@
   <data name="NotificationsDescription" xml:space="preserve">
     <value>New versions of favorites</value>
   </data>
-  <data name="ResetNotificationsDetail" xml:space="preserve">
+  <data name="ResetNotificationsDescription" xml:space="preserve">
     <value>Clears the last known version of all your favorites</value>
   </data>
 </root>

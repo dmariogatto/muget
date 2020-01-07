@@ -65,13 +65,15 @@
             </sv:Section>
             <sv:Section Title="{local:Translate Development}">
                 <sv:CommandCell
+                    x:Name="ResetNotificationsCell"
                     Title="{local:Translate ResetNotifications}"
                     Command="{Binding ResetNotificationsCommand}"
-                    Description="{local:Translate ResetNotificationsDetail}" />
+                    Description="{local:Translate ResetNotificationsDescription}" />
                 <sv:CommandCell
+                    x:Name="RunAllJobsCell"
                     Title="{local:Translate RunAllJobs}"
                     Command="{Binding RunJobsCommand}"
-                    Description="{local:Translate RunAllJobsDetail}" />
+                    Description="{local:Translate RunAllJobsDescription}" />
             </sv:Section>
         </sv:SettingsView>
     </ContentPage.Content>
