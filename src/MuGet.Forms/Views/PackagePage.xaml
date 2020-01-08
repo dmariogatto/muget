@@ -152,7 +152,7 @@
                                         HorizontalOptions="FillAndExpand"
                                         Spacing="0"
                                         VerticalOptions="Center">
-                                        <ScrollView Orientation="Horizontal" VerticalOptions="Center">
+                                        <ScrollView Orientation="Horizontal" VerticalOptions="FillAndExpand">
                                             <Label
                                                 FontAttributes="Bold"
                                                 Style="{DynamicResource LabelTitleStyle}"
@@ -285,34 +285,44 @@
                     </state:StateView>
                 </state:StateLayout.StateViews>
 
-                <ScrollView x:Name="DetailsView" Padding="6,3,6,3">
+                <ScrollView x:Name="DetailsView" Padding="0,3,0,3">
                     <StackLayout>
                         <StackLayout
                             Margin="0,12,0,0"
                             HorizontalOptions="CenterAndExpand"
                             Orientation="Horizontal">
                             <Label
+                                FontSize="Medium"
                                 HorizontalOptions="Start"
                                 Style="{DynamicResource LabelIconStyle}"
                                 Text="{x:Static helpers:MaterialFont.Account}" />
                             <Label
+                                FontSize="Medium"
                                 HorizontalOptions="Start"
                                 Style="{DynamicResource LabelStyle}"
                                 Text="{Binding Entry.Authors}" />
                         </StackLayout>
-                        <Label Style="{DynamicResource LabelTitleStyle}" Text="{local:Translate Description}" />
-                        <yummy:PancakeView Style="{DynamicResource CardYummyStyle}">
+                        <Label
+                            Margin="6,0,6,0"
+                            Style="{DynamicResource LabelTitleStyle}"
+                            Text="{local:Translate Description}" />
+                        <yummy:PancakeView Margin="10,2,10,2" Style="{DynamicResource CardYummyStyle}">
                             <Label FormattedText="{Binding EntryData.Description, Converter={StaticResource linksToFormattedConverter}}" Style="{DynamicResource LabelStyle}" />
                         </yummy:PancakeView>
                         <Label
+                            Margin="6,0,6,0"
                             IsVisible="{Binding EntryData.ReleaseNotes, Converter={StaticResource stringToBoolConverter}}"
                             Style="{DynamicResource LabelTitleStyle}"
                             Text="{local:Translate ReleaseNotes}" />
-                        <yummy:PancakeView IsVisible="{Binding EntryData.ReleaseNotes, Converter={StaticResource stringToBoolConverter}}" Style="{DynamicResource CardYummyStyle}">
+                        <yummy:PancakeView
+                            Margin="10,2,10,2"
+                            IsVisible="{Binding EntryData.ReleaseNotes, Converter={StaticResource stringToBoolConverter}}"
+                            Style="{DynamicResource CardYummyStyle}">
                             <Label FormattedText="{Binding EntryData.ReleaseNotes, Converter={StaticResource linksToFormattedConverter}}" Style="{DynamicResource LabelStyle}" />
                         </yummy:PancakeView>
 
                         <Label
+                            Margin="6,0,6,0"
                             IsVisible="{Binding EntryData.Tags, Converter={StaticResource listToBoolConverter}}"
                             Style="{DynamicResource LabelTitleStyle}"
                             Text="{local:Translate Tags}" />
@@ -337,8 +347,11 @@
                             </FlexLayout>
                         </ScrollView>
 
-                        <Label Style="{DynamicResource LabelTitleStyle}" Text="{local:Translate Statistics}" />
-                        <yummy:PancakeView Style="{DynamicResource CardYummyStyle}">
+                        <Label
+                            Margin="6,0,6,0"
+                            Style="{DynamicResource LabelTitleStyle}"
+                            Text="{local:Translate Statistics}" />
+                        <yummy:PancakeView Margin="10,2,10,2" Style="{DynamicResource CardYummyStyle}">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
@@ -408,61 +421,51 @@
                             </Grid>
                         </yummy:PancakeView>
 
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
+                        <Grid Margin="6,0,6,0">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="1" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="1" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
 
                             <Button
-                                Grid.ColumnSpan="2"
+                                Margin="0,0,4,0"
                                 Command="{Binding LinkTappedCommand}"
                                 CommandParameter="{x:Static controls:LinkType.Project}"
-                                ContentLayout="Left,5"
-                                HorizontalOptions="Center"
-                                Text="{local:Translate Project}">
-                                <Button.ImageSource>
-                                    <FontImageSource
-                                        FontFamily="{StaticResource MaterialFontFamily}"
-                                        Glyph="{x:Static helpers:MaterialFont.FileDocument}"
-                                        Color="{DynamicResource PrimaryTextColor}" />
-                                </Button.ImageSource>
-                            </Button>
-
+                                CornerRadius="20"
+                                HorizontalOptions="FillAndExpand"
+                                Text="{local:Translate Project}" />
+                            <BoxView
+                                Grid.Column="1"
+                                BackgroundColor="Gray"
+                                HeightRequest="24"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="Center" />
                             <Button
-                                Grid.Row="1"
-                                Grid.Column="0"
+                                Grid.Column="2"
+                                Margin="2,0,2,0"
                                 Command="{Binding LinkTappedCommand}"
                                 CommandParameter="{x:Static controls:LinkType.NuGet}"
-                                ContentLayout="Left,5"
-                                HorizontalOptions="Center"
-                                Text="nuget.org">
-                                <Button.ImageSource>
-                                    <FontImageSource
-                                        FontFamily="{StaticResource MaterialFontFamily}"
-                                        Glyph="{x:Static helpers:MaterialFont.PackageVariantClosed}"
-                                        Color="{DynamicResource PrimaryTextColor}" />
-                                </Button.ImageSource>
-                            </Button>
+                                CornerRadius="20"
+                                HorizontalOptions="FillAndExpand"
+                                Text="NuGet.org" />
+                            <BoxView
+                                Grid.Column="3"
+                                BackgroundColor="Gray"
+                                HeightRequest="24"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="Center" />
                             <Button
-                                Grid.Row="1"
-                                Grid.Column="1"
+                                Grid.Column="4"
+                                Margin="4,0,0,0"
                                 Command="{Binding LinkTappedCommand}"
                                 CommandParameter="{x:Static controls:LinkType.FuGet}"
-                                ContentLayout="Left,5"
-                                HorizontalOptions="Center"
-                                Text="fuget.org">
-                                <Button.ImageSource>
-                                    <FontImageSource
-                                        FontFamily="{StaticResource MaterialFontFamily}"
-                                        Glyph="{x:Static helpers:MaterialFont.PackageVariant}"
-                                        Color="{DynamicResource PrimaryTextColor}" />
-                                </Button.ImageSource>
-                            </Button>
+                                CornerRadius="20"
+                                HorizontalOptions="FillAndExpand"
+                                Text="FuGet.org" />
+
                         </Grid>
                     </StackLayout>
                 </ScrollView>

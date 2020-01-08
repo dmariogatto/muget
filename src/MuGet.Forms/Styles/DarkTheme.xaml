@@ -15,7 +15,7 @@
     <Color x:Key="SecondaryTextColor">#A9A9A9</Color>
 
     <Color x:Key="CardBackgroundColor">#36373A</Color>
-    <Color x:Key="CardBorderColor">#404040</Color>
+    <Color x:Key="CardBorderColor">#E2E2E2</Color>
 
     <Color x:Key="TintColor">#FFFFFF</Color>
 

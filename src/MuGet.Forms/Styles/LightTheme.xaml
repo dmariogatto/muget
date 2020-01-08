@@ -15,11 +15,11 @@
     <Color x:Key="SecondaryTextColor">#323232</Color>
 
     <Color x:Key="CardBackgroundColor">#EEEEEE</Color>
-    <Color x:Key="CardBorderColor">#D8D8D8</Color>
+    <Color x:Key="CardBorderColor">#B2B2B2</Color>
 
     <Color x:Key="TintColor">#000000</Color>
-    
+
     <Color x:Key="ContrastColor">#000000</Color>
     <Color x:Key="ContrastAntiColor">#FFFFFF</Color>
-    
+
 </ResourceDictionary>
