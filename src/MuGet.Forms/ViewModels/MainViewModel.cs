@@ -31,7 +31,7 @@ namespace MuGet.Forms.ViewModels
         }
 
         public bool PackagesLoading => !string.IsNullOrEmpty(SearchText) && IsBusy && !Packages.Any();
-        public bool PackagesLoaded => !string.IsNullOrEmpty(SearchText) && Packages.Any();
+        public bool PackagesLoaded => !string.IsNullOrEmpty(SearchText) && (Packages.Any() || !IsBusy);
 
         private string _searchText;
         public string SearchText
