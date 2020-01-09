@@ -1,11 +1,9 @@
 ﻿using MuGet.Forms.Localisation;
 using MuGet.Forms.Services;
-using MuGet.Forms.Views;
 using Shiny.Jobs;
 using Shiny.Notifications;
 using System;
 using System.Linq;
-using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -65,8 +63,7 @@ namespace MuGet.Forms
                                 Id = fp.Id.GetHashCode(),
                                 Title = string.Format(Resources.ItemParenthesesItem, fp.PackageId, fp.Version),
                                 Message = string.Format(Resources.NotificationContentFormat, latest.Authors, fp.Published.ToShortDateString()),
-                                Payload = $"{PackagePage.RouteName}?{PackagePage.PackageIdUrlQueryProperty}={WebUtility.UrlEncode(fp.PackageId)}&{PackagePage.VersionQueryProperty}={WebUtility.UrlEncode(fp.Version)}",
-                                BadgeCount = 1,
+                                Payload = $"{fp.PackageId},{fp.Version}",                             
                             });
                         }
                         catch (Exception ex)

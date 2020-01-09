@@ -1,4 +1,5 @@
 ﻿using MuGet.Forms.Services;
+using MuGet.Forms.Views;
 using Shiny.Notifications;
 using System;
 using System.Threading.Tasks;
@@ -21,7 +22,19 @@ namespace MuGet.Forms
             {
                 try
                 {
-                    await ((Shell)Application.Current.MainPage).GoToAsync(notification.Payload);
+                    var payload = notification.Payload.Split(',');
+                    if (payload.Length == 2 &&
+                        Application.Current.MainPage is NavigationPage navPage)
+                    {
+                        var packageId = payload[0];
+                        var version = payload[1];
+
+                        var packagePage = new PackagePage();
+                        packagePage.PackageId = packageId;
+                        packagePage.Version = version;
+
+                        await navPage.PushAsync(packagePage);
+                    }
                 }
                 catch (Exception ex)
                 {

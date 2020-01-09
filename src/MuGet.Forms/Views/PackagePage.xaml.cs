@@ -2,7 +2,6 @@
 using MuGet.Forms.ViewModels;
 using System.Linq;
 using System.Net;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using Xamarin.Forms.Xaml;
@@ -13,10 +12,6 @@ namespace MuGet.Forms.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PackagePage : BasePage<PackageViewModel>
     {
-        public const string RouteName = "package";
-        public const string PackageIdUrlQueryProperty = "id";
-        public const string VersionQueryProperty = "v";
-
         public PackagePage()
         {
             InitializeComponent();

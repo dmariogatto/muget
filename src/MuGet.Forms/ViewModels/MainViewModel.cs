@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Xamarin.Forms.StateSquid;
 
 namespace MuGet.Forms.ViewModels
 {
@@ -30,6 +29,9 @@ namespace MuGet.Forms.ViewModels
                     : Task.FromResult(0));
             PackageTappedCommand = new Command<PackageMetadata>(PackageTapped);
         }
+
+        public bool PackagesLoading => !string.IsNullOrEmpty(SearchText) && IsBusy && !Packages.Any();
+        public bool PackagesLoaded => !string.IsNullOrEmpty(SearchText) && Packages.Any();
 
         private string _searchText;
         public string SearchText
@@ -78,13 +80,13 @@ namespace MuGet.Forms.ViewModels
             {
                 IsBusy = true;
 
-                if (skip == 0)
-                    CurrentState = State.Loading;
-
                 try
                 {
                     if (skip == 0)
                         Packages.Clear();
+
+                    OnPropertyChanged(nameof(PackagesLoading));
+                    OnPropertyChanged(nameof(PackagesLoaded));
 
                     var packages = default(IList<PackageMetadata>);
                     var totalHits = 0;
@@ -128,9 +130,11 @@ namespace MuGet.Forms.ViewModels
                 {
                     if (!cancellationToken.IsCancellationRequested)
                     {
-                        IsBusy = false;
-                        CurrentState = State.None;
+                        IsBusy = false;                        
                     }
+
+                    OnPropertyChanged(nameof(PackagesLoading));
+                    OnPropertyChanged(nameof(PackagesLoaded));
                 }
             }
 

@@ -75,7 +75,6 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Renderers\SearchBarCustomRenderer.cs" />
-    <Compile Include="Renderers\ShellCustomRenderer.cs" />
     <Compile Include="Services\EnvironmentService_iOS.cs" />
     <Compile Include="Services\LocaliseService_iOS.cs" />
     <Compile Include="Services\RendererResolver_iOS.cs" />

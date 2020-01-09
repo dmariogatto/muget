@@ -22,6 +22,6 @@
     <Color x:Key="ContrastColor">#000000</Color>
     <Color x:Key="ContrastAntiColor">#FFFFFF</Color>
 
-    <Color x:Key="AccentColor">#008AF6</Color>
+    <Color x:Key="AccentColor">#004880</Color>
     <Color x:Key="LinkColor">#0A84FF</Color>
 </ResourceDictionary>

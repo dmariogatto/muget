@@ -30,6 +30,7 @@
         <sv:SettingsView x:Name="SettingsTable" HasUnevenRows="True">
             <sv:Section Title="{local:Translate PackageSettings}">
                 <sv:ButtonCell
+                    x:Name="NuGetCell"
                     Title="NuGet.org"
                     Command="{Binding SettingsItemTappedCommand}"
                     CommandParameter="{x:Static viewModels:SettingItem.NuGet}"

@@ -26,6 +26,7 @@
     </ContentPage.BindingContext>
     <ContentPage.Resources>
         <ResourceDictionary>
+            <converters:InverseBoolConverter x:Key="inverseBoolConverter" />
             <converters:StringToBoolConverter x:Key="stringToBoolConverter" />
             <converters:StringToInverseBoolConverter x:Key="stringToInverseBoolConverter" />
         </ResourceDictionary>
@@ -41,65 +42,63 @@
                 <views:HomeView />
             </ScrollView>
 
-            <StackLayout
-                state:StateLayout.CurrentState="{Binding CurrentState}"
+            <ContentView
                 AbsoluteLayout.LayoutBounds="0,0,1,1"
                 AbsoluteLayout.LayoutFlags="All"
-                InputTransparent="True"
-                IsVisible="{Binding SearchText, Converter={StaticResource stringToBoolConverter}}">
-                <state:StateLayout.StateViews>
-                    <state:StateView StateKey="Loading">
-                        <ContentView x:Name="SkeletonHeaderView">
-                            <controls:NuGetCardSkeleton />
-                        </ContentView>
-                    </state:StateView>
-                </state:StateLayout.StateViews>
+                x:Name="SkeletonHeaderView"
+                IsVisible="{Binding PackagesLoading}">
+                    <controls:NuGetCardSkeleton VerticalOptions="Start" />
+                </ContentView>
 
-                <CollectionView
-                    ItemsSource="{Binding Packages}"
-                    RemainingItemsThreshold="{Binding RemainingItemsThreshold}"
-                    RemainingItemsThresholdReachedCommand="{Binding RemainingItemsThresholdReachedCommand}"
-                    Scrolled="PackagesScrolled">
-                    <CollectionView.Header>
-                        <ContentView>
-                            <StackLayout x:Name="SearchCollectionHeaderView" />
-                        </ContentView>
-                    </CollectionView.Header>
-                    <CollectionView.EmptyView>
-                        <ContentView>
-                            <Label
-                                FontAttributes="Italic"
-                                HorizontalOptions="Center"
-                                Style="{DynamicResource LabelTitleStyle}"
-                                Text="{Binding SearchText, StringFormat={local:Translate ZeroPackagesReturnedForItem}}"
-                                VerticalOptions="Start" />
-                        </ContentView>
-                    </CollectionView.EmptyView>
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate x:DataType="models:PackageMetadata">
-                            <controls:NuGetCard BindingContext="{Binding}">
-                                <controls:NuGetCard.GestureRecognizers>
-                                    <TapGestureRecognizer
-                                        Command="{Binding PackageTappedCommand, Source={x:Reference Vm}}"
-                                        CommandParameter="{Binding}"
-                                        Tapped="PackageTapped" />
-                                </controls:NuGetCard.GestureRecognizers>
-                            </controls:NuGetCard>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                    <CollectionView.Footer>
-                        <ContentView IsVisible="{Binding IsBusy, Source={x:Reference Vm}}">
-                            <ActivityIndicator
-                                Margin="4"
-                                HeightRequest="24"
-                                HorizontalOptions="Center"
-                                IsRunning="{Binding IsBusy, Source={x:Reference Vm}}"
-                                WidthRequest="24"
-                                Color="{DynamicResource AccentColor}" />
-                        </ContentView>
-                    </CollectionView.Footer>
-                </CollectionView>
-            </StackLayout>
+
+            <CollectionView
+                AbsoluteLayout.LayoutBounds="0,0,1,1"
+                AbsoluteLayout.LayoutFlags="All" 
+                ItemsSource="{Binding Packages}"
+                RemainingItemsThreshold="{Binding RemainingItemsThreshold}"
+                RemainingItemsThresholdReachedCommand="{Binding RemainingItemsThresholdReachedCommand}"
+                Scrolled="PackagesScrolled"
+                IsVisible="{Binding PackagesLoaded}">
+                <CollectionView.Header>
+                    <ContentView>
+                        <StackLayout x:Name="SearchCollectionHeaderView" />
+                    </ContentView>
+                </CollectionView.Header>
+                <CollectionView.EmptyView>
+                    <ContentView>
+                        <Label
+                            FontAttributes="Italic"
+                            HorizontalOptions="Center"
+                            Margin="0,8,0,0"
+                            Style="{DynamicResource LabelTitleStyle}"
+                            Text="{Binding SearchText, StringFormat={local:Translate ZeroPackagesReturnedForItem}}"
+                            VerticalOptions="Start" />
+                    </ContentView>
+                </CollectionView.EmptyView>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:PackageMetadata">
+                        <controls:NuGetCard BindingContext="{Binding}">
+                            <controls:NuGetCard.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Command="{Binding PackageTappedCommand, Source={x:Reference Vm}}"
+                                    CommandParameter="{Binding}"
+                                    Tapped="PackageTapped" />
+                            </controls:NuGetCard.GestureRecognizers>
+                        </controls:NuGetCard>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.Footer>
+                    <ContentView IsVisible="{Binding IsBusy, Source={x:Reference Vm}}">
+                        <ActivityIndicator
+                            Margin="4"
+                            HeightRequest="24"
+                            HorizontalOptions="Center"
+                            IsRunning="{Binding IsBusy, Source={x:Reference Vm}}"
+                            WidthRequest="24"
+                            Color="{DynamicResource AccentColor}" />
+                    </ContentView>
+                </CollectionView.Footer>
+            </CollectionView>
 
             <yummy:PancakeView
                 x:Name="SearchBarView"

@@ -7,15 +7,14 @@ namespace MuGet.Forms.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SettingsPage : BasePage<SettingsViewModel>
     {
-        public const string RouteName = "settings";
-
         public SettingsPage()
         {
             InitializeComponent();
 
-            ResetNotificationsCell.DescriptionFontSize =
-                RunAllJobsCell.DescriptionFontSize =
-                    Device.GetNamedSize(NamedSize.Caption, typeof(Label));
+            NuGetCell.DescriptionFontSize =
+                ResetNotificationsCell.DescriptionFontSize =
+                    RunAllJobsCell.DescriptionFontSize =
+                        Device.GetNamedSize(NamedSize.Caption, typeof(Label));
         }
     }
 }
