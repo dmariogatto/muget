@@ -126,7 +126,7 @@
                         JustifyContent="Start">
                         <BindableLayout.ItemTemplate>
                             <DataTemplate x:DataType="models:PackageMetadata">
-                                <controls:NuGetCardSimple BindingContext="{Binding .}">
+                                <controls:NuGetCardSimple BindingContext="{Binding}">
                                     <controls:NuGetCardSimple.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="PackageTapped" />
                                     </controls:NuGetCardSimple.GestureRecognizers>

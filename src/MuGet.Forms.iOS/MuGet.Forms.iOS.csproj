@@ -202,4 +202,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\gift_white.svg" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\nuget.png" />
+  </ItemGroup>
 </Project>

@@ -215,7 +215,7 @@
                                         FontSize="Caption"
                                         IsVisible="{Binding Entry.PackVersion.IsPrerelease}"
                                         Text="prerelease"
-                                        TextColor="{DynamicResource NuGetColor}"
+                                        TextColor="{DynamicResource AccentColor}"
                                         VerticalOptions="FillAndExpand"
                                         VerticalTextAlignment="Center" />
                                 </StackLayout>
@@ -263,7 +263,7 @@
                             IsRunning="{Binding IsBusy}"
                             IsVisible="{Binding IsBusy}"
                             WidthRequest="24"
-                            Color="{DynamicResource NuGetColor}" />
+                            Color="{DynamicResource AccentColor}" />
                     </state:StateView>
                     <state:StateView StateKey="Error">
                         <StackLayout Padding="6,4,6,4" IsVisible="{Binding Entry, Converter={StaticResource nullToInverseBoolConverter}}">

@@ -313,6 +313,15 @@ namespace MuGet.Forms.Localisation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Package Settings.
+        /// </summary>
+        public static string PackageSettings {
+            get {
+                return ResourceManager.GetString("PackageSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Project.
         /// </summary>
         public static string Project {
@@ -457,11 +466,11 @@ namespace MuGet.Forms.Localisation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Technology.
+        ///   Looks up a localized string similar to The NuGets.
         /// </summary>
-        public static string Technology {
+        public static string TheNuGets {
             get {
-                return ResourceManager.GetString("Technology", resourceCulture);
+                return ResourceManager.GetString("TheNuGets", resourceCulture);
             }
         }
         

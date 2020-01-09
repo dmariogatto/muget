@@ -11,7 +11,7 @@ namespace MuGet.Forms
 
             if (Device.RuntimePlatform == Device.Android)
             {
-                BackgroundColor = (Color)Application.Current.Resources["NuGetColor"];
+                BackgroundColor = (Color)Application.Current.Resources["AccentColor"];
             }
 
             Routing.RegisterRoute(PackagePage.RouteName, typeof(PackagePage));

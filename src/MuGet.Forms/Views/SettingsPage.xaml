@@ -28,7 +28,13 @@
 
     <ContentPage.Content>
         <sv:SettingsView x:Name="SettingsTable" HasUnevenRows="True">
-            <sv:Section Title="NuGet.org">
+            <sv:Section Title="{local:Translate PackageSettings}">
+                <sv:ButtonCell
+                    Title="NuGet.org"
+                    Command="{Binding SettingsItemTappedCommand}"
+                    CommandParameter="{x:Static viewModels:SettingItem.NuGet}"
+                    Description="© Microsoft"
+                    IconSource="nuget.png" />
                 <sv:SwitchCell Title="{local:Translate IncludePrerelease}" On="{Binding IncludePrerelease}" />
             </sv:Section>
             <sv:Section Title="{local:Translate Notifications}">
@@ -48,7 +54,7 @@
                     Command="{Binding SettingsItemTappedCommand}"
                     CommandParameter="{x:Static viewModels:SettingItem.ViewGitHub}" />
             </sv:Section>
-            <sv:Section Title="{local:Translate Technology}" ItemsSource="{Binding MuGetPackages}">
+            <sv:Section Title="{local:Translate TheNuGets}" ItemsSource="{Binding MuGetPackages}">
                 <sv:Section.ItemTemplate>
                     <DataTemplate x:DataType="models:MuGetPackage">
                         <sv:ButtonCell

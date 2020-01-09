@@ -66,11 +66,8 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
                 <CollectionView.Footer>
-                    <ContentView>
-                        <StackLayout
-                            Margin="0,2,0,2"
-                            IsVisible="{Binding IsBusy, Source={x:Reference Vm}}"
-                            Spacing="0">
+                    <ContentView IsVisible="{Binding IsBusy, Source={x:Reference Vm}}">
+                        <StackLayout>
                             <controls:NuGetCardSkeleton />
                         </StackLayout>
                     </ContentView>

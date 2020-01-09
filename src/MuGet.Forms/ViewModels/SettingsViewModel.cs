@@ -14,7 +14,8 @@ namespace MuGet.Forms.ViewModels
     {
         RateApp,
         SendFeedback,
-        ViewGitHub
+        ViewGitHub,
+        NuGet,
     }
 
     public class SettingsViewModel : BaseViewModel
@@ -23,6 +24,7 @@ namespace MuGet.Forms.ViewModels
         private const string AppleAppId = "1489637407";
         private const string FeedbackEmail = "outtaapps@gmail.com";
         private const string GitHubRepo = "https://github.com/dmariogatto/muget";
+        private const string NuGetUrl = "https://nuget.org/";
 
         private readonly IMuGetPackageService _muGetPackageService;
 
@@ -96,6 +98,9 @@ namespace MuGet.Forms.ViewModels
                     break;
                 case SettingItem.ViewGitHub:
                     await Browser.OpenAsync(GitHubRepo);
+                    break;
+                case SettingItem.NuGet:
+                    await Browser.OpenAsync(NuGetUrl);
                     break;
             }
         }
