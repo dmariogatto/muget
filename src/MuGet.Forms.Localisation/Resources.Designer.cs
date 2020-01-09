@@ -250,7 +250,7 @@ namespace MuGet.Forms.Localisation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Surely, you have at least one? ❤.
+        ///   Looks up a localized string similar to Add your favourite packages to get notifications of new versions ❤.
         /// </summary>
         public static string NoFavouritePackages {
             get {
@@ -268,7 +268,7 @@ namespace MuGet.Forms.Localisation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Start searching to discover! 🎁.
+        ///   Looks up a localized string similar to Start searching to discover 🎁.
         /// </summary>
         public static string NoRecentPackages {
             get {
