@@ -13,12 +13,7 @@
     <ContentView.Content>
         <yummy:PancakeView Margin="4,6,4,6" Style="{DynamicResource CardYummyStyle}">
             <StackLayout>
-                <yummy:PancakeView
-                    BackgroundColor="{DynamicResource CardBackgroundColor}"
-                    CornerRadius="3"
-                    Elevation="4"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center">
+                <yummy:PancakeView Style="{DynamicResource IconYummyStyle}">                    
                     <ffimageloading:SvgCachedImage
                         DownsampleToViewSize="true"
                         ErrorPlaceholder="{DynamicResource PackageIcon}"

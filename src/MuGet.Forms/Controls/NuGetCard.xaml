@@ -33,11 +33,7 @@
 
                     <yummy:PancakeView
                         Grid.RowSpan="3"
-                        BackgroundColor="{DynamicResource CardBackgroundColor}"
-                        CornerRadius="3"
-                        Elevation="4"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center">
+                        Style="{DynamicResource IconYummyStyle}">
                         <ffimageloading:SvgCachedImage
                             DownsampleToViewSize="true"
                             ErrorPlaceholder="{DynamicResource PackageIcon}"

@@ -136,9 +136,7 @@
                                         <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
                                     <yummy:PancakeView
-                                        BackgroundColor="{DynamicResource CardBackgroundColor}"
-                                        CornerRadius="3"
-                                        Elevation="4"
+                                        Style="{DynamicResource IconYummyStyle}"
                                         VerticalOptions="Center">
                                         <ffimageloading:SvgCachedImage
                                             DownsampleToViewSize="true"
