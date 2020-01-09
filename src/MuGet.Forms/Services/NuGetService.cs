@@ -182,7 +182,7 @@ namespace MuGet.Forms.Services
                     var catalogRoot = await GetWithRetry<CatalogRoot>(source.GetRegistrationUrl(packageId), cancellationToken).ConfigureAwait(false);                    
                     if (catalogRoot?.Items?.Any() == true)
                     {
-                        async Task<IList<CatalogEntry>> getCatalogEntrys(CatalogPage page, CancellationToken ct)
+                        async Task<IList<CatalogEntry>> getCatalogEntries(CatalogPage page, CancellationToken ct)
                         {
                             var items = page?.Items;
 
@@ -198,7 +198,7 @@ namespace MuGet.Forms.Services
                             return items?.Select(i => i.CatalogEntry)?.ToList() ?? new List<CatalogEntry>(0);
                         }
 
-                        var catalogTasks = catalogRoot.Items.Select(i => getCatalogEntrys(i, cancellationToken)).ToList();
+                        var catalogTasks = catalogRoot.Items.Select(i => getCatalogEntries(i, cancellationToken)).ToList();
                         await Task.WhenAll(catalogTasks).ConfigureAwait(false);
                         result = catalogTasks.SelectMany(t => t.Result)
                                              .Where(i => i.Listed)
