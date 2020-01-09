@@ -34,7 +34,8 @@
                     Command="{Binding SettingsItemTappedCommand}"
                     CommandParameter="{x:Static viewModels:SettingItem.NuGet}"
                     Description="© Microsoft"
-                    IconSource="nuget.png" />
+                    IconSource="nuget.png"
+                    TitleAlignment="Start" />
                 <sv:SwitchCell Title="{local:Translate IncludePrerelease}" On="{Binding IncludePrerelease}" />
             </sv:Section>
             <sv:Section Title="{local:Translate Notifications}">
