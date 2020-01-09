@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Xamarin.Forms.StateSquid;
 
 namespace MuGet.Forms.ViewModels
 {
@@ -77,6 +78,9 @@ namespace MuGet.Forms.ViewModels
             {
                 IsBusy = true;
 
+                if (skip == 0)
+                    CurrentState = State.Loading;
+
                 try
                 {
                     if (skip == 0)
@@ -123,7 +127,10 @@ namespace MuGet.Forms.ViewModels
                 finally
                 {
                     if (!cancellationToken.IsCancellationRequested)
+                    {
                         IsBusy = false;
+                        CurrentState = State.None;
+                    }
                 }
             }
 

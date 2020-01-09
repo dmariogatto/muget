@@ -27,7 +27,7 @@ namespace MuGet.Forms.iOS
 #if DEBUG
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
 #else
-            UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(60 * 60 * 6); // 6 hours
+            UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(60 * 60 * 3); // 3 hours
 #endif
 
             Shiny.iOSShinyHost.Init(new ShinyStartup());
@@ -44,11 +44,16 @@ namespace MuGet.Forms.iOS
             {
                 if (!b)
                     System.Diagnostics.Debug.WriteLine($"Notification Request Error: {e}");
-            });
-
-            UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
+            });            
 
             return base.FinishedLaunching(app, options);
+        }
+
+        public override void OnActivated(UIApplication uiApplication)
+        {
+            base.OnActivated(uiApplication);
+
+            UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
         }
 
         public override void PerformFetch(UIApplication application, Action<UIBackgroundFetchResult> completionHandler)

@@ -62,5 +62,20 @@ namespace MuGet.Forms.Models
         private PackageVersion _packVersion;
         [JsonIgnore]
         public PackageVersion PackVersion => _packVersion ?? (_packVersion = new PackageVersion(Version));
+
+        public override bool Equals(object obj)
+        {
+            return obj is PackageMetadata metadata &&
+                   Id == metadata.Id &&
+                   Version == metadata.Version;
+        }
+
+        public override int GetHashCode()
+        {
+            var hashCode = -1416534245;
+            hashCode = hashCode * -1521134295 + Id.GetHashCode();
+            hashCode = hashCode * -1521134295 + Version.GetHashCode();
+            return hashCode;
+        }
     }
 }

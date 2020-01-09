@@ -270,4 +270,7 @@
   <data name="PackageSettings" xml:space="preserve">
     <value>Package Settings</value>
   </data>
+  <data name="ZeroPackagesReturnedForItem" xml:space="preserve">
+    <value>0 packages returned for {0}</value>
+  </data>
 </root>

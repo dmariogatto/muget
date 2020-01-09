@@ -12,6 +12,8 @@ namespace MuGet.Forms.ViewModels
 {
     public class HomeViewModel : BaseViewModel
     {
+        private bool _isFirstLoad = true;
+
         public HomeViewModel()
         {
             Title = Resources.Home;
@@ -41,7 +43,12 @@ namespace MuGet.Forms.ViewModels
                 return;
 
             IsBusy = true;
-            CurrentState = State.Loading;
+
+            if (_isFirstLoad)
+            {
+                CurrentState = State.Loading;
+                _isFirstLoad = false;
+            }
 
             try
             {
@@ -55,13 +62,18 @@ namespace MuGet.Forms.ViewModels
                 var favouriteTasks = favourites.Select(i => NuGetService.GetPackageMetadata(i.PackageId, cancellationToken, true));
                 await Task.WhenAll(favouriteTasks);
 
-                RecentPackages.ReplaceRange(recentTasks
+                var recentResults = recentTasks
                     .Select(t => t.Result)
-                    .Where(m => m != null));
-                FavouritePackages.ReplaceRange(favouriteTasks
+                    .Where(m => m != null).ToList();
+                var favResults = favouriteTasks
                     .Select(t => t.Result)
                     .Where(m => m != null)
-                    .OrderByDescending(m => m.TotalDownloads));
+                    .OrderByDescending(m => m.TotalDownloads).ToList();
+
+                if (!Enumerable.SequenceEqual(recentResults, RecentPackages))
+                    RecentPackages.ReplaceRange(recentResults);
+                if (!Enumerable.SequenceEqual(favResults, FavouritePackages))
+                    FavouritePackages.ReplaceRange(favResults);
             }
             catch (Exception ex)
             {

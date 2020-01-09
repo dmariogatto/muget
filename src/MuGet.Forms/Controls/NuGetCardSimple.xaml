@@ -10,9 +10,6 @@
     xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     x:DataType="models:PackageMetadata"
     mc:Ignorable="d">
-    <ContentView.Resources>
-        <ResourceDictionary />
-    </ContentView.Resources>
     <ContentView.Content>
         <yummy:PancakeView Margin="4,6,4,6" Style="{DynamicResource CardYummyStyle}">
             <StackLayout>

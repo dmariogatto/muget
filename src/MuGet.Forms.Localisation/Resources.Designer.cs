@@ -518,5 +518,14 @@ namespace MuGet.Forms.Localisation {
                 return ResourceManager.GetString("WelcomeToMuGet", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 0 packages returned for {0}.
+        /// </summary>
+        public static string ZeroPackagesReturnedForItem {
+            get {
+                return ResourceManager.GetString("ZeroPackagesReturnedForItem", resourceCulture);
+            }
+        }
     }
 }
