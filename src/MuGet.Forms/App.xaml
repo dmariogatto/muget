@@ -86,7 +86,7 @@
                 <Setter Property="Elevation" Value="1" />
                 <Setter Property="CornerRadius" Value="4" />
                 <Setter Property="IsClippedToBounds" Value="False" />
-                <Setter Property="BackgroundColor" Value="{DynamicResource CardBackgroundColor}" />
+                <Setter Property="BackgroundColor" Value="{DynamicResource CardIconBackgroundColor}" />
                 <Setter Property="HorizontalOptions" Value="Center" />
                 <Setter Property="VerticalOptions" Value="Center" />
             </Style>

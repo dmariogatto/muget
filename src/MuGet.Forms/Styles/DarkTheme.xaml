@@ -17,6 +17,8 @@
     <Color x:Key="CardBackgroundColor">#36373A</Color>
     <Color x:Key="CardBorderColor">#E2E2E2</Color>
 
+    <Color x:Key="CardIconBackgroundColor">#4A4B4D</Color>
+
     <Color x:Key="TintColor">#FFFFFF</Color>
 
     <Color x:Key="ContrastColor">#FFFFFF</Color>
