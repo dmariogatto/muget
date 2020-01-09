@@ -10,7 +10,6 @@
     xmlns:local="clr-namespace:MuGet.Forms"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:models="clr-namespace:MuGet.Forms.Models"
-    xmlns:state="clr-namespace:Xamarin.Forms.StateSquid;assembly=Xamarin.Forms.StateSquid"
     xmlns:viewModels="clr-namespace:MuGet.Forms.ViewModels"
     xmlns:views="clr-namespace:MuGet.Forms.Views"
     xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
@@ -19,7 +18,6 @@
     x:DataType="viewModels:MainViewModel"
     x:TypeArguments="viewModels:MainViewModel"
     BackgroundColor="{DynamicResource PageBackgroundColor}"
-    Shell.NavBarIsVisible="False"
     mc:Ignorable="d">
     <ContentPage.BindingContext>
         <viewModels:MainViewModel x:Name="Vm" />
@@ -43,22 +41,22 @@
             </ScrollView>
 
             <ContentView
+                x:Name="SkeletonHeaderView"
                 AbsoluteLayout.LayoutBounds="0,0,1,1"
                 AbsoluteLayout.LayoutFlags="All"
-                x:Name="SkeletonHeaderView"
                 IsVisible="{Binding PackagesLoading}">
-                    <controls:NuGetCardSkeleton VerticalOptions="Start" />
-                </ContentView>
+                <controls:NuGetCardSkeleton VerticalOptions="Start" />
+            </ContentView>
 
 
             <CollectionView
                 AbsoluteLayout.LayoutBounds="0,0,1,1"
-                AbsoluteLayout.LayoutFlags="All" 
+                AbsoluteLayout.LayoutFlags="All"
+                IsVisible="{Binding PackagesLoaded}"
                 ItemsSource="{Binding Packages}"
                 RemainingItemsThreshold="{Binding RemainingItemsThreshold}"
                 RemainingItemsThresholdReachedCommand="{Binding RemainingItemsThresholdReachedCommand}"
-                Scrolled="PackagesScrolled"
-                IsVisible="{Binding PackagesLoaded}">
+                Scrolled="PackagesScrolled">
                 <CollectionView.Header>
                     <ContentView>
                         <StackLayout x:Name="SearchCollectionHeaderView" />
@@ -67,9 +65,9 @@
                 <CollectionView.EmptyView>
                     <ContentView>
                         <Label
+                            Margin="0,8,0,0"
                             FontAttributes="Italic"
                             HorizontalOptions="Center"
-                            Margin="0,8,0,0"
                             Style="{DynamicResource LabelTitleStyle}"
                             Text="{Binding SearchText, StringFormat={local:Translate ZeroPackagesReturnedForItem}}"
                             VerticalOptions="Start" />
