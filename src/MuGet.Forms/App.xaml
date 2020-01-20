@@ -94,6 +94,7 @@
             <Style TargetType="sv:SettingsView">
                 <Setter Property="HeaderTextVerticalAlign" Value="Center" />
                 <Setter Property="HeaderFontSize" Value="Caption" />
+                <Setter Property="HeaderHeight" Value="48" />
                 <Setter Property="SeparatorColor" Value="{DynamicResource AccentColor}" />
                 <Setter Property="BackgroundColor" Value="{DynamicResource PageBackgroundColor}" />
                 <Setter Property="HeaderBackgroundColor" Value="{DynamicResource PageBackgroundColor}" />
