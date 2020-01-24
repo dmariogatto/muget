@@ -46,25 +46,29 @@ namespace MuGet.Forms
                 foreach (var fp in favouritePackages)
                 {
                     var catalogEntries = await _nuGetService.GetCatalogEntries(fp.PackageId, cancelToken);
-                    var latest = catalogEntries.FirstOrDefault(e => includePrerelease || !e.PackVersion.IsPrerelease);
+                    var latestEntries = catalogEntries
+                        .Where(e => (includePrerelease || !e.PackVersion.IsPrerelease) &&
+                                    e.Published > fp.Published);
 
-                    if (latest != null &&
-                        latest.Published > fp.Published)
+                    if (latestEntries.Any())
                     {
-                        fp.Version = latest.Version;
-                        fp.Published = latest.Published;
+                        fp.Version = latestEntries.Last().Version;
+                        fp.Published = latestEntries.Last().Published;
 
                         _nuGetService.UpsertFavouritePackage(fp);
 
                         try
                         {
-                            await _notifications.Send(new Notification()
+                            foreach (var le in latestEntries)
                             {
-                                Id = fp.Id.GetHashCode(),
-                                Title = string.Format(Resources.ItemParenthesesItem, fp.PackageId, fp.Version),
-                                Message = string.Format(Resources.NotificationContentFormat, latest.Authors, fp.Published.ToShortDateString()),
-                                Payload = $"{fp.PackageId},{fp.Version}",                             
-                            });
+                                await _notifications.Send(new Notification()
+                                {
+                                    Id = le.Id.GetHashCode(),
+                                    Title = string.Format(Resources.ItemParenthesesItem, le.Id, le.Version),
+                                    Message = string.Format(Resources.NotificationContentFormat, le.Authors, le.Published.ToShortDateString()),
+                                    Payload = $"{le.Id},{le.Version}",
+                                });
+                            }
                         }
                         catch (Exception ex)
                         {
