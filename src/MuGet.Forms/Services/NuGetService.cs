@@ -30,7 +30,7 @@ namespace MuGet.Forms.Services
             AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
         });
 
-        private readonly static LiteDatabase _db = new LiteDatabase(_dbPath);
+        private readonly LiteDatabase _db;
 
         private readonly ICacheProvider _cache;
         private readonly TimeSpan _defaultCacheExpires = TimeSpan.FromMinutes(10);
@@ -50,6 +50,7 @@ namespace MuGet.Forms.Services
             _cache = cacheProvider;
             _logger = logger;
             
+            _db = new LiteDatabase($"Filename={_dbPath};Upgrade=true;");
             _packageSourceRepo = new EntityRepository<PackageSource>(_db, TimeSpan.FromDays(7));
             _favouriteRepo = new EntityRepository<FavouritePackage>(_db, TimeSpan.MaxValue);
             _recentRepo = new EntityRepository<RecentPackage>(_db, TimeSpan.MaxValue);            

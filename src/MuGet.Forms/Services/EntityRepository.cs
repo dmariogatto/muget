@@ -11,7 +11,7 @@ namespace MuGet.Forms.Services
     public class EntityRepository<T> : IEntityRepository<T> where T : IEntity
     {
         private readonly LiteDatabase _db;
-        private readonly LiteCollection<T> _collection;
+        private readonly ILiteCollection<T> _collection;
         private readonly TimeSpan _lifeSpan;
 
         public EntityRepository(LiteDatabase db, TimeSpan entityLifeSpan)
@@ -74,12 +74,12 @@ namespace MuGet.Forms.Services
 
         public int EmptyStale()
         {
-            return _collection.Delete((e) => e.IsStale(_lifeSpan));
+            return _collection.DeleteMany((e) => e.IsStale(_lifeSpan));
         }
 
         public int EmptyAll()
         {
-            return _collection.Delete(_ => true);
+            return _collection.DeleteMany(_ => true);
         }
 
         public bool Delete(string key)

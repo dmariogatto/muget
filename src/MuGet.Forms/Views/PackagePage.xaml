@@ -135,9 +135,7 @@
                                         <ColumnDefinition Width="48" />
                                         <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
-                                    <yummy:PancakeView
-                                        Style="{DynamicResource IconYummyStyle}"
-                                        VerticalOptions="Center">
+                                    <yummy:PancakeView Style="{DynamicResource IconYummyStyle}" VerticalOptions="Center">
                                         <ffimageloading:SvgCachedImage
                                             DownsampleToViewSize="true"
                                             HeightRequest="48"
@@ -208,15 +206,13 @@
                                         HorizontalOptions="Start"
                                         Style="{DynamicResource LabelStyle}"
                                         Text="{Binding Entry.Version}" />
-                                    <Label
-                                        FontAttributes="Italic"
-                                        FontSize="Caption"
-                                        IsVisible="{Binding Entry.PackVersion.IsPrerelease}"
-                                        Text="prerelease"
-                                        TextColor="{DynamicResource AccentColor}"
-                                        VerticalOptions="FillAndExpand"
-                                        VerticalTextAlignment="Center" />
                                 </StackLayout>
+                                <Label
+                                    FontAttributes="Italic"
+                                    FontSize="Caption"
+                                    IsVisible="{Binding Entry.PackVersion.IsPrerelease}"
+                                    Text="prerelease"
+                                    TextColor="{DynamicResource AccentColor}" />
                             </StackLayout>
                             <Button
                                 Grid.Column="2"
