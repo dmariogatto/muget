@@ -51,6 +51,8 @@ namespace MuGet.Forms.Services
             _logger = logger;
             
             _db = new LiteDatabase($"Filename={_dbPath};Upgrade=true;");
+            _db.Pragma("UTC_DATE", true);
+
             _packageSourceRepo = new EntityRepository<PackageSource>(_db, TimeSpan.FromDays(7));
             _favouriteRepo = new EntityRepository<FavouritePackage>(_db, TimeSpan.MaxValue);
             _recentRepo = new EntityRepository<RecentPackage>(_db, TimeSpan.MaxValue);            

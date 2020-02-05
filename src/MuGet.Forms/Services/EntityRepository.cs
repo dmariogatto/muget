@@ -74,7 +74,8 @@ namespace MuGet.Forms.Services
 
         public int EmptyStale()
         {
-            return _collection.DeleteMany((e) => e.IsStale(_lifeSpan));
+            var compareDate = DateTime.UtcNow.Subtract(_lifeSpan);
+            return _collection.DeleteMany((e) => e.Timestamp < compareDate);
         }
 
         public int EmptyAll()
