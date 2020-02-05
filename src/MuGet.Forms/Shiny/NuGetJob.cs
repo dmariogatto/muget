@@ -48,12 +48,17 @@ namespace MuGet.Forms
                     var catalogEntries = await _nuGetService.GetCatalogEntries(fp.PackageId, cancelToken);
                     var latestEntries = catalogEntries
                         .Where(e => (includePrerelease || !e.PackVersion.IsPrerelease) &&
-                                    e.Published > fp.Published);
+                                    e.Published > fp.Published)
+                        .OrderByDescending(e => e.Published).ToList();
 
                     if (latestEntries.Any())
                     {
-                        fp.Version = latestEntries.Last().Version;
-                        fp.Published = latestEntries.Last().Published;
+                        // Only show latest package if this a triggered from development settings
+                        if (fp.Published == DateTime.MinValue)
+                            latestEntries.RemoveRange(1, latestEntries.Count - 1);
+
+                        fp.Version = latestEntries.First().Version;
+                        fp.Published = latestEntries.First().Published;                        
 
                         _nuGetService.UpsertFavouritePackage(fp);
 
