@@ -24,10 +24,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <MtouchArch>x86_64</MtouchArch>
-    <MtouchLink>None</MtouchLink>
+    <MtouchLink>Full</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
     <LangVersion>8.0</LangVersion>
-    <MtouchExtraArgs>--linkskip=MuGet.Forms --linkskip=MuGet.Forms.iOS --linkskip=Shiny.Core --linkskip=Shiny.Notifications</MtouchExtraArgs>
+    <MtouchExtraArgs>--linkskip=MuGet.Forms --linkskip=MuGet.Forms.iOS --linkskip=Shiny.Core --linkskip=Shiny.Notifications --linkskip=LiteDB</MtouchExtraArgs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -38,7 +38,7 @@
     <MtouchLink>Full</MtouchLink>
     <MtouchArch>x86_64</MtouchArch>
     <LangVersion>8.0</LangVersion>
-    <MtouchExtraArgs>--linkskip=MuGet.Forms --linkskip=MuGet.Forms.iOS --linkskip=Shiny.Core --linkskip=Shiny.Notifications</MtouchExtraArgs>
+    <MtouchExtraArgs>--linkskip=MuGet.Forms --linkskip=MuGet.Forms.iOS --linkskip=Shiny.Core --linkskip=Shiny.Notifications --linkskip=LiteDB</MtouchExtraArgs>
     <OptimizePNGs>true</OptimizePNGs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
