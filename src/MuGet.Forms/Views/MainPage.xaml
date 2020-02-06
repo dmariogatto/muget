@@ -69,7 +69,6 @@
                         <Label
                             Margin="0,8,0,0"
                             FontAttributes="Italic"
-                            HorizontalOptions="Center"
                             HorizontalTextAlignment="Center"
                             Style="{DynamicResource LabelTitleStyle}"
                             Text="{Binding SearchText, StringFormat={local:Translate ZeroPackagesReturnedForItem}}"
