@@ -24,7 +24,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <MtouchArch>x86_64</MtouchArch>
-    <MtouchLink>Full</MtouchLink>
+    <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
     <LangVersion>8.0</LangVersion>
     <MtouchExtraArgs>--linkskip=MuGet.Forms --linkskip=MuGet.Forms.iOS --linkskip=Shiny.Core --linkskip=Shiny.Notifications --linkskip=LiteDB</MtouchExtraArgs>
