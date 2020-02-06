@@ -43,22 +43,22 @@
             </ScrollView>
 
             <ContentView
+                x:Name="SkeletonHeaderView"
                 AbsoluteLayout.LayoutBounds="0,0,1,1"
                 AbsoluteLayout.LayoutFlags="All"
-                x:Name="SkeletonHeaderView"
                 IsVisible="{Binding PackagesLoading}">
-                    <controls:NuGetCardSkeleton VerticalOptions="Start" />
-                </ContentView>
+                <controls:NuGetCardSkeleton VerticalOptions="Start" />
+            </ContentView>
 
 
             <CollectionView
                 AbsoluteLayout.LayoutBounds="0,0,1,1"
-                AbsoluteLayout.LayoutFlags="All" 
+                AbsoluteLayout.LayoutFlags="All"
+                IsVisible="{Binding PackagesLoaded}"
                 ItemsSource="{Binding Packages}"
                 RemainingItemsThreshold="{Binding RemainingItemsThreshold}"
                 RemainingItemsThresholdReachedCommand="{Binding RemainingItemsThresholdReachedCommand}"
-                Scrolled="PackagesScrolled"
-                IsVisible="{Binding PackagesLoaded}">
+                Scrolled="PackagesScrolled">
                 <CollectionView.Header>
                     <ContentView>
                         <StackLayout x:Name="SearchCollectionHeaderView" />
@@ -67,9 +67,10 @@
                 <CollectionView.EmptyView>
                     <ContentView>
                         <Label
+                            Margin="0,8,0,0"
                             FontAttributes="Italic"
                             HorizontalOptions="Center"
-                            Margin="0,8,0,0"
+                            HorizontalTextAlignment="Center"
                             Style="{DynamicResource LabelTitleStyle}"
                             Text="{Binding SearchText, StringFormat={local:Translate ZeroPackagesReturnedForItem}}"
                             VerticalOptions="Start" />
@@ -115,8 +116,8 @@
                     BackgroundColor="{DynamicResource CardBackgroundColor}"
                     HorizontalOptions="FillAndExpand"
                     Placeholder="{local:Translate Search}"
-                    TextColor="{DynamicResource PrimaryTextColor}"
-                    Text="{Binding SearchText}" />
+                    Text="{Binding SearchText}"
+                    TextColor="{DynamicResource PrimaryTextColor}" />
             </yummy:PancakeView>
         </AbsoluteLayout>
     </ContentPage.Content>
