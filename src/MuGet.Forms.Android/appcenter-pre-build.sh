@@ -4,6 +4,7 @@ manifestPath="${BUILD_REPOSITORY_LOCALPATH}/src/MuGet.Forms.Android/Properties/A
 appCsPath="${BUILD_REPOSITORY_LOCALPATH}/src/MuGet.Forms/App.xaml.cs"
 buildNumber=$APPCENTER_BUILD_ID
 buildOffset=$BUILD_ID_OFFSET
+newVersionName="$VERSION_NAME"
 
 # exit if a command fails
 set -e
@@ -28,7 +29,10 @@ versionCode=$(eval $verCodeCmd)
 versionName=$(eval $verNameCmd)
 
 newVersionCode=$((buildNumber + buildOffset))
-newVersionName="$(date -u +'%Y.%-m.%-d')"
+
+if [ -z "$newVersionName" ] ; then
+    newVersionName="$(date -u +'%Y.%-m.%-d')"
+fi
 
 echo " (i) Provided AndroidManifest.xml path: ${manifestPath}"
 

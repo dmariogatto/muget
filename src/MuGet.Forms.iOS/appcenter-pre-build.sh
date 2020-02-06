@@ -4,6 +4,7 @@ plistPath="${BUILD_REPOSITORY_LOCALPATH}/src/MuGet.Forms.iOS/Info.plist"
 appCsPath="${BUILD_REPOSITORY_LOCALPATH}/src/MuGet.Forms/App.xaml.cs"
 buildNumber=$APPCENTER_BUILD_ID
 buildOffset=$BUILD_ID_OFFSET
+buildShortVersion="$VERSION_NAME"
 
 # exit if a command fails
 set -e
@@ -22,7 +23,10 @@ sed -i "" "s/APPCENTER_ANDROID/${APPCENTER_ANDROID}/g" "${appCsPath}"
 sed -i "" "s/APPCENTER_IOS/${APPCENTER_IOS}/g" "${appCsPath}"
 
 buildVersion=$((buildNumber + buildOffset))
-buildShortVersion="$(date -u +'%Y.%-m.%-d')"
+
+if [ -z "$buildShortVersion" ] ; then
+    buildShortVersion="$(date -u +'%Y.%-m.%-d')"
+fi
 
 echo " (i) Provided Info.plist path: ${plistPath}"
 
