@@ -111,7 +111,7 @@ namespace MuGet.Forms.ViewModels
             foreach (var f in favourites)
             {
                 f.Version = string.Empty;
-                f.Published = DateTime.MinValue;
+                f.Published = DateTime.UtcNow.AddDays(-7);
                 NuGetService.UpsertFavouritePackage(f);
             }
         }

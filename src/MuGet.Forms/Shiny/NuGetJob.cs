@@ -53,7 +53,7 @@ namespace MuGet.Forms
 
                     if (latestEntries.Any())
                     {
-                        // Only show latest package if this a triggered from development settings
+                        // Only show latest package if triggered from development settings
                         if (fp.Published == DateTime.MinValue)
                             latestEntries.RemoveRange(1, latestEntries.Count - 1);
 
@@ -68,7 +68,6 @@ namespace MuGet.Forms
                             {
                                 await _notifications.Send(new Notification()
                                 {
-                                    Id = le.Id.GetHashCode(),
                                     Title = string.Format(Resources.ItemParenthesesItem, le.Id, le.Version),
                                     Message = string.Format(Resources.NotificationContentFormat, le.Authors, le.Published.ToShortDateString()),
                                     Payload = $"{le.Id},{le.Version}",
