@@ -252,7 +252,7 @@ namespace MuGet.Forms.Services
 
         public IList<FavouritePackage> GetFavouritePackages()
         {
-            return _favouriteRepo.GetAll().OrderBy(f => f.TotalDownloads).ToList();
+            return _favouriteRepo.GetAll().OrderByDescending(f => f.Published).ToList();
         }
 
         public bool UpsertFavouritePackage(FavouritePackage package)

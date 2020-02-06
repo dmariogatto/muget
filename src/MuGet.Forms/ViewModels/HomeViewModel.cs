@@ -68,7 +68,7 @@ namespace MuGet.Forms.ViewModels
                 var favResults = favouriteTasks
                     .Select(t => t.Result)
                     .Where(m => m != null)
-                    .OrderByDescending(m => m.TotalDownloads).ToList();
+                    .ToList();
 
                 if (!Enumerable.SequenceEqual(recentResults, RecentPackages))
                     RecentPackages.ReplaceRange(recentResults);
