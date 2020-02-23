@@ -28,11 +28,14 @@ namespace MuGet.Forms.ViewModels
 
         private readonly IMuGetPackageService _muGetPackageService;
 
-        public SettingsViewModel()
+        public SettingsViewModel(
+            IMuGetPackageService muGetPackageService,
+            INuGetService nuGetService,
+            ILogger logger) : base(nuGetService, logger)
         {
             Title = Resources.Settings;
 
-            _muGetPackageService = Shiny.ShinyHost.Resolve<IMuGetPackageService>();
+            _muGetPackageService = muGetPackageService;
             MuGetPackages = new ObservableRangeCollection<MuGetPackage>(_muGetPackageService.GetPackages());
 
             SettingsItemTappedCommand = new AsyncCommand<SettingItem>(SettingsItemTapped);

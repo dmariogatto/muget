@@ -24,10 +24,6 @@
     Shell.NavBarIsVisible="False"
     mc:Ignorable="d">
 
-    <views:BasePage.BindingContext>
-        <viewModels:PackageViewModel x:Name="Vm" />
-    </views:BasePage.BindingContext>
-
     <views:BasePage.Resources>
         <ResourceDictionary>
             <converters:ListToBoolConverter x:Key="listToBoolConverter" />
@@ -583,7 +579,7 @@
                                 <ViewCell>
                                     <Grid Margin="12,2,4,2">
                                         <Grid.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding EntryTappedCommand, Source={x:Reference Vm}}" CommandParameter="{Binding .}" />
+                                            <TapGestureRecognizer Command="{Binding EntryTappedCommand, Source={RelativeSource AncestorType={x:Type viewModels:PackageViewModel}}" CommandParameter="{Binding .}" />
                                         </Grid.GestureRecognizers>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto" />

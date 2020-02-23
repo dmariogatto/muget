@@ -1,5 +1,6 @@
 ﻿using MuGet.Forms.Services;
 using MuGet.Forms.ViewModels;
+using Shiny.Settings;
 using System;
 using System.Runtime.CompilerServices;
 using Xamarin.Forms;
@@ -13,10 +14,22 @@ namespace MuGet.Forms.Views
 
         public T ViewModel => BindingContext as T;
 
-        public BaseView()
-        {            
-        }       
-        
+        public BaseView() : base()
+        {
+            var vmType = typeof(T);
+
+            var vm = Shiny.ShinyHost.Container.GetService(vmType) as T;
+            var settings = Shiny.ShinyHost.Container.GetService(typeof(ISettings)) as ISettings;
+
+            if (vm == null)
+                throw new ArgumentNullException(nameof(vmType.Name));
+            if (settings == null)
+                throw new ArgumentNullException(nameof(ISettings));
+
+            settings.UnBind(vm);
+            BindingContext = vm;
+        }
+
         private void OnAppearing(object sender, EventArgs e)
         {
             ViewModel.OnAppearing();

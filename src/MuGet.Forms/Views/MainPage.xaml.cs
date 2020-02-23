@@ -11,10 +11,10 @@ namespace MuGet.Forms.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : BasePage<MainViewModel>
     {
-        public MainPage()
+        public MainPage() : base()
         {
             InitializeComponent();
-
+            
             Xamarin.Forms.NavigationPage.SetHasNavigationBar(this, false);
         }
         

@@ -1,5 +1,6 @@
 ﻿using MuGet.Forms.Controls;
 using MuGet.Forms.Models;
+using MuGet.Forms.Services;
 using MvvmHelpers;
 using MvvmHelpers.Commands;
 using System;
@@ -16,7 +17,9 @@ namespace MuGet.Forms.ViewModels
     {
         private CancellationTokenSource _cancellation;
 
-        public PackageViewModel()
+        public PackageViewModel(
+            INuGetService nuGetService,
+            ILogger logger) : base(nuGetService, logger)
         {
             CurrentState = State.Loading;
 

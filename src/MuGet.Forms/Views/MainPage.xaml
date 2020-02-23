@@ -20,9 +20,7 @@
     BackgroundColor="{DynamicResource PageBackgroundColor}"
     Shell.NavBarIsVisible="False"
     mc:Ignorable="d">
-    <ContentPage.BindingContext>
-        <viewModels:MainViewModel x:Name="Vm" />
-    </ContentPage.BindingContext>
+    
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:InverseBoolConverter x:Key="inverseBoolConverter" />
@@ -79,7 +77,7 @@
                         <controls:NuGetCard BindingContext="{Binding}">
                             <controls:NuGetCard.GestureRecognizers>
                                 <TapGestureRecognizer
-                                    Command="{Binding PackageTappedCommand, Source={x:Reference Vm}}"
+                                    Command="{Binding PackageTappedCommand, Source={RelativeSource AncestorType={x:Type viewModels:HomeViewModel}}}"
                                     CommandParameter="{Binding}"
                                     Tapped="PackageTapped" />
                             </controls:NuGetCard.GestureRecognizers>
@@ -87,12 +85,12 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
                 <CollectionView.Footer>
-                    <ContentView IsVisible="{Binding IsBusy, Source={x:Reference Vm}}">
+                    <ContentView IsVisible="{Binding IsBusy, Source={RelativeSource AncestorType={x:Type viewModels:HomeViewModel}}}">
                         <ActivityIndicator
                             Margin="4"
                             HeightRequest="24"
                             HorizontalOptions="Center"
-                            IsRunning="{Binding IsBusy, Source={x:Reference Vm}}"
+                            IsRunning="{Binding IsBusy, Source={RelativeSource AncestorType={x:Type viewModels:HomeViewModel}}}"
                             WidthRequest="24"
                             Color="{DynamicResource AccentColor}" />
                     </ContentView>

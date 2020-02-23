@@ -12,10 +12,10 @@ namespace MuGet.Forms.ViewModels
 
         private NavigationPage _navPage => Application.Current.MainPage as NavigationPage;
 
-        public BaseViewModel() : base()
+        public BaseViewModel(INuGetService nuGetService, ILogger logger) : base()
         {
-            NuGetService = Shiny.ShinyHost.Resolve<INuGetService>();
-            Logger = Shiny.ShinyHost.Resolve<ILogger>();
+            NuGetService = nuGetService;
+            Logger = logger;
         }
 
         protected Task DisplayAlert(string title, string message, string cancel) =>

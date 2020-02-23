@@ -10,7 +10,7 @@ namespace MuGet.Forms.Views
     {
         private SettingsPage _settingsPage;
 
-        public HomeView()
+        public HomeView() : base()
         {
             InitializeComponent();
         }

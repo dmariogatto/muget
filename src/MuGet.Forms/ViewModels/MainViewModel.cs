@@ -1,5 +1,6 @@
 ﻿using MuGet.Forms.Localisation;
 using MuGet.Forms.Models;
+using MuGet.Forms.Services;
 using MvvmHelpers;
 using MvvmHelpers.Commands;
 using System;
@@ -17,7 +18,9 @@ namespace MuGet.Forms.ViewModels
         private readonly SemaphoreSlim _searchSemaphore = new SemaphoreSlim(1, 1);
         private CancellationTokenSource _searchCancellation;
 
-        public MainViewModel()
+        public MainViewModel(
+            INuGetService nuGetService,
+            ILogger logger) : base(nuGetService, logger)
         {
             Title = Resources.Search;
 

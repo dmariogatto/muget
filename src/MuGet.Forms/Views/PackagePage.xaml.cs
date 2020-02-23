@@ -12,7 +12,7 @@ namespace MuGet.Forms.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PackagePage : BasePage<PackageViewModel>
     {
-        public PackagePage()
+        public PackagePage() : base()
         {
             InitializeComponent();
 

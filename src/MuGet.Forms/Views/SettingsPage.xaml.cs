@@ -7,7 +7,7 @@ namespace MuGet.Forms.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SettingsPage : BasePage<SettingsViewModel>
     {
-        public SettingsPage()
+        public SettingsPage() : base()
         {
             InitializeComponent();
 

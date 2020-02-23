@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using MuGet.Forms.Services;
+using MuGet.Forms.ViewModels;
 using Shiny;
 using Shiny.Jobs;
 
@@ -7,10 +8,8 @@ namespace MuGet.Forms
 {
     public class ShinyStartup : Shiny.ShinyStartup
     {
-        public readonly static JobInfo NuGetJobInfo = new JobInfo
+        public readonly static JobInfo NuGetJobInfo = new JobInfo(typeof(NuGetJob), nameof(NuGetJob))
         {
-            Identifier = nameof(NuGetJob),
-            Type = typeof(NuGetJob),
             BatteryNotLow = true,
             DeviceCharging = false,
             RequiredInternetAccess = InternetAccess.Any,
@@ -26,6 +25,11 @@ namespace MuGet.Forms
             services.AddSingleton<ICacheProvider, InMemoryCache>();
             services.AddSingleton<INuGetService, NuGetService>();
             services.AddSingleton<IMuGetPackageService, MuGetPackageService>();
+
+            services.AddSingleton<MainViewModel>();
+            services.AddSingleton<HomeViewModel>();
+            services.AddSingleton<PackageViewModel>();
+            services.AddSingleton<SettingsViewModel>();
         }
 
     }

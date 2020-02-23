@@ -18,10 +18,6 @@
     BackgroundColor="{DynamicResource PageBackgroundColor}"
     mc:Ignorable="d">
 
-    <ContentPage.BindingContext>
-        <viewModels:SettingsViewModel x:Name="Vm" />
-    </ContentPage.BindingContext>
-
     <ContentPage.Resources>
         <ResourceDictionary />
     </ContentPage.Resources>
@@ -62,7 +58,7 @@
                         <sv:ButtonCell
                             Title="{Binding PackageId}"
                             Height="48"
-                            Command="{Binding PackageTappedCommand, Source={x:Reference Vm}}"
+                            Command="{Binding PackageTappedCommand, Source={RelativeSource AncestorType={x:Type viewModels:SettingsViewModel}}}"
                             CommandParameter="{Binding}"
                             IconSize="24"
                             IconSource="{Binding Metadata.IconUrl}"

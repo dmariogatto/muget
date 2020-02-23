@@ -16,8 +16,10 @@ namespace MuGet.Forms
             _logger = logger;
         }
 
-        public async Task OnEntry(Notification notification)
+        public async Task OnEntry(NotificationResponse response)
         {
+            var notification = response.Notification;
+
             if (!string.IsNullOrEmpty(notification?.Payload))
             {
                 try

@@ -17,9 +17,7 @@
     x:TypeArguments="viewModels:HomeViewModel"
     BackgroundColor="{DynamicResource PageBackgroundColor}"
     mc:Ignorable="d">
-    <views:BaseView.BindingContext>
-        <viewModels:HomeViewModel x:Name="Vm" />
-    </views:BaseView.BindingContext>
+    
     <views:BaseView.Resources>
         <ResourceDictionary>
             <converters:IntToBoolConverter x:Key="intToBoolConverter" />

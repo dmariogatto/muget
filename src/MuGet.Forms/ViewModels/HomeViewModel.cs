@@ -1,5 +1,6 @@
 ﻿using MuGet.Forms.Localisation;
 using MuGet.Forms.Models;
+using MuGet.Forms.Services;
 using MvvmHelpers;
 using MvvmHelpers.Commands;
 using System;
@@ -14,7 +15,9 @@ namespace MuGet.Forms.ViewModels
     {
         private bool _isFirstLoad = true;
 
-        public HomeViewModel()
+        public HomeViewModel(
+            INuGetService nuGetService,
+            ILogger logger) : base(nuGetService, logger)
         {
             Title = Resources.Home;
 
