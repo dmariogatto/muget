@@ -267,14 +267,7 @@
                                 CommandParameter="{x:Static controls:LinkType.NuGet}"
                                 ContentLayout="Left,5"
                                 HorizontalOptions="Center"
-                                Text="nuget.org">
-                                <Button.ImageSource>
-                                    <FontImageSource
-                                        FontFamily="{StaticResource MaterialFontFamily}"
-                                        Glyph="{x:Static helpers:MaterialFont.PackageVariantClosed}"
-                                        Color="{DynamicResource PrimaryTextColor}" />
-                                </Button.ImageSource>
-                            </Button>
+                                Text="NuGet.org" />
                         </StackLayout>
                     </state:StateView>
                 </state:StateLayout.StateViews>

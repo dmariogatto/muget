@@ -42,10 +42,7 @@ namespace MuGet.Forms.ViewModels
                     await Launcher.TryOpenAsync($"muget://package/{p.PackageId}/");
             });
             ResetNotificationsCommand = new Command(ResetNotifications);
-            RunJobsCommand = new AsyncCommand(async () =>
-            {
-                var results = await Shiny.ShinyHost.Resolve<Shiny.Jobs.IJobManager>().RunAll();
-            });
+            RunJobsCommand = new AsyncCommand(RunJobs);
         }
 
         public bool IncludePrerelease
@@ -113,6 +110,18 @@ namespace MuGet.Forms.ViewModels
                 f.Version = string.Empty;
                 f.Published = DateTime.UtcNow;
                 NuGetService.UpsertFavouritePackage(f);
+            }
+        }
+
+        private async Task RunJobs()
+        {
+            try
+            {
+                var results = await Shiny.ShinyHost.Resolve<Shiny.Jobs.IJobManager>().RunAll();
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex);
             }
         }
     }
