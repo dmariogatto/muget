@@ -579,7 +579,7 @@
                                 <ViewCell>
                                     <Grid Margin="12,2,4,2">
                                         <Grid.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding EntryTappedCommand, Source={RelativeSource AncestorType={x:Type viewModels:PackageViewModel}}" CommandParameter="{Binding .}" />
+                                            <TapGestureRecognizer Command="{Binding EntryTappedCommand, Source={RelativeSource AncestorType={x:Type viewModels:PackageViewModel}}}" CommandParameter="{Binding .}" />
                                         </Grid.GestureRecognizers>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto" />
