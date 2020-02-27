@@ -330,6 +330,11 @@ namespace MuGet.Forms.Services
         }
 
         #region Http Methods
+        private readonly static JsonSerializer _jsonSerializer = JsonSerializer.Create(new JsonSerializerSettings()
+        {
+            DateTimeZoneHandling = DateTimeZoneHandling.Utc
+        });
+
         private static async Task<T> Get<T>(string url, CancellationToken cancellationToken)
         {
             var result = default(T);
@@ -370,9 +375,8 @@ namespace MuGet.Forms.Services
 
             using (var sr = new StreamReader(stream))
             using (var jtr = new JsonTextReader(sr))
-            {
-                var js = new JsonSerializer();
-                var searchResult = js.Deserialize<T>(jtr);
+            {                
+                var searchResult = _jsonSerializer.Deserialize<T>(jtr);
                 return searchResult;
             }
         }
