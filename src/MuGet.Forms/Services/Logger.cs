@@ -101,7 +101,10 @@ namespace MuGet.Forms.Services
 
         private void WriteToLog(Exception ex, string msg, IDictionary<string, string> data)
         {
-            if (ex != null && DeviceInfo.DeviceType != DeviceType.Virtual)
+            if (ex != null &&
+                ex.GetType() != typeof(TaskCanceledException) &&
+                ex.GetType() != typeof(OperationCanceledException) &&
+                DeviceInfo.DeviceType != DeviceType.Virtual)
             {
                 Crashes.TrackError(ex, data);
             }
