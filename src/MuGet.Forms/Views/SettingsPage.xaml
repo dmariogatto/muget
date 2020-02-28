@@ -25,29 +25,28 @@
     <ContentPage.Content>
         <sv:SettingsView x:Name="SettingsTable" HasUnevenRows="True">
             <sv:Section Title="{local:Translate PackageSettings}">
-                <sv:ButtonCell
+                <sv:CommandCell
                     x:Name="NuGetCell"
                     Title="NuGet.org"
                     Command="{Binding SettingsItemTappedCommand}"
                     CommandParameter="{x:Static viewModels:SettingItem.NuGet}"
                     Description="© Microsoft"
-                    IconSource="nuget.png"
-                    TitleAlignment="Start" />
+                    IconSource="nuget.png" />
                 <sv:SwitchCell Title="{local:Translate IncludePrerelease}" On="{Binding IncludePrerelease}" />
             </sv:Section>
             <sv:Section Title="{local:Translate Notifications}">
                 <sv:SwitchCell Title="{local:Translate NotificationsDescription}" On="{Binding NewReleaseNotifications}" />
             </sv:Section>
             <sv:Section Title="MuGet">
-                <sv:ButtonCell
+                <sv:CommandCell
                     Title="{local:Translate RateApp}"
                     Command="{Binding SettingsItemTappedCommand}"
                     CommandParameter="{x:Static viewModels:SettingItem.RateApp}" />
-                <sv:ButtonCell
+                <sv:CommandCell
                     Title="{local:Translate SendFeedback}"
                     Command="{Binding SettingsItemTappedCommand}"
                     CommandParameter="{x:Static viewModels:SettingItem.SendFeedback}" />
-                <sv:ButtonCell
+                <sv:CommandCell
                     Title="{local:Translate ViewOnGitHub}"
                     Command="{Binding SettingsItemTappedCommand}"
                     CommandParameter="{x:Static viewModels:SettingItem.ViewGitHub}" />
@@ -55,25 +54,24 @@
             <sv:Section Title="{local:Translate TheNuGets}" ItemsSource="{Binding MuGetPackages}">
                 <sv:Section.ItemTemplate>
                     <DataTemplate x:DataType="models:MuGetPackage">
-                        <sv:ButtonCell
+                        <sv:CommandCell
                             Title="{Binding PackageId}"
                             Height="48"
                             Command="{Binding PackageTappedCommand, Source={RelativeSource AncestorType={x:Type viewModels:SettingsViewModel}}}"
                             CommandParameter="{Binding}"
                             IconSize="24"
                             IconSource="{Binding Metadata.IconUrl}"
-                            TitleAlignment="Start"
                             TitleFontSize="14" />
                     </DataTemplate>
                 </sv:Section.ItemTemplate>
             </sv:Section>
             <sv:Section Title="{local:Translate Development}">
-                <sv:CommandCell
+                <sv:ButtonCell
                     x:Name="ResetNotificationsCell"
                     Title="{local:Translate ResetNotifications}"
                     Command="{Binding ResetNotificationsCommand}"
                     Description="{local:Translate ResetNotificationsDescription}" />
-                <sv:CommandCell
+                <sv:ButtonCell
                     x:Name="RunAllJobsCell"
                     Title="{local:Translate RunAllJobs}"
                     Command="{Binding RunJobsCommand}"

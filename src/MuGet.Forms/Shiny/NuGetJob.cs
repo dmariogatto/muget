@@ -68,6 +68,7 @@ namespace MuGet.Forms
                             {
                                 await _notifications.Send(new Notification()
                                 {
+                                    Id = le.GetHashCode(),
                                     Title = string.Format(Resources.ItemParenthesesItem, le.Id, le.Version),
                                     Message = string.Format(Resources.NotificationContentFormat, le.Authors, le.Published.ToShortDateString()),
                                     Payload = $"{le.Id},{le.Version}",
