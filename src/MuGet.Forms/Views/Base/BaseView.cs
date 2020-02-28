@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace MuGet.Forms.Views
 {
-    public abstract class BaseView<T> : ContentView where T : BaseViewModel
+    public class BaseView<T> : ContentView where T : BaseViewModel
     {
         private ContentPage _parentPage;
         private bool _registered;

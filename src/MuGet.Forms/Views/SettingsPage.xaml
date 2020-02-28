@@ -38,7 +38,7 @@
             </sv:Section>
             <sv:Section Title="MuGet">
                 <sv:CommandCell
-                    Title="{local:Translate RateApp}"
+                    Title="{local:Translate PleaseRateMuGet}"
                     Command="{Binding SettingsItemTappedCommand}"
                     CommandParameter="{x:Static viewModels:SettingItem.RateApp}" />
                 <sv:CommandCell

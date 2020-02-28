@@ -61,6 +61,15 @@ namespace MuGet.Forms.Localisation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cannot find package details 😱.
         /// </summary>
         public static string CannotFindPackage {
@@ -322,6 +331,15 @@ namespace MuGet.Forms.Localisation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please Rate MuGet.
+        /// </summary>
+        public static string PleaseRateMuGet {
+            get {
+                return ResourceManager.GetString("PleaseRateMuGet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Project.
         /// </summary>
         public static string Project {
@@ -336,15 +354,6 @@ namespace MuGet.Forms.Localisation {
         public static string Published {
             get {
                 return ResourceManager.GetString("Published", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Rate App.
-        /// </summary>
-        public static string RateApp {
-            get {
-                return ResourceManager.GetString("RateApp", resourceCulture);
             }
         }
         

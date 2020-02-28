@@ -105,6 +105,7 @@
                 <Setter Property="CellTitleColor" Value="{DynamicResource PrimaryTextColor}" />
                 <Setter Property="CellValueTextColor" Value="{DynamicResource SecondaryTextColor}" />
                 <Setter Property="CellDescriptionColor" Value="{DynamicResource AccentColor}" />
+                <Setter Property="CellDescriptionFontSize" Value="{DynamicResource CellDescriptionFontSize}" />
                 <Setter Property="CellAccentColor" Value="{DynamicResource AccentColor}" />
                 <Setter Property="SelectedColor" Value="{DynamicResource PageBackgroundColor}" />
                 <Setter Property="HeaderTextColor" Value="{DynamicResource PrimaryTextColor}" />

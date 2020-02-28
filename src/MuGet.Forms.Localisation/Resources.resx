@@ -237,8 +237,8 @@
   <data name="NotificationContentFormat" xml:space="preserve">
     <value>by {0}, published {1}</value>
   </data>
-  <data name="RateApp" xml:space="preserve">
-    <value>Rate App</value>
+  <data name="PleaseRateMuGet" xml:space="preserve">
+    <value>Please Rate MuGet</value>
   </data>
   <data name="ResetNotifications" xml:space="preserve">
     <value>Reset Notifications</value>
@@ -272,5 +272,8 @@
   </data>
   <data name="ZeroPackagesReturnedForItem" xml:space="preserve">
     <value>0 packages returned for {0}</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
   </data>
 </root>

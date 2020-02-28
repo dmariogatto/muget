@@ -5,6 +5,7 @@ using MuGet.Forms.Services;
 using MuGet.Forms.Views;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Device = Xamarin.Forms.Device;
 
 namespace MuGet.Forms
 {

@@ -5,6 +5,8 @@ using MvvmHelpers;
 using MvvmHelpers.Commands;
 using Plugin.StoreReview;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 
@@ -94,7 +96,7 @@ namespace MuGet.Forms.ViewModels
                     CrossStoreReview.Current.OpenStoreReviewPage(id);
                     break;
                 case SettingItem.SendFeedback:
-                    await Email.ComposeAsync("MuGet Feedback", string.Empty, FeedbackEmail);
+                    await SendFeedback();
                     break;
                 case SettingItem.ViewGitHub:
                     await Browser.OpenAsync(GitHubRepo);
@@ -102,6 +104,43 @@ namespace MuGet.Forms.ViewModels
                 case SettingItem.NuGet:
                     await Browser.OpenAsync(NuGetUrl);
                     break;
+            }
+        }
+
+        private async Task SendFeedback()
+        {
+            var message = new EmailMessage
+            {
+                Subject = string.Format("MuGet Feedback ({0})", DeviceInfo.Platform),
+                Body = string.Empty,
+                To = new List<string>(1) { FeedbackEmail },
+            };
+
+            const string gmailScheme = "googlegmail://";
+            const string gmail = "Gmail";
+            const string appleMail = "Mail";
+
+            if (DeviceInfo.Platform == DevicePlatform.iOS &&
+                await Launcher.CanOpenAsync(gmailScheme))
+            {
+                var option = await DisplayAction(Resources.SendFeedback, Resources.Cancel, null, gmail, appleMail);
+
+                if (!string.IsNullOrEmpty(option))
+                {
+                    switch (option)
+                    {
+                        case gmail:
+                            await Launcher.TryOpenAsync($"{gmailScheme}co?subject={message.Subject}&body={message.Body}&to={message.To.First()}");
+                            break;
+                        default:
+                            await Email.ComposeAsync(message);
+                            break;
+                    }
+                }
+            }
+            else
+            {
+                await Email.ComposeAsync(message);
             }
         }
 
