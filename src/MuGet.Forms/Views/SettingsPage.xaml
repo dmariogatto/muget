@@ -38,13 +38,14 @@
             </sv:Section>
             <sv:Section Title="MuGet">
                 <sv:CommandCell
+                    Title="{local:Translate SendFeedback}"
+                    Command="{Binding SettingsItemTappedCommand}"
+                    CommandParameter="{x:Static viewModels:SettingItem.SendFeedback}"
+                    Description="{local:Translate FeedbackDescription}" />
+                <sv:CommandCell
                     Title="{local:Translate PleaseRateMuGet}"
                     Command="{Binding SettingsItemTappedCommand}"
                     CommandParameter="{x:Static viewModels:SettingItem.RateApp}" />
-                <sv:CommandCell
-                    Title="{local:Translate SendFeedback}"
-                    Command="{Binding SettingsItemTappedCommand}"
-                    CommandParameter="{x:Static viewModels:SettingItem.SendFeedback}" />
                 <sv:CommandCell
                     Title="{local:Translate ViewOnGitHub}"
                     Command="{Binding SettingsItemTappedCommand}"

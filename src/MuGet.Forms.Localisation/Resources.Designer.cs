@@ -178,6 +178,15 @@ namespace MuGet.Forms.Localisation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ideas, bugs &amp; grievances.
+        /// </summary>
+        public static string FeedbackDescription {
+            get {
+                return ResourceManager.GetString("FeedbackDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
         public static string Home {

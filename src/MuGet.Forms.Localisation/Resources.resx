@@ -276,4 +276,7 @@
   <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
+  <data name="FeedbackDescription" xml:space="preserve">
+    <value>Ideas, bugs &amp; grievances</value>
+  </data>
 </root>
