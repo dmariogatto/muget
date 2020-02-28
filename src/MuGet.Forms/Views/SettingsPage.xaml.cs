@@ -11,11 +11,6 @@ namespace MuGet.Forms.Views
         {
             InitializeComponent();
 
-            NuGetCell.DescriptionFontSize =
-                ResetNotificationsCell.DescriptionFontSize =
-                    RunAllJobsCell.DescriptionFontSize =
-                        Device.GetNamedSize(NamedSize.Caption, typeof(Label));
-
             ResetNotificationsCell.Description = Localisation.Resources.ResetNotificationsDescription;
             RunAllJobsCell.Description = Localisation.Resources.RunAllJobsDescription;
         }

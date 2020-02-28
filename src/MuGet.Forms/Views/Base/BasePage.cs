@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace MuGet.Forms.Views
 {
-    public abstract class BasePage<T> : ContentPage where T : BaseViewModel
+    public class BasePage<T> : ContentPage where T : BaseViewModel
     {
         public T ViewModel => BindingContext as T;
 

@@ -16,6 +16,8 @@ namespace MuGet.Forms
 
             VersionTracking.Track();
 
+            Resources.Add("CellDescriptionFontSize", Device.GetNamedSize(NamedSize.Caption, typeof(Label)));
+
             var localise = DependencyService.Get<ILocalise>();
             var culture = localise.GetCurrentCultureInfo();
             localise.SetLocale(culture);            
