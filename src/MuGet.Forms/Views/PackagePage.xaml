@@ -92,7 +92,7 @@
                             IsVisible="False"
                             Style="{DynamicResource ButtonIconStyle}"
                             Text="{x:Static helpers:MaterialFont.Close}"
-                            TextColor="{StaticResource LinkColor}" />
+                            TextColor="{DynamicResource LinkColor}" />
                     </Grid>
                     <Grid
                         x:Name="PackageHeader"
@@ -517,7 +517,7 @@
                                             IsVisible="{Binding Id, Converter={StaticResource stringToBoolConverter}}"
                                             Style="{DynamicResource LabelStyle}"
                                             Text="{Binding Id}"
-                                            TextColor="{StaticResource LinkColor}" />
+                                            TextColor="{DynamicResource LinkColor}" />
 
                                         <Label
                                             Grid.Row="1"
@@ -595,7 +595,7 @@
                                             FontSize="Medium"
                                             Style="{DynamicResource LabelStyle}"
                                             Text="{Binding Version}"
-                                            TextColor="{StaticResource LinkColor}" />
+                                            TextColor="{DynamicResource LinkColor}" />
 
                                         <StackLayout
                                             Grid.Row="1"

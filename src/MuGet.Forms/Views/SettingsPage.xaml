@@ -70,12 +70,12 @@
                     x:Name="ResetNotificationsCell"
                     Title="{local:Translate ResetNotifications}"
                     Command="{Binding ResetNotificationsCommand}"
-                    Description="{local:Translate ResetNotificationsDescription}" />
+                    TitleAlignment="Start" />
                 <sv:ButtonCell
                     x:Name="RunAllJobsCell"
                     Title="{local:Translate RunAllJobs}"
                     Command="{Binding RunJobsCommand}"
-                    Description="{local:Translate RunAllJobsDescription}" />
+                    TitleAlignment="Start" />
             </sv:Section>
         </sv:SettingsView>
     </ContentPage.Content>

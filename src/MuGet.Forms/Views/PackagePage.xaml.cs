@@ -16,13 +16,7 @@ namespace MuGet.Forms.Views
         {
             InitializeComponent();
 
-            Xamarin.Forms.NavigationPage.SetHasNavigationBar(this, false);
-
-            if (Device.RuntimePlatform == Device.Android)
-            {
-                SegPageControl.SelectedTextColor = (Color)Application.Current.Resources["ContrastAntiColor"];
-                SegPageControl.TintColor = (Color)Application.Current.Resources["ContrastColor"];
-            }            
+            Xamarin.Forms.NavigationPage.SetHasNavigationBar(this, false);                     
         }        
 
         public string PackageId
@@ -46,6 +40,12 @@ namespace MuGet.Forms.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
+
+            if (Device.RuntimePlatform == Device.Android)
+            {
+                SegPageControl.SelectedTextColor = (Color)Application.Current.Resources["ContrastAntiColor"];
+                SegPageControl.TintColor = (Color)Application.Current.Resources["ContrastColor"];
+            }
 
             if (Navigation.NavigationStack.LastOrDefault() == this &&
                 Navigation.NavigationStack.Count > 1 &&
