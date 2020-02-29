@@ -77,7 +77,7 @@
                         <controls:NuGetCard BindingContext="{Binding}">
                             <controls:NuGetCard.GestureRecognizers>
                                 <TapGestureRecognizer
-                                    Command="{Binding PackageTappedCommand, Source={RelativeSource AncestorType={x:Type viewModels:HomeViewModel}}}"
+                                    Command="{Binding PackageTappedCommand, Source={RelativeSource AncestorType={x:Type viewModels:MainViewModel}}}"
                                     CommandParameter="{Binding}"
                                     Tapped="PackageTapped" />
                             </controls:NuGetCard.GestureRecognizers>
@@ -85,12 +85,12 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
                 <CollectionView.Footer>
-                    <ContentView IsVisible="{Binding IsBusy, Source={RelativeSource AncestorType={x:Type viewModels:HomeViewModel}}}">
+                    <ContentView IsVisible="{Binding IsBusy, Source={RelativeSource AncestorType={x:Type viewModels:MainViewModel}}}">
                         <ActivityIndicator
                             Margin="4"
                             HeightRequest="24"
                             HorizontalOptions="Center"
-                            IsRunning="{Binding IsBusy, Source={RelativeSource AncestorType={x:Type viewModels:HomeViewModel}}}"
+                            IsRunning="{Binding IsBusy, Source={RelativeSource AncestorType={x:Type viewModels:MainViewModel}}}"
                             WidthRequest="24"
                             Color="{DynamicResource AccentColor}" />
                     </ContentView>

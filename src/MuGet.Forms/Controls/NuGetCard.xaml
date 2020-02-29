@@ -16,7 +16,12 @@
         <yummy:PancakeView Margin="6,4,6,4" Style="{DynamicResource CardYummyStyle}">
             <StackLayout>
                 <ScrollView Orientation="Horizontal">
-                    <Label Style="{DynamicResource LabelTitleStyle}" Text="{Binding Id}" />
+                    <ContentView Padding="0,3,0,4">
+                        <Label
+                            FontSize="Medium"
+                            Style="{DynamicResource LabelTitleStyle}"
+                            Text="{Binding Id}" />
+                    </ContentView>
                 </ScrollView>
 
                 <Grid>
