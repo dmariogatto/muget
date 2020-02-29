@@ -143,12 +143,14 @@
                                         Grid.Column="1"
                                         HorizontalOptions="FillAndExpand"
                                         Spacing="0"
-                                        VerticalOptions="Center">
+                                        VerticalOptions="CenterAndExpand">
                                         <ScrollView Orientation="Horizontal" VerticalOptions="FillAndExpand">
-                                            <Label
-                                                FontAttributes="Bold"
-                                                Style="{DynamicResource LabelTitleStyle}"
-                                                Text="{Binding PackageId}" />
+                                            <ContentView Padding="0,3,0,4">
+                                                <Label
+                                                    FontAttributes="Bold"
+                                                    Style="{DynamicResource LabelTitleStyle}"
+                                                    Text="{Binding PackageId}" />
+                                            </ContentView>
                                         </ScrollView>
                                         <Label
                                             FontSize="Caption"
