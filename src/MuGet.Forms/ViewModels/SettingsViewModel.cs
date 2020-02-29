@@ -132,8 +132,10 @@ namespace MuGet.Forms.ViewModels
                         case gmail:
                             await Launcher.TryOpenAsync($"{gmailScheme}co?subject={message.Subject}&body={message.Body}&to={message.To.First()}");
                             break;
-                        default:
+                        case appleMail:
                             await Email.ComposeAsync(message);
+                            break;
+                        default:
                             break;
                     }
                 }
