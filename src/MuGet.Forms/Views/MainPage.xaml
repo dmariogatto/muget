@@ -20,7 +20,7 @@
     BackgroundColor="{DynamicResource PageBackgroundColor}"
     Shell.NavBarIsVisible="False"
     mc:Ignorable="d">
-    
+
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:InverseBoolConverter x:Key="inverseBoolConverter" />

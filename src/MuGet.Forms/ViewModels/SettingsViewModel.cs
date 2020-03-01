@@ -82,6 +82,9 @@ namespace MuGet.Forms.ViewModels
 
         public ObservableRangeCollection<MuGetPackage> MuGetPackages { get; private set; }
 
+        public string Version => VersionTracking.CurrentVersion;
+        public string Build => VersionTracking.CurrentBuild;
+
         public AsyncCommand<SettingItem> SettingsItemTappedCommand { get; private set; }
         public AsyncCommand<MuGetPackage> PackageTappedCommand { get; private set; }
         public Command ResetNotificationsCommand { get; private set; }

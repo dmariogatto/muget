@@ -279,4 +279,7 @@
   <data name="SendFeedbackDescription" xml:space="preserve">
     <value>Ideas, grievances, or just say hi</value>
   </data>
+  <data name="Build" xml:space="preserve">
+    <value>Build</value>
+  </data>
 </root>
