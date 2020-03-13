@@ -1,8 +1,10 @@
 ﻿using MuGet.Forms.Localisation;
+using MuGet.Forms.Models;
 using MuGet.Forms.Services;
 using Shiny.Jobs;
 using Shiny.Notifications;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -71,7 +73,11 @@ namespace MuGet.Forms
                                     Id = le.GetHashCode(),
                                     Title = string.Format(Resources.ItemParenthesesItem, le.Id, le.Version),
                                     Message = string.Format(Resources.NotificationContentFormat, le.Authors, le.Published.ToShortDateString()),
-                                    Payload = $"{le.Id},{le.Version}",
+                                    Payload = new Dictionary<string, string>()
+                                    {
+                                        { nameof(CatalogEntry.Id) , le.Id },
+                                        { nameof(CatalogEntry.Version) , le.Version }
+                                    }
                                 });
                             }
                         }

@@ -19,7 +19,7 @@ namespace MuGet.Forms
         public override void ConfigureServices(IServiceCollection services)
         {
             // register your shiny services here
-            services.UseNotifications<NotificationDelegate>();
+            services.UseNotifications<NotificationDelegate>(false);
 
             services.AddSingleton<ILogger, Logger>();
             services.AddSingleton<ICacheProvider, InMemoryCache>();

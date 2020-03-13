@@ -1,7 +1,9 @@
-﻿using MuGet.Forms.Services;
+﻿using MuGet.Forms.Models;
+using MuGet.Forms.Services;
 using MuGet.Forms.Views;
 using Shiny.Notifications;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -19,24 +21,23 @@ namespace MuGet.Forms
         public async Task OnEntry(NotificationResponse response)
         {
             var notification = response.Notification;
+            var payload = notification?.Payload;
 
-            if (!string.IsNullOrEmpty(notification?.Payload))
+            if (payload?.Any() == true &&
+                payload.ContainsKey(nameof(CatalogEntry.Id)) &&
+                payload.ContainsKey(nameof(CatalogEntry.Version)) &&
+                Application.Current.MainPage is NavigationPage navPage)
             {
                 try
                 {
-                    var payload = notification.Payload.Split(',');
-                    if (payload.Length == 2 &&
-                        Application.Current.MainPage is NavigationPage navPage)
-                    {
-                        var packageId = payload[0];
-                        var version = payload[1];
+                    var packageId = payload[nameof(CatalogEntry.Id)];
+                    var version = payload[nameof(CatalogEntry.Version)];
 
-                        var packagePage = new PackagePage();
-                        packagePage.PackageId = packageId;
-                        packagePage.Version = version;
+                    var packagePage = new PackagePage();
+                    packagePage.PackageId = packageId;
+                    packagePage.Version = version;
 
-                        await navPage.PushAsync(packagePage);
-                    }
+                    await navPage.PushAsync(packagePage);
                 }
                 catch (Exception ex)
                 {
