@@ -1,9 +1,8 @@
-﻿using System;
-using System.Linq;
-using System.Net;
-using Foundation;
+﻿using Foundation;
 using MuGet.Forms.Views;
 using Shiny;
+using System;
+using System.Linq;
 using UIKit;
 using UserNotifications;
 using Xamarin.Forms;
