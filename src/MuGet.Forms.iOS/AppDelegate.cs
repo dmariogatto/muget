@@ -3,6 +3,7 @@ using System.Linq;
 using System.Net;
 using Foundation;
 using MuGet.Forms.Views;
+using Shiny;
 using UIKit;
 using UserNotifications;
 using Xamarin.Forms;
@@ -30,7 +31,7 @@ namespace MuGet.Forms.iOS
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(60 * 60 * 3); // 3 hours
 #endif
 
-            Shiny.iOSShinyHost.Init(new ShinyStartup());
+            this.ShinyFinishedLaunching(new ShinyStartup());
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             AiForms.Renderers.iOS.SettingsViewInit.Init();
 
@@ -58,7 +59,7 @@ namespace MuGet.Forms.iOS
 
         public override void PerformFetch(UIApplication application, Action<UIBackgroundFetchResult> completionHandler)
         {
-            Shiny.Jobs.JobManager.OnBackgroundFetch(completionHandler);       
+            this.ShinyPerformFetch(completionHandler);
         }
 
         public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)

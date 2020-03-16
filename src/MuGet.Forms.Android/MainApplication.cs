@@ -21,7 +21,6 @@ namespace MuGet.Forms.Android
         {
             base.OnCreate();
             CrossCurrentActivity.Current.Init(this);
-            //Shiny.AndroidShinyHost.Init(this, new ShinyStartup());
         }
     }
 }

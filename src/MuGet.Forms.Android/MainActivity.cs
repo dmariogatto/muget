@@ -5,6 +5,7 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using MuGet.Forms.Views;
+using Shiny;
 using Xamarin.Forms;
 
 namespace MuGet.Forms.Android
@@ -39,6 +40,8 @@ namespace MuGet.Forms.Android
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             
             LoadApplication(new App());
+            
+            this.ShinyOnCreate();
 
             ProcessIntent(Intent);
         }
@@ -51,8 +54,8 @@ namespace MuGet.Forms.Android
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
         {
-            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);            
-            Shiny.AndroidShinyHost.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            this.ShinyRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
