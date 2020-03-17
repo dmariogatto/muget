@@ -242,7 +242,7 @@ namespace MuGet.Forms.ViewModels
                         {
                             var detailsUrl = source.PackageDetailsUriTemplate
                                 .Replace("{id}", Entry.Id)
-                                .Replace("{version}", Entry.Version);
+                                .Replace("{version}", Entry.PackVersion.ToString());
                             detailsUrl = type == LinkType.FuGet
                                 ? detailsUrl.Replace("nuget.org", "fuget.org")
                                 : detailsUrl;
