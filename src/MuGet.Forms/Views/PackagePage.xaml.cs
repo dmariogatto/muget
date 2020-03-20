@@ -1,11 +1,11 @@
 ﻿using MuGet.Forms.Models;
 using MuGet.Forms.ViewModels;
+using Plugin.Segmented.Control;
 using System.Linq;
 using System.Net;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using Xamarin.Forms.Xaml;
-using Application = Xamarin.Forms.Application;
 
 namespace MuGet.Forms.Views
 {
@@ -43,8 +43,9 @@ namespace MuGet.Forms.Views
 
             if (Device.RuntimePlatform == Device.Android)
             {
-                SegPageControl.SelectedTextColor = (Color)Application.Current.Resources["ContrastAntiColor"];
-                SegPageControl.TintColor = (Color)Application.Current.Resources["ContrastColor"];
+                SegPageControl.SetDynamicResource(SegmentedControl.TextColorProperty, "ContrastColor");
+                SegPageControl.SetDynamicResource(SegmentedControl.SelectedTextColorProperty, "ContrastAntiColor");
+                SegPageControl.SetDynamicResource(SegmentedControl.TintColorProperty, "ContrastColor");
             }
 
             if (Navigation.NavigationStack.LastOrDefault() == this &&
@@ -108,11 +109,13 @@ namespace MuGet.Forms.Views
         {
             if (sender is View v && v.BindingContext is Dependency dependency)
             {
-                var packagePage = new PackagePage();
-                packagePage.PackageId = dependency.Id;
-                packagePage.Version = dependency.VersionRange?.MinVersion != null
-                    ? dependency.VersionRange.MinVersion.ToString()
-                    : string.Empty;
+                var packagePage = new PackagePage
+                {
+                    PackageId = dependency.Id,
+                    Version = dependency.VersionRange?.MinVersion != null
+                        ? dependency.VersionRange.MinVersion.ToString()
+                        : string.Empty
+                };
 
                 Navigation.PushAsync(packagePage);
             }

@@ -48,6 +48,9 @@ namespace MuGet.Forms.Models
             set => SetProperty(ref _isFavourite, value);
         }
 
+        [JsonIgnore]
+        public DateTime PublishedLocal => Published.ToLocalTime();
+
         private PackageVersion _packVersion;
         [JsonIgnore]
         public PackageVersion PackVersion => _packVersion ?? (_packVersion = new PackageVersion(Version));

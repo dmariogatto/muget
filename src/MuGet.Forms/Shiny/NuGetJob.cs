@@ -56,7 +56,7 @@ namespace MuGet.Forms
                     if (latestEntries.Any())
                     {
                         // Only show latest package if triggered from development settings
-                        if (fp.Published == DateTime.MinValue)
+                        if (string.IsNullOrEmpty(fp.Version))
                             latestEntries.RemoveRange(1, latestEntries.Count - 1);
 
                         fp.Version = latestEntries.First().Version;
@@ -71,8 +71,14 @@ namespace MuGet.Forms
                                 await _notifications.Send(new Notification()
                                 {
                                     Id = le.GetHashCode(),
-                                    Title = string.Format(Resources.ItemParenthesesItem, le.Id, le.Version),
-                                    Message = string.Format(Resources.NotificationContentFormat, le.Authors, le.Published.ToShortDateString()),
+                                    Title = string.Format(
+                                        Resources.ItemParenthesesItem,
+                                        le.Id,
+                                        le.PackVersion.ToString()),
+                                    Message = string.Format(
+                                        Resources.NotificationContentFormat,
+                                        le.Authors,
+                                        le.PublishedLocal.ToShortDateString()),
                                     Payload = new Dictionary<string, string>()
                                     {
                                         { nameof(CatalogEntry.Id) , le.Id },

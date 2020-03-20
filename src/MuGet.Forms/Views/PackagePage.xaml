@@ -203,7 +203,7 @@
                                         FontSize="Caption"
                                         HorizontalOptions="Start"
                                         Style="{DynamicResource LabelStyle}"
-                                        Text="{Binding Entry.Version}" />
+                                        Text="{Binding Entry.PackVersion}" />
                                 </StackLayout>
                                 <Label
                                     FontAttributes="Italic"
@@ -229,6 +229,7 @@
                         Margin="4,6,4,6"
                         OnSegmentSelected="OnSegmentSelected"
                         SelectedTextColor="{DynamicResource PrimaryTextColor}"
+                        TextColor="{DynamicResource PrimaryTextColor}"
                         TintColor="{DynamicResource SegmentColor}"
                         VerticalOptions="Center">
                         <segmented:SegmentedControl.Children>
@@ -287,6 +288,18 @@
                                 Style="{DynamicResource LabelStyle}"
                                 Text="{Binding Entry.Authors}" />
                         </StackLayout>
+                        <Label
+                            FontAttributes="Italic"
+                            FontSize="Small"
+                            HorizontalTextAlignment="Center"
+                            IsVisible="{Binding Entry.PackVersion.IsSemVer2}"
+                            Style="{DynamicResource LabelStyle}"
+                            Text="{Binding Entry.Version}" />
+                        <Label
+                            FontSize="Small"
+                            HorizontalTextAlignment="Center"
+                            Style="{DynamicResource LabelStyle}"
+                            Text="{Binding Entry.PublishedLocal, StringFormat='{0:G}'}" />
                         <Label
                             Margin="6,0,6,0"
                             Style="{DynamicResource LabelTitleStyle}"
@@ -396,7 +409,7 @@
                                     Grid.Row="3"
                                     Grid.Column="1"
                                     Style="{DynamicResource LabelStyle}"
-                                    Text="{Binding Entry.Published, StringFormat='{0:d}'}" />
+                                    Text="{Binding Entry.PublishedLocal, Converter={StaticResource dateTimeToHumanizeConverter}}" />
                                 <Label
                                     Grid.Row="4"
                                     Grid.Column="1"
@@ -596,7 +609,7 @@
                                         <Label
                                             FontSize="Medium"
                                             Style="{DynamicResource LabelStyle}"
-                                            Text="{Binding Version}"
+                                            Text="{Binding PackVersion}"
                                             TextColor="{DynamicResource LinkColor}" />
 
                                         <StackLayout
@@ -618,7 +631,7 @@
                                                 FontSize="Small"
                                                 HorizontalOptions="EndAndExpand"
                                                 Style="{DynamicResource LabelStyle}"
-                                                Text="{Binding Published, Converter={StaticResource dateTimeToHumanizeConverter}}" />
+                                                Text="{Binding PublishedLocal, Converter={StaticResource dateTimeToHumanizeConverter}}" />
                                         </StackLayout>
 
                                         <BoxView

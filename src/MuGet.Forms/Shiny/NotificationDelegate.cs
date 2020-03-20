@@ -33,9 +33,11 @@ namespace MuGet.Forms
                     var packageId = payload[nameof(CatalogEntry.Id)];
                     var version = payload[nameof(CatalogEntry.Version)];
 
-                    var packagePage = new PackagePage();
-                    packagePage.PackageId = packageId;
-                    packagePage.Version = version;
+                    var packagePage = new PackagePage
+                    {
+                        PackageId = packageId,
+                        Version = version
+                    };
 
                     await navPage.PushAsync(packagePage);
                 }

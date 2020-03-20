@@ -140,8 +140,7 @@ namespace MuGet.Forms.Services
             }
             catch (Exception ex)
             {
-                if (!(ex is OperationCanceledException))
-                    _logger.Error(ex);
+                _logger.Error(ex);
             }
 
             return (result?.TotalHits ?? 0, result?.Data ?? new List<PackageMetadata>(0));
@@ -217,8 +216,7 @@ namespace MuGet.Forms.Services
             }
             catch (Exception ex)
             {
-                if (!(ex is OperationCanceledException))
-                    _logger.Error(ex);
+                _logger.Error(ex);
             }
 
             return result ?? new List<CatalogEntry>();
@@ -243,8 +241,7 @@ namespace MuGet.Forms.Services
             }
             catch (Exception ex)
             {
-                if (!(ex is OperationCanceledException))
-                    _logger.Error(ex);
+                _logger.Error(ex);
             }
 
             return result;
@@ -371,7 +368,7 @@ namespace MuGet.Forms.Services
         private static T DeserializeJsonFromStream<T>(Stream stream)
         {
             if (stream == null || stream.CanRead == false)
-                return default(T);
+                return default;
 
             using (var sr = new StreamReader(stream))
             using (var jtr = new JsonTextReader(sr))
@@ -383,7 +380,7 @@ namespace MuGet.Forms.Services
 
         private static async Task<string> StreamToStringAsync(Stream stream)
         {
-            string content = null;
+            var content = default(string);
 
             if (stream != null)
                 using (var sr = new StreamReader(stream))

@@ -19,9 +19,11 @@ namespace MuGet.Forms.Views
         {
             if (sender is View v && v.BindingContext is PackageMetadata metadata)
             {
-                var packagePage = new PackagePage();
-                packagePage.PackageId = metadata.Id;
-                packagePage.Version = metadata.Version;
+                var packagePage = new PackagePage
+                {
+                    PackageId = metadata.Id,
+                    Version = metadata.Version
+                };
 
                 Navigation.PushAsync(packagePage);
             }
