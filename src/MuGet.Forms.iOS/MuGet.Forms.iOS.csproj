@@ -62,6 +62,7 @@
     <MtouchLink>Full</MtouchLink>
     <MtouchUseLlvm>true</MtouchUseLlvm>
     <MtouchExtraArgs>--linkskip=MuGet.Forms --linkskip=MuGet.Forms.iOS --linkskip=Shiny.Core --linkskip=Shiny.Notifications --linkskip=LiteDB --optimize=experimental-xforms-product-type</MtouchExtraArgs>
+    <MtouchFloat32>true</MtouchFloat32>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -74,7 +75,6 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <BundleResource Include="Resources\materialdesignicons-webfont.ttf" />
     <Compile Include="Renderers\NavigationPageCustomRenderer.cs" />
     <Compile Include="Renderers\PackagePageRenderer.cs" />
   </ItemGroup>

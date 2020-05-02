@@ -18,6 +18,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Fonts\materialdesignicons-webfont.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Fonts\materialdesignicons-webfont.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AiForms.SettingsView" Version="1.1.4-pre" />
     <PackageReference Include="Humanizer" Version="2.8.2" />
     <PackageReference Include="LiteDB" Version="5.0.7" />

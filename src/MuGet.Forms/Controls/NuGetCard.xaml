@@ -36,9 +36,7 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
 
-                    <yummy:PancakeView
-                        Grid.RowSpan="3"
-                        Style="{DynamicResource IconYummyStyle}">
+                    <yummy:PancakeView Grid.RowSpan="3" Style="{DynamicResource IconYummyStyle}">
                         <ffimageloading:SvgCachedImage
                             DownsampleToViewSize="true"
                             ErrorPlaceholder="{DynamicResource PackageIcon}"
