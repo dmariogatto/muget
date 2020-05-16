@@ -47,7 +47,7 @@ namespace MuGet.Forms
                 var includePrerelease = _nuGetService.IncludePrerelease;
                 foreach (var fp in favouritePackages)
                 {
-                    var catalogEntries = await _nuGetService.GetCatalogEntries(fp.PackageId, cancelToken);
+                    var catalogEntries = await _nuGetService.GetCatalogEntriesAsync(fp.PackageId, cancelToken);
                     var latestEntries = catalogEntries
                         .Where(e => (includePrerelease || !e.PackVersion.IsPrerelease) &&
                                     e.Published > fp.Published)

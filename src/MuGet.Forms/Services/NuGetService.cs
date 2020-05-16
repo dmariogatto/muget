@@ -80,7 +80,7 @@ namespace MuGet.Forms.Services
             set => Preferences.Set(nameof(NewReleaseNotifications), value);
         }
 
-        public async Task<PackageSource> GetNuGetSource(CancellationToken cancellationToken)
+        public async Task<PackageSource> GetNuGetSourceAsync(CancellationToken cancellationToken)
         {
             var packageSource = default(PackageSource);
 
@@ -91,7 +91,7 @@ namespace MuGet.Forms.Services
                 // Refresh NuGet source on updates
                 if (packageSource == null || VersionTracking.IsFirstLaunchForCurrentBuild)
                 {
-                    var nuget = await GetWithRetry<NuGetSource>(NuGet, cancellationToken).ConfigureAwait(false);
+                    var nuget = await GetWithRetryAsync<NuGetSource>(NuGet, cancellationToken).ConfigureAwait(false);
                     packageSource = new PackageSource(nameof(NuGet), NuGet, nuget);
                     _packageSourceRepo.Upsert(packageSource);
                 }
@@ -105,15 +105,15 @@ namespace MuGet.Forms.Services
             return packageSource;
         }
 
-        public async Task<(int, IList<PackageMetadata>)> Search(string query, int skip, int take, CancellationToken cancellationToken, bool? includePrerelease = null)
+        public async Task<(int, IList<PackageMetadata>)> SearchAsync(string query, int skip, int take, CancellationToken cancellationToken, bool? includePrerelease = null)
         {
             var result = default(SearchResult);
 
             try
             {
-                var source = await GetNuGetSource(cancellationToken).ConfigureAwait(false);
+                var source = await GetNuGetSourceAsync(cancellationToken).ConfigureAwait(false);
                 var url = $"{source.SearchQueryService}?q={WebUtility.UrlEncode(query)}&prerelease={includePrerelease ?? IncludePrerelease}&skip={skip}&take={take}&semVerLevel=2";
-                result = await GetWithRetry<SearchResult>(url, cancellationToken).ConfigureAwait(false);
+                result = await GetWithRetryAsync<SearchResult>(url, cancellationToken).ConfigureAwait(false);
 
                 foreach (var i in result.Data)
                 {
@@ -122,7 +122,7 @@ namespace MuGet.Forms.Services
                         // FFImageLoading does not cache 404's, which results in
                         // exceptions when scrolling the packages... this kills performance
                         // so validate the url before loading.
-                        _ = IsValidUrl(i.IconUrl, cancellationToken).ContinueWith((r) =>
+                        _ = IsValidUrlAsync(i.IconUrl, cancellationToken).ContinueWith((r) =>
                         {
                             if (r.IsFaulted || !r.Result)
                             {
@@ -146,14 +146,14 @@ namespace MuGet.Forms.Services
             return (result?.TotalHits ?? 0, result?.Data ?? new List<PackageMetadata>(0));
         }
 
-        public async Task<PackageMetadata> GetPackageMetadata(string id, CancellationToken cancellationToken, bool? includePrerelease = null)
+        public async Task<PackageMetadata> GetPackageMetadataAsync(string id, CancellationToken cancellationToken, bool? includePrerelease = null)
         {
             var cacheKey = $"PackageId:{id};IncludePrerelease:{includePrerelease ?? IncludePrerelease}";
             var metadata = _cache.Get<PackageMetadata>(cacheKey);
 
             if (metadata == null)
             {
-                var result = await Search($"PackageId:\"{id}\"", 0, 1, cancellationToken, includePrerelease).ConfigureAwait(false);
+                var result = await SearchAsync($"PackageId:\"{id}\"", 0, 1, cancellationToken, includePrerelease).ConfigureAwait(false);
                 metadata = result.Item2?.FirstOrDefault();
 
                 if (metadata != null)
@@ -171,7 +171,7 @@ namespace MuGet.Forms.Services
             return metadata;
         }
 
-        public async Task<IList<CatalogEntry>> GetCatalogEntries(string packageId, CancellationToken cancellationToken)
+        public async Task<IList<CatalogEntry>> GetCatalogEntriesAsync(string packageId, CancellationToken cancellationToken)
         {
             var cacheKey = $"CatalogEntries:{packageId}";
             var result = _cache.Get<IList<CatalogEntry>>(cacheKey);
@@ -180,8 +180,8 @@ namespace MuGet.Forms.Services
             {
                 if (result == null)
                 {
-                    var source = await GetNuGetSource(cancellationToken).ConfigureAwait(false);
-                    var catalogRoot = await GetWithRetry<CatalogRoot>(source.GetRegistrationUrl(packageId), cancellationToken).ConfigureAwait(false);                    
+                    var source = await GetNuGetSourceAsync(cancellationToken).ConfigureAwait(false);
+                    var catalogRoot = await GetWithRetryAsync<CatalogRoot>(source.GetRegistrationUrl(packageId), cancellationToken).ConfigureAwait(false);                    
                     if (catalogRoot?.Items?.Any() == true)
                     {
                         async Task<IList<CatalogEntry>> getCatalogEntries(CatalogPage page, CancellationToken ct)
@@ -192,7 +192,7 @@ namespace MuGet.Forms.Services
                             {
                                 if (!string.IsNullOrEmpty(page?.Id))
                                 {
-                                    var pageResult = await GetWithRetry<CatalogPage>(page.Id, ct).ConfigureAwait(false);
+                                    var pageResult = await GetWithRetryAsync<CatalogPage>(page.Id, ct).ConfigureAwait(false);
                                     items = pageResult?.Items;
                                 }
                             }
@@ -222,7 +222,7 @@ namespace MuGet.Forms.Services
             return result ?? new List<CatalogEntry>();
         }
 
-        public async Task<CatalogData> GetCatalogData(string indexUrl, CancellationToken cancellationToken)
+        public async Task<CatalogData> GetCatalogDataAsync(string indexUrl, CancellationToken cancellationToken)
         {
             var cacheKey = $"CatalogData:{indexUrl}";
             var result = _cache.Get<CatalogData>(cacheKey);
@@ -231,7 +231,7 @@ namespace MuGet.Forms.Services
             {
                 if (result == null)
                 {
-                    result = await GetWithRetry<CatalogData>(indexUrl, cancellationToken).ConfigureAwait(false);
+                    result = await GetWithRetryAsync<CatalogData>(indexUrl, cancellationToken).ConfigureAwait(false);
 
                     if (result != null)
                     {
@@ -309,10 +309,10 @@ namespace MuGet.Forms.Services
             return false;
         }
 
-        private Task<T> GetWithRetry<T>(string url, CancellationToken cancellationToken)
-            => _retryPolicy.ExecuteAsync((ct) => Get<T>(url, ct), cancellationToken);
+        private Task<T> GetWithRetryAsync<T>(string url, CancellationToken cancellationToken)
+            => _retryPolicy.ExecuteAsync((ct) => GetAsync<T>(url, ct), cancellationToken);
         
-        private async Task<bool> IsValidUrl(string url, CancellationToken cancellationToken)
+        private async Task<bool> IsValidUrlAsync(string url, CancellationToken cancellationToken)
         {
             if (string.IsNullOrEmpty(url))
                 return false;
@@ -332,7 +332,7 @@ namespace MuGet.Forms.Services
             DateTimeZoneHandling = DateTimeZoneHandling.Utc
         });
 
-        private static async Task<T> Get<T>(string url, CancellationToken cancellationToken)
+        private static async Task<T> GetAsync<T>(string url, CancellationToken cancellationToken)
         {
             var result = default(T);
             var apiEx = default(ApiException);
@@ -346,7 +346,7 @@ namespace MuGet.Forms.Services
 
                 if (response.IsSuccessStatusCode)
                 {
-                    result = DeserializeJsonFromStream<T>(stream);
+                    result = DeserializeJsonFromStreamAsync<T>(stream);
                 }
                 else
                 {
@@ -365,7 +365,7 @@ namespace MuGet.Forms.Services
             return result;
         }
 
-        private static T DeserializeJsonFromStream<T>(Stream stream)
+        private static T DeserializeJsonFromStreamAsync<T>(Stream stream)
         {
             if (stream == null || stream.CanRead == false)
                 return default;

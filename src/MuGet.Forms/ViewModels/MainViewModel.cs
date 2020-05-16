@@ -25,10 +25,10 @@ namespace MuGet.Forms.ViewModels
             Title = Resources.Search;
 
             Packages = new ObservableRangeCollection<PackageMetadata>();
-            SearchCommand = new AsyncCommand<CancellationToken>((ct) => Search(SearchText, 0, ct));
+            SearchCommand = new AsyncCommand<CancellationToken>((ct) => SearchAsync(SearchText, 0, ct));
             RemainingItemsThresholdReachedCommand = new AsyncCommand(() =>
                 _searchCancellation != null
-                    ? Search(SearchText, Packages.Count, _searchCancellation.Token)
+                    ? SearchAsync(SearchText, Packages.Count, _searchCancellation.Token)
                     : Task.FromResult(0));
             PackageTappedCommand = new Command<PackageMetadata>(PackageTapped);
         }
@@ -73,7 +73,7 @@ namespace MuGet.Forms.ViewModels
         public AsyncCommand RemainingItemsThresholdReachedCommand { get; private set; }
         public Command<PackageMetadata> PackageTappedCommand { get; private set; }
 
-        private async Task Search(string searchText, int skip, CancellationToken cancellationToken)
+        private async Task SearchAsync(string searchText, int skip, CancellationToken cancellationToken)
         {
             RemainingItemsThreshold = -1;
 
@@ -96,7 +96,7 @@ namespace MuGet.Forms.ViewModels
 
                     if (!string.IsNullOrWhiteSpace(searchText))
                     {
-                        var searchResult = await NuGetService.Search(searchText, skip, DefaultPageSize, cancellationToken);
+                        var searchResult = await NuGetService.SearchAsync(searchText, skip, DefaultPageSize, cancellationToken);
                         packages = searchResult.Item2;
                         totalHits = searchResult.Item1;
                     }

@@ -59,6 +59,11 @@ namespace MuGet.Forms.Models
             ? IconUrl
             : (string)Xamarin.Forms.Application.Current.Resources["PackageIcon"];
 
+        [JsonIgnore]
+        public string SearchDescription => !string.IsNullOrEmpty(Summary)
+            ? Summary
+            : Description;
+
         private PackageVersion _packVersion;
         [JsonIgnore]
         public PackageVersion PackVersion => _packVersion ?? (_packVersion = new PackageVersion(Version));

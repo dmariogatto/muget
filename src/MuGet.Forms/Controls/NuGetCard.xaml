@@ -86,7 +86,7 @@
                     LineBreakMode="TailTruncation"
                     MaxLines="4"
                     Style="{DynamicResource LabelStyle}"
-                    Text="{Binding Description}" />
+                    Text="{Binding SearchDescription}" />
             </StackLayout>
         </yummy:PancakeView>
     </ContentView.Content>

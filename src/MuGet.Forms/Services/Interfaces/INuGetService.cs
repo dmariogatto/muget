@@ -10,13 +10,13 @@ namespace MuGet.Forms.Services
         bool IncludePrerelease { get; set; }
         bool NewReleaseNotifications { get; set; }
 
-        Task<PackageSource> GetNuGetSource(CancellationToken cancellationToken);
+        Task<PackageSource> GetNuGetSourceAsync(CancellationToken cancellationToken);
 
-        Task<(int, IList<PackageMetadata>)> Search(string query, int skip, int take, CancellationToken cancellationToken, bool? includePrerelease = null);
-        Task<PackageMetadata> GetPackageMetadata(string id, CancellationToken cancellationToken, bool? includePrerelease = null);
+        Task<(int, IList<PackageMetadata>)> SearchAsync(string query, int skip, int take, CancellationToken cancellationToken, bool? includePrerelease = null);
+        Task<PackageMetadata> GetPackageMetadataAsync(string id, CancellationToken cancellationToken, bool? includePrerelease = null);
 
-        Task<IList<CatalogEntry>> GetCatalogEntries(string packageId, CancellationToken cancellationToken);
-        Task<CatalogData> GetCatalogData(string indexUrl, CancellationToken cancellationToken);
+        Task<IList<CatalogEntry>> GetCatalogEntriesAsync(string packageId, CancellationToken cancellationToken);
+        Task<CatalogData> GetCatalogDataAsync(string indexUrl, CancellationToken cancellationToken);
 
         IList<FavouritePackage> GetFavouritePackages();
         bool UpsertFavouritePackage(FavouritePackage package);

@@ -40,14 +40,14 @@ namespace MuGet.Forms.ViewModels
             _muGetPackageService = muGetPackageService;
             MuGetPackages = new ObservableRangeCollection<MuGetPackage>(_muGetPackageService.GetPackages());
 
-            SettingsItemTappedCommand = new AsyncCommand<SettingItem>(SettingsItemTapped);
+            SettingsItemTappedCommand = new AsyncCommand<SettingItem>(SettingsItemTappedAsync);
             PackageTappedCommand = new AsyncCommand<MuGetPackage>(async (p) =>
             {
                 if (!string.IsNullOrEmpty(p?.PackageId))
                     await Launcher.TryOpenAsync($"muget://package/{p.PackageId}/");
             });
             ResetNotificationsCommand = new Command(ResetNotifications);
-            RunJobsCommand = new AsyncCommand(RunJobs);
+            RunJobsCommand = new AsyncCommand(RunJobsAsync);
         }
 
         public bool IncludePrerelease
@@ -90,7 +90,7 @@ namespace MuGet.Forms.ViewModels
         public Command ResetNotificationsCommand { get; private set; }
         public AsyncCommand RunJobsCommand { get; private set; }
 
-        private async Task SettingsItemTapped(SettingItem item)
+        private async Task SettingsItemTappedAsync(SettingItem item)
         {
             switch (item)
             {
@@ -99,7 +99,7 @@ namespace MuGet.Forms.ViewModels
                     CrossStoreReview.Current.OpenStoreReviewPage(id);
                     break;
                 case SettingItem.SendFeedback:
-                    await SendFeedback();
+                    await SendFeedbackAsync();
                     break;
                 case SettingItem.ViewGitHub:
                     await Browser.OpenAsync(GitHubRepo);
@@ -110,7 +110,7 @@ namespace MuGet.Forms.ViewModels
             }
         }
 
-        private async Task SendFeedback()
+        private async Task SendFeedbackAsync()
         {
             var message = new EmailMessage
             {
@@ -160,7 +160,7 @@ namespace MuGet.Forms.ViewModels
             }
         }
 
-        private async Task RunJobs()
+        private async Task RunJobsAsync()
         {
             try
             {

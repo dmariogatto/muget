@@ -44,7 +44,7 @@ namespace MuGet.Forms.Services
             foreach (var p in _packages)
             {
                 if (p.Metadata == null)
-                    _nuGetService.GetPackageMetadata(p.PackageId, default, true)
+                    _nuGetService.GetPackageMetadataAsync(p.PackageId, default, true)
                         .ContinueWith((task) =>
                         {
                             if (task.IsCompleted &&

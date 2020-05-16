@@ -24,10 +24,10 @@ namespace MuGet.Forms.ViewModels
             CurrentState = State.Loading;
 
             CatalogEntries = new ObservableRangeCollection<CatalogEntry>();
-            LoadCommand = new AsyncCommand<CancellationToken>(Load);
-            EntryTappedCommand = new AsyncCommand<CatalogEntry>((e) => EntryTapped(e, _cancellation.Token));
-            LinkTappedCommand = new AsyncCommand<LinkType>(LinkTapped);
-            FavouriteCommand = new AsyncCommand<CatalogEntry>(Favourite);
+            LoadCommand = new AsyncCommand<CancellationToken>(LoadAsync);
+            EntryTappedCommand = new AsyncCommand<CatalogEntry>((e) => EntryTappedAsync(e, _cancellation.Token));
+            LinkTappedCommand = new AsyncCommand<LinkType>(LinkTappedAsync);
+            FavouriteCommand = new AsyncCommand<CatalogEntry>(FavouriteAsync);
 
             CatalogEntries.CollectionChanged += (sender, args) =>
             {
@@ -126,7 +126,7 @@ namespace MuGet.Forms.ViewModels
             LoadCommand.ExecuteAsync(_cancellation.Token);
         }
 
-        private async Task Load(CancellationToken cancellationToken)
+        private async Task LoadAsync(CancellationToken cancellationToken)
         {
             if (IsBusy)
                 return;
@@ -144,15 +144,15 @@ namespace MuGet.Forms.ViewModels
 
                 if (!string.IsNullOrEmpty(PackageId))
                 {
-                    var entries = await NuGetService.GetCatalogEntries(PackageId, cancellationToken);
+                    var entries = await NuGetService.GetCatalogEntriesAsync(PackageId, cancellationToken);
                     var latest = !string.IsNullOrEmpty(Version)
                                  ? entries.FirstOrDefault(e => e.Version == Version) ?? entries.FirstOrDefault()
                                  : entries.FirstOrDefault();
 
                     if (latest != null)
                     {
-                        var entryTask = NuGetService.GetCatalogData(latest.IndexUrl, cancellationToken);
-                        var metadataTask = NuGetService.GetPackageMetadata(latest.Id, cancellationToken, true);
+                        var entryTask = NuGetService.GetCatalogDataAsync(latest.IndexUrl, cancellationToken);
+                        var metadataTask = NuGetService.GetPackageMetadataAsync(latest.Id, cancellationToken, true);
                         await Task.WhenAll(entryTask, metadataTask);
 
                         Metadata = await metadataTask;
@@ -201,7 +201,7 @@ namespace MuGet.Forms.ViewModels
             }            
         }
 
-        private async Task EntryTapped(CatalogEntry entry, CancellationToken cancellationToken)
+        private async Task EntryTappedAsync(CatalogEntry entry, CancellationToken cancellationToken)
         {
             if (IsBusy || entry == null)
                 return;
@@ -211,7 +211,7 @@ namespace MuGet.Forms.ViewModels
 
             try
             {
-                var entryData = await NuGetService.GetCatalogData(entry.IndexUrl, cancellationToken);
+                var entryData = await NuGetService.GetCatalogDataAsync(entry.IndexUrl, cancellationToken);
                 if (entryData != null)
                 {
                     Entry = entry;
@@ -229,7 +229,7 @@ namespace MuGet.Forms.ViewModels
             }            
         }
 
-        private async Task LinkTapped(LinkType type)
+        private async Task LinkTappedAsync(LinkType type)
         {
             if (Entry != null && EntryData != null)
             {
@@ -237,7 +237,7 @@ namespace MuGet.Forms.ViewModels
                 {
                     case LinkType.NuGet:
                     case LinkType.FuGet:
-                        var source = await NuGetService.GetNuGetSource(default);
+                        var source = await NuGetService.GetNuGetSourceAsync(default);
                         if (!string.IsNullOrEmpty(source?.PackageDetailsUriTemplate))
                         {
                             var detailsUrl = source.PackageDetailsUriTemplate
@@ -273,7 +273,7 @@ namespace MuGet.Forms.ViewModels
                      !string.IsNullOrEmpty(Version) &&
                      type == LinkType.NuGet)
             {
-                var source = await NuGetService.GetNuGetSource(default);
+                var source = await NuGetService.GetNuGetSourceAsync(default);
                 if (!string.IsNullOrEmpty(source?.PackageDetailsUriTemplate))
                 {
                     var detailsUrl = source.PackageDetailsUriTemplate
@@ -284,7 +284,7 @@ namespace MuGet.Forms.ViewModels
             }
         }
 
-        private async Task Favourite(CatalogEntry entry)
+        private async Task FavouriteAsync(CatalogEntry entry)
         {
             if (entry != null)
             {
@@ -301,7 +301,7 @@ namespace MuGet.Forms.ViewModels
                 {
                     var includePrerelease = NuGetService.IncludePrerelease;
                     var lastestEntry = CatalogEntries.FirstOrDefault(e => includePrerelease || !e.PackVersion.IsPrerelease);
-                    var source = await NuGetService.GetNuGetSource(default);
+                    var source = await NuGetService.GetNuGetSourceAsync(default);
                     var sp = new FavouritePackage()
                     {
                         PackageId = entry.Id,

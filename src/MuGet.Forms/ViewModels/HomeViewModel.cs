@@ -23,7 +23,7 @@ namespace MuGet.Forms.ViewModels
 
             RecentPackages = new ObservableRangeCollection<PackageMetadata>();
             FavouritePackages = new ObservableRangeCollection<PackageMetadata>();
-            LoadCommand = new AsyncCommand<CancellationToken>(Load);
+            LoadCommand = new AsyncCommand<CancellationToken>(LoadAsync);
             
             CurrentState = State.Loading;
         }
@@ -40,7 +40,7 @@ namespace MuGet.Forms.ViewModels
 
         public AsyncCommand<CancellationToken> LoadCommand { get; private set; }
         
-        private async Task Load(CancellationToken cancellationToken)
+        private async Task LoadAsync(CancellationToken cancellationToken)
         {
             if (IsBusy)
                 return;
@@ -55,14 +55,14 @@ namespace MuGet.Forms.ViewModels
 
             try
             {
-                await NuGetService.GetNuGetSource(cancellationToken);
+                await NuGetService.GetNuGetSourceAsync(cancellationToken);
 
                 var recents = NuGetService.GetRecentPackages();
                 var favourites = NuGetService.GetFavouritePackages();
 
-                var recentTasks = recents.Select(i => NuGetService.GetPackageMetadata(i.PackageId, cancellationToken, true));
+                var recentTasks = recents.Select(i => NuGetService.GetPackageMetadataAsync(i.PackageId, cancellationToken, true));
                 await Task.WhenAll(recentTasks);
-                var favouriteTasks = favourites.Select(i => NuGetService.GetPackageMetadata(i.PackageId, cancellationToken, true));
+                var favouriteTasks = favourites.Select(i => NuGetService.GetPackageMetadataAsync(i.PackageId, cancellationToken, true));
                 await Task.WhenAll(favouriteTasks);
 
                 var recentResults = recentTasks
