@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<StackLayout
+    x:Class="MuGet.Forms.Controls.VersionsView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:MuGet.Forms.Converters"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:helpers="clr-namespace:MuGet.Forms.Helpers"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="clr-namespace:MuGet.Forms.Models"
+    xmlns:viewModels="clr-namespace:MuGet.Forms.ViewModels"
+    x:DataType="viewModels:PackageViewModel"
+    mc:Ignorable="d">
+
+    <StackLayout.Resources>
+        <ResourceDictionary>
+            <converters:DateTimeToHumanizeConverter x:Key="dateTimeToHumanizeConverter" />
+        </ResourceDictionary>
+    </StackLayout.Resources>
+
+    <ListView
+        BackgroundColor="Transparent"
+        HasUnevenRows="True"
+        ItemsSource="{Binding CatalogEntries}"
+        SelectionMode="None"
+        SeparatorVisibility="None">
+        <ListView.Header>
+            <ContentView>
+                <StackLayout Margin="0,16,0,0" />
+            </ContentView>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate x:DataType="models:CatalogEntry">
+                <ViewCell>
+                    <Grid Margin="12,2,4,2">
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding EntryTappedCommand, Source={RelativeSource AncestorType={x:Type viewModels:PackageViewModel}}}" CommandParameter="{Binding .}" />
+                        </Grid.GestureRecognizers>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="1" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label
+                            FontSize="Medium"
+                            Style="{DynamicResource LabelStyle}"
+                            Text="{Binding PackVersion}"
+                            TextColor="{DynamicResource LinkColor}" />
+
+                        <StackLayout
+                            Grid.Row="1"
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Horizontal">
+                            <Label
+                                FontSize="Small"
+                                HorizontalOptions="Start"
+                                Style="{DynamicResource LabelIconStyle}"
+                                Text="{x:Static helpers:MaterialFont.Download}" />
+                            <Label
+                                FontSize="Small"
+                                HorizontalOptions="StartAndExpand"
+                                Style="{DynamicResource LabelStyle}"
+                                Text="{Binding Downloads, StringFormat='{0:n0}'}" />
+                            <Label
+                                FontAttributes="Italic"
+                                FontSize="Small"
+                                HorizontalOptions="EndAndExpand"
+                                Style="{DynamicResource LabelStyle}"
+                                Text="{Binding PublishedLocal, Converter={StaticResource dateTimeToHumanizeConverter}}" />
+                        </StackLayout>
+
+                        <BoxView
+                            Grid.Row="2"
+                            Grid.ColumnSpan="2"
+                            BackgroundColor="LightGray"
+                            HeightRequest="1"
+                            HorizontalOptions="FillAndExpand" />
+
+                        <Label
+                            Grid.RowSpan="2"
+                            Grid.Column="1"
+                            FontFamily="{StaticResource MaterialFontFamily}"
+                            FontSize="Large"
+                            HorizontalOptions="FillAndExpand"
+                            HorizontalTextAlignment="Center"
+                            Style="{DynamicResource LabelStyle}"
+                            Text="{x:Static helpers:MaterialFont.ChevronRight}"
+                            TextColor="{StaticResource SecondaryTextColor}"
+                            VerticalOptions="FillAndExpand"
+                            VerticalTextAlignment="Center" />
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        <ListView.Footer>
+            <ContentView>
+                <StackLayout Margin="0,4,0,0" />
+            </ContentView>
+        </ListView.Footer>
+    </ListView>
+</StackLayout>

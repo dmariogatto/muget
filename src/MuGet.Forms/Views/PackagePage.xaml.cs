@@ -1,6 +1,5 @@
 ﻿using MuGet.Forms.Models;
 using MuGet.Forms.ViewModels;
-using Plugin.Segmented.Control;
 using System.Linq;
 using System.Net;
 using Xamarin.Forms;
@@ -41,13 +40,6 @@ namespace MuGet.Forms.Views
         {
             base.OnAppearing();
 
-            if (Device.RuntimePlatform == Device.Android)
-            {
-                SegPageControl.SetDynamicResource(SegmentedControl.TextColorProperty, "ContrastColor");
-                SegPageControl.SetDynamicResource(SegmentedControl.SelectedTextColorProperty, "ContrastAntiColor");
-                SegPageControl.SetDynamicResource(SegmentedControl.TintColorProperty, "ContrastColor");
-            }
-
             if (Navigation.NavigationStack.LastOrDefault() == this &&
                 Navigation.NavigationStack.Count > 1 &&
                 Navigation.NavigationStack[Navigation.NavigationStack.Count - 2] is ContentPage previous)
@@ -78,27 +70,27 @@ namespace MuGet.Forms.Views
             }
         }
 
-        private void OnSegmentSelected(object sender, Plugin.Segmented.Event.SegmentSelectEventArgs e)
+        private void SelectedTabIndexChanged(object sender, SelectedPositionChangedEventArgs e)
         {
-            switch (e.NewValue)
+            switch (e.SelectedPosition)
             {
                 case 0:
-                    DetailsView.IsVisible = true;
-                    DependenciesView.IsVisible = false;
-                    VersionsView.IsVisible = false;
+                    PackageDetails.IsVisible = true;
+                    Dependancies.IsVisible = false;
+                    Versions.IsVisible = false;
 
                     // For iOS, resize scroll view content size for different packages
-                    DetailsView.ForceLayout();
+                    PackageDetails.ForceLayout();
                     break;
                 case 1:
-                    DetailsView.IsVisible = false;
-                    DependenciesView.IsVisible = true;
-                    VersionsView.IsVisible = false;
+                    PackageDetails.IsVisible = false;
+                    Dependancies.IsVisible = true;
+                    Versions.IsVisible = false;
                     break;
                 case 2:
-                    DetailsView.IsVisible = false;
-                    DependenciesView.IsVisible = false;
-                    VersionsView.IsVisible = true;
+                    PackageDetails.IsVisible = false;
+                    Dependancies.IsVisible = false;
+                    Versions.IsVisible = true;
                     break;
                 default:
                     break;

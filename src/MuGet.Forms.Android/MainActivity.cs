@@ -38,7 +38,9 @@ namespace MuGet.Forms.Android
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            
+
+            Sharpnado.Presentation.Forms.Droid.SharpnadoInitializer.Initialize();
+
             LoadApplication(new App());
             
             this.ShinyOnCreate();

@@ -36,7 +36,7 @@ namespace MuGet.Forms.iOS
 
             global::Xamarin.Forms.Forms.Init();
 
-            Plugin.Segmented.Control.iOS.SegmentedControlRenderer.Initialize();
+            Sharpnado.Presentation.Forms.iOS.SharpnadoInitializer.Initialize();
 
             LoadApplication(new App());
 

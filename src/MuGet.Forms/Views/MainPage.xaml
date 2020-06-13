@@ -30,7 +30,7 @@
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <AbsoluteLayout>
             <ScrollView
                 x:Name="HomeView"
                 AbsoluteLayout.LayoutBounds="0,0,1,1"
@@ -106,7 +106,6 @@
                 BorderThickness="0"
                 CornerRadius="6"
                 Elevation="6"
-                HasShadow="True"
                 Style="{DynamicResource CardYummyStyle}">
                 <SearchBar
                     BackgroundColor="{DynamicResource CardBackgroundColor}"

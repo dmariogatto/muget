@@ -15,9 +15,8 @@
     xmlns:views="clr-namespace:MuGet.Forms.Views"
     x:DataType="viewModels:HomeViewModel"
     x:TypeArguments="viewModels:HomeViewModel"
-    BackgroundColor="{DynamicResource PageBackgroundColor}"
     mc:Ignorable="d">
-    
+
     <views:BaseView.Resources>
         <ResourceDictionary>
             <converters:IntToBoolConverter x:Key="intToBoolConverter" />
@@ -97,9 +96,9 @@
                         <BindableLayout.ItemTemplate>
                             <DataTemplate x:DataType="models:PackageMetadata">
                                 <controls:NuGetCardSimple BindingContext="{Binding}">
-                                    <controls:NuGetCardSimple.GestureRecognizers>
+                                    <View.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="PackageTapped" />
-                                    </controls:NuGetCardSimple.GestureRecognizers>
+                                    </View.GestureRecognizers>
                                 </controls:NuGetCardSimple>
                             </DataTemplate>
                         </BindableLayout.ItemTemplate>
@@ -125,9 +124,9 @@
                         <BindableLayout.ItemTemplate>
                             <DataTemplate x:DataType="models:PackageMetadata">
                                 <controls:NuGetCardSimple BindingContext="{Binding}">
-                                    <controls:NuGetCardSimple.GestureRecognizers>
+                                    <View.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="PackageTapped" />
-                                    </controls:NuGetCardSimple.GestureRecognizers>
+                                    </View.GestureRecognizers>
                                 </controls:NuGetCardSimple>
                             </DataTemplate>
                         </BindableLayout.ItemTemplate>
