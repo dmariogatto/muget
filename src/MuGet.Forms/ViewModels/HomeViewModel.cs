@@ -1,23 +1,19 @@
-﻿using MuGet.Forms.Localisation;
-using MuGet.Forms.Models;
-using MuGet.Forms.Services;
+﻿using MuGet.Localisation;
+using MuGet.Models;
 using MvvmHelpers;
 using MvvmHelpers.Commands;
 using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Xamarin.Forms.StateSquid;
 
-namespace MuGet.Forms.ViewModels
+namespace MuGet.ViewModels
 {
     public class HomeViewModel : BaseViewModel
     {
         private bool _isFirstLoad = true;
 
-        public HomeViewModel(
-            INuGetService nuGetService,
-            ILogger logger) : base(nuGetService, logger)
+        public HomeViewModel(IBvmConstructor bvmConstructor) : base(bvmConstructor)
         {
             Title = Resources.Home;
 
@@ -25,7 +21,7 @@ namespace MuGet.Forms.ViewModels
             FavouritePackages = new ObservableRangeCollection<PackageMetadata>();
             LoadCommand = new AsyncCommand<CancellationToken>(LoadAsync);
             
-            CurrentState = State.Loading;
+            State = State.Loading;
         }
 
         public override void OnAppearing()
@@ -49,7 +45,7 @@ namespace MuGet.Forms.ViewModels
 
             if (_isFirstLoad)
             {
-                CurrentState = State.Loading;
+                State = State.Loading;
                 _isFirstLoad = false;
             }
 
@@ -85,7 +81,7 @@ namespace MuGet.Forms.ViewModels
             finally
             {
                 IsBusy = false;
-                CurrentState = State.None;
+                State = State.None;
             }
         }
     }

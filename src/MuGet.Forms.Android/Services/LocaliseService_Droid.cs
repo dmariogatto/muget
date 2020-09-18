@@ -1,15 +1,11 @@
-﻿using System;
+﻿using Android.Runtime;
+using Android.Text.Format;
+using MuGet.Models;
+using MuGet.Services;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Threading;
-using Android.Runtime;
-using Android.Text.Format;
-using MuGet.Forms.Models;
-using MuGet.Forms.Services;
-using Plugin.CurrentActivity;
-using Xamarin.Forms;
 
-[assembly: Dependency(typeof(LocaliseService_Droid))]
 namespace MuGet.Forms.Services
 {
     [Preserve(AllMembers = true)]
@@ -59,7 +55,7 @@ namespace MuGet.Forms.Services
         }
 
         public bool Is24Hour
-            => DateFormat.Is24HourFormat(CrossCurrentActivity.Current.AppContext);
+            => DateFormat.Is24HourFormat(Xamarin.Essentials.Platform.AppContext);
 
         private string AndroidToDotnetLanguage(string androidLanguage)
         {

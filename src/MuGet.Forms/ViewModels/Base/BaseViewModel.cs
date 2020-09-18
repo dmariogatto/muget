@@ -1,31 +1,20 @@
-﻿using MuGet.Forms.Services;
-using System.Threading.Tasks;
-using Xamarin.Forms;
-using Xamarin.Forms.StateSquid;
+﻿using Acr.UserDialogs;
+using MuGet.Services;
 
-namespace MuGet.Forms.ViewModels
+namespace MuGet.ViewModels
 {
-    public class BaseViewModel : MvvmHelpers.BaseViewModel
+    public abstract class BaseViewModel : MvvmHelpers.BaseViewModel, IViewModel
     {
         protected readonly INuGetService NuGetService;
         protected readonly ILogger Logger;
 
-        private NavigationPage _navPage => Application.Current.MainPage as NavigationPage;
+        protected readonly IUserDialogs Dialogs;
 
-        public BaseViewModel(INuGetService nuGetService, ILogger logger) : base()
+        public BaseViewModel(IBvmConstructor bvmConstructor) : base()
         {
-            NuGetService = nuGetService;
-            Logger = logger;
+            NuGetService = bvmConstructor.NuGetService;
+            Logger = bvmConstructor.Logger;
         }
-
-        protected Task DisplayAlert(string title, string message, string cancel) =>
-            _navPage.DisplayAlert(title, message, cancel);
-
-        protected Task<bool> DisplayAlert(string title, string message, string accept, string cancel) =>
-            _navPage.DisplayAlert(title, message, accept, cancel);
-
-        protected Task<string> DisplayAction(string title, string cancel, string destruction, params string[] buttons) =>
-            _navPage.DisplayActionSheet(title, cancel, destruction, buttons);
 
         public virtual void OnCreate()
         {
@@ -44,7 +33,7 @@ namespace MuGet.Forms.ViewModels
         }
 
         private State _currentState;
-        public State CurrentState
+        public State State
         {
             get => _currentState;
             set => SetProperty(ref _currentState, value);

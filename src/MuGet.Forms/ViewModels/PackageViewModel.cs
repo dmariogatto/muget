@@ -1,6 +1,4 @@
-﻿using MuGet.Forms.Controls;
-using MuGet.Forms.Models;
-using MuGet.Forms.Services;
+﻿using MuGet.Models;
 using MvvmHelpers;
 using MvvmHelpers.Commands;
 using System;
@@ -8,20 +6,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Xamarin.Essentials;
-using Xamarin.Forms.StateSquid;
+using Xamarin.Essentials.Interfaces;
 
-namespace MuGet.Forms.ViewModels
+namespace MuGet.ViewModels
 {
     public class PackageViewModel : BaseViewModel
     {
+        private readonly IBrowser _browser;
+
         private CancellationTokenSource _cancellation;
 
         public PackageViewModel(
-            INuGetService nuGetService,
-            ILogger logger) : base(nuGetService, logger)
+            IBrowser browser,
+            IBvmConstructor bvmConstructor) : base(bvmConstructor)
         {
-            CurrentState = State.Loading;
+            _browser = browser;
 
             CatalogEntries = new ObservableRangeCollection<CatalogEntry>();
             LoadCommand = new AsyncCommand<CancellationToken>(LoadAsync);
@@ -42,6 +41,8 @@ namespace MuGet.Forms.ViewModels
                         : 0;
                 }
             };
+
+            State = State.Loading;
         }
 
         public override void OnAppearing()
@@ -132,7 +133,7 @@ namespace MuGet.Forms.ViewModels
                 return;
 
             IsBusy = true;
-            CurrentState = State.Loading;
+            State = State.Loading;
 
             try
             {
@@ -182,18 +183,18 @@ namespace MuGet.Forms.ViewModels
                         Entry = latest;
                         CatalogEntries.ReplaceRange(entries);
 
-                        CurrentState = State.None;
+                        State = State.None;
                     }
                     else
                     {
-                        CurrentState = State.Error;
+                        State = State.Error;
                     }
                 }
             }
             catch (Exception ex)
             {
                 Logger.Error(ex);
-                CurrentState = State.Error;
+                State = State.Error;
             }
             finally
             {
@@ -207,7 +208,7 @@ namespace MuGet.Forms.ViewModels
                 return;
 
             IsBusy = true;
-            CurrentState = State.Loading;
+            State = State.Loading;
 
             try
             {
@@ -224,7 +225,7 @@ namespace MuGet.Forms.ViewModels
             }
             finally
             {
-                CurrentState = State.None;
+                State = State.None;
                 IsBusy = false;
             }            
         }
@@ -247,13 +248,13 @@ namespace MuGet.Forms.ViewModels
                                 ? detailsUrl.Replace("nuget.org", "fuget.org")
                                 : detailsUrl;
 
-                            await Browser.OpenAsync(detailsUrl);
+                            await _browser.OpenAsync(detailsUrl);
                         }
                         break;
                     case LinkType.Project:
                         if (!string.IsNullOrEmpty(Entry.ProjectUrl))
                         {
-                            await Browser.OpenAsync(Entry.ProjectUrl);
+                            await _browser.OpenAsync(Entry.ProjectUrl);
                         }
                         break;
                     case LinkType.Repository:
@@ -262,7 +263,7 @@ namespace MuGet.Forms.ViewModels
                     case LinkType.License:
                         if (!string.IsNullOrEmpty(Entry.LicenseUrl))
                         {
-                            await Browser.OpenAsync(Entry.LicenseUrl);
+                            await _browser.OpenAsync(Entry.LicenseUrl);
                         }
                         break;
                     default:
@@ -279,7 +280,7 @@ namespace MuGet.Forms.ViewModels
                     var detailsUrl = source.PackageDetailsUriTemplate
                         .Replace("{id}", PackageId)
                         .Replace("{version}", Version);
-                    await Browser.OpenAsync(detailsUrl);
+                    await _browser.OpenAsync(detailsUrl);
                 }
             }
         }

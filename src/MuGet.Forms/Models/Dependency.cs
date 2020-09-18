@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using NuGet.Versioning;
 
-namespace MuGet.Forms.Models
+namespace MuGet.Models
 {
     public class Dependency
     {

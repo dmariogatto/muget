@@ -1,13 +1,9 @@
-﻿using System;
-using Android.Content.Res;
+﻿using Android.Content.Res;
 using Android.OS;
 using Android.Runtime;
-using MuGet.Forms.Services;
-using Plugin.CurrentActivity;
-using Xamarin.Forms;
+using System;
 
-[assembly: Dependency(typeof(EnvironmentService_Droid))]
-namespace MuGet.Forms.Services
+namespace MuGet.Services
 {
     [Preserve(AllMembers = true)]
     public class EnvironmentService_Droid : IEnvironmentService
@@ -17,7 +13,7 @@ namespace MuGet.Forms.Services
 
         public Theme GetOperatingSystemTheme()
         {
-            var uiModeFlags = CrossCurrentActivity.Current.AppContext.Resources.Configuration.UiMode & UiMode.NightMask;
+            var uiModeFlags = Xamarin.Essentials.Platform.AppContext.Resources.Configuration.UiMode & UiMode.NightMask;
             switch (uiModeFlags)
             {
                 case UiMode.NightYes:

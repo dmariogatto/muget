@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MuGet.Forms.Models
+namespace MuGet.Models
 {
     public class PackageEntry
     {

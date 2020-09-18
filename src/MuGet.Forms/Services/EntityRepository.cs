@@ -1,12 +1,12 @@
 ﻿using LiteDB;
-using MuGet.Forms.Models;
+using MuGet.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using Xamarin.Essentials;
 
-namespace MuGet.Forms.Services
+namespace MuGet.Services
 {
     public class EntityRepository<T> : IEntityRepository<T> where T : IEntity
     {

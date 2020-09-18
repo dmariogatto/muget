@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace MuGet.Forms.Services
+namespace MuGet.Services
 {
     public interface ILocalise
     {

@@ -1,6 +1,6 @@
-﻿using MuGet.Forms.Localisation;
-using MuGet.Forms.Models;
-using MuGet.Forms.Services;
+﻿using MuGet.Localisation;
+using MuGet.Models;
+using MuGet.Services;
 using Shiny.Jobs;
 using Shiny.Notifications;
 using System;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace MuGet.Forms
+namespace MuGet
 {
     public class NuGetJob : IJob
     {

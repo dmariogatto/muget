@@ -1,9 +1,9 @@
-﻿using MuGet.Forms.Models;
+﻿using MuGet.Models;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace MuGet.Forms.Services
+namespace MuGet.Services
 {
     public interface INuGetService
     {

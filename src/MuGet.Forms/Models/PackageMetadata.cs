@@ -1,10 +1,10 @@
 ﻿using MvvmHelpers;
 using Newtonsoft.Json;
-using MuGet.Forms.Localisation;
+using MuGet.Localisation;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MuGet.Forms.Models
+namespace MuGet.Models
 {
     public class PackageMetadata : ObservableObject
     {
@@ -20,12 +20,7 @@ namespace MuGet.Forms.Models
         public string Summary { get; set; }
         public string Title { get; set; }
 
-        private string _iconUrl;
-        public string IconUrl
-        {
-            get => !string.IsNullOrEmpty(_iconUrl) ? _iconUrl : (string)Xamarin.Forms.Application.Current.Resources["PackageIcon"];
-            set => _iconUrl = value;
-        }
+        public string IconUrl { get; set; }
 
         public string LicenseUrl { get; set; }
         public string ProjectUrl { get; set; }
@@ -57,7 +52,7 @@ namespace MuGet.Forms.Models
         [JsonIgnore]
         public string ValidatedIconUrl => IsIconUrlValid
             ? IconUrl
-            : (string)Xamarin.Forms.Application.Current.Resources["PackageIcon"];
+            : string.Empty;
 
         [JsonIgnore]
         public string SearchDescription => !string.IsNullOrEmpty(Summary)

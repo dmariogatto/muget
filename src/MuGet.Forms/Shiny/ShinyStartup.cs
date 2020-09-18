@@ -1,10 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using MuGet.Forms.Services;
-using MuGet.Forms.ViewModels;
+using MuGet.Services;
 using Shiny;
 using Shiny.Jobs;
+using Xamarin.Essentials.Interfaces;
 
-namespace MuGet.Forms
+namespace MuGet
 {
     public class ShinyStartup : Shiny.ShinyStartup
     {
@@ -21,16 +21,9 @@ namespace MuGet.Forms
             // register your shiny services here
             services.UseNotifications<NotificationDelegate>(false);
 
-            services.AddSingleton<ILogger, Logger>();
-            services.AddSingleton<ICacheProvider, InMemoryCache>();
-            services.AddSingleton<INuGetService, NuGetService>();
-            services.AddSingleton<IMuGetPackageService, MuGetPackageService>();
-
-            services.AddSingleton<MainViewModel>();
-            services.AddSingleton<HomeViewModel>();
-            services.AddSingleton<PackageViewModel>();
-            services.AddSingleton<SettingsViewModel>();
+            services.AddSingleton(typeof(ILauncher), (p) => IoC.Resolve<ILauncher>());
+            services.AddSingleton(typeof(INuGetService), (p) => IoC.Resolve<INuGetService>());
+            services.AddSingleton(typeof(ILogger), (p) => IoC.Resolve<ILogger>());
         }
-
     }
 }

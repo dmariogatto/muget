@@ -1,7 +1,6 @@
 ﻿using MvvmHelpers;
-using Xamarin.Forms;
 
-namespace MuGet.Forms.Models
+namespace MuGet.Models
 {
     public class MuGetPackage : ObservableObject
     {

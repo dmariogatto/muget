@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using System;
 
-namespace MuGet.Forms.Models
+namespace MuGet.Models
 {
     public interface IEntity
     {        

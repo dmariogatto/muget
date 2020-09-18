@@ -132,6 +132,9 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs">
+      <Version>7.1.0.454</Version>
+    </PackageReference>
     <PackageReference Include="AiForms.SettingsView">
       <Version>1.2.12-pre</Version>
     </PackageReference>
@@ -153,6 +156,9 @@
     <PackageReference Include="Shiny.Notifications">
       <Version>1.2.0.1686</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Essentials.Interfaces">
+      <Version>1.5.3.2</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
       <Version>2.4.11.982</Version>
     </PackageReference>
@@ -160,7 +166,6 @@
       <Version>2.4.11.982</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.847" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
     <PackageReference Include="Xamarin.Forms.PancakeView">
       <Version>1.4.2</Version>
     </PackageReference>
@@ -169,12 +174,6 @@
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\MuGet.Forms\MuGet.Forms.csproj">
-      <Project>{64CC6E15-23D9-4E12-9252-C678DE14AC0A}</Project>
-      <Name>MuGet.Forms</Name>
-    </ProjectReference>
-  </ItemGroup>
   <ItemGroup>
     <Folder Include="Effects\" />
   </ItemGroup>
@@ -195,5 +194,15 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\nuget.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MuGet.Forms.UI\MuGet.Forms.UI.csproj">
+      <Project>{C0280F9C-7CE5-40D2-B334-8356BFFD56E6}</Project>
+      <Name>MuGet.Forms.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MuGet.Forms\MuGet.csproj">
+      <Project>{26713020-E271-43A8-9B8F-AFFD252E56C5}</Project>
+      <Name>MuGet</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

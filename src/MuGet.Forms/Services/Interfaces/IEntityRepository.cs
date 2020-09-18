@@ -1,9 +1,9 @@
-﻿using MuGet.Forms.Models;
+﻿using MuGet.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace MuGet.Forms.Services
+namespace MuGet.Services
 {
     public interface IEntityRepository<T> where T : IEntity
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MuGet.Forms.Models
+namespace MuGet.Models
 {
     public class PackageSource : Entity
     {

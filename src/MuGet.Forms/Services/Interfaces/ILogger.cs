@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace MuGet.Forms.Services
+namespace MuGet.Services
 {
     public interface ILogger
     {

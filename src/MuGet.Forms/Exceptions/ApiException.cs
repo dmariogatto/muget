@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MuGet.Forms.Exceptions
+namespace MuGet.Exceptions
 {
     public class ApiException : Exception
     {

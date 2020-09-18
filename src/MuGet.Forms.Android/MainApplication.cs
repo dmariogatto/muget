@@ -1,7 +1,10 @@
-﻿using System;
-using Android.App;
+﻿using Android.App;
 using Android.Runtime;
-using Plugin.CurrentActivity;
+using MuGet.Forms.Android.Services;
+using MuGet.Forms.Services;
+using MuGet.Forms.UI.Services;
+using MuGet.Services;
+using System;
 
 namespace MuGet.Forms.Android
 {
@@ -20,7 +23,10 @@ namespace MuGet.Forms.Android
         public override void OnCreate()
         {
             base.OnCreate();
-            CrossCurrentActivity.Current.Init(this);
+
+            IoC.RegisterSingleton<ILocalise, LocaliseService_Droid>();
+            IoC.RegisterSingleton<IEnvironmentService, EnvironmentService_Droid>();
+            IoC.RegisterSingleton<IRendererResolver, RendererResolver_Droid>();
         }
     }
 }

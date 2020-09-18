@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 
-namespace MuGet.Forms.Services
+namespace MuGet.Services
 {
     public class Logger : ILogger
     {

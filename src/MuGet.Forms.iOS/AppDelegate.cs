@@ -1,5 +1,9 @@
 ﻿using Foundation;
-using MuGet.Forms.Views;
+using MuGet.Forms.iOS.Services;
+using MuGet.Forms.UI;
+using MuGet.Forms.UI.Services;
+using MuGet.Forms.UI.Views;
+using MuGet.Services;
 using Shiny;
 using System;
 using System.Linq;
@@ -24,6 +28,10 @@ namespace MuGet.Forms.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            IoC.RegisterSingleton<ILocalise, LocaliseService_iOS>();
+            IoC.RegisterSingleton<IEnvironmentService, EnvironmentService_iOS>();
+            IoC.RegisterSingleton<IRendererResolver, RendererResolver_iOS>();
+
 #if DEBUG
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
 #else

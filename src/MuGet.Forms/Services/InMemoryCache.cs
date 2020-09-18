@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.Caching.Memory;
 using System;
 
-namespace MuGet.Forms.Services
+namespace MuGet.Services
 {
-    public class InMemoryCache : ICacheProvider
+    public class InMemoryCache : ICacheService
     {
         private readonly MemoryCache _cache = new MemoryCache(new MemoryCacheOptions());
 

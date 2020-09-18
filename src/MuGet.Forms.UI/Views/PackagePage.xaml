@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:BasePage
+    x:Class="MuGet.Forms.UI.Views.PackagePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:muget="clr-namespace:MuGet;assembly=MuGet"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:helpers="clr-namespace:MuGet.Forms.UI.Helpers"
+    xmlns:local="clr-namespace:MuGet.Forms.UI"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:state="clr-namespace:Xamarin.Forms.StateSquid;assembly=Xamarin.Forms.StateSquid"
+    xmlns:tabs="clr-namespace:Sharpnado.Presentation.Forms.CustomViews.Tabs;assembly=Sharpnado.Presentation.Forms"
+    xmlns:viewModels="clr-namespace:MuGet.ViewModels;assembly=MuGet"
+    xmlns:views="clr-namespace:MuGet.Forms.UI.Views"
+    xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:controls="clr-namespace:MuGet.Forms.UI.Controls"
+    Title="{Binding Entry.Id}"
+    x:DataType="viewModels:PackageViewModel"
+    x:TypeArguments="viewModels:PackageViewModel"
+    Shell.NavBarIsVisible="False"
+    mc:Ignorable="d">
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior Command="{Binding BackCommand}" />
+    </Shell.BackButtonBehavior>
+
+    <views:BasePage.Content>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid
+                x:Name="HeaderView"
+                BackgroundColor="{DynamicResource CardBackgroundColor}"
+                RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="36" />
+                </Grid.RowDefinitions>
+
+                <Grid ColumnSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="36" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button
+                        x:Name="BackButton"
+                        Margin="0"
+                        Padding="0"
+                        BackgroundColor="Transparent"
+                        Clicked="BackClicked"
+                        ContentLayout="Left,0"
+                        FontSize="Medium"
+                        HorizontalOptions="Start"
+                        TextColor="{DynamicResource LinkColor}"
+                        VerticalOptions="CenterAndExpand">
+                        <Button.ImageSource>
+                            <FontImageSource
+                                FontFamily="{StaticResource MaterialFontFamily}"
+                                Glyph="{x:Static helpers:MaterialFont.ChevronLeft}"
+                                Color="{DynamicResource LinkColor}" />
+                        </Button.ImageSource>
+                    </Button>
+
+                    <Button
+                        x:Name="CloseButton"
+                        Grid.Column="1"
+                        BackgroundColor="Transparent"
+                        Clicked="CloseClicked"
+                        Command="{Binding CloseCommand}"
+                        IsVisible="False"
+                        Style="{DynamicResource ButtonIconStyle}"
+                        Text="{x:Static helpers:MaterialFont.Close}"
+                        TextColor="{DynamicResource LinkColor}" />
+                </Grid>
+                <Grid
+                    Grid.Row="1"
+                    Margin="6,0,6,0"
+                    state:StateLayout.CurrentState="{Binding State}">
+                    <state:StateLayout.StateViews>
+                        <state:StateView StateKey="Loading">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="48" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <state:SkeletonView
+                                    HeightRequest="48"
+                                    HorizontalOptions="Start"
+                                    Style="{StaticResource SkeletonStyle}"
+                                    VerticalOptions="Center"
+                                    WidthRequest="48" />
+                                <StackLayout Grid.Column="1" VerticalOptions="Center">
+                                    <state:SkeletonView
+                                        HeightRequest="18"
+                                        Style="{StaticResource SkeletonStyle}"
+                                        WidthRequest="192" />
+                                    <state:SkeletonView
+                                        HeightRequest="16"
+                                        HorizontalOptions="Start"
+                                        Style="{StaticResource SkeletonStyle}"
+                                        WidthRequest="48" />
+                                </StackLayout>
+                            </Grid>
+                        </state:StateView>
+                        <state:StateView StateKey="Error">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <yummy:PancakeView Style="{DynamicResource IconYummyStyle}" VerticalOptions="Center">
+                                    <ffimageloading:SvgCachedImage
+                                        DownsampleToViewSize="true"
+                                        HeightRequest="48"
+                                        Source="{DynamicResource PackageIcon}"
+                                        WidthRequest="48" />
+                                </yummy:PancakeView>
+
+                                <StackLayout
+                                    Grid.Column="1"
+                                    HorizontalOptions="FillAndExpand"
+                                    Spacing="0"
+                                    VerticalOptions="CenterAndExpand">
+                                    <ScrollView Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                                        <ContentView Padding="0,4,0,5">
+                                            <Label
+                                                FontAttributes="Bold"
+                                                Style="{DynamicResource LabelTitleStyle}"
+                                                Text="{Binding PackageId}" />
+                                        </ContentView>
+                                    </ScrollView>
+                                    <Label
+                                        FontSize="Caption"
+                                        HorizontalOptions="Start"
+                                        Style="{DynamicResource LabelStyle}"
+                                        Text="{local:Translate CannotFindPackage}" />
+                                </StackLayout>
+                            </Grid>
+                        </state:StateView>
+                    </state:StateLayout.StateViews>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <yummy:PancakeView
+                            BackgroundColor="{DynamicResource CardBackgroundColor}"
+                            CornerRadius="3"
+                            Elevation="4"
+                            VerticalOptions="Center">
+                            <ffimageloading:SvgCachedImage
+                                DownsampleToViewSize="true"
+                                ErrorPlaceholder="{DynamicResource PackageIcon}"
+                                HeightRequest="48"
+                                LoadingPlaceholder="{DynamicResource PackageIcon}"
+                                Source="{Binding Entry.IconUrl, Converter={StaticResource IconConverter}}"
+                                WidthRequest="48" />
+                        </yummy:PancakeView>
+
+                        <StackLayout
+                            Grid.Column="1"
+                            HorizontalOptions="FillAndExpand"
+                            Spacing="0"
+                            VerticalOptions="Center">
+                            <ScrollView Orientation="Horizontal" VerticalOptions="Center">
+                                <ContentView Padding="0,5,0,6">
+                                    <Label
+                                        FontAttributes="Bold"
+                                        Style="{DynamicResource LabelTitleStyle}"
+                                        Text="{Binding PackageId}" />
+                                </ContentView>
+                            </ScrollView>
+                            <StackLayout Orientation="Horizontal">
+                                <Label
+                                    FontSize="Caption"
+                                    HorizontalOptions="Start"
+                                    Style="{DynamicResource LabelIconStyle}"
+                                    Text="{x:Static helpers:MaterialFont.Flag}" />
+                                <Label
+                                    FontSize="Caption"
+                                    HorizontalOptions="Start"
+                                    Style="{DynamicResource LabelStyle}"
+                                    Text="{Binding Entry.PackVersion}" />
+                            </StackLayout>
+                            <Label
+                                FontAttributes="Italic"
+                                FontSize="Caption"
+                                IsVisible="{Binding Entry.PackVersion.IsPrerelease}"
+                                Text="prerelease"
+                                TextColor="{DynamicResource AccentColor}" />
+                        </StackLayout>
+                        <Button
+                            Grid.Column="2"
+                            BackgroundColor="Transparent"
+                            Command="{Binding FavouriteCommand}"
+                            CommandParameter="{Binding Entry}"
+                            Style="{DynamicResource ButtonIconStyle}"
+                            Text="{Binding Entry.IsFavourite, Converter={StaticResource BoolToHeartConverter}}"
+                            VerticalOptions="Center" />
+                    </Grid>
+                </Grid>
+
+                <tabs:TabHostView
+                    x:Name="TabHost"
+                    Grid.Row="2"
+                    Margin="0,4,0,0"
+                    SelectedIndex="0"
+                    SelectedTabIndexChanged="SelectedTabIndexChanged"
+                    ShadowType="None"
+                    ShowScrollbar="False"
+                    TabType="Fixed">
+                    <tabs:TabHostView.Tabs>
+                        <tabs:UnderlinedTabItem
+                            Label="{local:Translate Details}"
+                            SelectedTabColor="{DynamicResource LinkColor}"
+                            UnselectedLabelColor="{DynamicResource PrimaryTextColor}" />
+                        <tabs:UnderlinedTabItem
+                            Label="{local:Translate Depedencies}"
+                            SelectedTabColor="{DynamicResource LinkColor}"
+                            UnselectedLabelColor="{DynamicResource PrimaryTextColor}" />
+                        <tabs:UnderlinedTabItem
+                            Label="{local:Translate Versions}"
+                            SelectedTabColor="{DynamicResource LinkColor}"
+                            UnselectedLabelColor="{DynamicResource PrimaryTextColor}" />
+                    </tabs:TabHostView.Tabs>
+                </tabs:TabHostView>
+            </Grid>
+
+            <Grid Grid.Row="1" state:StateLayout.CurrentState="{Binding State}">
+                <state:StateLayout.StateViews>
+                    <state:StateView StateKey="Loading">
+                        <ActivityIndicator
+                            Margin="0,24,0,0"
+                            HeightRequest="24"
+                            HorizontalOptions="Center"
+                            IsRunning="{Binding IsBusy}"
+                            IsVisible="{Binding IsBusy}"
+                            WidthRequest="24"
+                            Color="{DynamicResource AccentColor}" />
+                    </state:StateView>
+                    <state:StateView StateKey="Error">
+                        <StackLayout Padding="6,4,6,4" IsVisible="{Binding Entry, Converter={StaticResource NullToInverseBoolConverter}}">
+                            <Label Style="{DynamicResource LabelStyle}" Text="{local:Translate CannotFindPackageDescription}" />
+                            <Button
+                                Command="{Binding LinkTappedCommand}"
+                                CommandParameter="{x:Static muget:LinkType.NuGet}"
+                                ContentLayout="Left,5"
+                                HorizontalOptions="Center"
+                                Text="NuGet.org" />
+                        </StackLayout>
+                    </state:StateView>
+                </state:StateLayout.StateViews>
+
+                <ScrollView
+                    x:Name="PackageDetails"
+                    Padding="0,3,0,3"
+                    IsVisible="True">
+                    <controls:PackageDetailsView BindingContext="{Binding}" />
+                </ScrollView>
+                <controls:DependanciesView
+                    x:Name="Dependancies"
+                    BindingContext="{Binding}"
+                    IsVisible="False" />
+                <controls:VersionsView
+                    x:Name="Versions"
+                    BindingContext="{Binding}"
+                    IsVisible="False" />
+            </Grid>
+        </Grid>
+    </views:BasePage.Content>
+</views:BasePage>

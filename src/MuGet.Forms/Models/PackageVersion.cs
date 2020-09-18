@@ -1,7 +1,7 @@
 ﻿using NuGet.Versioning;
 using System;
 
-namespace MuGet.Forms.Models
+namespace MuGet.Models
 {
     public class PackageVersion : IComparable, IComparable<PackageVersion>
     {

@@ -1,6 +1,6 @@
 ﻿using LiteDB;
-using MuGet.Forms.Exceptions;
-using MuGet.Forms.Models;
+using MuGet.Exceptions;
+using MuGet.Models;
 using Newtonsoft.Json;
 using Polly;
 using Polly.Retry;
@@ -15,24 +15,27 @@ using System.Threading.Tasks;
 using Xamarin.Essentials;
 using JsonSerializer = Newtonsoft.Json.JsonSerializer;
 
-namespace MuGet.Forms.Services
+namespace MuGet.Services
 {
     public class NuGetService : INuGetService
     {
         private const string NuGet = "https://api.nuget.org/v3/index.json";
 
-        private readonly static string _dbPath = Path.Combine(FileSystem.AppDataDirectory, "nugets.db");
-
-        private readonly static HttpClient _httpClient = new HttpClient(new HttpClientHandler()
+        private readonly static string DbPath = Path.Combine(FileSystem.AppDataDirectory, "nugets.db");
+        private readonly static HttpClient HttpClient = new HttpClient(new HttpClientHandler()
         {
             // Required for Android
             // https://github.com/xamarin/xamarin-android/issues/2619
             AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
         });
+        private readonly static JsonSerializer JsonSerializer = JsonSerializer.Create(new JsonSerializerSettings()
+        {
+            DateTimeZoneHandling = DateTimeZoneHandling.Utc
+        });
 
         private readonly LiteDatabase _db;
 
-        private readonly ICacheProvider _cache;
+        private readonly ICacheService _cache;
         private readonly TimeSpan _defaultCacheExpires = TimeSpan.FromMinutes(10);
 
         private readonly IEntityRepository<PackageSource> _packageSourceRepo;
@@ -42,7 +45,7 @@ namespace MuGet.Forms.Services
         private readonly ILogger _logger;
         private readonly AsyncRetryPolicy _retryPolicy;
         
-        public NuGetService(ICacheProvider cacheProvider, ILogger logger)
+        public NuGetService(ICacheService cacheProvider, ILogger logger)
         {
             if (cacheProvider == null) throw new ArgumentNullException(nameof(cacheProvider));
             if (logger == null) throw new ArgumentNullException(nameof(logger));
@@ -50,7 +53,7 @@ namespace MuGet.Forms.Services
             _cache = cacheProvider;
             _logger = logger;
             
-            _db = new LiteDatabase($"Filename={_dbPath};Upgrade=true;");
+            _db = new LiteDatabase($"Filename={DbPath};Upgrade=true;");
             _db.Pragma("UTC_DATE", true);
 
             _packageSourceRepo = new EntityRepository<PackageSource>(_db, TimeSpan.FromDays(7));
@@ -318,7 +321,7 @@ namespace MuGet.Forms.Services
                 return false;
 
             using (var request = new HttpRequestMessage(HttpMethod.Head, url))
-            using (var response = await _httpClient.SendAsync(request,
+            using (var response = await HttpClient.SendAsync(request,
                 HttpCompletionOption.ResponseHeadersRead,
                 cancellationToken).ConfigureAwait(false))
             {
@@ -327,18 +330,13 @@ namespace MuGet.Forms.Services
         }
 
         #region Http Methods
-        private readonly static JsonSerializer _jsonSerializer = JsonSerializer.Create(new JsonSerializerSettings()
-        {
-            DateTimeZoneHandling = DateTimeZoneHandling.Utc
-        });
-
         private static async Task<T> GetAsync<T>(string url, CancellationToken cancellationToken)
         {
             var result = default(T);
             var apiEx = default(ApiException);
 
             using (var request = new HttpRequestMessage(HttpMethod.Get, url))
-            using (var response = await _httpClient.SendAsync(request,
+            using (var response = await HttpClient.SendAsync(request,
                 HttpCompletionOption.ResponseHeadersRead,
                 cancellationToken).ConfigureAwait(false))
             {
@@ -373,7 +371,7 @@ namespace MuGet.Forms.Services
             using (var sr = new StreamReader(stream))
             using (var jtr = new JsonTextReader(sr))
             {                
-                var searchResult = _jsonSerializer.Deserialize<T>(jtr);
+                var searchResult = JsonSerializer.Deserialize<T>(jtr);
                 return searchResult;
             }
         }

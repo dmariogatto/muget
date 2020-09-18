@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MuGet.Forms.Models
+namespace MuGet.Models
 {
     public class PlatformCulture
     {

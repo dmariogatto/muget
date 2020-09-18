@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 
-namespace MuGet.Forms.Models
+namespace MuGet.Models
 {
     public class CatalogEntry : ObservableObject
     {
@@ -15,12 +15,7 @@ namespace MuGet.Forms.Models
         public string Authors { get; set; }
         public string Description { get; set; }
 
-        private string _iconUrl;
-        public string IconUrl
-        {
-            get => !string.IsNullOrEmpty(_iconUrl) ? _iconUrl : (string)Xamarin.Forms.Application.Current.Resources["PackageIcon"];
-            set => _iconUrl = value;
-        }
+        public string IconUrl { get; set; }
 
         public string Id { get; set; }
         public string Language { get; set; }

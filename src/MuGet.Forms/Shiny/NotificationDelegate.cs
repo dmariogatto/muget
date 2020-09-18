@@ -1,20 +1,21 @@
-﻿using MuGet.Forms.Models;
-using MuGet.Forms.Services;
-using MuGet.Forms.Views;
+﻿using MuGet.Models;
+using MuGet.Services;
 using Shiny.Notifications;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using Xamarin.Forms;
+using Xamarin.Essentials.Interfaces;
 
-namespace MuGet.Forms
+namespace MuGet
 {
     public class NotificationDelegate : INotificationDelegate
     {
+        private readonly ILauncher _launcher;
         private readonly ILogger _logger;
 
-        public NotificationDelegate(ILogger logger)
+        public NotificationDelegate(ILauncher launcher, ILogger logger)
         {
+            _launcher = launcher;
             _logger = logger;
         }
 
@@ -25,21 +26,14 @@ namespace MuGet.Forms
 
             if (payload?.Any() == true &&
                 payload.ContainsKey(nameof(CatalogEntry.Id)) &&
-                payload.ContainsKey(nameof(CatalogEntry.Version)) &&
-                Application.Current.MainPage is NavigationPage navPage)
+                payload.ContainsKey(nameof(CatalogEntry.Version)))
             {
                 try
                 {
                     var packageId = payload[nameof(CatalogEntry.Id)];
                     var version = payload[nameof(CatalogEntry.Version)];
 
-                    var packagePage = new PackagePage
-                    {
-                        PackageId = packageId,
-                        Version = version
-                    };
-
-                    await navPage.PushAsync(packagePage);
+                    await _launcher.TryOpenAsync($"muget://package/{packageId}/{version}");
                 }
                 catch (Exception ex)
                 {
@@ -50,7 +44,7 @@ namespace MuGet.Forms
 
         public Task OnReceived(Notification notification)
         {
-            return Task.FromResult(0);
+            return Task.CompletedTask;
         }
     }
 }

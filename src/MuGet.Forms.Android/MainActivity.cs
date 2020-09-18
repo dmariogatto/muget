@@ -1,11 +1,12 @@
-﻿using System;
-using Android.App;
+﻿using Android.App;
 using Android.Content;
 using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
-using MuGet.Forms.Views;
+using MuGet.Forms.UI;
+using MuGet.Forms.UI.Views;
 using Shiny;
+using System;
 using Xamarin.Forms;
 
 namespace MuGet.Forms.Android
@@ -33,6 +34,7 @@ namespace MuGet.Forms.Android
 
             base.OnCreate(savedInstanceState);
 
+            Acr.UserDialogs.UserDialogs.Init(this);
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: true);
             AiForms.Renderers.Droid.SettingsViewInit.Init();
 

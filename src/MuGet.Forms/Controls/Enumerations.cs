@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace MuGet.Forms.Controls
+namespace MuGet
 {
     public enum LinkType
     {

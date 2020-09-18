@@ -1,16 +1,17 @@
-﻿using MuGet.Forms.Localisation;
-using MuGet.Forms.Models;
-using MuGet.Forms.Services;
+﻿using MuGet.Localisation;
+using MuGet.Models;
+using MuGet.Services;
 using MvvmHelpers;
 using MvvmHelpers.Commands;
-using Plugin.StoreReview;
+using Plugin.StoreReview.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
+using Xamarin.Essentials.Interfaces;
 
-namespace MuGet.Forms.ViewModels
+namespace MuGet.ViewModels
 {
     public enum SettingItem
     {
@@ -28,23 +29,45 @@ namespace MuGet.Forms.ViewModels
         private const string GitHubRepo = "https://github.com/dmariogatto/muget";
         private const string NuGetUrl = "https://nuget.org/";
 
+        private readonly IBrowser _browser;
+        private readonly ILauncher _launcher;
+        private readonly IDeviceInfo _deviceInfo;
+        private readonly IVersionTracking _versionTracking;
+        private readonly IEmail _email;
+
+        private readonly IStoreReview _storeReview;
+
         private readonly IMuGetPackageService _muGetPackageService;
 
         public SettingsViewModel(
+            IBrowser browser,
+            ILauncher launcher,
+            IDeviceInfo deviceInfo,
+            IVersionTracking versionTracking,
+            IEmail email,
+            IStoreReview storeReview,
             IMuGetPackageService muGetPackageService,
-            INuGetService nuGetService,
-            ILogger logger) : base(nuGetService, logger)
+            IBvmConstructor bvmConstructor) : base(bvmConstructor)
         {
             Title = Resources.Settings;
 
+            _browser = browser;
+            _launcher = launcher;
+            _deviceInfo = deviceInfo;
+            _versionTracking = versionTracking;
+            _email = email;
+
+            _storeReview = storeReview;
+
             _muGetPackageService = muGetPackageService;
+
             MuGetPackages = new ObservableRangeCollection<MuGetPackage>(_muGetPackageService.GetPackages());
 
             SettingsItemTappedCommand = new AsyncCommand<SettingItem>(SettingsItemTappedAsync);
             PackageTappedCommand = new AsyncCommand<MuGetPackage>(async (p) =>
             {
                 if (!string.IsNullOrEmpty(p?.PackageId))
-                    await Launcher.TryOpenAsync($"muget://package/{p.PackageId}/");
+                    await _launcher.TryOpenAsync($"muget://package/{p.PackageId}/");
             });
             ResetNotificationsCommand = new Command(ResetNotifications);
             RunJobsCommand = new AsyncCommand(RunJobsAsync);
@@ -82,8 +105,8 @@ namespace MuGet.Forms.ViewModels
 
         public ObservableRangeCollection<MuGetPackage> MuGetPackages { get; private set; }
 
-        public string Version => VersionTracking.CurrentVersion;
-        public string Build => VersionTracking.CurrentBuild;
+        public string Version => _versionTracking.CurrentVersion;
+        public string Build => _versionTracking.CurrentBuild;
 
         public AsyncCommand<SettingItem> SettingsItemTappedCommand { get; private set; }
         public AsyncCommand<MuGetPackage> PackageTappedCommand { get; private set; }
@@ -95,17 +118,17 @@ namespace MuGet.Forms.ViewModels
             switch (item)
             {
                 case SettingItem.RateApp:
-                    var id = DeviceInfo.Platform == DevicePlatform.iOS ? AppleAppId : AndroidAppId;
-                    CrossStoreReview.Current.OpenStoreReviewPage(id);
+                    var id = _deviceInfo.Platform == DevicePlatform.iOS ? AppleAppId : AndroidAppId;
+                    _storeReview.OpenStoreReviewPage(id);
                     break;
                 case SettingItem.SendFeedback:
                     await SendFeedbackAsync();
                     break;
                 case SettingItem.ViewGitHub:
-                    await Browser.OpenAsync(GitHubRepo);
+                    await _browser.OpenAsync(GitHubRepo);
                     break;
                 case SettingItem.NuGet:
-                    await Browser.OpenAsync(NuGetUrl);
+                    await _browser.OpenAsync(NuGetUrl);
                     break;
             }
         }
@@ -114,7 +137,7 @@ namespace MuGet.Forms.ViewModels
         {
             var message = new EmailMessage
             {
-                Subject = string.Format("MuGet Feedback ({0})", DeviceInfo.Platform),
+                Subject = string.Format("MuGet Feedback ({0})", _deviceInfo.Platform),
                 Body = string.Empty,
                 To = new List<string>(1) { FeedbackEmail },
             };
@@ -123,20 +146,20 @@ namespace MuGet.Forms.ViewModels
             const string gmail = "Gmail";
             const string appleMail = "Mail";
 
-            if (DeviceInfo.Platform == DevicePlatform.iOS &&
-                await Launcher.CanOpenAsync(gmailScheme))
+            if (_deviceInfo.Platform == DevicePlatform.iOS &&
+                await _launcher.CanOpenAsync(gmailScheme))
             {
-                var option = await DisplayAction(Resources.SendFeedback, Resources.Cancel, null, gmail, appleMail);
+                var option = await Dialogs.ActionSheetAsync(Resources.SendFeedback, Resources.Cancel, null, null, gmail, appleMail);
 
                 if (!string.IsNullOrEmpty(option))
                 {
                     switch (option)
                     {
                         case gmail:
-                            await Launcher.TryOpenAsync($"{gmailScheme}co?subject={message.Subject}&body={message.Body}&to={message.To.First()}");
+                            await _launcher.TryOpenAsync($"{gmailScheme}co?subject={message.Subject}&body={message.Body}&to={message.To.First()}");
                             break;
                         case appleMail:
-                            await Email.ComposeAsync(message);
+                            await _email.ComposeAsync(message);
                             break;
                         default:
                             break;
@@ -145,7 +168,7 @@ namespace MuGet.Forms.ViewModels
             }
             else
             {
-                await Email.ComposeAsync(message);
+                await _email.ComposeAsync(message);
             }
         }
 

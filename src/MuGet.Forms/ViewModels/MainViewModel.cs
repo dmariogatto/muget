@@ -1,6 +1,6 @@
-﻿using MuGet.Forms.Localisation;
-using MuGet.Forms.Models;
-using MuGet.Forms.Services;
+﻿using MuGet.Localisation;
+using MuGet.Models;
+using MuGet.Services;
 using MvvmHelpers;
 using MvvmHelpers.Commands;
 using System;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace MuGet.Forms.ViewModels
+namespace MuGet.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
@@ -18,9 +18,7 @@ namespace MuGet.Forms.ViewModels
         private readonly SemaphoreSlim _searchSemaphore = new SemaphoreSlim(1, 1);
         private CancellationTokenSource _searchCancellation;
 
-        public MainViewModel(
-            INuGetService nuGetService,
-            ILogger logger) : base(nuGetService, logger)
+        public MainViewModel(IBvmConstructor bvmConstructor) : base(bvmConstructor)
         {
             Title = Resources.Search;
 

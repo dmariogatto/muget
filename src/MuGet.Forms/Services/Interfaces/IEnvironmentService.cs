@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace MuGet.Forms.Services
+namespace MuGet.Services
 {
     public interface IEnvironmentService
     {

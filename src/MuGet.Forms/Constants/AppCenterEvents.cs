@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MuGet.Forms
+namespace MuGet
 {
     public static class AppCenterEvents
     {

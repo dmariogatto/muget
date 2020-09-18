@@ -1,8 +1,6 @@
-﻿using MuGet.Forms.iOS.Services;
-using MuGet.Forms.Services;
+﻿using MuGet.Forms.UI.Services;
 using Xamarin.Forms;
 
-[assembly: Dependency(typeof(RendererResolver_iOS))]
 namespace MuGet.Forms.iOS.Services
 {
     public class RendererResolver_iOS : IRendererResolver

@@ -70,6 +70,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs">
+      <Version>7.1.0.454</Version>
+    </PackageReference>
     <PackageReference Include="AiForms.SettingsView">
       <Version>1.2.12-pre</Version>
     </PackageReference>
@@ -78,9 +81,6 @@
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Crashes">
       <Version>3.2.2</Version>
-    </PackageReference>
-    <PackageReference Include="Plugin.CurrentActivity">
-      <Version>2.1.0.4</Version>
     </PackageReference>
     <PackageReference Include="Plugin.StoreReview">
       <Version>2.0.0.5</Version>
@@ -100,6 +100,9 @@
     <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView">
       <Version>28.0.0.3</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Essentials.Interfaces">
+      <Version>1.5.3.2</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
       <Version>2.4.11.982</Version>
     </PackageReference>
@@ -107,7 +110,6 @@
       <Version>2.4.11.982</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.847" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
     <PackageReference Include="Xamarin.Forms.PancakeView">
       <Version>1.4.2</Version>
     </PackageReference>
@@ -144,12 +146,6 @@
     <AndroidResource Include="Resources\mipmap-xhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MuGet.Forms\MuGet.Forms.csproj">
-      <Project>{2B91A55F-B077-4E78-9E3F-8BE68148472B}</Project>
-      <Name>MuGet.Forms</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\background_splash.axml" />
@@ -195,6 +191,16 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\nuget.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MuGet.Forms.UI\MuGet.Forms.UI.csproj">
+      <Project>{C0280F9C-7CE5-40D2-B334-8356BFFD56E6}</Project>
+      <Name>MuGet.Forms.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MuGet.Forms\MuGet.csproj">
+      <Project>{26713020-E271-43A8-9B8F-AFFD252E56C5}</Project>
+      <Name>MuGet</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

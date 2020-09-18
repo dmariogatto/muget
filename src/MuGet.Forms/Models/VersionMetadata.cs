@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace MuGet.Forms.Models
+namespace MuGet.Models
 {
     public class VersionMetadata
     {

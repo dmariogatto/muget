@@ -1,15 +1,11 @@
-﻿using System;
-using System.Globalization;
-using System.Threading;
-using Foundation;
-using Xamarin.Forms;
+﻿using Foundation;
+using MuGet.Models;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
-using MuGet.Forms.Services;
-using MuGet.Forms.Models;
+using System.Threading;
 
-[assembly: Dependency(typeof(LocaliseService_iOS))]
-namespace MuGet.Forms.Services
+namespace MuGet.Services
 {
     [Preserve(AllMembers = true)]
     public class LocaliseService_iOS : ILocalise

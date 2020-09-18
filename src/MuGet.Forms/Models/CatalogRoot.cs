@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace MuGet.Forms.Models
+namespace MuGet.Models
 {
     public class CatalogRoot
     {

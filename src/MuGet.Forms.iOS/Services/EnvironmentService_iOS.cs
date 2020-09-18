@@ -1,11 +1,9 @@
-﻿using System;
-using Foundation;
-using Xamarin.Forms;
+﻿using Foundation;
+using System;
 using UIKit;
-using MuGet.Forms.Services;
+using Xamarin.Forms;
 
-[assembly: Dependency(typeof(EnvironmentService_iOS))]
-namespace MuGet.Forms.Services
+namespace MuGet.Services
 {
     [Preserve(AllMembers = true)]
     public class EnvironmentService_iOS : IEnvironmentService

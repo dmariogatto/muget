@@ -1,8 +1,8 @@
-﻿using MuGet.Forms.Models;
+﻿using MuGet.Models;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MuGet.Forms.Services
+namespace MuGet.Services
 {
     public class MuGetPackageService : IMuGetPackageService
     {

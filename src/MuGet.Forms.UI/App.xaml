@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="MuGet.Forms.UI.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:MuGet.Forms.UI.Converters"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:state="clr-namespace:Xamarin.Forms.StateSquid;assembly=Xamarin.Forms.StateSquid"
+    xmlns:sv="clr-namespace:AiForms.Renderers;assembly=SettingsView"
+    xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    mc:Ignorable="d">
+    <Application.Resources>
+        <ResourceDictionary>
+            <converters:BoolToHeartConverter x:Key="BoolToHeartConverter" />
+            <converters:BoolToOpacityConverter x:Key="BoolToOpacityConverter" />
+            <converters:DateTimeToHumanizeConverter x:Key="DateTimeToHumanizeConverter" />
+            <converters:IconConverter x:Key="IconConverter" />
+            <converters:IntToBoolConverter x:Key="IntToBoolConverter" />
+            <converters:IntToInverseBoolConverter x:Key="IntToInverseBoolConverter" />
+            <converters:InverseBoolConverter x:Key="InverseBoolConverter" />
+            <converters:LinksToFormattedConverter x:Key="LinksToFormattedConverter" />
+            <converters:ListToBoolConverter x:Key="ListToBoolConverter" />
+            <converters:ListToInverseBoolConverter x:Key="ListToInverseBoolConverter" />
+            <converters:NullToBoolConverter x:Key="NullToBoolConverter" />
+            <converters:NullToInverseBoolConverter x:Key="NullToInverseBoolConverter" />
+            <converters:StringToBoolConverter x:Key="StringToBoolConverter" />
+            <converters:StringToInverseBoolConverter x:Key="StringToInverseBoolConverter" />
+
+            <Color x:Key="LinkColor">#0A84FF</Color>
+
+            <x:String x:Key="MaterialFontFamily">MaterialIcons</x:String>
+
+            <Style x:Key="SkeletonStyle" TargetType="state:SkeletonView">
+                <Setter Property="HeightRequest" Value="18" />
+                <Setter Property="WidthRequest" Value="128" />
+                <Setter Property="CornerRadius" Value="6" />
+                <Setter Property="BackgroundColor" Value="#A5A5A5" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+            </Style>
+
+            <Style x:Key="LabelIconStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource MaterialFontFamily}" />
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+            </Style>
+
+            <Style x:Key="ButtonIconStyle" TargetType="Button">
+                <Setter Property="FontFamily" Value="{StaticResource MaterialFontFamily}" />
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="BackgroundColor" Value="{DynamicResource PageBackgroundColor}" />
+                <Setter Property="CornerRadius" Value="24" />
+                <Setter Property="HeightRequest" Value="48" />
+                <Setter Property="WidthRequest" Value="48" />
+            </Style>
+
+            <Style x:Key="LabelHeaderStyle" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="Title" />
+                <Setter Property="TextColor" Value="{DynamicResource ContrastColor}" />
+                <Setter Property="Margin" Value="10,10,0,8" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+            </Style>
+
+            <Style x:Key="LabelTitleStyle" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="TextColor" Value="{DynamicResource SecondaryTextColor}" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+            </Style>
+
+            <Style x:Key="LabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+            </Style>
+
+            <Style x:Key="LabelSubStyle" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="{DynamicResource AccentColor}" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+            </Style>
+
+            <Style x:Key="CardYummyStyle" TargetType="yummy:PancakeView">
+                <Setter Property="Margin" Value="6,3,6,3" />
+                <Setter Property="Padding" Value="4" />
+                <Setter Property="Elevation" Value="2" />
+                <Setter Property="CornerRadius" Value="8" />
+                <Setter Property="IsClippedToBounds" Value="False" />
+                <Setter Property="BorderColor" Value="{DynamicResource CardBorderColor}" />
+                <Setter Property="BorderThickness" Value="{DynamicResource CardBorderWidth}" />
+                <Setter Property="BackgroundColor" Value="{DynamicResource CardBackgroundColor}" />
+            </Style>
+
+            <Style x:Key="IconYummyStyle" TargetType="yummy:PancakeView">
+                <Setter Property="Elevation" Value="1" />
+                <Setter Property="CornerRadius" Value="4" />
+                <Setter Property="IsClippedToBounds" Value="False" />
+                <Setter Property="BackgroundColor" Value="{DynamicResource CardIconBackgroundColor}" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+            <Style TargetType="sv:SettingsView">
+                <Setter Property="HeaderTextVerticalAlign" Value="Center" />
+                <Setter Property="HeaderFontSize" Value="Caption" />
+                <Setter Property="HeaderHeight" Value="48" />
+                <Setter Property="SeparatorColor" Value="{DynamicResource AccentColor}" />
+                <Setter Property="BackgroundColor" Value="{DynamicResource PageBackgroundColor}" />
+                <Setter Property="HeaderBackgroundColor" Value="{DynamicResource PageBackgroundColor}" />
+                <Setter Property="CellBackgroundColor" Value="{DynamicResource CardBackgroundColor}" />
+                <Setter Property="CellTitleColor" Value="{DynamicResource PrimaryTextColor}" />
+                <Setter Property="CellValueTextColor" Value="{DynamicResource SecondaryTextColor}" />
+                <Setter Property="CellDescriptionColor" Value="{DynamicResource AccentColor}" />
+                <Setter Property="CellDescriptionFontSize" Value="{DynamicResource CellDescriptionFontSize}" />
+                <Setter Property="CellAccentColor" Value="{DynamicResource AccentColor}" />
+                <Setter Property="SelectedColor" Value="{DynamicResource PageBackgroundColor}" />
+                <Setter Property="HeaderTextColor" Value="{DynamicResource PrimaryTextColor}" />
+                <Setter Property="FooterTextColor" Value="{DynamicResource PrimaryTextColor}" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
