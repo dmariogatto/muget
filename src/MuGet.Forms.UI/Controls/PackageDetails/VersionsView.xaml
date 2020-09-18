@@ -17,8 +17,7 @@
         ItemsSource="{Binding CatalogEntries}"
         SelectionMode="None"
         SeparatorVisibility="None">
-        <ListView.Header>            
-        </ListView.Header>
+        <ListView.Header />
         <ListView.ItemTemplate>
             <DataTemplate x:DataType="models:CatalogEntry">
                 <ViewCell>
