@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MuGet.Forms.iOS", "MuGet.Forms.iOS\MuGet.Forms.iOS.csproj", "{B560D7CF-6CFE-4A19-86B6-26EFBF937382}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MuGet.Localisation", "MuGet.Forms.Localisation\MuGet.Localisation.csproj", "{DF1651CF-4D3F-4C93-BC72-DC78400794F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MuGet.Localisation", "MuGet.Localisation\MuGet.Localisation.csproj", "{DF1651CF-4D3F-4C93-BC72-DC78400794F2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{208E9847-21AE-4C55-BBA0-509C6C33BDED}"
 	ProjectSection(SolutionItems) = preProject
@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MuGet.Forms.Android", "MuGe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MuGet.Forms.UI", "MuGet.Forms.UI\MuGet.Forms.UI.csproj", "{C0280F9C-7CE5-40D2-B334-8356BFFD56E6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MuGet", "MuGet.Forms\MuGet.csproj", "{26713020-E271-43A8-9B8F-AFFD252E56C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MuGet", "MuGet\MuGet.csproj", "{26713020-E271-43A8-9B8F-AFFD252E56C5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{AB0E823A-D138-4ABD-878D-3E7574A1D0B2}"
 EndProject

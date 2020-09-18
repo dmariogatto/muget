@@ -200,7 +200,7 @@
       <Project>{C0280F9C-7CE5-40D2-B334-8356BFFD56E6}</Project>
       <Name>MuGet.Forms.UI</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MuGet.Forms\MuGet.csproj">
+    <ProjectReference Include="..\MuGet\MuGet.csproj">
       <Project>{26713020-E271-43A8-9B8F-AFFD252E56C5}</Project>
       <Name>MuGet</Name>
     </ProjectReference>

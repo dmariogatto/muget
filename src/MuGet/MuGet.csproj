@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MuGet.Forms.Localisation\MuGet.Localisation.csproj" />
+    <ProjectReference Include="..\MuGet.Localisation\MuGet.Localisation.csproj" />
   </ItemGroup>
 
 </Project>
