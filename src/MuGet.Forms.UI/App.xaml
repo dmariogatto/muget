@@ -87,19 +87,23 @@
                 <Setter Property="VerticalTextAlignment" Value="Center" />
             </Style>
 
+            <yummy:Border
+                x:Key="CardYummyBorder"
+                Thickness="{DynamicResource CardBorderWidth}"
+                Color="{DynamicResource CardBorderColor}" />
+
             <Style x:Key="CardYummyStyle" TargetType="yummy:PancakeView">
                 <Setter Property="Margin" Value="6,3,6,3" />
                 <Setter Property="Padding" Value="4" />
-                <Setter Property="Elevation" Value="2" />
+                <Setter Property="Shadow" Value="{yummy:ShadowMarkup BlurRadius=2}" />
                 <Setter Property="CornerRadius" Value="8" />
                 <Setter Property="IsClippedToBounds" Value="False" />
-                <Setter Property="BorderColor" Value="{DynamicResource CardBorderColor}" />
-                <Setter Property="BorderThickness" Value="{DynamicResource CardBorderWidth}" />
+                <Setter Property="Border" Value="{DynamicResource CardYummyBorder}" />
                 <Setter Property="BackgroundColor" Value="{DynamicResource CardBackgroundColor}" />
             </Style>
 
             <Style x:Key="IconYummyStyle" TargetType="yummy:PancakeView">
-                <Setter Property="Elevation" Value="1" />
+                <Setter Property="Shadow" Value="{yummy:ShadowMarkup BlurRadius=1}" />
                 <Setter Property="CornerRadius" Value="4" />
                 <Setter Property="IsClippedToBounds" Value="False" />
                 <Setter Property="BackgroundColor" Value="{DynamicResource CardIconBackgroundColor}" />

@@ -96,7 +96,7 @@
                 BackgroundColor="{DynamicResource CardBackgroundColor}"
                 BorderThickness="0"
                 CornerRadius="6"
-                Elevation="6"
+                Shadow="{yummy:ShadowMarkup BlurRadius=6}"
                 Style="{DynamicResource CardYummyStyle}">
                 <SearchBar
                     BackgroundColor="{DynamicResource CardBackgroundColor}"
