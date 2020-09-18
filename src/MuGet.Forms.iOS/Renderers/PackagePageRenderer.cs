@@ -1,6 +1,6 @@
 ﻿using Foundation;
 using MuGet.Forms.iOS.Renderers;
-using MuGet.Forms.Views;
+using MuGet.Forms.UI.Views;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;

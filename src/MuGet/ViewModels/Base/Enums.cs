@@ -1,5 +1,4 @@
-﻿using Acr.UserDialogs;
-using MuGet.Services;
+﻿using System;
 
 namespace MuGet.ViewModels
 {

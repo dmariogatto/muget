@@ -48,7 +48,7 @@
                     Text="{local:Translate WelcomeToMuGet}" />
             </Grid>
 
-            <StackLayout state:StateLayout.CurrentState="{Binding State}">
+            <StackLayout state:StateLayout.CurrentState="{Binding State, Converter={StaticResource StateSquidConverter}}">
                 <state:StateLayout.StateViews>
                     <state:StateView RepeatCount="2" StateKey="Loading">
                         <state:StateView.RepeatTemplate>

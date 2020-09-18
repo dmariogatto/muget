@@ -19,6 +19,7 @@
         IsVisible="{Binding Dependencies.Count, Converter={StaticResource IntToInverseBoolConverter}}"
         Style="{DynamicResource LabelTitleStyle}"
         Text="{local:Translate None}" />
+
     <ListView
         BackgroundColor="Transparent"
         HasUnevenRows="True"
@@ -26,11 +27,7 @@
         ItemsSource="{Binding Dependencies}"
         SelectionMode="None"
         SeparatorVisibility="None">
-        <ListView.Header>
-            <ContentView>
-                <StackLayout Margin="0,16,0,0" />
-            </ContentView>
-        </ListView.Header>
+        <ListView.Header />
         <ListView.GroupHeaderTemplate>
             <DataTemplate x:DataType="models:DependencyGrouping">
                 <ViewCell ios:Cell.DefaultBackgroundColor="{DynamicResource PageBackgroundColor}">

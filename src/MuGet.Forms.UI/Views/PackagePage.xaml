@@ -3,17 +3,18 @@
     x:Class="MuGet.Forms.UI.Views.PackagePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:muget="clr-namespace:MuGet;assembly=MuGet"
+    xmlns:controls="clr-namespace:MuGet.Forms.UI.Controls"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
     xmlns:helpers="clr-namespace:MuGet.Forms.UI.Helpers"
     xmlns:local="clr-namespace:MuGet.Forms.UI"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muget="clr-namespace:MuGet;assembly=MuGet"
     xmlns:state="clr-namespace:Xamarin.Forms.StateSquid;assembly=Xamarin.Forms.StateSquid"
     xmlns:tabs="clr-namespace:Sharpnado.Presentation.Forms.CustomViews.Tabs;assembly=Sharpnado.Presentation.Forms"
     xmlns:viewModels="clr-namespace:MuGet.ViewModels;assembly=MuGet"
     xmlns:views="clr-namespace:MuGet.Forms.UI.Views"
-    xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:controls="clr-namespace:MuGet.Forms.UI.Controls"
+    xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     Title="{Binding Entry.Id}"
     x:DataType="viewModels:PackageViewModel"
     x:TypeArguments="viewModels:PackageViewModel"
@@ -38,7 +39,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
-                    <RowDefinition Height="36" />
+                    <RowDefinition Height="48" />
                 </Grid.RowDefinitions>
 
                 <Grid ColumnSpacing="0">
@@ -80,7 +81,7 @@
                 <Grid
                     Grid.Row="1"
                     Margin="6,0,6,0"
-                    state:StateLayout.CurrentState="{Binding State}">
+                    state:StateLayout.CurrentState="{Binding State, Converter={StaticResource StateSquidConverter}}">
                     <state:StateLayout.StateViews>
                         <state:StateView StateKey="Loading">
                             <Grid>
@@ -232,7 +233,7 @@
                 </tabs:TabHostView>
             </Grid>
 
-            <Grid Grid.Row="1" state:StateLayout.CurrentState="{Binding State}">
+            <Grid Grid.Row="1" state:StateLayout.CurrentState="{Binding State, Converter={StaticResource StateSquidConverter}}">
                 <state:StateLayout.StateViews>
                     <state:StateView StateKey="Loading">
                         <ActivityIndicator

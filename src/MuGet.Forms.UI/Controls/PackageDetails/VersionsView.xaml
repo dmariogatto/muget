@@ -17,10 +17,7 @@
         ItemsSource="{Binding CatalogEntries}"
         SelectionMode="None"
         SeparatorVisibility="None">
-        <ListView.Header>
-            <ContentView>
-                <StackLayout Margin="0,16,0,0" />
-            </ContentView>
+        <ListView.Header>            
         </ListView.Header>
         <ListView.ItemTemplate>
             <DataTemplate x:DataType="models:CatalogEntry">

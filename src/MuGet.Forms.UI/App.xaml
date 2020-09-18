@@ -24,6 +24,7 @@
             <converters:ListToInverseBoolConverter x:Key="ListToInverseBoolConverter" />
             <converters:NullToBoolConverter x:Key="NullToBoolConverter" />
             <converters:NullToInverseBoolConverter x:Key="NullToInverseBoolConverter" />
+            <converters:StateSquidConverter x:Key="StateSquidConverter" />
             <converters:StringToBoolConverter x:Key="StringToBoolConverter" />
             <converters:StringToInverseBoolConverter x:Key="StringToInverseBoolConverter" />
 
