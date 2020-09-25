@@ -77,10 +77,10 @@
       <Version>1.2.12-pre</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Analytics">
-      <Version>3.4.1</Version>
+      <Version>3.4.2</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Crashes">
-      <Version>3.4.1</Version>
+      <Version>3.4.2</Version>
     </PackageReference>
     <PackageReference Include="Plugin.StoreReview">
       <Version>2.0.0.5</Version>
@@ -112,7 +112,7 @@
     <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms">
       <Version>2.4.11.982</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.7.0.1239" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1451" />
     <PackageReference Include="Xamarin.Forms.PancakeView">
       <Version>2.1.0.714</Version>
     </PackageReference>
@@ -121,6 +121,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Renderers\ButtonCustomRenderer.cs" />
     <Compile Include="Services\RendererResolver_Droid.cs" />
     <Compile Include="SplashActivity.cs" />
     <Compile Include="MainActivity.cs" />
@@ -163,7 +164,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Effects\" />
-    <Folder Include="Renderers\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\notification.png" />
