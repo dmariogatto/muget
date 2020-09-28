@@ -1,7 +1,7 @@
 #!/bin/bash
 
 manifestPath="${BUILD_REPOSITORY_LOCALPATH}/src/MuGet.Forms.Android/Properties/AndroidManifest.xml"
-appCsPath="${BUILD_REPOSITORY_LOCALPATH}/src/MuGet.Forms/App.xaml.cs"
+appCsPath="${BUILD_REPOSITORY_LOCALPATH}/src/MuGet.Forms.UI/App.xaml.cs"
 buildNumber=$APPCENTER_BUILD_ID
 buildOffset=$BUILD_ID_OFFSET
 newVersionName="$VERSION_NAME"

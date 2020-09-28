@@ -1,7 +1,7 @@
 #!/bin/bash
 
 plistPath="${BUILD_REPOSITORY_LOCALPATH}/src/MuGet.Forms.iOS/Info.plist"
-appCsPath="${BUILD_REPOSITORY_LOCALPATH}/src/MuGet.Forms/App.xaml.cs"
+appCsPath="${BUILD_REPOSITORY_LOCALPATH}/src/MuGet.Forms.UI/App.xaml.cs"
 buildNumber=$APPCENTER_BUILD_ID
 buildOffset=$BUILD_ID_OFFSET
 buildShortVersion="$VERSION_NAME"
