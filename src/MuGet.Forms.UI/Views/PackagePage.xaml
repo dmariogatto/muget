@@ -18,6 +18,7 @@
     Title="{Binding Entry.Id}"
     x:DataType="viewModels:PackageViewModel"
     x:TypeArguments="viewModels:PackageViewModel"
+    BackgroundColor="{DynamicResource PageBackgroundColor}"
     Shell.NavBarIsVisible="False"
     mc:Ignorable="d">
 
