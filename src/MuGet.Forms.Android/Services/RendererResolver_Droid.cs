@@ -1,9 +1,10 @@
-﻿using MuGet.Forms.Android.Services;
+﻿using Android.Runtime;
 using MuGet.Forms.UI.Services;
 using Xamarin.Forms;
 
 namespace MuGet.Forms.Android.Services
 {
+    [Preserve(AllMembers = true)]
     public class RendererResolver_Droid : IRendererResolver
     {
         public object GetRenderer(VisualElement element)

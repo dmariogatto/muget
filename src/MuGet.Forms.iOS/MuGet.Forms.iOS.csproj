@@ -26,6 +26,8 @@
     <MtouchArch>x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
+    <MtouchExtraArgs>--linkskip=Sharpnado.Presentation.Forms --linkskip=Sharpnado.Presentation.Forms.iOS --linkskip=Essential.Interfaces --linkskip=Shiny.Core --linkskip=Shiny.Notifications --linkskip=LiteDB --optimize=experimental-xforms-product-type</MtouchExtraArgs>
+    <MtouchFloat32>true</MtouchFloat32>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -49,6 +51,8 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <MtouchLink>None</MtouchLink>
+    <MtouchExtraArgs>
+    </MtouchExtraArgs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -61,8 +65,9 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchLink>Full</MtouchLink>
     <MtouchUseLlvm>true</MtouchUseLlvm>
-    <MtouchExtraArgs>--linkskip=MuGet.Forms --linkskip=MuGet.Forms.iOS --linkskip=Shiny.Core --linkskip=Shiny.Notifications --linkskip=LiteDB --optimize=experimental-xforms-product-type</MtouchExtraArgs>
+    <MtouchExtraArgs>--linkskip=Sharpnado.Presentation.Forms --linkskip=Sharpnado.Presentation.Forms.iOS --linkskip=Essential.Interfaces --linkskip=Shiny.Core --linkskip=Shiny.Notifications --linkskip=LiteDB --optimize=experimental-xforms-product-type</MtouchExtraArgs>
     <MtouchFloat32>true</MtouchFloat32>
+    <OptimizePNGs>true</OptimizePNGs>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
