@@ -141,13 +141,13 @@
       <Version>7.1.0.454</Version>
     </PackageReference>
     <PackageReference Include="AiForms.SettingsView">
-      <Version>1.2.12-pre</Version>
+      <Version>1.2.26-pre</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Analytics">
-      <Version>3.4.2</Version>
+      <Version>3.4.3</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Crashes">
-      <Version>3.4.2</Version>
+      <Version>3.4.3</Version>
     </PackageReference>
     <PackageReference Include="Plugin.StoreReview">
       <Version>2.0.0.5</Version>
