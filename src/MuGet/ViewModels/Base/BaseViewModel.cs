@@ -14,6 +14,7 @@ namespace MuGet.ViewModels
         {
             NuGetService = bvmConstructor.NuGetService;
             Logger = bvmConstructor.Logger;
+            Dialogs = bvmConstructor.UserDialogs;
         }
 
         public virtual void OnCreate()
