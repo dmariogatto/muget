@@ -312,6 +312,23 @@ namespace MuGet.Services
             return false;
         }
 
+        public bool Checkpoint()
+        {
+            var success = false;
+
+            try
+            {
+                _db.Checkpoint();
+                success = true;
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex);
+            }
+
+            return success;
+        }
+
         private Task<T> GetWithRetryAsync<T>(string url, CancellationToken cancellationToken)
             => _retryPolicy.ExecuteAsync((ct) => GetAsync<T>(url, ct), cancellationToken);
         

@@ -53,6 +53,8 @@ namespace MuGet.Forms.UI
         protected override void OnSleep()
         {
             // Handle when your app sleeps
+
+            IoC.Resolve<INuGetService>().Checkpoint();
         }
 
         protected override void OnResume()
