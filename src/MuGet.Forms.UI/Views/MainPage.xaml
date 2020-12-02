@@ -94,7 +94,7 @@
                 AbsoluteLayout.LayoutBounds="0.5, 0, AutoSize, AutoSize"
                 AbsoluteLayout.LayoutFlags="PositionProportional"
                 BackgroundColor="{DynamicResource CardBackgroundColor}"
-                BorderThickness="0"
+                Border="{yummy:BorderMarkup Thickness=0}"
                 CornerRadius="6"
                 Shadow="{yummy:ShadowMarkup BlurRadius=6}"
                 Style="{DynamicResource CardYummyStyle}">
