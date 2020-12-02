@@ -21,18 +21,13 @@ namespace MuGet.Services
     {
         private const string NuGet = "https://api.nuget.org/v3/index.json";
 
-        private readonly static string DbPath = Path.Combine(FileSystem.AppDataDirectory, "nugets.db");
-        private readonly static HttpClient HttpClient = new HttpClient(new HttpClientHandler()
-        {
-            // Required for Android
-            // https://github.com/xamarin/xamarin-android/issues/2619
-            AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
-        });
+        private readonly static string DbPath = Path.Combine(FileSystem.AppDataDirectory, "nugets.db");        
         private readonly static JsonSerializer JsonSerializer = JsonSerializer.Create(new JsonSerializerSettings()
         {
             DateTimeZoneHandling = DateTimeZoneHandling.Utc
         });
 
+        private readonly HttpClient _httpClient;
         private readonly LiteDatabase _db;
 
         private readonly ICacheService _cache;
@@ -45,14 +40,13 @@ namespace MuGet.Services
         private readonly ILogger _logger;
         private readonly AsyncRetryPolicy _retryPolicy;
         
-        public NuGetService(ICacheService cacheProvider, ILogger logger)
+        public NuGetService(ICacheService cacheProvider, IHttpHandlerService httpHandlerService, ILogger logger)
         {
-            if (cacheProvider == null) throw new ArgumentNullException(nameof(cacheProvider));
-            if (logger == null) throw new ArgumentNullException(nameof(logger));
+            _cache = cacheProvider ?? throw new ArgumentNullException(nameof(cacheProvider));
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
 
-            _cache = cacheProvider;
-            _logger = logger;
-            
+            _httpClient = new HttpClient(httpHandlerService.GetNativeHandler());
+
             _db = new LiteDatabase($"Filename={DbPath};Upgrade=true;");
             _db.Pragma("UTC_DATE", true);
 
@@ -338,7 +332,7 @@ namespace MuGet.Services
                 return false;
 
             using (var request = new HttpRequestMessage(HttpMethod.Head, url))
-            using (var response = await HttpClient.SendAsync(request,
+            using (var response = await _httpClient.SendAsync(request,
                 HttpCompletionOption.ResponseHeadersRead,
                 cancellationToken).ConfigureAwait(false))
             {
@@ -347,13 +341,13 @@ namespace MuGet.Services
         }
 
         #region Http Methods
-        private static async Task<T> GetAsync<T>(string url, CancellationToken cancellationToken)
+        private async Task<T> GetAsync<T>(string url, CancellationToken cancellationToken)
         {
             var result = default(T);
             var apiEx = default(ApiException);
 
             using (var request = new HttpRequestMessage(HttpMethod.Get, url))
-            using (var response = await HttpClient.SendAsync(request,
+            using (var response = await _httpClient.SendAsync(request,
                 HttpCompletionOption.ResponseHeadersRead,
                 cancellationToken).ConfigureAwait(false))
             {
@@ -385,12 +379,10 @@ namespace MuGet.Services
             if (stream == null || stream.CanRead == false)
                 return default;
 
-            using (var sr = new StreamReader(stream))
-            using (var jtr = new JsonTextReader(sr))
-            {                
-                var searchResult = JsonSerializer.Deserialize<T>(jtr);
-                return searchResult;
-            }
+            using var sr = new StreamReader(stream);
+            using var jtr = new JsonTextReader(sr);
+            var searchResult = JsonSerializer.Deserialize<T>(jtr);
+            return searchResult;
         }
 
         private static async Task<string> StreamToStringAsync(Stream stream)

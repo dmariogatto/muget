@@ -66,6 +66,7 @@
     <Reference Include="Mono.Android" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors" />
     <Reference Include="System.Xml.Linq" />
@@ -118,6 +119,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Renderers\ButtonCustomRenderer.cs" />
+    <Compile Include="Services\HttpHandlerService_Droid.cs" />
     <Compile Include="Services\RendererResolver_Droid.cs" />
     <Compile Include="SplashActivity.cs" />
     <Compile Include="MainActivity.cs" />
@@ -202,4 +204,9 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties TriggeredFromHotReload="False" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>
