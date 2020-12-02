@@ -34,6 +34,9 @@ namespace MuGet.Forms.Android
 
             base.OnCreate(savedInstanceState);
 
+            Cats.CertificateTransparency.Instance.InitDomains(new[] { "*.*" }, null);
+            _ = Cats.CertificateTransparency.Instance.LogListService.LoadLogListAsync(default);
+
             Acr.UserDialogs.UserDialogs.Init(this);
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: true);
             AiForms.Renderers.Droid.SettingsViewInit.Init();
