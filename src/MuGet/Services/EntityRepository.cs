@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using Xamarin.Essentials;
+using Xamarin.Essentials.Interfaces;
 
 namespace MuGet.Services
 {
@@ -14,6 +15,8 @@ namespace MuGet.Services
     {
         private readonly ILiteCollection<T> _collection;
         private readonly TimeSpan _lifeSpan;
+
+        private readonly IConnectivity _connectivity;
 
         private readonly RetryPolicy _retryPolicy =
                Policy.Handle<LiteException>()
@@ -23,28 +26,32 @@ namespace MuGet.Services
                            sleepDurationProvider: retryAttempt => TimeSpan.FromMilliseconds(Math.Pow(2, retryAttempt))
                        );
 
-        public EntityRepository(LiteDatabase db, TimeSpan entityLifeSpan)
+        public EntityRepository(
+            LiteDatabase db,
+            TimeSpan entityLifeSpan,
+            IConnectivity connectivity)
         {
             if (db == null) throw new ArgumentException(nameof(db));
 
             _lifeSpan = entityLifeSpan;
-
             _collection = db.GetCollection<T>();
+
+            _connectivity = connectivity;
         }
-        
+
         public bool Upsert(T entity, DateTime? timestamp = null)
         {
             entity.Timestamp = timestamp ?? DateTime.UtcNow;
             return _retryPolicy.Execute(() => _collection.Upsert(entity));
         }
-        
+
         public T FindById(string key, bool includeStale = false)
         {
             var document = _retryPolicy.Execute(() => _collection.FindById(key));
 
             if (document != null &&
                 !includeStale &&
-                Connectivity.NetworkAccess == NetworkAccess.Internet &&
+                _connectivity.NetworkAccess == NetworkAccess.Internet &&
                 document.IsStale(_lifeSpan))
             {
                 document = default;

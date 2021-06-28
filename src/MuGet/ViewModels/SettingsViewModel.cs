@@ -6,7 +6,7 @@ using MvvmHelpers.Commands;
 using Plugin.StoreReview.Abstractions;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Essentials.Interfaces;
@@ -32,6 +32,7 @@ namespace MuGet.ViewModels
         private readonly IBrowser _browser;
         private readonly ILauncher _launcher;
         private readonly IDeviceInfo _deviceInfo;
+        private readonly IAppInfo _appInfo;
         private readonly IVersionTracking _versionTracking;
         private readonly IEmail _email;
 
@@ -43,6 +44,7 @@ namespace MuGet.ViewModels
             IBrowser browser,
             ILauncher launcher,
             IDeviceInfo deviceInfo,
+            IAppInfo appInfo,
             IVersionTracking versionTracking,
             IEmail email,
             IStoreReview storeReview,
@@ -54,6 +56,7 @@ namespace MuGet.ViewModels
             _browser = browser;
             _launcher = launcher;
             _deviceInfo = deviceInfo;
+            _appInfo = appInfo;
             _versionTracking = versionTracking;
             _email = email;
 
@@ -135,40 +138,31 @@ namespace MuGet.ViewModels
 
         private async Task SendFeedbackAsync()
         {
-            var message = new EmailMessage
+            try
             {
-                Subject = string.Format("MuGet Feedback ({0})", _deviceInfo.Platform),
-                Body = string.Empty,
-                To = new List<string>(1) { FeedbackEmail },
-            };
+                var builder = new StringBuilder();
+                builder.AppendLine($"App: {_appInfo.VersionString} | {_appInfo.BuildString}");
+                builder.AppendLine($"OS: {_deviceInfo.Platform} | {_deviceInfo.VersionString}");
+                builder.AppendLine($"Device: {_deviceInfo.Manufacturer} | {_deviceInfo.Model}");
+                builder.AppendLine();
+                builder.AppendLine(string.Format(Resources.ItemComma, Resources.AddYourMessageBelow));
+                builder.AppendLine("----");
+                builder.AppendLine();
 
-            const string gmailScheme = "googlegmail://";
-            const string gmail = "Gmail";
-            const string appleMail = "Mail";
-
-            if (_deviceInfo.Platform == DevicePlatform.iOS &&
-                await _launcher.CanOpenAsync(gmailScheme))
-            {
-                var option = await Dialogs.ActionSheetAsync(Resources.SendFeedback, Resources.Cancel, null, null, gmail, appleMail);
-
-                if (!string.IsNullOrEmpty(option))
+                var message = new EmailMessage
                 {
-                    switch (option)
-                    {
-                        case gmail:
-                            await _launcher.TryOpenAsync($"{gmailScheme}co?subject={message.Subject}&body={message.Body}&to={message.To.First()}");
-                            break;
-                        case appleMail:
-                            await _email.ComposeAsync(message);
-                            break;
-                        default:
-                            break;
-                    }
-                }
-            }
-            else
-            {
+                    Subject = string.Format(Resources.FeedbackSubjectItem, _deviceInfo.Platform),
+                    Body = builder.ToString(),
+                    To = new List<string>(1) { FeedbackEmail },
+                };
+
                 await _email.ComposeAsync(message);
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex);
+
+                Dialogs.Alert(Resources.EmailDirectly, Resources.UnableToSendEmail, Resources.OK);
             }
         }
 

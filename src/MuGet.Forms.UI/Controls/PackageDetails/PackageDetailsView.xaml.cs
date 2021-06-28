@@ -2,7 +2,7 @@
 
 namespace MuGet.Forms.UI.Controls
 {
-    public partial class PackageDetailsView : StackLayout
+    public partial class PackageDetailsView : ScrollView
     {
         public PackageDetailsView()
         {

@@ -165,8 +165,8 @@
   <data name="NoDependencies" xml:space="preserve">
     <value>No dependencies</value>
   </data>
-  <data name="Depedencies" xml:space="preserve">
-    <value>Depedencies</value>
+  <data name="Dependencies" xml:space="preserve">
+    <value>Dependencies</value>
   </data>
   <data name="Details" xml:space="preserve">
     <value>Details</value>
@@ -281,5 +281,20 @@
   </data>
   <data name="Build" xml:space="preserve">
     <value>Build</value>
+  </data>
+  <data name="AddYourMessageBelow" xml:space="preserve">
+    <value>Please add your message below</value>
+  </data>
+  <data name="EmailDirectly" xml:space="preserve">
+    <value>Email outtaapps@gmail.com directly.</value>
+  </data>
+  <data name="FeedbackSubjectItem" xml:space="preserve">
+    <value>Muget - Feedback ({0})</value>
+  </data>
+  <data name="ItemComma" xml:space="preserve">
+    <value>{0},</value>
+  </data>
+  <data name="UnableToSendEmail" xml:space="preserve">
+    <value>Unable to Send Email</value>
   </data>
 </root>

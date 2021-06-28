@@ -61,6 +61,15 @@ namespace MuGet.Localisation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please add your message below.
+        /// </summary>
+        public static string AddYourMessageBelow {
+            get {
+                return ResourceManager.GetString("AddYourMessageBelow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Build.
         /// </summary>
         public static string Build {
@@ -106,11 +115,11 @@ namespace MuGet.Localisation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Depedencies.
+        ///   Looks up a localized string similar to Dependencies.
         /// </summary>
-        public static string Depedencies {
+        public static string Dependencies {
             get {
-                return ResourceManager.GetString("Depedencies", resourceCulture);
+                return ResourceManager.GetString("Dependencies", resourceCulture);
             }
         }
         
@@ -169,6 +178,15 @@ namespace MuGet.Localisation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Email outtaapps@gmail.com directly..
+        /// </summary>
+        public static string EmailDirectly {
+            get {
+                return ResourceManager.GetString("EmailDirectly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
         public static string Error {
@@ -187,6 +205,15 @@ namespace MuGet.Localisation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Muget - Feedback ({0}).
+        /// </summary>
+        public static string FeedbackSubjectItem {
+            get {
+                return ResourceManager.GetString("FeedbackSubjectItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
         public static string Home {
@@ -201,6 +228,15 @@ namespace MuGet.Localisation {
         public static string IncludePrerelease {
             get {
                 return ResourceManager.GetString("IncludePrerelease", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0},.
+        /// </summary>
+        public static string ItemComma {
+            get {
+                return ResourceManager.GetString("ItemComma", resourceCulture);
             }
         }
         
@@ -507,6 +543,15 @@ namespace MuGet.Localisation {
         public static string TotalDownloadsFormat {
             get {
                 return ResourceManager.GetString("TotalDownloadsFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unable to Send Email.
+        /// </summary>
+        public static string UnableToSendEmail {
+            get {
+                return ResourceManager.GetString("UnableToSendEmail", resourceCulture);
             }
         }
         

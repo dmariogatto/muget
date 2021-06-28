@@ -11,8 +11,8 @@ namespace MuGet.Forms.UI.Converters
         {
             if (value is DateTime dt)
             {
-                return dt > DateTime.UtcNow.AddMonths(-11) 
-                    ? dt.Humanize(dt.Kind != DateTimeKind.Local) 
+                return dt > DateTime.UtcNow.AddMonths(-11)
+                    ? dt.Humanize(dt.Kind != DateTimeKind.Local)
                     : dt.ToShortDateString();
             }
 
