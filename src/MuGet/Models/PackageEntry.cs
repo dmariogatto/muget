@@ -11,7 +11,7 @@ namespace MuGet.Models
         public string IndexUrl { get; set; }
         [JsonProperty("@type")]
         public string Type { get; set; }
-        
+
         public int CompressedLength { get; set; }
         public string FullName { get; set; }
         public int Length { get; set; }

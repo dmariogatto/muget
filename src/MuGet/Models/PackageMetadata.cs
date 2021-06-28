@@ -1,6 +1,6 @@
-﻿using MvvmHelpers;
+﻿using MuGet.Localisation;
+using MvvmHelpers;
 using Newtonsoft.Json;
-using MuGet.Localisation;
 using System.Collections.Generic;
 using System.Linq;
 

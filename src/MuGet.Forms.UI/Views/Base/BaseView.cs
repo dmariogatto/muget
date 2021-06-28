@@ -74,7 +74,7 @@ namespace MuGet.Forms.UI.Views
         private void Register()
         {
             if (_parentPage != null && !_registered)
-            {                
+            {
                 _parentPage.Appearing += OnAppearing;
                 _parentPage.Disappearing += OnDisappearing;
 
@@ -85,7 +85,7 @@ namespace MuGet.Forms.UI.Views
         private void Unregister()
         {
             if (_parentPage != null && _registered)
-            {                
+            {
                 _parentPage.Appearing -= OnAppearing;
                 _parentPage.Disappearing -= OnDisappearing;
 

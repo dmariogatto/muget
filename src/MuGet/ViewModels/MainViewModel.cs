@@ -114,7 +114,7 @@ namespace MuGet.ViewModels
                             }
                         }
                         else
-                        {                            
+                        {
                             if (packages?.Any() == true)
                                 Packages.ReplaceRange(packages);
                         }
@@ -131,7 +131,7 @@ namespace MuGet.ViewModels
                 {
                     if (!cancellationToken.IsCancellationRequested)
                     {
-                        IsBusy = false;                        
+                        IsBusy = false;
                     }
 
                     OnPropertyChanged(nameof(PackagesLoading));
@@ -159,7 +159,7 @@ namespace MuGet.ViewModels
                         IndexUrl = package.IndexUrl,
                         SourceUrl = string.Empty,
                         SortOrder = 0,
-                    });                    
+                    });
                 }
                 catch (Exception ex)
                 {

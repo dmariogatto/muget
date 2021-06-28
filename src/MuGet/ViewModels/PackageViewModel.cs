@@ -35,7 +35,7 @@ namespace MuGet.ViewModels
                     var totalDownloads = entries.Sum(e => e.Downloads);
                     var nowUtc = DateTime.UtcNow;
                     var firstPublish = entries.LastOrDefault()?.Published ?? nowUtc;
-                    var daysDiff = (nowUtc - firstPublish).TotalDays;                    
+                    var daysDiff = (nowUtc - firstPublish).TotalDays;
                     AvgDownloads = daysDiff > 0
                         ? Convert.ToInt32(totalDownloads / daysDiff)
                         : 0;
@@ -198,8 +198,8 @@ namespace MuGet.ViewModels
             }
             finally
             {
-                IsBusy = false;                
-            }            
+                IsBusy = false;
+            }
         }
 
         private async Task EntryTappedAsync(CatalogEntry entry, CancellationToken cancellationToken)
@@ -217,7 +217,7 @@ namespace MuGet.ViewModels
                 {
                     Entry = entry;
                     EntryData = entryData;
-                }                
+                }
             }
             catch (Exception ex)
             {
@@ -227,7 +227,7 @@ namespace MuGet.ViewModels
             {
                 State = State.None;
                 IsBusy = false;
-            }            
+            }
         }
 
         private async Task LinkTappedAsync(LinkType type)
@@ -325,7 +325,7 @@ namespace MuGet.ViewModels
                 foreach (var e in CatalogEntries)
                 {
                     e.IsFavourite = isFav;
-                }          
+                }
             }
         }
     }

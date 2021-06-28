@@ -20,7 +20,7 @@ namespace MuGet.ViewModels
             RecentPackages = new ObservableRangeCollection<PackageMetadata>();
             FavouritePackages = new ObservableRangeCollection<PackageMetadata>();
             LoadCommand = new AsyncCommand<CancellationToken>(LoadAsync);
-            
+
             State = State.Loading;
         }
 
@@ -30,12 +30,12 @@ namespace MuGet.ViewModels
 
             LoadCommand.ExecuteAsync(default);
         }
-        
+
         public ObservableRangeCollection<PackageMetadata> RecentPackages { get; private set; }
         public ObservableRangeCollection<PackageMetadata> FavouritePackages { get; private set; }
 
         public AsyncCommand<CancellationToken> LoadCommand { get; private set; }
-        
+
         private async Task LoadAsync(CancellationToken cancellationToken)
         {
             if (IsBusy)

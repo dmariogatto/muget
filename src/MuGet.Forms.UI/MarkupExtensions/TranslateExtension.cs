@@ -11,7 +11,7 @@ namespace MuGet.Forms.UI
 {
     [ContentProperty(nameof(Text))]
     public class TranslateExtension : IMarkupExtension
-    {        
+    {
         private const string ResourceId = "MuGet.Localisation.Resources";
         private static readonly Lazy<ResourceManager> ResMgr = new Lazy<ResourceManager>(() =>
             new ResourceManager(ResourceId, typeof(Resources).GetTypeInfo().Assembly));
@@ -31,13 +31,13 @@ namespace MuGet.Forms.UI
         {
             if (string.IsNullOrWhiteSpace(Text))
                 return string.Empty;
-            
+
             var translation = ResMgr.Value.GetString(Text, _ci);
 
             if (translation == null)
             {
 #if DEBUG
-                
+
                 throw new ArgumentException(
                     $"Key '{Text}' was not found in resources '{ResourceId}' for culture '{_ci.Name}'.",
                     "Text");

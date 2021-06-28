@@ -25,7 +25,7 @@ namespace MuGet.Services
             System.Diagnostics.Debug.WriteLine(ex);
             WriteToLog(ex, string.Empty, data);
         }
-        
+
         public void Event(string eventName, IDictionary<string, string> properties = null)
         {
             if (!string.IsNullOrWhiteSpace(eventName))
@@ -90,7 +90,7 @@ namespace MuGet.Services
                     lock (_logFilePath)
                     {
                         File.Delete(_logFilePath);
-                    }                    
+                    }
                 }
                 catch (Exception ex)
                 {

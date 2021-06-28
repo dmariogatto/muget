@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Humanizer;
+using System;
 using System.Globalization;
 using Xamarin.Forms;
-using Humanizer;
 
 namespace MuGet.Forms.UI.Converters
 {
@@ -11,8 +11,8 @@ namespace MuGet.Forms.UI.Converters
         {
             if (value is DateTime dt)
             {
-                return dt > DateTime.UtcNow.AddMonths(-11) 
-                    ? dt.Humanize(dt.Kind != DateTimeKind.Local) 
+                return dt > DateTime.UtcNow.AddMonths(-11)
+                    ? dt.Humanize(dt.Kind != DateTimeKind.Local)
                     : dt.ToShortDateString();
             }
 

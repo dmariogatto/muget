@@ -44,7 +44,7 @@ namespace MuGet.Services
 
         private readonly ILogger _logger;
         private readonly AsyncRetryPolicy _retryPolicy;
-        
+
         public NuGetService(ICacheService cacheProvider, ILogger logger)
         {
             if (cacheProvider == null) throw new ArgumentNullException(nameof(cacheProvider));
@@ -52,13 +52,13 @@ namespace MuGet.Services
 
             _cache = cacheProvider;
             _logger = logger;
-            
+
             _db = new LiteDatabase($"Filename={DbPath};Upgrade=true;");
             _db.Pragma("UTC_DATE", true);
 
             _packageSourceRepo = new EntityRepository<PackageSource>(_db, TimeSpan.FromDays(7));
             _favouriteRepo = new EntityRepository<FavouritePackage>(_db, TimeSpan.MaxValue);
-            _recentRepo = new EntityRepository<RecentPackage>(_db, TimeSpan.MaxValue);            
+            _recentRepo = new EntityRepository<RecentPackage>(_db, TimeSpan.MaxValue);
 
             _retryPolicy =
                Policy.Handle<WebException>()
@@ -71,7 +71,7 @@ namespace MuGet.Services
                        );
         }
 
-        public bool IncludePrerelease 
+        public bool IncludePrerelease
         {
             get => Preferences.Get(nameof(IncludePrerelease), false);
             set => Preferences.Set(nameof(IncludePrerelease), value);
@@ -184,7 +184,7 @@ namespace MuGet.Services
                 if (result == null)
                 {
                     var source = await GetNuGetSourceAsync(cancellationToken).ConfigureAwait(false);
-                    var catalogRoot = await GetWithRetryAsync<CatalogRoot>(source.GetRegistrationUrl(packageId), cancellationToken).ConfigureAwait(false);                    
+                    var catalogRoot = await GetWithRetryAsync<CatalogRoot>(source.GetRegistrationUrl(packageId), cancellationToken).ConfigureAwait(false);
                     if (catalogRoot?.Items?.Any() == true)
                     {
                         async Task<IList<CatalogEntry>> getCatalogEntries(CatalogPage page, CancellationToken ct)
@@ -215,7 +215,7 @@ namespace MuGet.Services
                     {
                         _cache.Set(cacheKey, result, _defaultCacheExpires);
                     }
-                }                
+                }
             }
             catch (Exception ex)
             {
@@ -301,7 +301,7 @@ namespace MuGet.Services
                 }
 
                 foreach (var p in toDelete)
-                {                    
+                {
                     // Delete overflow
                     _recentRepo.Delete(p.Id);
                 }
@@ -314,7 +314,7 @@ namespace MuGet.Services
 
         private Task<T> GetWithRetryAsync<T>(string url, CancellationToken cancellationToken)
             => _retryPolicy.ExecuteAsync((ct) => GetAsync<T>(url, ct), cancellationToken);
-        
+
         private async Task<bool> IsValidUrlAsync(string url, CancellationToken cancellationToken)
         {
             if (string.IsNullOrEmpty(url))
@@ -370,7 +370,7 @@ namespace MuGet.Services
 
             using (var sr = new StreamReader(stream))
             using (var jtr = new JsonTextReader(sr))
-            {                
+            {
                 var searchResult = JsonSerializer.Deserialize<T>(jtr);
                 return searchResult;
             }

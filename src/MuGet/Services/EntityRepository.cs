@@ -23,13 +23,13 @@ namespace MuGet.Services
 
             _collection = _db.GetCollection<T>();
         }
-        
+
         public bool Upsert(T entity, DateTime? timestamp = null)
         {
             entity.Timestamp = timestamp ?? DateTime.UtcNow;
             return _collection.Upsert(entity);
         }
-        
+
         public T FindById(string key, bool includeStale = false)
         {
             var document = _collection.FindById(key);
