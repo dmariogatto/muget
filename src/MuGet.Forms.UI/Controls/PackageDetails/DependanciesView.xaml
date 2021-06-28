@@ -33,7 +33,7 @@
                 <ViewCell ios:Cell.DefaultBackgroundColor="{DynamicResource PageBackgroundColor}">
                     <ContentView>
                         <Label
-                            Margin="6,2,4,0"
+                            Margin="6,1,4,0"
                             FontAttributes="Bold"
                             Style="{DynamicResource LabelStyle}"
                             Text="{Binding Key}" />
