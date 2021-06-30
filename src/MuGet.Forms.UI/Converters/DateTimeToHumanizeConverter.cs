@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Humanizer;
+using System;
 using System.Globalization;
 using Xamarin.Forms;
-using Humanizer;
 
 namespace MuGet.Forms.UI.Converters
 {

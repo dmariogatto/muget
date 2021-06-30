@@ -13,8 +13,8 @@ namespace MuGet.Forms.UI.Views
         {
             InitializeComponent();
 
-            Xamarin.Forms.NavigationPage.SetHasNavigationBar(this, false);                     
-        }        
+            Xamarin.Forms.NavigationPage.SetHasNavigationBar(this, false);
+        }
 
         public string PackageId
         {
@@ -112,7 +112,7 @@ namespace MuGet.Forms.UI.Views
         }
 
         private void BackClicked(object sender, System.EventArgs e)
-        {            
+        {
             Navigation.PopAsync();
         }
 

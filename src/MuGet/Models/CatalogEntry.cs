@@ -37,7 +37,7 @@ namespace MuGet.Models
         public int Downloads { get; set; }
         private bool _isFavourite;
         [JsonIgnore]
-        public bool IsFavourite 
+        public bool IsFavourite
         {
             get => _isFavourite;
             set => SetProperty(ref _isFavourite, value);

@@ -10,7 +10,7 @@ namespace MuGet.Models
         }
 
         public string PackageId { get; set; }
-        
+
         private PackageMetadata _metadata;
         public PackageMetadata Metadata
         {
