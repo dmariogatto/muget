@@ -7,6 +7,6 @@ namespace MuGet.Services
     {
         bool NativeDarkMode { get; }
 
-        Theme GetOperatingSystemTheme();        
+        Theme GetOperatingSystemTheme();
     }
 }

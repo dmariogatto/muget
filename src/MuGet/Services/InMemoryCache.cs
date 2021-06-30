@@ -19,7 +19,7 @@ namespace MuGet.Services
             {
                 result = value;
             }
-            
+
             return result;
         }
 

@@ -18,7 +18,7 @@ namespace MuGet.Models
                 catch (Exception ex)
                 {
                     System.Diagnostics.Debug.WriteLine(ex);
-                }                
+                }
             }
         }
 
