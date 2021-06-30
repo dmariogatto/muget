@@ -292,7 +292,7 @@ namespace MuGet.ViewModels
                 if (entry.IsFavourite)
                 {
                     var favourite = NuGetService.GetFavouritePackages();
-                    var sp = favourite.FirstOrDefault(f => f.PackageId == entry.Id && f.IndexUrl == entry.IndexUrl);
+                    var sp = favourite.FirstOrDefault(f => f.PackageId == entry.Id);
                     if (sp != null)
                     {
                         NuGetService.RemoveFavouritePackage(sp);

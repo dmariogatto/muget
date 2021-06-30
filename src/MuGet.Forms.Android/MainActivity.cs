@@ -41,10 +41,8 @@ namespace MuGet.Forms.Android
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
-            Sharpnado.Presentation.Forms.Droid.SharpnadoInitializer.Initialize();
-
             LoadApplication(new App());
-            
+
             this.ShinyOnCreate();
 
             ProcessIntent(Intent);
@@ -85,7 +83,7 @@ namespace MuGet.Forms.Android
 
                         if (!string.IsNullOrEmpty(version))
                             packagePage.Version = version;
-                        
+
                         Device.InvokeOnMainThreadAsync(() => navPage.PushAsync(packagePage));
                     }
                 }

@@ -12,7 +12,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
-using Xamarin.Essentials;
+using Xamarin.Essentials.Interfaces;
 using JsonSerializer = Newtonsoft.Json.JsonSerializer;
 
 namespace MuGet.Services
@@ -21,18 +21,12 @@ namespace MuGet.Services
     {
         private const string NuGet = "https://api.nuget.org/v3/index.json";
 
-        private readonly static string DbPath = Path.Combine(FileSystem.AppDataDirectory, "nugets.db");
-        private readonly static HttpClient HttpClient = new HttpClient(new HttpClientHandler()
-        {
-            // Required for Android
-            // https://github.com/xamarin/xamarin-android/issues/2619
-            AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
-        });
         private readonly static JsonSerializer JsonSerializer = JsonSerializer.Create(new JsonSerializerSettings()
         {
             DateTimeZoneHandling = DateTimeZoneHandling.Utc
         });
 
+        private readonly HttpClient _httpClient;
         private readonly LiteDatabase _db;
 
         private readonly ICacheService _cache;
@@ -42,23 +36,38 @@ namespace MuGet.Services
         private readonly IEntityRepository<FavouritePackage> _favouriteRepo;
         private readonly IEntityRepository<RecentPackage> _recentRepo;
 
+        private readonly IPreferences _preferences;
+        private readonly IVersionTracking _versionTracking;
+        private readonly IConnectivity _connectivity;
+
         private readonly ILogger _logger;
         private readonly AsyncRetryPolicy _retryPolicy;
-        
-        public NuGetService(ICacheService cacheProvider, ILogger logger)
-        {
-            if (cacheProvider == null) throw new ArgumentNullException(nameof(cacheProvider));
-            if (logger == null) throw new ArgumentNullException(nameof(logger));
 
-            _cache = cacheProvider;
-            _logger = logger;
-            
-            _db = new LiteDatabase($"Filename={DbPath};Upgrade=true;");
+        public NuGetService(
+            ICacheService cacheProvider,
+            IHttpHandlerService httpHandlerService,
+            IPreferences preferences,
+            IVersionTracking versionTracking,
+            IConnectivity connectivity,
+            IFileSystem fileSystem,
+            ILogger logger)
+        {
+            _cache = cacheProvider ?? throw new ArgumentNullException(nameof(cacheProvider));
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+
+            _preferences = preferences;
+            _versionTracking = versionTracking;
+            _connectivity = connectivity;
+
+            _httpClient = new HttpClient(httpHandlerService.GetNativeHandler());
+
+            var dbPath = Path.Combine(fileSystem.AppDataDirectory, "nugets.db");
+            _db = new LiteDatabase($"Filename={dbPath};Upgrade=true;");
             _db.Pragma("UTC_DATE", true);
 
-            _packageSourceRepo = new EntityRepository<PackageSource>(_db, TimeSpan.FromDays(7));
-            _favouriteRepo = new EntityRepository<FavouritePackage>(_db, TimeSpan.MaxValue);
-            _recentRepo = new EntityRepository<RecentPackage>(_db, TimeSpan.MaxValue);            
+            _packageSourceRepo = new EntityRepository<PackageSource>(_db, TimeSpan.FromDays(7), _connectivity);
+            _favouriteRepo = new EntityRepository<FavouritePackage>(_db, TimeSpan.MaxValue, _connectivity);
+            _recentRepo = new EntityRepository<RecentPackage>(_db, TimeSpan.MaxValue, _connectivity);
 
             _retryPolicy =
                Policy.Handle<WebException>()
@@ -71,16 +80,16 @@ namespace MuGet.Services
                        );
         }
 
-        public bool IncludePrerelease 
+        public bool IncludePrerelease
         {
-            get => Preferences.Get(nameof(IncludePrerelease), false);
-            set => Preferences.Set(nameof(IncludePrerelease), value);
+            get => _preferences.Get(nameof(IncludePrerelease), false);
+            set => _preferences.Set(nameof(IncludePrerelease), value);
         }
 
         public bool NewReleaseNotifications
         {
-            get => Preferences.Get(nameof(NewReleaseNotifications), true);
-            set => Preferences.Set(nameof(NewReleaseNotifications), value);
+            get => _preferences.Get(nameof(NewReleaseNotifications), true);
+            set => _preferences.Set(nameof(NewReleaseNotifications), value);
         }
 
         public async Task<PackageSource> GetNuGetSourceAsync(CancellationToken cancellationToken)
@@ -92,7 +101,7 @@ namespace MuGet.Services
                 packageSource = _packageSourceRepo.FindById(NuGet);
 
                 // Refresh NuGet source on updates
-                if (packageSource == null || VersionTracking.IsFirstLaunchForCurrentBuild)
+                if (packageSource == null || _versionTracking.IsFirstLaunchForCurrentBuild)
                 {
                     var nuget = await GetWithRetryAsync<NuGetSource>(NuGet, cancellationToken).ConfigureAwait(false);
                     packageSource = new PackageSource(nameof(NuGet), NuGet, nuget);
@@ -184,7 +193,7 @@ namespace MuGet.Services
                 if (result == null)
                 {
                     var source = await GetNuGetSourceAsync(cancellationToken).ConfigureAwait(false);
-                    var catalogRoot = await GetWithRetryAsync<CatalogRoot>(source.GetRegistrationUrl(packageId), cancellationToken).ConfigureAwait(false);                    
+                    var catalogRoot = await GetWithRetryAsync<CatalogRoot>(source.GetRegistrationUrl(packageId), cancellationToken).ConfigureAwait(false);
                     if (catalogRoot?.Items?.Any() == true)
                     {
                         async Task<IList<CatalogEntry>> getCatalogEntries(CatalogPage page, CancellationToken ct)
@@ -215,7 +224,7 @@ namespace MuGet.Services
                     {
                         _cache.Set(cacheKey, result, _defaultCacheExpires);
                     }
-                }                
+                }
             }
             catch (Exception ex)
             {
@@ -301,7 +310,7 @@ namespace MuGet.Services
                 }
 
                 foreach (var p in toDelete)
-                {                    
+                {
                     // Delete overflow
                     _recentRepo.Delete(p.Id);
                 }
@@ -312,16 +321,33 @@ namespace MuGet.Services
             return false;
         }
 
+        public bool Checkpoint()
+        {
+            var success = false;
+
+            try
+            {
+                _db.Checkpoint();
+                success = true;
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex);
+            }
+
+            return success;
+        }
+
         private Task<T> GetWithRetryAsync<T>(string url, CancellationToken cancellationToken)
             => _retryPolicy.ExecuteAsync((ct) => GetAsync<T>(url, ct), cancellationToken);
-        
+
         private async Task<bool> IsValidUrlAsync(string url, CancellationToken cancellationToken)
         {
             if (string.IsNullOrEmpty(url))
                 return false;
 
             using (var request = new HttpRequestMessage(HttpMethod.Head, url))
-            using (var response = await HttpClient.SendAsync(request,
+            using (var response = await _httpClient.SendAsync(request,
                 HttpCompletionOption.ResponseHeadersRead,
                 cancellationToken).ConfigureAwait(false))
             {
@@ -330,13 +356,13 @@ namespace MuGet.Services
         }
 
         #region Http Methods
-        private static async Task<T> GetAsync<T>(string url, CancellationToken cancellationToken)
+        private async Task<T> GetAsync<T>(string url, CancellationToken cancellationToken)
         {
             var result = default(T);
             var apiEx = default(ApiException);
 
             using (var request = new HttpRequestMessage(HttpMethod.Get, url))
-            using (var response = await HttpClient.SendAsync(request,
+            using (var response = await _httpClient.SendAsync(request,
                 HttpCompletionOption.ResponseHeadersRead,
                 cancellationToken).ConfigureAwait(false))
             {
@@ -368,12 +394,10 @@ namespace MuGet.Services
             if (stream == null || stream.CanRead == false)
                 return default;
 
-            using (var sr = new StreamReader(stream))
-            using (var jtr = new JsonTextReader(sr))
-            {                
-                var searchResult = JsonSerializer.Deserialize<T>(jtr);
-                return searchResult;
-            }
+            using var sr = new StreamReader(stream);
+            using var jtr = new JsonTextReader(sr);
+            var searchResult = JsonSerializer.Deserialize<T>(jtr);
+            return searchResult;
         }
 
         private static async Task<string> StreamToStringAsync(Stream stream)

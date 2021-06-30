@@ -24,5 +24,7 @@ namespace MuGet.Services
 
         IList<RecentPackage> GetRecentPackages();
         bool AddRecentPackage(RecentPackage package);
+
+        bool Checkpoint();
     }
 }

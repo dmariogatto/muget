@@ -27,6 +27,7 @@ namespace MuGet.Forms.Android
             IoC.RegisterSingleton<ILocalise, LocaliseService_Droid>();
             IoC.RegisterSingleton<IEnvironmentService, EnvironmentService_Droid>();
             IoC.RegisterSingleton<IRendererResolver, RendererResolver_Droid>();
+            IoC.RegisterSingleton<IHttpHandlerService, HttpHandlerService_Droid>();
         }
     }
 }
