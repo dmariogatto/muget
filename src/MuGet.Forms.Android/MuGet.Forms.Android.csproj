@@ -39,7 +39,7 @@
     <AndroidDexTool>d8</AndroidDexTool>
     <EnableLLVM>false</EnableLLVM>
     <BundleAssemblies>false</BundleAssemblies>
-    <AndroidLinkSkip>Sharpnado.Presentation.Forms;Sharpnado.Presentation.Forms.Droid;Shiny.Core;Shiny.Notifications;LiteDB;Essential.Interfaces;</AndroidLinkSkip>
+    <AndroidLinkSkip>Sharpnado.Tabs;Sharpnado.Tabs.Android;Shiny.Core;Shiny.Notifications;LiteDB;Essential.Interfaces;</AndroidLinkSkip>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>false</DebugSymbols>
@@ -60,7 +60,7 @@
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <EnableLLVM>false</EnableLLVM>
     <BundleAssemblies>false</BundleAssemblies>
-    <AndroidLinkSkip>Sharpnado.Presentation.Forms;Sharpnado.Presentation.Forms.Droid;Shiny.Core;Shiny.Notifications;LiteDB;Essential.Interfaces;</AndroidLinkSkip>
+    <AndroidLinkSkip>Sharpnado.Tabs;Sharpnado.Tabs.Android;Shiny.Core;Shiny.Notifications;LiteDB;Essential.Interfaces;</AndroidLinkSkip>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
