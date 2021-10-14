@@ -14,15 +14,13 @@ namespace MuGet.Services
         public Theme GetOperatingSystemTheme()
         {
             var theme = Theme.Light;
-            
+
             // 'TraitCollection.UserInterfaceStyle' was introduced in iOS 12.0
             if (UIDevice.CurrentDevice.CheckSystemVersion(12, 0))
             {
                 try
                 {
-                    var currentUIViewController = GetVisibleViewController();
-                    var userInterfaceStyle = currentUIViewController.TraitCollection.UserInterfaceStyle;
-
+                    var userInterfaceStyle = UIScreen.MainScreen.TraitCollection.UserInterfaceStyle;
                     switch (userInterfaceStyle)
                     {
                         case UIUserInterfaceStyle.Light:
@@ -41,25 +39,8 @@ namespace MuGet.Services
                     logger.Error(ex);
                 }
             }
-            
-            return theme;
-        }
-        
-        private static UIViewController GetVisibleViewController()
-        {
-            var rootController = UIApplication.SharedApplication.KeyWindow.RootViewController;
 
-            switch (rootController.PresentedViewController)
-            {
-                case UINavigationController navigationController:
-                    return navigationController.TopViewController;
-                case UITabBarController tabBarController:
-                    return tabBarController.SelectedViewController;
-                case null:
-                    return rootController;
-                default:
-                    return rootController.PresentedViewController;
-            }
+            return theme;
         }
     }
 }
