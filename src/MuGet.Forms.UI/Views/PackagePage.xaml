@@ -10,7 +10,6 @@
     xmlns:local="clr-namespace:MuGet.Forms.UI"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muget="clr-namespace:MuGet;assembly=MuGet"
-    xmlns:sho="http://sharpnado.com"
     xmlns:state="clr-namespace:Xamarin.Forms.StateSquid;assembly=Xamarin.Forms.StateSquid"
     xmlns:viewModels="clr-namespace:MuGet.ViewModels;assembly=MuGet"
     xmlns:views="clr-namespace:MuGet.Forms.UI.Views"
@@ -19,6 +18,7 @@
     x:DataType="viewModels:PackageViewModel"
     x:TypeArguments="viewModels:PackageViewModel"
     BackgroundColor="{DynamicResource PageBackgroundColor}"
+    NavigationPage.HasNavigationBar="False"
     Shell.NavBarIsVisible="False"
     mc:Ignorable="d">
 
@@ -209,29 +209,37 @@
                     </Grid>
                 </Grid>
 
-                <sho:TabHostView
-                    x:Name="TabHost"
+                <controls:TopTabBar
+                    x:Name="TopTabs"
                     Grid.Row="2"
                     Margin="0,4,0,0"
-                    SelectedIndex="0"
-                    SelectedTabIndexChanged="SelectedTabIndexChanged"
-                    ShowScrollbar="False"
-                    TabType="Fixed">
-                    <sho:TabHostView.Tabs>
-                        <sho:UnderlinedTabItem
-                            Label="{local:Translate Details}"
-                            SelectedTabColor="{DynamicResource LinkColor}"
-                            UnselectedLabelColor="{DynamicResource PrimaryTextColor}" />
-                        <sho:UnderlinedTabItem
-                            Label="{local:Translate Dependencies}"
-                            SelectedTabColor="{DynamicResource LinkColor}"
-                            UnselectedLabelColor="{DynamicResource PrimaryTextColor}" />
-                        <sho:UnderlinedTabItem
-                            Label="{local:Translate Versions}"
-                            SelectedTabColor="{DynamicResource LinkColor}"
-                            UnselectedLabelColor="{DynamicResource PrimaryTextColor}" />
-                    </sho:TabHostView.Tabs>
-                </sho:TabHostView>
+                    IndexChanged="SelectedTabIndexChanged"
+                    PrimaryColor="{DynamicResource LinkColor}">
+                    <controls:TopTabBar.TabTemplate>
+                        <DataTemplate x:DataType="{x:Type x:String}">
+                            <Label
+                                FontSize="Medium"
+                                HorizontalOptions="FillAndExpand"
+                                HorizontalTextAlignment="Center"
+                                Text="{Binding .}"
+                                TextColor="{DynamicResource LinkColor}"
+                                VerticalOptions="FillAndExpand"
+                                VerticalTextAlignment="Center">
+                                <View.Triggers>
+                                    <DataTrigger TargetType="Label" Value="True">
+                                        <DataTrigger.Binding>
+                                            <MultiBinding Converter="{StaticResource AllEqualConverter}">
+                                                <Binding Path="." />
+                                                <Binding Path="SelectedItem" Source="{x:Reference TopTabs}" />
+                                            </MultiBinding>
+                                        </DataTrigger.Binding>
+                                        <Setter Property="FontAttributes" Value="Bold" />
+                                    </DataTrigger>
+                                </View.Triggers>
+                            </Label>
+                        </DataTemplate>
+                    </controls:TopTabBar.TabTemplate>
+                </controls:TopTabBar>
             </Grid>
 
             <Grid Grid.Row="1" state:StateLayout.CurrentState="{Binding State, Converter={StaticResource StateSquidConverter}}">
@@ -259,20 +267,7 @@
                     </state:StateView>
                 </state:StateLayout.StateViews>
 
-                <ScrollView
-                    x:Name="PackageDetails"
-                    Padding="0,3,0,3"
-                    IsVisible="True">
-                    <controls:PackageDetailsView BindingContext="{Binding}" />
-                </ScrollView>
-                <controls:DependanciesView
-                    x:Name="Dependancies"
-                    BindingContext="{Binding}"
-                    IsVisible="False" />
-                <controls:VersionsView
-                    x:Name="Versions"
-                    BindingContext="{Binding}"
-                    IsVisible="False" />
+                <Grid x:Name="TabGridContent" />
             </Grid>
         </Grid>
     </views:BasePage.Content>

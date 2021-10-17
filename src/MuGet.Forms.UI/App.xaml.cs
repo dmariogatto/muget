@@ -26,7 +26,7 @@ namespace MuGet.Forms.UI
 
             var localise = IoC.Resolve<ILocalise>();
             var culture = localise.GetCurrentCultureInfo();
-            localise.SetLocale(culture);            
+            localise.SetLocale(culture);
 
             if (VersionTracking.IsFirstLaunchEver)
             {

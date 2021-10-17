@@ -1,5 +1,7 @@
-﻿using MuGet.Models;
+﻿using MuGet.Forms.UI.Controls;
 using MuGet.ViewModels;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using Xamarin.Forms;
@@ -9,12 +11,19 @@ namespace MuGet.Forms.UI.Views
 {
     public partial class PackagePage : BasePage<PackageViewModel>
     {
+        private View _packageDetailsView, _dependanciesView, _versionsView;
+
         public PackagePage() : base()
         {
             InitializeComponent();
 
-            Xamarin.Forms.NavigationPage.SetHasNavigationBar(this, false);                     
-        }        
+            TopTabs.ItemsSource = new List<string>()
+            {
+                Localisation.Resources.Details,
+                Localisation.Resources.Dependencies,
+                Localisation.Resources.Versions
+            };
+        }
 
         public string PackageId
         {
@@ -68,57 +77,49 @@ namespace MuGet.Forms.UI.Views
             }
         }
 
-        private void SelectedTabIndexChanged(object sender, SelectedPositionChangedEventArgs e)
+        private void SelectedTabIndexChanged(object sender, IndexChangedArgs e)
         {
-            switch (e.SelectedPosition)
+            var view = e.NewIndex switch
             {
-                case 0:
-                    PackageDetails.IsVisible = true;
-                    Dependancies.IsVisible = false;
-                    Versions.IsVisible = false;
+                0 => _packageDetailsView ??= CreatePackageDetailsView(),
+                1 => _dependanciesView ??= CreateDependanciesView(),
+                2 => _versionsView ??= CreateVersionsView(),
+                _ => throw new InvalidOperationException()
+            };
 
-                    // For iOS, resize scroll view content size for different packages
-                    PackageDetails.ForceLayout();
-                    break;
-                case 1:
-                    PackageDetails.IsVisible = false;
-                    Dependancies.IsVisible = true;
-                    Versions.IsVisible = false;
-                    break;
-                case 2:
-                    PackageDetails.IsVisible = false;
-                    Dependancies.IsVisible = false;
-                    Versions.IsVisible = true;
-                    break;
-                default:
-                    break;
-            }
+            view.IsVisible = true;
+
+            if (!TabGridContent.Children.Contains(view))
+                TabGridContent.Children.Add(view);
+
+            foreach (var v in TabGridContent.Children.Where(i => i != view))
+                v.IsVisible = false;
         }
 
-        private void DependencyTapped(object sender, System.EventArgs e)
+        private void BackClicked(object sender, EventArgs e)
         {
-            if (sender is View v && v.BindingContext is Dependency dependency)
-            {
-                var packagePage = new PackagePage
-                {
-                    PackageId = dependency.Id,
-                    Version = dependency.VersionRange?.MinVersion != null
-                        ? dependency.VersionRange.MinVersion.ToString()
-                        : string.Empty
-                };
-
-                Navigation.PushAsync(packagePage);
-            }
-        }
-
-        private void BackClicked(object sender, System.EventArgs e)
-        {            
             Navigation.PopAsync();
         }
 
-        private void CloseClicked(object sender, System.EventArgs e)
+        private void CloseClicked(object sender, EventArgs e)
         {
             Navigation.PopToRootAsync();
         }
+
+        private View CreatePackageDetailsView() =>
+            new Xamarin.Forms.ScrollView()
+            {
+                Padding = new Thickness(0, 3, 0, 3),
+                Content = new PackageDetailsView()
+                {
+                    BindingContext = this.BindingContext
+                }
+            };
+
+        private View CreateDependanciesView() =>
+            new DependanciesView() { BindingContext = this.BindingContext };
+
+        private View CreateVersionsView() =>
+            new VersionsView() { BindingContext = this.BindingContext };
     }
 }

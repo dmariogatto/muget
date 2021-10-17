@@ -20,7 +20,6 @@ namespace MuGet.Services
             "Refractored.MvvmHelpers",
             "Shiny.Core",
             "Shiny.Notifications",
-            "Sharpnado.Tabs",
             "Xamarin.Essentials",
             "Xamarin.FFImageLoading.Forms",
             "Xamarin.Forms",

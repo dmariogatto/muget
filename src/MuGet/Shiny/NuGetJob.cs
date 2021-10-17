@@ -60,7 +60,7 @@ namespace MuGet
                             latestEntries.RemoveRange(1, latestEntries.Count - 1);
 
                         fp.Version = latestEntries.First().Version;
-                        fp.Published = latestEntries.First().Published;                        
+                        fp.Published = latestEntries.First().Published;
 
                         _nuGetService.UpsertFavouritePackage(fp);
 
@@ -91,12 +91,12 @@ namespace MuGet
                         {
                             System.Diagnostics.Debug.WriteLine(ex);
                         }
-                    }                    
+                    }
                 }
 
                 return true;
             }
-                        
+
             return false;
         }
     }

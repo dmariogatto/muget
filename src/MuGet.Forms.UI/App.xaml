@@ -12,6 +12,7 @@
     mc:Ignorable="d">
     <Application.Resources>
         <ResourceDictionary>
+            <converters:AllEqualConverter x:Key="AllEqualConverter" />
             <converters:BoolToHeartConverter x:Key="BoolToHeartConverter" />
             <converters:BoolToOpacityConverter x:Key="BoolToOpacityConverter" />
             <converters:DateTimeToHumanizeConverter x:Key="DateTimeToHumanizeConverter" />

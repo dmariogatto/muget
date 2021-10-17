@@ -13,14 +13,16 @@ namespace MuGet.Forms.UI
     public class TranslateExtension : IMarkupExtension
     {
         private const string ResourceId = "MuGet.Localisation.Resources";
+
         private static readonly Lazy<ResourceManager> ResMgr = new Lazy<ResourceManager>(() =>
             new ResourceManager(ResourceId, typeof(Resources).GetTypeInfo().Assembly));
+        private static readonly Lazy<ILocalise> Localise = new Lazy<ILocalise>(() => IoC.Resolve<ILocalise>());
 
         private readonly CultureInfo _ci;
 
         public TranslateExtension()
         {
-            _ci = IoC.Resolve<ILocalise>().GetCurrentCultureInfo();
+            _ci = Localise.Value.GetCurrentCultureInfo();
         }
 
         public string Text { get; set; }
