@@ -101,7 +101,7 @@
                 <Setter Property="Padding" Value="4" />
                 <Setter Property="Shadow" Value="{yummy:ShadowMarkup BlurRadius=2}" />
                 <Setter Property="CornerRadius" Value="8" />
-                <Setter Property="IsClippedToBounds" Value="True" />
+                <Setter Property="IsClippedToBounds" Value="False" />
                 <Setter Property="Border" Value="{DynamicResource CardYummyBorder}" />
                 <Setter Property="BackgroundColor" Value="{DynamicResource CardBackgroundColor}" />
             </Style>

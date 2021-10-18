@@ -45,19 +45,25 @@ namespace MuGet.Forms.UI.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
+        }
 
-            if (Navigation.NavigationStack.LastOrDefault() == this &&
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+        }
+
+        protected override void OnParentSet()
+        {
+            base.OnParentSet();
+
+            if (string.IsNullOrEmpty(BackButton.Text) &&
+                Navigation?.NavigationStack?.LastOrDefault() == this &&
                 Navigation.NavigationStack.Count > 1 &&
                 Navigation.NavigationStack[Navigation.NavigationStack.Count - 2] is ContentPage previous)
             {
                 BackButton.Text = previous.Title;
                 CloseButton.IsVisible = Navigation.NavigationStack.Count > 2;
             }
-        }
-
-        protected override void OnDisappearing()
-        {
-            base.OnDisappearing();
         }
 
         private void SelectedTabIndexChanged(object sender, IndexChangedArgs e)
@@ -90,13 +96,15 @@ namespace MuGet.Forms.UI.Views
         }
 
         private View CreatePackageDetailsView() =>
-            new Xamarin.Forms.ScrollView()
+            new ScrollView()
             {
                 Padding = new Thickness(0, 3, 0, 3),
                 Content = new PackageDetailsView()
                 {
                     BindingContext = this.BindingContext
-                }
+                },
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                VerticalOptions = LayoutOptions.FillAndExpand,
             };
 
         private View CreateDependanciesView() =>

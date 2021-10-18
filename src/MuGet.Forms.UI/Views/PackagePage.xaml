@@ -27,7 +27,7 @@
     </Shell.BackButtonBehavior>
 
     <views:BasePage.Content>
-        <StackLayout>
+        <Grid RowDefinitions="Auto,*">
             <Grid
                 effects:SafeAreaInsetEffect.Insets="Top"
                 BackgroundColor="{DynamicResource CardBackgroundColor}"
@@ -45,7 +45,6 @@
                         ContentLayout="Left,0"
                         FontSize="Medium"
                         HorizontalOptions="Start"
-                        Text="{local:Translate Back}"
                         TextColor="{DynamicResource LinkColor}"
                         VerticalOptions="CenterAndExpand">
                         <Button.ImageSource>
@@ -258,6 +257,6 @@
                     </MultiBinding>
                 </View.IsVisible>
             </Grid>
-        </StackLayout>
+        </Grid>
     </views:BasePage.Content>
 </views:BasePage>
