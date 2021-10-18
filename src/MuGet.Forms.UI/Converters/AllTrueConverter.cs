@@ -5,18 +5,13 @@ using Xamarin.Forms;
 
 namespace MuGet.Forms.UI.Converters
 {
-    public class AllEqualConverter : IMultiValueConverter
+    public class AllTrueConverter : IMultiValueConverter
     {
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {
-            if (values == null || values.Any(i => i == null))
+            if (values == null)
                 return false;
-
-            if (values.Length == 0)
-                return true;
-
-            var first = values.First();
-            return values.Skip(1).All(i => i.Equals(first));
+            return values.All(i => i is bool b && b);
         }
 
         public object[] ConvertBack(object value, Type[] targetTypes, object parameter, CultureInfo culture)

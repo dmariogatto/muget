@@ -73,6 +73,10 @@ namespace MuGet.ViewModels
 
         private async Task SearchAsync(string searchText, int skip, CancellationToken cancellationToken)
         {
+            await Task.Delay(250);
+            if (SearchText != searchText || cancellationToken.IsCancellationRequested)
+                return;
+
             RemainingItemsThreshold = -1;
 
             await _searchSemaphore.WaitAsync();
@@ -114,7 +118,7 @@ namespace MuGet.ViewModels
                             }
                         }
                         else
-                        {                            
+                        {
                             if (packages?.Any() == true)
                                 Packages.ReplaceRange(packages);
                         }
@@ -131,7 +135,7 @@ namespace MuGet.ViewModels
                 {
                     if (!cancellationToken.IsCancellationRequested)
                     {
-                        IsBusy = false;                        
+                        IsBusy = false;
                     }
 
                     OnPropertyChanged(nameof(PackagesLoading));
@@ -159,7 +163,7 @@ namespace MuGet.ViewModels
                         IndexUrl = package.IndexUrl,
                         SourceUrl = string.Empty,
                         SortOrder = 0,
-                    });                    
+                    });
                 }
                 catch (Exception ex)
                 {

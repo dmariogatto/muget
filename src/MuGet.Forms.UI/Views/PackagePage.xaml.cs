@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using Xamarin.Forms;
-using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace MuGet.Forms.UI.Views
 {
@@ -56,25 +55,9 @@ namespace MuGet.Forms.UI.Views
             }
         }
 
-
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
-        }
-
-        protected override void OnParentSet()
-        {
-            base.OnParentSet();
-
-            if (Device.RuntimePlatform == Device.iOS &&
-                Navigation.NavigationStack.FirstOrDefault() is ContentPage rootPage)
-            {
-                // Want the header "card" to extend to the top screen edge
-                var safeInsets = rootPage.On<Xamarin.Forms.PlatformConfiguration.iOS>().SafeAreaInsets();
-                var padding = HeaderView.Padding;
-                padding.Top = safeInsets.Top;
-                HeaderView.Padding = padding;
-            }
         }
 
         private void SelectedTabIndexChanged(object sender, IndexChangedArgs e)

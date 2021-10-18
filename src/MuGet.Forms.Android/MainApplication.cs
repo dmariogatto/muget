@@ -12,7 +12,7 @@ namespace MuGet.Forms.Android
     [Application(Debuggable = true)]
 #else
 [Application(Debuggable = false)]
-#endif    
+#endif
     public class MainApplication : Shiny.ShinyAndroidApplication<ShinyStartup>
     {
         public MainApplication(IntPtr handle, JniHandleOwnership transer)

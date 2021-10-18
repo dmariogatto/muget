@@ -110,7 +110,7 @@ namespace MuGet.Services
             }
             catch (Exception ex)
             {
-                if (!(ex is OperationCanceledException))
+                if (ex is not OperationCanceledException)
                     _logger.Error(ex);
             }
 

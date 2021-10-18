@@ -14,81 +14,88 @@
     mc:Ignorable="d">
 
     <ContentView.Content>
-        <yummy:PancakeView Margin="6,4,6,4" Style="{DynamicResource CardYummyStyle}">
-            <StackLayout>
-                <ScrollView Orientation="Horizontal">
-                    <ContentView Padding="0,3,0,4">
-                        <Label
-                            FontSize="Medium"
-                            Style="{DynamicResource LabelTitleStyle}"
-                            Text="{Binding Id}" />
-                    </ContentView>
-                </ScrollView>
-
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="48" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                    </Grid.ColumnDefinitions>
-
-                    <yummy:PancakeView Grid.RowSpan="3" Style="{DynamicResource IconYummyStyle}">
-                        <ffimageloading:SvgCachedImage
-                            DownsampleToViewSize="true"
-                            ErrorPlaceholder="{DynamicResource PackageIcon}"
-                            HeightRequest="48"
-                            LoadingPlaceholder="{DynamicResource PackageIcon}"
-                            Source="{Binding ValidatedIconUrl, Converter={StaticResource IconConverter}}"
-                            WidthRequest="48" />
-                    </yummy:PancakeView>
-
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        Style="{DynamicResource LabelIconStyle}"
-                        Text="{x:Static helpers:MaterialFont.Account}" />
-                    <Label
-                        Grid.Row="1"
-                        Grid.Column="1"
-                        Style="{DynamicResource LabelIconStyle}"
-                        Text="{x:Static helpers:MaterialFont.Download}" />
-                    <Label
-                        Grid.Row="2"
-                        Grid.Column="1"
-                        Style="{DynamicResource LabelIconStyle}"
-                        Text="{x:Static helpers:MaterialFont.Flag}" />
-
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="2"
-                        FontAttributes="Bold"
-                        Style="{DynamicResource LabelStyle}"
-                        Text="{Binding AuthorsDisplayText}" />
-                    <Label
-                        Grid.Row="1"
-                        Grid.Column="2"
-                        FontAttributes="Bold"
-                        Style="{DynamicResource LabelStyle}"
-                        Text="{Binding TotalDownloads, StringFormat={local:Translate TotalDownloadsFormat}}" />
-                    <Label
-                        Grid.Row="2"
-                        Grid.Column="2"
-                        FontAttributes="Bold"
-                        Style="{DynamicResource LabelStyle}"
-                        Text="{Binding PackVersion, StringFormat={local:Translate ItemLatestVersion}}" />
-                </Grid>
+        <yummy:PancakeView
+            Margin="6,4,6,4"
+            Padding="0,0,6,0"
+            Style="{DynamicResource CardYummyStyle}">
+            <Grid
+                ColumnDefinitions="14,48,Auto,*"
+                ColumnSpacing="0"
+                RowDefinitions="Auto,Auto,Auto,Auto,Auto"
+                RowSpacing="0">
+                <BoxView
+                    Grid.RowSpan="5"
+                    Margin="0,0,6,0"
+                    BackgroundColor="BlueViolet"
+                    WidthRequest="14" />
 
                 <Label
+                    Grid.Column="1"
+                    Grid.ColumnSpan="3"
+                    Margin="0,6,0,0"
+                    LineBreakMode="MiddleTruncation"
+                    Style="{DynamicResource LabelTitleStyle}"
+                    Text="{Binding Id}" />
+
+                <ffimageloading:SvgCachedImage
+                    Grid.Row="1"
+                    Grid.RowSpan="3"
+                    Grid.Column="1"
+                    Margin="0,4,4,0"
+                    Source="{Binding ValidatedIconUrl, Converter={StaticResource IconConverter}}"
+                    Style="{DynamicResource IconStyle}" />
+
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Margin="0,3,2,0"
+                    Style="{DynamicResource LabelIconStyle}"
+                    Text="{x:Static helpers:MaterialFont.Account}" />
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    Margin="0,3,2,0"
+                    Style="{DynamicResource LabelIconStyle}"
+                    Text="{x:Static helpers:MaterialFont.Download}" />
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="2"
+                    Margin="0,3,2,0"
+                    Style="{DynamicResource LabelIconStyle}"
+                    Text="{x:Static helpers:MaterialFont.Flag}" />
+
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="3"
+                    Margin="0,3,0,0"
+                    FontAttributes="Bold"
+                    Style="{DynamicResource LabelStyle}"
+                    Text="{Binding AuthorsDisplayText}" />
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="3"
+                    Margin="0,3,0,0"
+                    FontAttributes="Bold"
+                    Style="{DynamicResource LabelStyle}"
+                    Text="{Binding TotalDownloads, StringFormat={local:Translate TotalDownloadsFormat}}" />
+                <Label
+                    Grid.Row="3"
+                    Grid.Column="3"
+                    Margin="0,3,0,0"
+                    FontAttributes="Bold"
+                    Style="{DynamicResource LabelStyle}"
+                    Text="{Binding PackVersion, StringFormat={local:Translate ItemLatestVersion}}" />
+
+                <Label
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="3"
+                    Margin="0,3,0,6"
                     LineBreakMode="TailTruncation"
-                    MaxLines="4"
+                    MaxLines="2"
                     Style="{DynamicResource LabelStyle}"
                     Text="{Binding SearchDescription}" />
-            </StackLayout>
+            </Grid>
         </yummy:PancakeView>
     </ContentView.Content>
 </ContentView>

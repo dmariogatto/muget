@@ -35,14 +35,14 @@ namespace MuGet.ViewModels
                     var totalDownloads = entries.Sum(e => e.Downloads);
                     var nowUtc = DateTime.UtcNow;
                     var firstPublish = entries.LastOrDefault()?.Published ?? nowUtc;
-                    var daysDiff = (nowUtc - firstPublish).TotalDays;                    
+                    var daysDiff = (nowUtc - firstPublish).TotalDays;
                     AvgDownloads = daysDiff > 0
                         ? Convert.ToInt32(totalDownloads / daysDiff)
                         : 0;
                 }
             };
 
-            State = State.Loading;
+            IsBusy = true;
         }
 
         public override void OnAppearing()
@@ -50,6 +50,13 @@ namespace MuGet.ViewModels
             base.OnAppearing();
 
             LoadPackage();
+        }
+
+        private bool _isFirstLoad = true;
+        public bool IsFirstLoad
+        {
+            get => _isFirstLoad;
+            set => SetProperty(ref _isFirstLoad, value);
         }
 
         private string _packageId;
@@ -129,19 +136,15 @@ namespace MuGet.ViewModels
 
         private async Task LoadAsync(CancellationToken cancellationToken)
         {
-            if (IsBusy)
+            if (IsBusy && !IsFirstLoad)
                 return;
 
             IsBusy = true;
-            State = State.Loading;
+            IsFirstLoad = false;
 
             try
             {
-                Metadata = null;
-                Entry = null;
-                EntryData = null;
-                CatalogEntries.Clear();
-                Dependencies.Clear();
+                Clear();
 
                 if (!string.IsNullOrEmpty(PackageId))
                 {
@@ -182,24 +185,21 @@ namespace MuGet.ViewModels
 
                         Entry = latest;
                         CatalogEntries.ReplaceRange(entries);
-
-                        State = State.None;
-                    }
-                    else
-                    {
-                        State = State.Error;
                     }
                 }
             }
             catch (Exception ex)
             {
                 Logger.Error(ex);
-                State = State.Error;
+
+                Clear();
             }
             finally
             {
-                IsBusy = false;                
-            }            
+                IsBusy = false;
+            }
+
+            HasError = Entry == null;
         }
 
         private async Task EntryTappedAsync(CatalogEntry entry, CancellationToken cancellationToken)
@@ -208,7 +208,6 @@ namespace MuGet.ViewModels
                 return;
 
             IsBusy = true;
-            State = State.Loading;
 
             try
             {
@@ -217,7 +216,7 @@ namespace MuGet.ViewModels
                 {
                     Entry = entry;
                     EntryData = entryData;
-                }                
+                }
             }
             catch (Exception ex)
             {
@@ -225,9 +224,8 @@ namespace MuGet.ViewModels
             }
             finally
             {
-                State = State.None;
                 IsBusy = false;
-            }            
+            }
         }
 
         private async Task LinkTappedAsync(LinkType type)
@@ -325,8 +323,17 @@ namespace MuGet.ViewModels
                 foreach (var e in CatalogEntries)
                 {
                     e.IsFavourite = isFav;
-                }          
+                }
             }
+        }
+
+        private void Clear()
+        {
+            Metadata = null;
+            Entry = null;
+            EntryData = null;
+            CatalogEntries.Clear();
+            Dependencies.Clear();
         }
     }
 }

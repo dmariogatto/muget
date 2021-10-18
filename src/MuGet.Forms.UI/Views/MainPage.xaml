@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:controls="clr-namespace:MuGet.Forms.UI.Controls"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:effects="clr-namespace:MuGet.Forms.UI.Effects"
     xmlns:local="clr-namespace:MuGet.Forms.UI"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:models="clr-namespace:MuGet.Models;assembly=MuGet"
@@ -13,7 +13,7 @@
     xmlns:views="clr-namespace:MuGet.Forms.UI.Views"
     xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     Title="{Binding Title}"
-    ios:Page.UseSafeArea="true"
+    effects:SafeAreaInsetEffect.Insets="All"
     x:DataType="viewModels:MainViewModel"
     x:TypeArguments="viewModels:MainViewModel"
     BackgroundColor="{DynamicResource PageBackgroundColor}"
@@ -100,8 +100,10 @@
                 Style="{DynamicResource CardYummyStyle}">
                 <SearchBar
                     BackgroundColor="{DynamicResource CardBackgroundColor}"
+                    CancelButtonColor="Red"
                     HorizontalOptions="FillAndExpand"
                     Placeholder="{local:Translate Search}"
+                    PlaceholderColor="{DynamicResource PrimaryTextColor}"
                     Text="{Binding SearchText}"
                     TextColor="{DynamicResource PrimaryTextColor}" />
             </yummy:PancakeView>

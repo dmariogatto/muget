@@ -297,4 +297,7 @@
   <data name="UnableToSendEmail" xml:space="preserve">
     <value>Unable to Send Email</value>
   </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
 </root>

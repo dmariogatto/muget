@@ -3,18 +3,20 @@
     x:Class="MuGet.Forms.UI.App"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:MuGet.Forms.UI.Controls"
     xmlns:converters="clr-namespace:MuGet.Forms.UI.Converters"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:state="clr-namespace:Xamarin.Forms.StateSquid;assembly=Xamarin.Forms.StateSquid"
     xmlns:sv="clr-namespace:AiForms.Renderers;assembly=SettingsView"
     xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     mc:Ignorable="d">
     <Application.Resources>
         <ResourceDictionary>
             <converters:AllEqualConverter x:Key="AllEqualConverter" />
+            <converters:AllTrueConverter x:Key="AllTrueConverter" />
+            <converters:AllFalseConverter x:Key="AllFalseConverter" />
             <converters:BoolToHeartConverter x:Key="BoolToHeartConverter" />
-            <converters:BoolToOpacityConverter x:Key="BoolToOpacityConverter" />
             <converters:DateTimeToHumanizeConverter x:Key="DateTimeToHumanizeConverter" />
             <converters:IconConverter x:Key="IconConverter" />
             <converters:IntToBoolConverter x:Key="IntToBoolConverter" />
@@ -25,7 +27,7 @@
             <converters:ListToInverseBoolConverter x:Key="ListToInverseBoolConverter" />
             <converters:NullToBoolConverter x:Key="NullToBoolConverter" />
             <converters:NullToInverseBoolConverter x:Key="NullToInverseBoolConverter" />
-            <converters:StateSquidConverter x:Key="StateSquidConverter" />
+            <converters:PackageIdToStaggeredConverter x:Key="PackageIdToStaggeredConverter" />
             <converters:StringToBoolConverter x:Key="StringToBoolConverter" />
             <converters:StringToInverseBoolConverter x:Key="StringToInverseBoolConverter" />
 
@@ -33,7 +35,7 @@
 
             <x:String x:Key="MaterialFontFamily">MaterialIcons</x:String>
 
-            <Style x:Key="SkeletonStyle" TargetType="state:SkeletonView">
+            <Style x:Key="SkeletonStyle" TargetType="controls:SkeletonView">
                 <Setter Property="HeightRequest" Value="18" />
                 <Setter Property="WidthRequest" Value="128" />
                 <Setter Property="CornerRadius" Value="6" />
@@ -99,18 +101,17 @@
                 <Setter Property="Padding" Value="4" />
                 <Setter Property="Shadow" Value="{yummy:ShadowMarkup BlurRadius=2}" />
                 <Setter Property="CornerRadius" Value="8" />
-                <Setter Property="IsClippedToBounds" Value="False" />
+                <Setter Property="IsClippedToBounds" Value="True" />
                 <Setter Property="Border" Value="{DynamicResource CardYummyBorder}" />
                 <Setter Property="BackgroundColor" Value="{DynamicResource CardBackgroundColor}" />
             </Style>
 
-            <Style x:Key="IconYummyStyle" TargetType="yummy:PancakeView">
-                <Setter Property="Shadow" Value="{yummy:ShadowMarkup BlurRadius=1}" />
-                <Setter Property="CornerRadius" Value="4" />
-                <Setter Property="IsClippedToBounds" Value="False" />
-                <Setter Property="BackgroundColor" Value="{DynamicResource CardIconBackgroundColor}" />
-                <Setter Property="HorizontalOptions" Value="Center" />
-                <Setter Property="VerticalOptions" Value="Center" />
+            <Style x:Key="IconStyle" TargetType="ffimageloading:SvgCachedImage">
+                <Setter Property="DownsampleToViewSize" Value="True" />
+                <Setter Property="ErrorPlaceholder" Value="{DynamicResource PackageIcon}" />
+                <Setter Property="HeightRequest" Value="48" />
+                <Setter Property="LoadingPlaceholder" Value="{DynamicResource PackageIcon}" />
+                <Setter Property="WidthRequest" Value="48" />
             </Style>
 
             <Style TargetType="sv:SettingsView">

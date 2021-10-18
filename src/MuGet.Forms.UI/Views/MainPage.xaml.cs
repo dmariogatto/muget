@@ -1,4 +1,5 @@
-﻿using MuGet.Models;
+﻿using MuGet.Forms.UI.Extentions;
+using MuGet.Models;
 using MuGet.ViewModels;
 using System;
 using System.Threading.Tasks;
@@ -9,13 +10,15 @@ namespace MuGet.Forms.UI.Views
 {
     public partial class MainPage : BasePage<MainViewModel>
     {
+        private PackagePage _packagePage;
+
         public MainPage() : base()
         {
             InitializeComponent();
-            
+
             Xamarin.Forms.NavigationPage.SetHasNavigationBar(this, false);
         }
-        
+
         protected override void OnSizeAllocated(double width, double height)
         {
             base.OnSizeAllocated(width, height);
@@ -62,11 +65,13 @@ namespace MuGet.Forms.UI.Views
         {
             if (sender is View v && v.BindingContext is PackageMetadata metadata)
             {
-                var packagePage = new PackagePage();
-                packagePage.PackageId = metadata.Id;
-                packagePage.Version = metadata.Version;
-
-                Navigation.PushAsync(packagePage);
+                _ = Navigation.PushPageFactoryAsync(() =>
+                {
+                    _packagePage ??= new PackagePage();
+                    _packagePage.PackageId = metadata.Id;
+                    _packagePage.Version = metadata.Version;
+                    return _packagePage;
+                });
             }
         }
     }

@@ -9,7 +9,6 @@
     xmlns:local="clr-namespace:MuGet.Forms.UI"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:models="clr-namespace:MuGet.Models;assembly=MuGet"
-    xmlns:state="clr-namespace:Xamarin.Forms.StateSquid;assembly=Xamarin.Forms.StateSquid"
     xmlns:viewModels="clr-namespace:MuGet.ViewModels;assembly=MuGet"
     xmlns:views="clr-namespace:MuGet.Forms.UI.Views"
     x:DataType="viewModels:HomeViewModel"
@@ -17,18 +16,11 @@
     mc:Ignorable="d">
 
     <views:BaseView.Content>
-        <StackLayout>
-            <Grid Margin="6,12,6,6">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="48" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="48" />
-                </Grid.ColumnDefinitions>
-
+        <StackLayout VerticalOptions="Start">
+            <Grid
+                Margin="6,12,6,6"
+                ColumnDefinitions="48,*,48"
+                RowDefinitions="Auto,Auto">
                 <Label
                     Grid.Column="1"
                     HorizontalTextAlignment="Center"
@@ -39,7 +31,6 @@
                     Clicked="SettingsTapped"
                     Style="{DynamicResource ButtonIconStyle}"
                     Text="{x:Static helpers:MaterialFont.Settings}" />
-
                 <Label
                     Grid.Row="1"
                     Grid.ColumnSpan="3"
@@ -48,89 +39,109 @@
                     Text="{local:Translate WelcomeToMuGet}" />
             </Grid>
 
-            <StackLayout state:StateLayout.CurrentState="{Binding State, Converter={StaticResource StateSquidConverter}}">
-                <state:StateLayout.StateViews>
-                    <state:StateView RepeatCount="2" StateKey="Loading">
-                        <state:StateView.RepeatTemplate>
-                            <DataTemplate>
-                                <StackLayout>
-                                    <state:SkeletonView Margin="8,0,8,0" Style="{StaticResource SkeletonStyle}" />
-                                    <ScrollView
-                                        HorizontalOptions="FillAndExpand"
-                                        Orientation="Horizontal"
-                                        VerticalOptions="Fill">
-                                        <FlexLayout
-                                            Direction="Row"
-                                            FlowDirection="LeftToRight"
-                                            JustifyContent="SpaceEvenly">
-                                            <controls:NuGetCardSimpleSkeleton />
-                                            <controls:NuGetCardSimpleSkeleton />
-                                            <controls:NuGetCardSimpleSkeleton />
-                                            <controls:NuGetCardSimpleSkeleton />
-                                        </FlexLayout>
-                                    </ScrollView>
+            <StackLayout BindableLayout.ItemsSource="{local:EnumerableRange 2}" IsVisible="{Binding IsFirstLoad}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <controls:SkeletonView Margin="8,0,8,0" Style="{StaticResource SkeletonStyle}" />
+                            <ScrollView
+                                HorizontalOptions="FillAndExpand"
+                                Orientation="Horizontal"
+                                VerticalOptions="Start">
+                                <StackLayout
+                                    Padding="3"
+                                    Orientation="Horizontal"
+                                    Spacing="0">
+                                    <controls:NuGetCardSimpleSkeleton />
+                                    <controls:NuGetCardSimpleSkeleton />
+                                    <controls:NuGetCardSimpleSkeleton />
+                                    <controls:NuGetCardSimpleSkeleton />
                                 </StackLayout>
-                            </DataTemplate>
-                        </state:StateView.RepeatTemplate>
-                    </state:StateView>
-                </state:StateLayout.StateViews>
-
-                <Label
-                    Margin="8,0,8,0"
-                    Style="{DynamicResource LabelTitleStyle}"
-                    Text="{local:Translate Favourites}" />
-                <ScrollView IsVisible="{Binding FavouritePackages.Count, Converter={StaticResource IntToBoolConverter}}" Orientation="Horizontal">
-                    <FlexLayout
-                        BindableLayout.ItemsSource="{Binding FavouritePackages}"
-                        Direction="Row"
-                        FlowDirection="LeftToRight"
-                        JustifyContent="Start">
-                        <BindableLayout.ItemTemplate>
-                            <DataTemplate x:DataType="models:PackageMetadata">
-                                <controls:NuGetCardSimple BindingContext="{Binding}">
-                                    <View.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="PackageTapped" />
-                                    </View.GestureRecognizers>
-                                </controls:NuGetCardSimple>
-                            </DataTemplate>
-                        </BindableLayout.ItemTemplate>
-                    </FlexLayout>
-                </ScrollView>
-                <Label
-                    Margin="12,6,4,6"
-                    FontAttributes="Italic"
-                    IsVisible="{Binding FavouritePackages.Count, Converter={StaticResource IntToInverseBoolConverter}}"
-                    Style="{DynamicResource LabelStyle}"
-                    Text="{local:Translate NoFavouritePackages}" />
-
-                <Label
-                    Margin="8,0,8,0"
-                    Style="{DynamicResource LabelTitleStyle}"
-                    Text="{local:Translate Recent}" />
-                <ScrollView IsVisible="{Binding RecentPackages.Count, Converter={StaticResource IntToBoolConverter}}" Orientation="Horizontal">
-                    <FlexLayout
-                        BindableLayout.ItemsSource="{Binding RecentPackages}"
-                        Direction="Row"
-                        FlowDirection="LeftToRight"
-                        JustifyContent="Start">
-                        <BindableLayout.ItemTemplate>
-                            <DataTemplate x:DataType="models:PackageMetadata">
-                                <controls:NuGetCardSimple BindingContext="{Binding}">
-                                    <View.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="PackageTapped" />
-                                    </View.GestureRecognizers>
-                                </controls:NuGetCardSimple>
-                            </DataTemplate>
-                        </BindableLayout.ItemTemplate>
-                    </FlexLayout>
-                </ScrollView>
-                <Label
-                    Margin="12,6,4,6"
-                    FontAttributes="Italic"
-                    IsVisible="{Binding RecentPackages.Count, Converter={StaticResource IntToInverseBoolConverter}}"
-                    Style="{DynamicResource LabelStyle}"
-                    Text="{local:Translate NoRecentPackages}" />
+                            </ScrollView>
+                        </StackLayout>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
             </StackLayout>
+
+            <Label
+                Margin="8,0,8,0"
+                IsVisible="{Binding IsFirstLoad, Converter={StaticResource InverseBoolConverter}}"
+                Style="{DynamicResource LabelTitleStyle}"
+                Text="{local:Translate Favourites}" />
+            <ScrollView
+                Padding="3"
+                IsVisible="{Binding FavouritePackages.Count, Converter={StaticResource IntToBoolConverter}}"
+                Orientation="Horizontal">
+                <StackLayout
+                    BindableLayout.ItemsSource="{Binding FavouritePackages}"
+                    Orientation="Horizontal"
+                    Spacing="0">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate x:DataType="models:PackageMetadata">
+                            <controls:NuGetCardSimple BindingContext="{Binding}">
+                                <View.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="PackageTapped" />
+                                </View.GestureRecognizers>
+                            </controls:NuGetCardSimple>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+            </ScrollView>
+            <Label
+                Margin="12,6,4,6"
+                FontAttributes="Italic"
+                IsVisible="False"
+                Style="{DynamicResource LabelStyle}"
+                Text="{local:Translate NoFavouritePackages}">
+                <View.Triggers>
+                    <MultiTrigger TargetType="View">
+                        <MultiTrigger.Conditions>
+                            <BindingCondition Binding="{Binding FavouritePackages.Count}" Value="0" />
+                            <BindingCondition Binding="{Binding IsBusy}" Value="False" />
+                        </MultiTrigger.Conditions>
+                        <Setter Property="IsVisible" Value="True" />
+                    </MultiTrigger>
+                </View.Triggers>
+            </Label>
+
+            <Label
+                Margin="8,0,8,0"
+                IsVisible="{Binding IsFirstLoad, Converter={StaticResource InverseBoolConverter}}"
+                Style="{DynamicResource LabelTitleStyle}"
+                Text="{local:Translate Recent}" />
+            <ScrollView IsVisible="{Binding RecentPackages.Count, Converter={StaticResource IntToBoolConverter}}" Orientation="Horizontal">
+                <StackLayout
+                    Padding="3"
+                    BindableLayout.ItemsSource="{Binding RecentPackages}"
+                    Orientation="Horizontal"
+                    Spacing="0">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate x:DataType="models:PackageMetadata">
+                            <controls:NuGetCardSimple BindingContext="{Binding}">
+                                <View.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="PackageTapped" />
+                                </View.GestureRecognizers>
+                            </controls:NuGetCardSimple>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+            </ScrollView>
+            <Label
+                Margin="12,6,4,6"
+                FontAttributes="Italic"
+                IsVisible="False"
+                Style="{DynamicResource LabelStyle}"
+                Text="{local:Translate NoRecentPackages}">
+                <View.Triggers>
+                    <MultiTrigger TargetType="View">
+                        <MultiTrigger.Conditions>
+                            <BindingCondition Binding="{Binding RecentPackages.Count}" Value="0" />
+                            <BindingCondition Binding="{Binding IsBusy}" Value="False" />
+                        </MultiTrigger.Conditions>
+                        <Setter Property="IsVisible" Value="True" />
+                    </MultiTrigger>
+                </View.Triggers>
+            </Label>
         </StackLayout>
     </views:BaseView.Content>
 </views:BaseView>

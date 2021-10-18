@@ -27,7 +27,6 @@ namespace MuGet.Forms.UI
             {
                 ChangeTheme(Current);
             }
-            
         }
 
         public static void ChangeTheme(Theme theme)

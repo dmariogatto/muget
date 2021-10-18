@@ -1,8 +1,7 @@
-﻿using Microsoft.AppCenter;
-using Microsoft.AppCenter.Analytics;
-using Microsoft.AppCenter.Crashes;
-using MuGet.Forms.UI.Views;
+﻿using MuGet.Forms.UI.Views;
 using MuGet.Services;
+using System;
+using System.Linq;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Device = Xamarin.Forms.Device;
@@ -41,10 +40,10 @@ namespace MuGet.Forms.UI
             // Handle when your app starts
 
 #if !DEBUG
-            AppCenter.Start(
+            Microsoft.AppCenter.AppCenter.Start(
                 "android=APPCENTER_ANDROID;" +
                 "ios=APPCENTER_IOS;",
-                typeof(Analytics), typeof(Crashes));
+                typeof(Microsoft.AppCenter.Analytics.Analytics), typeof(Microsoft.AppCenter.Crashes.Crashes));
 #endif
 
             ThemeManager.LoadTheme();
@@ -60,6 +59,34 @@ namespace MuGet.Forms.UI
         protected override void OnResume()
         {
             // Handle when your app resumes
+        }
+
+        protected override void OnAppLinkRequestReceived(Uri uri)
+        {
+            base.OnAppLinkRequestReceived(uri);
+
+            var host = uri.Host;
+            if (string.Equals(host, "package", StringComparison.OrdinalIgnoreCase))
+            {
+                var segments = uri.Segments
+                    .Select(i => i.TrimEnd('/'))
+                    .Where(i => !string.IsNullOrWhiteSpace(i))
+                    .ToList();
+                var packageId = segments.Count > 0 ? segments[0] : string.Empty;
+                var version = segments.Count > 1 ? segments[1] : string.Empty;
+
+                if (!string.IsNullOrEmpty(packageId) &&
+                    MainPage is NavigationPage navPage)
+                {
+                    var packagePage = new PackagePage
+                    {
+                        PackageId = packageId,
+                        Version = version
+                    };
+
+                    navPage.PushAsync(packagePage);
+                }
+            }
         }
     }
 }

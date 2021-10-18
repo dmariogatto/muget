@@ -9,13 +9,10 @@
   <ItemGroup>
     <Compile Remove="Api\**" />
     <Compile Remove="Effects\**" />
-    <Compile Remove="Extentions\NugetImageLoader.cs\**" />
     <EmbeddedResource Remove="Api\**" />
     <EmbeddedResource Remove="Effects\**" />
-    <EmbeddedResource Remove="Extentions\NugetImageLoader.cs\**" />
     <None Remove="Api\**" />
     <None Remove="Effects\**" />
-    <None Remove="Extentions\NugetImageLoader.cs\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,41 +31,10 @@
     <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2125" />
     <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />
-    <PackageReference Include="Xamarin.Forms.StateSquid" Version="1.1.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\MuGet.Localisation\MuGet.Localisation.csproj" />
     <ProjectReference Include="..\MuGet\MuGet.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Controls\PackageDetails\VersionsView.xaml.cs">
-      <DependentUpon>VersionsView.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Controls\NuGetCardSkeleton.xaml.cs">
-      <DependentUpon>NuGetCardSkeleton.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Controls\NuGetCard.xaml.cs">
-      <DependentUpon>NuGetCard.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Controls\NuGetCardSimpleSkeleton.xaml.cs">
-      <DependentUpon>NuGetCardSimpleSkeleton.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Controls\NuGetCardSimple.xaml.cs">
-      <DependentUpon>NuGetCardSimple.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\SettingsPage.xaml.cs">
-      <DependentUpon>SettingsPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\PackagePage.xaml.cs">
-      <DependentUpon>PackagePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\HomeView.xaml.cs">
-      <DependentUpon>HomeView.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
 </Project>

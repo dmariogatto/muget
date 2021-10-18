@@ -2,14 +2,14 @@
 using MuGet.Forms.iOS.Services;
 using MuGet.Forms.UI;
 using MuGet.Forms.UI.Services;
-using MuGet.Forms.UI.Views;
 using MuGet.Services;
 using Shiny;
 using System;
-using System.Linq;
 using UIKit;
 using UserNotifications;
 using Xamarin.Forms;
+
+[assembly: ResolutionGroupName("MuGet.Effects")]
 
 namespace MuGet.Forms.iOS
 {
@@ -45,8 +45,6 @@ namespace MuGet.Forms.iOS
 
             global::Xamarin.Forms.Forms.Init();
 
-            Sharpnado.Tabs.iOS.Preserver.Preserve();
-
             LoadApplication(new App());
 
             UNUserNotificationCenter.Current.RequestAuthorization(UNAuthorizationOptions.Alert | UNAuthorizationOptions.Badge, (b, e) =>
@@ -72,27 +70,15 @@ namespace MuGet.Forms.iOS
 
         public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
         {
-            var host = url.Host;
-            var pathSegs = url.PathComponents.Where(c => c != "/").ToList();
-            if (string.Equals(host, "package", StringComparison.OrdinalIgnoreCase))
+            if (Xamarin.Forms.Application.Current != null)
             {
-                var packageId = pathSegs.Count > 0 ? pathSegs[0] : string.Empty;
-                var version = pathSegs.Count > 1 ? pathSegs[1] : string.Empty;
+                var uri = new Uri(url.ToString());
+                Xamarin.Forms.Application.Current.SendOnAppLinkRequestReceived(uri);
 
-                if (!string.IsNullOrEmpty(packageId) &&
-                    Xamarin.Forms.Application.Current.MainPage is NavigationPage navPage)
-                {
-                    var packagePage = new PackagePage();
-                    packagePage.PackageId = packageId;
-
-                    if (!string.IsNullOrEmpty(version))
-                        packagePage.Version = version;
-
-                    Device.InvokeOnMainThreadAsync(() => navPage.PushAsync(packagePage));
-                }
+                return true;
             }
 
-            return true;
+            return false;
         }
     }
 }

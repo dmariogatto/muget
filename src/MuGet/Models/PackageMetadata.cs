@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using MuGet.Localisation;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace MuGet.Models
 {
@@ -44,8 +45,8 @@ namespace MuGet.Models
             get => _isIconUrlValid;
             set
             {
-                SetProperty(ref _isIconUrlValid, value);
-                OnPropertyChanged(nameof(ValidatedIconUrl));
+                if (SetProperty(ref _isIconUrlValid, value))
+                    OnPropertyChanged(nameof(ValidatedIconUrl));
             }
         }
 
@@ -71,11 +72,6 @@ namespace MuGet.Models
         }
 
         public override int GetHashCode()
-        {
-            var hashCode = -1416534245;
-            hashCode = hashCode * -1521134295 + Id.GetHashCode();
-            hashCode = hashCode * -1521134295 + Version.GetHashCode();
-            return hashCode;
-        }
+            => HashCode.Combine(Id, Version);
     }
 }

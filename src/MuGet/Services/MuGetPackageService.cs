@@ -24,7 +24,6 @@ namespace MuGet.Services
             "Xamarin.FFImageLoading.Forms",
             "Xamarin.Forms",
             "Xamarin.Forms.PancakeView",
-            "Xamarin.Forms.StateSquid",
         };
 
         private readonly INuGetService _nuGetService;

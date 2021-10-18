@@ -11,8 +11,6 @@ namespace MuGet.ViewModels
 {
     public class HomeViewModel : BaseViewModel
     {
-        private bool _isFirstLoad = true;
-
         public HomeViewModel(IBvmConstructor bvmConstructor) : base(bvmConstructor)
         {
             Title = Resources.Home;
@@ -29,6 +27,13 @@ namespace MuGet.ViewModels
             LoadCommand.ExecuteAsync(default);
         }
 
+        private bool _isFirstLoad = true;
+        public bool IsFirstLoad
+        {
+            get => _isFirstLoad;
+            set => SetProperty(ref _isFirstLoad, value);
+        }
+
         public ObservableRangeCollection<PackageMetadata> RecentPackages { get; private set; }
         public ObservableRangeCollection<PackageMetadata> FavouritePackages { get; private set; }
 
@@ -41,12 +46,6 @@ namespace MuGet.ViewModels
 
             IsBusy = true;
 
-            if (_isFirstLoad)
-            {
-                State = State.Loading;
-                _isFirstLoad = false;
-            }
-
             try
             {
                 await NuGetService.GetNuGetSourceAsync(cancellationToken);
@@ -54,14 +53,15 @@ namespace MuGet.ViewModels
                 var recents = NuGetService.GetRecentPackages();
                 var favourites = NuGetService.GetFavouritePackages();
 
-                var recentTasks = recents.Select(i => NuGetService.GetPackageMetadataAsync(i.PackageId, cancellationToken, true));
-                await Task.WhenAll(recentTasks);
-                var favouriteTasks = favourites.Select(i => NuGetService.GetPackageMetadataAsync(i.PackageId, cancellationToken, true));
-                await Task.WhenAll(favouriteTasks);
+                var recentTasks = recents.Select(i => NuGetService.GetPackageMetadataAsync(i.PackageId, cancellationToken, true)).ToList();
+                var favouriteTasks = favourites.Select(i => NuGetService.GetPackageMetadataAsync(i.PackageId, cancellationToken, true)).ToList();
+
+                await Task.WhenAll(recentTasks.Concat(favouriteTasks));
 
                 var recentResults = recentTasks
                     .Select(t => t.Result)
-                    .Where(m => m != null).ToList();
+                    .Where(m => m != null)
+                    .ToList();
                 var favResults = favouriteTasks
                     .Select(t => t.Result)
                     .Where(m => m != null)
@@ -78,8 +78,8 @@ namespace MuGet.ViewModels
             }
             finally
             {
+                IsFirstLoad = false;
                 IsBusy = false;
-                State = State.None;
             }
         }
     }

@@ -5,34 +5,40 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    xmlns:helpers="clr-namespace:MuGet.Forms.UI.Helpers"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:models="clr-namespace:MuGet.Models;assembly=MuGet"
     xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     x:DataType="models:PackageMetadata"
     mc:Ignorable="d">
     <ContentView.Content>
-        <yummy:PancakeView Margin="4,6,4,6" Style="{DynamicResource CardYummyStyle}">
+        <yummy:PancakeView
+            Margin="4,6,4,6"
+            Style="{DynamicResource CardYummyStyle}"
+            VerticalOptions="Center">
             <StackLayout>
-                <yummy:PancakeView Style="{DynamicResource IconYummyStyle}">
+                <Grid ColumnDefinitions="48,Auto">
                     <ffimageloading:SvgCachedImage
-                        DownsampleToViewSize="true"
-                        ErrorPlaceholder="{DynamicResource PackageIcon}"
-                        HeightRequest="48"
-                        LoadingPlaceholder="{DynamicResource PackageIcon}"
                         Source="{Binding IconUrl, Converter={StaticResource IconConverter}}"
-                        WidthRequest="48" />
-                </yummy:PancakeView>
+                        Style="{DynamicResource IconStyle}"
+                        VerticalOptions="Center" />
 
-                <Label
-                    HorizontalTextAlignment="Center"
-                    LineBreakMode="WordWrap"
-                    Style="{DynamicResource LabelTitleStyle}"
-                    Text="{Binding Id}" />
+                    <Label
+                        Grid.Column="1"
+                        LineBreakMode="WordWrap"
+                        Style="{DynamicResource LabelTitleStyle}"
+                        Text="{Binding Id, Converter={StaticResource PackageIdToStaggeredConverter}}" />
+                </Grid>
 
-                <Label
-                    HorizontalTextAlignment="Center"
-                    Style="{DynamicResource LabelStyle}"
-                    Text="{Binding AuthorsDisplayText}" />
+                <Label HorizontalOptions="Center" Style="{DynamicResource LabelStyle}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontFamily="{StaticResource MaterialFontFamily}" Text="{x:Static helpers:MaterialFont.Account}" />
+                            <Span Text=" " />
+                            <Span Text="{Binding AuthorsDisplayText}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
             </StackLayout>
         </yummy:PancakeView>
     </ContentView.Content>

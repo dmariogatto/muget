@@ -18,6 +18,8 @@ namespace MuGet
 
         public override void ConfigureServices(IServiceCollection services)
         {
+            Shiny.Notifications.AndroidOptions.DefaultLaunchActivityFlags = Shiny.Notifications.AndroidActivityFlags.NewTask;
+
             // register your shiny services here
             services.UseNotifications<NotificationDelegate>(false);
 

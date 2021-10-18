@@ -70,6 +70,7 @@
     <OptimizePNGs>true</OptimizePNGs>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Effects\SafeAreaInsetEffect_iOS.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Renderers\SearchBarCustomRenderer.cs" />
@@ -175,9 +176,7 @@
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-  <ItemGroup>
-    <Folder Include="Effects\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BundleResource Include="Resources\gift.png" />
   </ItemGroup>

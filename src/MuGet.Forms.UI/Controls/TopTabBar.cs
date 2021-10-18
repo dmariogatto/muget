@@ -90,8 +90,6 @@ namespace MuGet.Forms.UI.Controls
             Children.Add(_bottomBorder, 0, 1);
             Children.Add(_selectedUnderline, 0, 1);
 
-            _selectedUnderline.SizeChanged += (sender, args) => UpdateSelectedUnderlinePosition();
-
             PropertyChanged += (sender, args) =>
             {
                 if (args.PropertyName == nameof(IsVisible) && IsVisible)
@@ -142,8 +140,6 @@ namespace MuGet.Forms.UI.Controls
         {
             foreach (var c in _currentViews)
             {
-                if (c.Content?.BindingContext is INotifyPropertyChanged item)
-                    item.PropertyChanged -= ViewPropertyChanged;
                 Children.Remove(c);
             }
 
@@ -173,8 +169,6 @@ namespace MuGet.Forms.UI.Controls
                 tg.Tapped += (sender, args) => { SelectedIndex = idx; };
                 contentView.GestureRecognizers.Add(tg);
 
-                contentView.Content.PropertyChanged += ViewPropertyChanged;
-
                 SetColumn(contentView, idx);
                 SetRowSpan(contentView, 2);
 
@@ -191,16 +185,6 @@ namespace MuGet.Forms.UI.Controls
 
             SetColumnSpan(_bottomBorder, _currentViews.Count);
             SetColumnSpan(_selectedUnderline, _currentViews.Count);
-        }
-
-        private void ViewPropertyChanged(object sender, PropertyChangedEventArgs e)
-        {
-            if (sender is View view && e.PropertyName == nameof(View.HorizontalOptions))
-            {
-                var idx = _currentViews.Select(i => i.Content).ToList().IndexOf(view);
-                if (idx == SelectedIndex)
-                    UpdateSelectedUnderlinePosition();
-            }
         }
 
         private void UpdateSelectedUnderlinePosition()

@@ -4,14 +4,13 @@ using Xamarin.Forms;
 
 namespace MuGet.Forms.UI.Converters
 {
-    public class BoolToOpacityConverter : IValueConverter
+    public class PackageIdToStaggeredConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            var offOpacity = parameter as double? ?? 0d;
-            return value as bool? ?? false
-                ? 1d
-                : offOpacity;
+            return value is string id
+                ? id.Replace(".", $".{Environment.NewLine}")
+                : string.Empty;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

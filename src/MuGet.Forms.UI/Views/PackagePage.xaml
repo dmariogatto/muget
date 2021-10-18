@@ -5,16 +5,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:controls="clr-namespace:MuGet.Forms.UI.Controls"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:effects="clr-namespace:MuGet.Forms.UI.Effects"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
     xmlns:helpers="clr-namespace:MuGet.Forms.UI.Helpers"
     xmlns:local="clr-namespace:MuGet.Forms.UI"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muget="clr-namespace:MuGet;assembly=MuGet"
-    xmlns:state="clr-namespace:Xamarin.Forms.StateSquid;assembly=Xamarin.Forms.StateSquid"
     xmlns:viewModels="clr-namespace:MuGet.ViewModels;assembly=MuGet"
     xmlns:views="clr-namespace:MuGet.Forms.UI.Views"
-    xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     Title="{Binding Entry.Id}"
+    effects:SafeAreaInsetEffect.Insets="Left,Right,Bottom"
     x:DataType="viewModels:PackageViewModel"
     x:TypeArguments="viewModels:PackageViewModel"
     BackgroundColor="{DynamicResource PageBackgroundColor}"
@@ -27,27 +27,14 @@
     </Shell.BackButtonBehavior>
 
     <views:BasePage.Content>
-        <Grid RowSpacing="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-
+        <StackLayout>
             <Grid
-                x:Name="HeaderView"
+                effects:SafeAreaInsetEffect.Insets="Top"
                 BackgroundColor="{DynamicResource CardBackgroundColor}"
+                RowDefinitions="Auto,Auto,48"
                 RowSpacing="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="48" />
-                </Grid.RowDefinitions>
 
-                <Grid ColumnSpacing="0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="36" />
-                    </Grid.ColumnDefinitions>
+                <Grid ColumnDefinitions="*,36" ColumnSpacing="0">
 
                     <Button
                         x:Name="BackButton"
@@ -58,6 +45,7 @@
                         ContentLayout="Left,0"
                         FontSize="Medium"
                         HorizontalOptions="Start"
+                        Text="{local:Translate Back}"
                         TextColor="{DynamicResource LinkColor}"
                         VerticalOptions="CenterAndExpand">
                         <Button.ImageSource>
@@ -77,148 +65,145 @@
                         IsVisible="False"
                         Style="{DynamicResource ButtonIconStyle}"
                         Text="{x:Static helpers:MaterialFont.Close}"
-                        TextColor="{DynamicResource LinkColor}" />
+                        TextColor="{DynamicResource LinkColor}"
+                        VerticalOptions="CenterAndExpand" />
                 </Grid>
+
                 <Grid
                     Grid.Row="1"
                     Margin="6,0,6,0"
-                    state:StateLayout.CurrentState="{Binding State, Converter={StaticResource StateSquidConverter}}">
-                    <state:StateLayout.StateViews>
-                        <state:StateView StateKey="Loading">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="48" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <state:SkeletonView
-                                    HeightRequest="48"
-                                    HorizontalOptions="Start"
-                                    Style="{StaticResource SkeletonStyle}"
-                                    VerticalOptions="Center"
-                                    WidthRequest="48" />
-                                <StackLayout Grid.Column="1" VerticalOptions="Center">
-                                    <state:SkeletonView
-                                        HeightRequest="18"
-                                        Style="{StaticResource SkeletonStyle}"
-                                        WidthRequest="192" />
-                                    <state:SkeletonView
-                                        HeightRequest="16"
-                                        HorizontalOptions="Start"
-                                        Style="{StaticResource SkeletonStyle}"
-                                        WidthRequest="48" />
-                                </StackLayout>
-                            </Grid>
-                        </state:StateView>
-                        <state:StateView StateKey="Error">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <yummy:PancakeView Style="{DynamicResource IconYummyStyle}" VerticalOptions="Center">
-                                    <ffimageloading:SvgCachedImage
-                                        DownsampleToViewSize="true"
-                                        HeightRequest="48"
-                                        Source="{DynamicResource PackageIcon}"
-                                        WidthRequest="48" />
-                                </yummy:PancakeView>
+                    ColumnDefinitions="48,*"
+                    IsVisible="{Binding IsBusy}">
+                    <controls:SkeletonView
+                        HeightRequest="48"
+                        HorizontalOptions="Start"
+                        Style="{StaticResource SkeletonStyle}"
+                        VerticalOptions="Center"
+                        WidthRequest="48" />
+                    <StackLayout Grid.Column="1" VerticalOptions="Center">
+                        <controls:SkeletonView
+                            HeightRequest="18"
+                            Style="{StaticResource SkeletonStyle}"
+                            WidthRequest="192" />
+                        <controls:SkeletonView
+                            HeightRequest="16"
+                            HorizontalOptions="Start"
+                            Style="{StaticResource SkeletonStyle}"
+                            WidthRequest="48" />
+                    </StackLayout>
+                </Grid>
 
-                                <StackLayout
-                                    Grid.Column="1"
-                                    HorizontalOptions="FillAndExpand"
-                                    Spacing="0"
-                                    VerticalOptions="CenterAndExpand">
-                                    <ScrollView Orientation="Horizontal" VerticalOptions="FillAndExpand">
-                                        <ContentView Padding="0,4,0,5">
-                                            <Label
-                                                FontAttributes="Bold"
-                                                Style="{DynamicResource LabelTitleStyle}"
-                                                Text="{Binding PackageId}" />
-                                        </ContentView>
-                                    </ScrollView>
-                                    <Label
-                                        FontSize="Caption"
-                                        HorizontalOptions="Start"
-                                        Style="{DynamicResource LabelStyle}"
-                                        Text="{local:Translate CannotFindPackage}" />
-                                </StackLayout>
-                            </Grid>
-                        </state:StateView>
-                    </state:StateLayout.StateViews>
+                <Grid
+                    Grid.Row="1"
+                    Margin="6,0,6,0"
+                    ColumnDefinitions="48,*"
+                    IsVisible="{Binding HasError}"
+                    RowDefinitions="Auto,Auto"
+                    RowSpacing="1">
+                    <ffimageloading:SvgCachedImage
+                        Grid.RowSpan="2"
+                        Source="{DynamicResource PackageIcon}"
+                        Style="{DynamicResource IconStyle}"
+                        VerticalOptions="Center" />
 
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="Auto" />
-                        </Grid.ColumnDefinitions>
-                        <yummy:PancakeView
-                            BackgroundColor="{DynamicResource CardBackgroundColor}"
-                            CornerRadius="3"
-                            Shadow="{yummy:ShadowMarkup BlurRadius=4}"
-                            VerticalOptions="Center">
-                            <ffimageloading:SvgCachedImage
-                                DownsampleToViewSize="true"
-                                ErrorPlaceholder="{DynamicResource PackageIcon}"
-                                HeightRequest="48"
-                                LoadingPlaceholder="{DynamicResource PackageIcon}"
-                                Source="{Binding Entry.IconUrl, Converter={StaticResource IconConverter}}"
-                                WidthRequest="48" />
-                        </yummy:PancakeView>
-
-                        <StackLayout
-                            Grid.Column="1"
-                            HorizontalOptions="FillAndExpand"
-                            Spacing="0"
-                            VerticalOptions="Center">
-                            <ScrollView Orientation="Horizontal" VerticalOptions="Center">
-                                <ContentView Padding="0,5,0,6">
-                                    <Label
-                                        FontAttributes="Bold"
-                                        Style="{DynamicResource LabelTitleStyle}"
-                                        Text="{Binding PackageId}" />
-                                </ContentView>
-                            </ScrollView>
-                            <StackLayout Orientation="Horizontal">
-                                <Label
-                                    FontSize="Caption"
-                                    HorizontalOptions="Start"
-                                    Style="{DynamicResource LabelIconStyle}"
-                                    Text="{x:Static helpers:MaterialFont.Flag}" />
-                                <Label
-                                    FontSize="Caption"
-                                    HorizontalOptions="Start"
-                                    Style="{DynamicResource LabelStyle}"
-                                    Text="{Binding Entry.PackVersion}" />
-                            </StackLayout>
+                    <ScrollView
+                        Grid.Column="1"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Horizontal"
+                        VerticalOptions="Start">
+                        <ContentView Padding="0,5,0,6">
                             <Label
-                                FontAttributes="Italic"
-                                FontSize="Caption"
-                                IsVisible="{Binding Entry.PackVersion.IsPrerelease}"
-                                Text="prerelease"
-                                TextColor="{DynamicResource AccentColor}" />
-                        </StackLayout>
-                        <Button
-                            Grid.Column="2"
-                            BackgroundColor="Transparent"
-                            Command="{Binding FavouriteCommand}"
-                            CommandParameter="{Binding Entry}"
-                            Style="{DynamicResource ButtonIconStyle}"
-                            Text="{Binding Entry.IsFavourite, Converter={StaticResource BoolToHeartConverter}}"
-                            VerticalOptions="Center" />
-                    </Grid>
+                                FontAttributes="Bold"
+                                Style="{DynamicResource LabelTitleStyle}"
+                                Text="{Binding PackageId}" />
+                        </ContentView>
+                    </ScrollView>
+
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        FontSize="Caption"
+                        HorizontalOptions="Start"
+                        Style="{DynamicResource LabelStyle}"
+                        Text="{local:Translate CannotFindPackage}" />
+                </Grid>
+
+                <Grid
+                    Grid.Row="1"
+                    Margin="6,0,6,0"
+                    ColumnDefinitions="48,*,Auto"
+                    RowDefinitions="Auto,Auto,Auto"
+                    RowSpacing="0">
+                    <View.IsVisible>
+                        <MultiBinding Converter="{StaticResource AllFalseConverter}">
+                            <Binding Path="IsBusy" />
+                            <Binding Path="HasError" />
+                        </MultiBinding>
+                    </View.IsVisible>
+                    <ffimageloading:SvgCachedImage
+                        Grid.RowSpan="3"
+                        Source="{Binding Entry.IconUrl, Converter={StaticResource IconConverter}}"
+                        Style="{DynamicResource IconStyle}"
+                        VerticalOptions="Center" />
+
+                    <ScrollView
+                        Grid.Column="1"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Horizontal"
+                        VerticalOptions="Start">
+                        <ContentView Padding="0,5,0,6">
+                            <Label
+                                FontAttributes="Bold"
+                                Style="{DynamicResource LabelTitleStyle}"
+                                Text="{Binding PackageId}" />
+                        </ContentView>
+                    </ScrollView>
+
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        FontSize="Caption"
+                        HorizontalOptions="Start"
+                        LineBreakMode="TailTruncation"
+                        Style="{DynamicResource LabelStyle}">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span FontFamily="{StaticResource MaterialFontFamily}" Text="{x:Static helpers:MaterialFont.Flag}" />
+                                <Span Text=" " />
+                                <Span Text="{Binding Entry.PackVersion}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <Label
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        FontAttributes="Italic"
+                        FontSize="Caption"
+                        IsVisible="{Binding Entry.PackVersion.IsPrerelease}"
+                        Text="prerelease"
+                        TextColor="{DynamicResource AccentColor}" />
+
+                    <Button
+                        Grid.RowSpan="3"
+                        Grid.Column="2"
+                        BackgroundColor="Transparent"
+                        Command="{Binding FavouriteCommand}"
+                        CommandParameter="{Binding Entry}"
+                        Style="{DynamicResource ButtonIconStyle}"
+                        Text="{Binding Entry.IsFavourite, Converter={StaticResource BoolToHeartConverter}}"
+                        VerticalOptions="Center" />
                 </Grid>
 
                 <controls:TopTabBar
                     x:Name="TopTabs"
                     Grid.Row="2"
-                    Margin="0,4,0,0"
                     IndexChanged="SelectedTabIndexChanged"
                     PrimaryColor="{DynamicResource LinkColor}">
                     <controls:TopTabBar.TabTemplate>
                         <DataTemplate x:DataType="{x:Type x:String}">
                             <Label
-                                FontSize="Medium"
+                                FontSize="Small"
                                 HorizontalOptions="FillAndExpand"
                                 HorizontalTextAlignment="Center"
                                 Text="{Binding .}"
@@ -242,33 +227,37 @@
                 </controls:TopTabBar>
             </Grid>
 
-            <Grid Grid.Row="1" state:StateLayout.CurrentState="{Binding State, Converter={StaticResource StateSquidConverter}}">
-                <state:StateLayout.StateViews>
-                    <state:StateView StateKey="Loading">
-                        <ActivityIndicator
-                            Margin="0,24,0,0"
-                            HeightRequest="24"
-                            HorizontalOptions="Center"
-                            IsRunning="{Binding IsBusy}"
-                            IsVisible="{Binding IsBusy}"
-                            WidthRequest="24"
-                            Color="{DynamicResource AccentColor}" />
-                    </state:StateView>
-                    <state:StateView StateKey="Error">
-                        <StackLayout Padding="6,4,6,4" IsVisible="{Binding Entry, Converter={StaticResource NullToInverseBoolConverter}}">
-                            <Label Style="{DynamicResource LabelStyle}" Text="{local:Translate CannotFindPackageDescription}" />
-                            <Button
-                                Command="{Binding LinkTappedCommand}"
-                                CommandParameter="{x:Static muget:LinkType.NuGet}"
-                                ContentLayout="Left,5"
-                                HorizontalOptions="Center"
-                                Text="NuGet.org" />
-                        </StackLayout>
-                    </state:StateView>
-                </state:StateLayout.StateViews>
+            <ActivityIndicator
+                Grid.Row="1"
+                Margin="0,24,0,0"
+                HeightRequest="24"
+                HorizontalOptions="Center"
+                IsRunning="{Binding IsBusy}"
+                IsVisible="{Binding IsBusy}"
+                WidthRequest="24"
+                Color="{DynamicResource AccentColor}" />
 
-                <Grid x:Name="TabGridContent" />
+            <StackLayout
+                Grid.Row="1"
+                Padding="6,4,6,4"
+                IsVisible="{Binding HasError}">
+                <Label Style="{DynamicResource LabelStyle}" Text="{local:Translate CannotFindPackageDescription}" />
+                <Button
+                    Command="{Binding LinkTappedCommand}"
+                    CommandParameter="{x:Static muget:LinkType.NuGet}"
+                    ContentLayout="Left,5"
+                    HorizontalOptions="Center"
+                    Text="NuGet.org" />
+            </StackLayout>
+
+            <Grid x:Name="TabGridContent" Grid.Row="1">
+                <View.IsVisible>
+                    <MultiBinding Converter="{StaticResource AllFalseConverter}">
+                        <Binding Path="IsBusy" />
+                        <Binding Path="HasError" />
+                    </MultiBinding>
+                </View.IsVisible>
             </Grid>
-        </Grid>
+        </StackLayout>
     </views:BasePage.Content>
 </views:BasePage>
