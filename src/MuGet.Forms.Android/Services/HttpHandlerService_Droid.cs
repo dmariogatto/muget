@@ -1,8 +1,11 @@
 ﻿using Android.Runtime;
+using Cats.CertificateTransparency;
+using Cats.CertificateTransparency.Models;
 using MuGet.Services;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
-using Xamarin.Android.Net;
+using System.Security.Cryptography.X509Certificates;
 
 namespace MuGet.Forms.Android.Services
 {
@@ -17,10 +20,29 @@ namespace MuGet.Forms.Android.Services
         }
 
         public HttpMessageHandler GetNativeHandler()
-            => new AndroidClientHandler()
+            => new CatsAndroidClientHandler(VerifyCtResult)
             {
                 // https://github.com/xamarin/xamarin-android/issues/2619
                 AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
             };
+
+        private bool VerifyCtResult(string host, IList<X509Certificate2> chain, CtVerificationResult result)
+        {
+#if DEBUG
+            System.Diagnostics.Debug.WriteLine($"😺 CT Result, host: {host}, description: {result?.Description ?? string.Empty}");
+#endif
+
+            if (!result.IsValid)
+            {
+                _logger.Event("ct_result_invalid", new Dictionary<string, string>()
+                {
+                    { "host", host },
+                    { "result", result?.Result.ToString() ?? string.Empty },
+                    { "description", result?.Description ?? string.Empty }
+                });
+            }
+
+            return result.IsValid;
+        }
     }
 }
