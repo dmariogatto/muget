@@ -38,13 +38,12 @@ namespace MuGet.Forms.UI.Views
 
         private void PackagesScrolled(object sender, ItemsViewScrolledEventArgs e)
         {
-            // quit on top bounce
-            if (e.VerticalOffset < 1)
-                return;
+            var top = e.VerticalOffset < 1;
 
             var transY = Convert.ToInt32(SearchBarView.TranslationY);
             if (transY == 0 &&
-                e.VerticalDelta > 15)
+                e.VerticalDelta > 15 &&
+                !top)
             {
                 var trans = SearchBarView.Height + SearchBarView.Margin.Top;
                 var safeInsets = On<Xamarin.Forms.PlatformConfiguration.iOS>().SafeAreaInsets();
@@ -54,8 +53,7 @@ namespace MuGet.Forms.UI.Views
                     SearchBarView.FadeTo(0.25, 200));
             }
             else if (transY != 0 &&
-                     e.VerticalDelta < 0 &&
-                     Math.Abs(e.VerticalDelta) > 10)
+                     (e.VerticalDelta < 0 && (Math.Abs(e.VerticalDelta) > 10) || top))
             {
                 Task.WhenAll(
                     SearchBarView.TranslateTo(0, 0, 250, Easing.CubicOut),
