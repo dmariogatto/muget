@@ -32,14 +32,12 @@
             </ScrollView>
 
             <StackLayout
-                x:Name="SkeletonHeaderView"
+                x:Name="SkeletonView"
                 AbsoluteLayout.LayoutBounds="0,0,1,1"
                 AbsoluteLayout.LayoutFlags="All"
                 BackgroundColor="{DynamicResource PageBackgroundColor}"
-                HorizontalOptions="FillAndExpand"
                 IsVisible="{Binding PackagesLoading}"
-                VerticalOptions="FillAndExpand">
-                <controls:NuGetCardSkeleton />
+                Spacing="0">
                 <controls:NuGetCardSkeleton />
                 <controls:NuGetCardSkeleton />
                 <controls:NuGetCardSkeleton />
@@ -56,7 +54,7 @@
                 Scrolled="PackagesScrolled">
                 <CollectionView.Header>
                     <ContentView>
-                        <StackLayout x:Name="SearchCollectionHeaderView" />
+                        <ContentView x:Name="SearchCollectionHeaderView" />
                     </ContentView>
                 </CollectionView.Header>
                 <CollectionView.EmptyView>

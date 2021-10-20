@@ -22,7 +22,7 @@ namespace MuGet.Forms.UI.Views
             base.OnSizeAllocated(width, height);
 
             HomeView.Margin =
-                SkeletonHeaderView.Margin =
+                SkeletonView.Margin =
                     SearchCollectionHeaderView.Margin =
                 new Thickness(0, SearchBarView.Height + SearchBarView.Margin.Top + 4, 0, 0);
         }

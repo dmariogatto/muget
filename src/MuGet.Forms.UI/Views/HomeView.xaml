@@ -104,7 +104,7 @@
                 </View.Triggers>
                 <Grid ColumnDefinitions="8,*,Auto">
                     <BoxView
-                        BackgroundColor="LightSteelBlue"
+                        BackgroundColor="DodgerBlue"
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="FillAndExpand" />
                     <Label
@@ -159,7 +159,7 @@
                 </View.Triggers>
                 <Grid ColumnDefinitions="8,*,Auto">
                     <BoxView
-                        BackgroundColor="LightSteelBlue"
+                        BackgroundColor="DodgerBlue"
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="FillAndExpand" />
                     <Label

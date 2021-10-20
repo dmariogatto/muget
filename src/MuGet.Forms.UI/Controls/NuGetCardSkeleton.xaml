@@ -14,11 +14,11 @@
         <yummy:PancakeView Margin="6,4,6,4" Style="{DynamicResource CardYummyStyle}">
             <StackLayout Margin="2">
                 <controls:SkeletonView
-                    HeightRequest="22"
+                    HeightRequest="20"
                     HorizontalOptions="FillAndExpand"
                     Style="{StaticResource SkeletonStyle}" />
 
-                <Grid ColumnDefinitions="48,*" RowDefinitions="*,*,*">
+                <Grid ColumnDefinitions="48,*" RowDefinitions="Auto,Auto,Auto">
                     <controls:SkeletonView
                         Grid.RowSpan="3"
                         HeightRequest="48"
@@ -30,24 +30,24 @@
                     <controls:SkeletonView
                         Grid.Row="0"
                         Grid.Column="1"
+                        HeightRequest="12"
                         Style="{StaticResource SkeletonStyle}"
                         WidthRequest="192" />
                     <controls:SkeletonView
                         Grid.Row="1"
                         Grid.Column="1"
+                        HeightRequest="12"
                         Style="{StaticResource SkeletonStyle}"
                         WidthRequest="192" />
                     <controls:SkeletonView
                         Grid.Row="2"
                         Grid.Column="1"
+                        HeightRequest="12"
                         Style="{StaticResource SkeletonStyle}"
                         WidthRequest="192" />
                 </Grid>
 
-                <controls:SkeletonView
-                    HeightRequest="36"
-                    HorizontalOptions="FillAndExpand"
-                    Style="{StaticResource SkeletonStyle}" />
+                <controls:SkeletonView HorizontalOptions="FillAndExpand" Style="{StaticResource SkeletonStyle}" />
             </StackLayout>
         </yummy:PancakeView>
     </ContentView.Content>
