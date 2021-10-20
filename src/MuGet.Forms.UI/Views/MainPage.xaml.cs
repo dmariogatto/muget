@@ -38,6 +38,10 @@ namespace MuGet.Forms.UI.Views
 
         private void PackagesScrolled(object sender, ItemsViewScrolledEventArgs e)
         {
+            // quit on top bounce
+            if (e.VerticalOffset < 1)
+                return;
+
             var transY = Convert.ToInt32(SearchBarView.TranslationY);
             if (transY == 0 &&
                 e.VerticalDelta > 15)
