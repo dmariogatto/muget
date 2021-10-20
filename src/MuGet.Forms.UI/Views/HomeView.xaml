@@ -11,6 +11,7 @@
     xmlns:models="clr-namespace:MuGet.Models;assembly=MuGet"
     xmlns:viewModels="clr-namespace:MuGet.ViewModels;assembly=MuGet"
     xmlns:views="clr-namespace:MuGet.Forms.UI.Views"
+    xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     x:DataType="viewModels:HomeViewModel"
     x:TypeArguments="viewModels:HomeViewModel"
     mc:Ignorable="d">
@@ -87,12 +88,11 @@
                     </BindableLayout.ItemTemplate>
                 </StackLayout>
             </ScrollView>
-            <Label
-                Margin="12,6,4,6"
-                FontAttributes="Italic"
+            <yummy:PancakeView
+                Margin="10,2,10,2"
+                Padding="0"
                 IsVisible="False"
-                Style="{DynamicResource LabelStyle}"
-                Text="{local:Translate NoFavouritePackages}">
+                Style="{DynamicResource CardYummyStyle}">
                 <View.Triggers>
                     <MultiTrigger TargetType="View">
                         <MultiTrigger.Conditions>
@@ -102,7 +102,24 @@
                         <Setter Property="IsVisible" Value="True" />
                     </MultiTrigger>
                 </View.Triggers>
-            </Label>
+                <Grid ColumnDefinitions="8,*,Auto">
+                    <BoxView
+                        BackgroundColor="LightSteelBlue"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <Label
+                        Grid.Column="1"
+                        Padding="0,4,0,4"
+                        Style="{DynamicResource LabelStyle}"
+                        Text="{local:Translate NoFavouritePackages}" />
+                    <Label
+                        Grid.Column="2"
+                        Padding="0,0,4,0"
+                        FontSize="Large"
+                        Text="😍"
+                        VerticalOptions="Center" />
+                </Grid>
+            </yummy:PancakeView>
 
             <Label
                 Margin="8,0,8,0"
@@ -126,12 +143,11 @@
                     </BindableLayout.ItemTemplate>
                 </StackLayout>
             </ScrollView>
-            <Label
-                Margin="12,6,4,6"
-                FontAttributes="Italic"
+            <yummy:PancakeView
+                Margin="10,2,10,2"
+                Padding="0"
                 IsVisible="False"
-                Style="{DynamicResource LabelStyle}"
-                Text="{local:Translate NoRecentPackages}">
+                Style="{DynamicResource CardYummyStyle}">
                 <View.Triggers>
                     <MultiTrigger TargetType="View">
                         <MultiTrigger.Conditions>
@@ -141,7 +157,24 @@
                         <Setter Property="IsVisible" Value="True" />
                     </MultiTrigger>
                 </View.Triggers>
-            </Label>
+                <Grid ColumnDefinitions="8,*,Auto">
+                    <BoxView
+                        BackgroundColor="LightSteelBlue"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand" />
+                    <Label
+                        Grid.Column="1"
+                        Padding="0,4,0,4"
+                        Style="{DynamicResource LabelStyle}"
+                        Text="{local:Translate NoRecentPackages}" />
+                    <Label
+                        Grid.Column="2"
+                        Padding="0,0,4,0"
+                        FontSize="Large"
+                        Text="🧐"
+                        VerticalOptions="Center" />
+                </Grid>
+            </yummy:PancakeView>
         </StackLayout>
     </views:BaseView.Content>
 </views:BaseView>

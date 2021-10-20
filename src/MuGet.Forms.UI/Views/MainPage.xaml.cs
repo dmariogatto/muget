@@ -15,8 +15,6 @@ namespace MuGet.Forms.UI.Views
         public MainPage() : base()
         {
             InitializeComponent();
-
-            Xamarin.Forms.NavigationPage.SetHasNavigationBar(this, false);
         }
 
         protected override void OnSizeAllocated(double width, double height)

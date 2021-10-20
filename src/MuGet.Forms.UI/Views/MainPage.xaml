@@ -17,6 +17,7 @@
     x:DataType="viewModels:MainViewModel"
     x:TypeArguments="viewModels:MainViewModel"
     BackgroundColor="{DynamicResource PageBackgroundColor}"
+    NavigationPage.HasNavigationBar="False"
     Shell.NavBarIsVisible="False"
     mc:Ignorable="d">
 
@@ -30,17 +31,24 @@
                 <views:HomeView />
             </ScrollView>
 
-            <ContentView
+            <StackLayout
                 x:Name="SkeletonHeaderView"
                 AbsoluteLayout.LayoutBounds="0,0,1,1"
                 AbsoluteLayout.LayoutFlags="All"
-                IsVisible="{Binding PackagesLoading}">
-                <controls:NuGetCardSkeleton VerticalOptions="Start" />
-            </ContentView>
+                BackgroundColor="{DynamicResource PageBackgroundColor}"
+                HorizontalOptions="FillAndExpand"
+                IsVisible="{Binding PackagesLoading}"
+                VerticalOptions="FillAndExpand">
+                <controls:NuGetCardSkeleton />
+                <controls:NuGetCardSkeleton />
+                <controls:NuGetCardSkeleton />
+                <controls:NuGetCardSkeleton />
+            </StackLayout>
 
             <CollectionView
                 AbsoluteLayout.LayoutBounds="0,0,1,1"
                 AbsoluteLayout.LayoutFlags="All"
+                BackgroundColor="{DynamicResource PageBackgroundColor}"
                 IsVisible="{Binding PackagesLoaded}"
                 ItemsSource="{Binding Packages}"
                 RemainingItemsThreshold="{Binding RemainingItemsThreshold}"
@@ -58,7 +66,7 @@
                             FontAttributes="Italic"
                             HorizontalTextAlignment="Center"
                             Style="{DynamicResource LabelTitleStyle}"
-                            Text="{Binding SearchText, StringFormat={local:Translate ZeroPackagesReturnedForItem}}"
+                            Text="{Binding SearchText, StringFormat={local:Translate NoPackagesFoundForItem}}"
                             VerticalOptions="Start" />
                     </ContentView>
                 </CollectionView.EmptyView>

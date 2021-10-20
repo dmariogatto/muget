@@ -27,7 +27,8 @@
                     Grid.RowSpan="5"
                     Margin="0,0,6,0"
                     BackgroundColor="BlueViolet"
-                    WidthRequest="14" />
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand" />
 
                 <Label
                     Grid.Column="1"

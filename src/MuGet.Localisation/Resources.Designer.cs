@@ -313,7 +313,7 @@ namespace MuGet.Localisation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add your favourite packages to get notifications of new versions ❤.
+        ///   Looks up a localized string similar to Add your favourite packages to get notifications of new versions.
         /// </summary>
         public static string NoFavouritePackages {
             get {
@@ -331,7 +331,16 @@ namespace MuGet.Localisation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Start searching to discover 🎁.
+        ///   Looks up a localized string similar to No packages found for &apos;{0}&apos;.
+        /// </summary>
+        public static string NoPackagesFoundForItem {
+            get {
+                return ResourceManager.GetString("NoPackagesFoundForItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start searching to discover.
         /// </summary>
         public static string NoRecentPackages {
             get {
@@ -597,15 +606,6 @@ namespace MuGet.Localisation {
         public static string WelcomeToMuGet {
             get {
                 return ResourceManager.GetString("WelcomeToMuGet", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to 0 packages returned for {0}.
-        /// </summary>
-        public static string ZeroPackagesReturnedForItem {
-            get {
-                return ResourceManager.GetString("ZeroPackagesReturnedForItem", resourceCulture);
             }
         }
     }

@@ -1,6 +1,5 @@
 ﻿using MuGet.Localisation;
 using MuGet.Models;
-using MuGet.Services;
 using MvvmHelpers;
 using MvvmHelpers.Commands;
 using System;
