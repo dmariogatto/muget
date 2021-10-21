@@ -10,8 +10,6 @@ namespace MuGet.Forms.UI.Views
 {
     public partial class MainPage : BasePage<MainViewModel>
     {
-        private PackagePage _packagePage;
-
         public MainPage() : base()
         {
             InitializeComponent();
@@ -67,10 +65,13 @@ namespace MuGet.Forms.UI.Views
             {
                 _ = Navigation.PushPageFactoryAsync(() =>
                 {
-                    _packagePage ??= new PackagePage();
-                    _packagePage.PackageId = metadata.Id;
-                    _packagePage.Version = metadata.Version;
-                    return _packagePage;
+                    var packagePage = new PackagePage
+                    {
+                        PackageId = metadata.Id,
+                        Version = metadata.Version
+                    };
+
+                    return packagePage;
                 });
             }
         }

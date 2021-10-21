@@ -3,11 +3,11 @@ using System;
 
 namespace MuGet.Services
 {
-    public class InMemoryCache : ICacheService
+    public class CacheService : ICacheService
     {
         private readonly MemoryCache _cache = new MemoryCache(new MemoryCacheOptions());
 
-        public InMemoryCache()
+        public CacheService()
         {
         }
 
@@ -19,7 +19,7 @@ namespace MuGet.Services
             {
                 result = value;
             }
-            
+
             return result;
         }
 

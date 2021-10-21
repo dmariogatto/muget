@@ -72,7 +72,6 @@ namespace MuGet.Services
             _retryPolicy =
                Policy.Handle<WebException>()
                      .Or<HttpRequestException>()
-                     .Or<TaskCanceledException>()
                      .WaitAndRetryAsync
                        (
                            retryCount: 2,
@@ -110,8 +109,14 @@ namespace MuGet.Services
             }
             catch (Exception ex)
             {
-                if (ex is not OperationCanceledException)
-                    _logger.Error(ex);
+                switch (ex)
+                {
+                    case OperationCanceledException _:
+                        break;
+                    default:
+                        _logger.Error(ex);
+                        break;
+                }
             }
 
             return packageSource;

@@ -11,13 +11,13 @@ namespace MuGet.Services
 {
     public class Logger : ILogger
     {
-        private const string _logFileName = "log.txt";
+        private const string LogFileName = "log.txt";
 
         private readonly string _logFilePath;
 
         public Logger()
         {
-            _logFilePath = Path.Combine(FileSystem.CacheDirectory, _logFileName);
+            _logFilePath = Path.Combine(FileSystem.CacheDirectory, LogFileName);
         }
 
         public void Error(Exception ex, IDictionary<string, string> data = null)
@@ -25,7 +25,7 @@ namespace MuGet.Services
             System.Diagnostics.Debug.WriteLine(ex);
             WriteToLog(ex, string.Empty, data);
         }
-        
+
         public void Event(string eventName, IDictionary<string, string> properties = null)
         {
             if (!string.IsNullOrWhiteSpace(eventName))
@@ -90,7 +90,7 @@ namespace MuGet.Services
                     lock (_logFilePath)
                     {
                         File.Delete(_logFilePath);
-                    }                    
+                    }
                 }
                 catch (Exception ex)
                 {
