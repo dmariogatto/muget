@@ -158,9 +158,9 @@ namespace MuGet.Forms.UI.Controls
                     VerticalOptions = LayoutOptions.FillAndExpand,
                 };
 
-                var view = TabTemplate is not DataTemplateSelector tabItemDataTemplate
-                    ? (View)(TabTemplate?.CreateContent() ?? throw new NullReferenceException())
-                    : (View)tabItemDataTemplate.SelectTemplate(item, this).CreateContent();
+                var view = TabTemplate is DataTemplateSelector tabItemDataTemplate
+                    ? (View)tabItemDataTemplate.SelectTemplate(item, this).CreateContent()
+                    : (View)(TabTemplate?.CreateContent() ?? throw new NullReferenceException());
 
                 view.BindingContext = item;
                 contentView.Content = view;
