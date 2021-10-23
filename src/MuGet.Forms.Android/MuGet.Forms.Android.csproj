@@ -18,13 +18,13 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v11.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <AndroidLinkSkip>MuGet.Forms;Shiny.Core;Shiny.Notifications;LiteDB;</AndroidLinkSkip>
+    <AndroidLinkSkip>Cats.CertificateTransparency;Shiny.Core;Shiny.Notifications;LiteDB;Essential.Interfaces;</AndroidLinkSkip>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,7 +41,7 @@
     <AndroidDexTool>d8</AndroidDexTool>
     <EnableLLVM>false</EnableLLVM>
     <BundleAssemblies>false</BundleAssemblies>
-    <AndroidLinkSkip>Shiny.Core;Shiny.Notifications;LiteDB;Essential.Interfaces;</AndroidLinkSkip>
+    <AndroidLinkSkip>Cats.CertificateTransparency;Shiny.Core;Shiny.Notifications;LiteDB;Essential.Interfaces;</AndroidLinkSkip>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>false</DebugSymbols>
@@ -61,7 +61,7 @@
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <EnableLLVM>true</EnableLLVM>
     <BundleAssemblies>false</BundleAssemblies>
-    <AndroidLinkSkip>Shiny.Core;Shiny.Notifications;LiteDB;Essential.Interfaces;</AndroidLinkSkip>
+    <AndroidLinkSkip>Cats.CertificateTransparency;Shiny.Core;Shiny.Notifications;LiteDB;Essential.Interfaces;</AndroidLinkSkip>
     <AndroidSupportedAbis>armeabi-v7a;arm64-v8a</AndroidSupportedAbis>
   </PropertyGroup>
   <ItemGroup>
