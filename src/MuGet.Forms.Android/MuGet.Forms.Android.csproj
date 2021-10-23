@@ -99,6 +99,7 @@
     <PackageReference Include="Shiny.Notifications">
       <Version>1.2.0.1755</Version>
     </PackageReference>    
+    </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
       <Version>2.4.11.982</Version>
     </PackageReference>
