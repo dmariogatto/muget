@@ -5,7 +5,7 @@ using System;
 namespace MuGet.Models
 {
     public interface IEntity
-    {        
+    {
         [JsonIgnore, LiteDB.BsonIgnore]
         string Key { get; }
         [JsonIgnore]
@@ -14,7 +14,7 @@ namespace MuGet.Models
     }
 
     public abstract class Entity : ObservableObject, IEntity
-    {        
+    {
         public abstract string Key { get; }
         public abstract DateTime Timestamp { get; set; }
 

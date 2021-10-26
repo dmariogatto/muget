@@ -26,14 +26,14 @@ namespace MuGet.Forms.UI.Converters
                         var substring = text.Substring(previousIdx, m.Index - previousIdx);
                         previousIdx += substring.Length;
                         if (substring.Length > 0)
-                            formattedString.Spans.Add(new Span() { Text = substring });                        
-                        
+                            formattedString.Spans.Add(new Span() { Text = substring });
+
                         substring = text.Substring(previousIdx, m.Length);
                         previousIdx += substring.Length;
                         if (substring.Length > 0)
                         {
                             var urlSpan = new Span()
-                            { 
+                            {
                                 Text = substring,
                                 TextColor = (Color)Application.Current.Resources["LinkColor"]
                             };

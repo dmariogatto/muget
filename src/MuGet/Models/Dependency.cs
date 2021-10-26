@@ -13,7 +13,7 @@ namespace MuGet.Models
         public string Id { get; set; }
         public string Range { get; set; }
         public string Registration { get; set; }
-        
+
         private VersionRange _versionRange;
         [JsonIgnore]
         public VersionRange VersionRange
