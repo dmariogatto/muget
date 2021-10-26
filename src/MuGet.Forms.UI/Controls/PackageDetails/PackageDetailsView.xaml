@@ -44,8 +44,21 @@
             Margin="6,0,6,0"
             Style="{DynamicResource LabelTitleStyle}"
             Text="{local:Translate Description}" />
-        <yummy:PancakeView Margin="10,2,10,2" Style="{DynamicResource CardYummyStyle}">
-            <Label FormattedText="{Binding EntryData.Description, Converter={StaticResource LinksToFormattedConverter}}" Style="{DynamicResource LabelStyle}" />
+        <yummy:PancakeView
+            Margin="10,2,10,2"
+            Padding="0"
+            Style="{DynamicResource CardYummyStyle}">
+            <Grid ColumnDefinitions="8,*">
+                <BoxView
+                    BackgroundColor="BlueViolet"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand" />
+                <Label
+                    Grid.Column="1"
+                    Padding="0,4,4,4"
+                    FormattedText="{Binding EntryData.Description, Converter={StaticResource LinksToFormattedConverter}}"
+                    Style="{DynamicResource LabelStyle}" />
+            </Grid>
         </yummy:PancakeView>
         <Label
             Margin="6,0,6,0"
@@ -54,9 +67,20 @@
             Text="{local:Translate ReleaseNotes}" />
         <yummy:PancakeView
             Margin="10,2,10,2"
+            Padding="0"
             IsVisible="{Binding EntryData.ReleaseNotes, Converter={StaticResource StringToBoolConverter}}"
             Style="{DynamicResource CardYummyStyle}">
-            <Label FormattedText="{Binding EntryData.ReleaseNotes, Converter={StaticResource LinksToFormattedConverter}}" Style="{DynamicResource LabelStyle}" />
+            <Grid ColumnDefinitions="8,*">
+                <BoxView
+                    BackgroundColor="BlueViolet"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand" />
+                <Label
+                    Grid.Column="1"
+                    Padding="0,4,4,4"
+                    FormattedText="{Binding EntryData.ReleaseNotes, Converter={StaticResource LinksToFormattedConverter}}"
+                    Style="{DynamicResource LabelStyle}" />
+            </Grid>
         </yummy:PancakeView>
 
         <Label
@@ -69,20 +93,32 @@
             IsVisible="{Binding EntryData.Tags, Converter={StaticResource ListToBoolConverter}}"
             Orientation="Horizontal"
             VerticalOptions="Fill">
-            <FlexLayout
+            <StackLayout
                 Margin="0,6,0,6"
                 BindableLayout.ItemsSource="{Binding EntryData.Tags}"
-                Direction="Row"
-                FlowDirection="LeftToRight"
-                JustifyContent="Start">
+                Orientation="Horizontal"
+                Spacing="0">
                 <BindableLayout.ItemTemplate>
                     <DataTemplate x:DataType="x:String">
-                        <yummy:PancakeView Margin="8,2,0,4" Style="{DynamicResource CardYummyStyle}">
-                            <Label Style="{DynamicResource LabelStyle}" Text="{Binding .}" />
+                        <yummy:PancakeView
+                            Margin="8,2,0,4"
+                            Padding="0"
+                            Style="{DynamicResource CardYummyStyle}">
+                            <Grid ColumnDefinitions="8,Auto">
+                                <BoxView
+                                    BackgroundColor="DarkSlateBlue"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand" />
+                                <Label
+                                    Grid.Column="1"
+                                    Padding="0,0,5,0"
+                                    Style="{DynamicResource LabelStyle}"
+                                    Text="{Binding .}" />
+                            </Grid>
                         </yummy:PancakeView>
                     </DataTemplate>
                 </BindableLayout.ItemTemplate>
-            </FlexLayout>
+            </StackLayout>
         </ScrollView>
 
         <Label

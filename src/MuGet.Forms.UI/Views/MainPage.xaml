@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:controls="clr-namespace:MuGet.Forms.UI.Controls"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:effects="clr-namespace:MuGet.Forms.UI.Effects"
     xmlns:local="clr-namespace:MuGet.Forms.UI"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:models="clr-namespace:MuGet.Models;assembly=MuGet"
@@ -13,10 +13,11 @@
     xmlns:views="clr-namespace:MuGet.Forms.UI.Views"
     xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
     Title="{Binding Title}"
-    ios:Page.UseSafeArea="true"
+    effects:SafeAreaInsetEffect.Insets="All"
     x:DataType="viewModels:MainViewModel"
     x:TypeArguments="viewModels:MainViewModel"
     BackgroundColor="{DynamicResource PageBackgroundColor}"
+    NavigationPage.HasNavigationBar="False"
     Shell.NavBarIsVisible="False"
     mc:Ignorable="d">
 
@@ -30,17 +31,22 @@
                 <views:HomeView />
             </ScrollView>
 
-            <ContentView
-                x:Name="SkeletonHeaderView"
+            <StackLayout
+                x:Name="SkeletonView"
                 AbsoluteLayout.LayoutBounds="0,0,1,1"
                 AbsoluteLayout.LayoutFlags="All"
-                IsVisible="{Binding PackagesLoading}">
-                <controls:NuGetCardSkeleton VerticalOptions="Start" />
-            </ContentView>
+                BackgroundColor="{DynamicResource PageBackgroundColor}"
+                IsVisible="{Binding PackagesLoading}"
+                Spacing="0">
+                <controls:NuGetCardSkeleton />
+                <controls:NuGetCardSkeleton />
+                <controls:NuGetCardSkeleton />
+            </StackLayout>
 
             <CollectionView
                 AbsoluteLayout.LayoutBounds="0,0,1,1"
                 AbsoluteLayout.LayoutFlags="All"
+                BackgroundColor="{DynamicResource PageBackgroundColor}"
                 IsVisible="{Binding PackagesLoaded}"
                 ItemsSource="{Binding Packages}"
                 RemainingItemsThreshold="{Binding RemainingItemsThreshold}"
@@ -48,7 +54,7 @@
                 Scrolled="PackagesScrolled">
                 <CollectionView.Header>
                     <ContentView>
-                        <StackLayout x:Name="SearchCollectionHeaderView" />
+                        <ContentView x:Name="SearchCollectionHeaderView" />
                     </ContentView>
                 </CollectionView.Header>
                 <CollectionView.EmptyView>
@@ -58,7 +64,7 @@
                             FontAttributes="Italic"
                             HorizontalTextAlignment="Center"
                             Style="{DynamicResource LabelTitleStyle}"
-                            Text="{Binding SearchText, StringFormat={local:Translate ZeroPackagesReturnedForItem}}"
+                            Text="{Binding SearchText, StringFormat={local:Translate NoPackagesFoundForItem}}"
                             VerticalOptions="Start" />
                     </ContentView>
                 </CollectionView.EmptyView>
@@ -100,8 +106,10 @@
                 Style="{DynamicResource CardYummyStyle}">
                 <SearchBar
                     BackgroundColor="{DynamicResource CardBackgroundColor}"
+                    CancelButtonColor="Red"
                     HorizontalOptions="FillAndExpand"
                     Placeholder="{local:Translate Search}"
+                    PlaceholderColor="{DynamicResource PrimaryTextColor}"
                     Text="{Binding SearchText}"
                     TextColor="{DynamicResource PrimaryTextColor}" />
             </yummy:PancakeView>

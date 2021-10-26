@@ -1,4 +1,5 @@
-﻿using MuGet.Models;
+﻿using MuGet.Forms.UI.Extentions;
+using MuGet.Models;
 using MuGet.ViewModels;
 using Xamarin.Forms;
 
@@ -17,22 +18,17 @@ namespace MuGet.Forms.UI.Views
         {
             if (sender is View v && v.BindingContext is PackageMetadata metadata)
             {
-                var packagePage = new PackagePage
+                _ = Navigation.PushPageFactoryAsync(() => new PackagePage
                 {
                     PackageId = metadata.Id,
                     Version = metadata.Version
-                };
-
-                Navigation.PushAsync(packagePage);
+                });
             }
         }
 
         private void SettingsTapped(object sender, System.EventArgs e)
         {
-            if (_settingsPage == null)
-                _settingsPage = new SettingsPage();
-
-            Navigation.PushAsync(_settingsPage);
+            _ = Navigation.PushPageFactoryAsync(() => _settingsPage ??= new SettingsPage());
         }
     }
 }

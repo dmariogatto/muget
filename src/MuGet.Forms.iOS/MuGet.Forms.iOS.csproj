@@ -26,7 +26,7 @@
     <MtouchArch>x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
-    <MtouchExtraArgs>--linkskip=Sharpnado.Tabs --linkskip=Sharpnado.Tabs.iOS --linkskip=Essential.Interfaces --linkskip=Shiny.Core --linkskip=Shiny.Notifications --linkskip=LiteDB --optimize=experimental-xforms-product-type</MtouchExtraArgs>
+    <MtouchExtraArgs>--linkskip=Essential.Interfaces --linkskip=Shiny.Core --linkskip=Shiny.Notifications --linkskip=LiteDB</MtouchExtraArgs>
     <MtouchFloat32>true</MtouchFloat32>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
@@ -65,11 +65,12 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchLink>Full</MtouchLink>
     <MtouchUseLlvm>true</MtouchUseLlvm>
-    <MtouchExtraArgs>--linkskip=Sharpnado.Tabs --linkskip=Sharpnado.Tabs.iOS --linkskip=Essential.Interfaces --linkskip=Shiny.Core --linkskip=Shiny.Notifications --linkskip=LiteDB --optimize=experimental-xforms-product-type</MtouchExtraArgs>
+    <MtouchExtraArgs>--linkskip=Essential.Interfaces --linkskip=Shiny.Core --linkskip=Shiny.Notifications --linkskip=LiteDB</MtouchExtraArgs>
     <MtouchFloat32>true</MtouchFloat32>
     <OptimizePNGs>true</OptimizePNGs>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Effects\SafeAreaInsetEffect_iOS.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Renderers\SearchBarCustomRenderer.cs" />
@@ -140,22 +141,19 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Acr.UserDialogs">
-      <Version>7.1.0.514</Version>
+      <Version>7.2.0.534</Version>
     </PackageReference>
     <PackageReference Include="AiForms.SettingsView">
-      <Version>1.3.21</Version>
+      <Version>1.3.29</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Analytics">
-      <Version>4.3.0</Version>
+      <Version>4.4.0</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Crashes">
-      <Version>4.3.0</Version>
+      <Version>4.4.0</Version>
     </PackageReference>
     <PackageReference Include="Plugin.StoreReview">
       <Version>3.1.0</Version>
-    </PackageReference>
-    <PackageReference Include="Sharpnado.Tabs">
-      <Version>2.1.0</Version>
     </PackageReference>
     <PackageReference Include="Shiny.Core">
       <Version>1.2.0.1755</Version>
@@ -163,24 +161,19 @@
     <PackageReference Include="Shiny.Notifications">
       <Version>1.2.0.1755</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.CommunityToolkit">
-      <Version>1.1.0</Version>
-    </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
       <Version>2.4.11.982</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms">
       <Version>2.4.11.982</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Forms.PancakeView">
       <Version>2.3.0.759</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-  <ItemGroup>
-    <Folder Include="Effects\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BundleResource Include="Resources\gift.png" />
   </ItemGroup>

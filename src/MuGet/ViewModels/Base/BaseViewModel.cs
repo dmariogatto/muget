@@ -33,11 +33,11 @@ namespace MuGet.ViewModels
         {
         }
 
-        private State _currentState;
-        public State State
+        private bool _hasError;
+        public bool HasError
         {
-            get => _currentState;
-            set => SetProperty(ref _currentState, value);
+            get => _hasError;
+            set => SetProperty(ref _hasError, value);
         }
 
 #if DEBUG

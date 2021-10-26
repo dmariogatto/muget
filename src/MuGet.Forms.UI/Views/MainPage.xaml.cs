@@ -1,4 +1,5 @@
-﻿using MuGet.Models;
+﻿using MuGet.Forms.UI.Extentions;
+using MuGet.Models;
 using MuGet.ViewModels;
 using System;
 using System.Threading.Tasks;
@@ -12,8 +13,6 @@ namespace MuGet.Forms.UI.Views
         public MainPage() : base()
         {
             InitializeComponent();
-
-            Xamarin.Forms.NavigationPage.SetHasNavigationBar(this, false);
         }
 
         protected override void OnSizeAllocated(double width, double height)
@@ -21,7 +20,7 @@ namespace MuGet.Forms.UI.Views
             base.OnSizeAllocated(width, height);
 
             HomeView.Margin =
-                SkeletonHeaderView.Margin =
+                SkeletonView.Margin =
                     SearchCollectionHeaderView.Margin =
                 new Thickness(0, SearchBarView.Height + SearchBarView.Margin.Top + 4, 0, 0);
         }
@@ -37,9 +36,12 @@ namespace MuGet.Forms.UI.Views
 
         private void PackagesScrolled(object sender, ItemsViewScrolledEventArgs e)
         {
+            var top = e.VerticalOffset < 1;
+
             var transY = Convert.ToInt32(SearchBarView.TranslationY);
             if (transY == 0 &&
-                e.VerticalDelta > 15)
+                e.VerticalDelta > 15 &&
+                !top)
             {
                 var trans = SearchBarView.Height + SearchBarView.Margin.Top;
                 var safeInsets = On<Xamarin.Forms.PlatformConfiguration.iOS>().SafeAreaInsets();
@@ -49,8 +51,7 @@ namespace MuGet.Forms.UI.Views
                     SearchBarView.FadeTo(0.25, 200));
             }
             else if (transY != 0 &&
-                     e.VerticalDelta < 0 &&
-                     Math.Abs(e.VerticalDelta) > 10)
+                     (e.VerticalDelta < 0 && (Math.Abs(e.VerticalDelta) > 10) || top))
             {
                 Task.WhenAll(
                     SearchBarView.TranslateTo(0, 0, 250, Easing.CubicOut),
@@ -62,11 +63,16 @@ namespace MuGet.Forms.UI.Views
         {
             if (sender is View v && v.BindingContext is PackageMetadata metadata)
             {
-                var packagePage = new PackagePage();
-                packagePage.PackageId = metadata.Id;
-                packagePage.Version = metadata.Version;
+                _ = Navigation.PushPageFactoryAsync(() =>
+                {
+                    var packagePage = new PackagePage
+                    {
+                        PackageId = metadata.Id,
+                        Version = metadata.Version
+                    };
 
-                Navigation.PushAsync(packagePage);
+                    return packagePage;
+                });
             }
         }
     }

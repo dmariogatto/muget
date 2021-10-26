@@ -83,7 +83,7 @@ namespace MuGet
                                     {
                                         { nameof(CatalogEntry.Id) , le.Id },
                                         { nameof(CatalogEntry.Version) , le.Version }
-                                    }
+                                    },
                                 });
                             }
                         }

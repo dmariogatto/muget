@@ -1,6 +1,5 @@
 ﻿using MuGet.Localisation;
 using MuGet.Models;
-using MuGet.Services;
 using MvvmHelpers;
 using MvvmHelpers.Commands;
 using System;
@@ -73,6 +72,10 @@ namespace MuGet.ViewModels
 
         private async Task SearchAsync(string searchText, int skip, CancellationToken cancellationToken)
         {
+            await Task.Delay(250);
+            if (SearchText != searchText || cancellationToken.IsCancellationRequested)
+                return;
+
             RemainingItemsThreshold = -1;
 
             await _searchSemaphore.WaitAsync();

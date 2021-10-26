@@ -250,10 +250,10 @@
     <value>View on GitHub</value>
   </data>
   <data name="NoFavouritePackages" xml:space="preserve">
-    <value>Add your favourite packages to get notifications of new versions ❤</value>
+    <value>Add your favourite packages to get notifications of new versions</value>
   </data>
   <data name="NoRecentPackages" xml:space="preserve">
-    <value>Start searching to discover 🎁</value>
+    <value>Start searching to discover</value>
   </data>
   <data name="Project" xml:space="preserve">
     <value>Project</value>
@@ -270,8 +270,8 @@
   <data name="PackageSettings" xml:space="preserve">
     <value>Package Settings</value>
   </data>
-  <data name="ZeroPackagesReturnedForItem" xml:space="preserve">
-    <value>0 packages returned for {0}</value>
+  <data name="NoPackagesFoundForItem" xml:space="preserve">
+    <value>No packages found for '{0}'</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
@@ -296,5 +296,8 @@
   </data>
   <data name="UnableToSendEmail" xml:space="preserve">
     <value>Unable to Send Email</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
   </data>
 </root>

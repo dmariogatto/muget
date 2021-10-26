@@ -4,10 +4,7 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using MuGet.Forms.UI;
-using MuGet.Forms.UI.Views;
 using Shiny;
-using System;
-using Xamarin.Forms;
 
 namespace MuGet.Forms.Android
 {
@@ -16,6 +13,7 @@ namespace MuGet.Forms.Android
         Icon = "@mipmap/icon",
         RoundIcon = "@mipmap/icon_round",
         Theme = "@style/MainTheme",
+        LaunchMode = LaunchMode.SingleTask,
         ScreenOrientation = ScreenOrientation.Portrait,
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     [IntentFilter(new[] { Intent.ActionView },
@@ -34,6 +32,9 @@ namespace MuGet.Forms.Android
 
             base.OnCreate(savedInstanceState);
 
+            //Cats.CertificateTransparency.Instance.InitDomains(new[] { "*.*" }, null);
+            _ = Cats.CertificateTransparency.Instance.LogListService.LoadLogListAsync(default);
+
             Acr.UserDialogs.UserDialogs.Init(this);
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: true);
             AiForms.Renderers.Droid.SettingsViewInit.Init();
@@ -44,14 +45,6 @@ namespace MuGet.Forms.Android
             LoadApplication(new App());
 
             this.ShinyOnCreate();
-
-            ProcessIntent(Intent);
-        }
-
-        protected override void OnNewIntent(Intent intent)
-        {
-            base.OnNewIntent(intent);
-            ProcessIntent(intent);
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
@@ -60,34 +53,6 @@ namespace MuGet.Forms.Android
             this.ShinyRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
-
-        private void ProcessIntent(Intent intent)
-        {
-            if (intent?.Action != null &&
-                intent?.Data != null)
-            {
-                var uri = intent.Data;
-                var host = uri.Host;
-                var pathSegs = uri.PathSegments;
-                if (string.Equals(host, "package", StringComparison.OrdinalIgnoreCase))
-                {
-                    var packageId = pathSegs.Count > 0 ? pathSegs[0] : string.Empty;
-                    var version = pathSegs.Count > 1 ? pathSegs[1] : string.Empty;
-
-                    if (!string.IsNullOrEmpty(packageId) &&
-                        Xamarin.Forms.Application.Current.MainPage is NavigationPage navPage)
-                    {
-                        var packagePage = new PackagePage();
-                        packagePage.PackageId = packageId;
-
-                        if (!string.IsNullOrEmpty(version))
-                            packagePage.Version = version;
-
-                        Device.InvokeOnMainThreadAsync(() => navPage.PushAsync(packagePage));
-                    }
-                }
-            }
         }
     }
 }

@@ -24,7 +24,7 @@ namespace MuGet
             Container.RegisterSingleton(typeof(IStoreReview), () => CrossStoreReview.Current);
 
             Container.Register<ILogger, Logger>(Lifestyle.Singleton);
-            Container.Register<ICacheService, InMemoryCache>(Lifestyle.Singleton);
+            Container.Register<ICacheService, CacheService>(Lifestyle.Singleton);
             Container.Register<INuGetService, NuGetService>(Lifestyle.Singleton);
             Container.Register<IMuGetPackageService, MuGetPackageService>(Lifestyle.Singleton);
             Container.Register<IBvmConstructor, BvmConstructor>(Lifestyle.Singleton);
