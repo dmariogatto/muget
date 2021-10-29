@@ -300,4 +300,7 @@
   <data name="Back" xml:space="preserve">
     <value>Back</value>
   </data>
+  <data name="PackageUrlFormat" xml:space="preserve">
+    <value>muget://package/{0}/</value>
+  </data>
 </root>

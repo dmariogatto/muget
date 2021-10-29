@@ -394,6 +394,15 @@ namespace MuGet.Localisation {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to muget://package/{0}/.
+        /// </summary>
+        public static string PackageUrlFormat {
+            get {
+                return ResourceManager.GetString("PackageUrlFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please Rate MuGet.
         /// </summary>
         public static string PleaseRateMuGet {

@@ -9,6 +9,11 @@ namespace MuGet
             public static readonly string PackageLoadFailed = "package_load_failed";
         }
 
+        public static class Action
+        {
+            public const string AppAction = "app_action";
+        }
+
         public static class Property
         {
             public static readonly string Key = "key";
