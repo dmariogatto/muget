@@ -68,9 +68,21 @@ namespace MuGet.Forms.UI
         {
             // Handle when your app sleeps
 
+            var appShortcutsTask = SetupAppShortcutsAsync();
+
+            var sw = new System.Diagnostics.Stopwatch();
+            sw.Start();
+
             IoC.Resolve<INuGetService>().Checkpoint();
 
-            SetupAppShortcutsAsync().Wait();
+            sw.Stop();
+            System.Diagnostics.Debug.WriteLine($"{nameof(OnSleep)}: UserDataSync: {sw.ElapsedMilliseconds}ms");
+            sw.Restart();
+
+            appShortcutsTask.Wait();
+
+            sw.Stop();
+            System.Diagnostics.Debug.WriteLine($"{nameof(OnSleep)}: SetupAppShortcuts: {sw.ElapsedMilliseconds}ms");
         }
 
         protected override void OnResume()
@@ -124,7 +136,7 @@ namespace MuGet.Forms.UI
                     .Select(i => new AppAction(i, i, icon: Device.RuntimePlatform == Device.Android ? "nuget" : null))
                     .ToArray();
 
-                await AppActions.SetAsync(actions);
+                await AppActions.SetAsync(actions).ConfigureAwait(false);
             }
             catch (Exception ex)
             {
