@@ -68,21 +68,18 @@ namespace MuGet.Forms.UI
         {
             // Handle when your app sleeps
 
-            var appShortcutsTask = SetupAppShortcutsAsync();
-
             var sw = new System.Diagnostics.Stopwatch();
             sw.Start();
 
-            IoC.Resolve<INuGetService>().Checkpoint();
+            var appShortcutsTask = SetupAppShortcutsAsync();
 
-            sw.Stop();
-            System.Diagnostics.Debug.WriteLine($"{nameof(OnSleep)}: UserDataSync: {sw.ElapsedMilliseconds}ms");
-            sw.Restart();
+            IoC.Resolve<INuGetService>().Checkpoint();
 
             appShortcutsTask.Wait();
 
-            sw.Stop();
-            System.Diagnostics.Debug.WriteLine($"{nameof(OnSleep)}: SetupAppShortcuts: {sw.ElapsedMilliseconds}ms");
+#if DEBUG
+            System.Diagnostics.Debug.WriteLine($"{nameof(OnSleep)}: completed in {sw.ElapsedMilliseconds}ms");
+#endif
         }
 
         protected override void OnResume()
