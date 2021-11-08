@@ -18,11 +18,13 @@ namespace MuGet.Forms.Android
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     [IntentFilter(new[] { Intent.ActionView },
                   Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable },
-                  DataScheme = "muget")]
+                  DataScheme = App.Scheme)]
     [IntentFilter(new[] { Intent.ActionView },
                   Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable },
-                  DataScheme = "muget",
-                  DataHost = "package")]
+                  DataScheme = App.Scheme,
+                  DataHost = App.Package)]
+    [IntentFilter(new[] { Xamarin.Essentials.Platform.Intent.ActionAppAction },
+                  Categories = new[] { Intent.CategoryDefault })]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -45,6 +47,20 @@ namespace MuGet.Forms.Android
             LoadApplication(new App());
 
             this.ShinyOnCreate();
+        }
+
+        protected override void OnResume()
+        {
+            base.OnResume();
+
+            Xamarin.Essentials.Platform.OnResume(this);
+        }
+
+        protected override void OnNewIntent(Intent intent)
+        {
+            base.OnNewIntent(intent);
+
+            Xamarin.Essentials.Platform.OnNewIntent(intent);
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)

@@ -97,7 +97,7 @@
                     <MultiTrigger TargetType="View">
                         <MultiTrigger.Conditions>
                             <BindingCondition Binding="{Binding FavouritePackages.Count}" Value="0" />
-                            <BindingCondition Binding="{Binding IsBusy}" Value="False" />
+                            <BindingCondition Binding="{Binding IsFirstLoad}" Value="False" />
                         </MultiTrigger.Conditions>
                         <Setter Property="IsVisible" Value="True" />
                     </MultiTrigger>
@@ -152,7 +152,7 @@
                     <MultiTrigger TargetType="View">
                         <MultiTrigger.Conditions>
                             <BindingCondition Binding="{Binding RecentPackages.Count}" Value="0" />
-                            <BindingCondition Binding="{Binding IsBusy}" Value="False" />
+                            <BindingCondition Binding="{Binding IsFirstLoad}" Value="False" />
                         </MultiTrigger.Conditions>
                         <Setter Property="IsVisible" Value="True" />
                     </MultiTrigger>

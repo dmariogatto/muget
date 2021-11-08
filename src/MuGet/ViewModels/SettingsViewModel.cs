@@ -70,7 +70,7 @@ namespace MuGet.ViewModels
             PackageTappedCommand = new AsyncCommand<MuGetPackage>(async (p) =>
             {
                 if (!string.IsNullOrEmpty(p?.PackageId))
-                    await _launcher.TryOpenAsync($"muget://package/{p.PackageId}/");
+                    await _launcher.TryOpenAsync(string.Format(Resources.PackageUrlFormat, p.PackageId));
             });
             ResetNotificationsCommand = new Command(ResetNotifications);
             RunJobsCommand = new AsyncCommand(RunJobsAsync);

@@ -3,6 +3,7 @@ using MuGet.Models;
 using MvvmHelpers;
 using MvvmHelpers.Commands;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -53,19 +54,31 @@ namespace MuGet.ViewModels
                 var recents = NuGetService.GetRecentPackages();
                 var favourites = NuGetService.GetFavouritePackages();
 
-                var recentTasks = recents.Select(i => NuGetService.GetPackageMetadataAsync(i.PackageId, cancellationToken, true)).ToList();
-                var favouriteTasks = favourites.Select(i => NuGetService.GetPackageMetadataAsync(i.PackageId, cancellationToken, true)).ToList();
+                var metadataTasks = new Dictionary<string, Task<PackageMetadata>>();
 
-                await Task.WhenAll(recentTasks.Concat(favouriteTasks));
+                void addMetadataTask(string packageId)
+                {
+                    if (!string.IsNullOrEmpty(packageId) && !metadataTasks.ContainsKey(packageId))
+                        metadataTasks[packageId] = NuGetService.GetPackageMetadataAsync(packageId, cancellationToken, true);
+                }
 
-                var recentResults = recentTasks
-                    .Select(t => t.Result)
-                    .Where(m => m != null)
-                    .ToList();
-                var favResults = favouriteTasks
-                    .Select(t => t.Result)
-                    .Where(m => m != null)
-                    .ToList();
+                foreach (var i in recents)
+                    addMetadataTask(i.PackageId);
+                foreach (var i in favourites)
+                    addMetadataTask(i.PackageId);
+
+                await Task.WhenAll(metadataTasks.Values);
+
+                var recentResults =
+                    (from r in recents
+                     join kv in metadataTasks on r.PackageId equals kv.Key
+                     where kv.Value.IsCompletedSuccessfully && kv.Value.Result != null
+                     select kv.Value.Result).ToList();
+                var favResults =
+                    (from f in favourites
+                     join kv in metadataTasks on f.PackageId equals kv.Key
+                     where kv.Value.IsCompletedSuccessfully && kv.Value.Result != null
+                     select kv.Value.Result).ToList();
 
                 if (!Enumerable.SequenceEqual(recentResults, RecentPackages))
                     RecentPackages.ReplaceRange(recentResults);
