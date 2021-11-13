@@ -116,7 +116,6 @@
     <Compile Include="Renderers\ButtonCustomRenderer.cs" />
     <Compile Include="Services\HttpHandlerService_Droid.cs" />
     <Compile Include="Services\RendererResolver_Droid.cs" />
-    <Compile Include="SplashActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MainApplication.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
