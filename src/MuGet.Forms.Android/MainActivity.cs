@@ -18,14 +18,14 @@ namespace MuGet.Forms.Android
         ScreenOrientation = ScreenOrientation.Portrait,
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     [IntentFilter(new[] { Intent.ActionView },
-                  Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable },
-                  DataScheme = App.Scheme)]
+        Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable },
+        DataScheme = App.Scheme)]
     [IntentFilter(new[] { Intent.ActionView },
-                  Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable },
-                  DataScheme = App.Scheme,
-                  DataHost = App.Package)]
+        Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable },
+        DataScheme = App.Scheme,
+        DataHost = App.Package)]
     [IntentFilter(new[] { Xamarin.Essentials.Platform.Intent.ActionAppAction },
-                  Categories = new[] { Intent.CategoryDefault })]
+        Categories = new[] { Intent.CategoryDefault })]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         private static App FormsApp;
