@@ -12,30 +12,36 @@ namespace MuGet.Forms.Android
         Label = "MuGet",
         Icon = "@mipmap/icon",
         RoundIcon = "@mipmap/icon_round",
-        Theme = "@style/MainTheme",
-        LaunchMode = LaunchMode.SingleTask,
+        Theme = "@style/SplashTheme",
+        MainLauncher = true,
+        LaunchMode = LaunchMode.SingleTask,        
         ScreenOrientation = ScreenOrientation.Portrait,
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     [IntentFilter(new[] { Intent.ActionView },
-                  Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable },
-                  DataScheme = App.Scheme)]
+        Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable },
+        DataScheme = App.Scheme)]
     [IntentFilter(new[] { Intent.ActionView },
-                  Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable },
-                  DataScheme = App.Scheme,
-                  DataHost = App.Package)]
+        Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable },
+        DataScheme = App.Scheme,
+        DataHost = App.Package)]
     [IntentFilter(new[] { Xamarin.Essentials.Platform.Intent.ActionAppAction },
-                  Categories = new[] { Intent.CategoryDefault })]
+        Categories = new[] { Intent.CategoryDefault })]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
+        private static App FormsApp;
+
+        static MainActivity()
+        {
+            //Cats.CertificateTransparency.Instance.InitDomains(new[] { "*.*" }, null);
+            _ = Cats.CertificateTransparency.Instance.LogListService.LoadLogListAsync(default);
+        }
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
-
-            //Cats.CertificateTransparency.Instance.InitDomains(new[] { "*.*" }, null);
-            _ = Cats.CertificateTransparency.Instance.LogListService.LoadLogListAsync(default);
 
             Acr.UserDialogs.UserDialogs.Init(this);
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: true);
@@ -44,7 +50,9 @@ namespace MuGet.Forms.Android
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
-            LoadApplication(new App());
+            LoadApplication(FormsApp ??= new App());
+
+            SetTheme(Resource.Style.MainTheme);
 
             this.ShinyOnCreate();
         }
@@ -54,6 +62,9 @@ namespace MuGet.Forms.Android
             base.OnResume();
 
             Xamarin.Essentials.Platform.OnResume(this);
+
+            // https://github.com/xamarin/Essentials/issues/1922
+            Intent = new Intent(this, typeof(MainActivity));
         }
 
         protected override void OnNewIntent(Intent intent)

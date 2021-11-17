@@ -10,15 +10,17 @@ namespace MuGet.Forms.Android
         Icon = "@mipmap/icon",
         RoundIcon = "@mipmap/icon_round",
         Theme = "@style/SplashTheme",
-        NoHistory = true,
-        MainLauncher = true)]
+        MainLauncher = true,
+        NoHistory = true)]
     public class SplashActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+
             var intent = new Intent(this, typeof(MainActivity));
             StartActivity(intent);
+
             Finish();
         }
     }
