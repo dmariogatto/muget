@@ -195,7 +195,6 @@
                 </Grid>
 
                 <controls:TopTabBar
-                    x:Name="TopTabs"
                     Grid.Row="2"
                     IndexChanged="SelectedTabIndexChanged"
                     PrimaryColor="{DynamicResource LinkColor}">
@@ -214,7 +213,7 @@
                                         <DataTrigger.Binding>
                                             <MultiBinding Converter="{StaticResource AllEqualConverter}">
                                                 <Binding Path="." />
-                                                <Binding Path="SelectedItem" Source="{x:Reference TopTabs}" />
+                                                <Binding Path="SelectedItem" Source="{x:RelativeSource AncestorType={x:Type controls:TopTabBar}}" />
                                             </MultiBinding>
                                         </DataTrigger.Binding>
                                         <Setter Property="FontAttributes" Value="Bold" />
@@ -223,6 +222,11 @@
                             </Label>
                         </DataTemplate>
                     </controls:TopTabBar.TabTemplate>
+                    <x:Array Type="{x:Type x:String}">
+                        <local:Translate Text="Details" />
+                        <local:Translate Text="Dependencies" />
+                        <local:Translate Text="Versions" />
+                    </x:Array>
                 </controls:TopTabBar>
             </Grid>
 
