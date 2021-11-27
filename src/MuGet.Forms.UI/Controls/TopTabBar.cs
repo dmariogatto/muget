@@ -70,19 +70,31 @@ namespace MuGet.Forms.UI.Controls
             {
                 HeightRequest = 1,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
-                VerticalOptions = LayoutOptions.Center
+                VerticalOptions = LayoutOptions.End
             };
+
+            _bottomBorder.SetBinding(BoxView.BackgroundColorProperty, new Binding(nameof(PrimaryColor), source: this));
+
+            var underlineBrush = new LinearGradientBrush()
+            {
+                StartPoint = new Point(0, 0),
+                EndPoint = new Point(1, 0)
+            };
+
+            underlineBrush.GradientStops.Add(new GradientStop() { Offset = 0, Color = Color.Transparent });
+            var underlineStop = new GradientStop() { Offset = 0.5f };
+            underlineStop.SetBinding(GradientStop.ColorProperty, new Binding(nameof(PrimaryColor), source: this));
+            underlineBrush.GradientStops.Add(underlineStop);
+            underlineBrush.GradientStops.Add(new GradientStop() { Offset = 1, Color = Color.Transparent });
 
             _selectedUnderline = new BoxView()
             {
                 HeightRequest = bottomUnderlineHeight,
                 HorizontalOptions = LayoutOptions.Start,
                 VerticalOptions = LayoutOptions.Center,
-                IsVisible = false
+                IsVisible = false,
+                Background = underlineBrush
             };
-
-            _bottomBorder.SetBinding(BoxView.BackgroundColorProperty, new Binding(nameof(PrimaryColor), source: this));
-            _selectedUnderline.SetBinding(BoxView.BackgroundColorProperty, new Binding(nameof(PrimaryColor), source: this));
 
             RowDefinitions.Add(new RowDefinition() { Height = GridLength.Star });
             RowDefinitions.Add(new RowDefinition() { Height = bottomUnderlineHeight });
@@ -216,7 +228,7 @@ namespace MuGet.Forms.UI.Controls
 
         private void SelectedIndexChanged(int oldIdx, int newIdx)
         {
-            object getItem(int idx) => idx >= 0 && idx < ItemsSource.Count ? ItemsSource[idx] : null;
+            object getItem(int idx) => idx >= 0 && idx < ItemsSource?.Count ? ItemsSource[idx] : null;
 
             var oldSelected = getItem(oldIdx);
             var newSelected = getItem(newIdx);
