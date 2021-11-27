@@ -13,8 +13,7 @@ namespace MuGet.Forms.Android
         Icon = "@mipmap/icon",
         RoundIcon = "@mipmap/icon_round",
         Theme = "@style/SplashTheme",
-        MainLauncher = true,
-        LaunchMode = LaunchMode.SingleTask,        
+        LaunchMode = LaunchMode.SingleTask,
         ScreenOrientation = ScreenOrientation.Portrait,
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     [IntentFilter(new[] { Intent.ActionView },
