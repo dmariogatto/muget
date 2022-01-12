@@ -15,13 +15,6 @@ namespace MuGet.Forms.UI.Views
         public PackagePage() : base()
         {
             InitializeComponent();
-
-            TopTabs.ItemsSource = new List<string>()
-            {
-                Localisation.Resources.Details,
-                Localisation.Resources.Dependencies,
-                Localisation.Resources.Versions
-            };
         }
 
         public string PackageId
