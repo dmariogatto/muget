@@ -19,10 +19,30 @@ namespace MuGet.Forms.UI.Views
         {
             base.OnSizeAllocated(width, height);
 
-            HomeView.Margin =
-                SkeletonView.Margin =
-                    SearchCollectionHeaderView.Margin =
-                new Thickness(0, SearchBarView.Height + SearchBarView.Margin.Top + 4, 0, 0);
+            if (width <= 0 || height <= 0)
+                return;
+
+            SearchBarView.WidthRequest = Device.Idiom == TargetIdiom.Tablet
+                ? width / 1.8d
+                : width / 1.4d;
+
+            HomeScrollView.Padding =
+                PackagesSkeletonView.Padding =
+                    PackagesCollectionViewHeader.Padding =
+                        new Thickness(0, SearchBarView.Height + SearchBarView.Margin.Top + SearchBarView.Margin.Bottom, 0, 0);
+
+            if (width > height)
+            {
+                PackagesCollectionView.ItemsLayout = Device.Idiom == TargetIdiom.Tablet
+                    ? new GridItemsLayout(4, ItemsLayoutOrientation.Vertical)
+                    : new GridItemsLayout(2, ItemsLayoutOrientation.Vertical);
+            }
+            else
+            {
+                PackagesCollectionView.ItemsLayout = Device.Idiom == TargetIdiom.Tablet
+                    ? new GridItemsLayout(2, ItemsLayoutOrientation.Vertical)
+                    : new GridItemsLayout(1, ItemsLayoutOrientation.Vertical);
+            }
         }
 
         protected override void OnAppearing()

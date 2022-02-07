@@ -15,9 +15,18 @@ namespace MuGet.Forms.UI.Extentions
 
             IsNavigating = true;
 
-            await navigation.PushAsync(pageFunc(), animated);
-
-            IsNavigating = false;
+            try
+            {
+                await navigation.PushAsync(pageFunc(), animated);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                IsNavigating = false;
+            }
         }
     }
 }
