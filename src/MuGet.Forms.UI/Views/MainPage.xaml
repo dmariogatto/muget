@@ -23,12 +23,12 @@
 
     <ContentPage.Content>
         <Grid>
-            <ScrollView x:Name="HomeScrollView" IsVisible="{Binding SearchText, Converter={StaticResource StringToInverseBoolConverter}}">
-                <views:HomeView />
+            <ScrollView IsVisible="{Binding SearchText, Converter={StaticResource StringToInverseBoolConverter}}">
+                <views:HomeView x:Name="HomeView" />
             </ScrollView>
 
-            <ScrollView x:Name="PackagesSkeletonView" IsVisible="{Binding PackagesLoading}">
-                <StackLayout Spacing="0">
+            <ScrollView IsVisible="{Binding PackagesLoading}">
+                <StackLayout x:Name="PackagesSkeletonView" Spacing="0">
                     <controls:NuGetCardSkeleton />
                     <controls:NuGetCardSkeleton />
                     <controls:NuGetCardSkeleton />

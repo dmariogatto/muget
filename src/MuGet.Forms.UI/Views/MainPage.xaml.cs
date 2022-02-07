@@ -3,6 +3,8 @@ using MuGet.Models;
 using MuGet.ViewModels;
 using System;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
+using Xamarin.Essentials.Interfaces;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
@@ -10,48 +12,74 @@ namespace MuGet.Forms.UI.Views
 {
     public partial class MainPage : BasePage<MainViewModel>
     {
+        private IDeviceDisplay _deviceDisplay;
+
         public MainPage() : base()
         {
             InitializeComponent();
-        }
 
-        protected override void OnSizeAllocated(double width, double height)
-        {
-            base.OnSizeAllocated(width, height);
-
-            if (width <= 0 || height <= 0)
-                return;
-
-            SearchBarView.WidthRequest = Device.Idiom == TargetIdiom.Tablet
-                ? width / 1.8d
-                : width / 1.4d;
-
-            HomeScrollView.Padding =
-                PackagesSkeletonView.Padding =
-                    PackagesCollectionViewHeader.Padding =
-                        new Thickness(0, SearchBarView.Height + SearchBarView.Margin.Top + SearchBarView.Margin.Bottom, 0, 0);
-
-            if (width > height)
-            {
-                PackagesCollectionView.ItemsLayout = Device.Idiom == TargetIdiom.Tablet
-                    ? new GridItemsLayout(4, ItemsLayoutOrientation.Vertical)
-                    : new GridItemsLayout(2, ItemsLayoutOrientation.Vertical);
-            }
-            else
-            {
-                PackagesCollectionView.ItemsLayout = Device.Idiom == TargetIdiom.Tablet
-                    ? new GridItemsLayout(2, ItemsLayoutOrientation.Vertical)
-                    : new GridItemsLayout(1, ItemsLayoutOrientation.Vertical);
-            }
+            _deviceDisplay = IoC.Resolve<IDeviceDisplay>();
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
 
+            UpdateDisplayInfo(_deviceDisplay.MainDisplayInfo);
+            _deviceDisplay.MainDisplayInfoChanged += OnMainDisplayInfoChanged;
+
             Task.WhenAll(
                 SearchBarView.TranslateTo(0, 0, 250, Easing.CubicOut),
                 SearchBarView.FadeTo(1, 200));
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+
+            _deviceDisplay.MainDisplayInfoChanged -= OnMainDisplayInfoChanged;
+        }
+
+        protected override void OnSizeAllocated(double width, double height)
+        {
+            base.OnSizeAllocated(width, height);
+
+            if (width > 0 && height > 0)
+            {
+                SearchBarView.WidthRequest = Device.Idiom == TargetIdiom.Tablet
+                    ? width / 1.8d
+                    : width / 1.4d;
+
+                HomeView.Padding =
+                    PackagesSkeletonView.Padding =
+                        PackagesCollectionViewHeader.Padding =
+                            new Thickness(0, SearchBarView.Height + SearchBarView.Margin.Top + SearchBarView.Margin.Bottom, 0, 0);
+            }
+        }
+
+        private void OnMainDisplayInfoChanged(object sender, DisplayInfoChangedEventArgs e)
+        {
+            UpdateDisplayInfo(e.DisplayInfo);
+        }
+
+        private void UpdateDisplayInfo(DisplayInfo displayInfo)
+        {
+            if (displayInfo.Orientation == DisplayOrientation.Landscape)
+            {
+                PackagesCollectionView.ItemsLayout = Device.Idiom == TargetIdiom.Tablet
+                    ? new GridItemsLayout(2, ItemsLayoutOrientation.Vertical)
+                    : new GridItemsLayout(1, ItemsLayoutOrientation.Vertical);
+            }
+            else
+            {
+                PackagesCollectionView.ItemsLayout = Device.Idiom == TargetIdiom.Tablet
+                    ? new GridItemsLayout(1, ItemsLayoutOrientation.Vertical)
+                    : new GridItemsLayout(1, ItemsLayoutOrientation.Vertical);
+            }
+
+            SearchBarView.CancelAnimations();
+            SearchBarView.TranslationY = 0;
+            SearchBarView.Opacity = 1;
         }
 
         private void PackagesScrolled(object sender, ItemsViewScrolledEventArgs e)
