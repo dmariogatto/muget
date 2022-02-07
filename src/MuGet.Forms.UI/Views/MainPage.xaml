@@ -22,30 +22,21 @@
     mc:Ignorable="d">
 
     <ContentPage.Content>
-        <AbsoluteLayout>
-            <ScrollView
-                x:Name="HomeView"
-                AbsoluteLayout.LayoutBounds="0,0,1,1"
-                AbsoluteLayout.LayoutFlags="All"
-                IsVisible="{Binding SearchText, Converter={StaticResource StringToInverseBoolConverter}}">
-                <views:HomeView />
+        <Grid>
+            <ScrollView IsVisible="{Binding SearchText, Converter={StaticResource StringToInverseBoolConverter}}">
+                <views:HomeView x:Name="HomeView" />
             </ScrollView>
 
-            <StackLayout
-                x:Name="SkeletonView"
-                AbsoluteLayout.LayoutBounds="0,0,1,1"
-                AbsoluteLayout.LayoutFlags="All"
-                BackgroundColor="{DynamicResource PageBackgroundColor}"
-                IsVisible="{Binding PackagesLoading}"
-                Spacing="0">
-                <controls:NuGetCardSkeleton />
-                <controls:NuGetCardSkeleton />
-                <controls:NuGetCardSkeleton />
-            </StackLayout>
+            <ScrollView IsVisible="{Binding PackagesLoading}">
+                <StackLayout x:Name="PackagesSkeletonView" Spacing="0">
+                    <controls:NuGetCardSkeleton />
+                    <controls:NuGetCardSkeleton />
+                    <controls:NuGetCardSkeleton />
+                </StackLayout>
+            </ScrollView>
 
             <CollectionView
-                AbsoluteLayout.LayoutBounds="0,0,1,1"
-                AbsoluteLayout.LayoutFlags="All"
+                x:Name="PackagesCollectionView"
                 BackgroundColor="{DynamicResource PageBackgroundColor}"
                 IsVisible="{Binding PackagesLoaded}"
                 ItemsSource="{Binding Packages}"
@@ -53,9 +44,7 @@
                 RemainingItemsThresholdReachedCommand="{Binding RemainingItemsThresholdReachedCommand}"
                 Scrolled="PackagesScrolled">
                 <CollectionView.Header>
-                    <ContentView>
-                        <ContentView x:Name="SearchCollectionHeaderView" />
-                    </ContentView>
+                    <ContentView x:Name="PackagesCollectionViewHeader" />
                 </CollectionView.Header>
                 <CollectionView.EmptyView>
                     <ContentView>
@@ -95,15 +84,15 @@
 
             <yummy:PancakeView
                 x:Name="SearchBarView"
-                Margin="16,8,16,8"
+                Margin="0,8,0,8"
                 Padding="3"
-                AbsoluteLayout.LayoutBounds="0.5, 0, AutoSize, AutoSize"
-                AbsoluteLayout.LayoutFlags="PositionProportional"
                 BackgroundColor="{DynamicResource CardBackgroundColor}"
                 Border="{yummy:BorderMarkup Thickness=0}"
                 CornerRadius="6"
+                HorizontalOptions="Center"
                 Shadow="{yummy:ShadowMarkup BlurRadius=6}"
-                Style="{DynamicResource CardYummyStyle}">
+                Style="{DynamicResource CardYummyStyle}"
+                VerticalOptions="Start">
                 <SearchBar
                     BackgroundColor="{DynamicResource CardBackgroundColor}"
                     CancelButtonColor="Red"
@@ -113,6 +102,6 @@
                     Text="{Binding SearchText}"
                     TextColor="{DynamicResource PrimaryTextColor}" />
             </yummy:PancakeView>
-        </AbsoluteLayout>
+        </Grid>
     </ContentPage.Content>
 </views:BasePage>
