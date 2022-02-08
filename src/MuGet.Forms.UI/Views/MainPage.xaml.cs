@@ -46,9 +46,9 @@ namespace MuGet.Forms.UI.Views
 
             if (width > 0 && height > 0)
             {
-                SearchBarView.WidthRequest = Device.Idiom == TargetIdiom.Tablet
-                    ? width / 1.8d
-                    : width / 1.4d;
+                SearchBarView.Margin = Device.Idiom == TargetIdiom.Tablet
+                    ? new Thickness(36, 8, 36, 8)
+                    : new Thickness(16, 8, 16, 8);
 
                 HomeView.Padding =
                     PackagesSkeletonView.Padding =

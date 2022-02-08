@@ -84,12 +84,10 @@
 
             <yummy:PancakeView
                 x:Name="SearchBarView"
-                Margin="0,8,0,8"
                 Padding="3"
                 BackgroundColor="{DynamicResource CardBackgroundColor}"
                 Border="{yummy:BorderMarkup Thickness=0}"
                 CornerRadius="6"
-                HorizontalOptions="Center"
                 Shadow="{yummy:ShadowMarkup BlurRadius=6}"
                 Style="{DynamicResource CardYummyStyle}"
                 VerticalOptions="Start">
