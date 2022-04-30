@@ -15,7 +15,8 @@ namespace MuGet.Forms.Android
         Theme = "@style/SplashTheme",
         LaunchMode = LaunchMode.SingleTask,
         ScreenOrientation = ScreenOrientation.Sensor,
-        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
+        Exported = false)]
     [IntentFilter(new[] { Intent.ActionView },
         Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable },
         DataScheme = App.Scheme)]
