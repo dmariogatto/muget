@@ -32,6 +32,7 @@ namespace MuGet.Forms.iOS
             IoC.RegisterSingleton<IEnvironmentService, EnvironmentService_iOS>();
             IoC.RegisterSingleton<IRendererResolver, RendererResolver_iOS>();
             IoC.RegisterSingleton<IHttpHandlerService, HttpHandlerService_iOS>();
+            IoC.RegisterSingleton<IThemeService, ThemeService>();
 
 #if DEBUG
             UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);

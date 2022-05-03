@@ -17,8 +17,6 @@ namespace MuGet.Forms.UI
 
         static App()
         {
-            IoC.RegisterSingleton<IThemeService, ThemeService>();
-
             AppActions.OnAppAction += (sender, args) =>
             {
                 if (Current is App app)
