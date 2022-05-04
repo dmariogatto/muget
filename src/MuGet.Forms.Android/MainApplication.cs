@@ -2,6 +2,7 @@
 using Android.Runtime;
 using MuGet.Forms.Android.Services;
 using MuGet.Forms.Services;
+using MuGet.Forms.UI;
 using MuGet.Forms.UI.Services;
 using MuGet.Services;
 using System;
@@ -28,6 +29,7 @@ namespace MuGet.Forms.Android
             IoC.RegisterSingleton<IEnvironmentService, EnvironmentService_Droid>();
             IoC.RegisterSingleton<IRendererResolver, RendererResolver_Droid>();
             IoC.RegisterSingleton<IHttpHandlerService, HttpHandlerService_Droid>();
+            IoC.RegisterSingleton<IThemeService, ThemeService>();
         }
     }
 }

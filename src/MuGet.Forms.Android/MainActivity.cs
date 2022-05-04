@@ -15,7 +15,8 @@ namespace MuGet.Forms.Android
         Theme = "@style/SplashTheme",
         LaunchMode = LaunchMode.SingleTask,
         ScreenOrientation = ScreenOrientation.Sensor,
-        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
+        Exported = false)]
     [IntentFilter(new[] { Intent.ActionView },
         Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable },
         DataScheme = App.Scheme)]
@@ -61,9 +62,6 @@ namespace MuGet.Forms.Android
             base.OnResume();
 
             Xamarin.Essentials.Platform.OnResume(this);
-
-            // https://github.com/xamarin/Essentials/issues/1922
-            Intent = new Intent(this, typeof(MainActivity));
         }
 
         protected override void OnNewIntent(Intent intent)
