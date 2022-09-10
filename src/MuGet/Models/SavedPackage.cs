@@ -10,7 +10,7 @@ namespace MuGet.Models
         public string IndexUrl { get; set; }
         public string SourceUrl { get; set; }
 
-        public int TotalDownloads { get; set; }
+        public long TotalDownloads { get; set; }
 
         public string Version { get; set; }
         public DateTime Published { get; set; }

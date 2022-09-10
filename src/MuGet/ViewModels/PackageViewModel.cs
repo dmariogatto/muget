@@ -37,7 +37,7 @@ namespace MuGet.ViewModels
                     var firstPublish = entries.LastOrDefault()?.Published ?? nowUtc;
                     var daysDiff = (nowUtc - firstPublish).TotalDays;
                     AvgDownloads = daysDiff > 0
-                        ? Convert.ToInt32(totalDownloads / daysDiff)
+                        ? (long)(totalDownloads / daysDiff)
                         : 0;
                 }
             };
@@ -108,8 +108,8 @@ namespace MuGet.ViewModels
             set => SetProperty(ref _metadata, value);
         }
 
-        private int _avgDownloads;
-        public int AvgDownloads
+        private long _avgDownloads;
+        public long AvgDownloads
         {
             get => _avgDownloads;
             set => SetProperty(ref _avgDownloads, value);

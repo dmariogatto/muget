@@ -7,6 +7,6 @@ namespace MuGet.Models
         [JsonProperty("@id")]
         public string IndexUrl { get; set; }
         public string Version { get; set; }
-        public int Downloads { get; set; }
+        public long Downloads { get; set; }
     }
 }

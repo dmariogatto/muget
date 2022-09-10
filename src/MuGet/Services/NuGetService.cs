@@ -65,6 +65,14 @@ namespace MuGet.Services
             _db = new LiteDatabase($"Filename={dbPath};Upgrade=true;");
             _db.Pragma("UTC_DATE", true);
 
+            if (_db.UserVersion < 1)
+            {
+                EntityRepository<PackageSource>.EnsurePropertyDataTypes(_db);
+                EntityRepository<FavouritePackage>.EnsurePropertyDataTypes(_db);
+                EntityRepository<RecentPackage>.EnsurePropertyDataTypes(_db);
+                _db.UserVersion = 1;
+            }
+
             _packageSourceRepo = new EntityRepository<PackageSource>(_db, TimeSpan.FromDays(7), _connectivity);
             _favouriteRepo = new EntityRepository<FavouritePackage>(_db, TimeSpan.MaxValue, _connectivity);
             _recentRepo = new EntityRepository<RecentPackage>(_db, TimeSpan.MaxValue, _connectivity);

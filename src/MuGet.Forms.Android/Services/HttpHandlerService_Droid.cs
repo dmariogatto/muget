@@ -20,7 +20,7 @@ namespace MuGet.Forms.Android.Services
         }
 
         public HttpMessageHandler GetNativeHandler()
-            => new CatsAndroidClientHandler(VerifyCtResult)
+            => new CatsAndroidMessageHandler(VerifyCtResult)
             {
                 // https://github.com/xamarin/xamarin-android/issues/2619
                 AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate

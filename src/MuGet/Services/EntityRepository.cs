@@ -102,5 +102,70 @@ namespace MuGet.Services
         {
             return _retryPolicy.Execute(() => _collection.Delete(key));
         }
+
+        public static (bool success, int count) EnsurePropertyDataTypes(LiteDatabase db)
+        {
+            var success = true;
+            var count = 0;
+
+            try
+            {
+                var dataType = typeof(T);
+                var collectionName = dataType.Name;
+
+                if (db?.CollectionExists(collectionName) == true)
+                {                  
+                    var properties = dataType.GetProperties()
+                        .Where(p => p.CanRead &&
+                                    p.CanWrite &&
+                                    !p.GetCustomAttributes(false)
+                                      .Any(i => i is BsonIdAttribute || i is BsonIgnoreAttribute))
+                        .ToList();
+
+                    var collection = db.GetCollection(collectionName);
+                    var items = collection.FindAll();
+
+                    foreach (var i in items)
+                    {
+                        var bDoc = i.AsDocument;
+                        var hasChanged = false;
+
+                        foreach (var p in properties.Where(p => bDoc.ContainsKey(p.Name)))
+                        {
+                            var bProp = bDoc[p.Name];
+                            var rawVal = bProp.RawValue;
+
+                            if (rawVal?.GetType() is Type rawType &&
+                                rawVal.GetType() != p.PropertyType &&
+                                (rawType.IsNumeric() || rawType.IsString()) &&
+                                (p.PropertyType.IsNumeric() || p.PropertyType.IsString()))
+                            {
+                                var type = p.PropertyType.IsGenericType &&
+                                           p.PropertyType.GetGenericTypeDefinition() == typeof(Nullable<>)
+                                           ? Nullable.GetUnderlyingType(p.PropertyType)
+                                           : p.PropertyType;
+                                var val = Convert.ChangeType(rawVal, type);
+                                bDoc[p.Name] = new BsonValue(val);
+
+                                hasChanged = true;
+                            }
+                        }
+
+                        if (hasChanged)
+                        {
+                            collection.Update(i);
+                            count++;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex);
+                success = false;
+            }
+
+            return (success, count);
+        }
     }
 }
