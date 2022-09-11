@@ -22,8 +22,6 @@ A quick Xamarin Forms sample app that pulls data from the [NuGet.org](https://nu
 - [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json)
 - [Plugin.SegmentedControl](https://github.com/1iveowl/Plugin.SegmentedControl)
 - [Polly](https://github.com/App-vNext/Polly)
-- [Shiny](https://github.com/shinyorg/shiny)
 - [Xamarin.Essentials](https://docs.microsoft.com/xamarin/essentials)
 - [Xamarin.Forms](https://xamarin.com/forms)
 - [Xamarin.Forms.PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView)
-- [Xamarin.Forms.StateSquid](https://github.com/sthewissen/Xamarin.Forms.StateSquid)
