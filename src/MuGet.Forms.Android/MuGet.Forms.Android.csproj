@@ -21,7 +21,7 @@
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <AndroidLinkSkip>Shiny.Core;Shiny.Notifications;LiteDB;Essential.Interfaces;</AndroidLinkSkip>
+    <AndroidLinkSkip>LiteDB;Essential.Interfaces;</AndroidLinkSkip>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -39,7 +39,7 @@
     <AndroidDexTool>d8</AndroidDexTool>
     <EnableLLVM>false</EnableLLVM>
     <BundleAssemblies>false</BundleAssemblies>
-    <AndroidLinkSkip>Shiny.Core;Shiny.Notifications;LiteDB;Essential.Interfaces;</AndroidLinkSkip>
+    <AndroidLinkSkip>LiteDB;Essential.Interfaces;</AndroidLinkSkip>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -60,7 +60,7 @@
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <EnableLLVM>true</EnableLLVM>
     <BundleAssemblies>false</BundleAssemblies>
-    <AndroidLinkSkip>Shiny.Core;Shiny.Notifications;LiteDB;Essential.Interfaces;</AndroidLinkSkip>
+    <AndroidLinkSkip>LiteDB;Essential.Interfaces;</AndroidLinkSkip>
     <AndroidSupportedAbis>armeabi-v7a;arm64-v8a</AndroidSupportedAbis>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
   </PropertyGroup>
