@@ -27,7 +27,7 @@ namespace MuGet.Models
         public string ProjectUrl { get; set; }
         public List<string> Tags { get; set; }
         public List<string> Authors { get; set; }
-        public int TotalDownloads { get; set; }
+        public long TotalDownloads { get; set; }
         public bool Verified { get; set; }
         public List<VersionMetadata> Versions { get; set; }
 

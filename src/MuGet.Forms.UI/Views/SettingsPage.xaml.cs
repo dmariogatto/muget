@@ -7,9 +7,6 @@ namespace MuGet.Forms.UI.Views
         public SettingsPage() : base()
         {
             InitializeComponent();
-
-            ResetNotificationsCell.Description = Localisation.Resources.ResetNotificationsDescription;
-            RunAllJobsCell.Description = Localisation.Resources.RunAllJobsDescription;
         }
     }
 }

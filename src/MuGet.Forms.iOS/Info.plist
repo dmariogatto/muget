@@ -43,10 +43,6 @@
 	<string>&gt;Can we use your location at all times?</string>
 	<key>NSCalendarsUsageDescription</key>
 	<string>Needs Calendar Permission</string>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>fetch</string>
-	</array>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleURLTypes</key>

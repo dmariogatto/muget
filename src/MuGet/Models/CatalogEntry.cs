@@ -34,7 +34,7 @@ namespace MuGet.Models
         public List<DependencyGroup> DependencyGroups { get; set; }
 
         [JsonIgnore]
-        public int Downloads { get; set; }
+        public long Downloads { get; set; }
         private bool _isFavourite;
         [JsonIgnore]
         public bool IsFavourite

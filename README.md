@@ -1,6 +1,6 @@
 # MuGet: Mobile NuGet Browser
 
-A quick Xamarin Forms sample app that pulls data from the [NuGet.org](https://nuget.org) API. Allows you to browse NuGet on your favourite mobile device and utilises [Shiny](https://shiny/net/) to run a background job notifying you of any updates to your favourite packages!
+A quick Xamarin Forms sample app that pulls data from the [NuGet.org](https://nuget.org) API, allowing you to browse NuGet on your favourite mobile device.
 
 ## Build Status
 
@@ -22,8 +22,6 @@ A quick Xamarin Forms sample app that pulls data from the [NuGet.org](https://nu
 - [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json)
 - [Plugin.SegmentedControl](https://github.com/1iveowl/Plugin.SegmentedControl)
 - [Polly](https://github.com/App-vNext/Polly)
-- [Shiny](https://github.com/shinyorg/shiny)
 - [Xamarin.Essentials](https://docs.microsoft.com/xamarin/essentials)
 - [Xamarin.Forms](https://xamarin.com/forms)
 - [Xamarin.Forms.PancakeView](https://github.com/sthewissen/Xamarin.Forms.PancakeView)
-- [Xamarin.Forms.StateSquid](https://github.com/sthewissen/Xamarin.Forms.StateSquid)

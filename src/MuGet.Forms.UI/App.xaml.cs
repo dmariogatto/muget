@@ -40,11 +40,6 @@ namespace MuGet.Forms.UI
             var culture = localise.GetCurrentCultureInfo();
             localise.SetLocale(culture);
 
-            if (VersionTracking.IsFirstLaunchEver)
-            {
-                Shiny.ShinyHost.Resolve<Shiny.Jobs.IJobManager>().Schedule(ShinyStartup.NuGetJobInfo);
-            }
-
             MainPage = new NavigationPage(new MainPage());
         }
 

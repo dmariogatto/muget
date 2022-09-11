@@ -31,9 +31,6 @@
                     IconSource="nuget.png" />
                 <sv:SwitchCell Title="{local:Translate IncludePrerelease}" On="{Binding IncludePrerelease}" />
             </sv:Section>
-            <sv:Section Title="{local:Translate Notifications}">
-                <sv:SwitchCell Title="{local:Translate NotificationsDescription}" On="{Binding NewReleaseNotifications}" />
-            </sv:Section>
             <sv:Section Title="MuGet">
                 <sv:CommandCell
                     Title="{local:Translate SendFeedback}"
@@ -64,16 +61,6 @@
                 </sv:Section.ItemTemplate>
             </sv:Section>
             <sv:Section Title="{local:Translate Development}">
-                <sv:ButtonCell
-                    x:Name="ResetNotificationsCell"
-                    Title="{local:Translate ResetNotifications}"
-                    Command="{Binding ResetNotificationsCommand}"
-                    TitleAlignment="Start" />
-                <sv:ButtonCell
-                    x:Name="RunAllJobsCell"
-                    Title="{local:Translate RunAllJobs}"
-                    Command="{Binding RunJobsCommand}"
-                    TitleAlignment="Start" />
                 <sv:LabelCell Title="{local:Translate Version}" ValueText="{Binding Version}" />
                 <sv:LabelCell Title="{local:Translate Build}" ValueText="{Binding Build}" />
             </sv:Section>

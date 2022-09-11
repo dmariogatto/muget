@@ -14,7 +14,7 @@ namespace MuGet.Forms.Android
 #else
 [Application(Debuggable = false)]
 #endif
-    public class MainApplication : Shiny.ShinyAndroidApplication<ShinyStartup>
+    public class MainApplication : Application
     {
         public MainApplication(IntPtr handle, JniHandleOwnership transer)
             : base(handle, transer)

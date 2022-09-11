@@ -72,8 +72,6 @@ namespace MuGet.ViewModels
                 if (!string.IsNullOrEmpty(p?.PackageId))
                     await _launcher.TryOpenAsync(string.Format(Resources.PackageUrlFormat, p.PackageId));
             });
-            ResetNotificationsCommand = new Command(ResetNotifications);
-            RunJobsCommand = new AsyncCommand(RunJobsAsync);
         }
 
         public bool IncludePrerelease
@@ -86,26 +84,6 @@ namespace MuGet.ViewModels
             }
         }
 
-        public bool NewReleaseNotifications
-        {
-            get => NuGetService.NewReleaseNotifications;
-            set
-            {
-                NuGetService.NewReleaseNotifications = value;
-
-                if (value)
-                {
-                    Shiny.ShinyHost.Resolve<Shiny.Jobs.IJobManager>().Schedule(ShinyStartup.NuGetJobInfo);
-                }
-                else
-                {
-                    Shiny.ShinyHost.Resolve<Shiny.Jobs.IJobManager>().Cancel(ShinyStartup.NuGetJobInfo.Identifier);
-                }
-
-                OnPropertyChanged(nameof(NewReleaseNotifications));
-            }
-        }
-
         public ObservableRangeCollection<MuGetPackage> MuGetPackages { get; private set; }
 
         public string Version => _versionTracking.CurrentVersion;
@@ -113,8 +91,6 @@ namespace MuGet.ViewModels
 
         public AsyncCommand<SettingItem> SettingsItemTappedCommand { get; private set; }
         public AsyncCommand<MuGetPackage> PackageTappedCommand { get; private set; }
-        public Command ResetNotificationsCommand { get; private set; }
-        public AsyncCommand RunJobsCommand { get; private set; }
 
         private async Task SettingsItemTappedAsync(SettingItem item)
         {
@@ -163,29 +139,6 @@ namespace MuGet.ViewModels
                 Logger.Error(ex);
 
                 Dialogs.Alert(Resources.EmailDirectly, Resources.UnableToSendEmail, Resources.OK);
-            }
-        }
-
-        private void ResetNotifications()
-        {
-            var favourites = NuGetService.GetFavouritePackages();
-            foreach (var f in favourites)
-            {
-                f.Version = string.Empty;
-                f.Published = DateTime.MinValue;
-                NuGetService.UpsertFavouritePackage(f);
-            }
-        }
-
-        private async Task RunJobsAsync()
-        {
-            try
-            {
-                var results = await Shiny.ShinyHost.Resolve<Shiny.Jobs.IJobManager>().RunAll();
-            }
-            catch (Exception ex)
-            {
-                Logger.Error(ex);
             }
         }
     }
