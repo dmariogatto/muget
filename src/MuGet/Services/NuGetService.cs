@@ -20,6 +20,7 @@ namespace MuGet.Services
     public class NuGetService : INuGetService
     {
         private const string NuGet = "https://api.nuget.org/v3/index.json";
+        private const int LiteDbVersion = 1;
 
         private readonly static JsonSerializer JsonSerializer = JsonSerializer.Create(new JsonSerializerSettings()
         {
@@ -65,12 +66,12 @@ namespace MuGet.Services
             _db = new LiteDatabase($"Filename={dbPath};Upgrade=true;");
             _db.Pragma("UTC_DATE", true);
 
-            if (_db.UserVersion < 1)
+            if (_db.UserVersion < LiteDbVersion)
             {
                 EntityRepository<PackageSource>.EnsurePropertyDataTypes(_db);
                 EntityRepository<FavouritePackage>.EnsurePropertyDataTypes(_db);
                 EntityRepository<RecentPackage>.EnsurePropertyDataTypes(_db);
-                _db.UserVersion = 1;
+                _db.UserVersion = LiteDbVersion;
             }
 
             _packageSourceRepo = new EntityRepository<PackageSource>(_db, TimeSpan.FromDays(7), _connectivity);
