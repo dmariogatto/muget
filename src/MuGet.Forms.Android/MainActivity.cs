@@ -4,7 +4,6 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using MuGet.Forms.UI;
-using Shiny;
 
 namespace MuGet.Forms.Android
 {
@@ -53,8 +52,6 @@ namespace MuGet.Forms.Android
             LoadApplication(FormsApp ??= new App());
 
             SetTheme(Resource.Style.MainTheme);
-
-            this.ShinyOnCreate();
         }
 
         protected override void OnResume()
@@ -74,8 +71,7 @@ namespace MuGet.Forms.Android
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-            this.ShinyRequestPermissionsResult(requestCode, permissions, grantResults);
-
+            
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }

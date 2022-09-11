@@ -213,12 +213,6 @@
   <data name="IncludePrerelease" xml:space="preserve">
     <value>Include prerelease</value>
   </data>
-  <data name="Notifications" xml:space="preserve">
-    <value>Notifications</value>
-  </data>
-  <data name="NotificationsDescription" xml:space="preserve">
-    <value>New versions of favourites</value>
-  </data>
   <data name="WelcomeToMuGet" xml:space="preserve">
     <value>A package browser for NuGet.org, view and research all your .NET dependencies while on the go!</value>
   </data>
@@ -240,9 +234,6 @@
   <data name="PleaseRateMuGet" xml:space="preserve">
     <value>Please Rate MuGet</value>
   </data>
-  <data name="ResetNotifications" xml:space="preserve">
-    <value>Reset Notifications</value>
-  </data>
   <data name="SendFeedback" xml:space="preserve">
     <value>Send Feedback</value>
   </data>
@@ -250,16 +241,13 @@
     <value>View on GitHub</value>
   </data>
   <data name="NoFavouritePackages" xml:space="preserve">
-    <value>Add your favourite packages to get notifications of new versions</value>
+    <value>Add your favourite packages</value>
   </data>
   <data name="NoRecentPackages" xml:space="preserve">
     <value>Start searching to discover</value>
   </data>
   <data name="Project" xml:space="preserve">
     <value>Project</value>
-  </data>
-  <data name="ResetNotificationsDescription" xml:space="preserve">
-    <value>Clears the last known version of all your favourites</value>
   </data>
   <data name="RunAllJobsDescription" xml:space="preserve">
     <value>Manual trigger for notifications</value>

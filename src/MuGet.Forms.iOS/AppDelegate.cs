@@ -3,10 +3,8 @@ using MuGet.Forms.iOS.Services;
 using MuGet.Forms.UI;
 using MuGet.Forms.UI.Services;
 using MuGet.Services;
-using Shiny;
 using System;
 using UIKit;
-using UserNotifications;
 using Xamarin.Forms;
 
 [assembly: ResolutionGroupName("MuGet.Effects")]
@@ -34,13 +32,6 @@ namespace MuGet.Forms.iOS
             IoC.RegisterSingleton<IHttpHandlerService, HttpHandlerService_iOS>();
             IoC.RegisterSingleton<IThemeService, ThemeService>();
 
-#if DEBUG
-            UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(UIApplication.BackgroundFetchIntervalMinimum);
-#else
-            UIApplication.SharedApplication.SetMinimumBackgroundFetchInterval(60 * 60 * 3); // 3 hours
-#endif
-
-            this.ShinyFinishedLaunching(new ShinyStartup());
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             AiForms.Renderers.iOS.SettingsViewInit.Init();
 
@@ -48,25 +39,7 @@ namespace MuGet.Forms.iOS
 
             LoadApplication(new App());
 
-            UNUserNotificationCenter.Current.RequestAuthorization(UNAuthorizationOptions.Alert | UNAuthorizationOptions.Badge, (b, e) =>
-            {
-                if (!b)
-                    System.Diagnostics.Debug.WriteLine($"Notification Request Error: {e}");
-            });
-
             return base.FinishedLaunching(app, options);
-        }
-
-        public override void OnActivated(UIApplication uiApplication)
-        {
-            base.OnActivated(uiApplication);
-
-            UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
-        }
-
-        public override void PerformFetch(UIApplication application, Action<UIBackgroundFetchResult> completionHandler)
-        {
-            this.ShinyPerformFetch(completionHandler);
         }
 
         public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)

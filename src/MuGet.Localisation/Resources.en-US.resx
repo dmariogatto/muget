@@ -120,10 +120,7 @@
   <data name="Favourites" xml:space="preserve">
     <value>Favorites</value>
   </data>
-  <data name="NotificationsDescription" xml:space="preserve">
-    <value>New versions of favorites</value>
-  </data>
-  <data name="ResetNotificationsDescription" xml:space="preserve">
-    <value>Clears the last known version of all your favorites</value>
+  <data name="NoFavouritePackages" xml:space="preserve">
+    <value>Add your favorite packages</value>
   </data>
 </root>

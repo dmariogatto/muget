@@ -18,8 +18,6 @@ namespace MuGet.Services
             "Plugin.StoreReview",
             "Polly",
             "Refractored.MvvmHelpers",
-            "Shiny.Core",
-            "Shiny.Notifications",
             "Xamarin.Essentials",
             "Xamarin.FFImageLoading.Forms",
             "Xamarin.Forms",

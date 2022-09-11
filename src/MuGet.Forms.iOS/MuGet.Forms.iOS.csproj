@@ -155,12 +155,6 @@
     <PackageReference Include="Plugin.StoreReview">
       <Version>3.3.1</Version>
     </PackageReference>
-    <PackageReference Include="Shiny.Core">
-      <Version>1.2.0.1755</Version>
-    </PackageReference>
-    <PackageReference Include="Shiny.Notifications">
-      <Version>1.2.0.1755</Version>
-    </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
       <Version>2.4.11.982</Version>
     </PackageReference>

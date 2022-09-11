@@ -19,7 +19,7 @@ namespace MuGet.Localisation {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -313,7 +313,7 @@ namespace MuGet.Localisation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add your favourite packages to get notifications of new versions.
+        ///   Looks up a localized string similar to Add your favourite packages.
         /// </summary>
         public static string NoFavouritePackages {
             get {
@@ -354,24 +354,6 @@ namespace MuGet.Localisation {
         public static string NotificationContentFormat {
             get {
                 return ResourceManager.GetString("NotificationContentFormat", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Notifications.
-        /// </summary>
-        public static string Notifications {
-            get {
-                return ResourceManager.GetString("Notifications", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to New versions of favourites.
-        /// </summary>
-        public static string NotificationsDescription {
-            get {
-                return ResourceManager.GetString("NotificationsDescription", resourceCulture);
             }
         }
         
@@ -453,24 +435,6 @@ namespace MuGet.Localisation {
         public static string Remove {
             get {
                 return ResourceManager.GetString("Remove", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Reset Notifications.
-        /// </summary>
-        public static string ResetNotifications {
-            get {
-                return ResourceManager.GetString("ResetNotifications", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Clears the last known version of all your favourites.
-        /// </summary>
-        public static string ResetNotificationsDescription {
-            get {
-                return ResourceManager.GetString("ResetNotificationsDescription", resourceCulture);
             }
         }
         
