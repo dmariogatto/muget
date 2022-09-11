@@ -114,7 +114,7 @@ namespace MuGet.Services
                 var collectionName = dataType.Name;
 
                 if (db?.CollectionExists(collectionName) == true)
-                {                  
+                {
                     var properties = dataType.GetProperties()
                         .Where(p => p.CanRead &&
                                     p.CanWrite &&
