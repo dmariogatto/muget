@@ -42,7 +42,8 @@ namespace MuGet.Forms.Android.Services
                 });
             }
 
-            return result.IsValid;
+            // Sunset time, all is well
+            return true;
         }
     }
 }
