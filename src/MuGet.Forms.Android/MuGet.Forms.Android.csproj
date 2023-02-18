@@ -82,7 +82,7 @@
       <Version>1.3.33</Version>
     </PackageReference>
     <PackageReference Include="Cats.CertificateTransparency">
-      <Version>2.1.0</Version>
+      <Version>2.1.1</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Analytics">
       <Version>5.0.1</Version>
